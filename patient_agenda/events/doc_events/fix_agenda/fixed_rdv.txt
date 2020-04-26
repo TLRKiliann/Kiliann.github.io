@@ -1,0 +1,37 @@
+Rendez-vous agendé le : 25/04/2020, 21:36:36
+Rendez-vous pris pour le : 23/7/2020
+Rdv chez le dentiste à 9h00.
+
+
++ Modification du rdv
+Rdv chez le dentiste à 9h00.
+Ok, rdv annulé!
+
+Rendez-vous agendé le : 26/04/2020, 12:03:09
+Rendez-vous pris pour le : 23/4/2020
+Ok rdv pris pour 23h00 au musée.
+
+
++ Modification du rdv
+Ok rdv pris pour 23h00 au musée.
+Rendez-vous annulé !
+
+Rendez-vous agendé le : 26/04/2020, 12:07:01
+Rendez-vous pris pour le : 8/5/2020
+On va à l'église pour 9h00.
+
+
++ Modification du rdv
+Rendez-vous pris pour le : 8/5/2020
+On va à l'église pour 9h00.
+On modifie car annulé!
+
+Rendez-vous agendé le : 26/04/2020, 12:11:33
+Rendez-vous pris pour le : 28/4/2020
+Voily voilà. --ok--
+
+
++++ Modification du rdv +++
+Rendez-vous pris pour le : 28/4/2020
+Voily non on ne peut !
+
