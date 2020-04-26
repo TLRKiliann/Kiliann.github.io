@@ -6,11 +6,10 @@ from tkinter import *
 
 
 def importationFile(fichier, encodage="Utf-8"):
-    file = open(fichier, 'r', encoding=encodage)
-    content=file.readlines()
-    file.close()
-    for li in content:
-        textBox.insert(END, li)
+    with open(fichier, 'r', encoding=encodage) as filer:
+        content = filer.readlines()
+        for li in content:
+            textBox.insert(END, li)
 
 fen=Tk()
 fen.title("Results of Medical Visit")
@@ -22,16 +21,31 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Results of Medical Visit",
+labelo=Label(fen, text="Results of Medical Visit for : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
-	line1=filename.readline()
+    line1=filename.readline()
 entrytext=StringVar()
 entrytext.set(line1)
 entryName=Entry(fen, textvariable=entrytext)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
+
+labelallergy=Label(fen, text="Allergy",
+    font='Arial 18 bold', fg='red', bg='gray17')
+labelallergy.pack(padx=5, pady=10)
+
+with open('./allergy/allergyfile.txt', 'r') as filename:
+    line1=filename.readline()
+    line2=filename.readline()
+    line3=filename.readline()
+    line4=filename.readline()
+    line5=filename.readline()
+entrytext=StringVar()
+entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entryName=Entry(fen, textvariable=entrytext, width=60)
+entryName.pack(padx=10, pady=10)
 
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
@@ -41,7 +55,7 @@ buttonClose=Button(fen, text="Quit", width=8, fg='cyan',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./vmed/doc_vmed/resultvmed.json',
+importationFile('./vmed/doc_vmed/resultvmed.txt',
     encodage="Utf-8")
 
 fen.mainloop()

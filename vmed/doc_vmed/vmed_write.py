@@ -8,36 +8,54 @@ import time
 from tkinter import messagebox
 
 
-def retrieve_input():
-    file = open('./vmed/doc_vmed/resultvmed.json', 'a+')
-    file.write(textBox.get("1.0", "end-1c"))
-    file.write(str('\n\n'))
-    file.close()
+def saveData():
+    """
+    No need to test if file
+    exist or not. Already test
+    it before.
+    """
+    with open('./vmed/doc_vmed/resultvmed.txt', 'a+') as filerecord:
+        filerecord.write(textBox.get("1.0", "end-1c"))
+        filerecord.write(str('\n'))
 
 def messFromSafeButt():
+    """
+    Message of confirmation
+    with messagebox.
+    """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
-        retrieve_input()
+        saveData()
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
         textBox.insert(INSERT, "Nothing has been saved !")
         print("+ Nothing has been saved !")
 
-def lectureFic():
-    file = open('./vmed/doc_vmed/resultvmed.json', 'r')
-    print(file.read())
-    file.close()
+def readerFile():
+    """
+    To read into the txt file.
+    """
+    with open('./vmed/doc_vmed/resultvmed.txt', 'r') as filereader:
+        print(filereader.read())
     subprocess.call('./vmed/doc_vmed/vmed_read.py')
 
-def ajouterText():
+def addText():
+    """
+    Display text into widget Text
+    before to add comment.
+    """
     textBox.delete('1.0', END)
     textBox.insert(INSERT, "En date du : ")
     textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
+    """
+    First display of txt file
+    when the user start app.
+    """
     file = open(fichier, 'r', encoding=encodage)
     content=file.readlines()
     file.close()
@@ -57,7 +75,7 @@ bottom = Frame(root, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Results of Medical Visit patient 1",
+labelo=Label(root, text="Results of Medical Visit for : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
@@ -66,6 +84,21 @@ entryName=Entry(root, textvariable=textname)
 textname.set(line1)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
+labelallergy=Label(root, text="Allergy",
+    font='Arial 18 bold', fg='red', bg='gray17')
+labelallergy.pack(padx=5, pady=10)
+
+with open('./allergy/allergyfile.txt', 'r') as filename:
+    line1=filename.readline()
+    line2=filename.readline()
+    line3=filename.readline()
+    line4=filename.readline()
+    line5=filename.readline()
+entrytext=StringVar()
+entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entryName=Entry(root, textvariable=entrytext, width=60)
+entryName.pack(padx=10, pady=10)
+
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 textBox.insert(INSERT, "\nEn date du : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
@@ -73,12 +106,12 @@ textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", width=8,
     fg='cyan', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=lectureFic)
+    activeforeground='navy', command=readerFile)
 buttonLire.pack(side='left', padx=10, pady=10)
 
 buttonEffacer=Button(root, text="1-Add", width=8,
     fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=ajouterText)
+    activeforeground='navy', command=addText)
 buttonEffacer.pack(side='left', padx=10, pady=10)
 
 buttonEnter=Button(root, text="2-Save", width=8, 
@@ -91,7 +124,7 @@ buttonQuitter=Button(root, text="Quit", width=8,
     activeforeground='navy', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
-importationFile('./vmed/doc_vmed/resultvmed.json',
+importationFile('./vmed/doc_vmed/resultvmed.txt',
     encodage="Utf-8")
 
 mainloop()

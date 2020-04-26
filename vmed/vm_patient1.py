@@ -62,7 +62,7 @@ class Application(Frame):
         self.x2, self.y2 = 200, 300
         self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
-            activeforeground='black', text="Ajouter",
+            activeforeground='black', text="Add",
             command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
         
@@ -70,7 +70,7 @@ class Application(Frame):
         self.x3, self.y3 = 400, 300
         self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
-            activeforeground='black', text="Lire",
+            activeforeground='black', text="Read",
             command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
@@ -83,7 +83,7 @@ class Application(Frame):
     # Func to add
     def lienDirect(self):
         try:
-            if os.path.getsize('./vmed/doc_vmed/resultvmed.json'):
+            if os.path.getsize('./vmed/doc_vmed/resultvmed.txt'):
                 print("+ File 'VMED' exist (add)!")
                 subprocess.call('./vmed/doc_vmed/vmed_write.py')
         except FileNotFoundError as outmsg:
@@ -94,7 +94,7 @@ class Application(Frame):
     # Func to read
     def lectureFic(self):
         try:
-            if os.path.getsize('./vmed/doc_vmed/resultvmed.json'):
+            if os.path.getsize('./vmed/doc_vmed/resultvmed.txt'):
                 print("+ File 'VMED' exist (read)!")
                 subprocess.call('./vmed/doc_vmed/vmed_read.py')
         except FileNotFoundError as outcom:

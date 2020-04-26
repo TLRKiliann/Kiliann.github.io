@@ -123,7 +123,7 @@ if __name__ == '__main__':
             self.choose_btn = tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.popup)
-            self.show_btn = tk.Button(self.parent, text='2 - Fix appointment',
+            self.show_btn = tk.Button(self.parent, text='2 - Set up appointment',
                 font="Times 14", width=20, height=1,fg='cyan', bg='navy',
                 activebackground='dark turquoise',command=self.print_selected_date)
             self.butQuit= tk.Button(self.parent, text='Quit', font="Times 14", width=20,

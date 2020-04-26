@@ -13,7 +13,7 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(END, li)
 
 fen=Tk()
-fen.title("Diagnostics et ATCD")
+fen.title("Diagnostics and ATCD")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
@@ -22,7 +22,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Diagnostics et ATCD",
+labelo=Label(fen, text="Diagnostics and ATCD for : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
@@ -32,6 +32,21 @@ entrytext=StringVar()
 entrytext.set(line1)
 entryName=Entry(fen, textvariable=entrytext)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
+
+labelallergy=Label(fen, text="Allergy",
+    font='Arial 18 bold', fg='red', bg='gray17')
+labelallergy.pack(padx=5, pady=10)
+
+with open('./allergy/allergyfile.txt', 'r') as filename:
+    line1=filename.readline()
+    line2=filename.readline()
+    line3=filename.readline()
+    line4=filename.readline()
+    line5=filename.readline()
+entrytext=StringVar()
+entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entryName=Entry(fen, textvariable=entrytext, width=60)
+entryName.pack(padx=10, pady=10)
 
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)

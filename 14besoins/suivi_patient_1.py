@@ -62,7 +62,7 @@ class Application(Frame):
         self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
             activeforeground='black',
-            text="Ajouter",
+            text="Add",
             command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
 
@@ -70,7 +70,7 @@ class Application(Frame):
         self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
             activeforeground='black',
-            text="Lire",
+            text="Read",
             command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()

@@ -34,7 +34,7 @@ class MenuBar(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
         # Menu fichier
-        But=Button(self, text ="Fermer", fg='cyan', bg='gray30',
+        But=Button(self, text ="Close", fg='cyan', bg='gray30',
             activebackground='cyan', command=boss.quit).pack(side=LEFT,
             padx=3)
 
@@ -55,7 +55,7 @@ class Application(Frame):
         self.can.create_window((4,4), window=self.frame, anchor=NW, 
                                   tags="self.frame")
         # Insertion du texte
-        self.can.create_text(300, 150, anchor=CENTER, text="Diagnostics + ATCD",
+        self.can.create_text(300, 150, anchor=CENTER, text="Diagnostics and ATCD",
                     font=('Times New Roman', 28), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2018 Inc.",
                     font=('Times', 12), fill='white') 
@@ -67,7 +67,7 @@ class Application(Frame):
         self.b=Button(self.can, width=15, font=16, bg='navy', fg='gold', 
                       activebackground='dark turquoise', 
                       activeforeground='black', 
-                      text="Ajouter", 
+                      text="Add", 
                       command=self.Frame_Ap1)
         self.fb=self.can.create_window(self.x, self.y, window=self.b)
 
@@ -75,7 +75,7 @@ class Application(Frame):
         self.b=Button(self.can, width=15, font=16, bg='navy', fg='gold', 
                       activebackground='dark turquoise', 
                       activeforeground='black', 
-                      text="Lire", 
+                      text="Read", 
                       command=self.Frame_Ap2)
         self.fb=self.can.create_window(self.x, self.y, window=self.b)
         self.pack()
