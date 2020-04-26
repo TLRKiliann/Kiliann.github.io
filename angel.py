@@ -1052,7 +1052,7 @@ class Application(Frame):
         
         # To refresh page with new entry patient
         self.x101, self.y101 = 270, 50
-        self.b2=Button(self.can, width=10, font=16, bg='gray17', fg='yellow',
+        self.b2=Button(self.can, width=10, font=16, bg='gray17', fg='gold',
                       activebackground='cyan',
                       activeforeground='black',
                       text="Refresh",
@@ -1072,7 +1072,7 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x3, self.y3 = 271, 200
-        self.b=Button(self.can, width=8, font=16, bg='black', fg='yellow',
+        self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
                       activebackground='dark turquoise',
                       activeforeground='black',
                       text="Allergy",
