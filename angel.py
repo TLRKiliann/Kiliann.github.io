@@ -1084,7 +1084,7 @@ class Application(Frame):
                       activebackground='dark turquoise',
                       activeforeground='black',
                       text="Diagnostic + ATCD",
-                      command=self.allergyLink)
+                      command=self.diag1)
         self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
 
         self.x4, self.y4 = 597, 200
