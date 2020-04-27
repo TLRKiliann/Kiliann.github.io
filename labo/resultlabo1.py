@@ -56,9 +56,9 @@ def recordOption():
     file.close()
     print(CheckVar1.get())
     if CheckVar1.get()==1:
-        print("Surveillance respiratoire requise en ajout")
+        print("Na valeur")
         file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("+ Surveillance respiratoire requise\n")
+        file.write("+ Value for Na :\n")
         file.close()
     else:
         print("Rien à faire")
