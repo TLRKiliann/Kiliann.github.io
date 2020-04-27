@@ -37,9 +37,10 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    file = open('./14besoins/doc_suivi/patient1_14b.txt', 'r')
-    print(file.read())
-    file.close()
+    with open('./14besoins/doc_suivi/patient1_14b.txt', 'r') as f1read:
+        with open('./labo/doc_labo/result.json', 'r') as f2read:
+            print(f1read.read())
+            print(f2read.read())
     subprocess.call('./14besoins/doc_suivi/patient1_read.py')
 
 def ajouterText():
@@ -53,6 +54,13 @@ def importationFile(fichier, encodage="Utf-8"):
     content=file.readlines()
     file.close()
     for li in content:
+        textBox.insert(END, li)
+
+def importationFilejson(fichier2):
+    file = open(fichier2, 'r')
+    content2=file.readlines()
+    file.close()
+    for li in content2:
         textBox.insert(END, li)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -104,5 +112,7 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 
 importationFile('./14besoins/doc_suivi/patient1_14b.txt',
     encodage="Utf-8")
+
+importationFilejson('./labo/doc_labo/result.json')
 
 mainloop()

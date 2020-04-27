@@ -7,6 +7,7 @@ from tkinter import messagebox
 import os
 import subprocess
 import platform
+import time
 
 
 def sheetLabo():
@@ -43,365 +44,327 @@ def recordTofile():
         print("Ok, data saved")
         recordOption()
         confRec()
-        fen.destroy()
+        #app.destroy()
     else:
         messagebox.showinfo('Return', 'You will return to the application')
 
 def recordOption():
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", entrytext.get())
-    file=open('./labo/doc_labo/result.json', 'a+')
-    file.write("Nom du patient : ")
-    file.write(entrytext.get() + '\n')
-    file.close()
-    print(CheckVar1.get())
-    if CheckVar1.get()==1:
-        print("+ Na value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Na value and treatment : (add what the patient needs)\n")
-        file.close()
-    else:
-        print("+ Na value ok, nothing to do")
+    with open('./labo/doc_labo/result.json', 'a+') as file:
+        file.write("\nDate : ")
+        file.write(time.strftime("%d/%m/%Y")+ '\n')
+        file.write("Nom du patient : ")
+        file.write(entrytext.get() + '\n')
+        print(CheckVar1.get())
+        if CheckVar1.get()==1:
+            print("+ Na value was checked !")
+            with open('./labo/doc_labo/result.json', 'a+') as file:
+                file.write("# Na value and treatment : (add what the patient needs)\n")
+        else:
+            print("+ Na value ok, nothing to do")
         
     print(CheckVar2.get())
     if CheckVar2.get()==1:
         print("+ K value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# K value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# K value and treatment : (add what the patient needs)\n")
     else:
         print("+ K value ok, nothing to do")
 
     print(CheckVar3.get())
     if CheckVar3.get()==1:
         print("+ Ca value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Ca value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Ca value and treatment : (add what the patient needs)\n")
     else:
         print("+ Ca value ok, nothing to do")
         
     print(CheckVar4.get())
     if CheckVar4.get()==1:
         print("+ Mg value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Mg value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Mg value and treatment : (add what the patient needs)\n")
     else:
         print("+ Mg value ok, nothing to do")
 
     print(CheckVar5.get())
     if CheckVar5.get()==1:
         print("+ Cl value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Cl value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Cl value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cl value ok, nothing to do")
 
     print(CheckVar6.get())
     if CheckVar6.get()==1:
         print("+ Phosphates value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Phosphates value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Phosphates value and treatment : (add what the patient needs)\n")
     else:
         print("+ Phosphates value ok, nothing to do")
 
     print(CheckVar7.get())
     if CheckVar7.get()==1:
         print("+ Bicarbonates value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Bicarbonates value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Bicarbonates value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bicarbonates value ok, nothing to do")
 
     print(CheckVar8.get())
     if CheckVar8.get()==1:
         print("+ Cardiac workup value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Cardiac workup value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Cardiac workup value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cardiac workup value ok, nothing to do")
 
     print(CheckVar9.get())
     if CheckVar9.get()==1:
         print("+ CK-MB value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# CK-MB value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# CK-MB value and treatment : (add what the patient needs)\n")
     else:
         print("+ CK-MB value ok, nothing to do")
 
     print(CheckVar10.get())
     if CheckVar10.get()==1:
         print("+ Troponin value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Troponin value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Troponin value and treatment : (add what the patient needs)\n")
     else:
         print("+ Troponin value ok, nothing to do")
 
     print(CheckVar11.get())
     if CheckVar11.get()==1:
         print("+ Lipid profile value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Lipid profile value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Lipid profile value and treatment : (add what the patient needs)\n")
     else:
         print("+ Lipid profile value ok, nothing to do")
 
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("+ Cholesterol total value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Cholesterol total value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Cholesterol total value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cholesterol total value ok, nothing to do")
 
     print(CheckVar13.get())
     if CheckVar13.get()==1:
         print("+ HDL value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# HDL value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# HDL value and treatment : (add what the patient needs)\n")
     else:
         print("+ HDL value ok, nothing to do")
 
     print(CheckVar14.get())
     if CheckVar14.get()==1:
         print("+ LDL value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# LDL value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# LDL value and treatment : (add what the patient needs)\n")
     else:
         print("+ LDL value ok, nothing to do")
 
     print(CheckVar15.get())
     if CheckVar15.get()==1:
         print("+ Triglycerides value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Triglycerides value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Triglycerides value and treatment : (add what the patient needs)\n")
     else:
         print("+ Triglycerides value ok, nothing to do")
 
     print(CheckVar16.get())
     if CheckVar16.get()==1:
         print("+ ASAT value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# ASAT value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# ASAT value and treatment : (add what the patient needs)\n")
     else:
         print("+ ASAT value ok, nothing to do")
 
     print(CheckVar17.get())
     if CheckVar17.get()==1:
         print("+ ALAT value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# ALAT value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# ALAT value and treatment : (add what the patient needs)\n")
     else:
         print("+ ALAT value ok, nothing to do")
 
     print(CheckVar18.get())
     if CheckVar18.get()==1:
         print("+ Gamma-GT value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Gamma-GT value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Gamma-GT value and treatment : (add what the patient needs)\n")
     else:
         print("+ Gamma-GT value ok, nothing to do")
 
     print(CheckVar19.get())
     if CheckVar19.get()==1:
         print("+ Alkaline phosphatase value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Alkaline phosphatase value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Alkaline phosphatase value and treatment : (add what the patient needs)\n")
     else:
         print("+ Alkaline phosphatase value ok, nothing to do")
 
     print(CheckVar20.get())
     if CheckVar20.get()==1:
         print("+ Bilirubin direct value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Bilirubin direct value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Bilirubin direct value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bilirubin direct value ok, nothing to do")
 
     print(CheckVar21.get())
     if CheckVar21.get()==1:
         print("+ Bilirubin indirect value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Bilirubin indirect value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Bilirubin indirect value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bilirubin indirect value ok, nothing to do")
 
     print(CheckVar22.get())
     if CheckVar22.get()==1:
         print("+ LDH value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# LDH value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# LDH value and treatment : (add what the patient needs)\n")
     else:
         print("+ LDH value ok, nothing to do")
 
     print(CheckVar23.get())
     if CheckVar23.get()==1:
         print("+ Uric acid value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Uric acid value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Uric acid value and treatment : (add what the patient needs)\n")
     else:
         print("+ Uric acid value ok, nothing to do")
 
     print(CheckVar24.get())
     if CheckVar24.get()==1:
         print("+ TP value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# TP value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# TP value and treatment : (add what the patient needs)\n")
     else:
         print("+ TP value ok, nothing to do")
 
     print(CheckVar25.get())
     if CheckVar25.get()==1:
         print("+ INR value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# INR value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# INR value and treatment : (add what the patient needs)\n")
     else:
         print("+ INR value ok, nothing to do")
 
     print(CheckVar26.get())
     if CheckVar26.get()==1:
         print("+ Fasting glucose value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Fasting glucose value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Fasting glucose value and treatment : (add what the patient needs)\n")
     else:
         print("+ Fasting glucose value ok, nothing to do")
 
     print(CheckVar27.get())
     if CheckVar27.get()==1:
         print("+ Postprandial glucose value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Postprandial glucose value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Postprandial glucose value and treatment : (add what the patient needs)\n")
     else:
         print("+ Postprandial glucose value ok, nothing to do")
 
     print(CheckVar28.get())
     if CheckVar28.get()==1:
         print("+ HbA1c value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# HbA1c value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# HbA1c value and treatment : (add what the patient needs)\n")
     else:
         print("+ HbA1c value ok, nothing to do")
 
     print(CheckVar29.get())
     if CheckVar29.get()==1:
         print("+ Iron value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Iron value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Iron value and treatment : (add what the patient needs)\n")
     else:
         print("+ Iron value ok, nothing to do")
 
     print(CheckVar30.get())
     if CheckVar30.get()==1:
         print("+ Ferritine value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Ferritine value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Ferritine value and treatment : (add what the patient needs)\n")
     else:
         print("+ Ferritine value ok, nothing to do")
 
     print(CheckVar31.get())
     if CheckVar31.get()==1:
         print("+ Vitamin B12 value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Vitamin B12 value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Vitamin B12 value and treatment : (add what the patient needs)\n")
     else:
         print("+ Vitamin B12 value ok, nothing to do")
 
     print(CheckVar32.get())
     if CheckVar32.get()==1:
         print("+ Folates (B9) value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Folates (B9) value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Folates (B9) value and treatment : (add what the patient needs)\n")
     else:
         print("+ Folates (B9) value ok, nothing to do")
 
     print(CheckVar33.get())
     if CheckVar33.get()==1:
         print("+ Urea value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Urea value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Urea value and treatment : (add what the patient needs)\n")
     else:
         print("+ Urea value ok, nothing to do")
 
     print(CheckVar34.get())
     if CheckVar34.get()==1:
         print("+ Creat value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Creat value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Creat value and treatment : (add what the patient needs)\n")
     else:
         print("+ Creat value ok, nothing to do")
 
     print(CheckVar35.get())
     if CheckVar35.get()==1:
         print("+ Sediment. velocity value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Sediment. velocity value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Sediment. velocity value and treatment : (add what the patient needs)\n")
     else:
         print("+ Sediment. velocity value ok, nothing to do")
 
     print(CheckVar36.get())
     if CheckVar36.get()==1:
         print("+ C-react. protein value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# C-react. protein value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# C-react. protein value and treatment : (add what the patient needs)\n")
     else:
         print("+ C-react. protein value ok, nothing to do")
 
     print(CheckVar37.get())
     if CheckVar37.get()==1:
         print("+ Albumina value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Albumina value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Albumina value and treatment : (add what the patient needs)\n")
     else:
         print("+ Albumina value ok, nothing to do")
 
     print(CheckVar38.get())
     if CheckVar38.get()==1:
         print("+ Cortisol value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# Cortisol value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Cortisol value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cortisol value ok, nothing to do")
 
     print(CheckVar39.get())
     if CheckVar39.get()==1:
         print("+ ACTH value was checked !")
-        file=open('./labo/doc_labo/result.json', 'a+')
-        file.write("# ACTH value and treatment : (add what the patient needs)\n")
-        file.close()
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# ACTH value and treatment : (add what the patient needs)\n")
     else:
         print("+ ACTH value ok, nothing to do")
 

@@ -19,3 +19,21 @@ Arrestes de discuter tu m'emmerdes
 donne
 + Accompagnement ou aide dans se recréer requis
 Et Voilà
+
+En date du : 27/04/2020 à 21:20:19 :
+# K value and treatment : (add what the patient needs)
+Le Dr Angel a prescrit du Kalcipos pour faire augmenter le K.
+Valeur à 1.9
+# Cardiac workup value and treatment : (add what the patient needs)
+Le medécin dit de l'avoir à l'oeil
+# Troponin value and treatment : (add what the patient needs)
+Il faut que la troponin baisse.
+# HbA1c value and treatment : (add what the patient needs)
+Prochaine HbA1c dans 3 mois ! (!#RDV AGENDA#!)
+
+En date du : 27/04/2020 à 21:24:40 :
+# Mg value and treatment : (add what the patient needs)
+Revoir avec le patient pour qu'il prenne à nouveau son
+magnesiocard. A suivre...
+# Cl value and treatment : (add what the patient needs)
+Cl en légère hausse. Demander au patient de boire plus.
