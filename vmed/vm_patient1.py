@@ -30,7 +30,7 @@ class MenuBar(Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
-        But2=Button(self, text ="Fermer", fg='cyan', bg='gray30', relief=GROOVE,
+        But2=Button(self, text ="Close", fg='cyan', bg='gray30', relief=GROOVE,
             activebackground='cyan', command=boss.quit).pack(side=LEFT, padx=3)
 
 # Application principale

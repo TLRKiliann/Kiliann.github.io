@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-*-encoding:Utf-8-*-
+# -*-encoding:Utf-8-*-
 
 
 from tkinter import *
@@ -50,27 +50,27 @@ class Application(Frame):
         self.can.create_window((4,4), window=self.frame, anchor=NW,
             tags="self.frame")
         # Insertion du texte
-        self.can.create_text(300, 150, anchor=CENTER, text="Care and Monitoring",
+        self.can.create_text(300, 150, anchor=CENTER, text="Auxiliary resources",
             font=('Times New Roman', 28), fill='aquamarine')
         self.can.create_text(590, 380, anchor=NE, text="Copyright (C) 2020 Inc.",
             font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
-
+        
+        # Butrton to add
         self.x2, self.y2 = 200, 300
         self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
-            activeforeground='black',
-            text="Add",
+            activeforeground='black', text="Add",
             command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
-
+        
+        # Button to read
         self.x3, self.y3 = 400, 300
         self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
-            activeforeground='black',
-            text="Read",
+            activeforeground='black', text="Read",
             command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
@@ -80,27 +80,30 @@ class Application(Frame):
         '''Reset the scroll region to encompass the inner frame'''
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
+    # Func to add
     def lienDirect(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
-                print("+ File '14 needs' exist (add)!")
-                subprocess.call('./14besoins/doc_suivi/patient1_write.py')
+            if os.path.getsize('./auxsrc/doc_auxsrc/auxsrcfile1.txt'):
+                print("+ File 'auxsrcfile.txt' exist (add)!")
+                subprocess.call('./auxsrc/doc_auxsrc/aux_write.py')
         except FileNotFoundError as outmsg:
-            print("+ Sorry, file '14 needs' not exist !", outmsg)
-            self.confRec()
+            print("+ Sorry, file 'auxsrcfile.txt' not exist !", outmsg)
+            print("+ File auxsrcfile.txt created !")
+            subprocess.call('./auxsrc/doc_auxsrc/aux_write.py')
 
+    # Func to read
     def lectureFic(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
-                print("+ File '14 needs' exist (read)!")
-                subprocess.call('./14besoins/doc_suivi/patient1_read.py')
+            if os.path.getsize('./auxsrc/doc_auxsrc/auxsrcfile1.txt'):
+                print("+ File 'auxsrcfile.txt' exist (read)!")
+                subprocess.call('./auxsrc/doc_auxsrc/aux_read.py')
         except FileNotFoundError as outcom:
-            print("+ Sorry, file '14 needs' not exist !", outcom)
+            print("+ Sorry, file 'auxsrcfile.txt' not exist !", outcom)
             self.confRec()
 
     def confRec(self):
-        self.MsgBox2msg = messagebox.showinfo("Warning", "File '14 needs'"
-            "was not created. Check options to the 14 needs board !")
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile.txt'"
+            "was not created. No Medical Visit has been checked !")
 
 if __name__=='__main__':
     app = Application()

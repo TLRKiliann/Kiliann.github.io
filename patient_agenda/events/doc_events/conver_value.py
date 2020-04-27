@@ -22,7 +22,7 @@ dalaFa = data_list1[0]
 dalaTrim = data_list1[1]
 dalaPeste = data_list1[2]
 
-lalala = "Rendez-vous pris pour le :"
+lalala = "Rendez-vous set up for :"
 final_data =  lalala+' '+str(dalaFa)+'/'+str(dalaTrim)+'/'+str(dalaPeste)
 print(final_data)
 

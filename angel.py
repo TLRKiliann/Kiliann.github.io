@@ -824,25 +824,25 @@ class Application(Frame):
 
     #Moyens aux
     def moyaux(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient1.py")
 
     def moyaux2(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient2.py")
 
     def moyaux3(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient3.py")
 
     def moyaux4(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient4.py")
 
     def moyaux5(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient5.py")
 
     def moyaux6(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient6.py")
 
     def moyaux7(self):
-        subprocess.call("./moyenx/moyau_ae.py")
+        subprocess.call("./auxsrc/auxsrc_patient7.py")
 
     # External stakeholders
     def extStake(self):
@@ -1108,7 +1108,7 @@ class Application(Frame):
                       activebackground='dark turquoise',
                       activeforeground='black',
                       text="Life story",
-                      command=self.showvm1)
+                      command=self.histv1)
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
         self.x7, self.y7 = 981, 200
@@ -1116,7 +1116,7 @@ class Application(Frame):
                       activebackground='dark turquoise',
                       activeforeground='black',
                       text="Aux. resrc.",
-                      command=self.histv1)
+                      command=self.moyaux)
         self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
 
         self.x8, self.y8 = 1109, 200
@@ -1124,7 +1124,7 @@ class Application(Frame):
                       activebackground='dark turquoise',
                       activeforeground='black',
                       text="Ext. stacke.",
-                      command=self.moyaux)
+                      command=self.extStake)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 2
