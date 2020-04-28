@@ -25,7 +25,25 @@ def sheetLabo():
         subprocess.call('open', './labo/labosheet.pdf' ) # Mac
     else:
         os.startfile('./labo/labosheet.pdf') # Windows
-        
+
+
+def sheetMicrobio():
+    """
+    For openning file at pdf 
+    format with a bit prog-sys code.
+    For Linux, Windows and MAC.
+    """
+    becall = platform.system()
+    print(platform.system())
+    
+    if becall == 'Linux':
+        os.system('gio open "./labo/microbio.pdf"') # Linux
+    elif becall =='Darwin':
+        subprocess.call('open', './labo/microbio.pdf' ) # Mac
+    else:
+        os.startfile('./labo/microbio.pdf') # Windows
+
+
 def printLabo():
     """
     Need to be modified in 
@@ -44,30 +62,31 @@ def recordTofile():
         print("Ok, data saved")
         recordOption()
         confRec()
-        #app.destroy()
+        app.destroy()
     else:
         messagebox.showinfo('Return', 'You will return to the application')
 
 def recordOption():
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", entrytext.get())
-    with open('./labo/doc_labo/result.json', 'a+') as file:
+    with open('./labo/doc_labo/result.txt', 'a+') as file:
         file.write("\nDate : ")
         file.write(time.strftime("%d/%m/%Y")+ '\n')
         file.write("Nom du patient : ")
-        file.write(entrytext.get() + '\n')
-        print(CheckVar1.get())
-        if CheckVar1.get()==1:
-            print("+ Na value was checked !")
-            with open('./labo/doc_labo/result.json', 'a+') as file:
-                file.write("# Na value and treatment : (add what the patient needs)\n")
-        else:
-            print("+ Na value ok, nothing to do")
+        file.write(entrytext.get())
+
+    print(CheckVar1.get())
+    if CheckVar1.get()==1:
+        print("+ Na value was checked !")
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
+            file.write("# Na value and treatment : (add what the patient needs)\n")
+    else:
+        print("+ Na value ok, nothing to do")
         
     print(CheckVar2.get())
     if CheckVar2.get()==1:
         print("+ K value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# K value and treatment : (add what the patient needs)\n")
     else:
         print("+ K value ok, nothing to do")
@@ -75,7 +94,7 @@ def recordOption():
     print(CheckVar3.get())
     if CheckVar3.get()==1:
         print("+ Ca value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Ca value and treatment : (add what the patient needs)\n")
     else:
         print("+ Ca value ok, nothing to do")
@@ -83,7 +102,7 @@ def recordOption():
     print(CheckVar4.get())
     if CheckVar4.get()==1:
         print("+ Mg value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Mg value and treatment : (add what the patient needs)\n")
     else:
         print("+ Mg value ok, nothing to do")
@@ -91,7 +110,7 @@ def recordOption():
     print(CheckVar5.get())
     if CheckVar5.get()==1:
         print("+ Cl value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Cl value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cl value ok, nothing to do")
@@ -99,7 +118,7 @@ def recordOption():
     print(CheckVar6.get())
     if CheckVar6.get()==1:
         print("+ Phosphates value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Phosphates value and treatment : (add what the patient needs)\n")
     else:
         print("+ Phosphates value ok, nothing to do")
@@ -107,7 +126,7 @@ def recordOption():
     print(CheckVar7.get())
     if CheckVar7.get()==1:
         print("+ Bicarbonates value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Bicarbonates value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bicarbonates value ok, nothing to do")
@@ -115,7 +134,7 @@ def recordOption():
     print(CheckVar8.get())
     if CheckVar8.get()==1:
         print("+ Cardiac workup value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Cardiac workup value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cardiac workup value ok, nothing to do")
@@ -123,7 +142,7 @@ def recordOption():
     print(CheckVar9.get())
     if CheckVar9.get()==1:
         print("+ CK-MB value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# CK-MB value and treatment : (add what the patient needs)\n")
     else:
         print("+ CK-MB value ok, nothing to do")
@@ -131,7 +150,7 @@ def recordOption():
     print(CheckVar10.get())
     if CheckVar10.get()==1:
         print("+ Troponin value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Troponin value and treatment : (add what the patient needs)\n")
     else:
         print("+ Troponin value ok, nothing to do")
@@ -139,7 +158,7 @@ def recordOption():
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("+ Cholesterol total value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Cholesterol total value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cholesterol total value ok, nothing to do")
@@ -147,7 +166,7 @@ def recordOption():
     print(CheckVar13.get())
     if CheckVar13.get()==1:
         print("+ HDL value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# HDL value and treatment : (add what the patient needs)\n")
     else:
         print("+ HDL value ok, nothing to do")
@@ -155,7 +174,7 @@ def recordOption():
     print(CheckVar14.get())
     if CheckVar14.get()==1:
         print("+ LDL value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# LDL value and treatment : (add what the patient needs)\n")
     else:
         print("+ LDL value ok, nothing to do")
@@ -163,7 +182,7 @@ def recordOption():
     print(CheckVar15.get())
     if CheckVar15.get()==1:
         print("+ Triglycerides value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Triglycerides value and treatment : (add what the patient needs)\n")
     else:
         print("+ Triglycerides value ok, nothing to do")
@@ -171,7 +190,7 @@ def recordOption():
     print(CheckVar16.get())
     if CheckVar16.get()==1:
         print("+ ASAT value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# ASAT value and treatment : (add what the patient needs)\n")
     else:
         print("+ ASAT value ok, nothing to do")
@@ -179,7 +198,7 @@ def recordOption():
     print(CheckVar17.get())
     if CheckVar17.get()==1:
         print("+ ALAT value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# ALAT value and treatment : (add what the patient needs)\n")
     else:
         print("+ ALAT value ok, nothing to do")
@@ -187,7 +206,7 @@ def recordOption():
     print(CheckVar18.get())
     if CheckVar18.get()==1:
         print("+ Gamma-GT value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Gamma-GT value and treatment : (add what the patient needs)\n")
     else:
         print("+ Gamma-GT value ok, nothing to do")
@@ -195,7 +214,7 @@ def recordOption():
     print(CheckVar19.get())
     if CheckVar19.get()==1:
         print("+ Alkaline phosphatase value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Alkaline phosphatase value and treatment : (add what the patient needs)\n")
     else:
         print("+ Alkaline phosphatase value ok, nothing to do")
@@ -203,7 +222,7 @@ def recordOption():
     print(CheckVar20.get())
     if CheckVar20.get()==1:
         print("+ Bilirubin direct value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Bilirubin direct value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bilirubin direct value ok, nothing to do")
@@ -211,7 +230,7 @@ def recordOption():
     print(CheckVar21.get())
     if CheckVar21.get()==1:
         print("+ Bilirubin indirect value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Bilirubin indirect value and treatment : (add what the patient needs)\n")
     else:
         print("+ Bilirubin indirect value ok, nothing to do")
@@ -219,7 +238,7 @@ def recordOption():
     print(CheckVar22.get())
     if CheckVar22.get()==1:
         print("+ LDH value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# LDH value and treatment : (add what the patient needs)\n")
     else:
         print("+ LDH value ok, nothing to do")
@@ -227,7 +246,7 @@ def recordOption():
     print(CheckVar23.get())
     if CheckVar23.get()==1:
         print("+ Uric acid value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Uric acid value and treatment : (add what the patient needs)\n")
     else:
         print("+ Uric acid value ok, nothing to do")
@@ -235,7 +254,7 @@ def recordOption():
     print(CheckVar24.get())
     if CheckVar24.get()==1:
         print("+ TP value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# TP value and treatment : (add what the patient needs)\n")
     else:
         print("+ TP value ok, nothing to do")
@@ -243,7 +262,7 @@ def recordOption():
     print(CheckVar25.get())
     if CheckVar25.get()==1:
         print("+ INR value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# INR value and treatment : (add what the patient needs)\n")
     else:
         print("+ INR value ok, nothing to do")
@@ -251,7 +270,7 @@ def recordOption():
     print(CheckVar26.get())
     if CheckVar26.get()==1:
         print("+ Fasting glucose value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Fasting glucose value and treatment : (add what the patient needs)\n")
     else:
         print("+ Fasting glucose value ok, nothing to do")
@@ -259,7 +278,7 @@ def recordOption():
     print(CheckVar27.get())
     if CheckVar27.get()==1:
         print("+ Postprandial glucose value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Postprandial glucose value and treatment : (add what the patient needs)\n")
     else:
         print("+ Postprandial glucose value ok, nothing to do")
@@ -267,7 +286,7 @@ def recordOption():
     print(CheckVar28.get())
     if CheckVar28.get()==1:
         print("+ HbA1c value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# HbA1c value and treatment : (add what the patient needs)\n")
     else:
         print("+ HbA1c value ok, nothing to do")
@@ -275,7 +294,7 @@ def recordOption():
     print(CheckVar29.get())
     if CheckVar29.get()==1:
         print("+ Iron value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Iron value and treatment : (add what the patient needs)\n")
     else:
         print("+ Iron value ok, nothing to do")
@@ -283,7 +302,7 @@ def recordOption():
     print(CheckVar30.get())
     if CheckVar30.get()==1:
         print("+ Ferritine value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Ferritine value and treatment : (add what the patient needs)\n")
     else:
         print("+ Ferritine value ok, nothing to do")
@@ -291,7 +310,7 @@ def recordOption():
     print(CheckVar31.get())
     if CheckVar31.get()==1:
         print("+ Vitamin B12 value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Vitamin B12 value and treatment : (add what the patient needs)\n")
     else:
         print("+ Vitamin B12 value ok, nothing to do")
@@ -299,7 +318,7 @@ def recordOption():
     print(CheckVar32.get())
     if CheckVar32.get()==1:
         print("+ Folates (B9) value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Folates (B9) value and treatment : (add what the patient needs)\n")
     else:
         print("+ Folates (B9) value ok, nothing to do")
@@ -307,7 +326,7 @@ def recordOption():
     print(CheckVar33.get())
     if CheckVar33.get()==1:
         print("+ Urea value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Urea value and treatment : (add what the patient needs)\n")
     else:
         print("+ Urea value ok, nothing to do")
@@ -315,7 +334,7 @@ def recordOption():
     print(CheckVar34.get())
     if CheckVar34.get()==1:
         print("+ Creat value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Creat value and treatment : (add what the patient needs)\n")
     else:
         print("+ Creat value ok, nothing to do")
@@ -323,7 +342,7 @@ def recordOption():
     print(CheckVar35.get())
     if CheckVar35.get()==1:
         print("+ Sediment. velocity value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Sediment. velocity value and treatment : (add what the patient needs)\n")
     else:
         print("+ Sediment. velocity value ok, nothing to do")
@@ -331,7 +350,7 @@ def recordOption():
     print(CheckVar36.get())
     if CheckVar36.get()==1:
         print("+ C-react. protein value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# C-react. protein value and treatment : (add what the patient needs)\n")
     else:
         print("+ C-react. protein value ok, nothing to do")
@@ -339,7 +358,7 @@ def recordOption():
     print(CheckVar37.get())
     if CheckVar37.get()==1:
         print("+ Albumina value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Albumina value and treatment : (add what the patient needs)\n")
     else:
         print("+ Albumina value ok, nothing to do")
@@ -347,7 +366,7 @@ def recordOption():
     print(CheckVar38.get())
     if CheckVar38.get()==1:
         print("+ Cortisol value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Cortisol value and treatment : (add what the patient needs)\n")
     else:
         print("+ Cortisol value ok, nothing to do")
@@ -355,7 +374,7 @@ def recordOption():
     print(CheckVar39.get())
     if CheckVar39.get()==1:
         print("+ ACTH value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# ACTH value and treatment : (add what the patient needs)\n")
     else:
         print("+ ACTH value ok, nothing to do")
@@ -363,7 +382,7 @@ def recordOption():
     print(CheckVar40.get())
     if CheckVar40.get()==1:
         print("+ TSH value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# TSH value and treatment : (add what the patient needs)\n")
     else:
         print("+ TSH value ok, nothing to do")
@@ -371,7 +390,7 @@ def recordOption():
     print(CheckVar41.get())
     if CheckVar41.get()==1:
         print("+ free T4 value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# free T4 value and treatment : (add what the patient needs)\n")
     else:
         print("+ free T4 value ok, nothing to do")
@@ -379,7 +398,7 @@ def recordOption():
     print(CheckVar42.get())
     if CheckVar42.get()==1:
         print("+ free free T3 value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# free free T3 value and treatment : (add what the patient needs)\n")
     else:
         print("+ free free T3 value ok, nothing to do")
@@ -387,7 +406,7 @@ def recordOption():
     print(CheckVar43.get())
     if CheckVar43.get()==1:
         print("+ free total T3 value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# free total T3 value and treatment : (add what the patient needs)\n")
     else:
         print("+ free total T3 value ok, nothing to do")
@@ -395,7 +414,7 @@ def recordOption():
     print(CheckVar44.get())
     if CheckVar44.get()==1:
         print("+ Stix (strip) was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Stix (strip) and treatment will be... : (add what the patient needs)\n")
     else:
         print("+ Stix (strip) ok, nothing to do")
@@ -403,7 +422,7 @@ def recordOption():
     print(CheckVar45.get())
     if CheckVar45.get()==1:
         print("+ Uricult done value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Uricult done and treatment : (add what the patient needs)\n")
     else:
         print("+ Uricult ok, nothing to do")
@@ -411,42 +430,11 @@ def recordOption():
     print(CheckVar46.get())
     if CheckVar46.get()==1:
         print("+ Coproculture was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
+        with open('./labo/doc_labo/result.txt', 'a+') as file:
             file.write("# Coproculture and treatment : (add what the patient needs)\n")
     else:
         print("+ Coproculture ok, nothing to do")
  
-C44 = Checkbutton(app, text="Stix (strip)", fg='navy', 
-    bg='cyan', variable=CheckVar44, 
-    onvalue=1, offvalue=0, height=1, 
-    width=20, anchor="w")
-C44.grid(sticky='w', row=27, column=0, padx=10)
-
-CheckVar45 = IntVar()
-C45 = Checkbutton(app, text="Uricult", fg='navy', 
-    bg='cyan', variable=CheckVar45, 
-    onvalue=1, offvalue=0, height=1, 
-    width=20, anchor="w")
-C45.grid(sticky='w', row=28, column=0, padx=10)
-
-
-# Coproculture
-labecopro=Label(app, text='--- Coproculture ---', 
-    font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
-labecopro.grid(row=26, column=2, padx=10)
-
-CheckVar46 = IntVar()
-C46 = Checkbutton(app, text="Check", fg='navy', 
-    bg='cyan', variable=CheckVar46, 
-    onvalue=1, offvalue=0, height=1, 
-    width=20, anchor="w")
-C46.grid(sticky='w', row=27, column=2, padx=10)
-
-
-
-
-
 def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
@@ -473,7 +461,7 @@ entryname.grid(sticky='w', row=0, column=2)
 # Electrolytes
 labelresult=Label(app, text='--- Electrolytes ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelresult.grid(sticky='w', row=1, column=0, columnspan=2, padx=10)
 
 CheckVar1 = IntVar()
@@ -528,7 +516,7 @@ C7.grid(sticky='w', row=5, column=0, padx=10)
 # Cardio-vasc
 labelcardio=Label(app, text='--- Cardiovascular ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelcardio.grid(row=1, column=2, padx=10)
 
 CheckVar8 = IntVar()
@@ -584,7 +572,7 @@ C15.grid(sticky='e', row=5, column=2, padx=20)
 # Hepatologia
 labelresult2=Label(app, text='--- Hepathology ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelresult2.grid(sticky='w', row=7, column=0, columnspan=2, padx=10)
 
 #separator = Label(app, height=5, bd=2, relief=SUNKEN)
@@ -649,7 +637,7 @@ C23.grid(sticky='w', row=9, column=1, padx=30)
 # Coagulation
 labelresult3=Label(app, text='--- Coagulation ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelresult3.grid(row=7, column=2, padx=10)
 
 CheckVar24 = IntVar()
@@ -669,7 +657,7 @@ C25.grid(sticky='w', row=9, column=2, padx=10)
 # Glucids
 labelgluco=Label(app, text='--- Carbohydrates ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelgluco.grid(sticky='w', row=12, column=0, columnspan=2, padx=10)
 
 CheckVar26 = IntVar()
@@ -696,7 +684,7 @@ C28.grid(sticky='w', row=15, column=0, padx=10)
 # Anemia
 labelanemia=Label(app, text='--- Anemia ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelanemia.grid(row=12, column=2, padx=10)
 
 CheckVar29 = IntVar()
@@ -730,7 +718,7 @@ C32.grid(sticky='e', row=14, column=2, padx=10)
 # Reins
 labelinf=Label(app, text='--- Renal ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelinf.grid(sticky='w', row=17, column=0, columnspan=2, padx=10)
 
 CheckVar33 = IntVar()
@@ -750,7 +738,7 @@ C34.grid(sticky='w', row=19, column=0, padx=10)
 # Inflammation
 labelinf=Label(app, text='--- Inflammation ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelinf.grid(row=17, column=2, padx=10)
 
 CheckVar35 = IntVar()
@@ -791,7 +779,7 @@ C39.grid(sticky='e', row=19, column=2, padx=10)
 # Endocrinology
 labelinf=Label(app, text='--- Endocrinology ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelinf.grid(sticky='w', row=23, column=0, columnspan=2, padx=10)
 
 CheckVar40 = IntVar()
@@ -825,7 +813,7 @@ C43.grid(sticky='w', row=25, column=1, padx=30)
 # Urinary infection
 labelinfuri=Label(app, text='--- Urinary infection ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labelinfuri.grid(sticky='w', row=26, column=0, columnspan=2, padx=10)
 
 CheckVar44 = IntVar()
@@ -845,7 +833,7 @@ C45.grid(sticky='w', row=28, column=0, padx=10)
 # Coproculture
 labecopro=Label(app, text='--- Coproculture ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='yellow')
+    height=1, bg='gray30', fg='white')
 labecopro.grid(row=26, column=2, padx=10)
 
 CheckVar46 = IntVar()
@@ -855,18 +843,29 @@ C46 = Checkbutton(app, text="Check", fg='navy',
     width=20, anchor="w")
 C46.grid(sticky='w', row=27, column=2, padx=10)
 
-# Buttons
-buttonsheet=Button(app, text="Complete lab sheet", width=15,
-    fg='yellow', bg='navy', command=sheetLabo)
-buttonsheet.grid(sticky='e', row=44, column=1, padx=10, pady=10)
+# Printable sheet
+labelinfuri=Label(app, text='--- Printable ---', 
+    font="Times 14 bold", width=46,
+    height=1, bg='gray30', fg='cyan')
+labelinfuri.grid(sticky='w', row=29, column=0, columnspan=2, padx=10)
 
+# Buttons printable sheet
+buttonsheet=Button(app, text="Complete lab sheet", width=15,
+    fg='cyan', bg='navy', command=sheetLabo)
+buttonsheet.grid(row=30, column=0, padx=10, pady=10)
+
+buttonsheet=Button(app, text="Microbiology sheet", width=15,
+    fg='cyan', bg='navy', command=sheetMicrobio)
+buttonsheet.grid(row=30, column=1, padx=10, pady=10)
+
+# Button save and quit
 buttonsave=Button(app, text="Save", width=10,
     fg='yellow', bg='navy', command=recordTofile)
-buttonsave.grid(sticky='w', row=44, column=2, pady=10)
+buttonsave.grid(row=44, column=2, pady=10)
 
 buttonquit=Button(app, text='Quit', width=10,
     fg='cyan', bg='gray30', command=quit)
-buttonquit.grid(sticky='e', row=44, column=2, pady=20)
+buttonquit.grid(sticky='e', row=44, column=2, padx=10, pady=10)
 
 #label_fra.grid(padx=10, pady=10)
 

@@ -81,26 +81,55 @@ class Application(Frame):
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def lienDirect(self):
+        """
+        Add button check
+        if files exist.
+        """
         try:
             if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
                 print("+ File '14 needs' exist (add)!")
                 subprocess.call('./14besoins/doc_suivi/patient1_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file '14 needs' not exist !", outmsg)
-            self.confRec()
+            self.commentFileRecNeeds()
+        try:        
+            if os.path.getsize('./labo/doc_labo/result.txt'):
+                print("+ File 'result.txt' exist !")
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'result.txt' not exist !", outcom)
+            self.commentFileRecResult()
 
     def lectureFic(self):
+        """
+        Read button check
+        if files exist.
+        """
         try:
             if os.path.getsize('./14besoins/doc_suivi/patient1_14b.txt'):
                 print("+ File '14 needs' exist (read)!")
+        except FileNotFoundError as outnote:
+            print("+ Sorry, file '14 needs' not exist !", outnote)
+            self.commentFileRecNeeds()
+        try:        
+            if os.path.getsize('./labo/doc_labo/result.txt'):
+                print("+ File 'result.txt' exist !")
                 subprocess.call('./14besoins/doc_suivi/patient1_read.py')
-        except FileNotFoundError as outcom:
-            print("+ Sorry, file '14 needs' not exist !", outcom)
-            self.confRec()
+        except FileNotFoundError as outputcomment:
+            print("+ Sorry, file 'result.txt' not exist !", outputcomment)
+            self.commentFileRecResult()
 
-    def confRec(self):
-        self.MsgBox2msg = messagebox.showinfo("Warning", "File '14 needs'"
-            "was not created. Check options to the 14 needs board !")
+    def commentFileRecNeeds(self):
+        self.MsgBox1msg = messagebox.showinfo("Warning", "File '14 needs'"
+            "was not created. Check options to '14 needs' !")
+
+    def commentFileRecResult(self):
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'result.txt'"
+            "was not created. Check options to 'labo' !")
+        self.createFileLabo()
+
+    def createFileLabo(self):
+        with open('./labo/doc_labo/result.txt', 'w') as filelab:
+            filelab.write("---\n")
 
 if __name__=='__main__':
     app = Application()

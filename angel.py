@@ -449,7 +449,7 @@ class Application(Frame):
         self.can.delete(ALL)
 
     def msgExit(self):
-        MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit?')
+        MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
         if MsgBox == 1:
             self.master.destroy()
         else:

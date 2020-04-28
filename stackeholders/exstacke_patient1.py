@@ -76,7 +76,7 @@ class Application(Frame):
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         
-        # Butrton to add Diabetologia
+        # Button to add Diabetologia
         self.x1, self.y1 = 100, 150
         self.b1=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -93,7 +93,7 @@ class Application(Frame):
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
         self.pack()
 
-        # Butrton2 to add2 Oncology
+        # Button2 to add2 Oncology
         self.x3, self.y3 = 100, 200
         self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -110,7 +110,7 @@ class Application(Frame):
         self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
         self.pack()
 
-        # Butrton3 to add3 Ophtalmology
+        # Button3 to add3 Ophtalmology
         self.x5, self.y5 = 100, 250
         self.b5=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -127,7 +127,7 @@ class Application(Frame):
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
         self.pack()
 
-        # Butrton4 to add4 Dentist
+        # Button4 to add4 Dentist
         self.x7, self.y7 = 100, 300
         self.b7=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -178,7 +178,7 @@ class Application(Frame):
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
 
-        # Butrton7 to add7 Physiotherapy
+        # Button7 to add7 Physiotherapy
         self.x11, self.y11 = 100, 450
         self.b11=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -195,7 +195,7 @@ class Application(Frame):
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
 
-        # Butrton8 to add8 Ergotherapy
+        # Button8 to add8 Ergotherapy
         self.x13, self.y13 = 100, 500
         self.b13=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
@@ -212,7 +212,7 @@ class Application(Frame):
         self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
         self.pack()
 
-        # Butrton9 to add9 Podology
+        # Button9 to add9 Podology
         self.x15, self.y15 = 100, 550
         self.b15=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',

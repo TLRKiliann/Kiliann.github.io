@@ -38,7 +38,7 @@ def messFromSafeButt():
 
 def lectureFic():
     with open('./14besoins/doc_suivi/patient1_14b.txt', 'r') as f1read:
-        with open('./labo/doc_labo/result.json', 'r') as f2read:
+        with open('./labo/doc_labo/result.txt', 'r') as f2read:
             print(f1read.read())
             print(f2read.read())
     subprocess.call('./14besoins/doc_suivi/patient1_read.py')
@@ -50,18 +50,19 @@ def ajouterText():
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
-    file = open(fichier, 'r', encoding=encodage)
-    content=file.readlines()
-    file.close()
-    for li in content:
-        textBox.insert(END, li)
+    with open(fichier, 'r', encoding=encodage) as fileneeds:
+        content=fileneeds.readlines()
+        #fileneeds.close()
+        for li in content:
+            textBox.insert(END, li)
 
-def importationFilejson(fichier2):
-    file = open(fichier2, 'r')
-    content2=file.readlines()
-    file.close()
-    for li in content2:
-        textBox.insert(END, li)
+def importationLabo(fichier2):
+    with open(fichier2, 'r') as filelab:
+        content2=filelab.readlines()
+        #filelab.close()
+        for li in content2:
+            textBox.insert(END, li)
+        os.remove('./labo/doc_labo/result.py')
 
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -131,6 +132,6 @@ buttonQuitter.pack(side='right', padx=10, pady=10)
 importationFile('./14besoins/doc_suivi/patient1_14b.txt',
     encodage="Utf-8")
 
-importationFilejson('./labo/doc_labo/result.json')
+importationLabo('./labo/doc_labo/result.txt')
 
 mainloop()

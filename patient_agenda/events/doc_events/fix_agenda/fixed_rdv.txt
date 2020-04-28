@@ -39,3 +39,21 @@ Rendez-vous set up le : 28/04/2020, 11:42:35
 Rendez-vous set up for : 16/4/2020
 adqwdwqdqdqwdwqdqwd
 
+Rendez-vous set up le : 28/04/2020, 14:38:45
+Rendez-vous set up for : 29/4/2020
+Rdv chez le dentiste à 9h00
+et accompagné.
+
+
++++ Changes about rdv +++
+Rendez-vous set up for : 16/4/2020
+N'importe quoi...
+
+
+
++++ Changes about rdv +++
+With modification of date :
+Rendez-vous set up for : 16/4/2020
+N'importe quoi...
+
+
