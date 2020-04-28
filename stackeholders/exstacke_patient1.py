@@ -54,23 +54,23 @@ class Application(Frame):
             font=('Times New Roman', 28), fill='aquamarine')
 
         self.can.create_text(350, 150, anchor='w', text="Diabetologia",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 200, anchor='w', text="Oncology",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 250, anchor='w', text="Ophtalmology",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 300, anchor='w', text="Dentist",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 350, anchor='w', text="Stomatherapy",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 400, anchor='w', text="Aromatherapy",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 450, anchor='w', text="Physiotherapy",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 500, anchor='w', text="Ergotherapy",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.create_text(350, 550, anchor='w', text="Podology",
-            font=('Times New Roman', 18), fill='aquamarine')
+            font=('Times New Roman', 18), fill='cyan')
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
 
         # Configuration de la Scrollbar sur le Frame

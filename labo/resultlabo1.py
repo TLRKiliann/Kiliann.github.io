@@ -33,12 +33,12 @@ def sheetMicrobio():
     format with a bit prog-sys code.
     For Linux, Windows and MAC.
     """
-    becall = platform.system()
+    callplatform = platform.system()
     print(platform.system())
     
-    if becall == 'Linux':
+    if callplatform == 'Linux':
         os.system('gio open "./labo/microbio.pdf"') # Linux
-    elif becall =='Darwin':
+    elif callplatform =='Darwin':
         subprocess.call('open', './labo/microbio.pdf' ) # Mac
     else:
         os.startfile('./labo/microbio.pdf') # Windows

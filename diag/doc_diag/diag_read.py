@@ -34,7 +34,7 @@ entryName=Entry(fen, textvariable=entrytext)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 labelallergy=Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='red', bg='gray17')
+    font='Arial 18 bold', fg='coral', bg='gray17')
 labelallergy.pack(padx=5, pady=10)
 
 with open('./allergy/allergyfile.txt', 'r') as filename:

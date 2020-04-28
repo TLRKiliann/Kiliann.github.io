@@ -333,33 +333,15 @@ class MenuBar(Frame):
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan',
             menu=meGraph)
 
-        # External stakeholders
-        self.cmd_Intext=Menubutton(self, text='Ext. Stake.', fg='cyan', bg='gray30', relief=GROOVE)
+        # Manuals Nurse
+        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Intext.pack(side=LEFT, padx=3)
-        # drop-down portion of external stakeholders
+        # drop-down portion of Manuals Nurse
         meIntext = Menu(self.cmd_Intext)
-        meIntext.add_command(label='Patiente 1', background='black', activebackground='cyan',
+        meIntext.add_command(label='Click on it', background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
-                        command=boss.extStake)
-        meIntext.add_command(label='Patiente 2', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake2)
-        meIntext.add_command(label='Patiente 3', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake3)
-        meIntext.add_command(label='Patiente 4', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake4)
-        meIntext.add_command(label='Patiente 5', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake5)
-        meIntext.add_command(label='Patiente 6', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake6)
-        meIntext.add_command(label='Patiente 7', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.extStake7)
-        # Integration of external stakeholders
+                        command=boss.manualFile)
+        # Integration of Manuals Nurse
         self.cmd_Intext.configure(activeforeground='black', activebackground='cyan',
             menu=meIntext)
 
@@ -799,6 +781,10 @@ class Application(Frame):
 
     def showvm7(self):
         subprocess.call("./vmMacro/vm_ae.py")
+
+    # Manual nurse
+    def manualFile(self):
+        subprocess.call('./manual/pdfopenmanual.py')
 
     # Func histoire de vie
     def histv1(self):
