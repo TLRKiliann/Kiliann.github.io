@@ -12,25 +12,6 @@ from tkinter import messagebox
 from itertools import *
 
 
-"""
-def searchExpress():
-    mot = regexpi_var.get()
-    with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as file:
-        lines = file.readlines()
-        for i in range(0, len(lines)):
-            line = lines[i]
-            if mot in line:
-                print("Nous y voici !")
-                print(lines[i])
-                print(lines[i+1])
-                textBox.insert(INSERT, "Modification de la date :\n")
-                textBox.insert(INSERT, lines[i])
-                textBox.insert(INSERT, lines[i+1])
-                break
-            else:
-                print("Rien trouvé sur cette date...\n")
-"""
-# file.write("{0}\t{1}".format(x, y))
 def searchExpress():
     """
     To read in 2 files simultaneously
@@ -84,10 +65,10 @@ def save_input():
             with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
                 for line in fr.readlines():
                     if magicword in line:
-                        fw1.writelines(str("\n+++ Modification du rdv +++\n"))
-                        fw1.writelines(textBox.get('1.0', '12.0'))
-                        fw2.writelines(str("\n+++ Modification du rdv +++\n"))
-                        fw2.writelines(textBox.get('1.0', '12.0'))
+                        fw1.writelines(str("\n+++ Changes about rdv +++\n"))
+                        fw1.writelines(textBox.get('0.0', '12.0'))
+                        fw2.writelines(str("\n+++ Changes about rdv +++\n"))
+                        fw2.writelines(textBox.get('0.0', '12.0'))
                         print("Modification finish")
                         break
                     else:
@@ -99,6 +80,9 @@ def modifList():
     """
     subprocess.call('./patient_agenda/events/doc_events/fix_agenda/read_filemodif.py')
 
+def deleteTextbox():
+    textBox.delete('0.0', '12.0')
+
 def reorderFile():
     """
     To order list of dates
@@ -106,14 +90,29 @@ def reorderFile():
     to rebuild a correct
     file in order
     """
-    with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as firstfile:
+    magicword = regexpi_var.get()            
+    with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
+        lines = textfile2.readlines()
+        for a in range(len(lines)):
+            line = lines[a]
+            if magicword in line:
+                print(lines[a])
+                print(lines[a+1])
+                textBox.insert(INSERT, "With modification of date :\n")
+                textBox.insert(INSERT, lines[a])
+                textBox.insert(INSERT, lines[a+1])
+                textBox.insert(INSERT, lines[a+2])
+
+    """
+    with open('fixed_rdv.txt', 'r') as firstfile:
         filetext = firstfile.readlines()
 
-    with open('./patient_agenda/events/doc_events/fix_agenda/textsort.txt', 'w') as secondfile:
+    with open('textsort.txt', 'w') as secondfile:
         for i in range(0, len(filetext)):
             line = filetext[i]
             if line in filetext:
                 secondfile.write(line)
+    """
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1 = filename.readline()
@@ -151,20 +150,25 @@ buttonSearch.grid(row=1, column=3, padx=5)
 textBox = Text(gui, height=15, width=60, font=18)
 textBox.grid(row=4, column=1, columnspan=3, padx=30, pady=30)
 
-buttonSave = Button(gui, text="Save", fg='yellow', bg='navy', width=8,
+buttonSave = Button(gui, text="1-Save", fg='yellow', bg='navy', width=6,
     activebackground='cyan', activeforeground='navy',
     command = messFromSafeButt)
 buttonSave.grid(sticky='w', row=5, column=1, padx=10, pady=10)
 
-buttonModif = Button(gui, text="Read modif", fg='cyan', bg='navy', width=8,
+buttonModif = Button(gui, text="2-Read changes", fg='cyan', bg='navy', width=12,
     activebackground='cyan', activeforeground='navy',
     command = modifList)
 buttonModif.grid(sticky='e', row=5, column=1, padx=10, pady=10)
 
-buttonEnter = Button(gui, text="Reorder", fg='cyan', bg='navy', width=8,
+buttonDelete = Button(gui, text="3-Clear", fg='cyan', bg='navy', width=6,
+    activebackground='cyan', activeforeground='navy',
+    command = deleteTextbox)
+buttonDelete.grid(sticky='w', row=5, column=2, padx=10, pady=10)
+
+buttonEnter = Button(gui, text="4-Add changes", fg='cyan', bg='navy', width=12,
     activebackground='cyan', activeforeground='navy',
     command = reorderFile)
-buttonEnter.grid(sticky='w', row=5, column=2, padx=10, pady=10)
+buttonEnter.grid(sticky='e', row=5, column=2, padx=10, pady=10)
 
 buttonQuit = Button(gui)
 buttonQuit = Button(text='Quit', fg='cyan', bg='gray30', width=8,
