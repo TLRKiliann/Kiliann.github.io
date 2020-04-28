@@ -15,7 +15,7 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
 fen=Tk()
-fen.title("Modified Rendez-Vous")
+fen.title("RDV have changed")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
@@ -24,7 +24,7 @@ bottom=Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Modified Rendez-Vous",
+labelo=Label(fen, text="RDV have changed",
     font='Arial 18 bold', fg='turquoise', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 

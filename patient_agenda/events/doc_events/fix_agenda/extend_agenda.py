@@ -45,7 +45,7 @@ def lectureFic():
     subprocess.call('./patient_agenda/events/doc_events/fix_agenda/read_file.py')
 
 def changeText():
-    subprocess.call('./patient_agenda/events/doc_events/fix_agenda/test.py')
+    subprocess.call('./patient_agenda/events/doc_events/fix_agenda/main.py')
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
@@ -71,7 +71,7 @@ textname.set(line1)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(fen, height=15, width=60, font=18)
-textBox.insert(INSERT, "Rendez-vous agendé le : ")
+textBox.insert(INSERT, "Rendez-vous set up le : ")
 textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + '\n')
 textBox.pack(padx=30, pady=30)
 

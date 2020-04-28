@@ -11,7 +11,7 @@ def importationFile(fichier):
     for li in content:
         textBox.insert(END, li)
 
-with open('entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
 fen=Tk()
@@ -40,6 +40,6 @@ buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30', width=8,
     activebackground='dark turquoise', activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('modifrdv.txt')
+importationFile('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt')
 
 fen.mainloop()

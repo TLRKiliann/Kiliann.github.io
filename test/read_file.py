@@ -41,6 +41,6 @@ buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('fixed_rdv.txt')
+importationFile('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
 
 fen.mainloop()

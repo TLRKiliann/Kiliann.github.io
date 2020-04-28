@@ -136,14 +136,6 @@ def recordOption():
     else:
         print("+ Troponin value ok, nothing to do")
 
-    print(CheckVar11.get())
-    if CheckVar11.get()==1:
-        print("+ Lipid profile value was checked !")
-        with open('./labo/doc_labo/result.json', 'a+') as file:
-            file.write("# Lipid profile value and treatment : (add what the patient needs)\n")
-    else:
-        print("+ Lipid profile value ok, nothing to do")
-
     print(CheckVar12.get())
     if CheckVar12.get()==1:
         print("+ Cholesterol total value was checked !")
@@ -368,6 +360,38 @@ def recordOption():
     else:
         print("+ ACTH value ok, nothing to do")
 
+    print(CheckVar40.get())
+    if CheckVar40.get()==1:
+        print("+ TSH value was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# TSH value and treatment : (add what the patient needs)\n")
+    else:
+        print("+ TSH value ok, nothing to do")
+
+    print(CheckVar41.get())
+    if CheckVar41.get()==1:
+        print("+ free T4 value was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# free T4 value and treatment : (add what the patient needs)\n")
+    else:
+        print("+ free T4 value ok, nothing to do")
+
+    print(CheckVar42.get())
+    if CheckVar42.get()==1:
+        print("+ free free T3 value was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# free free T3 value and treatment : (add what the patient needs)\n")
+    else:
+        print("+ free free T3 value ok, nothing to do")
+
+    print(CheckVar43.get())
+    if CheckVar43.get()==1:
+        print("+ free total T3 value was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# free total T3 value and treatment : (add what the patient needs)\n")
+    else:
+        print("+ free total T3 value ok, nothing to do")
+
 def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
@@ -382,7 +406,7 @@ app.configure(bg='gray17')
 labeltite=Label(app, text='Labo check', 
     font="Times 18 bold", width=10,
     height=3, bg='gray17', fg='aquamarine')
-labeltite.grid(sticky='e', row=0, column=1, padx=10)
+labeltite.grid(sticky='e', row=0, column=1, padx=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1 = filename.readline()
@@ -395,125 +419,118 @@ entryname.grid(sticky='w', row=0, column=2)
 labelresult=Label(app, text='--- Electrolytes ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelresult.grid(sticky='w', row=1, column=0, columnspan=2)
+labelresult.grid(sticky='w', row=1, column=0, columnspan=2, padx=10)
 
 CheckVar1 = IntVar()
 C1 = Checkbutton(app, text="Na⁺", fg='navy', 
     bg='cyan', variable=CheckVar1, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C1.grid(sticky='w', row=2, column=0)
+C1.grid(sticky='w', row=2, column=0, padx=10)
 
 CheckVar2 = IntVar()
 C2 = Checkbutton(app, text="K⁺", fg='navy', 
     bg='cyan', variable=CheckVar2, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C2.grid(sticky='w', row=3, column=0)
+C2.grid(sticky='w', row=3, column=0, padx=10)
 
 CheckVar3 = IntVar()
 C3 = Checkbutton(app, text="Ca⁺ (total)", fg='navy', 
     bg='cyan', variable=CheckVar3, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C3.grid(sticky='w', row=2, column=1, padx=20)
+C3.grid(sticky='w', row=2, column=1, padx=30)
 
 CheckVar4 = IntVar()
 C4 = Checkbutton(app, text="Mg⁺", fg='navy', 
     bg='cyan', variable=CheckVar4, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C4.grid(sticky='w', row=3, column=1, padx=20)
+C4.grid(sticky='w', row=3, column=1, padx=30)
 
 CheckVar5 = IntVar()
 C5 = Checkbutton(app, text="Cl⁻", fg='navy', 
     bg='cyan', variable=CheckVar5, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C5.grid(sticky='w', row=4, column=1, padx=20)
+C5.grid(sticky='w', row=4, column=1, padx=30)
 
 CheckVar6 = IntVar()
 C6 = Checkbutton(app, text="Phosphates (HPO4²⁻)", fg='navy', 
     bg='cyan', variable=CheckVar6, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C6.grid(sticky='w', row=4, column=0)
+C6.grid(sticky='w', row=4, column=0, padx=10)
 
 CheckVar7 = IntVar()
 C7 = Checkbutton(app, text="Bicarbonates (HCO₃⁻)", fg='navy', 
     bg='cyan', variable=CheckVar7, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C7.grid(sticky='w', row=5, column=0)
+C7.grid(sticky='w', row=5, column=0, padx=10)
 
 # Cardio-vasc
 labelcardio=Label(app, text='--- Cardiovascular ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelcardio.grid(row=1, column=2, columnspan=2)
+labelcardio.grid(row=1, column=2, padx=10)
 
 CheckVar8 = IntVar()
 C8 = Checkbutton(app, text="Cardiac workup", fg='navy', 
     bg='cyan', variable=CheckVar8, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C8.grid(sticky='w', row=2, column=2)
+C8.grid(sticky='w', row=2, column=2, padx=10)
 
 CheckVar9 = IntVar()
 C9 = Checkbutton(app, text="CK-MB", fg='navy', 
     bg='cyan', variable=CheckVar9, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C9.grid(sticky='w', row=3, column=2)
+C9.grid(sticky='w', row=3, column=2, padx=10)
 
 CheckVar10 = IntVar()
 C10 = Checkbutton(app, text="Troponin", fg='navy', 
     bg='cyan', variable=CheckVar10, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C10.grid(sticky='w', row=4, column=2)
+C10.grid(sticky='w', row=4, column=2, padx=10)
 
 # second column
-CheckVar11 = IntVar()
-C11 = Checkbutton(app, text="Lipid profile", fg='navy', 
-    bg='cyan', variable=CheckVar11, 
-    onvalue=1, offvalue=0, height=1, 
-    width=20, anchor="w")
-C11.grid(sticky='w', row=2, column=3)
-
 CheckVar12 = IntVar()
 C12 = Checkbutton(app, text="Cholesterol total", fg='navy', 
     bg='cyan', variable=CheckVar12, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C12.grid(sticky='w', row=3, column=3)
+C12.grid(sticky='e', row=2, column=2, padx=20)
 
 CheckVar13 = IntVar()
 C13 = Checkbutton(app, text="HDL", fg='navy', 
     bg='cyan', variable=CheckVar13, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C13.grid(sticky='w', row=4, column=3)
+C13.grid(sticky='e', row=3, column=2, padx=20)
 
 CheckVar14 = IntVar()
 C14 = Checkbutton(app, text="LDL", fg='navy', 
     bg='cyan', variable=CheckVar14, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C14.grid(sticky='w', row=5, column=3)
+C14.grid(sticky='e', row=4, column=2, padx=20)
 
 CheckVar15 = IntVar()
 C15 = Checkbutton(app, text="Triglycerides", fg='navy', 
     bg='cyan', variable=CheckVar15, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C15.grid(sticky='w', row=6, column=3)
+C15.grid(sticky='e', row=5, column=2, padx=20)
 
 # Hepatologia
 labelresult2=Label(app, text='--- Hepathology ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelresult2.grid(sticky='w', row=7, column=0, columnspan=2)
+labelresult2.grid(sticky='w', row=7, column=0, columnspan=2, padx=10)
 
 #separator = Label(app, height=5, bd=2, relief=SUNKEN)
 #separator.grid(sticky='ns', row=2, column=1)
@@ -523,213 +540,279 @@ C16 = Checkbutton(app, text="ASAT", fg='navy',
     bg='cyan', variable=CheckVar16, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C16.grid(sticky='w', row=8, column=0)
+C16.grid(sticky='w', row=8, column=0, padx=10)
 
 CheckVar17 = IntVar()
 C17 = Checkbutton(app, text="ALAT", fg='navy', 
     bg='cyan', variable=CheckVar17, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C17.grid(sticky='w', row=9, column=0)
+C17.grid(sticky='w', row=9, column=0, padx=10)
 
 CheckVar18 = IntVar()
 C18 = Checkbutton(app, text="Gamma-GT", fg='navy', 
     bg='cyan', variable=CheckVar18, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C18.grid(sticky='w', row=10, column=0)
+C18.grid(sticky='w', row=10, column=0, padx=10)
 
 CheckVar19 = IntVar()
 C19 = Checkbutton(app, text="Alkaline phosphatase", fg='navy', 
     bg='cyan', variable=CheckVar19, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C19.grid(sticky='w', row=11, column=0)
+C19.grid(sticky='w', row=11, column=0, padx=10)
 
 CheckVar20 = IntVar()
 C20 = Checkbutton(app, text="Bilirubin direct", fg='navy', 
     bg='cyan', variable=CheckVar20, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C20.grid(sticky='w', row=10, column=1, padx=20)
+C20.grid(sticky='w', row=10, column=1, padx=30)
 
 CheckVar21 = IntVar()
 C21 = Checkbutton(app, text="Bilirubin indirect", fg='navy', 
     bg='cyan', variable=CheckVar21, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C21.grid(sticky='w', row=11, column=1, padx=20)
+C21.grid(sticky='w', row=11, column=1, padx=30)
 
 CheckVar22 = IntVar()
 C22 = Checkbutton(app, text="LDH", fg='navy', 
     bg='cyan', variable=CheckVar22, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C22.grid(sticky='w', row=8, column=1, padx=20)
+C22.grid(sticky='w', row=8, column=1, padx=30)
 
 CheckVar23 = IntVar()
 C23 = Checkbutton(app, text="Uric acid", fg='navy', 
     bg='cyan', variable=CheckVar23, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C23.grid(sticky='w', row=9, column=1, padx=20)
+C23.grid(sticky='w', row=9, column=1, padx=30)
 
 # Coagulation
 labelresult3=Label(app, text='--- Coagulation ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelresult3.grid(row=7, column=2, columnspan=2)
+labelresult3.grid(row=7, column=2, padx=10)
 
 CheckVar24 = IntVar()
 C24 = Checkbutton(app, text="TP", fg='navy', 
     bg='cyan', variable=CheckVar24, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C24.grid(sticky='w', row=8, column=2)
+C24.grid(sticky='w', row=8, column=2, padx=10)
 
 CheckVar25 = IntVar()
 C25 = Checkbutton(app, text="INR", fg='navy', 
     bg='cyan', variable=CheckVar25, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C25.grid(sticky='w', row=9, column=2)
+C25.grid(sticky='w', row=9, column=2, padx=10)
 
 # Glucids
 labelgluco=Label(app, text='--- Carbohydrates ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelgluco.grid(sticky='w', row=12, column=0, columnspan=2)
+labelgluco.grid(sticky='w', row=12, column=0, columnspan=2, padx=10)
 
 CheckVar26 = IntVar()
 C26 = Checkbutton(app, text="Fasting glucose", fg='navy', 
     bg='cyan', variable=CheckVar26, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C26.grid(sticky='w', row=13, column=0)
+C26.grid(sticky='w', row=13, column=0, padx=10)
 
 CheckVar27 = IntVar()
 C27 = Checkbutton(app, text="Postprandial glucose", fg='navy', 
     bg='cyan', variable=CheckVar27, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C27.grid(sticky='w', row=14, column=0)
+C27.grid(sticky='w', row=14, column=0, padx=10)
 
 CheckVar28 = IntVar()
 C28 = Checkbutton(app, text="HbA1c", fg='navy', 
     bg='cyan', variable=CheckVar28, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C28.grid(sticky='w', row=15, column=0)
+C28.grid(sticky='w', row=15, column=0, padx=10)
 
 # Anemia
 labelanemia=Label(app, text='--- Anemia ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelanemia.grid(sticky='w', row=12, column=2, columnspan=2)
+labelanemia.grid(row=12, column=2, padx=10)
 
 CheckVar29 = IntVar()
 C29 = Checkbutton(app, text="Iron", fg='navy', 
     bg='cyan', variable=CheckVar29, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C29.grid(sticky='w', row=13, column=2)
+C29.grid(sticky='w', row=13, column=2, padx=10)
 
 CheckVar30 = IntVar()
 C30 = Checkbutton(app, text="Ferritin", fg='navy', 
     bg='cyan', variable=CheckVar30, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C30.grid(sticky='w', row=14, column=2)
+C30.grid(sticky='w', row=14, column=2, padx=10)
 
 CheckVar31 = IntVar()
 C31 = Checkbutton(app, text="Vitamin B12", fg='navy', 
     bg='cyan', variable=CheckVar31, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C31.grid(sticky='w', row=15, column=2)
+C31.grid(sticky='e', row=13, column=2, padx=10)
 
 CheckVar32 = IntVar()
 C32 = Checkbutton(app, text="Folates (B9)", fg='navy', 
     bg='cyan', variable=CheckVar32, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C32.grid(sticky='w', row=16, column=2)
+C32.grid(sticky='e', row=14, column=2, padx=10)
 
 # Reins
 labelinf=Label(app, text='--- Renal ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelinf.grid(sticky='w', row=17, column=0, columnspan=2)
+labelinf.grid(sticky='w', row=17, column=0, columnspan=2, padx=10)
 
 CheckVar33 = IntVar()
 C33 = Checkbutton(app, text="Urea", fg='navy', 
     bg='cyan', variable=CheckVar33, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C33.grid(sticky='w', row=18, column=0)
+C33.grid(sticky='w', row=18, column=0, padx=10)
 
 CheckVar34 = IntVar()
 C34 = Checkbutton(app, text="Creat.", fg='navy', 
     bg='cyan', variable=CheckVar34, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C34.grid(sticky='w', row=19, column=0)
+C34.grid(sticky='w', row=19, column=0, padx=10)
 
 # Inflammation
 labelinf=Label(app, text='--- Inflammation ---', 
     font="Times 14 bold", width=46,
     height=1, bg='gray30', fg='yellow')
-labelinf.grid(sticky='w', row=17, column=2, columnspan=2)
+labelinf.grid(row=17, column=2, padx=10)
 
 CheckVar35 = IntVar()
 C35 = Checkbutton(app, text="Sediment. velocity", fg='navy', 
     bg='cyan', variable=CheckVar35, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C35.grid(sticky='w', row=18, column=2)
+C35.grid(sticky='w', row=18, column=2, padx=10)
 
 CheckVar36 = IntVar()
 C36 = Checkbutton(app, text="C-react. protein", fg='navy', 
     bg='cyan', variable=CheckVar36, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C36.grid(sticky='w', row=19, column=2)
+C36.grid(sticky='w', row=19, column=2, padx=10)
 
 CheckVar37 = IntVar()
 C37 = Checkbutton(app, text="Albumina", fg='navy', 
     bg='cyan', variable=CheckVar37, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C37.grid(sticky='w', row=20, column=2)
+C37.grid(sticky='w', row=20, column=2, padx=10)
 
 CheckVar38 = IntVar()
 C38 = Checkbutton(app, text="Cortisol", fg='navy', 
     bg='cyan', variable=CheckVar38, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C38.grid(sticky='w', row=21, column=2)
+C38.grid(sticky='e', row=18, column=2, padx=10)
 
 CheckVar39 = IntVar()
 C39 = Checkbutton(app, text="ACTH", fg='navy', 
     bg='cyan', variable=CheckVar39, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
-C39.grid(sticky='w', row=22, column=2)
+C39.grid(sticky='e', row=19, column=2, padx=10)
+
+# Endocrinology
+labelinf=Label(app, text='--- Endocrinology ---', 
+    font="Times 14 bold", width=46,
+    height=1, bg='gray30', fg='yellow')
+labelinf.grid(sticky='w', row=23, column=0, columnspan=2, padx=10)
+
+CheckVar40 = IntVar()
+C40 = Checkbutton(app, text="TSH", fg='navy', 
+    bg='cyan', variable=CheckVar40, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C40.grid(sticky='w', row=24, column=0, padx=10)
+
+CheckVar41 = IntVar()
+C41 = Checkbutton(app, text="free T4", fg='navy', 
+    bg='cyan', variable=CheckVar41, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C41.grid(sticky='w', row=25, column=0, padx=10)
+
+CheckVar42 = IntVar()
+C42 = Checkbutton(app, text="free T3", fg='navy', 
+    bg='cyan', variable=CheckVar42, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C42.grid(sticky='w', row=24, column=1, padx=30)
+
+CheckVar43 = IntVar()
+C43 = Checkbutton(app, text="total T3", fg='navy', 
+    bg='cyan', variable=CheckVar43, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C43.grid(sticky='w', row=25, column=1, padx=30)
+
+# Urinary infection
+labelinfuri=Label(app, text='--- Urinary infection ---', 
+    font="Times 14 bold", width=46,
+    height=1, bg='gray30', fg='yellow')
+labelinfuri.grid(sticky='w', row=26, column=0, columnspan=2, padx=10)
+
+CheckVar44 = IntVar()
+C44 = Checkbutton(app, text="Stix (strip)", fg='navy', 
+    bg='cyan', variable=CheckVar44, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C44.grid(sticky='w', row=27, column=0, padx=10)
+
+CheckVar45 = IntVar()
+C45 = Checkbutton(app, text="Uricult", fg='navy', 
+    bg='cyan', variable=CheckVar45, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C45.grid(sticky='w', row=28, column=0, padx=10)
+
+
+# Coproculture
+labecopro=Label(app, text='--- Coproculture ---', 
+    font="Times 14 bold", width=46,
+    height=1, bg='gray30', fg='yellow')
+labecopro.grid(row=26, column=2, padx=10)
+
+CheckVar46 = IntVar()
+C46 = Checkbutton(app, text="Check", fg='navy', 
+    bg='cyan', variable=CheckVar46, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C46.grid(sticky='w', row=27, column=2, padx=10)
 
 # Buttons
 buttonsheet=Button(app, text="Complete lab sheet", width=15,
-    fg='yellow', bg='gray17', command=sheetLabo)
-buttonsheet.grid(row=44, column=1,
-    pady=10)
+    fg='yellow', bg='navy', command=sheetLabo)
+buttonsheet.grid(sticky='e', row=44, column=1, padx=10, pady=10)
 
 buttonsave=Button(app, text="Save", width=10,
-    fg='yellow', bg='gray17', command=recordTofile)
-buttonsave.grid(row=44, column=2, pady=10)
+    fg='yellow', bg='navy', command=recordTofile)
+buttonsave.grid(sticky='w', row=44, column=2, pady=10)
 
 buttonquit=Button(app, text='Quit', width=10,
-    fg='cyan', bg='gray17', command=quit)
-buttonquit.grid(row=44, column=3,
-    padx=5, pady=10)
+    fg='cyan', bg='gray30', command=quit)
+buttonquit.grid(sticky='e', row=44, column=2, pady=20)
 
 #label_fra.grid(padx=10, pady=10)
 
