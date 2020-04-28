@@ -85,7 +85,7 @@ bottom = Frame(root, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Care and monitoring",
+labelo=Label(root, text="Care and monitoring : ",
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 

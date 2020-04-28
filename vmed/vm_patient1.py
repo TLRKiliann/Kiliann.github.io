@@ -89,7 +89,7 @@ class Application(Frame):
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'VMED' not exist !", outmsg)
             print("+ File VMED created !")
-            subprocess.call('./vmed/doc_vmed/vmed_write.py')
+            self.confRec()
 
     # Func to read
     def lectureFic(self):
