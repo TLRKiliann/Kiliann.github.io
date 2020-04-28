@@ -12,8 +12,17 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
+# To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+
+# To read allergy in Entry widget
+with open('./allergy/allergyfile.txt', 'r') as allerfile:
+    lineA1=allerfile.readline()
+    lineA2=allerfile.readline()
+    lineA3=allerfile.readline()
+    lineA4=allerfile.readline()
+    lineA5=allerfile.readline()
 
 fen=Tk()
 fen.title("Care and monitoring")
@@ -29,10 +38,19 @@ labelo=Label(fen, text="Care and monitoring", width=20,
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
-textentry=StringVar()
-textentry.set(line1)
-entrylab=Entry(fen, textvariable=textentry)
-entrylab.pack(in_=top, side=LEFT, padx=10, pady=20)
+labelallergy=Label(fen, text="Allergy",
+    font='Arial 18 bold', fg='coral', bg='gray17')
+labelallergy.pack(padx=5, pady=5)
+
+text_name=StringVar()
+text_name.set(line1)
+Entryname=Entry(fen, textvariable=text_name)
+Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
+
+text_all=StringVar()
+text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5)
+Entryall=Entry(fen, textvariable=text_all, width=60)
+Entryall.pack(padx=10, pady=5)
 
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)

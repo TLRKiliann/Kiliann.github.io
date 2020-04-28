@@ -392,6 +392,61 @@ def recordOption():
     else:
         print("+ free total T3 value ok, nothing to do")
 
+    print(CheckVar44.get())
+    if CheckVar44.get()==1:
+        print("+ Stix (strip) was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Stix (strip) and treatment will be... : (add what the patient needs)\n")
+    else:
+        print("+ Stix (strip) ok, nothing to do")
+
+    print(CheckVar45.get())
+    if CheckVar45.get()==1:
+        print("+ Uricult done value was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Uricult done and treatment : (add what the patient needs)\n")
+    else:
+        print("+ Uricult ok, nothing to do")
+
+    print(CheckVar46.get())
+    if CheckVar46.get()==1:
+        print("+ Coproculture was checked !")
+        with open('./labo/doc_labo/result.json', 'a+') as file:
+            file.write("# Coproculture and treatment : (add what the patient needs)\n")
+    else:
+        print("+ Coproculture ok, nothing to do")
+ 
+C44 = Checkbutton(app, text="Stix (strip)", fg='navy', 
+    bg='cyan', variable=CheckVar44, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C44.grid(sticky='w', row=27, column=0, padx=10)
+
+CheckVar45 = IntVar()
+C45 = Checkbutton(app, text="Uricult", fg='navy', 
+    bg='cyan', variable=CheckVar45, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C45.grid(sticky='w', row=28, column=0, padx=10)
+
+
+# Coproculture
+labecopro=Label(app, text='--- Coproculture ---', 
+    font="Times 14 bold", width=46,
+    height=1, bg='gray30', fg='yellow')
+labecopro.grid(row=26, column=2, padx=10)
+
+CheckVar46 = IntVar()
+C46 = Checkbutton(app, text="Check", fg='navy', 
+    bg='cyan', variable=CheckVar46, 
+    onvalue=1, offvalue=0, height=1, 
+    width=20, anchor="w")
+C46.grid(sticky='w', row=27, column=2, padx=10)
+
+
+
+
+
 def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
@@ -786,7 +841,6 @@ C45 = Checkbutton(app, text="Uricult", fg='navy',
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
 C45.grid(sticky='w', row=28, column=0, padx=10)
-
 
 # Coproculture
 labecopro=Label(app, text='--- Coproculture ---', 

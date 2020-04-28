@@ -198,6 +198,14 @@ def copyToFile():
             with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
+# To read allergy for entry widget
+with open('./allergy/allergyfile.txt', 'r') as filename2:
+    line1=filename2.readline()
+    line2=filename2.readline()
+    line3=filename2.readline()
+    line4=filename2.readline()
+    line5=filename2.readline()
+
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
@@ -208,66 +216,75 @@ app.configure(bg='gray17')
 
 textLab = tk.Label(app, text="Introduction of treatement(ttt)",
     font=('Times 22 bold'), fg='aquamarine', bg='gray17')
-textLab.grid(row=0, column=0, columnspan=4, pady=10)
+textLab.grid(row=0, column=0, columnspan=3, pady=10)
+
+labelallergy=tk.Label(app, text="Allergy",
+    font='Arial 18 bold', fg='coral', bg='gray17')
+labelallergy.grid(row=1, column=0, columnspan=3)
+
+entrytext=tk.StringVar()
+entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entryName=tk.Entry(app, textvariable=entrytext, width=60)
+entryName.grid(row=2, column=0, columnspan=3, pady=10)
 
 LabDate = tk.Label(app, text="Date : ", width=20, font=12,
     fg='cyan', bg='gray17', anchor='e')
-LabDate.grid(row=1, column=0)
+LabDate.grid(row=3, column=0)
 
 LabHour = tk.Label(app, text="Hour : ", width=20, font=12,
     fg='cyan', bg='gray17', anchor='e')
-LabHour.grid(row=2, column=0)
+LabHour.grid(row=4, column=0)
 
 LabName = tk.Label(app, text="Patient's name : ", width=20, font=12,
     fg='cyan', bg='gray17', anchor='e')
-LabName.grid(row=3, column=0)
+LabName.grid(row=5, column=0)
 
 LabTreat = tk.Label(app, text='Name of drug : ', width=20, 
     font=12, fg='cyan', bg='gray17', anchor='e')
-LabTreat.grid(row=4, column=0)
+LabTreat.grid(row=6, column=0)
 
 LabDose = tk.Label(app, text="Dose : ", width=20, font=12,
     fg='cyan', bg='gray17', anchor='e')
-LabDose.grid(row=5, column=0)
+LabDose.grid(row=7, column=0)
 
 textDate = tk.Entry(app)
 time_string = tk.IntVar()
 textDate = tk.Entry(textvariable=time_string,
     highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
-textDate.grid(row=1, column=1)
+textDate.grid(row=3, column=1)
 
 textHour = tk.Entry(app)
 time_Htring = tk.IntVar()
 textHour = tk.Entry(textvariable=time_Htring,
     highlightbackground='gray', bd=4)
 time_Htring.set(time.strftime("%H:%M:%S"))
-textHour.grid(row=2, column=1)
+textHour.grid(row=4, column=1)
 
 textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,
     highlightbackground='gray', bd=4)
 name_text.set(line1)
-textName.grid(row=3, column=1)
+textName.grid(row=5, column=1)
 
 textTreat = tk.Entry(app)
 ttt_name = tk.StringVar()
 textTreat = tk.Entry(textvariable=ttt_name,
     highlightbackground='gray', bd=4)
 ttt_name.set("Drug")
-textTreat.grid(row=4, column=1)
+textTreat.grid(row=6, column=1)
 
 textDosage = tk.Entry(app)
 tttDosage = tk.StringVar()
 textDosage = tk.Entry(textvariable=tttDosage,
     highlightbackground='gray', bd=4)
 tttDosage.set("mcg/ml/mg/UI/gttes")
-textDosage.grid(row=5, column=1)
+textDosage.grid(row=7, column=1)
 
 textDateS = tk.Label(app, text="Processing start date :", 
     font=('Arial 14 bold'), fg='aquamarine', bg='gray17', width=40, anchor='w')
-textDateS.grid(row=6, column=0, columnspan=2, pady=10)
+textDateS.grid(row=8, column=0, columnspan=2, pady=10)
 
 def changeDay():
     comboDay["values"] = ['01', '02', '03', '04',
@@ -281,7 +298,7 @@ def changeDay():
 
 labelDay = tk.Label(app,
     text = "Choose the day :", font=12, fg='cyan', bg='gray17')
-labelDay.grid(row=7, column=0)
+labelDay.grid(row=9, column=0)
 
 comboDay = ttk.Combobox(app,
     values=['01', '02', '03', '04',
@@ -293,7 +310,7 @@ comboDay = ttk.Combobox(app,
           '24', '25', '26', '27',
           '28', '29', '30', '31'], postcommand=changeDay)
 comboDay.bind("<<ComboboxSelected>>", callbackDay)
-comboDay.grid(row=8, column=0, pady=10)
+comboDay.grid(row=10, column=0, pady=10)
 
 def changeMonth():
     comboMonth["values"] = [' January',  
@@ -311,7 +328,7 @@ def changeMonth():
 
 labelMonth = tk.Label(app,
     text = "Choose the month :", font=12, fg='cyan', bg='gray17')
-labelMonth.grid(row=7, column=1)
+labelMonth.grid(row=9, column=1)
 
 comboMonth = ttk.Combobox(app,
     values=[
@@ -328,7 +345,7 @@ comboMonth = ttk.Combobox(app,
           ' November', 
           ' December'], postcommand=changeMonth)
 comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
-comboMonth.grid(row=8, column=1, pady=10)
+comboMonth.grid(row=10, column=1, pady=10)
 
 def changeYear():
     comboYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
@@ -337,19 +354,19 @@ def changeYear():
 
 labelYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='gray17')
-labelYear.grid(row=7, column=2)
+labelYear.grid(row=9, column=2)
 
 comboYear = ttk.Combobox(app,
     values=[' 2020', ' 2021', ' 2022', ' 2023',
           ' 2024', ' 2025', ' 2026', ' 2027',
           ' 2028', ' 2029', ' 2030'], postcommand=changeYear)
 comboYear.bind("<<ComboboxSelected>>", callbackYear)
-comboYear.grid(row=8, column=2, pady=10)
+comboYear.grid(row=10, column=2, pady=10)
 
 # Date of finish
 textDateF = tk.Label(app, text="Processing end date :", 
     font=('Arial 14 bold'), fg='aquamarine', bg='gray17', width=40, anchor='w')
-textDateF.grid(row=9, column=0, columnspan=2, pady=10)
+textDateF.grid(row=11, column=0, columnspan=2, pady=10)
 
 def finishDay():
     comboFinishDay["values"] = ['01', '02', '03', '04',
@@ -363,7 +380,7 @@ def finishDay():
 
 labelFinishDay = tk.Label(app,
     text = "Choose the day :", font=12, fg='cyan', bg='gray17')
-labelFinishDay.grid(row=10, column=0)
+labelFinishDay.grid(row=12, column=0)
 
 comboFinishDay = ttk.Combobox(app,
     values=['01', '02', '03', '04',
@@ -375,7 +392,7 @@ comboFinishDay = ttk.Combobox(app,
           '24', '25', '26', '27',
           '28', '29', '30', '31'], postcommand=finishDay)
 comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
-comboFinishDay.grid(row=11, column=0, pady=10)
+comboFinishDay.grid(row=13, column=0, pady=10)
 
 def finishMonth():
     comboFinishMonth["values"] = [' January',  
@@ -393,7 +410,7 @@ def finishMonth():
 
 labelMonth = tk.Label(app,
     text = "Choose the month :", font=12, fg='cyan', bg='gray17')
-labelMonth.grid(row=10, column=1)
+labelMonth.grid(row=12, column=1)
 
 comboFinishMonth = ttk.Combobox(app,
     values=[
@@ -410,7 +427,7 @@ comboFinishMonth = ttk.Combobox(app,
           ' November', 
           ' December'], postcommand=finishMonth)
 comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
-comboFinishMonth.grid(row=11, column=1, pady=10)
+comboFinishMonth.grid(row=13, column=1, pady=10)
 
 def finishYear():
     comboFinishYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
@@ -419,22 +436,22 @@ def finishYear():
 
 labelFinishYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='gray17')
-labelFinishYear.grid(row=10, column=2)
+labelFinishYear.grid(row=12, column=2)
 
 comboFinishYear = ttk.Combobox(app,
     values=[' 2020', ' 2021', ' 2022', ' 2023',
           ' 2024', ' 2025', ' 2026', ' 2027',
           ' 2028', ' 2029', ' 2030'], postcommand=finishYear)
 comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
-comboFinishYear.grid(row=11, column=2, pady=10)
+comboFinishYear.grid(row=13, column=2, pady=10)
 
 checkLab = tk.Label(app, text="Doses :", font=('Arial 14 bold'), 
     fg='aquamarine', bg='gray17')
-checkLab.grid(row=12, column=0, pady=10)
+checkLab.grid(row=14, column=0, pady=10)
 
 DosaLab = tk.Label(app, text="Unity :", font=('Arial 14 bold'), 
     fg='aquamarine', bg='gray17')
-DosaLab.grid(row=12, column=2, pady=10)
+DosaLab.grid(row=14, column=2, pady=10)
 
 # CheckBox
 CheckVarMatin = tk.IntVar()
@@ -442,110 +459,110 @@ Cma = tk.Checkbutton(app, text="Morning --->", fg='navy',
     bg='cyan', variable=CheckVarMatin, 
     onvalue=1, offvalue=0, height=1, 
     width=15, anchor='w')
-Cma.grid(row=14, column=0)
+Cma.grid(row=16, column=0)
 
 LabDose = tk.Label(app, text='Morning dose : ', font=12,
     width=20, fg='cyan', bg='gray17')
-LabDose.grid(row=14, column=1)
+LabDose.grid(row=16, column=1)
 
 Entmatin = tk.Entry(app)
 Entmatin = tk.Entry(highlightbackground='gray', bd=4)
-Entmatin.grid(row=14, column=2)
+Entmatin.grid(row=16, column=2)
 
 CheckVarMidi = tk.IntVar()
 Cmi = tk.Checkbutton(app, text="Noon --->", fg='navy', 
     bg='cyan', variable=CheckVarMidi, 
     onvalue=1, offvalue=0, height=1, 
     width=15, anchor='w')
-Cmi.grid(row=15, column=0)
+Cmi.grid(row=17, column=0)
 
 LabDose = tk.Label(app, text='Take of noon : ', font=12, 
     width=20, fg='cyan', bg='gray17')
-LabDose.grid(row=15, column=1)
+LabDose.grid(row=17, column=1)
 
 Entmidi = tk.Entry(app)
 Entmidi = tk.Entry(highlightbackground='gray', bd=4)
-Entmidi.grid(row=15, column=2)
+Entmidi.grid(row=17, column=2)
 
 CheckVarSoir = tk.IntVar()
 Csoir = tk.Checkbutton(app, text="Evening --->", fg='navy', 
     bg='cyan', variable=CheckVarSoir, 
     onvalue=1, offvalue=0, height=1, 
     width=15, anchor='w')
-Csoir.grid(row=16, column=0)
+Csoir.grid(row=18, column=0)
 
 LabDose = tk.Label(app, text='Evening outlet : ', font=12,
     width=20, fg='cyan', bg='gray17')
-LabDose.grid(row=16, column=1)
+LabDose.grid(row=18, column=1)
 
 Entsoir = tk.Entry(app)
 Entsoir = tk.Entry(highlightbackground='gray', bd=4)
-Entsoir.grid(row=16, column=2)
+Entsoir.grid(row=18, column=2)
 
 CheckVarNuit = tk.IntVar()
 Cnuit = tk.Checkbutton(app, text="Night --->", fg='navy', 
     bg='cyan', variable=CheckVarNuit, 
     onvalue=1, offvalue=0, height=1, 
     width=15, anchor='w')
-Cnuit.grid(row=17, column=0)
+Cnuit.grid(row=19, column=0)
 
 # Entry nbre de x/24h
 LabDose = tk.Label(app, text='Take of night : ', font=12,
     width=20, fg='cyan', bg='gray17')
-LabDose.grid(row=17, column=1)
+LabDose.grid(row=19, column=1)
 
 Entnuit = tk.Entry(app)
 Entnuit = tk.Entry(highlightbackground='gray', bd=4)
-Entnuit.grid(row=17, column=2)
+Entnuit.grid(row=19, column=2)
 
 CheckVar1 = tk.IntVar()
 C1 = tk.Checkbutton(app, text="Reserve", fg='navy', 
     bg='pale green', variable=CheckVar1, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor='w')
-C1.grid(row=18, column=0, pady=10)
+C1.grid(row=20, column=0, pady=10)
 
 CheckVar2 = tk.IntVar()
 C2 = tk.Checkbutton(app, text="First-line", fg='navy', 
     bg='pale green', variable=CheckVar2, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor='w')
-C2.grid(row=18, column=1, pady=10)
+C2.grid(row=20, column=1, pady=10)
 
 CheckVar3 = tk.IntVar()
 C3 = tk.Checkbutton(app, text="Second-line", fg='navy', 
     bg='pale green', variable=CheckVar3, 
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor='w')
-C3.grid(row=18, column=2, pady=10)
+C3.grid(row=20, column=2, pady=10)
 
 LabelR = tk.Label(app, text='Number of R/24h : ', font=12, 
     width=20, fg='cyan', bg='gray17')
-LabelR.grid(row=19, column=1)
+LabelR.grid(row=21, column=1)
 
 Rnbre = tk.Entry(app)
 Rnbre = tk.Entry(highlightbackground='gray', bd=4)
-Rnbre.grid(row=19, column=2)
+Rnbre.grid(row=21, column=2)
 
 LabSign = tk.Label(app, text='Signature :', font=12, 
     width=15, fg='red', bg='pale green')
-LabSign.grid(row=21, column=1, pady=10)
+LabSign.grid(row=23, column=1, pady=10)
 
 textSign = tk.Entry(app)
 textSign = tk.Entry(highlightbackground='gray', bd=4)
-textSign.grid(row=21, column=2, pady=10)
+textSign.grid(row=23, column=2, pady=10)
 
 # Buttons with functions
 buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='yellow',
     bg='gray30', bd=4, command=showTreat)
-buttShowttt.grid(row=22, column=0)
+buttShowttt.grid(row=24, column=0)
 
 buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
     bg='gray30', bd=4, command=copyFunc)
-buttCopy.grid(row=22, column=1)
+buttCopy.grid(row=24, column=1)
 
 buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
     bg='gray30', bd=4, command=quit)
-buttQuit.grid(row=22, column=2)
+buttQuit.grid(row=24, column=2)
 
 app.mainloop()
