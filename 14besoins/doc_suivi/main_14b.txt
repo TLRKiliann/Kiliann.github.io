@@ -1,0 +1,47 @@
+
+
+En date du : 29/04/2020 à 13:01:46 :
+
+Date : 29/04/2020
+Nom du patient : Catanea Esteban
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance posturale et/ou des déplacements requise
++ Stimulation ou aide pour la communication requise
+
+---
+
+
+En date du : 29/04/2020 à 13:01:46 :
+
+Date : 29/04/2020
+Nom du patient : Catanea Esteban
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance posturale et/ou des déplacements requise
++ Stimulation ou aide pour la communication requise
+ hydratation requise
+---
+
+En date du : 29/04/2020 à 13:03:02 :
+
+Date : 29/04/2020
+Nom du patient : Catanea Esteban
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance posturale et/ou des déplacements requise
++ Stimulation ou aide pour la communication requise
+
+---
+
+
+En date du : 29/04/2020 à 13:24:15 :
+# Mg value and treatment : (add what the patient needs)
+1
+# Cl value and treatment : (add what the patient needs)
+2
+# INR value and treatment : (add what the patient needs)
+3
+# Iron value and treatment : (add what the patient needs)
+4
+
+En date du : 29/04/2020 à 13:27:03 :
++ Surveillance alimentaire et/ou hydratation requise
+Attention à la potomanie !!!
