@@ -248,7 +248,7 @@ def writeData():
                 json.dump(dataD, datadlr3, indent=4)
 
     label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() + 
-        "\nTension: " + textTa.get() +" -- "+ "Puls: " + textPuls.get() +
+        "Tension: " + textTa.get() +" -- "+ "Puls: " + textPuls.get() +
         "\nSaO2: " + textSa.get() +" -- "+ "FR: " + textFr.get() +
         "\nTemperature: " + textTemp.get() +
         "\nGlycemie: " + textHgt.get() +

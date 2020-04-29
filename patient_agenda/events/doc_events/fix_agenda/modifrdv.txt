@@ -1,34 +1,6 @@
 
-+ Modification du rdv
-Rdv chez le dentiste à 9h00.
-Ok, rdv annulé!
-
-
-+ Modification du rdv
-Ok rdv pris pour 23h00 au musée.
-Rendez-vous annulé !
-
-
-+ Modification du rdv
-Rendez-vous pris pour le : 8/5/2020
-On va à l'église pour 9h00.
-On modifie car annulé!
-
-
-+++ Modification du rdv +++
-Rendez-vous pris pour le : 28/4/2020
-Voily non on ne peut !
-
-
 +++ Changes about rdv +++
-Rendez-vous set up for : 16/4/2020
-N'importe quoi...
-
-
-
-+++ Changes about rdv +++
-With modification of date :
-Rendez-vous set up for : 16/4/2020
-N'importe quoi...
-
+Rendez-vous set up for : 22/5/2020
+---oki----
+Bon faudra encore revoir, mais pour le moment...
 

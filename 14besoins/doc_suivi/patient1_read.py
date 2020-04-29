@@ -12,12 +12,14 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
+"""
 def importationLabo(fichier2):
     with open(fichier2, 'r') as filelab:
         content2=filelab.readlines()
         #filelab.close()
         for li in content2:
             textBox.insert(END, li)
+"""
 
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -67,9 +69,9 @@ buttonClose=Button(fen, text="Quit", fg='cyan', width=10,
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./14besoins/doc_suivi/patient1_14b.txt',
+importationFile('./14besoins/doc_suivi/main_14b.txt',
     encodage="Utf-8")
 
-importationLabo('./labo/doc_labo/result.txt')
+#importationLabo('./labo/doc_labo/result.txt')
 
 fen.mainloop()

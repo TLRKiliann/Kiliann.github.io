@@ -1,30 +1,10 @@
 
-Date : 28/04/2020
+Date : 29/04/2020
 Nom du patient : Catanea Esteban
-+ Surveillance de la température requise
-+ Surveillance urinaire et/ou fécale requise requise
-+ Surveillance pour éviter les dangers requise
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance posturale et/ou des déplacements requise
++ Stimulation ou aide pour la communication requise
 
-
-En date du : 28/04/2020 à 17:31:52 :
-+ Surveillance de la température requise
-1
-+ Surveillance urinaire et/ou fécale requise requise
-2
-+ Surveillance pour éviter les dangers requise
-3
-
-En date du : 28/04/2020 à 17:32:48 :
-# Na value and treatment : (add what the patient needs)
-1
-# K value and treatment : (add what the patient needs)
-2
-
-En date du : 28/04/2020 à 17:35:07 :
-# ASAT value and treatment : (add what the patient needs)
-1
-# ALAT value and treatment : (add what the patient needs)
-2
-# Gamma-GT value and treatment : (add what the patient needs)
-3
-# Alkaline phosphatase value and treatment : Blablabla
+Date : 29/04/2020
+Nom du patient : Catanea Esteban
++ Surveillance alimentaire et/ou hydratation requise

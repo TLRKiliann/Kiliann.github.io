@@ -1,59 +1,25 @@
-Rendez-vous agendé le : 25/04/2020, 21:36:36
-Rendez-vous pris pour le : 23/7/2020
-Rdv chez le dentiste à 9h00.
+Rendez-vous set up le : 29/04/2020, 13:56:48
+Rendez-vous set up for : 22/5/2020
+---oki----
 
+Rendez-vous set up le : 29/04/2020, 13:57:03
+Rendez-vous set up for : 15/7/2020
+______________________________________||||||____iiiii
 
-+ Modification du rdv
-Rdv chez le dentiste à 9h00.
-Ok, rdv annulé!
-
-Rendez-vous agendé le : 26/04/2020, 12:03:09
-Rendez-vous pris pour le : 23/4/2020
-Ok rdv pris pour 23h00 au musée.
-
-
-+ Modification du rdv
-Ok rdv pris pour 23h00 au musée.
-Rendez-vous annulé !
-
-Rendez-vous agendé le : 26/04/2020, 12:07:01
-Rendez-vous pris pour le : 8/5/2020
-On va à l'église pour 9h00.
-
-
-+ Modification du rdv
-Rendez-vous pris pour le : 8/5/2020
-On va à l'église pour 9h00.
-On modifie car annulé!
-
-Rendez-vous agendé le : 26/04/2020, 12:11:33
-Rendez-vous pris pour le : 28/4/2020
-Voily voilà. --ok--
-
-
-+++ Modification du rdv +++
-Rendez-vous pris pour le : 28/4/2020
-Voily non on ne peut !
-
-Rendez-vous set up le : 28/04/2020, 11:42:35
-Rendez-vous set up for : 16/4/2020
-adqwdwqdqdqwdwqdqwd
-
-Rendez-vous set up le : 28/04/2020, 14:38:45
-Rendez-vous set up for : 29/4/2020
-Rdv chez le dentiste à 9h00
-et accompagné.
+Rendez-vous set up le : 29/04/2020, 13:57:25
+Rendez-vous set up for : 26/5/2020
+Le médecin voudrait lui parler...
 
 
 +++ Changes about rdv +++
-Rendez-vous set up for : 16/4/2020
-N'importe quoi...
-
+Rendez-vous set up for : 22/5/2020
+---oki----
+Bon faudra encore revoir, mais pour le moment...
 
 
 +++ Changes about rdv +++
 With modification of date :
-Rendez-vous set up for : 16/4/2020
-N'importe quoi...
-
-
+Rendez-vous set up for : 22/5/2020
+---oki----
+Bon faudra encore revoir, mais pour le moment...
+Ouiiiiii

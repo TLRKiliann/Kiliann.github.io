@@ -129,7 +129,7 @@ class Application(Frame):
 
     def createFileLabo(self):
         with open('./labo/doc_labo/result.txt', 'w') as filelab:
-            filelab.write("---\n")
+            filelab.write("\n---\n")
 
 if __name__=='__main__':
     app = Application()

@@ -1,13 +1,9 @@
+
 ---
 
-Date : 28/04/2020
+Date : 29/04/2020
 Nom du patient : Catanea Esteban
-# Na value and treatment : (add what the patient needs)
-# K value and treatment : (add what the patient needs)
-
-Date : 28/04/2020
-Nom du patient : Catanea Esteban
-# ASAT value and treatment : (add what the patient needs)
-# ALAT value and treatment : (add what the patient needs)
-# Gamma-GT value and treatment : (add what the patient needs)
-# Alkaline phosphatase value and treatment : (add what the patient needs)
+# Mg value and treatment : (add what the patient needs)
+# Cl value and treatment : (add what the patient needs)
+# INR value and treatment : (add what the patient needs)
+# Iron value and treatment : (add what the patient needs)

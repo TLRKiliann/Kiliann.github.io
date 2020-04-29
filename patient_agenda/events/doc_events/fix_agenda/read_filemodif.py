@@ -11,6 +11,10 @@ def importationFile(fichier):
     for li in content:
         textBox.insert(END, li)
 
+def saveData():         
+    with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'w') as textfile2:
+        textfile2.writelines(textBox.get('0.0', '12.0'))
+
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
@@ -35,6 +39,11 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
+
+buttonSave=Button(fen, text="Save", fg='yellow', bg='navy',
+    width=8, activebackground='dark turquoise', 
+    activeforeground='navy', command=saveData)
+buttonSave.pack(side='left', padx=10, pady=10)
 
 buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30', width=8,
     activebackground='dark turquoise', activeforeground='navy', command=quit)
