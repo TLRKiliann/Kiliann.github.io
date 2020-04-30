@@ -21,7 +21,9 @@ def sendToFile():
             file.write(str("Date : "))
             file.write(entreDate.get() + '\n')
             file.write(str("Name : "))
-            file.write(entreName.get() + '\n')
+            file.write(entreName.get())
+            file.write(str("Birthdate : "))
+            file.write(entreBirth.get())
             file.write(str("Addess : "))
             file.write(entreAddr.get() + '\n')
             file.write(str("NPA : "))
@@ -36,12 +38,21 @@ def sendToFile():
             file.write(entreavs.get() + '\n')
             file.write(str("Contact : "))
             file.write(entreContact.get() + '\n')
+            file.write(str("E-mail : "))
+            file.write(Emailcontact.get() + '\n')
+            file.write(str("Phone number : "))
+            file.write(entryFamContact.get() +'\n')
+            file.write(str("Friend contact : "))
+            file.write(Friendcontact.get() + '\n')
+            file.write(str("Friend number : "))
+            file.write(Phonecontact.get() +'\n')
             file.write(str("Familiy Dr : "))
             file.write(entreDrg.get() + '\n')
+            file.write(str("Phone Dr : "))
+            file.write(PhoneDrg.get() + '\n')
 
 def readToFile():
 	subprocess.call('./admin/readadmin/readadminfile1.py')
-
 
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -107,25 +118,35 @@ labelContact = Label(text="Family contact : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
 labelContact.grid(pady=10, row=10, column=1)
 
-labelFamContact = Label(gui)
-labelFamContact = Label(text="Friend contact : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='gray17')
-labelFamContact.grid(pady=10, row=11, column=1)
-
 labelphonecontact = Label(gui)
 labelphonecontact = Label(text="Phone contact : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
-labelphonecontact.grid(pady=10, row=12, column=1)
+labelphonecontact.grid(pady=10, row=11, column=1)
 
 labelemailcontact = Label(gui)
 labelemailcontact = Label(text="Contact email : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
-labelemailcontact.grid(pady=10, row=13, column=1)
+labelemailcontact.grid(pady=10, row=12, column=1)
+
+labelFriendContact = Label(gui)
+labelFriendContact = Label(text="Friend contact : ", font=14,
+    width=20, anchor='e', fg='cyan', bg='gray17')
+labelFriendContact.grid(pady=10, row=13, column=1)
+
+labelphonefriend = Label(gui)
+labelphonefriend = Label(text="Phone contact : ", font=14,
+    width=20, anchor='e', fg='cyan', bg='gray17')
+labelphonefriend.grid(pady=10, row=14, column=1)
 
 labelDrg = Label(gui)
 labelDrg = Label(text="Family Doctor : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
-labelDrg.grid(pady=10, row=14, column=1)
+labelDrg.grid(pady=10, row=15, column=1)
+
+labelphoneDr = Label(gui)
+labelphoneDr = Label(text="Phone Doctor : ", font=14,
+    width=20, anchor='e', fg='cyan', bg='gray17')
+labelphoneDr.grid(pady=10, row=16, column=1)
 
 #Entry
 entreDate = Entry(gui)
@@ -181,31 +202,39 @@ entryFamContact = Entry(gui)
 entryFamContact = Entry(highlightbackground="gray", bd=4)
 entryFamContact.grid(row=11 , column=2)
 
-Phonecontact = Entry(gui)
-Phonecontact = Entry(highlightbackground="gray", bd=4)
-Phonecontact.grid(row=12, column=2)
-
 Emailcontact = Entry(gui)
 Emailcontact = Entry(highlightbackground="gray", bd=4)
-Emailcontact.grid(row=13, column=2)
+Emailcontact.grid(row=12, column=2)
+
+Friendcontact = Entry(gui)
+Friendcontact = Entry(highlightbackground="gray", bd=4)
+Friendcontact.grid(row=13, column=2)
+
+Phonecontact = Entry(gui)
+Phonecontact = Entry(highlightbackground="gray", bd=4)
+Phonecontact.grid(row=14, column=2)
 
 entreDrg = Entry(gui)
 entreDrg = Entry(highlightbackground="gray", bd=4)
-entreDrg.grid(row=14, column=2)
+entreDrg.grid(row=15, column=2)
+
+PhoneDrg = Entry(gui)
+PhoneDrg = Entry(highlightbackground="gray", bd=4)
+PhoneDrg.grid(row=16, column=2)
 
 buttonName = Button(gui)
-buttonName = Button(text='save', fg='cyan', bg='gray30',
+buttonName = Button(text='Save', fg='cyan', bg='gray30',
     width=18, command=sendToFile)
-buttonName.grid(row=12, column=4)
+buttonName.grid(row=14, column=4)
 
 buttonName = Button(gui)
-buttonName = Button(text='read', fg='cyan', bg='gray30',
+buttonName = Button(text='Read', fg='cyan', bg='gray30',
     width=18, command=readToFile)
-buttonName.grid(row=13, column=4)
+buttonName.grid(row=15, column=4)
 
 buttonQuit = Button(gui)
 buttonQuit = Button(text='Quit', fg='cyan', bg='gray30',
     width=18, command=quit)
-buttonQuit.grid(row=14, column=4)
+buttonQuit.grid(row=16, column=4)
 
 gui.mainloop()

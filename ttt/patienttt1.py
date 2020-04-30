@@ -220,7 +220,7 @@ with open('./allergy/allergyfile.txt', 'r') as filename2:
     line6=filename2.readline()
     line7=filename2.readline()
 entrytext=tk.StringVar()
-entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ',' + line7)
+entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ', ' + line7)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
 entryName.grid(row=2, column=0, columnspan=3, pady=10)
 
