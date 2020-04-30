@@ -294,7 +294,7 @@ C14 = Checkbutton(gui, text="Latex fruits", fg='navy',
 C14.grid(row=17, column=0)
 
 latexlabel = Label(gui, text="Latex fruits = avocado, banana, kiwi,"
-    "fig, chestnut, etc.", font="Times 12", fg='aquamarine',
+    " fig, chestnut...", font="Times 12", fg='aquamarine',
     bg='gray17')
 latexlabel.grid(row=18, column=0, pady=10)  
 
@@ -305,7 +305,7 @@ C15 = Checkbutton(gui, text="Rosacea",
     width=40, anchor="w")
 C15.grid(row=19, column=0)
 
-rosaclabel = Label(gui, text="Rosacea = apricot, cherry, strawberry, etc.",
+rosaclabel = Label(gui, text="Rosacea = apricot, cherry, strawberry...",
     font="Times 12", fg='aquamarine', bg='gray17')
 rosaclabel.grid(row=20, column=0, pady=10)  
 
@@ -317,7 +317,7 @@ C16 = Checkbutton(gui, text="Umbellifers", fg='navy',
 C16.grid(row=21, column=0)
 
 ombellabel = Label(gui, text="Umbellifers = dill, carrot, celery,"
-    "fennel, parsley, etc.",
+    " fennel, parsley...",
     font="Times 12", fg='aquamarine', bg='gray17')
 ombellabel.grid(row=22, column=0, pady=10)  
 

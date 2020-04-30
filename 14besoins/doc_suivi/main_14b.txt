@@ -1,50 +1,29 @@
 
 
-En date du : 29/04/2020 à 13:01:46 :
-
-Date : 29/04/2020
-Nom du patient : Catanea Esteban
+En date du : 30/04/2020 à 14:02:17 :
 + Surveillance alimentaire et/ou hydratation requise
-+ Surveillance posturale et/ou des déplacements requise
-+ Stimulation ou aide pour la communication requise
-
----
-
-
-En date du : 29/04/2020 à 13:01:46 :
-
-Date : 29/04/2020
-Nom du patient : Catanea Esteban
-+ Surveillance alimentaire et/ou hydratation requise
-+ Surveillance posturale et/ou des déplacements requise
-+ Stimulation ou aide pour la communication requise
- hydratation requise
----
-
-En date du : 29/04/2020 à 13:03:02 :
-
-Date : 29/04/2020
-Nom du patient : Catanea Esteban
-+ Surveillance alimentaire et/ou hydratation requise
-+ Surveillance posturale et/ou des déplacements requise
-+ Stimulation ou aide pour la communication requise
-
----
-
-
-En date du : 29/04/2020 à 13:24:15 :
-# Mg value and treatment : (add what the patient needs)
 1
-# Cl value and treatment : (add what the patient needs)
++ Surveillance du sommeil requise
 2
-# INR value and treatment : (add what the patient needs)
++ Surveillance pour éviter les dangers requise
 3
-# Iron value and treatment : (add what the patient needs)
++ Surveillance ou aide pour l'habillage/déshabillage requise
 4
++ Accompagnement ou aide dans se recréer requis
+5
++ Accompagnement ou aide dans l'apprentissage requis
+6
 
-En date du : 29/04/2020 à 13:27:03 :
-+ Surveillance alimentaire et/ou hydratation requise
-Attention à la potomanie !!!
-
-En date du : 30/04/2020 à 13:11:28 :
-Rien ne va plus en ce jour.
+En date du : 30/04/2020 à 14:30:29 :
+# K value and treatment : (add what the patient needs)
+-
+# Mg value and treatment : (add what the patient needs)
+--
+# Phosphates value and treatment : (add what the patient needs)
+---
+# Bilirubin direct value and treatment : (add what the patient needs)
+----
+# Ferritine value and treatment : (add what the patient needs)
+-----
+# Vitamin B12 value and treatment : (add what the patient needs)
+------

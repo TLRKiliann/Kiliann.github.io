@@ -11,7 +11,7 @@ from tkinter import messagebox
 def retrieve_input():
     file = open('./diag/doc_diag/diagrecap.txt', 'a+')
     file.write(textBox.get("1.0", "end-1c"))
-    file.write(str('\n'))
+    file.write(str('\n\n'))
     file.close()
 
 def messFromSafeButt():

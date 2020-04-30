@@ -35,6 +35,15 @@
             "Midi": "1",
             "Soir": "1",
             "Nuit": ""
+        },
+        {
+            "Date": "30/04/2020",
+            "Traitement": "Lithiofor",
+            "Dosage": "500mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "1",
+            "Nuit": ""
         }
     ]
 }

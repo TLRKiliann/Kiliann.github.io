@@ -16,7 +16,7 @@ def saveData():
     """
     with open('./vmed/doc_vmed/resultvmed.txt', 'a+') as filerecord:
         filerecord.write(textBox.get("1.0", "end-1c"))
-        filerecord.write(str('\n'))
+        filerecord.write(str('\n\n'))
 
 def messFromSafeButt():
     """

@@ -35,7 +35,7 @@ def writeData():
             file.write(str("Heure: "))
             file.write(textHour.get() + '\n')
             file.write(str("Prenom et Nom: "))
-            file.write(textName.get() + '\n')
+            file.write(textName.get())
             file.write(str("TA: "))
             file.write(textTa.get() + " mmHg\n")
             file.write(str("Puls: "))

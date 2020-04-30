@@ -1,10 +1,9 @@
 
-Date : 29/04/2020
+Date : 30/04/2020
 Nom du patient : Catanea Esteban
 + Surveillance alimentaire et/ou hydratation requise
-+ Surveillance posturale et/ou des déplacements requise
-+ Stimulation ou aide pour la communication requise
-
-Date : 29/04/2020
-Nom du patient : Catanea Esteban
-+ Surveillance alimentaire et/ou hydratation requise
++ Surveillance du sommeil requise
++ Surveillance pour éviter les dangers requise
++ Surveillance ou aide pour l'habillage/déshabillage requise
++ Accompagnement ou aide dans se recréer requis
++ Accompagnement ou aide dans l'apprentissage requis

@@ -32,24 +32,24 @@ def get(Allpatient, entryall):
 gui=Tk()
 gui.title("Enter Allergy")
 gui.configure(bg='gray17')
-gui.geometry('300x200')
+#gui.geometry('250x200')
 
 labelName = Label(gui)
-labelName = Label(text='Enter Allergy : ', font="Times 14 bold", 
+labelName = Label(text='Enter Allergy', font="Times 16 bold", 
     fg='cyan', bg='gray17')
 labelName.pack(pady=10)
 
 Allpatient=StringVar()
-Allpatient.set('Allergie')
+Allpatient.set('Allergy no-food')
 entryall = Entry(gui, textvariable=Allpatient)
-entryall.pack()
+entryall.pack(pady=10)
 
-bouton1 = Button(gui, text="Enter", width=8, fg='yellow', bg='navy',
+bouton1 = Button(gui, text="Save", width=8, fg='yellow', bg='navy',
     command = lambda: get(Allpatient, entryall))
-bouton1.pack(side=LEFT, padx=30, pady=10)
+bouton1.pack(side=LEFT, padx=10, pady=10)
 
 buttQuit=Button(gui, text="Quit", width=8, fg='cyan', bg='navy', 
     command=quit)
-buttQuit.pack(side=LEFT, padx=15, pady=10)
+buttQuit.pack(padx=10, pady=10)
 
 gui.mainloop()
