@@ -348,18 +348,29 @@ comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
 comboMonth.grid(row=10, column=1, pady=10)
 
 def changeYear():
-    comboYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
+    comboYear["values"] = [' 2000', ' 2001', ' 2002', ' 2003',
+                          ' 2004', ' 2005', ' 2006', ' 2007',
+                          ' 2008', ' 2009', ' 2010', ' 2011',
+                          ' 2012', ' 2013', ' 2014', ' 2015',
+                          ' 2016', ' 2017', ' 2018', ' 2019',
+                          ' 2020', ' 2021', ' 2022', ' 2023',
                           ' 2024', ' 2025', ' 2026', ' 2027',
-                          ' 2028', ' 2029', ' 2030']
+                          ' 2028', ' 2029', ' 2030', ' 2031',
+                          ' 2032', ' 2033', ' 2034', ' 2035']
 
 labelYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='gray17')
 labelYear.grid(row=9, column=2)
 
 comboYear = ttk.Combobox(app,
-    values=[' 2020', ' 2021', ' 2022', ' 2023',
-          ' 2024', ' 2025', ' 2026', ' 2027',
-          ' 2028', ' 2029', ' 2030'], postcommand=changeYear)
+    values=[' 2000', ' 2001', ' 2002', ' 2003',
+            ' 2004', ' 2005', ' 2006', ' 2007',
+            ' 2008', ' 2009', ' 2010', ' 2011',
+            ' 2012', ' 2013', ' 2014', ' 2015',
+            ' 2016', ' 2017', ' 2018', ' 2019',
+            ' 2020', ' 2021', ' 2022', ' 2023',
+            ' 2024', ' 2025', ' 2026', ' 2027',
+            ' 2028', ' 2029', ' 2030'], postcommand=changeYear)
 comboYear.bind("<<ComboboxSelected>>", callbackYear)
 comboYear.grid(row=10, column=2, pady=10)
 
@@ -370,13 +381,13 @@ textDateF.grid(row=11, column=0, columnspan=2, pady=10)
 
 def finishDay():
     comboFinishDay["values"] = ['01', '02', '03', '04',
-                          '05', '06', '07', '08',
-                          '09', '10', '11', '12',
-                          '13', '14', '15', '15',
-                          '16', '17', '18', '19',
-                          '20', '21', '22', '23',
-                          '24', '25', '26', '27',
-                          '28', '29', '30', '31']
+                                '05', '06', '07', '08',
+                                '09', '10', '11', '12',
+                                '13', '14', '15', '15',
+                                '16', '17', '18', '19',
+                                '20', '21', '22', '23',
+                                '24', '25', '26', '27',
+                                '28', '29', '30', '31']
 
 labelFinishDay = tk.Label(app,
     text = "Choose the day :", font=12, fg='cyan', bg='gray17')
@@ -384,13 +395,13 @@ labelFinishDay.grid(row=12, column=0)
 
 comboFinishDay = ttk.Combobox(app,
     values=['01', '02', '03', '04',
-          '05', '06', '07', '08',
-          '09', '10', '11', '12',
-          '13', '14', '15', '15',
-          '16', '17', '18', '19',
-          '20', '21', '22', '23',
-          '24', '25', '26', '27',
-          '28', '29', '30', '31'], postcommand=finishDay)
+            '05', '06', '07', '08',
+            '09', '10', '11', '12',
+            '13', '14', '15', '15',
+            '16', '17', '18', '19',
+            '20', '21', '22', '23',
+            '24', '25', '26', '27',
+            '28', '29', '30', '31'], postcommand=finishDay)
 comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
 comboFinishDay.grid(row=13, column=0, pady=10)
 
@@ -543,6 +554,10 @@ LabelR.grid(row=21, column=1)
 Rnbre = tk.Entry(app)
 Rnbre = tk.Entry(highlightbackground='gray', bd=4)
 Rnbre.grid(row=21, column=2)
+
+buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='orange',
+    bg='gray30', bd=4, command=showTreat)
+buttStopttt.grid(row=21, column=0)
 
 LabSign = tk.Label(app, text='Signature :', font=12, 
     width=15, fg='red', bg='pale green')

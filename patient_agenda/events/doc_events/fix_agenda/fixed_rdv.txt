@@ -1,25 +1,35 @@
-Rendez-vous set up le : 29/04/2020, 13:56:48
+Rendez-vous set up le : 30/04/2020, 07:59:49
 Rendez-vous set up for : 22/5/2020
----oki----
+Tlm à l'église pour 9h00.
+Accompagné par Judith.
 
-Rendez-vous set up le : 29/04/2020, 13:57:03
-Rendez-vous set up for : 15/7/2020
-______________________________________||||||____iiiii
+Rendez-vous set up le : 30/04/2020, 08:00:40
+Rendez-vous set up for : 16/7/2020
+Venu au foyer du Pape.
+Prévoir l'accueil.
+Dire à l'intendance de se tenir prête !
 
-Rendez-vous set up le : 29/04/2020, 13:57:25
-Rendez-vous set up for : 26/5/2020
-Le médecin voudrait lui parler...
+Rendez-vous set up le : 30/04/2020, 08:01:36
+Rendez-vous set up for : 16/7/2020
+Faire le mariage de Claude avec Francine.
+
+Rendez-vous set up le : 30/04/2020, 08:02:09
+Rendez-vous set up for : 17/6/2021
+Jour porte ouverte !
+
+
++++ Changes about rdv +++
+Rendez-vous set up for : 16/7/2020
+Venu au foyer du Pape.
+Prévoir l'accueil. ANNULE
+
+Rendez-vous set up for : 16/7/2020
+Faire le mariage de Claude avec Francine.
+ANNULE
 
 
 +++ Changes about rdv +++
 Rendez-vous set up for : 22/5/2020
----oki----
-Bon faudra encore revoir, mais pour le moment...
+Tlm à l'église pour 9h00.
+Accompagné par Ludo.
 
-
-+++ Changes about rdv +++
-With modification of date :
-Rendez-vous set up for : 22/5/2020
----oki----
-Bon faudra encore revoir, mais pour le moment...
-Ouiiiiii
