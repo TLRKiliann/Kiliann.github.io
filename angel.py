@@ -47,10 +47,6 @@ class MenuBar(Frame):
             activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
-        me1.add_command(label='Abréviations', underline=0, background='black',
-            activebackground='aquamarine',
-            foreground='aquamarine', activeforeground='black',
-            command=boss.showabr1)
         me1.add_command(label='Installation', background='black',
             activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
@@ -952,70 +948,6 @@ class Application(Frame):
             "Pour toutes questions, vous pouvez me joindre à l'adresse mail :\n"
             "philogenie@protonmail.com",
             font=('Times', 13), fill='aquamarine')
-        self.can.configure(scrollregion=self.can.bbox(ALL))
-
-    # Abréviations - texte de référence pour les acronymes de l'application.
-    def showabr1(self):
-        self.can.delete(ALL)
-        self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
-        self.item=self.can.create_image(625, 400, image=self.photo)
-        self.can.create_text(100, 50, anchor=NW, text="ABREVIATIONS\n\n"
-            "A\n"
-            "ACO = Anticoagulants oraux\n"
-            "AP = Antipsychotiques\n"
-            "AD = Antidépresseurs\n"
-            "ATCD = Antécédents\n"
-            "AINS = Anti-inflammatoires non stéroïdiens\n"
-            "AVC = Accident vasculaire cérébrale\n\n"
-
-            "B\n"
-            "BAV = Bloc auriculo-ventriculaire\n"
-            "BZD = Benzodiazépines\n\n"
-
-            "C\n"
-            "CTCG = Crise tonico-clonique généralisée\n\n"
-
-            "E\n"
-            "ECA = Inhibiteurs de l'enzyme de conversion\n" 
-            "ECG = Electrocardiogramme\n"
-            "EGME = Etat de grand mal épileptique\n"
-            "ES = Effets secondaires\n\n"
-
-            "G\n"
-            "GABA = Acide gama-aminobutyrique\n\n"
-
-            "I\n"
-            "IMAO = Inhibiteur de la mono-amine-oxydase\n"
-            "IMC = Infarctus du myocarde\n"
-            "ISRS = Inhibiteur sélectif de la recapture en sérotonine\n\n",
-            font=('Times', 12), fill='yellow')
-        self.can.create_text(650, 50, anchor=NW, text="M\n"
-            "MAE  = Médicaments antiépileptiques\n\n"
-
-            "N\n"
-            "NL = Neuroleptique\n"
-            "NARI = Inhibiteur sélectif de la noradrénaline\n"
-            "NaSSA = AD noradrénergiques et sérotoninergique spécifique\n"
-            "NDRI = Inhibiteur de la dopamine et de la noradrénaline\n\n"
-
-            "Q\n"
-            "QT = Allongement de l'intervalle QT (l'onde QRST s'allonge)\n\n"
-
-            "S\n"
-            "SEP = Syndrome extrapyramidal ou sclérose en plaque (selon contexte)\n"
-            "SH = Stabilisateur de l'humeur\n"
-            "SNC = Système nerveux central\n"
-            "SNM = Syndrome Neuroleptique Malin\n"
-            "SNRI = Inhibiteur de la recapture de la sérotonine et noradrénaline\n"
-            "SS = Syndrome sérotoninergique\n\n"
-
-            "T\n"
-            "TCC = AD Tricyclique\n"
-            "TCC = Traumatisme carinien-cérébral\n"
-            "TR = Tranquilisants (anxiolytiques)\n"
-            "TTT = Traitements ou médicaments\n"
-            "Etc ...\n",
-            font=('Times', 12), fill='yellow')
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def callPatient1(self):
