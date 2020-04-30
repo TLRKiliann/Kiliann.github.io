@@ -92,20 +92,6 @@ def importationLabo(fichier2, encodage="Utf-8"):
         print("+ Sorry, file 'result.txt' not exist !")
         print(str(outcom))
 
-# To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1=filename.readline()
-
-# To read allergy in Entry widget
-with open('./allergy/allergyfile.txt', 'r') as allerfile:
-    lineA1=allerfile.readline()
-    lineA2=allerfile.readline()
-    lineA3=allerfile.readline()
-    lineA4=allerfile.readline()
-    lineA5=allerfile.readline()
-    lineA6=allerfile.readline()
-    lineA7=allerfile.readline()
-
 root=Tk()
 root.title("Care and monitoring")
 root.configure(background='gray17')
@@ -124,13 +110,25 @@ labelallergy=Label(root, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='gray17')
 labelallergy.pack(padx=5, pady=5)
 
+# To read name in Entry widget
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line1=filename.readline()
 text_name=StringVar()
 Entryname=Entry(root, textvariable=text_name)
 text_name.set(line1)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
+# To read allergy in Entry widget
+with open('./allergy/allergyfile.txt', 'r') as allerfile:
+    lineA1=allerfile.readline()
+    lineA2=allerfile.readline()
+    lineA3=allerfile.readline()
+    lineA4=allerfile.readline()
+    lineA5=allerfile.readline()
+    lineA6=allerfile.readline()
+    lineA7=allerfile.readline()
 text_aller=StringVar()
-text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ',' + lineA7)
+text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryaller=Entry(root, textvariable=text_aller, width=60)
 Entryaller.pack(padx=10, pady=5)
 

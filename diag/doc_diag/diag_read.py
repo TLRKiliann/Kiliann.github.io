@@ -38,13 +38,15 @@ labelallergy=Label(fen, text="Allergy",
 labelallergy.pack(padx=5, pady=10)
 
 with open('./allergy/allergyfile.txt', 'r') as filename:
-    line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
+    lineA1=filename.readline()
+    lineA2=filename.readline()
+    lineA3=filename.readline()
+    lineA4=filename.readline()
+    lineA5=filename.readline()
+    lineA6=filename.readline()
+    lineA7=filename.readline()
 entrytext=StringVar()
-entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entrytext.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 entryName=Entry(fen, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 

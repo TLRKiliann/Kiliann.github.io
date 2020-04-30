@@ -73,6 +73,8 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
     lineA4=allerfile.readline()
     lineA5=allerfile.readline()
+    lineA6=allerfile.readline()
+    lineA7=allerfile.readline()
 
 root=Tk()
 root.title("Results of Medical Visit")
@@ -98,7 +100,7 @@ labelallergy=Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 text_all=StringVar()
-text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5)
+text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryaller=Entry(root, textvariable=text_all, width=60)
 Entryaller.pack(padx=10, pady=5)
 

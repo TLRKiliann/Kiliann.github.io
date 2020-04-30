@@ -44,9 +44,6 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1=filename.readline()
-
 root=Tk()
 root.title("Diagnostics and ATCD")
 root.configure(background='gray17')
@@ -61,6 +58,8 @@ labelo=Label(root, text="Diagnostics and ATCD for : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line1=filename.readline()
 textname=StringVar()
 entryName=Entry(root, textvariable=textname)
 textname.set(line1)
@@ -71,13 +70,15 @@ labelallergy=Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=10)
 
 with open('./allergy/allergyfile.txt', 'r') as filename:
-    line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
+    lineA1=filename.readline()
+    lineA2=filename.readline()
+    lineA3=filename.readline()
+    lineA4=filename.readline()
+    lineA5=filename.readline()
+    lineA6=filename.readline()
+    lineA7=filename.readline()
 entrytext=StringVar()
-entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entrytext.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 entryName=Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 
