@@ -60,9 +60,114 @@ def recordOption():
     else:
         print("Nothing to do")
 
-# To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1=filename.readline()
+    print(CheckVar5.get())
+    if CheckVar5.get()==1:
+        print("Eggs")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Eggs\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar6.get())
+    if CheckVar6.get()==1:
+        print("Fish")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Fish\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+
+    print(CheckVar7.get())
+    if CheckVar7.get()==1:
+        print("Shellfish")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Shellfish\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar8.get())
+    if CheckVar8.get()==1:
+        print("Molluscs")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Molluscs\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar9.get())
+    if CheckVar9.get()==1:
+        print("Groundnut")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Groundnut\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar10.get())
+    if CheckVar10.get()==1:
+        print("Oleaginous")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Oleaginous\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar11.get())
+    if CheckVar11.get()==1:
+        print("Sesame")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Sesame\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar12.get())
+    if CheckVar12.get()==1:
+        print("Soya")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Soya\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar13.get())
+    if CheckVar13.get()==1:
+        print("Cereals")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Cereals\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar14.get())
+    if CheckVar14.get()==1:
+        print("Latex")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Latex\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar15.get())
+    if CheckVar15.get()==1:
+        print("Rosacea")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Rosacea\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar16.get())
+    if CheckVar16.get()==1:
+        print("Umbellifers")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Umbellifers\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
 
 def confRec():
     MsgBox2 = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
@@ -71,6 +176,9 @@ Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
     width=14, fg='aquamarine', bg='gray17', anchor='e')
 Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
+# To read name in Entry widget
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line1=filename.readline()
 text_entry = StringVar()
 text_entry.set(line1)
 entryName = Entry(gui, textvariable=text_entry)

@@ -103,6 +103,8 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
     lineA4=allerfile.readline()
     lineA5=allerfile.readline()
+    lineA6=allerfile.readline()
+    lineA7=allerfile.readline()
 
 root=Tk()
 root.title("Care and monitoring")
@@ -128,7 +130,7 @@ text_name.set(line1)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 text_aller=StringVar()
-text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5)
+text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ',' + lineA7)
 Entryaller=Entry(root, textvariable=text_aller, width=60)
 Entryaller.pack(padx=10, pady=5)
 

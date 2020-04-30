@@ -32,6 +32,8 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA3=allerfile.readline()
     lineA4=allerfile.readline()
     lineA5=allerfile.readline()
+    lineA6=allerfile.readline()
+    lineA7=allerfile.readline()
 
 fen=Tk()
 fen.title("Care and monitoring")
@@ -57,7 +59,7 @@ Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 text_all=StringVar()
-text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5)
+text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ',' + lineA7)
 Entryall=Entry(fen, textvariable=text_all, width=60)
 Entryall.pack(padx=10, pady=5)
 
