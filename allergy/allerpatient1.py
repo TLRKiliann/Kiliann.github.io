@@ -8,7 +8,7 @@ import os
 
 
 def get(Allpatient, entryall):
-    MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
+    MsgBox = messagebox.askyesno('Save data', 'Data saved !')
     if MsgBox == 1:
         Allpatient = entryall.get()
         print(Allpatient)

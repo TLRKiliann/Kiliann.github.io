@@ -198,18 +198,6 @@ def copyToFile():
             with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
-# To read allergy for entry widget
-with open('./allergy/allergyfile.txt', 'r') as filename2:
-    line1=filename2.readline()
-    line2=filename2.readline()
-    line3=filename2.readline()
-    line4=filename2.readline()
-    line5=filename2.readline()
-
-# To read name of patient for entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
-    line1=filename.readline()
-
 app = tk.Tk()
 app.title("Introduction of treatement(ttt)") 
 app.configure(bg='gray17')
@@ -222,8 +210,17 @@ labelallergy=tk.Label(app, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='gray17')
 labelallergy.grid(row=1, column=0, columnspan=3)
 
+# To read allergy for entry widget
+with open('./allergy/allergyfile.txt', 'r') as filename2:
+    line1=filename2.readline()
+    line2=filename2.readline()
+    line3=filename2.readline()
+    line4=filename2.readline()
+    line5=filename2.readline()
+    line6=filename2.readline()
+    line7=filename2.readline()
 entrytext=tk.StringVar()
-entrytext.set(line1 + ', ' + line3 + ', ' + line5)
+entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ',' + line7)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
 entryName.grid(row=2, column=0, columnspan=3, pady=10)
 
@@ -261,6 +258,9 @@ textHour = tk.Entry(textvariable=time_Htring,
 time_Htring.set(time.strftime("%H:%M:%S"))
 textHour.grid(row=4, column=1)
 
+# To read name of patient for entry widget
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line1=filename.readline()
 textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,

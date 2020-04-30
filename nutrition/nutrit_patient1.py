@@ -3,18 +3,69 @@
 
 
 from tkinter import *
+from tkinter import messagebox
 
+
+gui = Tk()
+gui.title("Intolerances")
+gui.configure(bg='gray17')
 
 def saveCheck():
-    pass
+    MSB = messagebox.askyesno('Save Data', 'Data saved !')
+    if MSB == 1:
+        print("Ok, data")
+        recordOption()
+        confRec()
+        gui.destroy()
+    else:
+        NoforQ = messagebox.showinfo('Return', 'Data not saved')
+
+def recordOption():
+    """
+    To save checkbox option
+    """
+    print(CheckVar1.get())
+    if CheckVar1.get()==1:
+        print("Gluten intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Gluten intolerance\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar2.get())
+    if CheckVar2.get()==1:
+        print("Lactose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Lactose intolerance\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar3.get())
+    if CheckVar3.get()==1:
+        print("Saccharose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Saccharose intolerance\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
+
+    print(CheckVar4.get())
+    if CheckVar4.get()==1:
+        print("Fructose intolerance")
+        with open('./allergy/allergyfile.txt', 'a+') as file:
+            file.write("Fructose intolerance\n")
+            file.write(str('----------------\n'))
+    else:
+        print("Nothing to do")
 
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
-gui = Tk()
-gui.title("Intolerances")
-gui.configure(bg='gray17')
+def confRec():
+    MsgBox2 = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
     width=14, fg='aquamarine', bg='gray17', anchor='e')
@@ -22,8 +73,8 @@ Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
 text_entry = StringVar()
 text_entry.set(line1)
-Intoentry = Entry(gui, textvariable=text_entry)
-Intoentry.grid(sticky='e', row=0, column=0, pady=10)
+entryName = Entry(gui, textvariable=text_entry)
+entryName.grid(sticky='e', row=0, column=0, pady=10)
 
 CheckVar1 = IntVar()
 C1 = Checkbutton(gui, text="Gluten", fg='navy', 
