@@ -1072,29 +1072,38 @@ class Application(Frame):
         self.photo=PhotoImage(file='./psycho_gif/pream.gif')        
         self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(20, 50, anchor=NW, text="PREAMBULE:\n\n"
-"Bienvenue dans PSYCHOTABS!\n"
-"Cette application a été conçue dans le but de favoriser l'accès à l'information se rapportant aux médicaments psychotropes.\n"
-"Elle est destiné aux personnes travaillant avec des patients sous médications psychotropes et pour les personnes intéressées par ces traitements.\n"
-"PSYCHOTABS peut aider à mieux comprendre sur quels type de symptômes les psychotropes agissent ou quels sont les effets secondaires\n" 
-"encourus par un patient sous médication psychotrope.\n\n"
+        "Bienvenue dans PSYCHOTABS!\n"
+        "Cette application a été conçue dans le but de favoriser l'accès à l'information se rapportant"
+        "aux médicaments psychotropes.\n"
+        "Elle est destiné aux personnes travaillant avec des patients sous médications psychotropes et"
+        "pour les personnes intéressées par ces traitements.\n"
+        "PSYCHOTABS peut aider à mieux comprendre sur quels type de symptômes les psychotropes agissent"
+        "ou quels sont les effets secondaires\n" 
+        "encourus par un patient sous médication psychotrope.\n\n"
 
-"Les différentes familles de psychotropes comprennent un explicatif sur: les propriétés, les effets secondaires, les interactions correspondants\n" 
-"à la classe. Pour cela, il vous suffit de cliquer sur les menus des familles se situant en-haut de la fenêtre.\n\n"
+        "Les différentes familles de psychotropes comprennent un explicatif sur: les propriétés, les"
+        "effets secondaires, les interactions correspondants\n" 
+        "à la classe. Pour cela, il vous suffit de cliquer sur les menus des familles se situant en-haut"
+        "de la fenêtre.\n\n"
 
-"Psychotabs tire son attrait dans le regroupement des psychotropes, par noms des médicaments (cf: équivalences), les plus connus et les plus\n" 
-"utilisés.\n"
-"Les descriptifs sont repris du compendium, mais pas dans leur totalité. Il y figure uniquement: l'utilisation, les contre-indications les\n"
-"interactions, les effets secondaires, les surdosages et les traitements en cas de surdosage.\n"
-"A noter que les effets secondaires comportent les symptômes les plus couramment rencontrés (très fréquent ou fréquent).\n\n"
+        "Psychotabs tire son attrait dans le regroupement des psychotropes, par noms des médicaments"
+        "(cf: équivalences), les plus connus et les plus\n" 
+        "utilisés.\n"
+        "Les descriptifs sont repris du compendium, mais pas dans leur totalité. Il y figure uniquement:"
+        "l'utilisation, les contre-indications les\n"
+        "interactions, les effets secondaires, les surdosages et les traitements en cas de surdosage.\n"
+        "A noter que les effets secondaires comportent les symptômes les plus couramment rencontrés"
+        "(très fréquent ou fréquent).\n\n"
 
-"L'onglet abréviation permet de décrypter les acronymes au besoin.\n"
-"Des informations complémentaires viennent enrichir l'information tels que les descriptifs établis par des médecins de Lausanne, en plus des\n"
-"divers sites universitaires de médecine (cf. Bibliographie).\n"
-"Un TUTORIAL est mis à disposition pour la prise en main de l'application.\n\n"
+        "L'onglet abréviation permet de décrypter les acronymes au besoin.\n"
+        "Des informations complémentaires viennent enrichir l'information tels que les descriptifs"
+        "établis par des médecins de Lausanne, en plus des\n"
+        "divers sites universitaires de médecine (cf. Bibliographie).\n"
+        "Un TUTORIAL est mis à disposition pour la prise en main de l'application.\n\n"
 
-"En espérant que PSYCHOTABS vous soit utile!\n"
-"Vous pouvez m'envoyer vos questions ou/et commentaires à l'adresse e-mail:\n"
-"elemgw2@gmail.com\n",
+        "En espérant que PSYCHOTABS vous soit utile!\n"
+        "Vous pouvez m'envoyer vos questions ou/et commentaires à l'adresse e-mail:\n"
+        "elemgw2@gmail.com\n",
                     font=('Times New Roman', 16), fill='cyan')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))  
@@ -1109,17 +1118,17 @@ class Application(Frame):
 
         self.can.create_text(20, 200, anchor=NW, text="* Compendium Suisse : https://compendium.ch\n\n"
 
-"* https://pharmacomedicale.org/medicaments/par-specialites/item/anti-epileptiques-les-points-essentiels\n\n"
+        "* https://pharmacomedicale.org/medicaments/par-specialites/item/anti-epileptiques-les-points-essentiels\n\n"
 
-"* https://www.centreantipoisons.be/professionnels-de-la-sant/articles-pour-professionnels-de-la-sant/le-syndrome-sérotoninergique\n\n"
+        "* https://www.centreantipoisons.be/professionnels-de-la-sant/articles-pour-professionnels-de-la-sant/le-syndrome-sérotoninergique\n\n"
 
-"* Faculté de Médecine de Strasbourg, Module de Pharmacologie Clinique DCEM3 « Les neuroleptiques » - M. Wolf\n" 
-"- Mise à jour : juillet 2011\n\n"
+        "* Faculté de Médecine de Strasbourg, Module de Pharmacologie Clinique DCEM3 « Les neuroleptiques » - M. Wolf\n" 
+        "- Mise à jour : juillet 2011\n\n"
 
-"* Faculté de Médecine de Strasbourg, Module de Pharmacologie Clinique DCEM3 2004/2005 « Les antidépresseurs » - M. Grima\n" 
-"- Mise à jour : janvier 2008\n\n"
+        "* Faculté de Médecine de Strasbourg, Module de Pharmacologie Clinique DCEM3 2004/2005 « Les antidépresseurs » - M. Grima\n" 
+        "- Mise à jour : janvier 2008\n\n"
 
-"* Sémiologie : neurologie - Les neurologues du groupe Pitié-Salpêtrière 2000-2001\n\n",
+        "* Sémiologie : neurologie - Les neurologues du groupe Pitié-Salpêtrière 2000-2001\n\n",
                     font=('Times', 16), fill='cyan')
         
         self.can.configure(scrollregion=self.can.bbox(ALL))  
@@ -1133,17 +1142,22 @@ class Application(Frame):
                     font=('Times', 32), fill='gray22')
         self.can.create_text(20, 100, anchor=NW, 
             text="-Les différents onglets présents, ci-dessus, servent à se déplacer" 
-"dans les différentes classes de médicaments pour choisir entre:\n"
-"effets secondaires, interactions et les différentes sous-divisions des classes (anciennes générations, BZD ou non BZD).\n\n"
+        "dans les différentes classes de médicaments pour choisir entre:\n"
+        "effets secondaires, interactions et les différentes sous-divisions des classes (anciennes"
+        "générations, BZD ou non BZD).\n\n"
 
-"-Les interactions sont facilement identifiables, grâce à leur couleur rouge, qui les distingue des autres items, figurant dans les menus en\n" 
-"cascade, de chaque classe de TTT.\n\n"
+        "-Les interactions sont facilement identifiables, grâce à leur couleur rouge, qui les distingue"
+        "des autres items, figurant dans les menus en\n" 
+        "cascade, de chaque classe de TTT.\n\n"
 
-"-Pour information, en cas de doute ou de besoin, la symptomatologie des SEP, SNM et SS sont décrites dans les classes correspondantes.\n\n"
+        "-Pour information, en cas de doute ou de besoin, la symptomatologie des SEP, SNM et SS sont"
+        "décrites dans les classes correspondantes.\n\n"
 
-"-En cas de suspicion d'effets secondaires ou de surdosage, veuillez vous rendre dans la classe correspondante du médicament concerné,\n"
-"puis cliquez la génération ou famille à laquelle il s'apparente. Une fois repéré, il vous sera possible de consulter la rubrique recherchée.\n",
-                    font=('Times', 16), fill='black')
+        "-En cas de suspicion d'effets secondaires ou de surdosage, veuillez vous rendre dans la classe"
+        "correspondante du médicament concerné,\n"
+        "puis cliquez la génération ou famille à laquelle il s'apparente. Une fois repéré, il vous sera"
+        "possible de consulter la rubrique recherchée.\n",
+        font=('Times', 16), fill='black')
 
         self.photo3=PhotoImage(file='./psycho_gif/psycho2.gif')        
         self.item=self.can.create_image(300, 1100, image=self.photo3)
@@ -1181,20 +1195,20 @@ class Application(Frame):
 
         self.can.create_text(20, 80, anchor=NW, 
             text="Clopin = Leponex = Clozapine = NL-AP 1ère G.........................................."
-"...........................................................................\n\n"
-"Depakine = Valproate de sodium = MAE, SH.........................................................................................................................\n\n"
-"Dormicum= Midazolam = MAE, sédatif, anticonvulsivant, myorelaxant, anxiolytique, hypnotique.....................................................\n\n"
-"Lexotanil = Lexomil = Bromazépam = TR..............................................................................................................................\n\n"
-"Phenydan = Phénytoïne = MAE.................................................................................................................................................\n\n"
-"Seresta = Anxiolit = Oxazépam = TR........................................................................................................................................\n\n"
-"Seroquel = Quétiapine = Sequase = NL-AP 2ème G..................................................................................................................\n\n"
-"Stilnox = Zolpidem = Hypnotique............................................................................................................................................\n\n"
-"Tégrétol = Carbamazépine = MAE...........................................................................................................................................\n\n"
-"Temesta = Lorasifar = Lorazépam = TR......................................................................................................................................\n\n"
-"Tranxilium = Tranxène = Chlorazépate = TR..................................................................................................................................\n\n"
-"Zoloft = Sertraline = ATD-ISRS...............................................................................................................................................\n\n"
-"Zyprexa = Olanzapine = NL-AP 2ème G........................................................................................................................................\n",
-                    font=('Times', 16), fill='cyan')
+        "...........................................................................\n\n"
+        "Depakine = Valproate de sodium = MAE, SH.........................................................................................................................\n\n"
+        "Dormicum= Midazolam = MAE, sédatif, anticonvulsivant, myorelaxant, anxiolytique, hypnotique.....................................................\n\n"
+        "Lexotanil = Lexomil = Bromazépam = TR..............................................................................................................................\n\n"
+        "Phenydan = Phénytoïne = MAE.................................................................................................................................................\n\n"
+        "Seresta = Anxiolit = Oxazépam = TR........................................................................................................................................\n\n"
+        "Seroquel = Quétiapine = Sequase = NL-AP 2ème G..................................................................................................................\n\n"
+        "Stilnox = Zolpidem = Hypnotique............................................................................................................................................\n\n"
+        "Tégrétol = Carbamazépine = MAE...........................................................................................................................................\n\n"
+        "Temesta = Lorasifar = Lorazépam = TR......................................................................................................................................\n\n"
+        "Tranxilium = Tranxène = Chlorazépate = TR..................................................................................................................................\n\n"
+        "Zoloft = Sertraline = ATD-ISRS...............................................................................................................................................\n\n"
+        "Zyprexa = Olanzapine = NL-AP 2ème G........................................................................................................................................\n",
+        font=('Times', 16), fill='cyan')
 
         button = Button(self, text="Aller à la page", font=70, bg='navy', fg='turquoise', 
                         anchor = CENTER, command = self.showap5)
@@ -1270,28 +1284,28 @@ class Application(Frame):
                     font=('Times', 14), fill='black')
 
         self.can.create_text(20, 100, anchor=NW, text="Dormicum, Halcion, Stilnox, Imovane,"
-"Sonata, Xanax, Lexotanil, Rohypnol, Temesta, Noctamid, Seresta, Urbanyl, Rivotril, Tranxilium, Valium, Dalmadorm," 
-"Demetrin.\n\n"
+        "Sonata, Xanax, Lexotanil, Rohypnol, Temesta, Noctamid, Seresta, Urbanyl, Rivotril, Tranxilium, Valium, Dalmadorm," 
+        "Demetrin.\n\n"
 
-"Recommandations pour la prescription de benzodiazépines:\n\n"
+        "Recommandations pour la prescription de benzodiazépines:\n\n"
 
-"1. ne prescrire idéalement qu’une seule benzodiazépine, en aucun cas plus de deux.\n"
-"2. commencer par la posologie la plus faible possible.\n"
-"3. prévoir une durée limitée de la prescription, sauf exceptions.\n"
-"4. éviter une reconduction systématique de l’ordonnance.\n"
-"5. expliquer au patient le risque de dépendance associé à une prise ininterrompue et prolongée.\n"
-"6. favoriser les autres stratégies thérapeutiques, y.c. non médicamenteuses.\n\n"
+        "1. ne prescrire idéalement qu’une seule benzodiazépine, en aucun cas plus de deux.\n"
+        "2. commencer par la posologie la plus faible possible.\n"
+        "3. prévoir une durée limitée de la prescription, sauf exceptions.\n"
+        "4. éviter une reconduction systématique de l’ordonnance.\n"
+        "5. expliquer au patient le risque de dépendance associé à une prise ininterrompue et prolongée.\n"
+        "6. favoriser les autres stratégies thérapeutiques, y.c. non médicamenteuses.\n\n"
 
-"Choix d’une benzodiazépine:\n\n"
+        "Choix d’une benzodiazépine:\n\n"
 
-"-Benzodiazépines à demi-vie prolongée pour : anxiété généralisée, dose quotidienne unique, action régulière souhaitée.\n\n"
+        "-Benzodiazépines à demi-vie prolongée pour : anxiété généralisée, dose quotidienne unique, action régulière souhaitée.\n\n"
 
-"-Benzodiazépines à demi-vie moyenne pour : insomnies à réveil précoce avec troubles de l’endormissement,"
-"paroxysmes anxieux, patients à métabolisme altéré.\n" 
-"(sénescence,  affections  hépatiques) évite somnolence résiduelle le lendemain matin.\n\n"
+        "-Benzodiazépines à demi-vie moyenne pour : insomnies à réveil précoce avec troubles de l’endormissement,"
+        "paroxysmes anxieux, patients à métabolisme altéré.\n" 
+        "(sénescence,  affections  hépatiques) évite somnolence résiduelle le lendemain matin.\n\n"
 
-"-Benzodiazépines à demi-vie brève indiqués en cas de : difficultés d’endormissement, prémédication lors de petites interventions.\n",
-                    font=('Times', 14), fill='black')
+        "-Benzodiazépines à demi-vie brève indiqués en cas de : difficultés d’endormissement, prémédication lors de petites interventions.\n",
+        font=('Times', 14), fill='black')
 
         self.can.configure(scrollregion=self.can.bbox(ALL)) 
 
@@ -1301,37 +1315,37 @@ class Application(Frame):
         self.photo=PhotoImage(file='./psycho_gif/pyt.gif')
         self.item=self.can.create_image(700, 400, image=self.photo)
         self.can.create_text(500, 20, anchor=NW, text="-INSTALLATION DU PROGRAMME-\n\n"
-"Linux (Xubuntu):\n\n"
+        "Linux (Xubuntu):\n\n"
 
-"Ouvrir le terminal.\n"
-"Vérifier version python (si version 2.7 ou 3 et plus)\n"
-"en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
-"Sinon, télécharger python 3.5 en ligne de commande:\n"
-"sudo apt-get update && apt-get upgrade.\n"
-"sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
-"Aller sous le dossier où il a été téléchargé et taper (ex: cd /Documents/psychotabs.py)\n"
-"et tapez ./psychotabs.py pour ouvrir l'application.\n"
-"Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
+        "Ouvrir le terminal.\n"
+        "Vérifier version python (si version 2.7 ou 3 et plus)\n"
+        "en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
+        "Sinon, télécharger python 3.5 en ligne de commande:\n"
+        "sudo apt-get update && apt-get upgrade.\n"
+        "sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
+        "Aller sous le dossier où il a été téléchargé et taper (ex: cd /Documents/psychotabs.py)\n"
+        "et tapez ./psychotabs.py pour ouvrir l'application.\n"
+        "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
 
-"**************************************************************\n\n"
+        "**************************************************************\n\n"
 
-"Mac OS:\n\n"
+        "Mac OS:\n\n"
 
-"Ouvrir le terminal.\n"
-"Vérifier version python (si version 2.7 ou 3 et plus)\n"
-"en tapant dans le terminal: python --version.\n"
-"Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
-"A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
-"/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir l'application.\n\n"
+        "Ouvrir le terminal.\n"
+        "Vérifier version python (si version 2.7 ou 3 et plus)\n"
+        "en tapant dans le terminal: python --version.\n"
+        "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
+        "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
+        "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir l'application.\n\n"
 
-"**************************************************************\n\n"
+        "**************************************************************\n\n"
 
-"Windows:\n\n"
+        "Windows:\n\n"
 
-"L'executable est disponible sous psycho_Windows.\n"
-"Vous trouverez le programme python 3.5 dans le document install.\n"
-"Le document README vous permettra d'installer proprement python.\n",
-                    font=('Times', 13), fill='aquamarine')
+        "L'executable est disponible sous psycho_Windows.\n"
+        "Vous trouverez le programme python 3.5 dans le document install.\n"
+        "Le document README vous permettra d'installer proprement python.\n",
+        font=('Times', 13), fill='aquamarine')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))                          
 
@@ -1401,25 +1415,35 @@ class Application(Frame):
 
         self.can.create_text(10, 50, anchor=NW, text="-PROPRIETES DES MAE (MEDICAMENTS ANTIEPILEPTIQUES)-\n",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Les médicaments anti-épileptiques, de première et de "
-"deuxième génération, agissent par trois principaux mécanismes d’action : (1) inhibition de la transmission\n"
-"glutamatergique ; (2) potentialisation de l'action inhibitrice GABAergique; (3) blocage des canaux cationiques (Na+ voltage-dépendants ou Ca2+ de type T)\n" 
-"En effet, l’inhibition de la transmission glutamatergique peut être indirecte par l’inhibition des canaux Na+ voltage-dépendants des neurones glutamatergiques, mais\n" 
-"aussi ceux des neurones post-synaptiques responsables des décharges épileptiques.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Les médicaments anti-épileptiques, de première et de"
+        "deuxième génération, agissent par trois principaux mécanismes d’action : (1) inhibition de la transmission\n"
+        "glutamatergique ; (2) potentialisation de l'action inhibitrice GABAergique; (3) blocage des canaux cationiques"
+        "(Na+ voltage-dépendants ou Ca2+ de type T)\n" 
+        "En effet, l’inhibition de la transmission glutamatergique peut être indirecte par l’inhibition des"
+        "canaux Na+ voltage-dépendants des neurones glutamatergiques, mais\n" 
+        "aussi ceux des neurones post-synaptiques responsables des décharges épileptiques.\n\n"
 
-"La lamotrigine inhibe directement la libération de glutamate. L’inhibition des voies glutamatergiques peut également résulter d’une action antagoniste au niveau des\n"
-"récepteurs NMDA (topiramate, felbamate). L’acide valproïque et l’éthosuximide inhibent l’hyperexcitabilité neuronale en bloquant les canaux calciques neuronaux\n" 
-"voltage-dépendants et le lévétiracétam bloque l’hyperexcitabilité neuronale par un inhibition complexe de canaux ioniques.\n\n"
+        "La lamotrigine inhibe directement la libération de glutamate. L’inhibition des voies glutamatergiques"
+        "peut également résulter d’une action antagoniste au niveau des\n"
+        "récepteurs NMDA (topiramate, felbamate). L’acide valproïque et l’éthosuximide inhibent l’hyperexcitabilité"
+        "neuronale en bloquant les canaux calciques neuronaux\n" 
+        "voltage-dépendants et le lévétiracétam bloque l’hyperexcitabilité neuronale par un inhibition complexe de"
+        "canaux ioniques.\n\n"
 
-"L’activation du système GABAergique peut se faire aussi par différents mécanismes. L’activation peut être pré-synaptique par inhibition de la recapture du GABA\n" 
-"(tiagabine) ou par inhibition de la GABA-transaminase, enzyme de dégradation du GABA (vigabatrin). Elle peut être post-synaptique par potentialisation de l'effet du\n" 
-"GABA après fixation sur le récepteur GABAA (benzodiazépines).\n\n"
+        "L’activation du système GABAergique peut se faire aussi par différents mécanismes. L’activation peut être"
+        "pré-synaptique par inhibition de la recapture du GABA\n" 
+        "(tiagabine) ou par inhibition de la GABA-transaminase, enzyme de dégradation du GABA (vigabatrin). Elle"
+        "peut être post-synaptique par potentialisation de l'effet du\n" 
+        "GABA après fixation sur le récepteur GABAA (benzodiazépines).\n\n"
 
-"Toutefois, pour la majorité des anti-épileptiques de première ou de deuxième génération, les mécanismes d'action sont en grande partie mal ou non connus et aucun\n" 
-"mécanisme n'est strictement corrélé à l'action clinique anticonvulsivante. De plus, la similitude des mécanismes d'action des anti-épileptiques de première et de\n" 
-"deuxième génération explique pourquoi 25-30% de patients ne pressentent pas d'équilibre optimal de leur épilepsie même sous traitement par nouvelles molécules. Le\n"
-"développement de molécules agissant sur des nouvelles cibles reste privilégié.\n",
-                    font=('Times', 14), fill='black')
+        "Toutefois, pour la majorité des anti-épileptiques de première ou de deuxième génération, les mécanismes"
+        "d'action sont en grande partie mal ou non connus et aucun\n" 
+        "mécanisme n'est strictement corrélé à l'action clinique anticonvulsivante. De plus, la similitude des"
+        "mécanismes d'action des anti-épileptiques de première et de\n" 
+        "deuxième génération explique pourquoi 25-30% de patients ne pressentent pas d'équilibre optimal de leur"
+        "épilepsie même sous traitement par nouvelles molécules. Le\n"
+        "développement de molécules agissant sur des nouvelles cibles reste privilégié.\n",
+        font=('Times', 14), fill='black')
 
         button7=Button(self, text="--->", bg="Dark gray", fg='white', command=self.showmae3, anchor=CENTER)
         button7.configure(width=10, activebackground="snow2", activeforeground='dark gray', relief=GROOVE)
@@ -1433,25 +1457,25 @@ class Application(Frame):
         self.can.create_text(10, 50, anchor=NW, text="-EFFETS SECONDAIRES DES MAE (MEDICAMENTS ANTIEPILEPTIQUES)-",
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="De manière générale, les ES des MAE sont les suivants:"
-"somnolence, vertiges, diplopie, céphalées, nausées, ataxie, agitation, BAV, arythmie, éruption cutanées, fatigue,\n"
+        "somnolence, vertiges, diplopie, céphalées, nausées, ataxie, agitation, BAV, arythmie, éruption cutanées, fatigue,\n"
 
-"allongement de l'intervale QT, induction enzymatique si indiqué d'utiliser en monothérapie.\n\n"
+        "allongement de l'intervale QT, induction enzymatique si indiqué d'utiliser en monothérapie.\n\n"
 
-"Risque de syndrome de Stevens-Johnson 14 à 19 jours après le début du traitement se manifestant par un érythème cutané.\n\n"
+        "Risque de syndrome de Stevens-Johnson 14 à 19 jours après le début du traitement se manifestant par un érythème cutané.\n\n"
 
-"Surdosage: généralement pas d'antidote. Il faut arrêter le ttt et le substituer par un autre.\n\n"
+        "Surdosage: généralement pas d'antidote. Il faut arrêter le ttt et le substituer par un autre.\n\n"
 
-"Surveillance: troubles électrolytiques, carence vitaminique, acide folique, anémie, agranulocytose, troubles de la conduction, etc...\n\n"
+        "Surveillance: troubles électrolytiques, carence vitaminique, acide folique, anémie, agranulocytose, troubles de la conduction, etc...\n\n"
 
-"Contre-indications: chez la femme enceinte (risque de malformation).\n\n"
+        "Contre-indications: chez la femme enceinte (risque de malformation).\n\n"
 
-"L'introduction d'un MAE se fait toujours de manière progressive et son arrêt de manière dégressive.\n\n"
+        "L'introduction d'un MAE se fait toujours de manière progressive et son arrêt de manière dégressive.\n\n"
 
-"Les prescription, le changement ou le remaniement d'un MAE se fait toujours par un médecin expérimenté en épilepsie.\n\n"
+        "Les prescription, le changement ou le remaniement d'un MAE se fait toujours par un médecin expérimenté en épilepsie.\n\n"
 
-"En cas de surdosage, les mesures générales de réanimation doivent être mises en oeuvre.\n\n"
+        "En cas de surdosage, les mesures générales de réanimation doivent être mises en oeuvre.\n\n"
 
-"Déconseillé durant la grossesse.\n",
+        "Déconseillé durant la grossesse.\n",
                     font=('Times', 14), fill='black')
 
         button8=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showmae2, anchor=CENTER)
@@ -1471,26 +1495,26 @@ class Application(Frame):
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Jamais de pamplemousse!\n\n"
 
-"Contre-indiqué avec le Primpéran (et Motilium).\n\n"
+        "Contre-indiqué avec le Primpéran (et Motilium).\n\n"
 
-"Interactions avec: ATB, myorelaxant, antimycotique, antihistaminique\n\n" 
+        "Interactions avec: ATB, myorelaxant, antimycotique, antihistaminique\n\n" 
 
-"Inhibition enzymatique en association avec les contraceptifs oraux\n\n"
+        "Inhibition enzymatique en association avec les contraceptifs oraux\n\n"
 
-"Depakine peut potentialiser l'effet d'autres neuropsychotropes, tels que neuroleptiques, IMAO,"
-"antidépresseurs et benzodiazépines, suscitant une surveillance clinique\n" 
-"et une adaptation éventuelle du traitement. Enormément d'interraction et d'effets secondaires.\n\n"
+        "Depakine peut potentialiser l'effet d'autres neuropsychotropes, tels que neuroleptiques, IMAO,"
+        "antidépresseurs et benzodiazépines, suscitant une surveillance clinique\n" 
+        "et une adaptation éventuelle du traitement. Enormément d'interraction et d'effets secondaires.\n\n"
 
-"Les MAE de 1ère génération provoquent une induction ou une inhibition enzymatique. En association"
-"avec d'autre médicaments, les MAE peuvent faire diminuer ou\n" 
-"augmenter le dosage d'un autre médicament dans le sang.\n\n"
+        "Les MAE de 1ère génération provoquent une induction ou une inhibition enzymatique. En association"
+        "avec d'autre médicaments, les MAE peuvent faire diminuer ou\n" 
+        "augmenter le dosage d'un autre médicament dans le sang.\n\n"
 
-"Le zuclopenthixol devrait être utilisé avec précaution chez les patients souffrant d'épilepsie (le"
-"médicament abaisse le seuil épileptogène), de lésions cérébrales\n" 
-"organiques ou de maladies hépatiques ou rénales à un stade avancé.\n"
+        "Le zuclopenthixol devrait être utilisé avec précaution chez les patients souffrant d'épilepsie (le"
+        "médicament abaisse le seuil épileptogène), de lésions cérébrales\n" 
+        "organiques ou de maladies hépatiques ou rénales à un stade avancé.\n"
 
-"Ne pas associer de la carbamazépine (Tégrétol) avec la quétiapine (Seroquel), à moins de savoir ce que l'on fait.\n",
-                    font=('Times', 14), fill='black')
+        "Ne pas associer de la carbamazépine (Tégrétol) avec la quétiapine (Seroquel), à moins de savoir ce que l'on fait.\n",
+        font=('Times', 14), fill='black')
 
         button10=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showmae3, anchor=CENTER)
         button10.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -1510,847 +1534,847 @@ class Application(Frame):
         self.can.create_text(10, 230, anchor=NW, text="Indication, contre-indications, interactions, effets secondaires, surdosage, traitement (antidote)\n",
                     font=('Times', 14), fill='red2')
         self.can.create_text(10, 250, anchor=NW, text="******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "BROMIDES: -> existe depuis 1857, n'est plus utilisé.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "CARBAMAZEPINE (tégrétol)\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "N'est généralement pas efficaces contre les absences et les myoclonies. Formes mixtes de crises d'épilepsie. Blocage des canaux sodiques. Beaucoup d'interactions\n"
-                                                     "et d'effets secondaires. Ne s'associe pas à de la quétiapine à moins de savoir ce que l'on fait.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Épilepsie.\n"
-                                                     "Crises partielles simples ou complexes (avec ou sans perte de connaissance) avec ou sans généralisation secondaire.\n"
-                                                     "Crises tonico-cloniques généralisées.\n"
-                                                     "Formes mixtes de crises épileptiques.\n"
-                                                     "Tégrétol convient aussi bien en mono- qu'en polythérapie.\n"
-                                                     "Habituellement Tégrétol n'est pas efficace dans les absences (petit mal) ainsi que dans les crises myocloniques (cf. «Mises en garde et précautions»).\n"
-                                                     "Manie aiguë et traitement de fond de la forme bipolaire des désordres affectifs dans le but d'une prévention ou régression des récidives.\n"
-                                                     "Syndrome de sevrage alcoolique.\n"
-                                                     "Névralgie essentielle du trijumeau et névralgie du trijumeau dans la sclérose en plaques (typique ou atypique).\n"
-                                                     "Névralgie essentielle du glosso-pharyngien.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Antécédents d'hypersensibilité à la carbamazépine et l'oxcarbazépine ou à des médicaments de structure apparentée (antidépresseurs tricycliques p.ex.) ou à un\n"
-                                                     "autre composant du médicament.\n"
-                                                     "*Patients avec bloc auriculo-ventriculaire, dépression médullaire ou antécédents de porphyrie hépatique (p.ex. porphyrie aiguë intermittente, porphyrie variegata,\n"
-                                                     "porphyrie cutanée tardive).\n"
-                                                     "*L'utilisation de Tégrétol en combinaison avec les inhibiteurs de la monoamine-oxydase (IMAO) n'est pas recommandée (voir «Interactions»).\n"
-                                                     "*Avant de commencer un traitement par Tégrétol, il faut interrompre le traitement par IMAO au moins 2 semaines avant voire plus, si la situation clinique le permet.\n"
-                                                     "*En raison de sa teneur en sorbitol, Tégrétol 2% suspension orale n'est pas approprié pour les personnes ayant une intolérance au fructose (intolérance héréditaire\n"
-                                                     "au fructose).\n"
-                                                     "*La suspension ne doit pas non plus être utilisée chez les personnes ayant une hypersensibilité aux parabènes (E 200, E216, E 218).\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "Le cytochrome P450 3A4 (CYP 3A4) est la principale enzyme catalysant la formation du métabolite actif: l'époxy-10,11-carbamazépine. L'administration\n"
-                                                     "concomitante d'inhibiteurs du CYP 3A4 peut provoquer une augmentation des concentrations plasmatiques de carbamazépine susceptible d'induire des effets\n"
-                                                     "indésirables.\n"
-                                                     "L'administration concomitante d'inducteurs du CYP 3A4 peut au contraire stimuler le métabolisme de Tégrétol, faire baisser le taux sérique de carbamazépine\n"
-                                                     "et éventuellement conduire à une diminution de l'effet thérapeutique. De même, l'interruption de l'administration d'un inducteur du CYP 3A4 peut diminuer\n"
-                                                     "le métabolisme de la carbamazépine et conduire ainsi à une élévation des taux sériques de carbamazépine.\n\n"
-
-                                                     "La carbamazépine est un inducteur puissant du CYP3A4 et d'autres enzymes hépatiques de phase I et phase II. Elle peut donc éventuellement réduire les\n"
-                                                     "concentrations plasmatiques de substances administrées simultanément et principalement métabolisées par le CYP3A4.\n\n"
-
-                                                     "L'époxyde hydrolase microsomale humaine est considérée comme un enzyme responsable de la formation de dérivés 10,11-transdiol à partir de l'époxy-10,11-\n"
-                                                     "-carbamazépine.\n"
-                                                     "L'utilisation concomitante de substances inhibant l'époxyde hydrolase microsomiale (p.ex. l'acide valproïque) peut provoquer une augmentation du taux sanguin\n"
-                                                     "d'époxy-10,11-carbamazépine.\n\n"
-
-                                                     "Substances susceptibles d'augmenter les concentrations plasmatiques de carbamazépine:\n"
-                                                     "L'élévation des concentrations plasmatiques de carbamazépine pouvant entraîner des réactions indésirables (p.ex. vertiges, somnolence, ataxie, diplopie), la\n"
-                                                     "posologie de Tégrétol doit être ajustée en conséquence et/ou les concentrations plasmatiques être surveillées, en cas d'administration simultanée avec les\n"
-                                                     "substances suivantes:\n"
-                                                     "*Substances antituberculeuses: isoniazide.\n"
-                                                     "*Substances cardiovasculaires: vérapamil, diltiazem.\n"
-                                                     "*Analgésiques, antiphlogistiques: dextropropoxyphène, ibuprofène.\n"
-                                                     "*Antidépresseurs: éventuellement désipramine, viloxazine, fluoxétine, fluvoxamine, trazodone, paroxétine.\n"
-                                                     "*Substances gastrointestinales: éventuellement cimétidine, oméprazole.\n"
-                                                     "*Inhibiteurs de l'anhydrase carbonique: acétazolamide.\n"
-                                                     "*Androgènes: danazol.\n"
-                                                     "*Antibiotiques: antibiotiques macrolides (p.ex. érythromycine, troléandomycine, josamycine, clarithromycine, ciprofloxacine).\n"
-                                                     "*Antimycosiques: dérivés azolés (p.ex. itraconazole, kétoconazole, fluconazole, voriconazole). D'autres anticonvulsivants sont éventuellement recommandés chez\n"
-                                                     "les patients traités par le voriconazole et l'itraconazole.\n"
-                                                     "*Antihistaminiques: terfénadine, loratadine.\n"
-                                                     "*Substances antivirales: inhibiteurs de la protéase pour le traitement du VIH (p.ex. ritonavir).\n"
-                                                     "*Antiépileptiques: stiripentol, vigabatrine.\n"
-                                                     "*Antipsychotiques: loxapine, olanzapine, quétiapine.\n"
-                                                     "*Myorelaxants: oxybutynine, dantrolène.\n"
-                                                     "*Inhibiteurs de l'agrégation plaquettaire; ticlodipine.\n"
-                                                     "*Autres: jus de pamplemousse, nicotinamide (seulement à forte dose).\n\n"
-
-                                                     "Substances susceptibles d'augmenter les concentrations plasmatiques d'époxy-10,11-carbamazépine:\n"
-                                                     "L'augmentation du taux plasmatique d'époxy-10,11-carbamazépine pouvant causer des effets indésirables (p. ex. vertiges, somnolence, ataxie, diplopie),\n"
-                                                     "la posologie de Tégrétol doit être surveillée attentivement et éventuellement ajustée, en cas d'administration simultanée avec les substances suivantes:\n"
-                                                     "loxapine, quétiapine, primidone, progabide, acide valproïque, valnoctamide et valpromide.\n\n"
-
-                                                     "Substances susceptibles de faire baisser les concentrations plasmatiques de carbamazépine:\n"
-                                                     "La dose de Tégrétol doit être ajustée le cas échéant si les substances suivantes sont utilisées comme médication concomitante:\n"
-                                                     "Antiépileptiques: phénobarbital, primidone, mésuximide, felbamate, oxcarbazépine, phensuximide, phénytoïne (pour prévenir une intoxication à la phénytoïne et\n"
-                                                     "des concentrations subthérapeutiques de carbamazépine, il est recommandé d'ajuster la concentration plasmatique de phénytoïne à 13 µg/ml avant de commencer le\n"
-                                                     "traitement par la carbamazépine), fosphénytoïne, clonazépam.\n\n"
-                                                     "*Cytostatiques: cisplatine, doxorubicine.\n"
-                                                     "*Substances antituberculeuses: rifampicine.\n"
-                                                     "*Bronchodilatateurs ou antiasthmatiques: théophylline, aminophylline.\n"
-                                                     "*Substances dermatologiques: isotrétinoïne.\n"
-                                                     "Autres: préparations phytothérapeutiques contenant du millepertuis (Hypericum perforatum).\n\n"
-
-                                                     "Effet de Tégrétol sur les taux plasmatiques de substances administrées simultanément:\n"
-                                                     "La carbamazépine peut abaisser les concentrations plasmatiques de certains médicaments et diminuer leur activité, voire même la supprimer. La posologie des\n"
-                                                     "médicaments suivants devra éventuellement être ajustée aux exigences cliniques:\n"
-                                                     "*Analgésiques/antiphlogistiques: buprénorphine, méthadone, fentanyl, paracétamol (un traitement à long terme par la carbamazépine et le paracétamol\n" 
-                                                     "(acétaminophène) pourrait provoquer une hépatotoxicité), phénazone (antipyrine), tramadol.\n"
-                                                     "*Antibiotiques: doxycycline, rifabutine.\n"
-                                                     "*Anticoagulants: anticoagulants oraux (warfarine, phenprocoumone, dicoumarol, acénocoumarol, rivaroxaban, dabigatran, apixaban, edoxaban).\n"
-                                                     "*Antidépresseurs: antidépresseurs tricycliques (p.ex. imipramine, amitriptyline, nortryptiline, clomipramine), bupropion (la carbamazépine peut abaisser le taux\n"
-                                                     "plasmatique du bupropion et élever celui de son métabolite l'hydroxybupropion et réduire ainsi l'efficacité clinique et la sécurité du bupropion), citalopram,\n"
-                                                     "miansérine, néfazodone, sertraline, trazodone. Tégrétol ne doit pas être utilisé en combinaison avec des inhibiteurs de la MAO; avant d'administrer le Tégrétol,\n"
-                                                     "il faut arrêter les inhibiteurs de la MAO pendant 2 semaines au moins, plus longtemps si la situation clinique le permet (voir «Contre-indications»).\n"
-                                                     "*Antiémétiques: aprépitant.\n"
-                                                     "*Antiépileptiques: clobazam, clonazépam, éthosuximide, felbamate, lamotrigine, eslicarbazépine, oxcarbazépine, primidone, tiagabine, topiramate, acide valproïque,\n"
-                                                     "zonisamide. Pour prévenir une intoxication à la phénytoïne et des concentrations subthérapeutiques de carbamazépine, il est recommandé d'ajuster la concentration\n"
-                                                     "plasmatique de phénytoïne à 13 µg/ml avant de commencer le traitement par la carbamazépine. Dans de rares cas, une élévation des taux plasmatiques de\n"
-                                                     "méphénytoïne a été décrite, pouvant conduire dans des cas exceptionnels à des états confusionnels et même jusqu'au coma.\n"
-                                                     "*Antimycosiques: itraconazole, kétoconazole, voriconazole. D'autres anticonvulsivants sont éventuellement recommandés chez les patients traités par le voriconazole\n"
-                                                     "et l'itraconazole.\n"
-                                                     "*Antihelminthiques: praziquantel; albendazole.\n"
-                                                     "*Cytostatiques: imatinib, cyclophosphamide, lapatinib, temsirolimus.\n"
-                                                     "*Antipsychotiques: clozapine, halopéridol, brompéridol, olanzapine, quétiapine, rispéridone, ziprasidone, aripiprazole, palipéridone.\n"
-                                                     "*Substances antivirales: inhibiteurs de la protéase pour le traitement du VIH: p.ex. indinavir, ritonavir, saquinavir.\n"
-                                                     "*Anxiolytiques: alprazolam, midazolam.\n"
-                                                     "*Bronchodilatateurs ou antiasthmatiques: théophylline.\n"
-                                                     "*Substances cardiovasculaires: inhibiteurs du canal calcique (groupe des dihydropyridines) p.ex. félodipine, digoxine, quinidine, propranolol, simvastatine,\n"
-                                                     "atorvastatine, lovastatine, cérivastatine, ivabradine.\n"
-                                                     "*Corticostéroïdes: p.ex. prednisolone, dexaméthasone.\n"
-                                                     "*Immunosuppresseurs: ciclosporine, tacrolimus, évérolimus,sirolimus.\n\n"
-
-                                                     "Hormones thyroïdiennes: lévothyroxine: la carbamazépine semble accroître l'élimination des hormones thyroïdiennes et en augmenter les besoins chez les patients\n"
-                                                     "souffrant d'hypothyroïdie. C'est pourquoi chez les patients qui reçoivent une thérapie de substitution, il faut contrôler les paramètres thyroïdiens au début et\n"
-                                                     "à la fin d'un traitement par Tégrétol. Le cas échéant, il faut procéder à un ajustement posologique des préparations à base d'hormones thyroïdiennes. En\n"
-                                                     "particulier, le traitement simultané par carbamazépine et autres anticonvulsifs (p. ex. phénobarbital) peut modifier la fonction thyroïdienne.\n\n"
-
-                                                     "Contraceptifs: les contraceptifs hormonaux (lors de la prise de la «pilule», des métrorragies soudaines peuvent se produire en sus de la diminution d'effet des\n"
-                                                     "contraceptifs hormonaux. C'est pourquoi la contraception orale devrait contenir plus de 50 mcg d'œstrogène ou il faudrait recommander d'autres méthodes\n"
-                                                     "contraceptives, non hormonales.\n"
-                                                     "Médicaments destinés au traitement de la dysfonction érectile: tadalafil.\n\n"
-
-                                                     "A évaluer en cas de traitement associé:\n"
-                                                     "Il a été indiqué que l'utilisation simultanée de la carbamazépine et du lévétiracétam augmente la toxicité de la carbamazépine.\n"
-                                                     "Selon certains rapports, le traitement concomitant par la carbamazépine et l'isoniazide augmente l'hépatotoxicité de l'isoniazide.\n"
-
-                                                     "L'association de carbamazépine et de lithium ou de métoclopramide et de carbamazépine peut aggraver les effets neurotoxiques des deux substances. C'est pourquoi\n"
-                                                     "il est nécessaire de surveiller attentivement les symptômes cliniques. Un traitement antérieur par neuroleptiques doit dater de plus de 8 semaines et ne pas\n"
-                                                     "avoir lieu simultanément. Il faut veiller aux signes suivants de symptômes neurotoxiques: démarche hésitante, ataxie, nystagmus horizontal, réflexes accrus,\n"
-                                                     "fasciculations musculaires.\n\n"
-
-                                                     "Dans la littérature, il est mentionné que la prise additionnelle de carbamazépine lors de traitement préexistant par des neuroleptiques peut élever le risque de\n"
-                                                     "survenue d'un syndrome malin des neuroleptiques ou d'un syndrome de Steven-Johnson.\n\n"
-
-                                                     "L'association de Tégrétol et de certains diurétiques (hydrochlorothiazide, furosémide) peut conduire à une hyponatrémie symptomatique.\n\n"
-
-                                                     "La carbamazépine peut s'opposer aux effets des myorelaxants non dépolarisants (pancuronium p.ex.); leur posologie doit être augmentée le cas échéant et les\n" 
-                                                     "patients doivent être surveillés attentivement en cas de suppression plus rapide que prévue du bloc neuromusculaire.\n\n"
-
-                                                     "Au même titre que les autres médicaments psycho-actifs, Tégrétol peut réduire la tolérance à l'alcool; il est donc préférable que le patient s'abstienne d'en\n"
-                                                     "consommer.\n\n"
-
-                                                     "L'utilisation concomitante de la carbamazépine et d'anticoagulants oraux à action directe (rivaroxaban, dabigatran, apixaban, edoxaban) peut conduire à des\n"
-                                                     "concentrations plasmatiques réduites des anticoagulants oraux à action directe et augmenter ainsi le risque de thrombose. Si une utilisation concomitante est\n"
-                                                     "nécessaire, une surveillance étroite est par conséquent recommandée afin d'identifier les éventuels signes et symptômes d'une thrombose.\n\n"
-
-                                                     "À prendre en considération lors de tests sérologiques:\n"
-                                                     "La carbamazépine pourrait donner des résultats faux positifs lors du dosage de la perphénazine dans les analyses par CLHP, suite à une interférence.\n"
-                                                     "La carbamazépine et son métabolite 10,11-époxyde pourraient donner des résultats faux positifs lors du dosage des antidépresseurs tricycliques dans les essais\n"
-                                                     "immunologiques par polarisation de fluorescence.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Certains types d'effets indésirables se produisent occasionnellement ou fréquemment surtout en début de traitement si Tégrétol est administré à des doses initiales\n"
-                                                     "trop élevées, ou encore chez les patients âgés. Il s'agit entre autres d'effets indésirables sur le système nerveux central (SNC) (vertiges, céphalées, ataxie,\n"
-                                                     "somnolence, épuisement, diplopie), de troubles gastro-intestinaux (nausées, vomissements) ainsi que de réactions cutanées allergiques.\n\n"
-
-                                                     "Les effets dose-dépendants s'estompent habituellement en l'espace de quelques jours, soit spontanément, soit après réduction provisoire de la dose. Les effets\n"
-                                                     "indésirables touchant le SNC peuvent aussi être le signe d'un surdosage relatif ou d'une fluctuation importante des taux plasmatiques. Dans ces cas, la surveillance\n"
-                                                     "des concentrations plasmatiques est recommandée.\n\n"
-
-                                                     "Leucopénie (11%); persistante dans 2% des cas, éosinophilie, thrombopénie, œdème, rétention liquidienne, prise de poids; hyponatrémie et diminution de l’osmolalité\n"
-                                                     "plasmatique dues à un effet comparable à celui de l'hormone antidiurétique (ADH) et ayant conduit dans des cas isolés à une intoxication par l'eau accompagnée de\n"
-                                                     "léthargie, nausées, vomissements, céphalées, confusion, anomalies neurologiques, convulsions, désorientation, diminution de la perception, troubles visuels,\n"
-                                                     "encéphalopathie («syndrome de sécrétion inappropriée d’ADH»), vertiges (10-50%), ataxie (enfants: 10.4%; adultes: 50%), somnolence, céphalées, diplopie, troubles\n"
-                                                     "de l’accommodation (p.ex. vision trouble), nausées, vomissements (tous les deux 8%), sécheresse de la bouche, dermatite allergique, prurit, urticaire, qui peuvent\n"
-                                                     "être graves, épuisement, augmentation de la gamma GT (due à l’induction des enzymes hépatiques), habituellement sans signification clinique, réduction de la densité\n"
-                                                     "osseuse.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Les signes d'intoxication se manifestent généralement au niveau des systèmes nerveux central, cardiovasculaire, de l'appareil respiratoire et par les effets\n"
-                                                     "indésirables décrits sous «Effets indésirables».\n\n"
-
-                                                     "*Système nerveux central: dépression du SNC; désorientation, réduction du niveau de conscience, somnolence, agitation, hallucinations, coma; vision trouble,\n"
-                                                     "difficultés d'élocution, dysarthrie, nystagmus, ataxie, dyskinésie, hyperréflexie initiale puis hyporéflexie; convulsions, troubles psychomoteurs, myoclonie,\n"
-                                                     "hypothermie, mydriase.\n"
-                                                     "*Appareil respiratoire: dépression respiratoire, œdème pulmonaire.\n"
-                                                     "*Système cardiovasculaire: tachycardie, hypotension, quelquefois hypertension, troubles de conduction avec élargissement du complexe QRS; syncope par arrêt\n"
-                                                     "cardiaque.\n"
-                                                     "*Tractus gastro-intestinal: vomissements, vidange gastrique retardée, motilité intestinale réduite.\n"
-                                                     "*Troubles musculosquelettiques: quelques cas de rhabdomyolyse ont été signalés en rapport avec la toxicité de la carbamazépine.\n"
-                                                     "*Fonction rénale: rétention d'urine, oligurie ou anurie; rétention liquidienne, intoxication par l'eau due à un effet de la carbamazépine comparable à celui\n"
-                                                     "de l'ADH.\n"
-                                                     "*Examens de laboratoire: hyponatrémie, éventuelle acidose métabolique, hyperglycémie possible, augmentation de la créatine phosphokinase musculaire.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Il n'existe pas d'antidote spécifique.\n"
-                                                     "Le traitement sera fonction de l'état clinique du patient; hospitalisation. Détermination de la concentration plasmatique pour confirmer l'intoxication par la\n"
-                                                     "carbamazépine et pour déterminer l'importance du surdosage.\n"
-                                                     "Vidange de l'estomac, lavage gastrique et administration de charbon actif. Un retard de la vidange gastrique peut retarder l'absorption et conduire à une\n"
-                                                     "aggravation pendant la phase de guérison.\n"
-                                                     "Traitement d'appoint dans une unité de soins intensifs avec surveillance cardiaque et correction scrupuleuse du déséquilibre électrolytique.\n"
-                                                     "Recommandations spéciales.\n"
-                                                     "L'hémoperfusion au charbon actif a été conseillée. L'hémodialyse est une méthode thérapeutique efficace pour traiter un surdosage de carbamazépine.\n"
-                                                     "Prévoir une rechute ou aggravation de la symptomatologie au 2e et 3e jour après l'intoxication, due à une absorption différée.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "DEPAKINE (valproate de sodium)\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Depakine est principalement indiqué, de préférence en monothérapie, dans les épilepsies généralisées primaires: petit-mal/absences, myoclonies massives\n"
-                                                     "bilatérales, grand-mal avec ou sans myoclonies, formes photosensibles. Depakine est également efficace, seul ou en association avec d'autres anti-épileptiques\n"
-                                                     "dans les indications du compendium. Beaucoup d'interactions et d'ES (tremblements d'un membre). Contre-indiqué chez le patient connu pour des troubles\n"
-                                                     "hépatiques.\n" 
-                                                     "Le renforcement de l'activité gabaergique intervient, vraisemblablement, en empêchant ou en limitant la diffusion des décharges.\n\n"
-                                                     "Les MAE de première génération provoquent une induction enzymatique.\n"
-                                                     "Induction enzymatique = diminue ou augmente le dosage d'un autre médicament.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Depakine Chrono est principalement indiqué, de préférence en monothérapie, dans les épilepsies généralisées primaires: petit mal/absences, myoclonies massives\n"
-                                                     "bilatérales, grand mal avec ou sans myoclonies, formes photosensibles.\n"
-                                                     "Depakine Chrono est également efficace, seul ou en association avec d'autres antiépileptiques dans les indications suivantes:\n"
-                                                     "Epilepsies généralisées secondaires, notamment syndrome de West et syndrome de Lennox-Gastaut.\n"
-                                                     "Epilepsies partielles à symptomatologie élémentaire ou à symptomatologie complexe (formes psychosensorielles, formes psychomotrices).\n"
-                                                     "Epilepsies secondairement généralisées.\n"
-                                                     "Formes mixtes (généralisées et partielles).\n"
-                                                     "Traitement des épisodes maniaques associés aux troubles bipolaires en cas de contre-indication ou d'intolérance au lithium. Prévention des rechutes chez les\n"
-                                                     "patients adultes souffrant de troubles bipolaires dont les épisodes maniaques ont répondu au traitement par le valproate.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Hépatite aiguë.\n"
-                                                     "*Hépatite chronique.\n"
-                                                     "*Antécédents chez le patient ou dans l'anamnèse familiale d'hépatites sévères, médicamenteuses notamment.\n"
-                                                     "*Hypersensibilité connue au valproate de sodium ou à d'autres composants du médicament.\n"
-                                                     "*Porphyrie hépatique.\n"
-                                                     "*Patients connus pour avoir des maladies mitochondriales causées par des mutations du gène nucléaire codant pour l'enzyme mitochondriale polymérase gamma\n"
-                                                     "(POLG, par exemple dans le syndrome d'Alpers-Huttenlocher) ainsi que chez les enfants de moins de 2 ans qui sont suspectés d'avoir une maladie liée au\n"
-                                                     "gène POLG.\n"
-                                                     "*Patients souffrant de troubles connus du cycle de l'urée (voir «Mises en garde et précautions»).\n"
-                                                     "*Depakine Chrono peut provoquer des malformations congénitales et des troubles du développement chez les fœtus exposés in utero. Assurez-vous que les femmes\n"
-                                                     "en âge de procréer utilisent une méthode de contraception efficace pendant toute la durée du traitement. La patiente doit être informée en détail des risques\n"
-                                                     "associés à l’utilisation de valproate lors de la grossesse.\n"
-                                                     "*Le rapport bénéfice/risque du traitement par Depakine Chrono doit être réévalué régulièrement, notamment lorsque la patiente envisage ou débute une grossesse.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "Effets du valproate sur les autres médicaments:\n"
-                                                     "L'acide valproïque est un inhibiteur des isoenzymes CYP2C9 et CYP3A du cytochrome P450. Les effets métaboliques auxquels il convient de s'attendre peuvent être\n"
-                                                     "déduits du schéma correspondant. Les interactions suivantes sont particulièrement importantes:\n"
-                                                     "*Neuroleptiques, IMAO, antidépresseurs et benzodiazépines: Depakine Chrono peut potentialiser l'effet d'autres neuropsychotropes, tels que neuroleptiques, IMAO,\n"
-                                                     "antidépresseurs et benzodiazépines, suscitant une surveillance clinique et une adaptation éventuelle du traitement.\n"
-                                                     "*Lithium: Une étude d'interaction pharmacocinétique chez des jeunes volontaires sains de sexe masculin a montré que Depakine n'a aucun effet sur les taux sériques\n"
-                                                     "de lithium.\n"
-                                                     "Phénobarbital: Depakine Chrono augmente les concentrations plasmatiques du phénobarbital par inhibition du catabolisme hépatique, entraînant une sédation,\n"
-                                                     "particulièrement chez les enfants. C'est pourquoi une surveillance clinique est recommandée durant les 15 premiers jours du traitement combiné, avec réduction\n"
-                                                     "immédiate des doses de phénobarbital si une sédation survient et détermination des taux plasmatiques de phénobarbital si nécessaire.\n"
-                                                     "*Primidone: Depakine Chrono augmente les taux plasmatiques de primidone avec majoration de ses effets indésirables (sédation). Après usage prolongé, cette\n"
-                                                     "interaction cesse. Une surveillance clinique et une adaptation éventuelle de la posologie de la primidone sont recommandées plus particulièrement au début de\n"
-                                                     "l'association thérapeutique.\n"
-                                                     "Phénytoïne: Depakine Chrono diminue les concentrations plasmatiques totales de phénytoïne. Il augmente surtout la fraction libre de phénytoïne, pouvant entraîner\n"
-                                                     "des signes de surdosage (l'acide valproïque déplace la phénytoïne de ses sites de fixation protéique plasmatiques et ralentit son catabolisme hépatique). Une\n"
-                                                     "surveillance clinique est donc recommandée. En cas de dosage plasmatique de phénytoïne, c'est surtout la forme libre qui doit être prise en compte.\n"
-                                                     "Carbamazépine: Une toxicité clinique a été rapportée en cas d'association de valproate de sodium/acide valproïque et de carbamazépine, puisque le valproate de\n"
-                                                     "sodium/acide valproïque peuvent potentialiser la toxicité de la carbamazépine. Une surveillance clinique est donc recommandée tout particulièrement en début de\n"
-                                                     "traitement par l'association et la posologie sera éventuellement ajustée.\n"
-                                                     "Lamotrigine: Depakine entrave le métabolisme de la lamotrigine et prolonge sa demi-vie moyenne d'élimination de presque deux fois. Cette interaction peut entraîner\n"
-                                                     "une augmentation des effets toxiques de la lamotrigine, en particulier des éruptions cutanées sévères. Certaines réactions cutanées graves qui sont apparues dans\n"
-                                                     "les six premières semaines des polythérapies ont été rapportées, mais ces dernières ont régressé partiellement lors de l'arrêt du traitement ou, dans certains cas,\n"
-                                                     "uniquement après un traitement approprié. Par conséquent, une surveillance clinique est recommandée et les doses de lamotrigine doivent être diminuées le cas\n"
-                                                     "échéant.\n"
-                                                     "*Zidovudine: Le valproate de sodium/acide valproïque peuvent augmenter la concentration plasmatique de zidovudine avec majoration des risques de toxicité de\n"
-                                                     "celle-ci.\n"
-                                                     "*Felbamate: Depakine peut diminuer la clairance moyenne du felbamate jusqu'à 16%.\n"
-                                                     "*Olanzapine: L'acide valproïque peut diminuer les concentrations plasmatiques de l'olanzapine.\n"
-                                                     "*Rufinamide: L'acide valproïque peut conduire à une augmentation du taux plasmatique du rufinamide. Cette augmentation dépend de la concentration en acide\n"
-                                                     "valproïque. La précaution sera de mise, notamment chez l'enfant, comme cet effet est plus important dans cette population.\n"
-                                                     "*Quétiapine: L'association de valproate de sodium/acide valproïque et de quétiapine peut augmenter le risque de neutropénie/leucopénie.\n"
-                                                     "*Propofol: L'acide valproïque peut conduire à une augmentation du taux plasmatique du propofol. En cas de co-administration avec le valproate, une diminution de\n"
-                                                     "la dose du propofol devra être envisagée.\n"
-                                                     "*Nimodipine: L'association de la nimodipine avec l'acide valproïque peut augmenter la concentration plasmatique de la nimodipine de 50%.\n\n"
-
-                                                     "Effets des autres médicaments sur l'acide valproïque:\n"
-                                                     "Les antiépileptiques avec effet inducteur enzymatique (notamment phénytoïne, phénobarbital, primidone, carbamazépine) diminuent les concentrations sériques de\n"
-                                                     "l'acide valproïque. En cas d'association, il faut adapter le traitement en fonction de la réponse clinique et des dosages sanguins.\n\n"
-
-                                                     "L'association du felbamate et de l'acide valproïque, peut entraîner une diminution de la clairance de l'acide valproïque de 22% à 50%, et par conséquent une\n"
-                                                     "augmentation dose-dépendante de la concentration sérique en acide valproïque. Une surveillance des taux plasmatiques est nécessaire.\n\n"
-
-                                                     "Les taux d'acide valproïque dans le sérum peuvent être augmentés en cas de co-administration avec la phénytoïne ou le phénobarbital. Par conséquent, les patients\n"
-                                                     "qui reçoivent ces deux traitements doivent être attentivement surveillés à la recherche de signes et de symptômes d'hyperammoniémie.\n\n"
-
-                                                     "La méfloquine augmente le métabolisme de l'acide valproïque et possède par ailleurs un effet convulsivant, d'où un risque de survenue de crises épileptiques en\n"
-                                                     "cas d'association.\n\n"
-
-                                                     "L'administration concomitante de Depakine Chrono et de produits ayant une fixation protéique importante (par exemple acide acétylsalicylique) peut entraîner une\n"
-                                                     "élévation des taux sériques libres de l'acide valproïque.\n\n"
-
-                                                     "La prise concomitante de cimétidine ou d'érythromycine est susceptible d'augmenter les taux sériques de l'acide valproïque (diminution de son métabolisme\n"
-                                                     "hépatique).\n\n"
-
-                                                     "En cas de co-administration, les carbapénèmes (panipénème, méropénème, imipénème par exemple) entraînent une diminution des concentrations sanguines d'acide\n"
-                                                     "valproïque de 60-100% en deux jours, avec parfois des convulsions.\n\n"
-
-                                                     "En raison du déclenchement rapide et de la chute brutale de la concentration en acide valproïque, l'on considère que les conséquences d'une interaction éventuelle\n"
-                                                     "entre l'acide valproïque et les carbapénèmes sont incontrôlables chez les patients dont l'état de santé était stable sous acide valproïque. La co-administration de\n"
-                                                     "carbapénèmes chez des patients stabilisés avec l'acide valproïque devrait être évitée (voir la rubrique «Mises en garde et précautions»). Si le traitement avec ces\n"
-                                                     "antibiotiques ne peut pas être évité, un contrôle accru des taux plasmatiques d'acide valproïque doit être effectué.\n\n"
-
-                                                     "La rifampicine peut causer une diminution de la concentration de l'acide valproïque dans le sang causant un manque d'effet thérapeutique. Il peut s'avérer\n" 
-                                                     "nécessaire d'ajuster les doses de valproate lors d'administration simultanée de rifampicine.\n\n"
-
-                                                     "Les inhibiteurs de protéases tels que le lopinavir et le ritonavir augmentent les niveaux plasmatiques de valproate lorsqu'ils sont co-administrés.\n\n"
-
-                                                     "La cholestyramine peut entraîner une diminution du taux plasmatique de valproate en cas de co-administration.\n\n"
-
-                                                     "Autres interactions:\n"
-                                                     "Les médicaments potentiellement hépatotoxiques et l'alcool peuvent renforcer la toxicité hépatique de l'acide valproïque (voir la rubrique «Mises en garde\n"
-                                                     "et précautions»).\n\n"
-
-                                                     "En raison de son absence habituelle d'effet inducteur enzymatique, l'acide valproïque ne diminue pas la concentration plasmatique totale des œstroprogestatifs\n"
-                                                     "chez les femmes sous contraception hormonale. Pour la même raison, il n'abaisse pas la concentration plasmatique totale des antivitamines K.\n\n"
-
-                                                     "Par contre, Depakine Chrono peut accroître la fraction libre de la warfarine, en raison de phénomènes de compétition au niveau des sites de fixation albuminique.\n"
-                                                     "C'est pourquoi, en cas de traitement par antivitamines K, une surveillance accrue du taux de prothrombine devra être effectuée.\n\n"
-
-                                                     "L'administration concomitante de valproate et de topiramate ou d'acétazolamide a été associée à l'encéphalopathie et/ou à l'hyperammoniémie. Il faut surveiller\n"
-                                                     "soigneusement l'apparition de symptômes d'encéphalopathie hyperammoniémique chez les patients traités par ces 2 médicaments.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Anémie, thrombocytopénie. surdité (parfois irréversible, nausées.augmentation pondérale (5 à 10% des cas), notamment chez les adolescents et les femmes jeunes,\n"
-                                                     "la prise de poids pouvant aggraver les symptômes cliniques du syndrome des ovaires poly-kystiques, elle doit être surveillée attentivement, hyponatrémie,\n"
-                                                     "tremblement, état confusionnel, agressivité, agitation, troubles de l'attention, dysménorrhées, hypersensibilité, alopécie passagère et/ou dose-dépendant,\n"
-                                                     "altérations des ongles et du lit unguéal.hémorragie, désordres extrapyramidaux (parfois irréversibles), stupeur, somnolence, convulsion, troubles de la mémoire,\n"
-                                                     "maux de tête, nystagmus, étourdissement (en cas d'injection intraveineuse, l'étourdissement survient quelques minutes après et se résout généralement spontanément\n"
-                                                     "au bout de quelques minutes).\n\n"
-
-                                                     "Il est recommandé de procéder à une évaluation médicale rapide (dosage des enzymes pancréatiques, autres examens appropriés) chez tout patient présentant sous\n"
-                                                     "valproate de sodium/acide valproïque une douleur abdominale aiguë.\n\n"
-
-                                                     "Vomissements, troubles gingivaux (principalement hyperplasie gingivale), stomatite. Douleur de la partie supérieure de l'abdomen, diarrhée qui cèdent en général\n"
-                                                     "au bout de quelques jours sans interruption du traitement. Ces troubles ont vu leur incidence diminuer fortement par l'introduction très progressive de Depakine,\n"
-                                                     "l'emploi des comprimés pelliculés Chrono et l'administration en début de repas. Dans ces cas, la prescription de thérapeutiques symptomatiques est appropriée.\n\n"
-
-                                                     "Il convient de prendre en considération, notamment chez les patients à risque (voir rubrique: «Conditions de survenue»), deux types de manifestations qui peuvent\n"
-                                                     "précéder l'ictère:\n"
-                                                     "d'une part, des signes généraux non spécifiques, généralement d'apparition soudaine, tels que asthénie, anorexie, abattement, somnolence, accompagnés parfois\n"
-                                                     "de vomissements répétés et de douleurs abdominales, d'autre part, une réapparition des crises épileptiques.\n\n"
-
-                                                     "Parmi les examens classiques, les tests reflétant la synthèse protéique et notamment le TP (taux de prothrombine) sont les plus pertinents. La confirmation\n" 
-                                                     "d'un taux de prothrombine anormalement bas, surtout s'il s'accompagne d'autres anomalies biologiques (diminution significative du fibrinogène et des facteurs de\n"
-                                                     "coagulation, augmentation de la bilirubine, élévation des transaminases.\n"
-                                                     "L'administration de Depakine Chrono peut entraîner une chute de 10'000 à 30'000/mm³ du nombre de plaquettes.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Le tableau de l'intoxication aiguë massive comporte habituellement un coma plus ou moins profond, avec hypotonie musculaire, hyporéflexie, myosis, diminution\n"
-                                                     "de l'autonomie respiratoire, acidose métabolique, hypotension et collapsus/choc circulatoire.\n"
-                                                     "Des décès sont survenus dans le cadre de surdosages massifs; néanmoins, le pronostic de ces intoxications est généralement favorable.\n"
-                                                     "Les symptômes peuvent cependant varier et la survenue de crises convulsives a été rapportée en présence de taux plasmatiques élevés.\n"
-                                                     "Des cas d'hypertension intracrânienne liée à un œdème cérébral ont été rapportés.\n"
-                                                     "La présence de sodium dans la composition de Depakine peut entraîner une hypernatrémie lors d'un surdosage.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Les mesures à prendre en milieu hospitalier sont: les lavages gastriques peuvent être utiles jusqu'à 10 ou 12 heures après l'ingestion, et surveillance cardio-\n"
-                                                     "-respiratoire.\n"
-                                                     "La naloxone a été déjà utilisée avec succès dans quelques cas isolés.\n"
-                                                     "En cas de surdosage massif, l'hémodialyse et l'hémoperfusion ont été utilisées avec succès.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "DIAZEPAM (Valium)\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Formes orales:\n"
-                                                     "Traitement symptomatique de l'anxiété, de l'excitation et de la tension psychique résultant d'états psychonévrotiques et de troubles passagers dus à une situation\n"
-                                                     "stressante. A titre d'adjuvant dans le traitement de troubles psychiques et organiques à composante anxieuse. L'anxiété peut se traduire par une dysthymie anxieuse\n"
-                                                     "manifeste ou par un comportement soucieux, et/ou se manifester sous la forme de symptômes fonctionnels, neurovégétatifs ou moteurs (palpitations, sudation,\n" 
-                                                     "troubles du sommeil, tremblement, agitation nerveuse, etc.).\n\n"
-
-                                                     "Forme parentérale:\n"
-                                                     "Sédation de base lors de mesures thérapeutiques ou d'interventions stressantes telles qu'endoscopies, défibrillation par choc électrique externe, cathétérisme\n"
-                                                     "cardiaque, examens radiologiques, interventions mineures, réduction de luxations ou de fractures, biopsies, changement de pansement chez les brûlés, etc., afin\n"
-                                                     "de soulager l'anxiété ou des réactions de stress aiguës ainsi que minimiser le souvenir du traitement.\n\n"
-
-                                                     "Médication préopératoire chez les patients anxieux et tendus.\n\n"
-
-                                                     "Indications en psychiatrie:\n"
-                                                     "Traitement de l'excitation dans le cadre d'états anxieux aigus et d'accès de panique, lors d'agitation motrice ainsi que lors de delirium tremens.\n"
-
-                                                     "Effet anticonvulsivant:\n"
-                                                     "Traitement de l'état de mal épileptique et d'autres états convulsifs (y compris le tétanos).\n\n"
-
-                                                     "Gynécologie/obstétrique:\n"
-                                                     "Traitement d'une éclampsie lorsque le sulfate de magnésium est contre-indiqué, inefficace ou indisponible.\n\n"
-
-                                                     "Toutes formes d'administration:\n"
-                                                     "A titre d'adjuvant pour soulager les spasmes musculaires réflexes lors de traumatismes locaux (blessures, inflammations) et pour combattre des états spastiques\n"
-                                                     "en cas de lésion des interneurones spinaux et supraspinaux; de telles altérations peuvent par exemple survenir lors de spasmes d'origine cérébrale et de paraplégie\n"
-                                                     "ainsi que lors d'athétose et de syndrome de l'homme raide.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Hypersensibilité connue aux benzodiazépines ou à l'un des excipients selon la composition.\n"
-                                                     "*Insuffisance respiratoire sévère, insuffisance hépatique sévère, syndrome d'apnée du sommeil et myasthénie grave. Les benzodiazépines ne sont pas recommandées\n"
-                                                     "pour le traitement primaire de troubles psychotiques. En cas de dépression ou d'états anxieux lors de dépression, les benzodiazépines ne doivent pas être utilisées,\n"
-                                                     "en raison du risque de suicide auquel sont exposés les patients.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "Interactions pharmacocinétiques (DDI):\n"
-                                                     "Le métabolisme oxydatif du diazépam, qui conduit à la formation de N-desméthyldiazépam, de 3-hydroxydiazépam (ténazépam) et d'oxazépam dépend des\n"
-                                                     "isoenzymes CYP2C19 et CYP3A du cytochrome P450. Les études in vitro ont montré que l'hydroxylation se produit principalement par l'isoforme\n"
-                                                     "CYP3A alors que la N-déméthylation s'effectue aussi bien par le CYP3A que le CYP2C19.\n\n"
-
-                                                     "Les résultats d'études in vivo conduites auprès de volontaires ont confirmé les résultats in vitro. Les substrats qui modulent le CYP3A et/ou le CYP2C19\n"
-                                                     "peuvent éventuellement influencer la pharmacocinétique du diazépam. Les inhibiteurs du CYP3A ou du CYP2C19 comme la cimétidine, le kétoconazole,\n"
-                                                     "la fluvoxamine, le topiramate, la fluoxétine et l'oméprazole peuvent conduire à une sédation plus forte et plus longue. En outre, selon certains rapports,\n"
-                                                     "le diazépam modifie l'élimination métabolique de la phénytoïne.\n\n"
-
-                                                     "Comprimés:\n"
-                                                     "Le cisapride peut conduire à une augmentation transitoire de l'effet sédatif des benzodiazépines administrées par voie orale car il accélère leur résorption.\n"
-
-                                                     "Interactions pharmacodynamiques (DDI):\n"
-                                                     "Une augmentation des effets sur la sédation, la respiration et l'hémodynamique est possible lorsque Valium est utilisé en même temps que des substances exerçant\n"
-                                                     "un effet dépresseur central telles que les neuroleptiques, les anxiolytiques/sédatifs, les antidépresseurs, les hypnotiques, les anticonvulsivants, les narco-\n"
-                                                     "-analgésiques, les anesthésiques et les antihistaminiques sédatifs, tout comme lors de la prise simultanée de Valium et d'alcool.\n\n"
-
-                                                     "La consommation d'alcool doit être évitée par les patients qui reçoivent Valium (voir «Mises en garde et précautions»).\n\n"
-
-                                                     "D'autres remarques au sujet d'autres substances exerçant un effet dépresseur central, y compris l'alcool, sont par ailleurs mentionnées au paragraphe «Surdosage».\n\n"
-
-                                                     "La théophylline peut inhiber l'action du diazépam.\n\n"
-
-                                                     "Aucune interaction n'est cependant connue avec les antidiabétiques courants, les anticoagulants et les diurétiques.\n\n"
-
-                                                     "La rifampicine possède un fort pouvoir inducteur des enzymes hépatiques, ce qui accélère le métabolisme du diazépam dans le foie.\n\n"
-
-                                                     "Il faut être attentif à un possible renforcement de l'effet dépresseur sur la respiration en cas d'association de Valium et d'opiacés exerçant une dépression\n"
-                                                     "respiratoire.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Les effets indésirables rapportés le plus fréquemment sont la fatigue, l'obnubilation et la faiblesse musculaire; ces effets sont normalement dose-dépendants.\n"
-                                                     "Ces manifestations se produisent principalement au début du traitement et disparaissent d'habitude lors d'une utilisation sur une durée prolongée.\n\n"
-
-                                                     "Sang et système lymphatique:\n"
-                                                     "Élévation du taux sanguin de phosphatase alcaline lors de l'administration par voie i.v.\n"
-
-                                                     "Système nerveux:\n"
-                                                     "Ataxie, dysarthrie, langage confus, céphalées, tremor, vertiges. Une amnésie antérograde peut se produire à des doses thérapeutiques et le risque s'accroît\n"
-                                                     "avec l'augmentation de la posologie. Les épisodes d'amnésie peuvent s'accompagner d'un comportement inadéquat.\n\n"
-
-                                                     "Troubles psychiatriques:\n"
-                                                     "Au vu de l'expérience acquise, des réactions paradoxales telles qu'anxiété, agitation, irritabilité, agressivité, délire, colère, cauchemars, hallucinations,\n"
-                                                     "psychoses, comportement étrange et d'autres effets indésirables sur le comportement peuvent survenir lors de l'utilisation de benzodiazépines. L'administration\n"
-                                                     "du médicament doit être interrompue dans de tels cas. La probabilité qu'un tel effet se développe est plus élevée chez les enfants et les patients d'un certain\n"
-                                                     "âge.\n\n"
-
-                                                     "Confusion, appauvrissement émotionnel, diminution de l'attention, dépression, augmentation ou diminution de la libido.\n\n"
-
-                                                     "Une prise chronique (même à des posologies thérapeutiques) peut conduire au développement d'une dépendance physique. L'interruption du traitement peut conduire\n"
-                                                     "à des symptômes de sevrage ou à un phénomène de rebond (voir sous «Abus anamnestique d'alcool ou de médicaments» et «Dépendance»).\n\n"
-
-                                                     "L'abus de benzodiazépines a été rapporté (voir sous «Mises en garde et précautions»/«Dépendance»).\n\n"
-
-                                                     "Système musculo-squelettique:\n"
-                                                     "Faiblesse musculaire. Davantage de chutes et de fractures ont été rapportées chez les patients prenant des benzodiazépines. Ce risque est augmenté en cas de\n"
-                                                     "prise simultanée de sédatifs (y compris des boissons alcoolisées) ainsi que chez les patients âgés.\n\n"
-
-                                                     "Troubles gastro-intestinaux:\n"
-                                                     "Nausées, douleurs abdominales basses, sécheresse buccale ou sécrétion accrue de salive (hypersalivation), diarrhée, constipation et autres troubles gastro-\n"
-                                                     "-intestinaux.\n\n"
-
-                                                     "Yeux:\n"
-                                                     "Vision double, vision trouble.\n\n"
-
-                                                     "Vaisseaux:\n"
-                                                     "Hypotension, dépression circulatoire.\n\n"
-
-                                                     "Examens:\n"
-                                                     "Pouls irrégulier, élévation des transaminases dans de rares cas, élévation de la phosphatase alcaline.\n\n"
-
-                                                     "Reins et voies urinaires:\n"
-                                                     "Incontinence, rétention urinaire.\n\n"
-
-                                                     "Peau:\n"
-                                                     "Éruptions cutanées.\n\n"
-
-                                                     "Oreille:\n"
-                                                     "Vertiges.\n\n"
-
-                                                     "Coeur:\n"
-                                                     "Défaillance cardiaque, y compris arrêt cardiaque.\n\n"
-
-                                                     "Organes de la respiration:\n"
-                                                     "Dépression respiratoire, y compris arrêt respiratoire.\n\n"
-
-                                                     "Foie et voies biliaires:\n"
-                                                     "Ictère dans de rares cas.\n\n"
-
-                                                     "Ampoules seulement:\n"
-                                                     "Troubles généraux et réactions au site d'injection.\n\n"
-
-                                                     "Une thrombose veineuse, une phlébite, des irritations au site de l'injection, une tuméfaction locale et, moins fréquemment, des modifications des vaisseaux\n"
-                                                     "peuvent se produire, en particulier après une injection rapide par voie i.v.\n"
-                                                     "Les très petites veines ne doivent pas être utilisées pour l'injection; les injections intra-artérielles et l'extravasation doivent en particulier être strictement\n"
-                                                     "évitées.\n\n"
-
-                                                     "Une injection par voie i.m. peut conduire à des irritations locales et un érythème au lieu de l'injection peut se produire dans quelques cas. Une sensibilité à la\n"
-                                                     "pression s'observe relativement souvent.\n\n"
-
-                                                     "Cœur et circulation/Respiration:\n"
-                                                     "Une dépression cardio-respiratoire peut se produire lors de l'application rectale de diazépam.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Dans le cas d'un surdosage, les benzodiazépines conduisent fréquemment à une obnubilation, à une ataxie, à une dysarthrie et à un nystagmus. Un surdosage de\n"
-                                                     "Valium ne représente que rarement une menace vitale si ce médicament a été pris isolément, mais il peut conduire à une aréflexie, à une apnée, à de l'hypotension,\n"
-                                                     "à une dépression cardio-respiratoire et à un coma. Si un coma survient, il ne dure en règle générale que quelques heures mais il peut également être plus long et\n"
-                                                     "cyclique, en particulier chez les patients âgés. Les effets dépresseurs des benzodiazépines sur la respiration sont plus graves chez les patients présentant une\n"
-                                                     "maladie des voies respiratoires.\n\n"
-
-                                                     "Les benzodiazépines augmentent l'effet des autres substances exerçant un effet dépresseur central, y compris l'alcool.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Surveiller les fonctions vitales du patient et mettre en œuvre les mesures de soutien indiquées en fonction de l'état clinique du patient. Un traitement\n"
-                                                     "symptomatique des effets cardio-respiratoires et des effets sur le système nerveux central peut notamment se révéler nécessaire chez ces patients.\n\n"
-
-                                                     "Une résorption additionnelle doit être évitée par des méthodes appropriées, comme p.ex. par un traitement par le charbon actif dans un intervalle de 1-2 heures.\n"
-                                                     "Si le charbon actif est utilisé, une protection des voies aériennes est impérativement nécessaire chez les patients obnubilés. Un lavage gastrique peut être\n"
-                                                     "considéré en cas de prise mixte, mais toutefois pas comme mesure de routine.\n\n"
-
-                                                     "Si la dépression du système nerveux central est sévère, l'administration de flumazénil (Anexate®), un antagoniste des benzodiazépines, doit être considérée.\n"
-                                                     "Cette administration doit toutefois s'effectuer sous une surveillance étroite. En effet, cette préparation possède une courte demi-vie (d'environ une heure) et,\n"
-                                                     "pour cette raison, les patients auxquels le flumazénil a été administré doivent être surveillés après que ses effets se sont dissipés. La prudence est de rigueur\n"
-                                                     "lors de l'utilisation du flumazénil chez les épileptiques traités par des benzodiazépines. Le flumazénil doit être utilisé avec la plus grande prudence après la\n"
-                                                     "prise de médicaments abaissant le seuil épileptogène (p.ex. antidépresseurs tricycliques). Pour de plus amples informations au sujet de l'utilisation correcte\n"
-                                                     "du flumazénil (Anexate®), consulter l'information professionnelle de cette préparation.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "MYSOLINE (primidone)\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Grand mal, épilepsie psychomotrice, épilepsie focale, petit mal, crises myocloniques et akinétiques. Mysoline est contre-indiqué lors d'intoxication aiguë\n"
-                                                     "aux dépresseurs centraux et à l'alcool, lors de porphyrie hépatique latente ou aiguë, lors de troubles graves des fonctions hépatique et rénale, lors de\n"
-                                                     "lésions du muscle cardiaque ainsi que lors d'hypersensibilité ou de réactions allergiques à la primidone, à une autre composant de la préparation ou au\n"
-                                                     "phénobarbital. Beaucoup d'effets secondaires. Joue un rôle au niveau du flux ionique.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Grand mal, épilepsie psychomotrice, épilepsie focale, petit mal, crises myocloniques et akinétiques.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "Mysoline est contre-indiqué lors d'intoxication aiguë aux dépresseurs centraux et à l'alcool, lors de porphyrie hépatique latente ou aiguë, lors de troubles graves\n"
-                                                     "des fonctions hépatique et rénale, lors de lésions du muscle cardiaque ainsi que lors d'hypersensibilité ou de réactions allergiques à la primidone, à une autre\n"
-                                                     "composant de la préparation ou au phénobarbital.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "La primidone, comme également le métabolite principal, le phénobarbital, augmente l'activité des enzymes hépatiques, notamment du système enzymatique du\n" 
-                                                     "CYP 450 3A4. Ceci peut modifier la pharmacocinétique d'autres médicaments.\n\n"
-
-                                                     "L'administration simultanée de primidone et des médicaments suivants accélère le métabolisme ce qui entraîne une diminution de la concentration plasmatique ou\n"
-                                                     "de la demi-vie: androgènes, antidépresseurs tricycliques, benzodiazépines, bêtabloquants, carbamazépine, célécoxibe, ciclosporine, quinidine, chloramphénicol*,\n"
-                                                     "cyclophosphamide, dicoumarine, digitoxine, doxycycline, éthosuximide, étoposide, felbamate*, granisétron, contraceptifs oraux, corticostéroïdes/glucocorticoïdes,\n"
-                                                     "lamotrigine, losartan, méthadone, métronidazole*, miansérine, montélukast, valproate de sodium*, nelfinavir*, antirhumatismaux non stéroïdiens, nimodipine,\n"
-                                                     "oméprazole, oxcarbazépine, phénytoïne, bromure de rocuronium, ISRS, sulfonylurées, tiagabine, théophyllines*, topiramate, bromure de vécuronium et zonisamide.\n\n"
-
-                                                     "Les médicaments suivants inhibent le système enzymatique du CYP 450 3A4 et des augmentations de la concentration plasmatique de la primidone et de son\n"
-                                                     "métabolite principal, le phénobarbital, sont possibles: chloramphénicol*, felbamate*, nelfinavir*, métronidazole* et valproate de sodium*.\n\n"
-
-                                                     "Le millepertuis (Hypericum perforatum) influence également le système enzymatique du CYP 450 3A4 et peut diminuer la concentration plasmatique de la primidone\n"
-                                                     "et de son métabolite principal, le phénobarbital.\n\n"
-
-                                                     "La primidone inhibe la glucuronidation du paracétamol et peut ainsi potentialiser l'hépatotoxicité de celui-ci.\n\n"
-
-                                                     "L'effet dépresseur central de la primidone s'additionne à l'effet dépresseur sur le SNC de l'alcool, des opiacés et des barbituriques.\n\n"
-
-                                                     "* La primidone et le médicament administré simultanément sont influencés.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Apathie, ataxie, troubles de la vue, nystagmus, nausées, obnubilation. Basses concentrations sanguines d'acide folique. Comme avec le phénobarbital et la\n"
-                                                     "phénytoïne, une anémie mégaloblastique peut se développer exceptionnellement et nécessiter un arrêt du traitement. Elle peut être traitée par l'acide folique.\n"
-                                                     "Particulièrement en cas d'un traitement à long terme, une ostéomalacie et une hypocalcémie peuvent apparaître (influence du métabolisme de la vitamine D).\n"
-                                                     "Des cas de diminution de la densité de l'os, de l'ostéopénie, de l'ostéoporose et des fractures, ont été rapportés chez des patientes traités par primidone\n"
-                                                     "à long terme.\n"
-                                                     "Un complément vitaminique D peut s'avérer nécessaire durant un traitement à long terme par Mysoline, car le catabolisme de la vitamine D peut être accru.\n"
-
-                                                     "Les barbituriques peuvent provoquer des troubles de la fonction hépatique pouvant aller jusqu'à la nécrose hépatique, une augmentation des valeurs des enzymes\n"
-                                                     "hépatiques (en particulier de la γ-GT).\n"
-
-                                                     "Le mécanisme d'action du primidone sur le métabolisme de l'os n'est pas connue.Les effets indésirables connus du phénobarbital, l'un des deux principaux\n"
-                                                     "métabolites de la primidone, sont des réactions d'hypersensibilité, se traduisant avant tout par des réactions cutanées variées, une photosensibilisation,\n"
-                                                     "un exanthème et un lupus érythémateux systémique. Des réactions de type immédiat, notamment urticaire et oedème de Quincke, ont également été rapportées. Des\n"
-                                                     "cas isolés de réactions cutanées sévères (p.ex. syndrome de Lyell) ont également été observés.Signes généraux d'une dépression du SNC (fatigue, somnolence,\n"
-                                                     "léthargie, ralentissement du temps de réaction, diminution des facultés de jugement, troubles de l'élocution). En outre, une constipation, des myalgies et\n"
-                                                     "des névralgies ont été observées pour d'autres barbituriques (p.ex. le phénobarbital). Une grande partie de ces effets secondaires s'atténue au cours du\n"
-                                                     "traitement. Des ataxies et des troubles visuels réversibles (nystagmus, dédoublement) apparaissent également et peuvent indiquer une intoxication.\n\n"
-
-                                                     "En cas d'idiosyncrasie, les symptômes neurologiques peuvent être très graves, de sorte qu'un traitement par Mysoline n'est pas adéquat pour un tel patient.\n"
-                                                     "Des cas isolés de perturbations de l'hémogramme (anémie aplasique et mégaloblastique, pancytopénie, thrombopénie, leucopénie, agranulocytose et hémorragies)\n"
-                                                     "sont apparus, rendant nécessaire la recherche d'un éventuel lien lorsque des modifications de l'hémogramme apparaissant au cours d'un traitement par Mysoline.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Etant donné que le phénobarbital est le métabolite principal de la primidone, il détermine également le tableau clinique de l'intoxication.\n"
-
-                                                     "SNC: somnolence, dysarthrie, ataxie, nystagmus, vertiges, céphalées, confusion, sommeil profond, coma (avec réaction à la douleur progressivement décroissante),\n"
-                                                     "modifications de l'EEG jusqu'à la ligne zéro, hypothermie. Au stade précoce, les pupilles sont contractées, ensuite mydriatiques, en règle générale, elles\n"
-                                                     "réagissent à la lumière.\n\n"
-
-                                                     "Respiration: dépression respiratoire menaçant déjà potentiellement le pronostic vital aux stades précoces du coma.\n\n"
-
-                                                     "Circulation: hypotension artérielle, choc (cardiogénique par la diminution de la contractilité myocardique, hypovolémique, neurogène).\n\n"
-
-                                                     "Peau: lésions cutanées bulleuses caractéristiques (dans 4 à 7% des cas) et nécroses de pression chez les patients comateux (la plupart du temps dans les 24 heures).\n\n"
-
-                                                     "Muscles et squelette: rhabdomyolyse.\n\n"
-
-                                                     "Une cristallurie peut se manifester lors d'un surdosage; elle peut représenter une aide à la pose du diagnostic lorsqu'une intoxication à la primidone est suspectée.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Dans les cas légers durant la phase précoce de l'intoxication (1 à 2 heures après la prise), décontamination primaire par une administration unique de charbon\n"
-                                                     "actif (par voie orale, adultes: 70 g, enfants 1–2 g/kg sous forme de suspension aqueuse) et substitution de liquide abondante. Dans les cas sévères, décontamination\n"
-                                                     "primaire par un lavage d'estomac dans la première heure suivant l'ingestion. En cas d'inconscience, procéder d'abord à une intubation. Ensuite, décontamination\n"
-                                                     "primaire par l'administration de charbon actif comme décrit auparavant. En outre, décontamination secondaire par l'administration répétée de charbon actif\n"
-                                                     "(adultes 35–50 g toutes les 4 heures, enfants 0,5–1,0 g/kg) pendant 3 jours ainsi que diurèse forcée. Les contre-indications du charbon actif (iléus, etc.) et\n"
-                                                     "la substitution de liquide accrue (insuffisance cardiaque, etc.) ainsi que la protection de l'aspiration doivent être observées. Une diurèse alcaline par du\n"
-                                                     "de bicarbonate de soude (cave hypokaliémie) accélère l'élimination du métabolite principal, le phénobarbital (pH ciblé de l'urine 7,5–8,0) par la diminution\n"
-                                                     "de la résorption tubulaire. De même, l'élimination du phénobarbital peut être accélérée par l'hémodialyse et la dialyse péritonéale.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "PHENOBARBITAL, Aphénylbarbite\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Utiliser contre l'épilepsie, l'agitation, les convulsions fébriles. Il a une induction enzymatique. La toxcicité du méthotrexate est majorée, il\n"
-                                                     "est potentialisé en concomittance avec l'acide valproïque, les AD du système nerveux central avec le phénobarbital se potentialisent mutuellement,\n"
-                                                     "les ACO, la digoxine, la doxicycline, les hormones, les glucocorticoïdes sont diminués ou augmentés. Contre-indiqué :\n"
-                                                     "médicaments agissant sur le SNC, les\n"
-                                                     "hypnotiques, les tranquilisants, stimulants, analgésiques, l'alcool, trouble grave de la fonction hépatique ou rénale, lésions myocardiques, porphyrie\n"
-                                                     "hépatique.\n"
-                                                     "Beaucoup d'effets secondaires.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Epilepsie, états d'agitation, convulsions fébriles.\n"
-                                                     "Utilisé à titre d'adjuvant pour les traitements de sevrage.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Hypersensibilité au phénobarbital.\n"
-                                                     "*Intoxication aiguë par des médicaments agissant sur le système nerveux central: hypnotiques, tranquillisants, stimulants et analgésiques ainsi que l'alcool,\n"
-                                                     "la dépendance médicamenteuse et la consommation simultanée d'alcool. Porphyrie hépatique, troubles graves de la fonction rénale et hépatique et lésions\n"
-                                                     "myocardiques.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "L'utilisation prolongée de phénobarbital peut provoquer une induction des enzymes hépatiques microsomales; en d'autres termes, la biotransformation des produits\n"
-                                                     "pharmaceutiques qui forment le substrat de ces enzymes hépatiques peut être accrue d'un facteur de 2 à 3.\n\n"
-
-                                                     "Les effets des anticoagulants oraux, des antiépileptiques, des dérivés de la coumarine, de la digitoxine, de la doxycycline, de la griséofulvine et des hormones\n"
-                                                     "stéroïdiennes tels que les androgènes, les progestatifs, les œstrogènes (cave: contraceptifs oraux!) et les glucocorticoïdes sont diminués par le phénobarbital.\n"
-                                                     "L'éventuelle perte d'activité lors d'une prescription concomitante de médicaments contenant les classes de principes actifs susmentionnées devrait être considérée\n"
-                                                     "et la dose devrait être adaptée en conséquence.\n\n"
-
-                                                     "Les médicaments dépresseurs du système nerveux central et/ou l'alcool, administrés de façon simultanée avec le phénobarbital, peuvent potentialiser mutuellement\n"
-                                                     "leurs effets.\n\n"
-
-                                                     "La toxicité du méthotrexate est majorée par le phénobarbital.\n\n"
-
-                                                     "Les concentrations sériques du phénobarbital peuvent être potentialisées par l'utilisation concomitante d'acide valproïque.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Fréquemment: signes généraux de sédation centrale (obnubilation, fatigue, somnolence, léthargie, prolongement du temps de réaction, limitation de la capacité de\n"
-                                                     "jugement, troubles de l'élocution, vertiges) ainsi que céphalées et neuralgies. Des ataxies et des troubles visuels réversibles (nystagmus, diplopie) peuvent\n"
-                                                     "également survenir et indiquer une intoxication.\n\n"
-
-                                                     "Des troubles du rythme cardiaque ont été particulièrement observés après l'administration de doses élevées. Une bradycardie, une hypotension et un choc ont été\n"
-                                                     "surtout observés après une application parentérale de phénobarbital.\n\n"
-
-                                                     "L'effet de dépression respiratoire peut être plus prononcé lors d'une obstruction des voies respiratoires et de lésions cérébrales.\n\n"
-
-                                                     "Des réactions cutanées sévères (p.ex. syndrome de Stevens-Johnson, syndrome de Lyell) sont également apparues dans des cas isolés.\n\n"
-
-                                                     "Fréquemment: des troubles du tissu conjonctif comme myalgies, arthralgies.\n\n"
-
-                                                     "Il est possible de développer une ostéomalacie et une hypocalcémie en particulier lors d'une thérapie au long cours. On a rarement observé une contracture de\n"
-                                                     "Dupuytren.\n\n"
-
-                                                     "Des cas de diminution de la densité osseuse, d'ostéopénie, d'ostéoporose et de fractures ont été rapportés chez des patients ayant pris du phénobarbital pendant\n"
-                                                     "une longue durée. Le mécanisme par lequel le phénobarbital influence le métabolisme osseux n'est pas connu.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "SNC: somnolence, dysarthrie, ataxie, nystagmus, vertiges, céphalées, confusion, sommeil profond, coma (avec réaction à la douleur progressivement décroissante),\n"
-                                                     "modifications de l'EEG jusqu'à la ligne zéro, hypothermie. Au stade précoce, les pupilles sont contractées, ensuite mydriatiques, en règle générale, elles\n"
-                                                     "réagissent à la lumière.\n\n"
-
-                                                     "Respiration: dépression respiratoire menaçant déjà potentiellement le pronostic vital aux stades précoces du coma.\n\n"
-
-                                                     "Circulation: hypotension artérielle, choc (cardiogénique par la diminution de la contractilité myocardique, hypovolémique, neurogène).\n\n"
-
-                                                     "Peau: lésions cutanées bulleuses caractéristiques (dans 4 à 7% des cas) et nécroses de pression chez les patients comateux (la plupart du temps dans les 24\n"
-                                                     "heures).\n\n"
-
-                                                     "Sur le plan musculo-squelettique: rhabdomyolyse.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Dans les cas légers durant la phase précoce de l'intoxication (1 à 2 heures après la prise), décontamination primaire par une administration unique de charbon\n"
-                                                     "actif (par voie orale, adultes: 70 g, enfants 1-2 g/kg sous forme de suspension aqueuse) et substitution de liquide abondante.\n\n"
-
-                                                     "Dans les cas sévères, décontamination primaire par un lavage d'estomac dans la première heure suivant l'ingestion; en cas d'inconscience, procédez d'abord à une\n"
-                                                     "intubation. Ensuite, décontamination primaire par l'administration de charbon actif comme décrit auparavant. En outre, décontamination secondaire par\n"
-                                                     "l'administration répétée de charbon actif (adultes 35-50 g toutes les 4 heures, enfants 0,5-1,0 g/kg) pendant 3 jours ainsi que diurèse forcée. Les contre-\n"
-                                                     "indications du charbon actif (iléus, etc.) et de la substitution de liquide accrue (insuffisance cardiaque, etc.) ainsi que la protection de l'aspiration\n" 
-                                                     "doivent être observées. Une diurèse alcaline par du bicarbonate de soude (cave hypokaliémie) accélère l'élimination du phénobarbital (pH ciblé de l'urine 7,5-\n"
-                                                     "8,0) par la diminution de la résorption tubulaire. De même, l'élimination du phénobarbital peut être accélérée par l'hémodialyse et la dialyse péritonéale.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "PHENYTOINE\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Crises focales: crises bravais-jackson (sensorimotrice), crises psychomotrices (épilepsie du lobe temporal). Beaucoup d'effets secondaires: IMC, ventricule\n" 
-                                                     "gauche, dommages lourds sur les cellules sanguines et la moelle osseuse. Beaucoup trop interactions en concommitance avec d'autres médicaments.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Crises focales: Crises de Bravais-Jackson (sensorimotrice), crises psychomotrices (épilepsie du lobe temporal).\n"
-                                                     "Crises généralisées: Crises de type grand mal (épilepsie du sommeil, forme diffuse). Traitement de la crise et protection en cas de traumatisme cranio-cérébral.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "Hypersensibilité à la phénytoïne, à d'autres hydantoïnes ou à l'un des excipients (voir «Composition»); blocs atrioventriculaires de 2ème et 3ème degrés; maladie\n" 
-                                                     "du nœud sinusal, diminution de la fonction du ventricule gauche, infarctus du myocarde de moins de 3 mois, dommages lourds de cellules sanguines et de la moelle\n" 
-                                                     "osseuse.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "La prise simultanée d'antiacides peut faire baisser le taux sérique de phénytoïne. La prise chronique de primidone, vigabatrine, théophylline et d'alcool peut faire\n" 
-                                                     "baisser le taux sérique de phénytoïne. Les substances suivantes peuvent également réduire le taux sérique de phénytoïne: ciprofloxacine, rifampicine, réserpine,\n" 
-                                                     "sucralfate, diazoxide, théophylline.\n\n"
-
-                                                     "Les médicaments suivants peuvent élever le taux sérique de phénytoine: anticoagulants oraux, antimycosiques, amiodarone, benzodiazépines, cimétidine,\n" 
-                                                     "chloramphénicol, cyclosérine, disulfiram, diltiazem, érythromycine, fluoxétine, halothan, isoniazide, méthyphénidate, antirhumatismaux non stéroïdiens, nifédipine,\n"
-                                                     "sulfonamide, P.A.S., sultiame, psychotropes tricycliques, felbamat, oméprazol, oestrogènes, ranitidine, sertraline, tolbutamide, ticlopidine et consommation\n" 
-                                                     "élevée d'alcool.\n\n"
-
-                                                     "Les médicaments suivants peuvent augmenter ou réduire la concentration de phénytoïne: carbamazépine, phénobarbital, valproat, cytostatiques, chlordiazéproxide,\n" 
-                                                     "diazépam.\n\n"
-
-                                                     "La phénytoïne peut augmenter la concentration de principe actif de la rifampicine ou réduire l'effet des médicaments ou encore avoir une influence sur leur\n"
-                                                     "efficacité: vécuronium, pancuronium, cyclosporine, anticoagulants oraux, vérapamil, carbamazepine, doxycycline, itraconazol, corticoïdes, contraceptifs oraux,\n" 
-                                                     "psychotropes tricycliques, valproat et lamotrigine.\n\n"
-
-                                                     "La toxicité du méthotrexate peut être accrue.\n\n"
-
-                                                     "L'effet de la phénytoïne peut être réduit par l'absorption simultanée d'acide folique.\n\n"
-
-                                                     "Une alimentation simultanée par voie entérale réduit la concentration plasmatique de la phénytoïne. Il est donc nécessaire de contrôler fréquemment la\n"
-                                                     "concentration plasmatique.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "La littérature comporte des éléments indiquant que la phénytoïne peut déclencher des attaques de porphyrie.\n\n"
-
-                                                     "Il existe des indications montrant qu'une atrophie du cervelet peut survenir avec un traitement de longue durée associé à des concentrations plasmatiques supérieures\n" 
-                                                     "à 25 µg/ml et des signes cliniques d'intoxication (même si la dose standard recommandée est respectée).\n\n"
-
-                                                     "Un traitement de longue durée par phénytoïne associée à d'autres antiépileptiques, notamment l'acide valproïque, peut provoquer des signes de dommage cérébral\n"
-                                                     "(encéphalopathie), notamment en cas de concentration élevée de phénytoïne sans liaison protéinique: augmentation des crises de convulsion, inertie (stupeur),\n" 
-                                                     "faiblesse musculaire (hypotonie musculaire), troubles de la motricité (dyskinésie choréique) et modifications générales sévères de l'EEG.\n\n"
-
-                                                     "La littérature signale des cas d'érythème multiforme et/ou de syndrome de Lyell après absorption de phénytoïne sous traitement par corticoïdes simultané progre-\n"
-                                                     "-ssivement réduit et irradiation crânienne.\n\n"
-
-                                                     "Une diminution de la densité osseuse, une ostéopénie, une ostéoporose et des fractures ont été rapportées chez des patients traités au long cours par la phénytoïne.\n" 
-                                                     "Le mécanisme par lequel la phénytoïne influence le métabolisme osseux n'a pas encore été identifié.\n\n"
-
-                                                     "Dans de rares cas, de graves réactions allergiques surviennent après administration prolongée: dermatite exfoliative, fièvre, gonflement des ganglions lymphatiques,\n" 
-                                                     "impact sur les organes hématopoïétiques et sur la moelle osseuse, troubles de la fonction hépatique avec atteinte éventuelle d'autres systèmes d'organes. En raison\n" 
-                                                     "du pronostic défavorable de ces effets secondaires, le traitement doit être immédiatement interrompu et le patient surveillé de près.\n\n"
-
-                                                     "Diplopie, nystagme.hyperplasie gingivale, dysgueusi.lassitude. ataxie, irritabilité accrue, augmentation de la fréquence du tremblement au repos, dyskinésie, langue\n" 
-                                                     "bulbaire, troubles de l'attention et troubles de la capacité intellectuelle, vertiges, maux de tête.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Symptômes en cas de surdosage prolongé: regard fixe, perte d'appétit, vomissements, perte de poids, apathie et sédation, troubles de la perception et de la\n" 
-                                                     "connaissance pouvant aller jusqu'au coma.\n"
-                                                     "---------\n"
-                                                     "Traitement:\n"
-                                                     "La première mesure à prendre est d'effectuer un lavage d'estomac et d'administrer du charbon actif, avant de surveiller intensivement le patient. Les hémodialyses,\n" 
-                                                     "les diurèses forcées et les dialyses péritonéales sont peu efficaces. Nous ne disposons pas de données suffisantes sur l'efficacité de la perfusion hématogène de\n" 
-                                                     "charbon ni sur celle de la substitution et de la transfusion plasmatique totale. Aussi est-il recommandé d'initier une thérapie intensive en milieu hospitalier\n" 
-                                                     "sans processus de désintoxication spécial, mais sous contrôle de la concentration plasmatique.\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "PETINIMID (ethosuximide)\n\n"
-
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-
-                                                     "Petites crises épileptiques (petit mal), en particulier absences. Si en plus des absences, d'autres formes de crises surviennent.\n"
-                                                     "Pétinimid seul ne suffit pas. La prudence est de rigueur chez les patients insuffisants hépatiques ou rénaux. Attention aux idées suicidaires. Le médicament ne\n" 
-                                                     "doit pas être administré pendant la grossesse, sauf en cas de nécessité absolue. Agit sur les régions corticales motrices, en élevant au niveau du système\n" 
-                                                     "nerveux central le seuil de réaction aux excitations provoquant des convulsions.\n\n"
-
-                                                     "Utilisation:\n"
-                                                     "Petites crises épileptiques (petit mal), en particulier absences. Si en plus des absences, d'autres formes de crises surviennent, Pétinimid seul ne suffit pas.\n" 
-                                                     "Il faut alors donner, en plus de Pétinimid, un autre antiépileptique.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Hypersensibilité au principe actif ou à l'un des excipients (voir «Composition»).\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "L'éthosuximide ne modifie pas les concentrations plasmatiques d'autres antiépileptiques tels que la primidone, le phénobarbital ou la phénytoïne.\n"
-                                                     "L'association avec l'acide valproïque renforce l'effet de l'éthosuximide.\n"
-                                                     "La prise simultanée d'éthosuximide et d'alcool ou d'autres agents dépresseurs du système nerveux central peut renforcer l'effet sédatif.\n"
-                                                     "La prise simultanée de substances provoquant des convulsions est à éviter.\n"
-                                                     "L'efficacité des contraceptifs oraux peut être diminuée.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"  
-                                                     "Des nausées, des vomissements, une inappétence, des douleurs gastriques, un amaigrissement, une diarrhée, une fatigue, des céphalées, des vertiges, une ataxie\n" 
-                                                     "et une photophobie peuvent survenir surtout au début du traitement.\n\n"
-
-                                                     "Irritabilité, agitation, autres états d'anxiété ou d'agitation ainsi qu'agressivité et difficultés de concentration ou autres modifications de la personnalité\n" 
-                                                     "ont été rapportés, notamment chez les patients ayant déjà présenté des troubles psychiatriques dans leurs antécédents. Des cas isolés d'augmentation de la libido,\n" 
-                                                     "de psychoses paranoïdes et de dépressions marquées avec des tendances suicidaires potentielles ont été rapportés.\n"
-                                                     "---------\n"                                          
-                                                     "Surdosage:\n"
-                                                     "Les signes d'un surdosage chronique sont des troubles du comportement, des symptômes gastro-intestinaux et une augmentation de la fréquence des crises. En cas\n" 
-                                                     "d'apparition de ces signes, il faut réduire la posologie et contrôler le taux plasmatique.\n"
-                                                     "---------\n"
-                                                     "Traitements:\n"
-                                                     "Un surdosage aigu provoque un coma profond. Outre le traitement symptomatique, une hémoperfusion avec du charbon médical est recommandée. On ne connait pas\n" 
-                                                     "d'antidote spécifique.\n\n"
-
-                                                     "******************************************************************************************************************************************\n\n",
-                    font=('Times', 14), fill='black')
+        "******************************************************************************************************************************************\n\n"
+
+        "BROMIDES: -> existe depuis 1857, n'est plus utilisé.\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "CARBAMAZEPINE (tégrétol)\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "N'est généralement pas efficaces contre les absences et les myoclonies. Formes mixtes de crises d'épilepsie. Blocage des canaux sodiques. Beaucoup d'interactions\n"
+        "et d'effets secondaires. Ne s'associe pas à de la quétiapine à moins de savoir ce que l'on fait.\n\n"
+
+        "Utilisation:\n"
+        "Épilepsie.\n"
+        "Crises partielles simples ou complexes (avec ou sans perte de connaissance) avec ou sans généralisation secondaire.\n"
+        "Crises tonico-cloniques généralisées.\n"
+        "Formes mixtes de crises épileptiques.\n"
+        "Tégrétol convient aussi bien en mono- qu'en polythérapie.\n"
+        "Habituellement Tégrétol n'est pas efficace dans les absences (petit mal) ainsi que dans les crises myocloniques (cf. «Mises en garde et précautions»).\n"
+        "Manie aiguë et traitement de fond de la forme bipolaire des désordres affectifs dans le but d'une prévention ou régression des récidives.\n"
+        "Syndrome de sevrage alcoolique.\n"
+        "Névralgie essentielle du trijumeau et névralgie du trijumeau dans la sclérose en plaques (typique ou atypique).\n"
+        "Névralgie essentielle du glosso-pharyngien.\n"
+        "---------\n"
+        "Contre-indications:\n"
+        "*Antécédents d'hypersensibilité à la carbamazépine et l'oxcarbazépine ou à des médicaments de structure apparentée (antidépresseurs tricycliques p.ex.) ou à un\n"
+        "autre composant du médicament.\n"
+        "*Patients avec bloc auriculo-ventriculaire, dépression médullaire ou antécédents de porphyrie hépatique (p.ex. porphyrie aiguë intermittente, porphyrie variegata,\n"
+        "porphyrie cutanée tardive).\n"
+        "*L'utilisation de Tégrétol en combinaison avec les inhibiteurs de la monoamine-oxydase (IMAO) n'est pas recommandée (voir «Interactions»).\n"
+        "*Avant de commencer un traitement par Tégrétol, il faut interrompre le traitement par IMAO au moins 2 semaines avant voire plus, si la situation clinique le permet.\n"
+        "*En raison de sa teneur en sorbitol, Tégrétol 2% suspension orale n'est pas approprié pour les personnes ayant une intolérance au fructose (intolérance héréditaire\n"
+        "au fructose).\n"
+        "*La suspension ne doit pas non plus être utilisée chez les personnes ayant une hypersensibilité aux parabènes (E 200, E216, E 218).\n"
+        "---------\n"
+        "Interactions:\n"
+        "Le cytochrome P450 3A4 (CYP 3A4) est la principale enzyme catalysant la formation du métabolite actif: l'époxy-10,11-carbamazépine. L'administration\n"
+        "concomitante d'inhibiteurs du CYP 3A4 peut provoquer une augmentation des concentrations plasmatiques de carbamazépine susceptible d'induire des effets\n"
+        "indésirables.\n"
+        "L'administration concomitante d'inducteurs du CYP 3A4 peut au contraire stimuler le métabolisme de Tégrétol, faire baisser le taux sérique de carbamazépine\n"
+        "et éventuellement conduire à une diminution de l'effet thérapeutique. De même, l'interruption de l'administration d'un inducteur du CYP 3A4 peut diminuer\n"
+        "le métabolisme de la carbamazépine et conduire ainsi à une élévation des taux sériques de carbamazépine.\n\n"
+
+        "La carbamazépine est un inducteur puissant du CYP3A4 et d'autres enzymes hépatiques de phase I et phase II. Elle peut donc éventuellement réduire les\n"
+        "concentrations plasmatiques de substances administrées simultanément et principalement métabolisées par le CYP3A4.\n\n"
+
+        "L'époxyde hydrolase microsomale humaine est considérée comme un enzyme responsable de la formation de dérivés 10,11-transdiol à partir de l'époxy-10,11-\n"
+        "-carbamazépine.\n"
+        "L'utilisation concomitante de substances inhibant l'époxyde hydrolase microsomiale (p.ex. l'acide valproïque) peut provoquer une augmentation du taux sanguin\n"
+        "d'époxy-10,11-carbamazépine.\n\n"
+
+        "Substances susceptibles d'augmenter les concentrations plasmatiques de carbamazépine:\n"
+        "L'élévation des concentrations plasmatiques de carbamazépine pouvant entraîner des réactions indésirables (p.ex. vertiges, somnolence, ataxie, diplopie), la\n"
+        "posologie de Tégrétol doit être ajustée en conséquence et/ou les concentrations plasmatiques être surveillées, en cas d'administration simultanée avec les\n"
+        "substances suivantes:\n"
+        "*Substances antituberculeuses: isoniazide.\n"
+        "*Substances cardiovasculaires: vérapamil, diltiazem.\n"
+        "*Analgésiques, antiphlogistiques: dextropropoxyphène, ibuprofène.\n"
+        "*Antidépresseurs: éventuellement désipramine, viloxazine, fluoxétine, fluvoxamine, trazodone, paroxétine.\n"
+        "*Substances gastrointestinales: éventuellement cimétidine, oméprazole.\n"
+        "*Inhibiteurs de l'anhydrase carbonique: acétazolamide.\n"
+        "*Androgènes: danazol.\n"
+        "*Antibiotiques: antibiotiques macrolides (p.ex. érythromycine, troléandomycine, josamycine, clarithromycine, ciprofloxacine).\n"
+        "*Antimycosiques: dérivés azolés (p.ex. itraconazole, kétoconazole, fluconazole, voriconazole). D'autres anticonvulsivants sont éventuellement recommandés chez\n"
+        "les patients traités par le voriconazole et l'itraconazole.\n"
+        "*Antihistaminiques: terfénadine, loratadine.\n"
+        "*Substances antivirales: inhibiteurs de la protéase pour le traitement du VIH (p.ex. ritonavir).\n"
+        "*Antiépileptiques: stiripentol, vigabatrine.\n"
+        "*Antipsychotiques: loxapine, olanzapine, quétiapine.\n"
+        "*Myorelaxants: oxybutynine, dantrolène.\n"
+        "*Inhibiteurs de l'agrégation plaquettaire; ticlodipine.\n"
+        "*Autres: jus de pamplemousse, nicotinamide (seulement à forte dose).\n\n"
+
+        "Substances susceptibles d'augmenter les concentrations plasmatiques d'époxy-10,11-carbamazépine:\n"
+        "L'augmentation du taux plasmatique d'époxy-10,11-carbamazépine pouvant causer des effets indésirables (p. ex. vertiges, somnolence, ataxie, diplopie),\n"
+        "la posologie de Tégrétol doit être surveillée attentivement et éventuellement ajustée, en cas d'administration simultanée avec les substances suivantes:\n"
+        "loxapine, quétiapine, primidone, progabide, acide valproïque, valnoctamide et valpromide.\n\n"
+
+        "Substances susceptibles de faire baisser les concentrations plasmatiques de carbamazépine:\n"
+        "La dose de Tégrétol doit être ajustée le cas échéant si les substances suivantes sont utilisées comme médication concomitante:\n"
+        "Antiépileptiques: phénobarbital, primidone, mésuximide, felbamate, oxcarbazépine, phensuximide, phénytoïne (pour prévenir une intoxication à la phénytoïne et\n"
+        "des concentrations subthérapeutiques de carbamazépine, il est recommandé d'ajuster la concentration plasmatique de phénytoïne à 13 µg/ml avant de commencer le\n"
+        "traitement par la carbamazépine), fosphénytoïne, clonazépam.\n\n"
+        "*Cytostatiques: cisplatine, doxorubicine.\n"
+        "*Substances antituberculeuses: rifampicine.\n"
+        "*Bronchodilatateurs ou antiasthmatiques: théophylline, aminophylline.\n"
+        "*Substances dermatologiques: isotrétinoïne.\n"
+        "Autres: préparations phytothérapeutiques contenant du millepertuis (Hypericum perforatum).\n\n"
+
+        "Effet de Tégrétol sur les taux plasmatiques de substances administrées simultanément:\n"
+        "La carbamazépine peut abaisser les concentrations plasmatiques de certains médicaments et diminuer leur activité, voire même la supprimer. La posologie des\n"
+        "médicaments suivants devra éventuellement être ajustée aux exigences cliniques:\n"
+        "*Analgésiques/antiphlogistiques: buprénorphine, méthadone, fentanyl, paracétamol (un traitement à long terme par la carbamazépine et le paracétamol\n" 
+        "(acétaminophène) pourrait provoquer une hépatotoxicité), phénazone (antipyrine), tramadol.\n"
+        "*Antibiotiques: doxycycline, rifabutine.\n"
+        "*Anticoagulants: anticoagulants oraux (warfarine, phenprocoumone, dicoumarol, acénocoumarol, rivaroxaban, dabigatran, apixaban, edoxaban).\n"
+        "*Antidépresseurs: antidépresseurs tricycliques (p.ex. imipramine, amitriptyline, nortryptiline, clomipramine), bupropion (la carbamazépine peut abaisser le taux\n"
+        "plasmatique du bupropion et élever celui de son métabolite l'hydroxybupropion et réduire ainsi l'efficacité clinique et la sécurité du bupropion), citalopram,\n"
+        "miansérine, néfazodone, sertraline, trazodone. Tégrétol ne doit pas être utilisé en combinaison avec des inhibiteurs de la MAO; avant d'administrer le Tégrétol,\n"
+        "il faut arrêter les inhibiteurs de la MAO pendant 2 semaines au moins, plus longtemps si la situation clinique le permet (voir «Contre-indications»).\n"
+        "*Antiémétiques: aprépitant.\n"
+        "*Antiépileptiques: clobazam, clonazépam, éthosuximide, felbamate, lamotrigine, eslicarbazépine, oxcarbazépine, primidone, tiagabine, topiramate, acide valproïque,\n"
+        "zonisamide. Pour prévenir une intoxication à la phénytoïne et des concentrations subthérapeutiques de carbamazépine, il est recommandé d'ajuster la concentration\n"
+        "plasmatique de phénytoïne à 13 µg/ml avant de commencer le traitement par la carbamazépine. Dans de rares cas, une élévation des taux plasmatiques de\n"
+        "méphénytoïne a été décrite, pouvant conduire dans des cas exceptionnels à des états confusionnels et même jusqu'au coma.\n"
+        "*Antimycosiques: itraconazole, kétoconazole, voriconazole. D'autres anticonvulsivants sont éventuellement recommandés chez les patients traités par le voriconazole\n"
+        "et l'itraconazole.\n"
+        "*Antihelminthiques: praziquantel; albendazole.\n"
+        "*Cytostatiques: imatinib, cyclophosphamide, lapatinib, temsirolimus.\n"
+        "*Antipsychotiques: clozapine, halopéridol, brompéridol, olanzapine, quétiapine, rispéridone, ziprasidone, aripiprazole, palipéridone.\n"
+        "*Substances antivirales: inhibiteurs de la protéase pour le traitement du VIH: p.ex. indinavir, ritonavir, saquinavir.\n"
+        "*Anxiolytiques: alprazolam, midazolam.\n"
+        "*Bronchodilatateurs ou antiasthmatiques: théophylline.\n"
+        "*Substances cardiovasculaires: inhibiteurs du canal calcique (groupe des dihydropyridines) p.ex. félodipine, digoxine, quinidine, propranolol, simvastatine,\n"
+        "atorvastatine, lovastatine, cérivastatine, ivabradine.\n"
+        "*Corticostéroïdes: p.ex. prednisolone, dexaméthasone.\n"
+        "*Immunosuppresseurs: ciclosporine, tacrolimus, évérolimus,sirolimus.\n\n"
+
+        "Hormones thyroïdiennes: lévothyroxine: la carbamazépine semble accroître l'élimination des hormones thyroïdiennes et en augmenter les besoins chez les patients\n"
+        "souffrant d'hypothyroïdie. C'est pourquoi chez les patients qui reçoivent une thérapie de substitution, il faut contrôler les paramètres thyroïdiens au début et\n"
+        "à la fin d'un traitement par Tégrétol. Le cas échéant, il faut procéder à un ajustement posologique des préparations à base d'hormones thyroïdiennes. En\n"
+        "particulier, le traitement simultané par carbamazépine et autres anticonvulsifs (p. ex. phénobarbital) peut modifier la fonction thyroïdienne.\n\n"
+
+        "Contraceptifs: les contraceptifs hormonaux (lors de la prise de la «pilule», des métrorragies soudaines peuvent se produire en sus de la diminution d'effet des\n"
+        "contraceptifs hormonaux. C'est pourquoi la contraception orale devrait contenir plus de 50 mcg d'œstrogène ou il faudrait recommander d'autres méthodes\n"
+        "contraceptives, non hormonales.\n"
+        "Médicaments destinés au traitement de la dysfonction érectile: tadalafil.\n\n"
+
+        "A évaluer en cas de traitement associé:\n"
+        "Il a été indiqué que l'utilisation simultanée de la carbamazépine et du lévétiracétam augmente la toxicité de la carbamazépine.\n"
+        "Selon certains rapports, le traitement concomitant par la carbamazépine et l'isoniazide augmente l'hépatotoxicité de l'isoniazide.\n"
+
+        "L'association de carbamazépine et de lithium ou de métoclopramide et de carbamazépine peut aggraver les effets neurotoxiques des deux substances. C'est pourquoi\n"
+        "il est nécessaire de surveiller attentivement les symptômes cliniques. Un traitement antérieur par neuroleptiques doit dater de plus de 8 semaines et ne pas\n"
+        "avoir lieu simultanément. Il faut veiller aux signes suivants de symptômes neurotoxiques: démarche hésitante, ataxie, nystagmus horizontal, réflexes accrus,\n"
+        "fasciculations musculaires.\n\n"
+
+        "Dans la littérature, il est mentionné que la prise additionnelle de carbamazépine lors de traitement préexistant par des neuroleptiques peut élever le risque de\n"
+        "survenue d'un syndrome malin des neuroleptiques ou d'un syndrome de Steven-Johnson.\n\n"
+
+        "L'association de Tégrétol et de certains diurétiques (hydrochlorothiazide, furosémide) peut conduire à une hyponatrémie symptomatique.\n\n"
+
+        "La carbamazépine peut s'opposer aux effets des myorelaxants non dépolarisants (pancuronium p.ex.); leur posologie doit être augmentée le cas échéant et les\n" 
+        "patients doivent être surveillés attentivement en cas de suppression plus rapide que prévue du bloc neuromusculaire.\n\n"
+
+        "Au même titre que les autres médicaments psycho-actifs, Tégrétol peut réduire la tolérance à l'alcool; il est donc préférable que le patient s'abstienne d'en\n"
+        "consommer.\n\n"
+
+        "L'utilisation concomitante de la carbamazépine et d'anticoagulants oraux à action directe (rivaroxaban, dabigatran, apixaban, edoxaban) peut conduire à des\n"
+        "concentrations plasmatiques réduites des anticoagulants oraux à action directe et augmenter ainsi le risque de thrombose. Si une utilisation concomitante est\n"
+        "nécessaire, une surveillance étroite est par conséquent recommandée afin d'identifier les éventuels signes et symptômes d'une thrombose.\n\n"
+
+        "À prendre en considération lors de tests sérologiques:\n"
+        "La carbamazépine pourrait donner des résultats faux positifs lors du dosage de la perphénazine dans les analyses par CLHP, suite à une interférence.\n"
+        "La carbamazépine et son métabolite 10,11-époxyde pourraient donner des résultats faux positifs lors du dosage des antidépresseurs tricycliques dans les essais\n"
+        "immunologiques par polarisation de fluorescence.\n"
+        "---------\n"
+        "Effets secondaires:\n"
+        "Certains types d'effets indésirables se produisent occasionnellement ou fréquemment surtout en début de traitement si Tégrétol est administré à des doses initiales\n"
+        "trop élevées, ou encore chez les patients âgés. Il s'agit entre autres d'effets indésirables sur le système nerveux central (SNC) (vertiges, céphalées, ataxie,\n"
+        "somnolence, épuisement, diplopie), de troubles gastro-intestinaux (nausées, vomissements) ainsi que de réactions cutanées allergiques.\n\n"
+
+        "Les effets dose-dépendants s'estompent habituellement en l'espace de quelques jours, soit spontanément, soit après réduction provisoire de la dose. Les effets\n"
+        "indésirables touchant le SNC peuvent aussi être le signe d'un surdosage relatif ou d'une fluctuation importante des taux plasmatiques. Dans ces cas, la surveillance\n"
+        "des concentrations plasmatiques est recommandée.\n\n"
+
+        "Leucopénie (11%); persistante dans 2% des cas, éosinophilie, thrombopénie, œdème, rétention liquidienne, prise de poids; hyponatrémie et diminution de l’osmolalité\n"
+        "plasmatique dues à un effet comparable à celui de l'hormone antidiurétique (ADH) et ayant conduit dans des cas isolés à une intoxication par l'eau accompagnée de\n"
+        "léthargie, nausées, vomissements, céphalées, confusion, anomalies neurologiques, convulsions, désorientation, diminution de la perception, troubles visuels,\n"
+        "encéphalopathie («syndrome de sécrétion inappropriée d’ADH»), vertiges (10-50%), ataxie (enfants: 10.4%; adultes: 50%), somnolence, céphalées, diplopie, troubles\n"
+        "de l’accommodation (p.ex. vision trouble), nausées, vomissements (tous les deux 8%), sécheresse de la bouche, dermatite allergique, prurit, urticaire, qui peuvent\n"
+        "être graves, épuisement, augmentation de la gamma GT (due à l’induction des enzymes hépatiques), habituellement sans signification clinique, réduction de la densité\n"
+        "osseuse.\n"
+        "---------\n"
+        "Surdosage:\n"
+        "Les signes d'intoxication se manifestent généralement au niveau des systèmes nerveux central, cardiovasculaire, de l'appareil respiratoire et par les effets\n"
+        "indésirables décrits sous «Effets indésirables».\n\n"
+
+        "*Système nerveux central: dépression du SNC; désorientation, réduction du niveau de conscience, somnolence, agitation, hallucinations, coma; vision trouble,\n"
+        "difficultés d'élocution, dysarthrie, nystagmus, ataxie, dyskinésie, hyperréflexie initiale puis hyporéflexie; convulsions, troubles psychomoteurs, myoclonie,\n"
+        "hypothermie, mydriase.\n"
+        "*Appareil respiratoire: dépression respiratoire, œdème pulmonaire.\n"
+        "*Système cardiovasculaire: tachycardie, hypotension, quelquefois hypertension, troubles de conduction avec élargissement du complexe QRS; syncope par arrêt\n"
+        "cardiaque.\n"
+        "*Tractus gastro-intestinal: vomissements, vidange gastrique retardée, motilité intestinale réduite.\n"
+        "*Troubles musculosquelettiques: quelques cas de rhabdomyolyse ont été signalés en rapport avec la toxicité de la carbamazépine.\n"
+        "*Fonction rénale: rétention d'urine, oligurie ou anurie; rétention liquidienne, intoxication par l'eau due à un effet de la carbamazépine comparable à celui\n"
+        "de l'ADH.\n"
+        "*Examens de laboratoire: hyponatrémie, éventuelle acidose métabolique, hyperglycémie possible, augmentation de la créatine phosphokinase musculaire.\n"
+        "---------\n"
+        "Traitements:\n"
+        "Il n'existe pas d'antidote spécifique.\n"
+        "Le traitement sera fonction de l'état clinique du patient; hospitalisation. Détermination de la concentration plasmatique pour confirmer l'intoxication par la\n"
+        "carbamazépine et pour déterminer l'importance du surdosage.\n"
+        "Vidange de l'estomac, lavage gastrique et administration de charbon actif. Un retard de la vidange gastrique peut retarder l'absorption et conduire à une\n"
+        "aggravation pendant la phase de guérison.\n"
+        "Traitement d'appoint dans une unité de soins intensifs avec surveillance cardiaque et correction scrupuleuse du déséquilibre électrolytique.\n"
+        "Recommandations spéciales.\n"
+        "L'hémoperfusion au charbon actif a été conseillée. L'hémodialyse est une méthode thérapeutique efficace pour traiter un surdosage de carbamazépine.\n"
+        "Prévoir une rechute ou aggravation de la symptomatologie au 2e et 3e jour après l'intoxication, due à une absorption différée.\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "DEPAKINE (valproate de sodium)\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "Depakine est principalement indiqué, de préférence en monothérapie, dans les épilepsies généralisées primaires: petit-mal/absences, myoclonies massives\n"
+        "bilatérales, grand-mal avec ou sans myoclonies, formes photosensibles. Depakine est également efficace, seul ou en association avec d'autres anti-épileptiques\n"
+        "dans les indications du compendium. Beaucoup d'interactions et d'ES (tremblements d'un membre). Contre-indiqué chez le patient connu pour des troubles\n"
+        "hépatiques.\n" 
+        "Le renforcement de l'activité gabaergique intervient, vraisemblablement, en empêchant ou en limitant la diffusion des décharges.\n\n"
+        "Les MAE de première génération provoquent une induction enzymatique.\n"
+        "Induction enzymatique = diminue ou augmente le dosage d'un autre médicament.\n\n"
+
+        "Utilisation:\n"
+        "Depakine Chrono est principalement indiqué, de préférence en monothérapie, dans les épilepsies généralisées primaires: petit mal/absences, myoclonies massives\n"
+        "bilatérales, grand mal avec ou sans myoclonies, formes photosensibles.\n"
+        "Depakine Chrono est également efficace, seul ou en association avec d'autres antiépileptiques dans les indications suivantes:\n"
+        "Epilepsies généralisées secondaires, notamment syndrome de West et syndrome de Lennox-Gastaut.\n"
+        "Epilepsies partielles à symptomatologie élémentaire ou à symptomatologie complexe (formes psychosensorielles, formes psychomotrices).\n"
+        "Epilepsies secondairement généralisées.\n"
+        "Formes mixtes (généralisées et partielles).\n"
+        "Traitement des épisodes maniaques associés aux troubles bipolaires en cas de contre-indication ou d'intolérance au lithium. Prévention des rechutes chez les\n"
+        "patients adultes souffrant de troubles bipolaires dont les épisodes maniaques ont répondu au traitement par le valproate.\n"
+        "---------\n"
+        "Contre-indications:\n"
+        "*Hépatite aiguë.\n"
+        "*Hépatite chronique.\n"
+        "*Antécédents chez le patient ou dans l'anamnèse familiale d'hépatites sévères, médicamenteuses notamment.\n"
+        "*Hypersensibilité connue au valproate de sodium ou à d'autres composants du médicament.\n"
+        "*Porphyrie hépatique.\n"
+        "*Patients connus pour avoir des maladies mitochondriales causées par des mutations du gène nucléaire codant pour l'enzyme mitochondriale polymérase gamma\n"
+        "(POLG, par exemple dans le syndrome d'Alpers-Huttenlocher) ainsi que chez les enfants de moins de 2 ans qui sont suspectés d'avoir une maladie liée au\n"
+        "gène POLG.\n"
+        "*Patients souffrant de troubles connus du cycle de l'urée (voir «Mises en garde et précautions»).\n"
+        "*Depakine Chrono peut provoquer des malformations congénitales et des troubles du développement chez les fœtus exposés in utero. Assurez-vous que les femmes\n"
+        "en âge de procréer utilisent une méthode de contraception efficace pendant toute la durée du traitement. La patiente doit être informée en détail des risques\n"
+        "associés à l’utilisation de valproate lors de la grossesse.\n"
+        "*Le rapport bénéfice/risque du traitement par Depakine Chrono doit être réévalué régulièrement, notamment lorsque la patiente envisage ou débute une grossesse.\n"
+        "---------\n"
+        "Interactions:\n"
+        "Effets du valproate sur les autres médicaments:\n"
+        "L'acide valproïque est un inhibiteur des isoenzymes CYP2C9 et CYP3A du cytochrome P450. Les effets métaboliques auxquels il convient de s'attendre peuvent être\n"
+        "déduits du schéma correspondant. Les interactions suivantes sont particulièrement importantes:\n"
+        "*Neuroleptiques, IMAO, antidépresseurs et benzodiazépines: Depakine Chrono peut potentialiser l'effet d'autres neuropsychotropes, tels que neuroleptiques, IMAO,\n"
+        "antidépresseurs et benzodiazépines, suscitant une surveillance clinique et une adaptation éventuelle du traitement.\n"
+        "*Lithium: Une étude d'interaction pharmacocinétique chez des jeunes volontaires sains de sexe masculin a montré que Depakine n'a aucun effet sur les taux sériques\n"
+        "de lithium.\n"
+        "Phénobarbital: Depakine Chrono augmente les concentrations plasmatiques du phénobarbital par inhibition du catabolisme hépatique, entraînant une sédation,\n"
+        "particulièrement chez les enfants. C'est pourquoi une surveillance clinique est recommandée durant les 15 premiers jours du traitement combiné, avec réduction\n"
+        "immédiate des doses de phénobarbital si une sédation survient et détermination des taux plasmatiques de phénobarbital si nécessaire.\n"
+        "*Primidone: Depakine Chrono augmente les taux plasmatiques de primidone avec majoration de ses effets indésirables (sédation). Après usage prolongé, cette\n"
+        "interaction cesse. Une surveillance clinique et une adaptation éventuelle de la posologie de la primidone sont recommandées plus particulièrement au début de\n"
+        "l'association thérapeutique.\n"
+        "Phénytoïne: Depakine Chrono diminue les concentrations plasmatiques totales de phénytoïne. Il augmente surtout la fraction libre de phénytoïne, pouvant entraîner\n"
+        "des signes de surdosage (l'acide valproïque déplace la phénytoïne de ses sites de fixation protéique plasmatiques et ralentit son catabolisme hépatique). Une\n"
+        "surveillance clinique est donc recommandée. En cas de dosage plasmatique de phénytoïne, c'est surtout la forme libre qui doit être prise en compte.\n"
+        "Carbamazépine: Une toxicité clinique a été rapportée en cas d'association de valproate de sodium/acide valproïque et de carbamazépine, puisque le valproate de\n"
+        "sodium/acide valproïque peuvent potentialiser la toxicité de la carbamazépine. Une surveillance clinique est donc recommandée tout particulièrement en début de\n"
+        "traitement par l'association et la posologie sera éventuellement ajustée.\n"
+        "Lamotrigine: Depakine entrave le métabolisme de la lamotrigine et prolonge sa demi-vie moyenne d'élimination de presque deux fois. Cette interaction peut entraîner\n"
+        "une augmentation des effets toxiques de la lamotrigine, en particulier des éruptions cutanées sévères. Certaines réactions cutanées graves qui sont apparues dans\n"
+        "les six premières semaines des polythérapies ont été rapportées, mais ces dernières ont régressé partiellement lors de l'arrêt du traitement ou, dans certains cas,\n"
+        "uniquement après un traitement approprié. Par conséquent, une surveillance clinique est recommandée et les doses de lamotrigine doivent être diminuées le cas\n"
+        "échéant.\n"
+        "*Zidovudine: Le valproate de sodium/acide valproïque peuvent augmenter la concentration plasmatique de zidovudine avec majoration des risques de toxicité de\n"
+        "celle-ci.\n"
+        "*Felbamate: Depakine peut diminuer la clairance moyenne du felbamate jusqu'à 16%.\n"
+        "*Olanzapine: L'acide valproïque peut diminuer les concentrations plasmatiques de l'olanzapine.\n"
+        "*Rufinamide: L'acide valproïque peut conduire à une augmentation du taux plasmatique du rufinamide. Cette augmentation dépend de la concentration en acide\n"
+        "valproïque. La précaution sera de mise, notamment chez l'enfant, comme cet effet est plus important dans cette population.\n"
+        "*Quétiapine: L'association de valproate de sodium/acide valproïque et de quétiapine peut augmenter le risque de neutropénie/leucopénie.\n"
+        "*Propofol: L'acide valproïque peut conduire à une augmentation du taux plasmatique du propofol. En cas de co-administration avec le valproate, une diminution de\n"
+        "la dose du propofol devra être envisagée.\n"
+        "*Nimodipine: L'association de la nimodipine avec l'acide valproïque peut augmenter la concentration plasmatique de la nimodipine de 50%.\n\n"
+
+        "Effets des autres médicaments sur l'acide valproïque:\n"
+        "Les antiépileptiques avec effet inducteur enzymatique (notamment phénytoïne, phénobarbital, primidone, carbamazépine) diminuent les concentrations sériques de\n"
+        "l'acide valproïque. En cas d'association, il faut adapter le traitement en fonction de la réponse clinique et des dosages sanguins.\n\n"
+
+        "L'association du felbamate et de l'acide valproïque, peut entraîner une diminution de la clairance de l'acide valproïque de 22% à 50%, et par conséquent une\n"
+        "augmentation dose-dépendante de la concentration sérique en acide valproïque. Une surveillance des taux plasmatiques est nécessaire.\n\n"
+
+        "Les taux d'acide valproïque dans le sérum peuvent être augmentés en cas de co-administration avec la phénytoïne ou le phénobarbital. Par conséquent, les patients\n"
+        "qui reçoivent ces deux traitements doivent être attentivement surveillés à la recherche de signes et de symptômes d'hyperammoniémie.\n\n"
+
+        "La méfloquine augmente le métabolisme de l'acide valproïque et possède par ailleurs un effet convulsivant, d'où un risque de survenue de crises épileptiques en\n"
+        "cas d'association.\n\n"
+
+        "L'administration concomitante de Depakine Chrono et de produits ayant une fixation protéique importante (par exemple acide acétylsalicylique) peut entraîner une\n"
+        "élévation des taux sériques libres de l'acide valproïque.\n\n"
+
+        "La prise concomitante de cimétidine ou d'érythromycine est susceptible d'augmenter les taux sériques de l'acide valproïque (diminution de son métabolisme\n"
+        "hépatique).\n\n"
+
+        "En cas de co-administration, les carbapénèmes (panipénème, méropénème, imipénème par exemple) entraînent une diminution des concentrations sanguines d'acide\n"
+        "valproïque de 60-100% en deux jours, avec parfois des convulsions.\n\n"
+
+        "En raison du déclenchement rapide et de la chute brutale de la concentration en acide valproïque, l'on considère que les conséquences d'une interaction éventuelle\n"
+        "entre l'acide valproïque et les carbapénèmes sont incontrôlables chez les patients dont l'état de santé était stable sous acide valproïque. La co-administration de\n"
+        "carbapénèmes chez des patients stabilisés avec l'acide valproïque devrait être évitée (voir la rubrique «Mises en garde et précautions»). Si le traitement avec ces\n"
+        "antibiotiques ne peut pas être évité, un contrôle accru des taux plasmatiques d'acide valproïque doit être effectué.\n\n"
+
+        "La rifampicine peut causer une diminution de la concentration de l'acide valproïque dans le sang causant un manque d'effet thérapeutique. Il peut s'avérer\n" 
+        "nécessaire d'ajuster les doses de valproate lors d'administration simultanée de rifampicine.\n\n"
+
+        "Les inhibiteurs de protéases tels que le lopinavir et le ritonavir augmentent les niveaux plasmatiques de valproate lorsqu'ils sont co-administrés.\n\n"
+
+        "La cholestyramine peut entraîner une diminution du taux plasmatique de valproate en cas de co-administration.\n\n"
+
+        "Autres interactions:\n"
+        "Les médicaments potentiellement hépatotoxiques et l'alcool peuvent renforcer la toxicité hépatique de l'acide valproïque (voir la rubrique «Mises en garde\n"
+        "et précautions»).\n\n"
+
+        "En raison de son absence habituelle d'effet inducteur enzymatique, l'acide valproïque ne diminue pas la concentration plasmatique totale des œstroprogestatifs\n"
+        "chez les femmes sous contraception hormonale. Pour la même raison, il n'abaisse pas la concentration plasmatique totale des antivitamines K.\n\n"
+
+        "Par contre, Depakine Chrono peut accroître la fraction libre de la warfarine, en raison de phénomènes de compétition au niveau des sites de fixation albuminique.\n"
+        "C'est pourquoi, en cas de traitement par antivitamines K, une surveillance accrue du taux de prothrombine devra être effectuée.\n\n"
+
+        "L'administration concomitante de valproate et de topiramate ou d'acétazolamide a été associée à l'encéphalopathie et/ou à l'hyperammoniémie. Il faut surveiller\n"
+        "soigneusement l'apparition de symptômes d'encéphalopathie hyperammoniémique chez les patients traités par ces 2 médicaments.\n"
+        "---------\n"
+        "Effets secondaires:\n"
+        "Anémie, thrombocytopénie. surdité (parfois irréversible, nausées.augmentation pondérale (5 à 10% des cas), notamment chez les adolescents et les femmes jeunes,\n"
+        "la prise de poids pouvant aggraver les symptômes cliniques du syndrome des ovaires poly-kystiques, elle doit être surveillée attentivement, hyponatrémie,\n"
+        "tremblement, état confusionnel, agressivité, agitation, troubles de l'attention, dysménorrhées, hypersensibilité, alopécie passagère et/ou dose-dépendant,\n"
+        "altérations des ongles et du lit unguéal.hémorragie, désordres extrapyramidaux (parfois irréversibles), stupeur, somnolence, convulsion, troubles de la mémoire,\n"
+        "maux de tête, nystagmus, étourdissement (en cas d'injection intraveineuse, l'étourdissement survient quelques minutes après et se résout généralement spontanément\n"
+        "au bout de quelques minutes).\n\n"
+
+        "Il est recommandé de procéder à une évaluation médicale rapide (dosage des enzymes pancréatiques, autres examens appropriés) chez tout patient présentant sous\n"
+        "valproate de sodium/acide valproïque une douleur abdominale aiguë.\n\n"
+
+        "Vomissements, troubles gingivaux (principalement hyperplasie gingivale), stomatite. Douleur de la partie supérieure de l'abdomen, diarrhée qui cèdent en général\n"
+        "au bout de quelques jours sans interruption du traitement. Ces troubles ont vu leur incidence diminuer fortement par l'introduction très progressive de Depakine,\n"
+        "l'emploi des comprimés pelliculés Chrono et l'administration en début de repas. Dans ces cas, la prescription de thérapeutiques symptomatiques est appropriée.\n\n"
+
+        "Il convient de prendre en considération, notamment chez les patients à risque (voir rubrique: «Conditions de survenue»), deux types de manifestations qui peuvent\n"
+        "précéder l'ictère:\n"
+        "d'une part, des signes généraux non spécifiques, généralement d'apparition soudaine, tels que asthénie, anorexie, abattement, somnolence, accompagnés parfois\n"
+        "de vomissements répétés et de douleurs abdominales, d'autre part, une réapparition des crises épileptiques.\n\n"
+
+        "Parmi les examens classiques, les tests reflétant la synthèse protéique et notamment le TP (taux de prothrombine) sont les plus pertinents. La confirmation\n" 
+        "d'un taux de prothrombine anormalement bas, surtout s'il s'accompagne d'autres anomalies biologiques (diminution significative du fibrinogène et des facteurs de\n"
+        "coagulation, augmentation de la bilirubine, élévation des transaminases.\n"
+        "L'administration de Depakine Chrono peut entraîner une chute de 10'000 à 30'000/mm³ du nombre de plaquettes.\n"
+        "---------\n"
+        "Surdosage:\n"
+        "Le tableau de l'intoxication aiguë massive comporte habituellement un coma plus ou moins profond, avec hypotonie musculaire, hyporéflexie, myosis, diminution\n"
+        "de l'autonomie respiratoire, acidose métabolique, hypotension et collapsus/choc circulatoire.\n"
+        "Des décès sont survenus dans le cadre de surdosages massifs; néanmoins, le pronostic de ces intoxications est généralement favorable.\n"
+        "Les symptômes peuvent cependant varier et la survenue de crises convulsives a été rapportée en présence de taux plasmatiques élevés.\n"
+        "Des cas d'hypertension intracrânienne liée à un œdème cérébral ont été rapportés.\n"
+        "La présence de sodium dans la composition de Depakine peut entraîner une hypernatrémie lors d'un surdosage.\n"
+        "---------\n"
+        "Traitements:\n"
+        "Les mesures à prendre en milieu hospitalier sont: les lavages gastriques peuvent être utiles jusqu'à 10 ou 12 heures après l'ingestion, et surveillance cardio-\n"
+        "-respiratoire.\n"
+        "La naloxone a été déjà utilisée avec succès dans quelques cas isolés.\n"
+        "En cas de surdosage massif, l'hémodialyse et l'hémoperfusion ont été utilisées avec succès.\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "DIAZEPAM (Valium)\n\n"
+
+        "******************************************************************************************************************************************\n"
+        "******************************************************************************************************************************************\n\n"
+
+        "Utilisation:\n"
+        "Formes orales:\n"
+        "Traitement symptomatique de l'anxiété, de l'excitation et de la tension psychique résultant d'états psychonévrotiques et de troubles passagers dus à une situation\n"
+        "stressante. A titre d'adjuvant dans le traitement de troubles psychiques et organiques à composante anxieuse. L'anxiété peut se traduire par une dysthymie anxieuse\n"
+        "manifeste ou par un comportement soucieux, et/ou se manifester sous la forme de symptômes fonctionnels, neurovégétatifs ou moteurs (palpitations, sudation,\n" 
+        "troubles du sommeil, tremblement, agitation nerveuse, etc.).\n\n"
+
+        "Forme parentérale:\n"
+        "Sédation de base lors de mesures thérapeutiques ou d'interventions stressantes telles qu'endoscopies, défibrillation par choc électrique externe, cathétérisme\n"
+        "cardiaque, examens radiologiques, interventions mineures, réduction de luxations ou de fractures, biopsies, changement de pansement chez les brûlés, etc., afin\n"
+        "de soulager l'anxiété ou des réactions de stress aiguës ainsi que minimiser le souvenir du traitement.\n\n"
+
+        "Médication préopératoire chez les patients anxieux et tendus.\n\n"
+
+        "Indications en psychiatrie:\n"
+        "Traitement de l'excitation dans le cadre d'états anxieux aigus et d'accès de panique, lors d'agitation motrice ainsi que lors de delirium tremens.\n"
+
+        "Effet anticonvulsivant:\n"
+        "Traitement de l'état de mal épileptique et d'autres états convulsifs (y compris le tétanos).\n\n"
+
+        "Gynécologie/obstétrique:\n"
+        "Traitement d'une éclampsie lorsque le sulfate de magnésium est contre-indiqué, inefficace ou indisponible.\n\n"
+
+        "Toutes formes d'administration:\n"
+        "A titre d'adjuvant pour soulager les spasmes musculaires réflexes lors de traumatismes locaux (blessures, inflammations) et pour combattre des états spastiques\n"
+        "en cas de lésion des interneurones spinaux et supraspinaux; de telles altérations peuvent par exemple survenir lors de spasmes d'origine cérébrale et de paraplégie\n"
+        "ainsi que lors d'athétose et de syndrome de l'homme raide.\n"
+"---------\n"
+         "Contre-indications:\n"
+         "*Hypersensibilité connue aux benzodiazépines ou à l'un des excipients selon la composition.\n"
+         "*Insuffisance respiratoire sévère, insuffisance hépatique sévère, syndrome d'apnée du sommeil et myasthénie grave. Les benzodiazépines ne sont pas recommandées\n"
+         "pour le traitement primaire de troubles psychotiques. En cas de dépression ou d'états anxieux lors de dépression, les benzodiazépines ne doivent pas être utilisées,\n"
+         "en raison du risque de suicide auquel sont exposés les patients.\n"
+         "---------\n"
+         "Interactions:\n"
+         "Interactions pharmacocinétiques (DDI):\n"
+         "Le métabolisme oxydatif du diazépam, qui conduit à la formation de N-desméthyldiazépam, de 3-hydroxydiazépam (ténazépam) et d'oxazépam dépend des\n"
+         "isoenzymes CYP2C19 et CYP3A du cytochrome P450. Les études in vitro ont montré que l'hydroxylation se produit principalement par l'isoforme\n"
+         "CYP3A alors que la N-déméthylation s'effectue aussi bien par le CYP3A que le CYP2C19.\n\n"
+
+         "Les résultats d'études in vivo conduites auprès de volontaires ont confirmé les résultats in vitro. Les substrats qui modulent le CYP3A et/ou le CYP2C19\n"
+         "peuvent éventuellement influencer la pharmacocinétique du diazépam. Les inhibiteurs du CYP3A ou du CYP2C19 comme la cimétidine, le kétoconazole,\n"
+         "la fluvoxamine, le topiramate, la fluoxétine et l'oméprazole peuvent conduire à une sédation plus forte et plus longue. En outre, selon certains rapports,\n"
+         "le diazépam modifie l'élimination métabolique de la phénytoïne.\n\n"
+
+         "Comprimés:\n"
+         "Le cisapride peut conduire à une augmentation transitoire de l'effet sédatif des benzodiazépines administrées par voie orale car il accélère leur résorption.\n"
+
+         "Interactions pharmacodynamiques (DDI):\n"
+         "Une augmentation des effets sur la sédation, la respiration et l'hémodynamique est possible lorsque Valium est utilisé en même temps que des substances exerçant\n"
+         "un effet dépresseur central telles que les neuroleptiques, les anxiolytiques/sédatifs, les antidépresseurs, les hypnotiques, les anticonvulsivants, les narco-\n"
+         "-analgésiques, les anesthésiques et les antihistaminiques sédatifs, tout comme lors de la prise simultanée de Valium et d'alcool.\n\n"
+
+         "La consommation d'alcool doit être évitée par les patients qui reçoivent Valium (voir «Mises en garde et précautions»).\n\n"
+
+         "D'autres remarques au sujet d'autres substances exerçant un effet dépresseur central, y compris l'alcool, sont par ailleurs mentionnées au paragraphe «Surdosage».\n\n"
+
+         "La théophylline peut inhiber l'action du diazépam.\n\n"
+
+         "Aucune interaction n'est cependant connue avec les antidiabétiques courants, les anticoagulants et les diurétiques.\n\n"
+
+         "La rifampicine possède un fort pouvoir inducteur des enzymes hépatiques, ce qui accélère le métabolisme du diazépam dans le foie.\n\n"
+
+         "Il faut être attentif à un possible renforcement de l'effet dépresseur sur la respiration en cas d'association de Valium et d'opiacés exerçant une dépression\n"
+         "respiratoire.\n"
+         "---------\n"
+         "Effets secondaires:\n"
+         "Les effets indésirables rapportés le plus fréquemment sont la fatigue, l'obnubilation et la faiblesse musculaire; ces effets sont normalement dose-dépendants.\n"
+         "Ces manifestations se produisent principalement au début du traitement et disparaissent d'habitude lors d'une utilisation sur une durée prolongée.\n\n"
+
+         "Sang et système lymphatique:\n"
+         "Élévation du taux sanguin de phosphatase alcaline lors de l'administration par voie i.v.\n"
+
+         "Système nerveux:\n"
+         "Ataxie, dysarthrie, langage confus, céphalées, tremor, vertiges. Une amnésie antérograde peut se produire à des doses thérapeutiques et le risque s'accroît\n"
+         "avec l'augmentation de la posologie. Les épisodes d'amnésie peuvent s'accompagner d'un comportement inadéquat.\n\n"
+
+         "Troubles psychiatriques:\n"
+         "Au vu de l'expérience acquise, des réactions paradoxales telles qu'anxiété, agitation, irritabilité, agressivité, délire, colère, cauchemars, hallucinations,\n"
+         "psychoses, comportement étrange et d'autres effets indésirables sur le comportement peuvent survenir lors de l'utilisation de benzodiazépines. L'administration\n"
+         "du médicament doit être interrompue dans de tels cas. La probabilité qu'un tel effet se développe est plus élevée chez les enfants et les patients d'un certain\n"
+         "âge.\n\n"
+
+         "Confusion, appauvrissement émotionnel, diminution de l'attention, dépression, augmentation ou diminution de la libido.\n\n"
+
+         "Une prise chronique (même à des posologies thérapeutiques) peut conduire au développement d'une dépendance physique. L'interruption du traitement peut conduire\n"
+         "à des symptômes de sevrage ou à un phénomène de rebond (voir sous «Abus anamnestique d'alcool ou de médicaments» et «Dépendance»).\n\n"
+
+         "L'abus de benzodiazépines a été rapporté (voir sous «Mises en garde et précautions»/«Dépendance»).\n\n"
+
+         "Système musculo-squelettique:\n"
+         "Faiblesse musculaire. Davantage de chutes et de fractures ont été rapportées chez les patients prenant des benzodiazépines. Ce risque est augmenté en cas de\n"
+         "prise simultanée de sédatifs (y compris des boissons alcoolisées) ainsi que chez les patients âgés.\n\n"
+
+         "Troubles gastro-intestinaux:\n"
+         "Nausées, douleurs abdominales basses, sécheresse buccale ou sécrétion accrue de salive (hypersalivation), diarrhée, constipation et autres troubles gastro-\n"
+         "-intestinaux.\n\n"
+
+         "Yeux:\n"
+         "Vision double, vision trouble.\n\n"
+
+         "Vaisseaux:\n"
+         "Hypotension, dépression circulatoire.\n\n"
+
+         "Examens:\n"
+         "Pouls irrégulier, élévation des transaminases dans de rares cas, élévation de la phosphatase alcaline.\n\n"
+
+         "Reins et voies urinaires:\n"
+         "Incontinence, rétention urinaire.\n\n"
+
+         "Peau:\n"
+         "Éruptions cutanées.\n\n"
+
+         "Oreille:\n"
+         "Vertiges.\n\n"
+
+         "Coeur:\n"
+         "Défaillance cardiaque, y compris arrêt cardiaque.\n\n"
+
+         "Organes de la respiration:\n"
+         "Dépression respiratoire, y compris arrêt respiratoire.\n\n"
+
+         "Foie et voies biliaires:\n"
+         "Ictère dans de rares cas.\n\n"
+
+         "Ampoules seulement:\n"
+         "Troubles généraux et réactions au site d'injection.\n\n"
+
+         "Une thrombose veineuse, une phlébite, des irritations au site de l'injection, une tuméfaction locale et, moins fréquemment, des modifications des vaisseaux\n"
+         "peuvent se produire, en particulier après une injection rapide par voie i.v.\n"
+         "Les très petites veines ne doivent pas être utilisées pour l'injection; les injections intra-artérielles et l'extravasation doivent en particulier être strictement\n"
+         "évitées.\n\n"
+
+         "Une injection par voie i.m. peut conduire à des irritations locales et un érythème au lieu de l'injection peut se produire dans quelques cas. Une sensibilité à la\n"
+         "pression s'observe relativement souvent.\n\n"
+
+         "Cœur et circulation/Respiration:\n"
+         "Une dépression cardio-respiratoire peut se produire lors de l'application rectale de diazépam.\n"
+         "---------\n"
+         "Surdosage:\n"
+         "Dans le cas d'un surdosage, les benzodiazépines conduisent fréquemment à une obnubilation, à une ataxie, à une dysarthrie et à un nystagmus. Un surdosage de\n"
+         "Valium ne représente que rarement une menace vitale si ce médicament a été pris isolément, mais il peut conduire à une aréflexie, à une apnée, à de l'hypotension,\n"
+         "à une dépression cardio-respiratoire et à un coma. Si un coma survient, il ne dure en règle générale que quelques heures mais il peut également être plus long et\n"
+         "cyclique, en particulier chez les patients âgés. Les effets dépresseurs des benzodiazépines sur la respiration sont plus graves chez les patients présentant une\n"
+         "maladie des voies respiratoires.\n\n"
+
+         "Les benzodiazépines augmentent l'effet des autres substances exerçant un effet dépresseur central, y compris l'alcool.\n"
+         "---------\n"
+         "Traitements:\n"
+         "Surveiller les fonctions vitales du patient et mettre en œuvre les mesures de soutien indiquées en fonction de l'état clinique du patient. Un traitement\n"
+         "symptomatique des effets cardio-respiratoires et des effets sur le système nerveux central peut notamment se révéler nécessaire chez ces patients.\n\n"
+
+         "Une résorption additionnelle doit être évitée par des méthodes appropriées, comme p.ex. par un traitement par le charbon actif dans un intervalle de 1-2 heures.\n"
+         "Si le charbon actif est utilisé, une protection des voies aériennes est impérativement nécessaire chez les patients obnubilés. Un lavage gastrique peut être\n"
+         "considéré en cas de prise mixte, mais toutefois pas comme mesure de routine.\n\n"
+
+         "Si la dépression du système nerveux central est sévère, l'administration de flumazénil (Anexate®), un antagoniste des benzodiazépines, doit être considérée.\n"
+         "Cette administration doit toutefois s'effectuer sous une surveillance étroite. En effet, cette préparation possède une courte demi-vie (d'environ une heure) et,\n"
+         "pour cette raison, les patients auxquels le flumazénil a été administré doivent être surveillés après que ses effets se sont dissipés. La prudence est de rigueur\n"
+         "lors de l'utilisation du flumazénil chez les épileptiques traités par des benzodiazépines. Le flumazénil doit être utilisé avec la plus grande prudence après la\n"
+         "prise de médicaments abaissant le seuil épileptogène (p.ex. antidépresseurs tricycliques). Pour de plus amples informations au sujet de l'utilisation correcte\n"
+         "du flumazénil (Anexate®), consulter l'information professionnelle de cette préparation.\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "MYSOLINE (primidone)\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "Grand mal, épilepsie psychomotrice, épilepsie focale, petit mal, crises myocloniques et akinétiques. Mysoline est contre-indiqué lors d'intoxication aiguë\n"
+         "aux dépresseurs centraux et à l'alcool, lors de porphyrie hépatique latente ou aiguë, lors de troubles graves des fonctions hépatique et rénale, lors de\n"
+         "lésions du muscle cardiaque ainsi que lors d'hypersensibilité ou de réactions allergiques à la primidone, à une autre composant de la préparation ou au\n"
+         "phénobarbital. Beaucoup d'effets secondaires. Joue un rôle au niveau du flux ionique.\n\n"
+
+         "Utilisation:\n"
+         "Grand mal, épilepsie psychomotrice, épilepsie focale, petit mal, crises myocloniques et akinétiques.\n"
+         "---------\n"
+         "Contre-indications:\n"
+         "Mysoline est contre-indiqué lors d'intoxication aiguë aux dépresseurs centraux et à l'alcool, lors de porphyrie hépatique latente ou aiguë, lors de troubles graves\n"
+         "des fonctions hépatique et rénale, lors de lésions du muscle cardiaque ainsi que lors d'hypersensibilité ou de réactions allergiques à la primidone, à une autre\n"
+         "composant de la préparation ou au phénobarbital.\n"
+         "---------\n"
+         "Interactions:\n"
+         "La primidone, comme également le métabolite principal, le phénobarbital, augmente l'activité des enzymes hépatiques, notamment du système enzymatique du\n" 
+         "CYP 450 3A4. Ceci peut modifier la pharmacocinétique d'autres médicaments.\n\n"
+
+         "L'administration simultanée de primidone et des médicaments suivants accélère le métabolisme ce qui entraîne une diminution de la concentration plasmatique ou\n"
+         "de la demi-vie: androgènes, antidépresseurs tricycliques, benzodiazépines, bêtabloquants, carbamazépine, célécoxibe, ciclosporine, quinidine, chloramphénicol*,\n"
+         "cyclophosphamide, dicoumarine, digitoxine, doxycycline, éthosuximide, étoposide, felbamate*, granisétron, contraceptifs oraux, corticostéroïdes/glucocorticoïdes,\n"
+         "lamotrigine, losartan, méthadone, métronidazole*, miansérine, montélukast, valproate de sodium*, nelfinavir*, antirhumatismaux non stéroïdiens, nimodipine,\n"
+         "oméprazole, oxcarbazépine, phénytoïne, bromure de rocuronium, ISRS, sulfonylurées, tiagabine, théophyllines*, topiramate, bromure de vécuronium et zonisamide.\n\n"
+
+         "Les médicaments suivants inhibent le système enzymatique du CYP 450 3A4 et des augmentations de la concentration plasmatique de la primidone et de son\n"
+         "métabolite principal, le phénobarbital, sont possibles: chloramphénicol*, felbamate*, nelfinavir*, métronidazole* et valproate de sodium*.\n\n"
+
+         "Le millepertuis (Hypericum perforatum) influence également le système enzymatique du CYP 450 3A4 et peut diminuer la concentration plasmatique de la primidone\n"
+         "et de son métabolite principal, le phénobarbital.\n\n"
+
+         "La primidone inhibe la glucuronidation du paracétamol et peut ainsi potentialiser l'hépatotoxicité de celui-ci.\n\n"
+
+         "L'effet dépresseur central de la primidone s'additionne à l'effet dépresseur sur le SNC de l'alcool, des opiacés et des barbituriques.\n\n"
+
+         "* La primidone et le médicament administré simultanément sont influencés.\n"
+         "---------\n"
+         "Effets secondaires:\n"
+         "Apathie, ataxie, troubles de la vue, nystagmus, nausées, obnubilation. Basses concentrations sanguines d'acide folique. Comme avec le phénobarbital et la\n"
+         "phénytoïne, une anémie mégaloblastique peut se développer exceptionnellement et nécessiter un arrêt du traitement. Elle peut être traitée par l'acide folique.\n"
+         "Particulièrement en cas d'un traitement à long terme, une ostéomalacie et une hypocalcémie peuvent apparaître (influence du métabolisme de la vitamine D).\n"
+         "Des cas de diminution de la densité de l'os, de l'ostéopénie, de l'ostéoporose et des fractures, ont été rapportés chez des patientes traités par primidone\n"
+         "à long terme.\n"
+         "Un complément vitaminique D peut s'avérer nécessaire durant un traitement à long terme par Mysoline, car le catabolisme de la vitamine D peut être accru.\n"
+
+         "Les barbituriques peuvent provoquer des troubles de la fonction hépatique pouvant aller jusqu'à la nécrose hépatique, une augmentation des valeurs des enzymes\n"
+         "hépatiques (en particulier de la γ-GT).\n"
+
+         "Le mécanisme d'action du primidone sur le métabolisme de l'os n'est pas connue.Les effets indésirables connus du phénobarbital, l'un des deux principaux\n"
+         "métabolites de la primidone, sont des réactions d'hypersensibilité, se traduisant avant tout par des réactions cutanées variées, une photosensibilisation,\n"
+         "un exanthème et un lupus érythémateux systémique. Des réactions de type immédiat, notamment urticaire et oedème de Quincke, ont également été rapportées. Des\n"
+         "cas isolés de réactions cutanées sévères (p.ex. syndrome de Lyell) ont également été observés.Signes généraux d'une dépression du SNC (fatigue, somnolence,\n"
+         "léthargie, ralentissement du temps de réaction, diminution des facultés de jugement, troubles de l'élocution). En outre, une constipation, des myalgies et\n"
+         "des névralgies ont été observées pour d'autres barbituriques (p.ex. le phénobarbital). Une grande partie de ces effets secondaires s'atténue au cours du\n"
+         "traitement. Des ataxies et des troubles visuels réversibles (nystagmus, dédoublement) apparaissent également et peuvent indiquer une intoxication.\n\n"
+
+         "En cas d'idiosyncrasie, les symptômes neurologiques peuvent être très graves, de sorte qu'un traitement par Mysoline n'est pas adéquat pour un tel patient.\n"
+         "Des cas isolés de perturbations de l'hémogramme (anémie aplasique et mégaloblastique, pancytopénie, thrombopénie, leucopénie, agranulocytose et hémorragies)\n"
+         "sont apparus, rendant nécessaire la recherche d'un éventuel lien lorsque des modifications de l'hémogramme apparaissant au cours d'un traitement par Mysoline.\n"
+         "---------\n"
+         "Surdosage:\n"
+         "Etant donné que le phénobarbital est le métabolite principal de la primidone, il détermine également le tableau clinique de l'intoxication.\n"
+
+         "SNC: somnolence, dysarthrie, ataxie, nystagmus, vertiges, céphalées, confusion, sommeil profond, coma (avec réaction à la douleur progressivement décroissante),\n"
+         "modifications de l'EEG jusqu'à la ligne zéro, hypothermie. Au stade précoce, les pupilles sont contractées, ensuite mydriatiques, en règle générale, elles\n"
+         "réagissent à la lumière.\n\n"
+
+         "Respiration: dépression respiratoire menaçant déjà potentiellement le pronostic vital aux stades précoces du coma.\n\n"
+
+         "Circulation: hypotension artérielle, choc (cardiogénique par la diminution de la contractilité myocardique, hypovolémique, neurogène).\n\n"
+
+         "Peau: lésions cutanées bulleuses caractéristiques (dans 4 à 7% des cas) et nécroses de pression chez les patients comateux (la plupart du temps dans les 24 heures).\n\n"
+
+         "Muscles et squelette: rhabdomyolyse.\n\n"
+
+         "Une cristallurie peut se manifester lors d'un surdosage; elle peut représenter une aide à la pose du diagnostic lorsqu'une intoxication à la primidone est suspectée.\n"
+         "---------\n"
+         "Traitements:\n"
+         "Dans les cas légers durant la phase précoce de l'intoxication (1 à 2 heures après la prise), décontamination primaire par une administration unique de charbon\n"
+         "actif (par voie orale, adultes: 70 g, enfants 1–2 g/kg sous forme de suspension aqueuse) et substitution de liquide abondante. Dans les cas sévères, décontamination\n"
+         "primaire par un lavage d'estomac dans la première heure suivant l'ingestion. En cas d'inconscience, procéder d'abord à une intubation. Ensuite, décontamination\n"
+         "primaire par l'administration de charbon actif comme décrit auparavant. En outre, décontamination secondaire par l'administration répétée de charbon actif\n"
+         "(adultes 35–50 g toutes les 4 heures, enfants 0,5–1,0 g/kg) pendant 3 jours ainsi que diurèse forcée. Les contre-indications du charbon actif (iléus, etc.) et\n"
+         "la substitution de liquide accrue (insuffisance cardiaque, etc.) ainsi que la protection de l'aspiration doivent être observées. Une diurèse alcaline par du\n"
+         "de bicarbonate de soude (cave hypokaliémie) accélère l'élimination du métabolite principal, le phénobarbital (pH ciblé de l'urine 7,5–8,0) par la diminution\n"
+         "de la résorption tubulaire. De même, l'élimination du phénobarbital peut être accélérée par l'hémodialyse et la dialyse péritonéale.\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "PHENOBARBITAL, Aphénylbarbite\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "Utiliser contre l'épilepsie, l'agitation, les convulsions fébriles. Il a une induction enzymatique. La toxcicité du méthotrexate est majorée, il\n"
+         "est potentialisé en concomittance avec l'acide valproïque, les AD du système nerveux central avec le phénobarbital se potentialisent mutuellement,\n"
+         "les ACO, la digoxine, la doxicycline, les hormones, les glucocorticoïdes sont diminués ou augmentés. Contre-indiqué :\n"
+         "médicaments agissant sur le SNC, les\n"
+         "hypnotiques, les tranquilisants, stimulants, analgésiques, l'alcool, trouble grave de la fonction hépatique ou rénale, lésions myocardiques, porphyrie\n"
+         "hépatique.\n"
+         "Beaucoup d'effets secondaires.\n\n"
+
+         "Utilisation:\n"
+         "Epilepsie, états d'agitation, convulsions fébriles.\n"
+         "Utilisé à titre d'adjuvant pour les traitements de sevrage.\n"
+         "---------\n"
+         "Contre-indications:\n"
+         "*Hypersensibilité au phénobarbital.\n"
+         "*Intoxication aiguë par des médicaments agissant sur le système nerveux central: hypnotiques, tranquillisants, stimulants et analgésiques ainsi que l'alcool,\n"
+         "la dépendance médicamenteuse et la consommation simultanée d'alcool. Porphyrie hépatique, troubles graves de la fonction rénale et hépatique et lésions\n"
+         "myocardiques.\n"
+         "---------\n"
+         "Interactions:\n"
+         "L'utilisation prolongée de phénobarbital peut provoquer une induction des enzymes hépatiques microsomales; en d'autres termes, la biotransformation des produits\n"
+         "pharmaceutiques qui forment le substrat de ces enzymes hépatiques peut être accrue d'un facteur de 2 à 3.\n\n"
+
+         "Les effets des anticoagulants oraux, des antiépileptiques, des dérivés de la coumarine, de la digitoxine, de la doxycycline, de la griséofulvine et des hormones\n"
+         "stéroïdiennes tels que les androgènes, les progestatifs, les œstrogènes (cave: contraceptifs oraux!) et les glucocorticoïdes sont diminués par le phénobarbital.\n"
+         "L'éventuelle perte d'activité lors d'une prescription concomitante de médicaments contenant les classes de principes actifs susmentionnées devrait être considérée\n"
+         "et la dose devrait être adaptée en conséquence.\n\n"
+
+         "Les médicaments dépresseurs du système nerveux central et/ou l'alcool, administrés de façon simultanée avec le phénobarbital, peuvent potentialiser mutuellement\n"
+         "leurs effets.\n\n"
+
+         "La toxicité du méthotrexate est majorée par le phénobarbital.\n\n"
+
+         "Les concentrations sériques du phénobarbital peuvent être potentialisées par l'utilisation concomitante d'acide valproïque.\n"
+         "---------\n"
+         "Effets secondaires:\n"
+         "Fréquemment: signes généraux de sédation centrale (obnubilation, fatigue, somnolence, léthargie, prolongement du temps de réaction, limitation de la capacité de\n"
+         "jugement, troubles de l'élocution, vertiges) ainsi que céphalées et neuralgies. Des ataxies et des troubles visuels réversibles (nystagmus, diplopie) peuvent\n"
+         "également survenir et indiquer une intoxication.\n\n"
+
+         "Des troubles du rythme cardiaque ont été particulièrement observés après l'administration de doses élevées. Une bradycardie, une hypotension et un choc ont été\n"
+         "surtout observés après une application parentérale de phénobarbital.\n\n"
+
+         "L'effet de dépression respiratoire peut être plus prononcé lors d'une obstruction des voies respiratoires et de lésions cérébrales.\n\n"
+
+         "Des réactions cutanées sévères (p.ex. syndrome de Stevens-Johnson, syndrome de Lyell) sont également apparues dans des cas isolés.\n\n"
+
+         "Fréquemment: des troubles du tissu conjonctif comme myalgies, arthralgies.\n\n"
+
+         "Il est possible de développer une ostéomalacie et une hypocalcémie en particulier lors d'une thérapie au long cours. On a rarement observé une contracture de\n"
+         "Dupuytren.\n\n"
+
+         "Des cas de diminution de la densité osseuse, d'ostéopénie, d'ostéoporose et de fractures ont été rapportés chez des patients ayant pris du phénobarbital pendant\n"
+         "une longue durée. Le mécanisme par lequel le phénobarbital influence le métabolisme osseux n'est pas connu.\n"
+         "---------\n"
+         "Surdosage:\n"
+         "SNC: somnolence, dysarthrie, ataxie, nystagmus, vertiges, céphalées, confusion, sommeil profond, coma (avec réaction à la douleur progressivement décroissante),\n"
+         "modifications de l'EEG jusqu'à la ligne zéro, hypothermie. Au stade précoce, les pupilles sont contractées, ensuite mydriatiques, en règle générale, elles\n"
+         "réagissent à la lumière.\n\n"
+
+         "Respiration: dépression respiratoire menaçant déjà potentiellement le pronostic vital aux stades précoces du coma.\n\n"
+
+         "Circulation: hypotension artérielle, choc (cardiogénique par la diminution de la contractilité myocardique, hypovolémique, neurogène).\n\n"
+
+         "Peau: lésions cutanées bulleuses caractéristiques (dans 4 à 7% des cas) et nécroses de pression chez les patients comateux (la plupart du temps dans les 24\n"
+         "heures).\n\n"
+
+         "Sur le plan musculo-squelettique: rhabdomyolyse.\n"
+         "---------\n"
+         "Traitements:\n"
+         "Dans les cas légers durant la phase précoce de l'intoxication (1 à 2 heures après la prise), décontamination primaire par une administration unique de charbon\n"
+         "actif (par voie orale, adultes: 70 g, enfants 1-2 g/kg sous forme de suspension aqueuse) et substitution de liquide abondante.\n\n"
+
+         "Dans les cas sévères, décontamination primaire par un lavage d'estomac dans la première heure suivant l'ingestion; en cas d'inconscience, procédez d'abord à une\n"
+         "intubation. Ensuite, décontamination primaire par l'administration de charbon actif comme décrit auparavant. En outre, décontamination secondaire par\n"
+         "l'administration répétée de charbon actif (adultes 35-50 g toutes les 4 heures, enfants 0,5-1,0 g/kg) pendant 3 jours ainsi que diurèse forcée. Les contre-\n"
+         "indications du charbon actif (iléus, etc.) et de la substitution de liquide accrue (insuffisance cardiaque, etc.) ainsi que la protection de l'aspiration\n" 
+         "doivent être observées. Une diurèse alcaline par du bicarbonate de soude (cave hypokaliémie) accélère l'élimination du phénobarbital (pH ciblé de l'urine 7,5-\n"
+         "8,0) par la diminution de la résorption tubulaire. De même, l'élimination du phénobarbital peut être accélérée par l'hémodialyse et la dialyse péritonéale.\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "PHENYTOINE\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "Crises focales: crises bravais-jackson (sensorimotrice), crises psychomotrices (épilepsie du lobe temporal). Beaucoup d'effets secondaires: IMC, ventricule\n" 
+         "gauche, dommages lourds sur les cellules sanguines et la moelle osseuse. Beaucoup trop interactions en concommitance avec d'autres médicaments.\n\n"
+
+         "Utilisation:\n"
+         "Crises focales: Crises de Bravais-Jackson (sensorimotrice), crises psychomotrices (épilepsie du lobe temporal).\n"
+         "Crises généralisées: Crises de type grand mal (épilepsie du sommeil, forme diffuse). Traitement de la crise et protection en cas de traumatisme cranio-cérébral.\n"
+         "---------\n"
+         "Contre-indications:\n"
+         "Hypersensibilité à la phénytoïne, à d'autres hydantoïnes ou à l'un des excipients (voir «Composition»); blocs atrioventriculaires de 2ème et 3ème degrés; maladie\n" 
+         "du nœud sinusal, diminution de la fonction du ventricule gauche, infarctus du myocarde de moins de 3 mois, dommages lourds de cellules sanguines et de la moelle\n" 
+         "osseuse.\n"
+         "---------\n"
+         "Interactions:\n"
+         "La prise simultanée d'antiacides peut faire baisser le taux sérique de phénytoïne. La prise chronique de primidone, vigabatrine, théophylline et d'alcool peut faire\n" 
+         "baisser le taux sérique de phénytoïne. Les substances suivantes peuvent également réduire le taux sérique de phénytoïne: ciprofloxacine, rifampicine, réserpine,\n" 
+         "sucralfate, diazoxide, théophylline.\n\n"
+
+         "Les médicaments suivants peuvent élever le taux sérique de phénytoine: anticoagulants oraux, antimycosiques, amiodarone, benzodiazépines, cimétidine,\n" 
+         "chloramphénicol, cyclosérine, disulfiram, diltiazem, érythromycine, fluoxétine, halothan, isoniazide, méthyphénidate, antirhumatismaux non stéroïdiens, nifédipine,\n"
+         "sulfonamide, P.A.S., sultiame, psychotropes tricycliques, felbamat, oméprazol, oestrogènes, ranitidine, sertraline, tolbutamide, ticlopidine et consommation\n" 
+         "élevée d'alcool.\n\n"
+
+         "Les médicaments suivants peuvent augmenter ou réduire la concentration de phénytoïne: carbamazépine, phénobarbital, valproat, cytostatiques, chlordiazéproxide,\n" 
+         "diazépam.\n\n"
+
+         "La phénytoïne peut augmenter la concentration de principe actif de la rifampicine ou réduire l'effet des médicaments ou encore avoir une influence sur leur\n"
+         "efficacité: vécuronium, pancuronium, cyclosporine, anticoagulants oraux, vérapamil, carbamazepine, doxycycline, itraconazol, corticoïdes, contraceptifs oraux,\n" 
+         "psychotropes tricycliques, valproat et lamotrigine.\n\n"
+
+         "La toxicité du méthotrexate peut être accrue.\n\n"
+
+         "L'effet de la phénytoïne peut être réduit par l'absorption simultanée d'acide folique.\n\n"
+
+         "Une alimentation simultanée par voie entérale réduit la concentration plasmatique de la phénytoïne. Il est donc nécessaire de contrôler fréquemment la\n"
+         "concentration plasmatique.\n"
+         "---------\n"
+         "Effets secondaires:\n"
+         "La littérature comporte des éléments indiquant que la phénytoïne peut déclencher des attaques de porphyrie.\n\n"
+
+         "Il existe des indications montrant qu'une atrophie du cervelet peut survenir avec un traitement de longue durée associé à des concentrations plasmatiques supérieures\n" 
+         "à 25 µg/ml et des signes cliniques d'intoxication (même si la dose standard recommandée est respectée).\n\n"
+
+         "Un traitement de longue durée par phénytoïne associée à d'autres antiépileptiques, notamment l'acide valproïque, peut provoquer des signes de dommage cérébral\n"
+         "(encéphalopathie), notamment en cas de concentration élevée de phénytoïne sans liaison protéinique: augmentation des crises de convulsion, inertie (stupeur),\n" 
+         "faiblesse musculaire (hypotonie musculaire), troubles de la motricité (dyskinésie choréique) et modifications générales sévères de l'EEG.\n\n"
+
+         "La littérature signale des cas d'érythème multiforme et/ou de syndrome de Lyell après absorption de phénytoïne sous traitement par corticoïdes simultané progre-\n"
+         "-ssivement réduit et irradiation crânienne.\n\n"
+
+         "Une diminution de la densité osseuse, une ostéopénie, une ostéoporose et des fractures ont été rapportées chez des patients traités au long cours par la phénytoïne.\n" 
+         "Le mécanisme par lequel la phénytoïne influence le métabolisme osseux n'a pas encore été identifié.\n\n"
+
+         "Dans de rares cas, de graves réactions allergiques surviennent après administration prolongée: dermatite exfoliative, fièvre, gonflement des ganglions lymphatiques,\n" 
+         "impact sur les organes hématopoïétiques et sur la moelle osseuse, troubles de la fonction hépatique avec atteinte éventuelle d'autres systèmes d'organes. En raison\n" 
+         "du pronostic défavorable de ces effets secondaires, le traitement doit être immédiatement interrompu et le patient surveillé de près.\n\n"
+
+         "Diplopie, nystagme.hyperplasie gingivale, dysgueusi.lassitude. ataxie, irritabilité accrue, augmentation de la fréquence du tremblement au repos, dyskinésie, langue\n" 
+         "bulbaire, troubles de l'attention et troubles de la capacité intellectuelle, vertiges, maux de tête.\n"
+         "---------\n"
+         "Surdosage:\n"
+         "Symptômes en cas de surdosage prolongé: regard fixe, perte d'appétit, vomissements, perte de poids, apathie et sédation, troubles de la perception et de la\n" 
+         "connaissance pouvant aller jusqu'au coma.\n"
+         "---------\n"
+         "Traitement:\n"
+         "La première mesure à prendre est d'effectuer un lavage d'estomac et d'administrer du charbon actif, avant de surveiller intensivement le patient. Les hémodialyses,\n" 
+         "les diurèses forcées et les dialyses péritonéales sont peu efficaces. Nous ne disposons pas de données suffisantes sur l'efficacité de la perfusion hématogène de\n" 
+         "charbon ni sur celle de la substitution et de la transfusion plasmatique totale. Aussi est-il recommandé d'initier une thérapie intensive en milieu hospitalier\n" 
+         "sans processus de désintoxication spécial, mais sous contrôle de la concentration plasmatique.\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "PETINIMID (ethosuximide)\n\n"
+
+         "******************************************************************************************************************************************\n"
+         "******************************************************************************************************************************************\n\n"
+
+         "Petites crises épileptiques (petit mal), en particulier absences. Si en plus des absences, d'autres formes de crises surviennent.\n"
+         "Pétinimid seul ne suffit pas. La prudence est de rigueur chez les patients insuffisants hépatiques ou rénaux. Attention aux idées suicidaires. Le médicament ne\n" 
+         "doit pas être administré pendant la grossesse, sauf en cas de nécessité absolue. Agit sur les régions corticales motrices, en élevant au niveau du système\n" 
+         "nerveux central le seuil de réaction aux excitations provoquant des convulsions.\n\n"
+
+         "Utilisation:\n"
+         "Petites crises épileptiques (petit mal), en particulier absences. Si en plus des absences, d'autres formes de crises surviennent, Pétinimid seul ne suffit pas.\n" 
+         "Il faut alors donner, en plus de Pétinimid, un autre antiépileptique.\n"
+         "---------\n"
+         "Contre-indications:\n"
+         "*Hypersensibilité au principe actif ou à l'un des excipients (voir «Composition»).\n"
+         "---------\n"
+         "Interactions:\n"
+         "L'éthosuximide ne modifie pas les concentrations plasmatiques d'autres antiépileptiques tels que la primidone, le phénobarbital ou la phénytoïne.\n"
+         "L'association avec l'acide valproïque renforce l'effet de l'éthosuximide.\n"
+         "La prise simultanée d'éthosuximide et d'alcool ou d'autres agents dépresseurs du système nerveux central peut renforcer l'effet sédatif.\n"
+         "La prise simultanée de substances provoquant des convulsions est à éviter.\n"
+         "L'efficacité des contraceptifs oraux peut être diminuée.\n"
+         "---------\n"
+         "Effets secondaires:\n"  
+         "Des nausées, des vomissements, une inappétence, des douleurs gastriques, un amaigrissement, une diarrhée, une fatigue, des céphalées, des vertiges, une ataxie\n" 
+         "et une photophobie peuvent survenir surtout au début du traitement.\n\n"
+
+         "Irritabilité, agitation, autres états d'anxiété ou d'agitation ainsi qu'agressivité et difficultés de concentration ou autres modifications de la personnalité\n" 
+         "ont été rapportés, notamment chez les patients ayant déjà présenté des troubles psychiatriques dans leurs antécédents. Des cas isolés d'augmentation de la libido,\n" 
+         "de psychoses paranoïdes et de dépressions marquées avec des tendances suicidaires potentielles ont été rapportés.\n"
+         "---------\n"                                          
+         "Surdosage:\n"
+         "Les signes d'un surdosage chronique sont des troubles du comportement, des symptômes gastro-intestinaux et une augmentation de la fréquence des crises. En cas\n" 
+         "d'apparition de ces signes, il faut réduire la posologie et contrôler le taux plasmatique.\n"
+         "---------\n"
+         "Traitements:\n"
+         "Un surdosage aigu provoque un coma profond. Outre le traitement symptomatique, une hémoperfusion avec du charbon médical est recommandée. On ne connait pas\n" 
+         "d'antidote spécifique.\n\n"
+
+         "******************************************************************************************************************************************\n\n",
+         font=('Times', 14), fill='black')
 
         button12=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showmae4, anchor=CENTER)
         button12.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -5343,7 +5367,7 @@ class Application(Frame):
                                                      "chez l'enfant, l'adolescent ou l'adulte ayant une capacité intellectuelle en dessous de la moyenne ou un retard mental, et qui montrent un comportement destructeur\n" 
                                                      "comme agressivité, impulsivité et automutilation.\n"
                                                      "dans le traitement symptomatique des troubles autistiques accompagnés de symptômes s'étendant surtout à l'hyperactivité et à l'irritabilité (y compris agressivité,\n"
-                             "automutilation, anxiété et comportements répétitifs) chez les enfants dès 5 ans et les adolescents. L'instauration du traitement et les contrôles réguliers de\n" 
+                                                     "automutilation, anxiété et comportements répétitifs) chez les enfants dès 5 ans et les adolescents. L'instauration du traitement et les contrôles réguliers de\n" 
                                                      "celui-ci doivent être effectués par un médecin spécialisé expérimenté. Le traitement médicamenteux devrait être mené dans le cadre d'un concept intégré comprenant\n" 
                                                      "aussi des mesures socio- et psychothérapeutiques.\n"
                                                      "---------\n"
@@ -5576,16 +5600,16 @@ class Application(Frame):
         self.can.create_text(10, 50, anchor=NW, text="-PROPRIETES DES ANTIDEPRESSEURS-",
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Le mécanisme d'action des antidépresseurs le plus fréquemment retrouvé est essentiellement l'inhibition de la recapture des monoamines, qu'il s'agisse de la\n" 
-                                                     "noradrénaline, de la sérotonine, ou encore de la dopamine (imipraminiques, IRS, IRSNA). On observe également pour la plupart d'entre eux une diminution de la\n" 
-                                                     "dégradation de ces amines (IMAOs), un blocage du rétrocontrôle inhibiteur, une action au niveau du second messager (probablement l'action commune de beaucoup\n" 
-                                                     "d'antidépresseurs), ainsi qu'une action post-synaptique.\n\n"
+        "noradrénaline, de la sérotonine, ou encore de la dopamine (imipraminiques, IRS, IRSNA). On observe également pour la plupart d'entre eux une diminution de la\n" 
+        "dégradation de ces amines (IMAOs), un blocage du rétrocontrôle inhibiteur, une action au niveau du second messager (probablement l'action commune de beaucoup\n" 
+        "d'antidépresseurs), ainsi qu'une action post-synaptique.\n\n"
 
-                                                     "Actuellement d’autres médicaments commercialisées, mettent en avant d'autres mécanismes d’action. Ces médicaments peuvent être non seulement des IRSs mais\n" 
-                                                     "agissent aussi sur différents sous types de récepteurs (antagoniste 5-HT2C) ou bien encore des antagonistes des récepteurs alpha 2 telle la mirtazapine.\n\n"
+        "Actuellement d’autres médicaments commercialisées, mettent en avant d'autres mécanismes d’action. Ces médicaments peuvent être non seulement des IRSs mais\n" 
+        "agissent aussi sur différents sous types de récepteurs (antagoniste 5-HT2C) ou bien encore des antagonistes des récepteurs alpha 2 telle la mirtazapine.\n\n"
 
-                                                     "Si ces mécanismes d'action modifient la libération des neuromédiateurs, ils ne peuvent pas expliquer complétement l'effet pharmacodynamique des antidépresseurs\n" 
-                                                     "en clinique.\n",
-                    font=('Times', 14), fill='black')
+        "Si ces mécanismes d'action modifient la libération des neuromédiateurs, ils ne peuvent pas expliquer complétement l'effet pharmacodynamique des antidépresseurs\n" 
+        "en clinique.\n",
+        font=('Times', 14), fill='black')
 
         button30=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showap6, anchor=CENTER)
         button30.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -5601,118 +5625,118 @@ class Application(Frame):
         self.can.create_text(10, 50, anchor=NW, text="-SYNDROME SEROTONINERGIQUE-",
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Le syndrome sérotoninergique est un effet indésirable potentiellement mortel qui est la conséquence d'un excès d'activité de la sérotonine au niveau central et\n" 
-                                                     "périphérique. Il peut survenir tant à dose thérapeutique qu'en cas de surdosage, mais il est le plus souvent la conséquence d'une interaction entre plusieurs\n" 
-                                                     "médicaments sérotoninergiques. Le syndrome survient le plus souvent dans les 24 heures et même dans les 6 heures qui suivent le début, le changement, l'ajout ou\n" 
-                                                     "même l'arrêt d'un médicament. Le syndrome sérotoninergique a également été observé au début d'un traitement par un médicament sérotoninergique suivant de trop\n" 
-                                                     "près l'arrêt d'un autre médicament sérotoninergique. Il est conseillé de respecter un intervalle de 1 à 2 semaines en fonction de la demi-vie de la molécule\n" 
-                                                     "(5 semaines pour la fluoxétine).\n\n"
+        "périphérique. Il peut survenir tant à dose thérapeutique qu'en cas de surdosage, mais il est le plus souvent la conséquence d'une interaction entre plusieurs\n" 
+        "médicaments sérotoninergiques. Le syndrome survient le plus souvent dans les 24 heures et même dans les 6 heures qui suivent le début, le changement, l'ajout ou\n" 
+        "même l'arrêt d'un médicament. Le syndrome sérotoninergique a également été observé au début d'un traitement par un médicament sérotoninergique suivant de trop\n" 
+        "près l'arrêt d'un autre médicament sérotoninergique. Il est conseillé de respecter un intervalle de 1 à 2 semaines en fonction de la demi-vie de la molécule\n" 
+        "(5 semaines pour la fluoxétine).\n\n"
 
-                                                     "Le syndrome se présente comme une triade:\n"
-                                                     "modification de l'état mental (angoisse, agitation, confusion, fébrilité, désorientation, délirium, convulsions, coma)\n"
-                                                     "symptômes neuromusculaires (rigidité, tremblements, nystagmus, myoclonies, ataxie, hyperréflexie, hypertonie (des membres inférieurs surtout))\n"
-                                                     "instabilité du système nerveux autonome : hypertension, hypotension, tachycardie, tachypnée, hyperthermie, mydriase, transpiration abondante, diarrhée\n"
-                                                     "Cette triade n'est pas toujours présente : en pratique clinique, l'apparition de clonies et d'hyperréflexie chez un patient traité par un médicament sérotoni-\n"
-                                                     "-nergique doit faire penser au diagnostic.\n\n"
+        "Le syndrome se présente comme une triade:\n"
+        "modification de l'état mental (angoisse, agitation, confusion, fébrilité, désorientation, délirium, convulsions, coma)\n"
+        "symptômes neuromusculaires (rigidité, tremblements, nystagmus, myoclonies, ataxie, hyperréflexie, hypertonie (des membres inférieurs surtout))\n"
+        "instabilité du système nerveux autonome : hypertension, hypotension, tachycardie, tachypnée, hyperthermie, mydriase, transpiration abondante, diarrhée\n"
+        "Cette triade n'est pas toujours présente : en pratique clinique, l'apparition de clonies et d'hyperréflexie chez un patient traité par un médicament sérotoni-\n"
+        "-nergique doit faire penser au diagnostic.\n\n"
 
-                                                     "La plupart des patients ayant présenté le syndrome étaient traités par un antidépresseur inhibiteur de la monoamine-oxydase ou par un inhibiteur spécifique de la\n" 
-                                                     "recapture de la sérotonine en combinaison avec au moins un autre agent sérotoninergique.\n\n"
+        "La plupart des patients ayant présenté le syndrome étaient traités par un antidépresseur inhibiteur de la monoamine-oxydase ou par un inhibiteur spécifique de la\n" 
+        "recapture de la sérotonine en combinaison avec au moins un autre agent sérotoninergique.\n\n"
 
-                                                     "Une étude française portant sur 125 patients présentant un syndrome sérotoninergique a montré que 40 % d'entre eux ont développé le syndrome au cours d'un trai-\n"
-                                                     "-tement avec un seul médicament sérotoninergique, principalement un inhibiteur spécifique de la recapture de la sérotonine (ISRS) ou la venlafaxine et que dans 60%\n"
-                                                     "des cas il s'agissait d'une interaction médicamenteuse, essentiellement entre le tramadol et un ISRS.\n\n"
+        "Une étude française portant sur 125 patients présentant un syndrome sérotoninergique a montré que 40 % d'entre eux ont développé le syndrome au cours d'un trai-\n"
+        "-tement avec un seul médicament sérotoninergique, principalement un inhibiteur spécifique de la recapture de la sérotonine (ISRS) ou la venlafaxine et que dans 60%\n"
+        "des cas il s'agissait d'une interaction médicamenteuse, essentiellement entre le tramadol et un ISRS.\n\n"
 
-                                                     "La sérotonine ou 5-hydroxytryptamine est un neurotransmetteur doué de nombreuses fonctions. La sérotonine ne passe pas la barrière hémato- méningée et est synthé-\n"
-                                                     "-tisée au niveau central et périphérique par décarboxylation et hydroxylation d'un acide aminé, le tryptophane. Une fois produite, la sérotonine est stockée ou\n" 
-                                                     "rapidement inactivée par la monoamine-oxydase (MAO).\n\n"
+        "La sérotonine ou 5-hydroxytryptamine est un neurotransmetteur doué de nombreuses fonctions. La sérotonine ne passe pas la barrière hémato- méningée et est synthé-\n"
+        "-tisée au niveau central et périphérique par décarboxylation et hydroxylation d'un acide aminé, le tryptophane. Une fois produite, la sérotonine est stockée ou\n" 
+        "rapidement inactivée par la monoamine-oxydase (MAO).\n\n"
 
-                                                     "La sérotonine est l'un des 3 neurotransmetteurs le plus souvent associé à des symptômes dépressifs.\n"
-                                                     "Toutefois il y a également dans l'organisme 7 sous-types de récepteurs situés en dehors du système nerveux central.\n"
-                                                     "La sérotonine agit comme neurotransmetteur au niveau du système nerveux central, et influence l'humeur, la personnalité, le sommeil, la sexualité, le comportement\n" 
-                                                     "affectif, la perception de la douleur, la régulation hormonale et thermique, l'état d'éveil, le comportement alimentaire, les nausées et vomissements... Au niveau\n" 
-                                                     "du système nerveux périphérique, la sérotonine agit sur la régulation de la motilité intestinale et la vasomotricité.\n"
-                                                     "Une concentration optimale de sérotonine influence favorablement la qualité de vie mais des quantité excessives ont des conséquences néfastes qui se manifestent par\n" 
-                                                     "un syndrome sérotoninergique. Le syndrome sérotoninergique peut survenir tant chez l'homme que chez l'animal.\n\n"
+        "La sérotonine est l'un des 3 neurotransmetteurs le plus souvent associé à des symptômes dépressifs.\n"
+        "Toutefois il y a également dans l'organisme 7 sous-types de récepteurs situés en dehors du système nerveux central.\n"
+        "La sérotonine agit comme neurotransmetteur au niveau du système nerveux central, et influence l'humeur, la personnalité, le sommeil, la sexualité, le comportement\n" 
+        "affectif, la perception de la douleur, la régulation hormonale et thermique, l'état d'éveil, le comportement alimentaire, les nausées et vomissements... Au niveau\n" 
+        "du système nerveux périphérique, la sérotonine agit sur la régulation de la motilité intestinale et la vasomotricité.\n"
+        "Une concentration optimale de sérotonine influence favorablement la qualité de vie mais des quantité excessives ont des conséquences néfastes qui se manifestent par\n" 
+        "un syndrome sérotoninergique. Le syndrome sérotoninergique peut survenir tant chez l'homme que chez l'animal.\n\n"
 
-                                                     "On distingue 4 mécanismes principaux par lesquels un médicament peut provoquer un syndrome sérotoninergique:\n"
-                                                     "Diminution de l'inactivation de la sérotonine (c'est le cas par exemple des inhibiteurs de la monoamine-oxydase ou du linezolid)\n"
-                                                     "Diminution de la recapture de la sérotonine (par exemple ISRS, inhibiteurs de la recapture de la sérotonine et de la noradrénaline, antidépresseurs tricycliques,\n"
-                                                     "amphétamines, cocaïne, MDMA, tramadol)\n"
-                                                     "Augmentation de la libération de la sérotonine (amphétamines, MDMA, lithium)\n"
-                                                     "Augmentation de la concentration des précurseurs de la sérotonine (L-tryptophane)\n\n"
+        "On distingue 4 mécanismes principaux par lesquels un médicament peut provoquer un syndrome sérotoninergique:\n"
+        "Diminution de l'inactivation de la sérotonine (c'est le cas par exemple des inhibiteurs de la monoamine-oxydase ou du linezolid)\n"
+        "Diminution de la recapture de la sérotonine (par exemple ISRS, inhibiteurs de la recapture de la sérotonine et de la noradrénaline, antidépresseurs tricycliques,\n"
+        "amphétamines, cocaïne, MDMA, tramadol)\n"
+        "Augmentation de la libération de la sérotonine (amphétamines, MDMA, lithium)\n"
+        "Augmentation de la concentration des précurseurs de la sérotonine (L-tryptophane)\n\n"
 
-                                                     "Le diagnostic différentiel avec le syndrome malin des neuroleptiques est les plus délicat:\n"
-                                                     "Syndrome sérotoninergique: plutôt brutal que progressif, récupération rapide, myoclonies et tremblements, réflexes augmentés, mydriase.\n"
-                                                     "Syndrome neuroleptique malin: plutôt progressif que brutal, longue durée, rigidité diffuse, réflexes diminués, pupilles normales.\n\n"
+        "Le diagnostic différentiel avec le syndrome malin des neuroleptiques est les plus délicat:\n"
+        "Syndrome sérotoninergique: plutôt brutal que progressif, récupération rapide, myoclonies et tremblements, réflexes augmentés, mydriase.\n"
+        "Syndrome neuroleptique malin: plutôt progressif que brutal, longue durée, rigidité diffuse, réflexes diminués, pupilles normales.\n\n"
 
-                                                     "Liste (non exhaustive) des médicaments les plus souvent en cause dans le syndrome sérotoninergique:\n"
-                                                     "Antidépresseurs:\n"
-                                                     "IMAO-A,  irréversible: isocarboxazide, phénelzine\n" 
-                                                     "IMAO-A, réversible: moclobémide\n"
-                                                     "IMAO-B: sélégiline,rasagiline\n"
-                                                     "IRSN: duloxétine, venlafaxine\n"
-                                                     "ISRS: citalopram, escitalopram, fluoxétine, paroxétine, sertraline\n\n"
+        "Liste (non exhaustive) des médicaments les plus souvent en cause dans le syndrome sérotoninergique:\n"
+        "Antidépresseurs:\n"
+        "IMAO-A,  irréversible: isocarboxazide, phénelzine\n" 
+        "IMAO-A, réversible: moclobémide\n"
+        "IMAO-B: sélégiline,rasagiline\n"
+        "IRSN: duloxétine, venlafaxine\n"
+        "ISRS: citalopram, escitalopram, fluoxétine, paroxétine, sertraline\n\n"
 
-                                                     "Tricycliques: amitriptyline, amoxapine, clomipramine, désipramine, dosulépine, doxépine, imipramine, nortriptyline, protriptyline\n"
-                                                     "Autres : bupropion, lithium miansérine, mirtazapine, trazodone\n\n"
+        "Tricycliques: amitriptyline, amoxapine, clomipramine, désipramine, dosulépine, doxépine, imipramine, nortriptyline, protriptyline\n"
+        "Autres : bupropion, lithium miansérine, mirtazapine, trazodone\n\n"
 
-                                                     "Opiacés:\n"
-                                                     "buprénorphine, dextrométorphan, fentanyl, morphine, oxycodone, pentazocine, tramadol\n"
-                                                     "Antimigraineux /triptans (agonistes 5-HT1):\n"
-                                                     "triptans: almotriptan,  élétriptan, frovatriptan, naratriptan, rizatriptan, sumatriptan, zolmitriptan, dihydro-ergotamine\n\n"
-                                                     "Stimulants du système nerveux central:\n"
-                                                     "Amphetamine, atomoxetine, cocaïne, LSD, MDA, MDMA (“ecstasy”)\n\n"
+        "Opiacés:\n"
+        "buprénorphine, dextrométorphan, fentanyl, morphine, oxycodone, pentazocine, tramadol\n"
+        "Antimigraineux /triptans (agonistes 5-HT1):\n"
+        "triptans: almotriptan,  élétriptan, frovatriptan, naratriptan, rizatriptan, sumatriptan, zolmitriptan, dihydro-ergotamine\n\n"
+        "Stimulants du système nerveux central:\n"
+        "Amphetamine, atomoxetine, cocaïne, LSD, MDA, MDMA (“ecstasy”)\n\n"
 
-                                                     "Médicaments de l’obésité:\n"
-                                                     "Sibutramine\n"
-                                                     "Phytopharmacie\n"
-                                                     "Millepertuis\n\n"
+        "Médicaments de l’obésité:\n"
+        "Sibutramine\n"
+        "Phytopharmacie\n"
+        "Millepertuis\n\n"
 
-                                                     "Antibiotiques:\n"
-                                                     "Linezolid\n\n"
+        "Antibiotiques:\n"
+        "Linezolid\n\n"
 
-                                                     "Antiémétiques:\n"
-                                                     "Ondansetron\n\n"
+        "Antiémétiques:\n"
+        "Ondansetron\n\n"
 
-                                                     "Acide aminé:\n"
-                                                     "L-tryptophane\n\n"
+        "Acide aminé:\n"
+        "L-tryptophane\n\n"
 
-                                                     "Antiviraux:\n" 
-                                                     "Ritonavir\n\n"
+        "Antiviraux:\n" 
+        "Ritonavir\n\n"
 
-                                                     "Autres:\n"
-                                                     "Dapoxétine, olanzapine, bleu de méthylène\n"
-                                                     "IMAO-A: inhibiteurs de la monoamine oxidase A; IMAO-B: inhibiteurs de la monoamine oxidase B;5-HT1: 5-hydroxytryptamine1; LSD: diéthylamide de l’acide\n" 
-                                                     "lysergique; MDA: méhylenedioxyamphétamine; MDMA: 3,4-méthylenedioxymethamphétamine; IRNS: inhibiteurs de la recapture de la noradrénaline et de la séroto-\n"
-                                                     "-nine, ISRS: inhibiteurs sélectifs de la recapture de la sérotonine.\n\n"
+        "Autres:\n"
+        "Dapoxétine, olanzapine, bleu de méthylène\n"
+        "IMAO-A: inhibiteurs de la monoamine oxidase A; IMAO-B: inhibiteurs de la monoamine oxidase B;5-HT1: 5-hydroxytryptamine1; LSD: diéthylamide de l’acide\n" 
+        "lysergique; MDA: méhylenedioxyamphétamine; MDMA: 3,4-méthylenedioxymethamphétamine; IRNS: inhibiteurs de la recapture de la noradrénaline et de la séroto-\n"
+        "-nine, ISRS: inhibiteurs sélectifs de la recapture de la sérotonine.\n\n"
 
-                                                     "Traitements:\n"
-                                                     "Hospitalisation, arrêt du ou des médicaments en cause : les symptômes disparaissent souvent en 24 à 72 heures. Surveillance de la fonction rénale, des électrolytes,\n" 
-                                                     "des créatine kinases et de l'équilibre hydrique. Agitation: benzodiazépines (ex. diazépam). En cas de symptomatologie très importante, une sédation avec intubation\n"
-                                                     "et curarisation peut-être nécessaire. Convulsions: benzodiazépines (diazépam, lorazepam ou midazolam) et/ou barbituriques i.v.\n"
-                                                     "Hypertension réfractaire à la sédation aux benzodiazépines : choisir un médicament à courte durée d'action: esmolol ou nitroglycérine. Les médicaments à longue durée\n" 
-                                                     "d'action comme le propranonol sont à éviter: l'instabilité du système nerveux autonome peut évoluer rapidement vers une hypotension importante.\n"
-                                                     "Hypotension: hydratation par voie intraveineuse pour combattre l'hypotension et la perte de liquide provoquée par l'hyperthermie.\n"
-                                                     "Vasopresseurs: noradrénaline, adrénaline. Les vasopresseurs possédant une action dopaminergique peuvent en théorie aggraver le syndrome sérotoninergique.\n"
-                                                     "Hyperthermie: hydratation par voie intraveineuse, refroidissement externe, contrôle de l'hyperactivité musculaire par benzodiazépines et curarisants non dépolarisants.\n"
-                                                     "Antagonistes de la sérotonine:\n"
-                                                     "La cyproheptadine est un antihistaminique et un antagoniste de la sérotonine. La cyproheptadine n'accélère pas la guérison, elle constitue un traitement\n"
-                                                     "symptomatique qui améliore le confort du patient (recommandation de grade C). Elle peut être proposée lorsque la température dépasse 38,5 C° ou en cas de rigidité\n"
-                                                     "musculaire importante.\n\n"
+        "Traitements:\n"
+        "Hospitalisation, arrêt du ou des médicaments en cause : les symptômes disparaissent souvent en 24 à 72 heures. Surveillance de la fonction rénale, des électrolytes,\n" 
+        "des créatine kinases et de l'équilibre hydrique. Agitation: benzodiazépines (ex. diazépam). En cas de symptomatologie très importante, une sédation avec intubation\n"
+        "et curarisation peut-être nécessaire. Convulsions: benzodiazépines (diazépam, lorazepam ou midazolam) et/ou barbituriques i.v.\n"
+        "Hypertension réfractaire à la sédation aux benzodiazépines : choisir un médicament à courte durée d'action: esmolol ou nitroglycérine. Les médicaments à longue durée\n" 
+        "d'action comme le propranonol sont à éviter: l'instabilité du système nerveux autonome peut évoluer rapidement vers une hypotension importante.\n"
+        "Hypotension: hydratation par voie intraveineuse pour combattre l'hypotension et la perte de liquide provoquée par l'hyperthermie.\n"
+        "Vasopresseurs: noradrénaline, adrénaline. Les vasopresseurs possédant une action dopaminergique peuvent en théorie aggraver le syndrome sérotoninergique.\n"
+        "Hyperthermie: hydratation par voie intraveineuse, refroidissement externe, contrôle de l'hyperactivité musculaire par benzodiazépines et curarisants non dépolarisants.\n"
+        "Antagonistes de la sérotonine:\n"
+        "La cyproheptadine est un antihistaminique et un antagoniste de la sérotonine. La cyproheptadine n'accélère pas la guérison, elle constitue un traitement\n"
+        "symptomatique qui améliore le confort du patient (recommandation de grade C). Elle peut être proposée lorsque la température dépasse 38,5 C° ou en cas de rigidité\n"
+        "musculaire importante.\n\n"
 
-                                                     "Nombre de cas de syndrome sérotoninergique annoncés à Swissmedic entre 1998 et 2009 selon le médicament incriminé.\n"
-                                                     "Plusieurs médicaments possibles par patient. Médicaments Cas Médicaments Cas ISRS 57 Citalopram 14 Sertraline 12 Escitalopram 10 Paroxétine 9 Fluvoxamine\n"
-                                                     "7 Fluoxétine 5 IRSN 33 Venlafaxine 29 Duloxétine 4 Autres anti- 23 dépresseurs Mirtazapine 11 Trazodone 6 Millepertuis 4 Réboxétine 1 Miansérine 1 Tricycliques\n"
-                                                     "16 Amitriptyline 6 Clomipramine 5 Trimipramine 4 Opipramol 1 IMAO 5 Moclobémide 5 Thymorégulateurs 12 Lithium 12 Opiacés 22 Tramadol 19 Fentanyl\n" 
-                                                     "1 Codéine 1 Méthadone 1 Autres médicaments 23 Linézolide 3 Valproate 3 Sibutramine 2 Méthylphénidate 2 Cocaïne 2 Varénicline 2 Quétiapine 2 Carbamazépine\n" 
-                                                     "1 Clométhiazole 1 Bleu de méthylène 1 Pipampérone 1 Lévomépromazine 1 Clozapine 1 Amisulpride 1.\n\n"
+        "Nombre de cas de syndrome sérotoninergique annoncés à Swissmedic entre 1998 et 2009 selon le médicament incriminé.\n"
+        "Plusieurs médicaments possibles par patient. Médicaments Cas Médicaments Cas ISRS 57 Citalopram 14 Sertraline 12 Escitalopram 10 Paroxétine 9 Fluvoxamine\n"
+        "7 Fluoxétine 5 IRSN 33 Venlafaxine 29 Duloxétine 4 Autres anti- 23 dépresseurs Mirtazapine 11 Trazodone 6 Millepertuis 4 Réboxétine 1 Miansérine 1 Tricycliques\n"
+        "16 Amitriptyline 6 Clomipramine 5 Trimipramine 4 Opipramol 1 IMAO 5 Moclobémide 5 Thymorégulateurs 12 Lithium 12 Opiacés 22 Tramadol 19 Fentanyl\n" 
+        "1 Codéine 1 Méthadone 1 Autres médicaments 23 Linézolide 3 Valproate 3 Sibutramine 2 Méthylphénidate 2 Cocaïne 2 Varénicline 2 Quétiapine 2 Carbamazépine\n" 
+        "1 Clométhiazole 1 Bleu de méthylène 1 Pipampérone 1 Lévomépromazine 1 Clozapine 1 Amisulpride 1.\n\n"
 
-                                                     "Circonstances de survenue d’un syndrome sérotoninergique lors de monothérapie et d’association d’agents sérotoninergiques dans les 102 cas annoncés à\n"
-                                                     "Swissmedic.\n"
-                                                     "Plusieurs circonstances possibles par patient. Circonstances Nombre de cas Monothérapie (38 cas) Introduction du traitement 17 Augmentation de la posologie\n"
-                                                     "6 Substitution de traitement 2 Interaction pharmacocinétique 9 Surdosage intentionnel ou accidentel 0 Non précisé 5 Association (64 cas) Introduction du\n"
-                                                     "traitement 37 Augmentation de la posologie 10 Substitution de traitement 1 Interaction pharmacocinétique 11 Surdosage intentionnel ou accidentel 9\n"
-                                                     "Non précisé 13.\n",
-                    font=('Times', 14), fill='black')
+        "Circonstances de survenue d’un syndrome sérotoninergique lors de monothérapie et d’association d’agents sérotoninergiques dans les 102 cas annoncés à\n"
+        "Swissmedic.\n"
+        "Plusieurs circonstances possibles par patient. Circonstances Nombre de cas Monothérapie (38 cas) Introduction du traitement 17 Augmentation de la posologie\n"
+        "6 Substitution de traitement 2 Interaction pharmacocinétique 9 Surdosage intentionnel ou accidentel 0 Non précisé 5 Association (64 cas) Introduction du\n"
+        "traitement 37 Augmentation de la posologie 10 Substitution de traitement 1 Interaction pharmacocinétique 11 Surdosage intentionnel ou accidentel 9\n"
+        "Non précisé 13.\n",
+        font=('Times', 14), fill='black')
 
         button32=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showatd0, anchor=CENTER)
         button32.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -5727,22 +5751,28 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-EFFETS SECONDAIRES DES ANTIDEPRESSEURS-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Les AD à action noradrénergique tendent à déprimer le tonus sympathique par leur action alpha-mimétique centrale, analogue à celle des antihypertenseurs\n"
-                                                     "de type clonidine ou méthyldopa.\n"
-                                                     "Affaiblissement du réflexe orthostatique.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Les AD à action noradrénergique tendent à déprimer le"
+        "tonus sympathique par leur action alpha-mimétique centrale, analogue à celle des antihypertenseurs\n"
+        "de type clonidine ou méthyldopa.\n"
+        "Affaiblissement du réflexe orthostatique.\n\n"
 
-                                                     "Intoxication aux AD tricycliques(TCC):\n"
-                                                     "On redoutera principalement les complications cardio-vasculaires avec hypotension et grave trouble du rythme nécessitant une hospitalisation aux soins intensifs.\n"
-                                                     "L'intoxication aux AD tricycliques peut être potentiellement mortelle, raison pour laquelle on donnera pas une quantité allant au-delà d'une semaine pour les\n" 
-                                                     "personnes suicidaires.\n\n"
+        "Intoxication aux AD tricycliques(TCC):\n"
+        "On redoutera principalement les complications cardio-vasculaires avec hypotension et grave trouble du"
+        "rythme nécessitant une hospitalisation aux soins intensifs.\n"
+        "L'intoxication aux AD tricycliques peut être potentiellement mortelle, raison pour laquelle on donnera"
+        "pas une quantité allant au-delà d'une semaine pour les\n" 
+        "personnes suicidaires.\n\n"
 
-                                                     "Le tremor provoqué par les thymoanaleptiques peut être corrigé par des petites dose de propanolol (Indéral, Avlocardyl) ou de l'oxprénolol (Trasicor).\n"
-                                                     "En cas d'hypotension orthostatique, on utilisera de l'Effortil.\n\n"
+        "Le tremor provoqué par les thymoanaleptiques peut être corrigé par des petites dose de propanolol (Indéral,"
+        "Avlocardyl) ou de l'oxprénolol (Trasicor).\n"
+        "En cas d'hypotension orthostatique, on utilisera de l'Effortil.\n\n"
 
-                                                     "Les inhibiteurs de la recapture de la sérotonine peuvent être responsables d'un syndrome sérotoninergique caractérisé par une hyper-réflexie, des myoclonies, des\n"
-                                                     "impatiences motrices, des frissons, des troubles du comportement d'allure maniforme, voir confusionnelle.\n"
-                                                     "Comme la plupart des psychotropes, les AD sont à l'origine de dysfonctions sexuelles (baisse de la libido, retard de l'éjaculation, impuissance).\n",
-                    font=('Times', 14), fill='black')
+        "Les inhibiteurs de la recapture de la sérotonine peuvent être responsables d'un syndrome sérotoninergique"
+        "caractérisé par une hyper-réflexie, des myoclonies, des\n"
+        "impatiences motrices, des frissons, des troubles du comportement d'allure maniforme, voir confusionnelle.\n"
+        "Comme la plupart des psychotropes, les AD sont à l'origine de dysfonctions sexuelles (baisse de la libido,"
+        "retard de l'éjaculation, impuissance).\n",
+        font=('Times', 14), fill='black')
 
         button34=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showatd1, anchor=CENTER)
         button34.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -5759,30 +5789,37 @@ class Application(Frame):
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Jamais de pamplemousse!\n\n"
 
-                             "De manière générale: Les effets sédatifs des substances antipsychotiques, hypnotiques, sédatives, anxiolytiques et antihistaminiques peuvent être renforcés; une\n" 
-                             "diminution de leur dosage est recommandée dans de tels cas. Le métabolisme des antidépresseurs est accéléré suite à une induction enzymatique hépatique par les\n" 
-                             "contraceptifs oraux, la phénytoïne, la carbamazépine et les barbituriques. Le métabolisme des antidépresseurs est inhibé par la cimétidine et certaines substances\n"
-                             "antipsychotiques.\n\n"
+        "De manière générale: Les effets sédatifs des substances antipsychotiques, hypnotiques, sédatives,"
+        "anxiolytiques et antihistaminiques peuvent être renforcés; une\n" 
+        "diminution de leur dosage est recommandée dans de tels cas. Le métabolisme des antidépresseurs est"
+        "accéléré suite à une induction enzymatique hépatique par les\n" 
+        "contraceptifs oraux, la phénytoïne, la carbamazépine et les barbituriques. Le métabolisme des"
+        "antidépresseurs est inhibé par la cimétidine et certaines substances\n"
+        "antipsychotiques.\n\n"
 
-                                                     "*IMAO sélectifs:\n"
-                                                     "Contre-indiqué avec AD tricycliques(TCC), la L-Dopa, les anti-hypertenseurs, les opiacés, les barbituriques, les alpha et béta bloquants, les sympaticommimétiques,\n" 
-                             "les alpha et béta stimulants.\n"
-                                                     "Si on remplace ces IMAO par un TCC, il est prudent d'observer un intervalle de 10 jours environ.\n"
-                                                     "Il faut éviter une nourriture riche en tyramine: saumon fumé, caviar, foie, bière forte, hareng séché et salé, fromage fermenté, avocat, figues en boîte, bananes,\n" 
-                                                     "fèves.\n" 
-                                                     "Les risques sont ceux d'une hypertension paroxystique. En cas d'accident, on administre du phentolamine (Regitine) 1 amp. 10mg en IM.\n"
-                                                     "On ne donnera pas d'IMAO en cas de phéochromocytome et lors d'atteintes hépatique ou rénale importante.\n\n"
+        "*IMAO sélectifs:\n"
+        "Contre-indiqué avec AD tricycliques(TCC), la L-Dopa, les anti-hypertenseurs, les opiacés, les"
+        "barbituriques, les alpha et béta bloquants, les sympaticommimétiques,\n" 
+        "les alpha et béta stimulants.\n"
+        "Si on remplace ces IMAO par un TCC, il est prudent d'observer un intervalle de 10 jours environ.\n"
+        "Il faut éviter une nourriture riche en tyramine: saumon fumé, caviar, foie, bière forte, hareng"
+        "séché et salé, fromage fermenté, avocat, figues en boîte, bananes,\n" 
+        "fèves.\n" 
+        "Les risques sont ceux d'une hypertension paroxystique. En cas d'accident, on administre du"
+        "phentolamine (Regitine) 1 amp. 10mg en IM.\n"
+        "On ne donnera pas d'IMAO en cas de phéochromocytome et lors d'atteintes hépatique ou rénale importante.\n\n"
 
-                                                     "*IMAO non sélectifs:\n"
-                                                     "On l'associe avec BZD chez les patients anxieux ou suicidaires, sinon pas d'interactions.\n\n"
+        "*IMAO non sélectifs:\n"
+        "On l'associe avec BZD chez les patients anxieux ou suicidaires, sinon pas d'interactions.\n\n"
 
-                                                     "*ISRS:\n"
-                                                     "Pas d'effets anticholinergiques centraux, mais beaucoup d'effets secondaires.\n\n"
+        "*ISRS:\n"
+        "Pas d'effets anticholinergiques centraux, mais beaucoup d'effets secondaires.\n\n"
 
-                             "*Antidépresseurs tricycliques:\n"
-                             "L’administration concomitante devrait être évitée vu le risque d’interaction. Le risque d’un syndrome sérotoninergique et d’effets indésirables cardiovasculaires\n" 
-                             "devraient être pris en considération.\n",
-                    font=('Times', 14), fill='black')
+        "*Antidépresseurs tricycliques:\n"
+        "L’administration concomitante devrait être évitée vu le risque d’interaction. Le risque d’un"
+        "syndrome sérotoninergique et d’effets indésirables cardiovasculaires\n" 
+        "devraient être pris en considération.\n",
+        font=('Times', 14), fill='black')
 
         button36=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showatd2, anchor=CENTER)
         button36.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -7756,25 +7793,33 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-PROPRIETES DES THYMOREGULATEURS-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Le mécanisme d’action de chacun des thymorégulateurs prescrits pour traiter les troubles bipolaires, i.e. lithium, valproate et carbamazépine est complexe et\n" 
-                                                     "non complètement compris. Aussi est-il difficile de décrire un mécanisme d’action commun.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Le mécanisme d’action de chacun des thymorégulateurs"
+            "prescrits pour traiter les troubles bipolaires, i.e. lithium, valproate et carbamazépine est"
+            "complexe et\n" 
+            "non complètement compris. Aussi est-il difficile de décrire un mécanisme d’action commun.\n\n"
 
-                                                     "D’une manière générale, le lithium a un effet en aval du récepteur, au niveau des systèmes de seconds messagers, en inhibant l’inositol monophosphatase ou en\n" 
-                                                     "régulant l’expression génique de protéine kinase ou de facteur neurotrophique (Figure mode d’action lithium).\n\n"
+            "D’une manière générale, le lithium a un effet en aval du récepteur, au niveau des systèmes de"
+            "seconds messagers, en inhibant l’inositol monophosphatase ou en\n" 
+            "régulant l’expression génique de protéine kinase ou de facteur neurotrophique (Figure mode"
+            "d’action lithium).\n\n"
 
-                                                     "Quant aux anticonvulsivants ayant obtenus l’AMM dans les troubles bipolaires, ils agiraient sur les canaux ioniques sodiques, potassiques et calciques en bloquant\n" 
-                                                     "le flux de ces ions. En fait, ces médicaments facilitent la neurotransmission inhibitrice par le GABA et réduisent la neurotransmission excitatrice par le glutamate.\n\n"
+            "Quant aux anticonvulsivants ayant obtenus l’AMM dans les troubles bipolaires, ils agiraient"
+            "sur les canaux ioniques sodiques, potassiques et calciques en bloquant\n" 
+            "le flux de ces ions. En fait, ces médicaments facilitent la neurotransmission inhibitrice par"
+            "le GABA et réduisent la neurotransmission excitatrice par le glutamate.\n\n"
 
-                                                     "Le thymorégulateur le plus utilisé dans le traitement de fond est le lithium.\n"
-                                                     "D’autres médicaments peuvent également être utilisés dans cette pathologie :\n" 
-                                                     "- La carbamazépine et l’acide valproïque en traitement de fond.\n" 
-                                                     "- La lamotrigine, des antidépresseurs, en particulier de la famille des inhibiteurs de la recapture de la sérotonine (IRS) pour traiter les épisodes dépressifs\n" 
-                                                     "chez les personnes souffrant de troubles bipolaires. Toutefois ces derniers doivent être utilisés avec prudence  en raison du risque d’apparition de troubles\n" 
-                                                     "maniaques.\n"
-                                                     "- Des neuroleptiques  atypiques (Aripiprazole,  Rispéridone,  Olanzapine)  pour  prévenir  les récidives des troubles bipolaires ou pour traiter les épisodes\n" 
-                                                     "maniaques.\n"
-                                                     "- Des neuroleptiques sédatifs pour les crises maniaques grave.\n\n",
-                    font=('Times', 14), fill='black')
+            "Le thymorégulateur le plus utilisé dans le traitement de fond est le lithium.\n"
+            "D’autres médicaments peuvent également être utilisés dans cette pathologie :\n" 
+            "- La carbamazépine et l’acide valproïque en traitement de fond.\n" 
+            "- La lamotrigine, des antidépresseurs, en particulier de la famille des inhibiteurs de la"
+            "recapture de la sérotonine (IRS) pour traiter les épisodes dépressifs\n" 
+            "chez les personnes souffrant de troubles bipolaires. Toutefois ces derniers doivent être"
+            "utilisés avec prudence  en raison du risque d’apparition de troubles\n" 
+            "maniaques.\n"
+            "- Des neuroleptiques atypiques (Aripiprazole, Rispéridone, Olanzapine) pour prévenir les"
+            "récidives des troubles bipolaires ou pour traiter les épisodes maniaques.\n"
+            "- Des neuroleptiques sédatifs pour les crises maniaques grave.\n\n",
+            font=('Times', 14), fill='black')
 
         button46=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showatd7, anchor=CENTER)
         button46.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -7789,38 +7834,49 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-EFFETS SECONDAIRES DES STABILISATEURS D'HUMEUR-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Le taux de lithium peut-être abaissé par: non compliance, manie, grossesse, interactions avec théophilline, bicarbonate de sodium.\n"
-                                                     "Le taux de lithium peut-être augmenté par: déshydratation (diète, diarrhée, vomissements, polyurie, affections fébriles), dépression, baisse de la clearance de\n" 
-                                                     "Lithium dans l'âge avancé, période post-partum\n"
+        self.can.create_text(10, 90, anchor=NW, text="Le taux de lithium peut-être abaissé par: non compliance,"
+            "manie, grossesse, interactions avec théophilline, bicarbonate de sodium.\n"
+            "Le taux de lithium peut-être augmenté par: déshydratation (diète, diarrhée, vomissements, polyurie,"
+            "affections fébriles), dépression, baisse de la clearance de Lithium dans l'âge avancé,"
+            "période post-partum.\n"
+            "ATTENTION: Des cas de maniaco-dépression peuvent s'avérer résistantes au ttt Lithium (type 1 ou 2)."
 
-                                                     "Les effets indésirables avec le lithium sont de trois ordres (tableau ci dessous) allant des incidents mineurs aux effets toxiques graves en passant par les effets\n"
-                                                     "tardifs. Il ne faut pas oublier le risque d’effets tératogènes.\n\n"
+            "Les effets indésirables avec le lithium sont de trois ordres (tableau ci dessous) allant des"
+            "incidents mineurs aux effets toxiques graves en passant par les effets\n"
+            "tardifs. Il ne faut pas oublier le risque d’effets tératogènes.\n\n"
 
-                                                     "Avec les anticonvulsivants, des signes essentiellement neurologiques et psychiques s'observent fréquemment en début de traitement : somnolence, vertiges, anorexie,\n" 
-                                                     "nausées, diarrhée, constipation, sécheresse de la bouche, troubles de l'accommodation, diplopie, céphalées, ataxie ainsi que confusion et agitation chez les personnes\n"
-                                                     "âgées.\n\n"
+            "Avec les anticonvulsivants, des signes essentiellement neurologiques et psychiques s'observent" 
+            "fréquemment en début de traitement : somnolence, vertiges, anorexie, nausées, diarrhée,"
+            "constipation, sécheresse de la bouche, troubles de l'accommodation, diplopie, céphalées,"
+            "ataxie ainsi que confusion et agitation chez les personnes âgées.\n\n"
 
-                                                     "Effets indésirables du Lithium:\n"
-                                                     "Effets indésirables, habituellement réversibles à l’arrêt du traitement :\n"
-                                                     "- digestifs : nausées, vomissements, diarrhées ;\n"
-                                                     "- psychiques : sédation, léthargie, obnubilation ;\n" 
-                                                     "- neurologiques : tremblements des mains, états convulsifs, vertiges, rarement syndrome sérotoninergique ;\n"
-                                                     "- prise de poids\n"   
-                                                     "- musculaires : hypotonie musculaire ;\n"
-                                                     "- Troubles du rythme cardiaque, accidents cardiaques : une dégénérescence myofibrillaire cardiaque avec infiltrat interstitiel lymphocytaire a été décrite ;\n"
-                                                     "- goitre isolé (euthyroïdie) ou associé à une hypothyroïdie (parfois hyperthyroïdie) ;\n"
-                                                     "- Anomalies de la numération formule sanguine. ; accidents sanguins : hyperleucocytose avec hyperneutrophilie et lymphocytopénie ;\n"
-                                                     "- soif et polyurie : possibilité de diabète insipide néphrogénique t de syndrome néphrotique ;\n"
-                                                     "- manifestations cutanées : acnés ou éruptions acnéiformes, aggravation ou déclenchement de psoriasis et d’éruptions psoriasiformes.\n"
-                                                     "- Chute de cheveux (exceptionnelle).\n\n"
+            "Effets indésirables du Lithium:\n"
+            "Effets indésirables, habituellement réversibles à l’arrêt du traitement :\n"
+            "- digestifs : nausées, vomissements, diarrhées ;\n"
+            "- psychiques : sédation, léthargie, obnubilation ;\n" 
+            "- neurologiques : tremblements des mains, états convulsifs, vertiges, rarement syndrome"
+            "sérotoninergique ;\n"
+            "- prise de poids\n"   
+            "- musculaires : hypotonie musculaire ;\n"
+            "- Troubles du rythme cardiaque, accidents cardiaques : une dégénérescence myofibrillaire"
+            "cardiaque avec infiltrat interstitiel lymphocytaire a été décrite ;\n"
+            "- goitre isolé (euthyroïdie) ou associé à une hypothyroïdie (parfois hyperthyroïdie) ;\n"
+            "- Anomalies de la numération formule sanguine. ; accidents sanguins : hyperleucocytose avec"
+            "hyperneutrophilie et lymphocytopénie ;\n"
+            "- soif et polyurie : possibilité de diabète insipide néphrogénique t de syndrome néphrotique ;\n"
+            "- manifestations cutanées : acnés ou éruptions acnéiformes, aggravation ou déclenchement de"
+            "psoriasis et d’éruptions psoriasiformes.\n"
+            "- Chute de cheveux (exceptionnelle).\n\n"
 
-                                                     "Les effets indésirables de la carbamazépine à surveiller sont principalement les effets hématologiques (agranulocytose, thrombopénie) et hépatiques nécessitant un\n" 
-                                                     "bilan pré-thérapeutique et un suivi régulier.\n\n"
+             "Les effets indésirables de la carbamazépine à surveiller sont principalement les effets"
+             "hématologiques (agranulocytose, thrombopénie) et hépatiques nécessitant un\n" 
+             "bilan pré-thérapeutique et un suivi régulier.\n\n"
 
-                                                     "Effets indésirables fréquents de la carbamazépine:\n"
-                                                     "Au début du traitement : somnolence, vertiges, troubles digestifs, sécheresse de la bouche, troubles de l’accommodation, diplopie. Ces troubles disparaissent soit\n"
-                                                     "spontanément, soit après réduction de la dose.\n",
-                    font=('Times', 14), fill='black')
+             "Effets indésirables fréquents de la carbamazépine:\n"
+             "Au début du traitement : somnolence, vertiges, troubles digestifs, sécheresse de la bouche,"
+             "troubles de l’accommodation, diplopie. Ces troubles disparaissent soit\n"
+             "spontanément, soit après réduction de la dose.\n",
+             font=('Times', 14), fill='black')
 
         button48=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showsh0, anchor=CENTER)
         button48.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9383,27 +9439,42 @@ class Application(Frame):
 
         self.can.create_text(10, 50, anchor=NW, text="-PROPRIETES DES HYPNOTIQUES-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Elles agissent sur des sites cérébraux spécifiques des benzodiazépines qui se situent au niveau du complexe macromoléculaire du récepteur GABA-A. Ce récepteur\n"
-                                                     "comprend un canal transmembranaire perméable aux ions chlores dont l’ouverture est contrôlée par le GABA et modulée par différentes substances dont les barbi-\n"
-                                                     "-turiques et les benzodiazépines (figure récepteur GABA). En se fixant sur leur site, les benzodiazépines facilitent l’action du GABA responsable de l’inhibition\n"
-                                                     "pré et post synaptique et augmentent la perméabilité de la membrane aux ions chlores. Ce complexe-récepteur canal est formé de cinq sous-unités (probablement deux\n"
-                                                     "chaînes a, deux chaînes b et une chaîne g) mais il existe plusieurs sous-types de chaque chaîne possible et donc de multiples combinaisons possibles.\n"
-                                                     "La sous unité a serait porteuse du site de liaison des benzodiazépines. L’étude de la répartition topographique des récepteurs dans le système nerveux central suggère\n"
-                                                     "l’existence de deux sous types de récepteurs appelés BZ1 et BZ2 (ou w1et w2). Les récepteurs w1 sont localisés dans le cortex, le cervelet et l’hippocampe, alors que\n"
-                                                     "les récepteurs w2 se concentrent dans l’hippocampe, le striatum ainsi que dans la moëlle épinière. Des sites de fixation périphériques (récepteurs w3) ont été\n"
-                                                     "également identifiés mais leur structure et leur rôle restent encore mal définis.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Elles agissent sur des sites cérébraux spécifiques"
+        "des benzodiazépines qui se situent au niveau du complexe macromoléculaire du récepteur GABA-A."
+        "Ce récepteur comprend un canal transmembranaire perméable aux ions chlores dont l’ouverture est"
+        "contrôlée par le GABA et modulée par différentes substances dont les barbi-\n"
+        "-turiques et les benzodiazépines (figure récepteur GABA). En se fixant sur leur site, les"
+        "benzodiazépines facilitent l’action du GABA responsable de l’inhibition\n"
+        "pré et post synaptique et augmentent la perméabilité de la membrane aux ions chlores. Ce complexe-"
+        "-récepteur canal est formé de cinq sous-unités (probablement deux\n"
+        "chaînes a, deux chaînes b et une chaîne g) mais il existe plusieurs sous-types de chaque chaîne"
+        "possible et donc de multiples combinaisons possibles.\n"
+        "La sous unité a serait porteuse du site de liaison des benzodiazépines. L’étude de la répartition"
+        "topographique des récepteurs dans le système nerveux central suggère\n"
+        "l’existence de deux sous types de récepteurs appelés BZ1 et BZ2 (ou w1et w2). Les récepteurs w1"
+        "sont localisés dans le cortex, le cervelet et l’hippocampe, alors que\n"
+        "les récepteurs w2 se concentrent dans l’hippocampe, le striatum ainsi que dans la moëlle épinière."
+        "Des sites de fixation périphériques (récepteurs w3) ont été\n"
+        "également identifiés mais leur structure et leur rôle restent encore mal définis.\n\n"
 
-                                                     "A noter que le récepteur GABA-B (ou BZ2 ou w2) est de nature différente : association hétérodimérique de 2 récepteurs couplés aux protéines G (RCPG). Ce réce-\n"
-                                                     "-pteur GABA-B n’est pas associé à des effets sédatifs (le baclofène, le ligand agoniste de référence est dépourvu d’effet hypnotique).\n\n"
+        "A noter que le récepteur GABA-B (ou BZ2 ou w2) est de nature différente : association hétérodimérique"
+        "de 2 récepteurs couplés aux protéines G (RCPG). Ce réce-\n"
+        "-pteur GABA-B n’est pas associé à des effets sédatifs (le baclofène, le ligand agoniste de référence"
+        "est dépourvu d’effet hypnotique).\n\n"
 
-                                                     "Apparentés aux benzodiazépines:\n"
-                                                     "Leurs effets peuvent être expliqués par une action agoniste sélective du complexe macromoléculaire Récepteur GABA-canal chlore (ou récepteur GABA-A) qui corres-\n"
-                                                     "-pond au 1er type central des sites de liaison aux benzodiazépines [BZD] (d’où ses autres noms de site BZ1 encore appelé récepteur w1). On oppose au type de sites\n"
-                                                     "liant les BZD, le site BZ2 (ou récepteur de type w2) qui correspond à un dimère de deux récepteurs couplés à des protéines G R-GABA-A un 2ème dont le premier\n"
-                                                     "reconnaît le ligand et le deuxième, une fois associé module des effecteurs qui aboutissent à une hyperpolarisation membranaire. Le zolpidem a été décrit comme se\n"
-                                                     "fixant de façon préférentielle sur le sous-type w1 (ou BZ1) des sites de liaison des BZD. Il s’agit donc bien - comme pour la zopiclone d’agents modulateurs du\n"
-                                                     "complexe R-GABA-A/canal Chlore bien qu’ils n’aient pas de parenté structurale avec les BZD.\n",
-                    font=('Times', 14), fill='black')
+        "Apparentés aux benzodiazépines:\n"
+        "Leurs effets peuvent être expliqués par une action agoniste sélective du complexe macromoléculaire"
+        "Récepteur GABA-canal chlore (ou récepteur GABA-A) qui corres-\n"
+        "-pond au 1er type central des sites de liaison aux benzodiazépines [BZD] (d’où ses autres noms de"
+        "site BZ1 encore appelé récepteur w1). On oppose au type de sites\n"
+        "liant les BZD, le site BZ2 (ou récepteur de type w2) qui correspond à un dimère de deux récepteurs"
+        "couplés à des protéines G R-GABA-A un 2ème dont le premier\n"
+        "reconnaît le ligand et le deuxième, une fois associé module des effecteurs qui aboutissent à une"
+        "hyperpolarisation membranaire. Le zolpidem a été décrit comme se\n"
+        "fixant de façon préférentielle sur le sous-type w1 (ou BZ1) des sites de liaison des BZD. Il s’agit"
+        "donc bien - comme pour la zopiclone d’agents modulateurs du\n"
+        "complexe R-GABA-A/canal Chlore bien qu’ils n’aient pas de parenté structurale avec les BZD.\n",
+        font=('Times', 14), fill='black')
 
         button66=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showtrx5, anchor=CENTER)
         button66.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9420,56 +9491,70 @@ class Application(Frame):
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Les principaux effets secondaires:\n\n"
 
-                                                     "*Modification de la conscience lors des réveils nocturnes\n"
-                                                     "*Hypotension au lever\n"
-                                                     "*Confusion\n"
-                                                     "*Symptômes des hypnotiques\n\n"
+        "*Modification de la conscience lors des réveils nocturnes\n"
+        "*Hypotension au lever\n"
+        "*Confusion\n"
+        "*Symptômes des hypnotiques\n\n"
 
-                                                     "Effets indésirables des antihistaminiques:\n"
-                                                     "*Effets résiduels, entraînant une somnolence diurne, effet atropinique: sécheresse buccale, constipation.\n"
-                                                     "*Excitation chez le nouveau-né et l’enfant si surdosage.\n"
-                                                     "*Risque de photo-sensibilisation.\n\n"
+        "Effets indésirables des antihistaminiques:\n"
+        "*Effets résiduels, entraînant une somnolence diurne, effet atropinique: sécheresse buccale, constipation.\n"
+        "*Excitation chez le nouveau-né et l’enfant si surdosage.\n"
+        "*Risque de photo-sensibilisation.\n\n"
 
-                                                     "Effets indésirables des benzodiazépines:\n"
-                                                     "*Amnésie rétrograde.\n"
-                                                     "*Réactions paradoxales (plus particulièrement avec le triazolam mais aussi avec le Flunitrazépam).\n"
-                                                     "*Dépendance physique et psychique en cas de traitement prolongé (facteur important de surconsommation, 40 millions de boites/an en France) pouvant entraîner à l’arrêt\n"
-                                                     "un syndrome de sevrage (anxiété, insomnie, irritabilité, céphalées, myalgies).\n"  
-                                                     "*Tolérance.\n\n"
+        "Effets indésirables des benzodiazépines:\n"
+        "*Amnésie rétrograde.\n"
+        "*Réactions paradoxales (plus particulièrement avec le triazolam mais aussi avec le Flunitrazépam).\n"
+        "*Dépendance physique et psychique en cas de traitement prolongé (facteur important de surconsommation, 40"
+        "millions de boites/an en France) pouvant entraîner à l’arrêt\n"
+        "un syndrome de sevrage (anxiété, insomnie, irritabilité, céphalées, myalgies).\n"  
+        "*Tolérance.\n\n"
 
-                                                     "Effets indésirables des apparentés aux benzodiazépines:\n"
-                                                     "*Dépendance.\n"
-                                                     "*Goût métallique dans la bouche, amertume.\n"
-                                                     "*Amnésie rétrograde.\n\n"
+        "Effets indésirables des apparentés aux benzodiazépines:\n"
+        "*Dépendance.\n"
+        "*Goût métallique dans la bouche, amertume.\n"
+        "*Amnésie rétrograde.\n\n"
 
 
-                                                     "L’un des effets délétères les plus fréquents avec les hypnotiques est la somnolence résiduelle le lendemain de la prise. Cet effet peut d’autant plus survenir que la\n"
-                                                     "demie-vie d’élimination est longue.  somnolence diurne, asthénie, impression de faiblesse, sensation vertigineuse. Dans de rares cas, on peut noter une dysarthrie,\n"
-                                                     "une ataxie, des difficultés à la marche témoignant le plus souvent d’un surdosage. Ces manifestations peuvent également survenir dans l’heure qui suit la prise si le sujet\n"
-                                                     "ne se couche pas ou ne s’endort pas immédiatement.\n"
-                                                     "L’association à d’autres dépresseurs du système nerveux central (alcool, neuroleptiques…) potentialise cet effet, conduisant à un ralentissement psychomoteur impor-\n"
-                                                     "-tant, une apathie, des troubles de la coordination, une confusion mentale.\n\n"
+        "L’un des effets délétères les plus fréquents avec les hypnotiques est la somnolence résiduelle le lendemain"
+        "de la prise. Cet effet peut d’autant plus survenir que la\n"
+        "demie-vie d’élimination est longue.  somnolence diurne, asthénie, impression de faiblesse, sensation"
+        "vertigineuse. Dans de rares cas, on peut noter une dysarthrie,\n"
+        "une ataxie, des difficultés à la marche témoignant le plus souvent d’un surdosage. Ces manifestations peuvent"
+        "également survenir dans l’heure qui suit la prise si le sujet\n"
+        "ne se couche pas ou ne s’endort pas immédiatement.\n"
+        "L’association à d’autres dépresseurs du système nerveux central (alcool, neuroleptiques…) potentialise cet"
+        "effet, conduisant à un ralentissement psychomoteur impor-\n"
+        "-tant, une apathie, des troubles de la coordination, une confusion mentale.\n\n"
 
-                                                     "Les benzodiazépines ont un effet amnésiant en aigu, effet utilisé en thérapeutique dans la prémédication. Cet effet peut cependant devenir gênant en dehors de ces\n"
-                                                     "circonstances. Il s’agit essentiellement d’une amnésie antérograde qui survient surtout à des doses élevées, dans les heures qui suivent la prise du médicament. Les\n"
-                                                     "personnes âgées sont particulièrement sensibles à cet effet. Des cas de complications liés à cet effet ont été signalés (soumission chimique).\n\n"
+        "Les benzodiazépines ont un effet amnésiant en aigu, effet utilisé en thérapeutique dans la prémédication."
+        "Cet effet peut cependant devenir gênant en dehors de ces\n"
+        "circonstances. Il s’agit essentiellement d’une amnésie antérograde qui survient surtout à des doses élevées,"
+        "dans les heures qui suivent la prise du médicament. Les\n"
+        "personnes âgées sont particulièrement sensibles à cet effet. Des cas de complications liés à cet effet ont"
+        "été signalés (soumission chimique).\n\n"
 
-                                                     "La prise prolongée de benzodiazépines expose les patients à un risque de dépendance même lors de l’utilisation à des doses thérapeutiques. La dépendance aux\n"
-                                                     "benzodiazépines se manifeste par une dépendance psychique (développement d’une anxiété anticipatoire à la perspective de l’interruption du traitement) et d’une\n"
-                                                     "dépendance physique. Celle-ci se traduit par un syndrome de sevrage à l’arrêt du traitement.\n\n"
+        "La prise prolongée de benzodiazépines expose les patients à un risque de dépendance même lors de"
+        "l’utilisation à des doses thérapeutiques. La dépendance aux\n"
+        "benzodiazépines se manifeste par une dépendance psychique (développement d’une anxiété anticipatoire à la"
+        "perspective de l’interruption du traitement) et d’une\n"
+        "dépendance physique. Celle-ci se traduit par un syndrome de sevrage à l’arrêt du traitement.\n\n"
 
-                                                     "Des facteurs de risque favorisant le développement d’une dépendance aux benzodiazépines ont été identifiés :\n"
-                                                     "-une durée de traitement supérieur à 3 mois\n"
-                                                     "-prise de forte dose de benzodiazépine\n"
-                                                     "-le profil de personnalité du sujet (névrotique, sujet présentant d’autres conduites addictives alcooliques, médicamenteuses ou produits illicites)\n"
+        "Des facteurs de risque favorisant le développement d’une dépendance aux benzodiazépines ont été identifiés :\n"
+        "-une durée de traitement supérieur à 3 mois\n"
+        "-prise de forte dose de benzodiazépine\n"
+        "-le profil de personnalité du sujet (névrotique, sujet présentant d’autres conduites addictives alcooliques,"
+        "médicamenteuses ou produits illicites)\n"
 
-                                                     "Il est donc conseiller de respecter la durée de prescription de ces traitements et de pratiquer une diminution progressive de la posologie sur plusieurs jours afin d'éviter\n"
-                                                     "ce type d’incident.\n\n" 
+        "Il est donc conseiller de respecter la durée de prescription de ces traitements et de pratiquer une diminution"
+        "progressive de la posologie sur plusieurs jours afin d'éviter\n"
+        "ce type d’incident.\n\n" 
 
-                                                     "Le Rebond d’insomnie, il est défini par l’aggravation de l’insomnie initiale (avant traitement) lors de l’arrêt brutal du traitement. Il est d’autant plus fréquent et\n"
-                                                     "intense que la dose du traitement est élevée et la durée prolongée. Il peut être évité par une réduction progressive et lente des posologies jusqu’à l’arrêt complet du\n"
-                                                     "traitement.\n",
-                    font=('Times', 14), fill='black')
+        "Le Rebond d’insomnie, il est défini par l’aggravation de l’insomnie initiale (avant traitement) lors de"
+        "l’arrêt brutal du traitement. Il est d’autant plus fréquent et\n"
+        "intense que la dose du traitement est élevée et la durée prolongée. Il peut être évité par une réduction"
+        "progressive et lente des posologies jusqu’à l’arrêt complet du\n"
+        "traitement.\n",
+        font=('Times', 14), fill='black')
 
         button68=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno0, anchor=CENTER)
         button68.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9486,27 +9571,32 @@ class Application(Frame):
                     font=('Times', 16), fill='gray22')
         self.can.create_text(10, 90, anchor=NW, text="Jamais de pamplemousse!\n\n"
 
-                                                     "Contre-indication absolue avec allergie aux BZD ou insuffisance respiratoire sévère\n\n"
+        "Contre-indication absolue avec allergie aux BZD ou insuffisance respiratoire sévère\n\n"
 
-                                                     "Antihistaminiques:\n"
-                                                     "Rebond, difficile à manier chez la personne âgée, posologie difficile à définir en premier lieu, attention à l'association avec des neuroleptiques.\n\n"
+        "Antihistaminiques:\n"
+        "Rebond, difficile à manier chez la personne âgée, posologie difficile à définir en premier lieu, attention"
+        "à l'association avec des neuroleptiques.\n\n"
 
-                                                     "Les benzodiazépines:\n"
-                                                     "De manière générale, les hypnotiques sont tous des dépresseurs du SNC et peuvent en association avec un autre dépresseur du SNC (dérivés morphiniques alcool)\n"
-                                                     "entraîner une majoration de l'effet sédatif. Insuffisance respiratoire, apnée du sommeil, myasthénie, insuffisance hépathique sévère, symptômes de sevrage,\n"
-                                                     "amnésie rétrograde.\n\n"
+        "Les benzodiazépines:\n"
+        "De manière générale, les hypnotiques sont tous des dépresseurs du SNC et peuvent en association avec un"
+        "autre dépresseur du SNC (dérivés morphiniques alcool)\n"
+        "entraîner une majoration de l'effet sédatif. Insuffisance respiratoire, apnée du sommeil, myasthénie,"
+        "insuffisance hépathique sévère, symptômes de sevrage,\n"
+        "amnésie rétrograde.\n\n"
 
-                                                     "Apparentés aux BZD:\n"
-                                                     "Dépendance, amnésie rétrograde, somnolence, céphalées, asthénie, nausées, réactions paradoxales: agressivité, agitation, irritabilité.\n\n"
+        "Apparentés aux BZD:\n"
+        "Dépendance, amnésie rétrograde, somnolence, céphalées, asthénie, nausées, réactions paradoxales: agressivité,"
+        "agitation, irritabilité.\n\n"
 
-                                                     "Autres hypnotiques:\n"
-                                                     "Rifampicine (diminution des concentrations plasmatiques et de l'efficacité du Zolpidem, dépendance, amnésie rétrograde, céphalées, troubles visuels, épisode\n"
-                                                     "confusionnel).\n\n"
+        "Autres hypnotiques:\n"
+        "Rifampicine (diminution des concentrations plasmatiques et de l'efficacité du Zolpidem, dépendance, amnésie"
+        "rétrograde, céphalées, troubles visuels, épisode\n"
+        "confusionnel).\n\n"
 
-                                                     "Maniement général des hypnotiques:\n"
-                                                     "*Allergie aux benzodiazépines.\n"
-                                                     "*Insuffisance respiratoire sévère.\n",  
-                    font=('Times', 14), fill='black')
+        "Maniement général des hypnotiques:\n"
+        "*Allergie aux benzodiazépines.\n"
+        "*Insuffisance respiratoire sévère.\n",  
+         font=('Times', 14), fill='black')
 
         button70=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno1, anchor=CENTER)
         button70.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9521,11 +9611,13 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-NEUROLEPTIQUES ET ANTIHISTAMINIQUES-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Nozinan et Truxal: peut diminuer l'insomnie psychotique et venir compléter une thérapie par antidépresseurs.\n"
-                                                     "En outre, ils potentialisent les autres hypnotiques.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Nozinan et Truxal: peut diminuer l'insomnie psychotique et"
+        "venir compléter une thérapie par antidépresseurs.\n"
+        "En outre, ils potentialisent les autres hypnotiques.\n\n"
 
-                                                     "Atarax, Benocten, Phénergan, Detensor: sont des hypnotiques antihistaminiques, car ils ont une action sédative.\n",
-                    font=('Times', 14), fill='black')
+        "Atarax, Benocten, Phénergan, Detensor: sont des hypnotiques"
+        "antihistaminiques, car ils ont une action sédative.\n",
+        font=('Times', 14), fill='black')
 
         button72=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno2, anchor=CENTER)
         button72.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9541,11 +9633,13 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-BENZODIAZEPINES (BZD)-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Bromazépam (Léxomil, Lexotanil): excellent dans l'anxiété nocturne de la personne âgée.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Bromazépam (Léxomil, Lexotanil): excellent dans l'anxiété"
+        "nocturne de la personne âgée.\n\n"
 
-                                                     "Clorazépate (Tranxène, Tranxilium): a beaucoup moins d'effets secondaires (myorelaxant, hypotenseur, confusion).\n\n"
+        "Clorazépate (Tranxène, Tranxilium): a beaucoup moins d'effets secondaires (myorelaxant, hypotenseur,"
+        "confusion).\n\n"
 
-                                                     "Flunitrazépam (Rohypnol): peut être toxicomatogène. Avec carnet souches dans certains cantons suisses.\n",
+        "Flunitrazépam (Rohypnol): peut être toxicomatogène. Avec carnet souches dans certains cantons suisses.\n",
                     font=('Times', 14), fill='black')
 
         button74=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno3, anchor=CENTER)
@@ -9561,9 +9655,12 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-BARBITURIQUES-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Les barbituriques sont abandonés en raison de leur effets secondaires nombreux: suppression du sommeil paradoxal, pharmacorésistance à la tolérance à l'augmen-\n"
-                                                     "-tation des doses, sevrage impressionnant avec risques de crise d'épilepsie, risque de surdosage parfois fatal.\n"
-                                                     "Le Phénobarbital (Aphénylbarbit) est le plus prescrit principalement par les neurologues pour ses propriétés antiépileptiques (anticonvulsivantes/myorelaxantes).\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Les barbituriques sont abandonés en raison de leur"
+        "effets secondaires"
+        "nombreux: suppression du sommeil paradoxal, pharmacorésistance à la tolérance à l'augmentation des"
+        "doses, sevrage impressionnant avec risques de crise d'épilepsie, risque de surdosage parfois fatal.\n"
+        "Le Phénobarbital (Aphénylbarbit) est le plus prescrit principalement par les neurologues pour ses"
+        "propriétés antiépileptiques (anticonvulsivantes/myorelaxantes).\n\n"
 
                                                      "Quelques noms:\n"
                                                      "amobarbital (hypnotique)\n"
@@ -9594,77 +9691,109 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(625, 125, anchor=CENTER, text="-NON BARBITURIQUES-",
                     font=('Times New Roman', 22), fill='gray22')
-        self.can.create_text(10, 250, anchor=NW, text="******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
+        self.can.create_text(10, 250, anchor=NW, text="*******************************************************"
+        "***********************************************************************************\n"
+        "******************************************************************************************************"
+        "************************************\n\n"
 
-                                                     "DISTRANEURIN (clomethiazol)\n\n"
+        "DISTRANEURIN (clomethiazol)\n\n"
 
-                                                     "On utilise plus du sulfate de quinine ou Tégrétol (carbamazépine), lévodopa, gabapentine.\n\n"
+        "On utilise plus du sulfate de quinine ou Tégrétol (carbamazépine), lévodopa, gabapentine.\n\n"
 
-                                                     "******************************************************************************************************************************************\n"
-                                                     "******************************************************************************************************************************************\n\n"
-                                                 
-                                                     "Utilisation:\n"
-                                                     "Dyssomnies séniles (pas en traitement prolongé).\n"
-                                                     "Confusion sénile liée à de l'excitation et de l'agitation.\n"
-                                                     "Traitement du prédelirium et du delirium tremens ainsi que des symptômes aigus de sevrage dans des conditions d'hospitalisation contrôlées.\n"
-                                                     "---------\n"
-                                                     "Contre-indications:\n"
-                                                     "*Hypersensibilité au principe actif clométhiazole ou à l'un des excipients, ainsi qu'insuffisance respiratoire aiguë.\n"
-                                                     "*Ne pas administrer Distraneurin aux enfants ni aux adolescents.\n"
-                                                     "---------\n"
-                                                     "Interactions:\n"
-                                                     "Il existe des indices clairs suggérant une inhibition du métabolisme du clométhiazole par la cimétidine, étant donné que l'administration simultanée des deux substan-\n"
-                                                     "-ces provoque une augmentation du taux sanguin/plasmatique de clométhiazole. Le mécanisme d'interaction entre le clométhiazole et la cimétidine est mal connu.\n"
-                                                     "La cimétidine diminue probablement un grand nombre d'enzymes P450 in vivo. Le clométhiazole subit un important métabolisme (important effet de premier passage)\n"
-                                                     "par les iso-enzymes CYP2A6, CYP3A4/5 et, dans une moindre mesure, CYP2B6, CYP1A1 et CYP2C19. La cimétidine inhibe CYP1A2, CYP2C9, CYP2D6,\n"
-                                                     "CYP2E1, CYP3A4 et P450 de manière non spécifique, par liaison et/ou formation d'un complexe MI (métabolite intermédiaire).\n\n"
+        "*******************************************************************************************************"
+        "***********************************\n"
+        "********************************************************************************************************"
+        "**********************************\n\n"
+     
+        "Utilisation:\n"
+        "Dyssomnies séniles (pas en traitement prolongé).\n"
+        "Confusion sénile liée à de l'excitation et de l'agitation.\n"
+        "Traitement du prédelirium et du delirium tremens ainsi que des symptômes aigus de sevrage dans des"
+        "conditions d'hospitalisation contrôlées.\n"
+        "---------\n"
+        "Contre-indications:\n"
+        "*Hypersensibilité au principe actif clométhiazole ou à l'un des excipients, ainsi qu'insuffisance"
+        "respiratoire aiguë.\n"
+        "*Ne pas administrer Distraneurin aux enfants ni aux adolescents.\n"
+        "---------\n"
+        "Interactions:\n"
+        "Il existe des indices clairs suggérant une inhibition du métabolisme du clométhiazole par la"
+        "cimétidine, étant donné que l'administration simultanée des deux substan-\n"
+        "-ces provoque une augmentation du taux sanguin/plasmatique de clométhiazole. Le mécanisme d'interaction"
+        "entre le clométhiazole et la cimétidine est mal connu.\n"
+        "La cimétidine diminue probablement un grand nombre d'enzymes P450 in vivo. Le clométhiazole subit un"
+        "important métabolisme (important effet de premier passage)\n"
+        "par les iso-enzymes CYP2A6, CYP3A4/5 et, dans une moindre mesure, CYP2B6, CYP1A1 et CYP2C19."
+        "La cimétidine inhibe CYP1A2, CYP2C9, CYP2D6,\n"
+        "CYP2E1, CYP3A4 et P450 de manière non spécifique, par liaison et/ou formation d'un complexe MI"
+        "(métabolite intermédiaire).\n\n"
 
-                                                     "Le clométhiazole lui-même est un inhibiteur de CYP2A6 et de CYP2E1. Des études cliniques ont permis d'observer que la clairance plasmatique était trois fois plus\n"
-                                                     "lente pour le substrat de CYP2E1 chlorzoxazone. C'est pourquoi une administration simultanée de clométhiazole peut entraîner des modifications de la métabolisation\n"
-                                                     "ainsi que des taux plasmatiques des substrats de CYP2E1 cliniquement significatifs appartenant aux groupes des sédatifs, anesthésiques, analgésiques, antidépresseurs,\n"
-                                                     "anti-épileptiques et antibiotiques. Il est conseillé de surveiller en permanence les taux plasmatiques et d'adapter la posologie des substrats de CYP2E1 s'il y a lieu.\n\n"
+        "Le clométhiazole lui-même est un inhibiteur de CYP2A6 et de CYP2E1. Des études cliniques ont permis"
+        "d'observer que la clairance plasmatique était trois fois plus\n"
+        "lente pour le substrat de CYP2E1 chlorzoxazone. C'est pourquoi une administration simultanée de"
+        "clométhiazole peut entraîner des modifications de la métabolisation\n"
+        "ainsi que des taux plasmatiques des substrats de CYP2E1 cliniquement significatifs appartenant aux"
+        "groupes des sédatifs, anesthésiques, analgésiques, antidépresseurs,\n"
+        "anti-épileptiques et antibiotiques. Il est conseillé de surveiller en permanence les taux plasmatiques"
+        "et d'adapter la posologie des substrats de CYP2E1 s'il y a lieu.\n\n"
 
-                                                     "Les dépresseurs centraux, y compris l'alcool et les benzodiazépines, peuvent potentialiser l'effet de Distraneurin et/ou être eux-mêmes potentialisés par Distraneurin.\n\n"
+        "Les dépresseurs centraux, y compris l'alcool et les benzodiazépines, peuvent potentialiser l'effet de"
+        "Distraneurin et/ou être eux-mêmes potentialisés par Distraneurin.\n\n"
 
-                                                     "Chez un patient, l'association de propranolol et de clométhiazole a provoqué une forte bradycardie.\n\n"
+        "Chez un patient, l'association de propranolol et de clométhiazole a provoqué une forte bradycardie.\n\n"
 
-                                                     "Chez des personnes alcooliques traitées par clométhiazole, la clairance plasmatique orale de la chlorzoxazone s'est avérée plus faible que chez des sujets sains non\n"
-                                                     "traités, 4,0 ± 1,8 l/h contre 12,7 ± 5,6 l/h, indépendamment de l'activité inductrice supposée du CYP2E1 chez les alcooliques.\n\n"
+        "Chez des personnes alcooliques traitées par clométhiazole, la clairance plasmatique orale de la"
+        "chlorzoxazone s'est avérée plus faible que chez des sujets sains non\n"
+        "traités, 4,0 ± 1,8 l/h contre 12,7 ± 5,6 l/h, indépendamment de l'activité inductrice supposée du"
+        "CYP2E1 chez les alcooliques.\n\n"
 
-                                                     "Lors d'une administration de clométhiazole en association avec de la carbamazépine sous forme de perfusion intraveineuse, la clairance du clométhiazole a augmenté de\n"
-                                                     "30%, entraînant une réduction de même ampleur de la concentration plasmatique. Cette interaction n'a pas été étudiée pour l'administration orale de clométhiazole. Il\n"
-                                                     "se pourrait cependant qu'une administration concomitante de carbamazépine et de clométhiazole par voie orale entraîne une réduction de la biodisponibilité et une aug-\n"
-                                                     "-mentation de la clairance.\n\n"
+        "Lors d'une administration de clométhiazole en association avec de la carbamazépine sous forme de"
+        "perfusion intraveineuse, la clairance du clométhiazole a augmenté de\n"
+        "30%, entraînant une réduction de même ampleur de la concentration plasmatique. Cette interaction n'a"
+        "pas été étudiée pour l'administration orale de clométhiazole. Il\n"
+        "se pourrait cependant qu'une administration concomitante de carbamazépine et de clométhiazole par"
+        "voie orale entraîne une réduction de la biodisponibilité et une aug-\n"
+        "-mentation de la clairance.\n\n"
 
-                                                     "Des doses accrues de clométhiazole peuvent donc s'avérer nécessaires pour atteindre les effets souhaités lors d'une administration concomitante de carbamazépine ou\n"
-                                                     "d'un autre inducteur potentiel.\n"
-                                                     "---------\n"
-                                                     "Effets secondaires:\n"
-                                                     "Il n'existe pas de données suffisantes concernant l'emploi chez la femme enceinte.\n"
-                                                     "Suite à une dépression respiratoire et circulatoire rare, des infections des voies respiratoires supérieures et des pneumonies peuvent survenir fréquemment.\n"
-                                                     "Œdème facial, réactions allergiques ou anaphylactiques pouvant aller jusqu'au choc.\n"
-                                                     "Arrêt cardiaque, souvent lié à une dépression respiratoire, en particulier lors de la prise de doses élevées et en association avec des médicaments dépresseurs du SNC.\n"
-                                                     "Chute de tension. Picotements dans le nez et congestion nasale environ 15 à 20 minutes après la prise.Nausées, vomissements, douleurs abdominales et diarrhées,\n"
-                                                     "Anomalies de la fonction hépatique avec taux accrus de transaminases.\n"
-                                                     "---------\n"
-                                                     "Surdosage:\n"
-                                                     "Un surdosage de Distraneurin peut provoquer une perte de connaissance avec un coma profond, s'accompagnant de dépression respiratoire et cardiovasculaire,\n"
-                                                     "comparable au surdosage de barbituriques.\n"
+        "Des doses accrues de clométhiazole peuvent donc s'avérer nécessaires pour atteindre les effets"
+        "souhaités lors d'une administration concomitante de carbamazépine ou\n"
+        "d'un autre inducteur potentiel.\n"
+        "---------\n"
+        "Effets secondaires:\n"
+        "Il n'existe pas de données suffisantes concernant l'emploi chez la femme enceinte.\n"
+        "Suite à une dépression respiratoire et circulatoire rare, des infections des voies respiratoires"
+        "supérieures et des pneumonies peuvent survenir fréquemment.\n"
+        "Œdème facial, réactions allergiques ou anaphylactiques pouvant aller jusqu'au choc.\n"
+        "Arrêt cardiaque, souvent lié à une dépression respiratoire, en particulier lors de la prise de"
+        "doses élevées et en association avec des médicaments dépresseurs du SNC.\n"
+        "Chute de tension. Picotements dans le nez et congestion nasale environ 15 à 20 minutes après la"
+        "prise. Nausées, vomissements, douleurs abdominales et diarrhées,\n"
+        "Anomalies de la fonction hépatique avec taux accrus de transaminases.\n"
+        "---------\n"
+        "Surdosage:\n"
+        "Un surdosage de Distraneurin peut provoquer une perte de connaissance avec un coma profond,"
+        "s'accompagnant de dépression respiratoire et cardiovasculaire,\n"
+        "comparable au surdosage de barbituriques.\n"
 
-                                                     "Des cas de surdosage mortel de Distraneurin ont été rapportés. Ce risque augmente lorsque Distraneurin est administré en même temps que d'autres dépresseurs du\n"
-                                                     "SNC (y compris l'alcool), et particulièrement lorsque la fonction hépatique est gravement perturbée (par exemple chez les personnes alcooliques souffrant d'une\n"
-                                                     "cirrhose du foie).\n"
-                                                     "---------\n"
-                                                     "Traitement du surdosage:\n"
-                                                     "Maintien de l'ouverture des voies respiratoires, administration d'oxygène (éventuellement contrôle par respiration artificielle) et soutien de la circulation.\n"
-                                                     "Selon les symptômes, il faut s'attendre à une augmentation de la sécrétion dans les voies respiratoires supérieures, une hypotension et une hypothermie. Ces compli-\n"
-                                                     "-cations requièrent un traitement adéquat.\n"
-                                                     "Il n'existe aucun antidote spécifique du clométhiazole.\n"
-                                                     "En cas d'intoxication par le clométhiazole, une hémoperfusion à l'aide d'une colonne de charbon activé est inefficace.\n\n"
+        "Des cas de surdosage mortel de Distraneurin ont été rapportés. Ce risque augmente lorsque"
+        "Distraneurin est administré en même temps que d'autres dépresseurs du\n"
+        "SNC (y compris l'alcool), et particulièrement lorsque la fonction hépatique est gravement perturbée"
+        "(par exemple chez les personnes alcooliques souffrant d'une\n"
+        "cirrhose du foie).\n"
+        "---------\n"
+        "Traitement du surdosage:\n"
+        "Maintien de l'ouverture des voies respiratoires, administration d'oxygène (éventuellement contrôle"
+        "par respiration artificielle) et soutien de la circulation.\n"
+        "Selon les symptômes, il faut s'attendre à une augmentation de la sécrétion dans les voies"
+        "respiratoires supérieures, une hypotension et une hypothermie. Ces compli-\n"
+        "-cations requièrent un traitement adéquat.\n"
+        "Il n'existe aucun antidote spécifique du clométhiazole.\n"
+        "En cas d'intoxication par le clométhiazole, une hémoperfusion à l'aide d'une colonne de charbon"
+        "activé est inefficace.\n\n"
 
-                                                     "******************************************************************************************************************************************\n\n",
-                    font=('Times', 14), fill='black')
+        "*****************************************************************************************************"
+        "*************************************\n\n",
+        font=('Times', 14), fill='black')
 
         button78=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno5, anchor=CENTER)
         button78.configure(width=10, activebackground='snow2', activeforeground='dark gray', relief=GROOVE)
@@ -9679,22 +9808,28 @@ class Application(Frame):
         self.can.delete(ALL)
         self.can.create_text(10, 50, anchor=NW, text="-AUTRES HYPNOTIQUES-",
                     font=('Times', 16), fill='gray22')
-        self.can.create_text(10, 90, anchor=NW, text="Le Zolpidem (Zoldorm, Stilnox) est un hypnotique rapide. Il appartient à une classique chimique différente des BZD (imidazopiridine). Il raccourcit le délai\n"
-                                                     "d'endormissement et augmente la durée totale du sommeil. Il prolonge les stades 2 et 3 et respecte le sommeil paradoxal. Du fait de sa 1/2 vie assez courte.\n"
-                                                     "Il n'engendre pas d'effets résiduels au réveil. On observe que rarement des symptômes de sevrage, de rebond d'insomnie, ou de l'accoutumance.\n"
-                                                     "Ce n'est pas un anxiolytique et il est condre-indiqué dans les apnées du sommeil.\n\n"
+        self.can.create_text(10, 90, anchor=NW, text="Le Zolpidem (Zoldorm, Stilnox) est un hypnotique rapide."
+        "Il appartient à une classique chimique différente des BZD (imidazopiridine). Il raccourcit le délai\n"
+        "d'endormissement et augmente la durée totale du sommeil. Il prolonge les stades 2 et 3 et respecte le"
+        "sommeil paradoxal. Du fait de sa 1/2 vie assez courte.\n"
+         "Il n'engendre pas d'effets résiduels au réveil. On observe que rarement des symptômes de sevrage, de"
+         "rebond d'insomnie, ou de l'accoutumance.\n"
+         "Ce n'est pas un anxiolytique et il est condre-indiqué dans les apnées du sommeil.\n\n"
 
-                                                     "Stilnox CR (Zolpidem CR): entraîne une durée de sommeil plus longue que Stilnox.\n\n"
+         "Stilnox CR (Zolpidem CR): entraîne une durée de sommeil plus longue que Stilnox.\n\n"
 
-                                                     "Imovane (Zopiclone): hypno-inducteur rapide. Tend à prolonger les stades 3 et 4. Potentiel risque de dépendance.\n\n"
+         "Imovane (Zopiclone): hypno-inducteur rapide. Tend à prolonger les stades 3 et 4. Potentiel risque de"
+         "dépendance.\n\n"
 
-                                                     "Sonata (Zalepton): Il peut être pris jusqu'à 4h00 avant le réveil normal, étant donné de sa 1/2 vie d'une heure. Il peut donc être utilisé pour l'endormissement et\n"
-                                                     "pour le réendormissement.\n\n" 
+         "Sonata (Zalepton): Il peut être pris jusqu'à 4h00 avant le réveil normal, étant donné de sa 1/2 vie"
+         "d'une heure. Il peut donc être utilisé pour l'endormissement et\n"
+         "pour le réendormissement.\n\n" 
 
-                                                     "Mélatonine: Hormone épiphysaire (produite par notre cerveau lorsqu'on tamise la lumière). Indiqué pour les personnes non-voyantes (cycles diurne-nocturne différents).\n"
-                                                     "Favorise l'endormissement.\n\n"
+         "Mélatonine: Hormone épiphysaire (produite par notre cerveau lorsqu'on tamise la lumière). Indiqué pour"
+         "les personnes non-voyantes (cycles diurne-nocturne différents).\n"
+         "Favorise l'endormissement.\n\n"
 
-                                                     "Circadin (mélatonine retard): favorise l'endormissement et prolonge le sommeil.\n\n",
+         "Circadin (mélatonine retard): favorise l'endormissement et prolonge le sommeil.\n\n",
                     font=('Times', 14), fill='black')
 
         button80=Button(self, text="<---", bg="Dark gray", fg='white', command=self.showhypno6, anchor=CENTER)
