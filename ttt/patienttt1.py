@@ -52,11 +52,16 @@ def deleteTreatment():
             print("+ File 'convtabs' exist !")
             with open('./ttt/doc_ttt/convtabs.json', 'r') as datafile:
                 datastore = json.load(datafile)
-                print(datastore)
+                #print(datastore)
             dataTtt = datastore
-            dataTtt['data'].delete({'Date' : textDate.get(), 
-              'Date of introduction' : comboDay.get() + comboMonth.get() +
-              comboYear.get()})
+    except FileNotFoundError as comout:
+        print("Pas de fichier", comout)
+    """
+            dataTtt['data'].clear()
+            #{'Date' : textDate.get(),
+            #'Date of introduction' : comboDay.get() + 
+            #comboMonth.get() + comboYear.get()})
+
             if comboDay.get() == "":
                 print("---Pas de VALEUR 'Date' entrée---")
             else:
@@ -68,10 +73,10 @@ def deleteTreatment():
         print(str(tocom))
         print("+ File convtabs.json created !")
         dataTtt = {}
-        dataTtt['data'] = []
-        dataTtt['data'].delete({'Date' : textDate.get(), 
-              'Date of introduction' : comboDay.get() + comboMonth.get() +
-              comboYear.get()})
+        dataTtt['data'].clear()
+        #({'Date' : textDate.get(),
+        #'Date of end' : comboFinishDay.get() +
+        #comboFinishMonth.get() + comboFinishYear.get()})
         if comboDay.get() == "":
             print("---Pas de VALEUR 'Date' entrée---")
         else:
@@ -86,9 +91,8 @@ def deleteTreatment():
                 datastore = json.load(datafile)
                 print(datastore)
             dataEnd = datastore
-            dataEnd['data'].delete({'Date' : textDate.get(),
-              'Date of end' : comboFinishDay.get() +
-              comboFinishMonth.get() + comboFinishYear.get()})
+            dataEnd['data'].clear()
+
             if comboFinishDay.get() == "":
                 print("---Pas de VALEUR 'Date end' entrée---")
             else:
@@ -101,16 +105,15 @@ def deleteTreatment():
         print("+ File convdatefinish.json created !")
         dataEnd = {}
         dataEnd['data'] = []
-        dataEnd['data'].delete({'Date' : textDate.get(),
-          'Date of end' : comboFinishDay.get() +
-          comboFinishMonth.get() + comboFinishYear.get()})
+        dataEnd['data'].clear()
+
         if comboFinishDay.get() == "":
             print("---Pas de VALEUR 'Date end' entrée---")
         else:
             print("---Ok VALEUR 'Date end' entrée---")
             with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile:
                 json.dump(dataEnd, datafile, indent=4)
-
+    """
     try:
         if os.path.getsize('./ttt/doc_ttt/convdose.json'):
             print("+ File 'convdose' exist !")
@@ -118,10 +121,40 @@ def deleteTreatment():
                 datastore = json.load(datafile)
                 print(datastore)
             dataDose = datastore
-            dataDose['data'].delete({'Date' : textDate.get(), 
-              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
-              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
-              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+            #key='Traitement'
+            for (key, value) in dataDose.items():
+                if deleteTreat.get() == value[0]['Traitement']:
+                    #dataDose['data'].clear()    
+                    print(value[0]['Traitement'])
+                elif deleteTreat.get() == value[1]['Traitement']:
+                    print(value[1]['Traitement'])
+                elif deleteTreat.get() == value[2]['Traitement']:
+                    print(value[2]['Traitement'])
+                elif deleteTreat.get() == value[3]['Traitement']:
+                    print(value[3]['Traitement'])
+                else:
+                    print("None treatment was found !")
+                """
+                elif deleteTreat.get() == value[4]['Traitement']:
+                    print(value[4]['Traitement'])
+                elif deleteTreat.get() == value[5]['Traitement']:
+                    print(value[5]['Traitement'])
+                elif deleteTreat.get() == value[6]['Traitement']:
+                    print(value[6]['Traitement'])
+                elif deleteTreat.get() == value[7]['Traitement']:
+                    print(value[7]['Traitement'])
+                elif deleteTreat.get() == value[8]['Traitement']:
+                    print(value[8]['Traitement'])
+                """
+
+            #print(dataDose)
+            #print(dataTtt['data']({'Traitement'}))
+            with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile2:
+                json.dump(dataDose, datafile2, indent=4)
+    except FileNotFoundError as comout:
+        print("Pas de fichier", comout)
+    """        dataDose['data'].clear()
+
             if textTreat.get() == "":
                 print("---Pas de VALEUR 'Traitement' entrée---")
             else:
@@ -134,17 +167,15 @@ def deleteTreatment():
         print("+ File convdose.json created !")
         dataDose = {}
         dataDose['data'] = []
-        dataDose['data'].delete({'Date' : textDate.get(), 
-              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
-              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
-              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+        dataDose['data'].clear()
+
         if textTreat.get() == "":
             print("---Pas de VALEUR 'Traitement' entrée---")
         else:
             print("---Ok VALEUR 'Traitement' entrée---")
             with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
-
+    """
 def copyToFile():
     """
     To write all data to intro_ttt.json
@@ -654,9 +685,14 @@ Rnbre = tk.Entry(app)
 Rnbre = tk.Entry(highlightbackground='gray', bd=4)
 Rnbre.grid(row=21, column=2)
 
-buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='orange',
-    bg='gray30', bd=4, command=deleteTreatment)
+buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
+    bg='red', bd=4, command=deleteTreatment)
 buttStopttt.grid(row=21, column=0)
+
+delete_text = tk.StringVar()
+delete_text.set("To stop !")
+deleteTreat = tk.Entry(app, textvariable=delete_text, highlightbackground='gray')
+deleteTreat.grid(row=23, column=0)
 
 LabSign = tk.Label(app, text='Signature :', font=12, 
     width=15, fg='red', bg='pale green')
@@ -669,14 +705,14 @@ textSign.grid(row=23, column=2, pady=10)
 # Buttons with functions
 buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='yellow',
     bg='gray30', bd=4, command=showTreat)
-buttShowttt.grid(row=24, column=0)
+buttShowttt.grid(row=24, column=0, pady=10)
 
 buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
     bg='gray30', bd=4, command=copyFunc)
-buttCopy.grid(row=24, column=1)
+buttCopy.grid(row=24, column=1, pady=10)
 
 buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
     bg='gray30', bd=4, command=quit)
-buttQuit.grid(row=24, column=2)
+buttQuit.grid(row=24, column=2, pady=10)
 
 app.mainloop()
