@@ -2,9 +2,9 @@
 #!-*-encoding:Utf-8-*-
 
 
-from tkinter import messagebox
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 import time
 import os
 import json
@@ -45,137 +45,123 @@ def copyFunc():
         messagebox.showinfo('Return', 'You will return to the application')
 
 def deleteTreatment():
-    with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file:
-        file.readlines()
-    try:
-        if os.path.getsize('./ttt/doc_ttt/convtabs.json'):
-            print("+ File 'convtabs' exist !")
-            with open('./ttt/doc_ttt/convtabs.json', 'r') as datafile:
-                datastore = json.load(datafile)
-                #print(datastore)
-            dataTtt = datastore
-    except FileNotFoundError as comout:
-        print("Pas de fichier", comout)
     """
-            dataTtt['data'].clear()
-            #{'Date' : textDate.get(),
-            #'Date of introduction' : comboDay.get() + 
-            #comboMonth.get() + comboYear.get()})
-
-            if comboDay.get() == "":
-                print("---Pas de VALEUR 'Date' entrée---")
-            else:
-                print("---Ok VALEUR 'Date' entrée---")
-                with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile2:
-                    json.dump(dataTtt, datafile2, indent=4)
-    except FileNotFoundError as tocom:
-        print('+ Sorry, file convtabs.json not exist !')
-        print(str(tocom))
-        print("+ File convtabs.json created !")
-        dataTtt = {}
-        dataTtt['data'].clear()
-        #({'Date' : textDate.get(),
-        #'Date of end' : comboFinishDay.get() +
-        #comboFinishMonth.get() + comboFinishYear.get()})
-        if comboDay.get() == "":
-            print("---Pas de VALEUR 'Date' entrée---")
-        else:
-            print("---Ok VALEUR 'Date' entrée---")
-            with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile:
-                json.dump(dataTtt, datafile, indent=4)
-
-    try:
-        if os.path.getsize('./ttt/doc_ttt/convdatefinish.json'):
-            print("+ File 'convdatefinish' exist !")
-            with open('./ttt/doc_ttt/convdatefinish.json', 'r') as datafile:
-                datastore = json.load(datafile)
-                print(datastore)
-            dataEnd = datastore
-            dataEnd['data'].clear()
-
-            if comboFinishDay.get() == "":
-                print("---Pas de VALEUR 'Date end' entrée---")
-            else:
-                print("---Ok VALEUR 'Date end' entrée---")
-                with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile2:
-                    json.dump(dataEnd, datafile2, indent=4)
-    except FileNotFoundError as outcom:
-        print('+ Sorry, file convdatefinish.json not exist !')
-        print(str(outcom))
-        print("+ File convdatefinish.json created !")
-        dataEnd = {}
-        dataEnd['data'] = []
-        dataEnd['data'].clear()
-
-        if comboFinishDay.get() == "":
-            print("---Pas de VALEUR 'Date end' entrée---")
-        else:
-            print("---Ok VALEUR 'Date end' entrée---")
-            with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile:
-                json.dump(dataEnd, datafile, indent=4)
+    To earase one line in array
+    for one entry
     """
-    try:
-        if os.path.getsize('./ttt/doc_ttt/convdose.json'):
-            print("+ File 'convdose' exist !")
-            with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
-                datastore = json.load(datafile)
-                print(datastore)
-            dataDose = datastore
-            #key='Traitement'
-            for (key, value) in dataDose.items():
-                if deleteTreat.get() == value[0]['Traitement']:
-                    #dataDose['data'].clear()    
-                    print(value[0]['Traitement'])
-                elif deleteTreat.get() == value[1]['Traitement']:
-                    print(value[1]['Traitement'])
-                elif deleteTreat.get() == value[2]['Traitement']:
-                    print(value[2]['Traitement'])
-                elif deleteTreat.get() == value[3]['Traitement']:
-                    print(value[3]['Traitement'])
-                else:
-                    print("None treatment was found !")
-                """
-                elif deleteTreat.get() == value[4]['Traitement']:
-                    print(value[4]['Traitement'])
-                elif deleteTreat.get() == value[5]['Traitement']:
-                    print(value[5]['Traitement'])
-                elif deleteTreat.get() == value[6]['Traitement']:
-                    print(value[6]['Traitement'])
-                elif deleteTreat.get() == value[7]['Traitement']:
-                    print(value[7]['Traitement'])
-                elif deleteTreat.get() == value[8]['Traitement']:
-                    print(value[8]['Traitement'])
-                """
+    MSB = messagebox.askyesno('Delete ttt', 'Are you sure ?')
+    if MSB == 1:
+        print("Ok, ttt has been ejected !")
+        messagebox.showinfo('info BOX', 'Treatment is away !')
+        try:
+            if os.path.getsize('./ttt/doc_ttt/convdose.json'):
+                print("+ File 'convdose' exist !")
+                with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
+                    datastore = json.load(datafile)
+                
+                dataDose = datastore
+                for key, value in dataDose.items():
+                    if deleteTreat.get() == value[0]['Traitement']:
+                        print(key)
+                        print("value3c1", value[0]['Traitement'])
+                        del value[0]
+                        print("+ TTT earased !")
 
-            #print(dataDose)
-            #print(dataTtt['data']({'Traitement'}))
-            with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile2:
-                json.dump(dataDose, datafile2, indent=4)
-    except FileNotFoundError as comout:
-        print("Pas de fichier", comout)
-    """        dataDose['data'].clear()
+                    elif deleteTreat.get() == value[1]['Traitement']:
+                        print(key)
+                        print("value3c2", value[1]['Traitement'])
+                        del value[1]
+                        print("+ TTT earased !")
 
-            if textTreat.get() == "":
-                print("---Pas de VALEUR 'Traitement' entrée---")
-            else:
-                print("---Ok VALEUR 'Traitement' entrée---")
-                with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
-                    json.dump(dataDose, datafile2, indent=4)
-    except FileNotFoundError as outcom:
-        print('+ Sorry, file convdose.json not exist !')
-        print(str(outcom))
-        print("+ File convdose.json created !")
-        dataDose = {}
-        dataDose['data'] = []
-        dataDose['data'].clear()
+                    elif deleteTreat.get() == value[2]['Traitement']:
+                        print(key)
+                        print("value3c3", value[2]['Traitement'])
+                        del value[2]
+                        print("+ TTT earased !")
+                    elif deleteTreat.get() == value[3]['Traitement']:
+                        print(key)
+                        print("value3c4", value[3]['Traitement'])
+                        del value[3]
+                        print("+ TTT earased !")
 
-        if textTreat.get() == "":
-            print("---Pas de VALEUR 'Traitement' entrée---")
-        else:
-            print("---Ok VALEUR 'Traitement' entrée---")
-            with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
-                json.dump(dataDose, datafile, indent=4)
-    """
+                    elif deleteTreat.get() == value[4]['Traitement']:
+                        print(key)
+                        print("value3c4", value[4]['Traitement'])
+                        del value[4]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[5]['Traitement']:
+                        print(key)
+                        print("value3c4", value[5]['Traitement'])
+                        del value[5]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[6]['Traitement']:
+                        print(key)
+                        print("value3c4", value[6]['Traitement'])
+                        del value[6]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[7]['Traitement']:
+                        print(key)
+                        print("value3c4", value[7]['Traitement'])
+                        del value[7]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[8]['Traitement']:
+                        print(key)
+                        print("value3c4", value[8]['Traitement'])
+                        del value[8]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[9]['Traitement']:
+                        print(key)
+                        print("value3c4", value[9]['Traitement'])
+                        del value[9]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[10]['Traitement']:
+                        print(key)
+                        print("value3c4", value[10]['Traitement'])
+                        del value[10]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[11]['Traitement']:
+                        print(key)
+                        print("value3c4", value[11]['Traitement'])
+                        del value[11]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[12]['Traitement']:
+                        print(key)
+                        print("value3c4", value[12]['Traitement'])
+                        del value[12]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[13]['Traitement']:
+                        print(key)
+                        print("value3c4", value[13]['Traitement'])
+                        del value[13]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[14]['Traitement']:
+                        print(key)
+                        print("value3c4", value[14]['Traitement'])
+                        del value[14]
+                        print("+ TTT earased !")
+                    else:
+                        print("Treatment is not present into medication")
+
+                    if deleteTreat.get() == '':
+                        print("None treatment checked")
+                    else:
+                        print("---Ok VALEUR 'Traitement' entrée---")
+                        with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
+                            json.dump(dataDose, datafile2, indent=4)
+        except FileNotFoundError as outcom:
+            print('+ Sorry, file convdose.json not exist !', outcom)
+    else:           
+        NoforQ = messagebox.showinfo('Return', 'Treatment not earased')
 def copyToFile():
     """
     To write all data to intro_ttt.json
@@ -233,80 +219,19 @@ def copyToFile():
         file.write(str('\n\n'))
 
     try:
-        if os.path.getsize('./ttt/doc_ttt/convtabs.json'):
-            print("+ File 'convtabs' exist !")
-            with open('./ttt/doc_ttt/convtabs.json', 'r') as datafile:
-                datastore = json.load(datafile)
-                print(datastore)
-            dataTtt = datastore
-            dataTtt['data'].append({'Date' : textDate.get(), 
-              'Date of introduction' : comboDay.get() + comboMonth.get() +
-              comboYear.get()})
-            if comboDay.get() == "":
-                print("---Pas de VALEUR 'Date' entrée---")
-            else:
-                print("---Ok VALEUR 'Date' entrée---")
-                with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile2:
-                    json.dump(dataTtt, datafile2, indent=4)
-    except FileNotFoundError as tocom:
-        print('+ Sorry, file convtabs.json not exist !')
-        print(str(tocom))
-        print("+ File convtabs.json created !")
-        dataTtt = {}
-        dataTtt['data'] = []
-        dataTtt['data'].append({'Date' : textDate.get(), 
-              'Date of introduction' : comboDay.get() + comboMonth.get() +
-              comboYear.get()})
-        if comboDay.get() == "":
-            print("---Pas de VALEUR 'Date' entrée---")
-        else:
-            print("---Ok VALEUR 'Date' entrée---")
-            with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile:
-                json.dump(dataTtt, datafile, indent=4)
-
-    try:
-        if os.path.getsize('./ttt/doc_ttt/convdatefinish.json'):
-            print("+ File 'convdatefinish' exist !")
-            with open('./ttt/doc_ttt/convdatefinish.json', 'r') as datafile:
-                datastore = json.load(datafile)
-                print(datastore)
-            dataEnd = datastore
-            dataEnd['data'].append({'Date' : textDate.get(),
-              'Date of end' : comboFinishDay.get() +
-              comboFinishMonth.get() + comboFinishYear.get()})
-            if comboFinishDay.get() == "":
-                print("---Pas de VALEUR 'Date end' entrée---")
-            else:
-                print("---Ok VALEUR 'Date end' entrée---")
-                with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile2:
-                    json.dump(dataEnd, datafile2, indent=4)
-    except FileNotFoundError as outcom:
-        print('+ Sorry, file convdatefinish.json not exist !')
-        print(str(outcom))
-        print("+ File convdatefinish.json created !")
-        dataEnd = {}
-        dataEnd['data'] = []
-        dataEnd['data'].append({'Date' : textDate.get(),
-          'Date of end' : comboFinishDay.get() +
-          comboFinishMonth.get() + comboFinishYear.get()})
-        if comboFinishDay.get() == "":
-            print("---Pas de VALEUR 'Date end' entrée---")
-        else:
-            print("---Ok VALEUR 'Date end' entrée---")
-            with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile:
-                json.dump(dataEnd, datafile, indent=4)
-
-    try:
         if os.path.getsize('./ttt/doc_ttt/convdose.json'):
             print("+ File 'convdose' exist !")
             with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataDose = datastore
-            dataDose['data'].append({'Date' : textDate.get(), 
-              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
-              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
-              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+            dataDose['data'].append({'Date' : textDate.get(),
+                'Date of introduction' : comboDay.get() + comboMonth.get() +
+                comboYear.get(), 'Date of end' : comboFinishDay.get() +
+                comboFinishMonth.get() + comboFinishYear.get(),
+                'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+                'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
+                'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
             if textTreat.get() == "":
                 print("---Pas de VALEUR 'Traitement' entrée---")
             else:
@@ -319,10 +244,13 @@ def copyToFile():
         print("+ File convdose.json created !")
         dataDose = {}
         dataDose['data'] = []
-        dataDose['data'].append({'Date' : textDate.get(), 
-              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
-              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
-              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+        dataDose['data'].append({'Date' : textDate.get(),
+            'Date of introduction' : comboDay.get() + comboMonth.get() +
+            comboYear.get(), 'Date of end' : comboFinishDay.get() +
+            comboFinishMonth.get() + comboFinishYear.get(),
+            'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+            'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
+            'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
         if textTreat.get() == "":
             print("---Pas de VALEUR 'Traitement' entrée---")
         else:
@@ -331,7 +259,7 @@ def copyToFile():
                 json.dump(dataDose, datafile, indent=4)
 
 app = tk.Tk()
-app.title("Introduction of treatement(ttt)") 
+app.title("Introduction of treatement(ttt)")
 app.configure(bg='gray17')
 
 textLab = tk.Label(app, text="Introduction of treatement(ttt)",
@@ -501,7 +429,8 @@ comboYear = ttk.Combobox(app,
             ' 2016', ' 2017', ' 2018', ' 2019',
             ' 2020', ' 2021', ' 2022', ' 2023',
             ' 2024', ' 2025', ' 2026', ' 2027',
-            ' 2028', ' 2029', ' 2030'], postcommand=changeYear)
+            ' 2028', ' 2029', ' 2030', ' 2031',
+            ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=changeYear)
 comboYear.bind("<<ComboboxSelected>>", callbackYear)
 comboYear.grid(row=10, column=2, pady=10)
 
@@ -572,8 +501,9 @@ comboFinishMonth.grid(row=13, column=1, pady=10)
 
 def finishYear():
     comboFinishYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
-                          ' 2024', ' 2025', ' 2026', ' 2027',
-                          ' 2028', ' 2029', ' 2030']
+                                 ' 2024', ' 2025', ' 2026', ' 2027',
+                                 ' 2028', ' 2029', ' 2030', ' 2031',
+                                 ' 2032', ' 2033', ' 2034', ' 2035']
 
 labelFinishYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='gray17')
@@ -581,8 +511,9 @@ labelFinishYear.grid(row=12, column=2)
 
 comboFinishYear = ttk.Combobox(app,
     values=[' 2020', ' 2021', ' 2022', ' 2023',
-          ' 2024', ' 2025', ' 2026', ' 2027',
-          ' 2028', ' 2029', ' 2030'], postcommand=finishYear)
+            ' 2024', ' 2025', ' 2026', ' 2027',
+            ' 2028', ' 2029', ' 2030', ' 2031',
+            ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=finishYear)
 comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
 comboFinishYear.grid(row=13, column=2, pady=10)
 
@@ -687,12 +618,14 @@ Rnbre.grid(row=21, column=2)
 
 buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
     bg='red', bd=4, command=deleteTreatment)
-buttStopttt.grid(row=21, column=0)
+buttStopttt.grid(row=23, column=0)
 
+deleteTreat = tk.Entry(app)
 delete_text = tk.StringVar()
 delete_text.set("To stop !")
-deleteTreat = tk.Entry(app, textvariable=delete_text, highlightbackground='gray')
-deleteTreat.grid(row=23, column=0)
+deleteTreat = tk.Entry(textvariable=delete_text,
+    highlightbackground='red', bd=4)
+deleteTreat.grid(row=21, column=0)
 
 LabSign = tk.Label(app, text='Signature :', font=12, 
     width=15, fg='red', bg='pale green')

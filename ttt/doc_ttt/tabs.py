@@ -9,7 +9,7 @@ import os
 
 
 # To create list of start date
-with open('./ttt/doc_ttt/convtabs.json') as file:
+with open('./ttt/doc_ttt/convdose.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -35,7 +35,7 @@ for start in liststart:
     print("liststart: " + start)
 
 # To create list of end date
-with open('./ttt/doc_ttt/convdatefinish.json') as file:
+with open('./ttt/doc_ttt/convdose.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -215,27 +215,11 @@ class app(Frame):
         self.text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
         self.Entryall=Entry(master, textvariable=self.text_all, width=60)
         self.Entryall.grid(sticky='e', row=0, column=0, padx=120, pady=5)
+        self.buttQuit=Button(master, text="Close", bg='gray30', fg='cyan', command=quit)
+        self.buttQuit.grid(sticky='e', row=0, column=0, padx=10)
         self.grid()
         self.create_widgets()
-    """
-    def delete_ttt(self):
-        for x in range(8, 136):
-            print(x)
-        for y in range(0, 16):
-            print(y)
 
-        self.capture = [self.entries[x].delete(0, liststart[y]),
-            self.entries[x].delete(0, listend[y]),
-            self.entries[x].delete(0, list1[y]),
-            self.entries[x].delete(0, list2[y]),
-            self.entries[x].delete(0, list3[y]),
-            self.entries[x].delete(0, list4[y]),
-            self.entries[x].delete(0, list5[y]),
-            self.entries[x].delete(0, list6[y])]
-
-        if capturedel.get() == self.capture:
-            print("gagné !!!")
-    """
     def create_widgets(self):
         """
         To create table
@@ -395,15 +379,6 @@ class app(Frame):
                 self.entries[125].insert(0, list4[14])
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
-
-                self.entries[128].insert(0, liststart[15])
-                self.entries[129].insert(0, listend[15])
-                self.entries[130].insert(0, list1[15])
-                self.entries[131].insert(0, list2[15])
-                self.entries[132].insert(0, list3[15])
-                self.entries[133].insert(0, list4[15])
-                self.entries[134].insert(0, list5[15])
-                self.entries[135].insert(0, list6[15])
         except IndexError as info:
             print("End of medication reached !", info)
 
