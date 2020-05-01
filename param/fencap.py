@@ -557,7 +557,7 @@ time_string = IntVar()
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
-listeDate = ["30/04/2020", "01/06/2020", "01/07/2020",
+listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
              "01/08/2020", "01/09/2020", "01/10/2020",
              "01/11/2020","01/12/2020"]
 for i in listeDate:

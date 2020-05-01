@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-#!-*-encoding:Utf-8-*-
+# -*-encoding:Utf-8-*-
 
 
 from tkinter import *
 from string import ascii_lowercase
-from tkinter import *
 import json
 import os
 
@@ -192,15 +191,57 @@ print("\nThat seems correct!\n")
 class app(Frame):
     def __init__(self, master = None):
         Frame.__init__(self, master)
+        self.text_name=StringVar()
+        self.labelo=Label(master, text="Treatments for : ", width=20,
+            font='Times 18 bold', fg='cyan', bg='gray17')
+        self.labelo.grid(sticky='w', row=0, column=0, padx=30, pady=5)
+        with open('./newpatient/entryfile.txt', 'r') as file:
+            line1=file.readline()
+        self.text_name.set(line1)
+        self.entryName=Entry(master, textvariable=self.text_name)
+        self.entryName.grid(sticky='w', row=0, column=0, padx=250, pady=5)
+        self.labelallergy=Label(master, text="Allergy : ",
+            font='Arial 18 bold', fg='coral', bg='gray17')
+        self.labelallergy.grid(row=0, column=0, padx=10, pady=5)
+        with open('./allergy/allergyfile.txt', 'r') as allerfile:
+            lineA1=allerfile.readline()
+            lineA2=allerfile.readline()
+            lineA3=allerfile.readline()
+            lineA4=allerfile.readline()
+            lineA5=allerfile.readline()
+            lineA6=allerfile.readline()
+            lineA7=allerfile.readline()
+        self.text_all=StringVar()
+        self.text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
+        self.Entryall=Entry(master, textvariable=self.text_all, width=60)
+        self.Entryall.grid(sticky='e', row=0, column=0, padx=120, pady=5)
         self.grid()
         self.create_widgets()
+    """
+    def delete_ttt(self):
+        for x in range(8, 136):
+            print(x)
+        for y in range(0, 16):
+            print(y)
 
+        self.capture = [self.entries[x].delete(0, liststart[y]),
+            self.entries[x].delete(0, listend[y]),
+            self.entries[x].delete(0, list1[y]),
+            self.entries[x].delete(0, list2[y]),
+            self.entries[x].delete(0, list3[y]),
+            self.entries[x].delete(0, list4[y]),
+            self.entries[x].delete(0, list5[y]),
+            self.entries[x].delete(0, list6[y])]
+
+        if capturedel.get() == self.capture:
+            print("gagné !!!")
+    """
     def create_widgets(self):
         """
         To create table
         """
         self.entries = {}
-        self.tableheight = 15
+        self.tableheight = 16
         self.tablewidth = 8
         counter = 0
         for row in range(self.tableheight):
@@ -365,7 +406,7 @@ class app(Frame):
                 self.entries[135].insert(0, list6[15])
         except IndexError as info:
             print("End of medication reached !", info)
-        
+
 os.remove('./ttt/doc_ttt/data_ttt.json')
 os.remove('./ttt/doc_ttt/data_dose.json')
 os.remove('./ttt/doc_ttt/data_matin.json')
@@ -377,4 +418,5 @@ os.remove('./ttt/doc_ttt/data_end.json')
 
 prog = app()
 prog.master.title('Medication')
+prog.master.configure(bg='gray17')
 prog.mainloop()

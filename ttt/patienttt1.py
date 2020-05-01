@@ -30,7 +30,7 @@ def callbackFinishYear(event):
     print(comboFinishYear.get())
 
 def showTreat():
-  subprocess.call('./ttt/doc_ttt/tabs.py')
+    subprocess.call('./ttt/doc_ttt/tabs.py')
 
 def copyFunc():
     """
@@ -44,12 +44,113 @@ def copyFunc():
     else:
         messagebox.showinfo('Return', 'You will return to the application')
 
+def deleteTreatment():
+    with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as file:
+        file.readlines()
+    try:
+        if os.path.getsize('./ttt/doc_ttt/convtabs.json'):
+            print("+ File 'convtabs' exist !")
+            with open('./ttt/doc_ttt/convtabs.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataTtt = datastore
+            dataTtt['data'].delete({'Date' : textDate.get(), 
+              'Date of introduction' : comboDay.get() + comboMonth.get() +
+              comboYear.get()})
+            if comboDay.get() == "":
+                print("---Pas de VALEUR 'Date' entrée---")
+            else:
+                print("---Ok VALEUR 'Date' entrée---")
+                with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile2:
+                    json.dump(dataTtt, datafile2, indent=4)
+    except FileNotFoundError as tocom:
+        print('+ Sorry, file convtabs.json not exist !')
+        print(str(tocom))
+        print("+ File convtabs.json created !")
+        dataTtt = {}
+        dataTtt['data'] = []
+        dataTtt['data'].delete({'Date' : textDate.get(), 
+              'Date of introduction' : comboDay.get() + comboMonth.get() +
+              comboYear.get()})
+        if comboDay.get() == "":
+            print("---Pas de VALEUR 'Date' entrée---")
+        else:
+            print("---Ok VALEUR 'Date' entrée---")
+            with open('./ttt/doc_ttt/convtabs.json', 'w') as datafile:
+                json.dump(dataTtt, datafile, indent=4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt/convdatefinish.json'):
+            print("+ File 'convdatefinish' exist !")
+            with open('./ttt/doc_ttt/convdatefinish.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataEnd = datastore
+            dataEnd['data'].delete({'Date' : textDate.get(),
+              'Date of end' : comboFinishDay.get() +
+              comboFinishMonth.get() + comboFinishYear.get()})
+            if comboFinishDay.get() == "":
+                print("---Pas de VALEUR 'Date end' entrée---")
+            else:
+                print("---Ok VALEUR 'Date end' entrée---")
+                with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile2:
+                    json.dump(dataEnd, datafile2, indent=4)
+    except FileNotFoundError as outcom:
+        print('+ Sorry, file convdatefinish.json not exist !')
+        print(str(outcom))
+        print("+ File convdatefinish.json created !")
+        dataEnd = {}
+        dataEnd['data'] = []
+        dataEnd['data'].delete({'Date' : textDate.get(),
+          'Date of end' : comboFinishDay.get() +
+          comboFinishMonth.get() + comboFinishYear.get()})
+        if comboFinishDay.get() == "":
+            print("---Pas de VALEUR 'Date end' entrée---")
+        else:
+            print("---Ok VALEUR 'Date end' entrée---")
+            with open('./ttt/doc_ttt/convdatefinish.json', 'w') as datafile:
+                json.dump(dataEnd, datafile, indent=4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt/convdose.json'):
+            print("+ File 'convdose' exist !")
+            with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataDose = datastore
+            dataDose['data'].delete({'Date' : textDate.get(), 
+              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
+              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+            if textTreat.get() == "":
+                print("---Pas de VALEUR 'Traitement' entrée---")
+            else:
+                print("---Ok VALEUR 'Traitement' entrée---")
+                with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
+                    json.dump(dataDose, datafile2, indent=4)
+    except FileNotFoundError as outcom:
+        print('+ Sorry, file convdose.json not exist !')
+        print(str(outcom))
+        print("+ File convdose.json created !")
+        dataDose = {}
+        dataDose['data'] = []
+        dataDose['data'].delete({'Date' : textDate.get(), 
+              'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+              'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), 
+              'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
+        if textTreat.get() == "":
+            print("---Pas de VALEUR 'Traitement' entrée---")
+        else:
+            print("---Ok VALEUR 'Traitement' entrée---")
+            with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
+                json.dump(dataDose, datafile, indent=4)
+
 def copyToFile():
     """
     To write all data to intro_ttt.json
     to reuse them after.
     """
-    with open('./ttt/doc_ttt/intro_ttt.json', '+a') as file:
+    with open('./ttt/doc_ttt/intro_ttt.txt', '+a') as file:
         file.write(str("Date : "))
         file.write(textDate.get() + '\n')
         file.write(str("Heure : "))
@@ -302,13 +403,13 @@ labelDay.grid(row=9, column=0)
 
 comboDay = ttk.Combobox(app,
     values=['01', '02', '03', '04',
-          '05', '06', '07', '08',
-          '09', '10', '11', '12',
-          '13', '14', '15', '15',
-          '16', '17', '18', '19',
-          '20', '21', '22', '23',
-          '24', '25', '26', '27',
-          '28', '29', '30', '31'], postcommand=changeDay)
+            '05', '06', '07', '08',
+            '09', '10', '11', '12',
+            '13', '14', '15', '15',
+            '16', '17', '18', '19',
+            '20', '21', '22', '23',
+            '24', '25', '26', '27',
+            '28', '29', '30', '31'], postcommand=changeDay)
 comboDay.bind("<<ComboboxSelected>>", callbackDay)
 comboDay.grid(row=10, column=0, pady=10)
 
@@ -331,8 +432,7 @@ labelMonth = tk.Label(app,
 labelMonth.grid(row=9, column=1)
 
 comboMonth = ttk.Combobox(app,
-    values=[
-            ' January',  
+    values=[' January',  
           ' February', 
           ' March', 
           ' April', 
@@ -424,8 +524,7 @@ labelMonth = tk.Label(app,
 labelMonth.grid(row=12, column=1)
 
 comboFinishMonth = ttk.Combobox(app,
-    values=[
-            ' January',  
+    values=[' January',  
           ' February', 
           ' March', 
           ' April', 
@@ -556,7 +655,7 @@ Rnbre = tk.Entry(highlightbackground='gray', bd=4)
 Rnbre.grid(row=21, column=2)
 
 buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='orange',
-    bg='gray30', bd=4, command=showTreat)
+    bg='gray30', bd=4, command=deleteTreatment)
 buttStopttt.grid(row=21, column=0)
 
 LabSign = tk.Label(app, text='Signature :', font=12, 
