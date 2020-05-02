@@ -622,7 +622,7 @@ buttStopttt.grid(row=23, column=0)
 
 deleteTreat = tk.Entry(app)
 delete_text = tk.StringVar()
-delete_text.set("To stop !")
+delete_text.set("Enter name of ttt")
 deleteTreat = tk.Entry(textvariable=delete_text,
     highlightbackground='red', bd=4)
 deleteTreat.grid(row=21, column=0)

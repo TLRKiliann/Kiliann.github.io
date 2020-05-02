@@ -326,7 +326,7 @@ buttSave = Button(gui, text="Save", width=10, fg='yellow',
 buttSave.grid(sticky='w', row=23, column=0, padx=20, pady=10)
 
 buttQuit = Button(gui, text='Quit', width=10, fg='cyan',
-    bg='gray17', command=quit)
+    bg='gray30', command=quit)
 buttQuit.grid(sticky='e', row=23, column=0, padx=20, pady=10)
 
 gui.mainloop()
