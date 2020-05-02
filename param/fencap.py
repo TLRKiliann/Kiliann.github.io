@@ -24,13 +24,13 @@ def writeData():
     and launching aspiFile.py
     """
     try:
-        if os.path.getsize('./param/Main.json'):
-            print("+ File 'Main.json' exist !")
+        if os.path.getsize('./param/Main.txt'):
+            print("+ File 'Main.txt' exist !")
     except FileNotFoundError as info:
-        print("The file : 'Main.json' doesn't exist !", info)
-        print("File 'Main.json' created !")
+        print("The file : 'Main.txt' doesn't exist !", info)
+        print("File 'Main.txt' created !")
     finally:
-        with open('./param/Main.json', 'a+') as file:
+        with open('./param/Main.txt', 'a+') as file:
             file.write(str("Date: "))
             file.write(textDate.get() + '\n')
             file.write(str("Heure: "))
@@ -266,7 +266,7 @@ def appelTens():
     """
     try:
         if os.path.getsize('./param/aspifile/tensor.json'):
-            subprocess.call('./param/aspifile/aspidata.py', shell=True)
+            subprocess.call('./param/aspifile/aspidata.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTension: " + textTa.get())
     except FileNotFoundError as errorgraph1:
@@ -280,7 +280,7 @@ def appelPuls():
     """
     try:
         if os.path.getsize('./param/aspifile/puls.json'):
-            subprocess.call('./param/aspifile/aspipuls.py', shell=True)
+            subprocess.call('./param/aspifile/aspipuls.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
     except FileNotFoundError as errorgraph2:
@@ -294,7 +294,7 @@ def appelSat():
     """
     try:
         if os.path.getsize('./param/aspifile/sat.json'):
-            subprocess.call('./param/aspifile/aspisat.py', shell=True)
+            subprocess.call('./param/aspifile/aspisat.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
     except FileNotFoundError as errorgraph3:
@@ -308,7 +308,7 @@ def appelFreq():
     """
     try:
         if os.path.getsize('./param/aspifile/freq.json'):
-            subprocess.call('./param/aspifile/aspifreq.py', shell=True)
+            subprocess.call('./param/aspifile/aspifreq.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nFréqu. resp.: " + textFr.get())
     except FileNotFoundError as errorgraph4:
@@ -322,7 +322,7 @@ def appelTemp():
     """
     try:
         if os.path.getsize('./param/aspifile/temp.json'):
-            subprocess.call('./param/aspifile/aspitemp.py', shell=True)
+            subprocess.call('./param/aspifile/aspitemp.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTempérature: " + textTemp.get())
     except FileNotFoundError as errorgraph5:
@@ -336,7 +336,7 @@ def appelGly():
     """
     try:
         if os.path.getsize('./param/aspifile/gly.json'):
-            subprocess.call('./param/aspifile/aspigly.py', shell=True)
+            subprocess.call('./param/aspifile/aspigly.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
     except FileNotFoundError as errorgraph6:
@@ -350,7 +350,7 @@ def appelDlr():
     """
     try:
         if os.path.getsize('./param/aspifile/dlr.json'):
-            subprocess.call('./param/aspifile/aspidlr.py', shell=True)
+            subprocess.call('./param/aspifile/aspidlr.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
     except FileNotFoundError as errorgraph7:
@@ -359,16 +359,16 @@ def appelDlr():
 
 def delMain():
     """
-    To earase Main.json
+    To earase Main.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
-        "It will delete Main.json with all data !!!")
+        "It will delete Main.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:
-            if os.path.getsize('./param/Main.json'):
-                os.remove('./param/Main.json')
-                label['text'] = "File Main.json has been deleted !"
-                print("+ File Main.json has been deleted !")
+            if os.path.getsize('./param/Main.txt'):
+                os.remove('./param/Main.txt')
+                label['text'] = "File Main.txt has been deleted !"
+                print("+ File Main.txt has been deleted !")
         except FileNotFoundError:
             label['text'] = "Sorry, file asked not exist !"
             print('+ Sorry, file asked not exist !')
@@ -487,6 +487,24 @@ def delEvery():
         label['text'] = "Nothing has been deleted !"
         print("+ Nothing has been deleted !")
 
+def updateData():
+    """
+    Backup for Main.txt/month
+    """
+    listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
+    "01/08/2020", "01/09/2020", "01/10/2020",
+    "01/11/2020","01/12/2020"]
+    for i in listeDate:
+        if textDate.get() == i:
+            print("Reinitialization of file Main !")
+            shutil.copy('./param/Main.txt', './param/BackupMain.txt')
+            with open('./param/Main.txt', 'w'): pass
+        else:
+            pass
+
+# Directly up to function
+updateData()
+
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
@@ -499,7 +517,7 @@ gui.geometry('650x560')
 # Labels
 labelTitle = Label(gui, text="Vital Parameters", 
     font=('Times 22 bold'), bg='gray17', fg='aquamarine')
-labelTitle.grid(row=0, column=1, columnspan=4)
+labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
 label = Label(gui)
 label = Label(text='Date : ', font=('Times', 14),
@@ -557,16 +575,6 @@ time_string = IntVar()
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
-listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
-             "01/08/2020", "01/09/2020", "01/10/2020",
-             "01/11/2020","01/12/2020"]
-for i in listeDate:
-    if textDate.get() == i:
-        print("Reinitialization of file Main !")
-        shutil.copy('./param/Main.json', './param/BackupMain.json')
-        with open('./param/Main.json', 'w'): pass
-    else:
-        pass
 
 textHour = Entry(gui)
 time_Htring = IntVar()
@@ -723,7 +731,7 @@ button7Del.config(text='Delete Dlrs', width=15,
 button7Del.grid(row=10, column=4)
 
 lower_frame = Frame(gui, bg='turquoise1', bd=10, relief=GROOVE)
-lower_frame.place(relx=0.5, rely=0.65, relwidth=0.95,
+lower_frame.place(relx=0.5, rely=0.68, relwidth=0.90,
     relheight=0.3, anchor='n')
 
 label = Label(lower_frame, text=" ", font=('Arial', 12),
