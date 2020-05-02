@@ -502,9 +502,6 @@ def updateData():
         else:
             pass
 
-# Directly up to function
-updateData()
-
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
@@ -575,6 +572,8 @@ time_string = IntVar()
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
+# Directly up to function
+updateData()
 
 textHour = Entry(gui)
 time_Htring = IntVar()
