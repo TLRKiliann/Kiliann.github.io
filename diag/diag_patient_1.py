@@ -64,7 +64,7 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des boutons
         self.x, self.y = 200, 250
-        self.b=Button(self.can, width=15, font=16, bg='navy', fg='gold', 
+        self.b=Button(self.can, width=10, font=16, bg='navy', fg='gold', 
                       activebackground='dark turquoise', 
                       activeforeground='black', 
                       text="Add", 
@@ -72,7 +72,7 @@ class Application(Frame):
         self.fb=self.can.create_window(self.x, self.y, window=self.b)
 
         self.x, self.y = 400, 250
-        self.b=Button(self.can, width=15, font=16, bg='navy', fg='gold', 
+        self.b=Button(self.can, width=10, font=16, bg='navy', fg='gold', 
                       activebackground='dark turquoise', 
                       activeforeground='black', 
                       text="Read", 
