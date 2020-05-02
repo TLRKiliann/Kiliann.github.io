@@ -35,54 +35,97 @@ class MenuBar(Frame):
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
+        me1.add_separator()
         me1.add_command(label='Accueil', underline=0, background='black',
             activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.page)
+        me1.add_separator()
         me1.add_command(label="Synopsis", underline=0, background='black',
             activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showsynopsis)
+        me1.add_separator()
         me1.add_command(label="Psychotabs", underline=0, background='black', 
             activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
+        me1.add_separator()
         me1.add_command(label='Installation', background='black',
             activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
+        me1.add_separator()
         me1.add_command(label='QUITTER', underline=0, background='black',
             activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
+        me1.add_separator()
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
+
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
 
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Admin.pack(side=LEFT, padx=3)
         # Partie déroulante du menu administrative
         me2 = Menu(self.cmd_Admin)
-        me2.add_command(label='Patient 1', background='black', activebackground='cyan',
+        me2.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir)
-        me2.add_command(label='Patient 2', background='black', activebackground='cyan',
+
+        me2.add_separator()
+        me2.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir2)
-        me2.add_command(label='Patient 3', background='black', activebackground='cyan',
+        me2.add_separator()
+        me2.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir3)
-        me2.add_command(label='Patient 4', background='black', activebackground='cyan',
+        me2.add_separator()
+        me2.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir4)
-        me2.add_command(label='Patient 5', background='black', activebackground='cyan',
+        me2.add_separator()
+        me2.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir5)
-        me2.add_command(label='Patient 6', background='black', activebackground='cyan',
+        me2.add_separator()
+        me2.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir6)
-        me2.add_command(label='Patient 7', background='black', activebackground='cyan',
+        me2.add_separator()
+        me2.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir7)
         # Integration of menu admin
@@ -93,27 +136,34 @@ class MenuBar(Frame):
         self.cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(self.cmd_agenda)
         # Partie déroulante du menu agenda
-        me3.add_command(label='Patient 1', background='black', activebackground='cyan',
+        me3.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda)
-        me3.add_command(label='Patient 2', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda2)
-        me3.add_command(label='Patient 3', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda3)
-        me3.add_command(label='Patient 4', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda4)
-        me3.add_command(label='Patient 5', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda5)
-        me3.add_command(label='Patient 6', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda6)
-        me3.add_command(label='Patient 7', background='black', activebackground='cyan',
+        me3.add_separator()
+        me3.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda7)
+        me3.add_separator()
         # Integration of agenda menu
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', menu=me3)
 
@@ -123,27 +173,34 @@ class MenuBar(Frame):
         self.cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
         me4 = Menu(self.cmd_Besoins)
-        me4.add_command(label='Patient 1', background='black', activebackground='cyan',
+        me4.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoinsCoche)
-        me4.add_command(label='Patient 2', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins2Coche)
-        me4.add_command(label='Patient 3', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins3Coche)
-        me4.add_command(label='Patient 4', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins4Coche)
-        me4.add_command(label='Patient 5', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins5Coche)
-        me4.add_command(label='Patient 6', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins6Coche)
-        me4.add_command(label='Patient 7', background='black', activebackground='cyan',
+        me4.add_separator()
+        me4.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins7Coche)
+        me4.add_separator()
         # Integration of 14b menu
         self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
 
@@ -153,27 +210,34 @@ class MenuBar(Frame):
         self.cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meSoins = Menu(self.cmd_Soins)
-        meSoins.add_command(label='Patient 1', background='black', activebackground='cyan',
+        meSoins.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins1)
-        meSoins.add_command(label='Patient 2', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins2)
-        meSoins.add_command(label='Patient 3', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins3)
-        meSoins.add_command(label='Patient 4', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins4)
-        meSoins.add_command(label='Patient 5', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins5)
-        meSoins.add_command(label='Patient 6', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins6)
-        meSoins.add_command(label='Patient 7', background='black', activebackground='cyan',
+        meSoins.add_separator()
+        meSoins.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins7)
+        meSoins.add_separator()
         # Integration of health and care menu
         self.cmd_Soins.configure(activeforeground='black', activebackground='cyan', menu=meSoins)
 
@@ -183,27 +247,34 @@ class MenuBar(Frame):
         self.cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meTtt = Menu(self.cmd_ttt)
-        meTtt.add_command(label='Patient 1', background='black', activebackground='cyan',
+        meTtt.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed1)
-        meTtt.add_command(label='Patient 2', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed2)
-        meTtt.add_command(label='Patient 3', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed3)
-        meTtt.add_command(label='Patient 4', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed4)
-        meTtt.add_command(label='Patient 5', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed5)
-        meTtt.add_command(label='Patient 6', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed6)
-        meTtt.add_command(label='Patient 7', background='black', activebackground='cyan',
+        meTtt.add_separator()
+        meTtt.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed7)
+        meTtt.add_separator()
         # Integration of health and care menu
         self.cmd_ttt.configure(activeforeground='black', activebackground='cyan',
             menu=meTtt)
@@ -214,27 +285,34 @@ class MenuBar(Frame):
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
         menuParam = Menu(self.cmd_Param)
-        menuParam.add_command(label='Patient 1', background='black', activebackground='cyan',
+        menuParam.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam1)
-        menuParam.add_command(label='Patient 2', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam2)
-        menuParam.add_command(label='Patient 3', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam3)
-        menuParam.add_command(label='Patient 4', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam4)
-        menuParam.add_command(label='Patient 5', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam5)
-        menuParam.add_command(label='Patient 6', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam6)
-        menuParam.add_command(label='Patient 7', background='black', activebackground='cyan',
+        menuParam.add_separator()
+        menuParam.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam7)
+        menuParam.add_separator()
         # Integration of Vital parameters menu
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
@@ -245,86 +323,107 @@ class MenuBar(Frame):
         self.cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
         meBmi = Menu(self.cmd_BMI)
-        meBmi.add_command(label='Patient 1', background='black', activebackground='cyan',
+        meBmi.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB)
-        meBmi.add_command(label='Patient 2', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB2)
-        meBmi.add_command(label='Patient 3', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB3)
-        meBmi.add_command(label='Patient 4', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB4)
-        meBmi.add_command(label='Patient 5', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB5)
-        meBmi.add_command(label='Patient 6', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB6)
-        meBmi.add_command(label='Patient 7', background='black', activebackground='cyan',
+        meBmi.add_separator()
+        meBmi.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB7)
+        meBmi.add_separator()
         # Integration of 3rd menu
         self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
 
         # Medical Visite
-        self.cmd_BMI=Menubutton(self, text='Medical Visit', fg='cyan', bg='gray30',
+        self.cmd_Vmed=Menubutton(self, text='Medical Visit', fg='cyan', bg='gray30',
             relief=GROOVE)
-        self.cmd_BMI.pack(side=LEFT, padx=3)
+        self.cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
-        meBmi = Menu(self.cmd_BMI)
-        meBmi.add_command(label='Patient 1', background='black', activebackground='cyan',
+        meVmed = Menu(self.cmd_Vmed)
+        meVmed.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed)
-        meBmi.add_command(label='Patient 2', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed2)
-        meBmi.add_command(label='Patient 3', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed3)
-        meBmi.add_command(label='Patient 4', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed4)
-        meBmi.add_command(label='Patient 5', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed5)
-        meBmi.add_command(label='Patient 6', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed6)
-        meBmi.add_command(label='Patient 7', background='black', activebackground='cyan',
+        meVmed.add_separator()
+        meVmed.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed7)
+        meVmed.add_separator()
         # Integration of 3rd menu
-        self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
+        self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
         # Menu for showing all Graphs togather per patient 
         self.cmd_Graph=Menubutton(self, text='Graphics', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Graph.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
         meGraph = Menu(self.cmd_Graph)
-        meGraph.add_command(label='Patiente 1', background='black', activebackground='cyan',
+        meGraph.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph)
-        meGraph.add_command(label='Patiente 2', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph2)
-        meGraph.add_command(label='Patiente 3', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph3)
-        meGraph.add_command(label='Patiente 4', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph4)
-        meGraph.add_command(label='Patiente 5', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph5)
-        meGraph.add_command(label='Patiente 6', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph6)
-        meGraph.add_command(label='Patiente 7', background='black', activebackground='cyan',
+        meGraph.add_separator()
+        meGraph.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph7)
+        meGraph.add_separator()
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan',
             menu=meGraph)
@@ -346,27 +445,34 @@ class MenuBar(Frame):
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
         mePrint = Menu(self.cmd_Print)
-        mePrint.add_command(label='Patiente 1', background='black', activebackground='cyan',
+        mePrint.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu)
-        mePrint.add_command(label='Patiente 2', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu2)
-        mePrint.add_command(label='Patiente 3', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu3)
-        mePrint.add_command(label='Patiente 4', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu4)
-        mePrint.add_command(label='Patiente 5', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu5)
-        mePrint.add_command(label='Patiente 6', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu6)
-        mePrint.add_command(label='Patiente 7', background='black', activebackground='cyan',
+        mePrint.add_separator()
+        mePrint.add_command(label=self.new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu7)
+        mePrint.add_separator()
         # Integration of nutrition menu
         self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
@@ -980,14 +1086,17 @@ class Application(Frame):
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=(namefile.readline())
         self.new_text=line1
+
         self.x2, self.y2 = 129, 200
         self.Data_write=Entry(self.can)
         self.new_text=StringVar()
         self.Data_write=Entry(textvariable=self.new_text,
-        highlightbackground='gray', bd=4)
+            highlightbackground='gray', bd=4)
         self.new_text.set(line1)
+        #self.Data_write.focus()
+        #self.Data_write.bind("<Return>", self.returnEntry)
         self.Data_write=self.can.create_window(self.x2, self.y2,
-          window=self.Data_write)
+            window=self.Data_write)
 
         self.x3, self.y3 = 271, 200
         self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
