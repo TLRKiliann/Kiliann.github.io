@@ -496,8 +496,8 @@ def updateData():
     "01/11/2020","01/12/2020"]
     for i in listeDate:
         if textDate.get() == i:
-            print("Reinitialization of file Main !")
-            shutil.copy('./param/Main.txt', './param/BackupMain.txt')
+            print("Backup of file Main !")
+            shutil.copy('./param/Main.txt', './Backup/BackupMain.txt')
             with open('./param/Main.txt', 'w'): pass
         else:
             pass

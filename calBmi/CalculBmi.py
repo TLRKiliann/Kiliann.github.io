@@ -111,6 +111,24 @@ def viewGraphicBmi():
 def viewGraphicKilo():
     subprocess.call('./calBmi/doc_BMI/convert_kg.py')
 
+def updateData():
+    """
+    Backup for Main.txt/month
+    """
+    listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
+    "01/08/2020", "01/09/2020", "01/10/2020",
+    "01/11/2020","01/12/2020"]
+    for i in listeDate:
+        if textDate.get() == i:
+            print("Backup of file Main !")
+            shutil.copy('./param/Main.txt', './Backup/BackupMain.txt')
+            with open('./param/Main.txt', 'w'): pass
+        else:
+            pass
+
+# Directly up to function
+updateData()
+
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
