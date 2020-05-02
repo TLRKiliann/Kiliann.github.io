@@ -84,11 +84,6 @@ textBox.insert(INSERT, "En date du : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-textBox2=Text(root, height=15, width=60, font=18)
-textBox2.insert(INSERT, "En date du : ")
-textBox2.insert(END, time.strftime("%d/%m/%Y : \n"))
-textBox2.pack(padx=30, pady=30)
-
 buttonLire=Button(root, text="Read", fg='cyan', bg='gray30',
     activebackground='dark turquoise', activeforeground='navy',
     command=lectureFic)
