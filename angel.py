@@ -131,6 +131,36 @@ class MenuBar(Frame):
         # Integration of menu admin
         self.cmd_Admin.configure(activeforeground='black', activebackground='cyan', menu=me2)
 
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
+
         # Agenda menu
         self.cmd_agenda=Menubutton(self, text='Agenda', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_agenda.pack(side=LEFT, padx=3)
@@ -166,6 +196,36 @@ class MenuBar(Frame):
         me3.add_separator()
         # Integration of agenda menu
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', menu=me3)
+
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
 
         # 14 besoins menu
         self.cmd_Besoins=Menubutton(self, text='14 needs', fg='cyan', bg='gray30',
@@ -204,6 +264,36 @@ class MenuBar(Frame):
         # Integration of 14b menu
         self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
 
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
+
         # Helth and care menu
         self.cmd_Soins=Menubutton(self, text='Care and monitoring', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -240,6 +330,36 @@ class MenuBar(Frame):
         meSoins.add_separator()
         # Integration of health and care menu
         self.cmd_Soins.configure(activeforeground='black', activebackground='cyan', menu=meSoins)
+
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
 
         # Treatments
         self.cmd_ttt=Menubutton(self, text='Treatments', fg='cyan', bg='gray30',
@@ -279,6 +399,36 @@ class MenuBar(Frame):
         self.cmd_ttt.configure(activeforeground='black', activebackground='cyan',
             menu=meTtt)
 
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
+
         # Vital parameters menu
         self.cmd_Param=Menubutton(self, text='Vital Parameters', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -317,6 +467,36 @@ class MenuBar(Frame):
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
 
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
+
         # BMI menu
         self.cmd_BMI=Menubutton(self, text='Body Mass Indice', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -353,6 +533,36 @@ class MenuBar(Frame):
         meBmi.add_separator()
         # Integration of 3rd menu
         self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
+
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
 
         # Medical Visite
         self.cmd_Vmed=Menubutton(self, text='Medical Visit', fg='cyan', bg='gray30',
@@ -391,6 +601,36 @@ class MenuBar(Frame):
         # Integration of 3rd menu
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
+
         # Menu for showing all Graphs togather per patient 
         self.cmd_Graph=Menubutton(self, text='Graphics', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Graph.pack(side=LEFT, padx=3)
@@ -428,17 +668,35 @@ class MenuBar(Frame):
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan',
             menu=meGraph)
 
-        # Manuals Nurse
-        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='gray30', relief=GROOVE)
-        self.cmd_Intext.pack(side=LEFT, padx=3)
-        # drop-down portion of Manuals Nurse
-        meIntext = Menu(self.cmd_Intext)
-        meIntext.add_command(label='Click on it', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.manualFile)
-        # Integration of Manuals Nurse
-        self.cmd_Intext.configure(activeforeground='black', activebackground='cyan',
-            menu=meIntext)
+        # For label below (in me2.add_command)
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            line2=(namefile.readline())
+            line3=(namefile.readline())
+            line4=(namefile.readline())
+            line5=(namefile.readline())
+            line6=(namefile.readline())
+            line7=(namefile.readline())
+            line8=(namefile.readline())
+            line9=(namefile.readline())
+            line10=(namefile.readline())
+            line11=(namefile.readline())
+            line12=(namefile.readline())
+            line13=(namefile.readline())
+            line14=(namefile.readline())
+            line15=(namefile.readline())
+            line16=(namefile.readline())
+            line17=(namefile.readline())
+            line18=(namefile.readline())
+            line19=(namefile.readline())
+
+        self.new_text=line1
+        self.new_text2=line4
+        self.new_text3=line7
+        self.new_text4=line10
+        self.new_text5=line13
+        self.new_text6=line16
+        self.new_text7=line19
 
         # Nutrition menu for intolerance and hate meals
         self.cmd_Print=Menubutton(self, text='Nutrition', fg='cyan', bg='gray30', relief=GROOVE)
@@ -476,6 +734,18 @@ class MenuBar(Frame):
         # Integration of nutrition menu
         self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
+
+        # Manuals Nurse
+        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Intext.pack(side=LEFT, padx=3)
+        # drop-down portion of Manuals Nurse
+        meIntext = Menu(self.cmd_Intext)
+        meIntext.add_command(label='Click on it', background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black',
+                        command=boss.manualFile)
+        # Integration of Manuals Nurse
+        self.cmd_Intext.configure(activeforeground='black', activebackground='cyan',
+            menu=meIntext)
 
 # Application principale (Main app)
 class Application(Frame):

@@ -3,6 +3,7 @@
 
 
 from tkinter import *
+import tkinter
 from tkinter import messagebox
 import os
 import subprocess
@@ -26,7 +27,6 @@ def sheetLabo():
     else:
         os.startfile('./labo/labosheet.pdf') # Windows
 
-
 def sheetMicrobio():
     """
     For openning file at pdf 
@@ -42,7 +42,6 @@ def sheetMicrobio():
         subprocess.call('open', './labo/microbio.pdf' ) # Mac
     else:
         os.startfile('./labo/microbio.pdf') # Windows
-
 
 def printLabo():
     """
@@ -438,6 +437,8 @@ def recordOption():
 def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
+def comburTips():
+    subprocess.call('./labo/combtest.py')
 
 app = Tk()
 app.title("Labo check")
@@ -822,6 +823,11 @@ C44 = Checkbutton(app, text="Stix (strip)", fg='navy',
     onvalue=1, offvalue=0, height=1, 
     width=20, anchor="w")
 C44.grid(sticky='w', row=27, column=0, padx=10)
+
+# Stix
+ButtStix=Button(app, text='- Combur -', width=20,
+    height=1, bg='navy', fg='cyan', command=comburTips)
+ButtStix.grid(row=27, column=1, padx=20)
 
 CheckVar45 = IntVar()
 C45 = Checkbutton(app, text="Uricult", fg='navy', 
