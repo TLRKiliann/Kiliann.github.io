@@ -16,6 +16,7 @@ import os
 import subprocess
 import json
 import io
+import shutil
 
 
 def call_result(textBox, number1, number2):
@@ -47,21 +48,21 @@ def buttRecord():
     num2 = float((number2.get()))
     result = (num1)/(num2*num2)
 
-    file = open('./calBmi/info_bmi1.json', 'a+')
-    file.write(str("Date : "))
-    file.write(textDate.get() + "\n")
-    file.write(str("Heure : "))
-    file.write(textHour.get() + "\n")
-    file.write(str("Prenom et Nom : "))
-    file.write(textName.get() + "\n")
-    file.write(str("Poids : "))
-    file.write(number1.get() + "\n")
-    file.write(str("Taille : "))
-    file.write(number2.get() + "\n")
-    file.write(str("BMI : "))
-    file.write(str(result))
-    file.write("\n\n")
-    file.close()
+    with open('./calBmi/bmi.txt', 'a+') as file:
+        file.write(str("Date : "))
+        file.write(textDate.get() + "\n")
+        file.write(str("Heure : "))
+        file.write(textHour.get() + "\n")
+        file.write(str("Prenom et Nom : "))
+        file.write(textName.get() + "\n")
+        file.write(str("Poids : "))
+        file.write(number1.get() + "\n")
+        file.write(str("Taille : "))
+        file.write(number2.get() + "\n")
+        file.write(str("BMI : "))
+        file.write(str(result))
+        file.write("\n\n")
+        file.close()
 
     try:
         if os.path.getsize('./calBmi/doc_BMI/file_bmi1.json'):
@@ -111,6 +112,9 @@ def viewGraphicBmi():
 def viewGraphicKilo():
     subprocess.call('./calBmi/doc_BMI/convert_kg.py')
 
+def readBmi():
+    subprocess.call('./calBmi/bmi_read.py')
+
 def updateData():
     """
     Backup for Main.txt/month
@@ -120,9 +124,9 @@ def updateData():
     "01/11/2020","01/12/2020"]
     for i in listeDate:
         if textDate.get() == i:
-            print("Backup of file Main !")
-            shutil.copy('./param/Main.txt', './Backup/BackupMain.txt')
-            with open('./param/Main.txt', 'w'): pass
+            print("Backup of file Bmi !")
+            shutil.copy('./calBmi/bmi.txt', './Backup/BackupBmi.txt')
+            with open('./calBmi/bmi.txt', 'w'): pass
         else:
             pass
 
@@ -131,13 +135,13 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
-gui.geometry('400x350')
+#gui.geometry('400x350')
 gui.title('Simple BMIcalculator')
 gui.configure(background='gray17')
 
 labelTitle = Label(gui, text="Simple BMI", font='Arial 18 bold', 
     fg='aquamarine', bg='gray17')
-labelTitle.grid(row=0, column=1, columnspan=2)
+labelTitle.grid(row=0, column=1, columnspan=2, pady=10)
 
 number1 = StringVar()
 number2 = StringVar()
@@ -192,34 +196,39 @@ number2 = StringVar()
 entryNum2 = Entry(gui, textvariable=number2, highlightbackground='gray', bd=4)
 entryNum2.grid(row=5, column=2)
 
-textBox = Label(gui, height=3, width=30, font=12, relief=SUNKEN)
-textBox.grid(pady=5, row=6, column=1, columnspan=2)
+textBox = Label(gui, height=3, width=40, font=12, relief=SUNKEN)
+textBox.grid(row=6, column=1, columnspan=2, pady=10)
 
 call_result = partial(call_result, textBox, number1, number2)
 
 buttonCal = Button(gui, text="1-Calculer", width=12, fg='yellow',
     bg='turquoise4', activeforeground='gray40',
     activebackground='turquoise2', command=call_result)
-buttonCal.grid(row=10, column=1)
+buttonCal.grid(sticky='w', row=10, column=1)
 
 buttonCal = Button(gui, text="2-Save", width=12, fg='yellow',
     bg='turquoise4', activeforeground='gray40',
     activebackground='turquoise2', command=buttRecord)
-buttonCal.grid(row=11, column=1)
+buttonCal.grid(sticky='w', row=11, column=1)
+
+buttonCal2 = Button(gui, text="Read", width=12, fg='light blue',
+    bg='turquoise4', activebackground='dark turquoise',
+    command=readBmi)
+buttonCal2.grid(sticky='w', row=12, column=1)
 
 buttonCal = Button(gui, text="Graph BMI", width=12, fg='blue2',
     bg='turquoise3', activeforeground='gray30',
-    activebackground='turquoise2', command=viewGraphicBmi)
-buttonCal.grid(row=10, column=2)
+    activebackground='turquoise', command=viewGraphicBmi)
+buttonCal.grid(sticky='e', row=10, column=2)
 
 buttonCal = Button(gui, text="Graph Kg", width=12, fg='blue2',
     bg='turquoise3', activeforeground='gray30',
-    activebackground='turquoise2', command=viewGraphicKilo)
-buttonCal.grid(row=11, column=2)
+    activebackground='turquoise', command=viewGraphicKilo)
+buttonCal.grid(sticky='e', row=11, column=2)
 
-buttonCal2 = Button(gui, text="Quitter", width=12, fg='cyan',
-    bg='gray30', activeforeground='gray40',
+buttonCal2 = Button(gui, text="Quit", width=12, fg='cyan',
+    bg='gray30', activebackground='dark turquoise',
     command=quit)
-buttonCal2.grid(row=12, column=1)
+buttonCal2.grid(sticky='e', row=12, column=2)
 
 gui.mainloop()

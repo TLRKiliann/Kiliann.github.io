@@ -15,7 +15,7 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(END, li)
 
 fen=Tk()
-fen.title("Vital parameters")
+fen.title("BMI results")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
@@ -24,7 +24,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Vital parameters : ", width=20,
+labelo=Label(fen, text="BMI results : ", width=20,
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
