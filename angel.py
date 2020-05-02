@@ -1061,30 +1061,31 @@ class Application(Frame):
 
     # Synopsis page
     def showsynopsis(self):
-        self.can.delete(ALL)
+        self.can.delete()
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
             font=('Times New Roman', 40), fill='aquamarine')
 
         # To introduce a new pytient
         self.x1, self.y1 = 120, 50
         self.b=Button(self.can, width=10, font=16, bg='gray17', fg='cyan',
-                      activebackground='cyan',
-                      activeforeground='black',
-                      text="New Entry",
-                      command=self.callPatient1)
+            activebackground='cyan',
+            activeforeground='black',
+            text="New Entry",
+            command=self.callPatient1)
         self.fb=self.can.create_window(self.x1, self.y1, window=self.b)
         
         # To refresh page with new entry patient
         self.x101, self.y101 = 270, 50
         self.b2=Button(self.can, width=10, font=16, bg='gray17', fg='gold',
-                      activebackground='cyan',
-                      activeforeground='black',
-                      text="Refresh",
-                      command=self.showsynopsis)
+            activebackground='cyan',
+            activeforeground='black',
+            text="Refresh",
+            command=self.showsynopsis)
         self.fb2=self.can.create_window(self.x101, self.y101, window=self.b2)
         
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=(namefile.readline())
+            
         self.new_text=line1
 
         self.x2, self.y2 = 129, 200
@@ -1093,65 +1094,63 @@ class Application(Frame):
         self.Data_write=Entry(textvariable=self.new_text,
             highlightbackground='gray', bd=4)
         self.new_text.set(line1)
-        #self.Data_write.focus()
-        #self.Data_write.bind("<Return>", self.returnEntry)
         self.Data_write=self.can.create_window(self.x2, self.y2,
             window=self.Data_write)
 
         self.x3, self.y3 = 271, 200
         self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.allergyLink)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink)
         self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
 
         self.x3, self.y3 = 429, 200
         self.b=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.diag1)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.diag1)
         self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
 
         self.x4, self.y4 = 597, 200
         self.b4=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.laboResult)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult)
         self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
         #769
         self.x5, self.y5 = 725, 200
         self.b5=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.suiviSoins1)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.suiviSoins1)
         self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
         #896
         self.x6, self.y6 = 853, 200
         self.b6=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv1)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv1)
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
         self.x7, self.y7 = 981, 200
         self.b7=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.moyaux)
         self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
 
         self.x8, self.y8 = 1109, 200
         self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.extStake)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.extStake)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 2
@@ -1160,7 +1159,9 @@ class Application(Frame):
             line2=(namefile.readline())
             line3=(namefile.readline())
             line4=(namefile.readline())
+
         self.new_text=line4
+
         self.x9, self.y9 = 129, 232
         self.Data_write=Entry(self.can)
         self.new_text=StringVar()
@@ -1172,58 +1173,58 @@ class Application(Frame):
 
         self.x10, self.y10 = 271, 232
         self.b10=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag2)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag2)
         self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
 
         self.x13, self.y13 = 429, 232
         self.b13=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam2)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam2)
         self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
 
         self.x14, self.y14 = 597, 232
         self.b14=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins2)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins2)
         self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
 
         self.x15, self.y15 = 725, 232
         self.b15=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm1)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm1)
         self.fb15=self.can.create_window(self.x15, self.y15, window=self.b15)
 
         self.x16, self.y16 = 853, 232
         self.b16=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv2)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv2)
         self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
 
         self.x17, self.y17 = 981, 232
         self.b17=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag2)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag2)
         self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
 
         self.x171, self.y171 = 1109, 232
         self.b171=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
         # Patient 2
@@ -1247,58 +1248,58 @@ class Application(Frame):
 
         self.x19, self.y19 = 271, 264
         self.b19=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag3)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
 
         self.x22, self.y22 = 429, 264
         self.b22=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam3)
         self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
 
         self.x23, self.y23 = 597, 264
         self.b23=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins3)
         self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
 
         self.x24, self.y24 = 725, 264
         self.b24=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm3)
         self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
 
         self.x25, self.y25 = 853, 264
         self.b25=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv3)
         self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
 
         self.x26, self.y26 = 981, 264
         self.b26=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag3)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag3)
         self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
 
         self.x8, self.y8 = 1109, 264
         self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # 4ème personne Synopsis - Page
@@ -1326,58 +1327,58 @@ class Application(Frame):
 
         self.x28, self.y28 = 271, 296
         self.b28=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag4)
         self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
 
         self.x31, self.y31 = 429, 296
         self.b31=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam4)
         self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
 
         self.x32, self.y32 = 597, 296
         self.b32=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins4)
         self.fb32=self.can.create_window(self.x32, self.y32, window=self.b32)
 
         self.x33, self.y33 = 725, 296
         self.b33=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm4)
         self.fb33=self.can.create_window(self.x33, self.y33, window=self.b33)
 
         self.x34, self.y34 = 853, 296
         self.b34=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv4)
         self.fb34=self.can.create_window(self.x34, self.y34, window=self.b34)
 
         self.x35, self.y35 = 981, 296
         self.b35=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag4)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag4)
         self.fb35=self.can.create_window(self.x35, self.y35, window=self.b35)
 
         self.x351, self.y351 = 1109, 296
         self.b351=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -1406,58 +1407,58 @@ class Application(Frame):
 
         self.x37, self.y37 = 271, 328
         self.b37=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag5)
         self.fb37=self.can.create_window(self.x37, self.y37, window=self.b37)
 
         self.x40, self.y40 = 429, 328
         self.b40=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam5)
         self.fb40=self.can.create_window(self.x40, self.y40, window=self.b40)
 
         self.x41, self.y41 = 597, 328
         self.b41=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins5)
         self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
 
         self.x42, self.y42 = 725, 328
         self.b42=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm5)
         self.fb42=self.can.create_window(self.x42, self.y42, window=self.b42)
 
         self.x43, self.y43 = 853, 328
         self.b43=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv5)
         self.fb43=self.can.create_window(self.x43, self.y43, window=self.b43)
 
         self.x44, self.y44 = 981, 328
         self.b44=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag5)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag5)
         self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
 
         self.x441, self.y441 = 1109, 328
         self.b441=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -1489,58 +1490,58 @@ class Application(Frame):
 
         self.x46, self.y46 = 271, 360
         self.b46=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag6)
         self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
 
         self.x49, self.y49 = 429, 360
         self.b49=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam6)
         self.fb49=self.can.create_window(self.x49, self.y49, window=self.b49)
 
         self.x50, self.y50 = 597, 360
         self.b50=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins6)
         self.fb50=self.can.create_window(self.x50, self.y50, window=self.b50)
 
         self.x51, self.y51 = 725, 360
         self.b51=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm6)
         self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
 
         self.x52, self.y52 = 853, 360
         self.b52=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv6)
         self.fb52=self.can.create_window(self.x52, self.y52, window=self.b52)
 
         self.x53, self.y53 = 981, 360
         self.b53=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag6)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag6)
         self.fb53=self.can.create_window(self.x53, self.y53, window=self.b53)
 
         self.x531, self.y531 = 1109, 360
         self.b531=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
 
         with open('./newpatient/entryfile.txt', 'r') as namefile:
@@ -1575,58 +1576,58 @@ class Application(Frame):
 
         self.x54, self.y54 = 271, 392
         self.b54=Button(self.can, width=8, font=16, bg='black', fg='coral',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Allergy",
-                      command=self.diag7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.diag7)
         self.fb54=self.can.create_window(self.x54, self.y54, window=self.b54)
 
         self.x57, self.y57 = 429, 392
         self.b57=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Diagnostic + ATCD",
-                      command=self.showParam7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam7)
         self.fb57=self.can.create_window(self.x57, self.y57, window=self.b57)
 
         self.x58, self.y58 = 597, 392
         self.b58=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Laboratory",
-                      command=self.suiviSoins7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.suiviSoins7)
         self.fb58=self.can.create_window(self.x58, self.y58, window=self.b58)
 
         self.x59, self.y59 = 725, 392
         self.b59=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Exams",
-                      command=self.showvm7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm7)
         self.fb59=self.can.create_window(self.x59, self.y59, window=self.b59)
 
         self.x60, self.y60 = 853, 392
         self.b60=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Life story",
-                      command=self.histv7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv7)
         self.fb60=self.can.create_window(self.x60, self.y60, window=self.b60)
 
         self.x61, self.y61 = 981, 392
         self.b61=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Aux. resrc.",
-                      command=self.diag7)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag7)
         self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
 
         self.x62, self.y62 = 1109, 392
         self.b62=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-                      activebackground='dark turquoise',
-                      activeforeground='black',
-                      text="Ext. stacke.",
-                      command=self.moyaux)
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
