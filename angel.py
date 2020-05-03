@@ -632,7 +632,7 @@ class Application(Frame):
     def showsynopsis(self):
         self.can.delete()
         self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
-        self.item=self.can.create_image(700, 400, image=self.photo)
+        self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
             font=('Times New Roman', 40), fill='aquamarine')
 
@@ -1214,7 +1214,7 @@ class Application(Frame):
             command=self.moyaux)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
-        self.can.configure(scrollregion=self.can.bbox(ALL))
+        #self.can.configure(scrollregion=self.can.bbox(ALL))
     # Admin OK
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
@@ -1647,6 +1647,8 @@ class Application(Frame):
     # For new entry
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
+
+        self.can.configure(scrollregion=self.can.bbox(ALL))
 
 if __name__=='__main__':
     app = Application()

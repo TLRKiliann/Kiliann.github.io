@@ -171,7 +171,6 @@ time_string = IntVar()
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
-# Directly up to function
 updateData()
 
 textHour = Entry(gui)
@@ -201,7 +200,7 @@ textBox.grid(row=6, column=1, columnspan=2, pady=10)
 
 call_result = partial(call_result, textBox, number1, number2)
 
-buttonCal = Button(gui, text="1-Calculer", width=12, fg='yellow',
+buttonCal = Button(gui, text="1-Calcul", width=12, fg='yellow',
     bg='turquoise4', activeforeground='gray40',
     activebackground='turquoise2', command=call_result)
 buttonCal.grid(sticky='w', row=10, column=1)

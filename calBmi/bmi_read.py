@@ -24,7 +24,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="BMI results : ", width=20,
+labelo=Label(fen, text="BMI results : ", width=15,
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, pady=20)
 
@@ -35,6 +35,7 @@ labelallergy.pack(padx=5, pady=5)
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+
 text_name=StringVar()
 text_name.set(line1)
 Entryname=Entry(fen, textvariable=text_name)
@@ -49,6 +50,7 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA5=allerfile.readline()
     lineA6=allerfile.readline()
     lineA7=allerfile.readline()
+
 text_all=StringVar()
 text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryall=Entry(fen, textvariable=text_all, width=60)
