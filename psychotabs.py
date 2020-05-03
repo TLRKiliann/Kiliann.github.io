@@ -386,7 +386,7 @@ class MenuBar(Frame):
         FunnyButton2=Button(self, text ="Abréviations", relief=GROOVE, fg='white', bg='snow4', 
                             activebackground='cyan', command=boss.showabr1).pack(side =LEFT, padx=3)
 
-        # Menu Antiépileptiques
+        # Menu MAE
         self.mae=Menubutton(self, text='Anti-épileptiques', fg='white', bg='snow4', relief=GROOVE)
         self.mae.pack(side=LEFT, padx=3)
         # Partie déroulante du menu Antiépileptiques

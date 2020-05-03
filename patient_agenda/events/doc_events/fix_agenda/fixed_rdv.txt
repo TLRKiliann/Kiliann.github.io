@@ -44,3 +44,13 @@ Rendez-vous set up for : 28/8/2020
 RDV chez l'opticien à 8h30.
 Accompagné par Claundine.
 
+Rendez-vous set up le : 03/05/2020, 23:08:08
+Rendez-vous set up for : 23/7/2020
+We'll go to hospital to examine his pain.
+
+
++++ Changes about rdv +++
+Rendez-vous set up for : 23/7/2020
+Canceled
+
+
