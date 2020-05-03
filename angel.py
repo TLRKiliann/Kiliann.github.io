@@ -32,6 +32,14 @@ class MenuBar(Frame):
         # 1st menu
         fileMenu = Menubutton(self, text='Menu', fg='white',
             bg='gray30', relief=GROOVE)
+        new_text=StringVar()
+        new_text2=StringVar()
+        new_text3=StringVar()
+        new_text4=StringVar()
+        new_text5=StringVar()
+        new_text6=StringVar()
+        new_text7=StringVar()
+
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
@@ -39,7 +47,7 @@ class MenuBar(Frame):
         me1.add_command(label='Accueil', underline=0, background='black',
             activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
-            command=boss.page)
+            command=boss.secondPage)
         me1.add_separator()
         me1.add_command(label="Synopsis", underline=0, background='black',
             activebackground='cyan',
@@ -64,7 +72,7 @@ class MenuBar(Frame):
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
-
+        
         # For label below (in me2.add_command)
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=namefile.readline()
@@ -86,45 +94,47 @@ class MenuBar(Frame):
             line17=namefile.readline()
             line18=namefile.readline()
             line19=namefile.readline()
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
+        
+        new_text=line1
+        new_text2=line4
+        new_text3=line7
+        new_text4=line10
+        new_text5=line13
+        new_text6=line16
+        new_text7=line19
+        
 
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Admin.pack(side=LEFT, padx=3)
         # Partie déroulante du menu administrative
         me2 = Menu(self.cmd_Admin)
-        me2.add_command(label=self.new_text, background='black', activebackground='cyan',
+        self.new_text=StringVar()
+        me2.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir)
         me2.add_separator()
-        me2.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        me2.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir2)
         me2.add_separator()
-        me2.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        me2.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir3)
         me2.add_separator()
-        me2.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        me2.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir4)
         me2.add_separator()
-        me2.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        me2.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir5)
         me2.add_separator()
-        me2.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        me2.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir6)
         me2.add_separator()
-        me2.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        me2.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir7)
         # Integration of menu admin
@@ -135,31 +145,31 @@ class MenuBar(Frame):
         self.cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(self.cmd_agenda)
         # Partie déroulante du menu agenda
-        me3.add_command(label=self.new_text, background='black', activebackground='cyan',
+        me3.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda)
         me3.add_separator()
-        me3.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        me3.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda2)
         me3.add_separator()
-        me3.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        me3.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda3)
         me3.add_separator()
-        me3.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        me3.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda4)
         me3.add_separator()
-        me3.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        me3.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda5)
         me3.add_separator()
-        me3.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        me3.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda6)
         me3.add_separator()
-        me3.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        me3.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda7)
         me3.add_separator()
@@ -172,31 +182,31 @@ class MenuBar(Frame):
         self.cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
         me4 = Menu(self.cmd_Besoins)
-        me4.add_command(label=self.new_text, background='black', activebackground='cyan',
+        me4.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoinsCoche)
         me4.add_separator()
-        me4.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        me4.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins2Coche)
         me4.add_separator()
-        me4.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        me4.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins3Coche)
         me4.add_separator()
-        me4.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        me4.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins4Coche)
         me4.add_separator()
-        me4.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        me4.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins5Coche)
         me4.add_separator()
-        me4.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        me4.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins6Coche)
         me4.add_separator()
-        me4.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        me4.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins7Coche)
         me4.add_separator()
@@ -209,31 +219,31 @@ class MenuBar(Frame):
         self.cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meSoins = Menu(self.cmd_Soins)
-        meSoins.add_command(label=self.new_text, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins1)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins2)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins3)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins4)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins5)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins6)
         meSoins.add_separator()
-        meSoins.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins7)
         meSoins.add_separator()
@@ -246,31 +256,31 @@ class MenuBar(Frame):
         self.cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meTtt = Menu(self.cmd_ttt)
-        meTtt.add_command(label=self.new_text, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed1)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed2)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed3)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed4)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed5)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed6)
         meTtt.add_separator()
-        meTtt.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed7)
         meTtt.add_separator()
@@ -284,31 +294,31 @@ class MenuBar(Frame):
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
         menuParam = Menu(self.cmd_Param)
-        menuParam.add_command(label=self.new_text, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam1)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam2)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam3)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam4)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam5)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam6)
         menuParam.add_separator()
-        menuParam.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam7)
         menuParam.add_separator()
@@ -322,31 +332,31 @@ class MenuBar(Frame):
         self.cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
         meBmi = Menu(self.cmd_BMI)
-        meBmi.add_command(label=self.new_text, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB2)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB3)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB4)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB5)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB6)
         meBmi.add_separator()
-        meBmi.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB7)
         meBmi.add_separator()
@@ -359,31 +369,31 @@ class MenuBar(Frame):
         self.cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
         meVmed = Menu(self.cmd_Vmed)
-        meVmed.add_command(label=self.new_text, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed2)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed3)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed4)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed5)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed6)
         meVmed.add_separator()
-        meVmed.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed7)
         meVmed.add_separator()
@@ -395,31 +405,31 @@ class MenuBar(Frame):
         self.cmd_Graph.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
         meGraph = Menu(self.cmd_Graph)
-        meGraph.add_command(label=self.new_text, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph2)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph3)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph4)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph5)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph6)
         meGraph.add_separator()
-        meGraph.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        meGraph.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visualGraph7)
         meGraph.add_separator()
@@ -432,31 +442,31 @@ class MenuBar(Frame):
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
         mePrint = Menu(self.cmd_Print)
-        mePrint.add_command(label=self.new_text, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text2, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu2)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text3, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text3, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu3)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text4, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text4, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu4)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text5, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text5, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu5)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text6, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text6, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu6)
         mePrint.add_separator()
-        mePrint.add_command(label=self.new_text7, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu7)
         mePrint.add_separator()
@@ -531,6 +541,40 @@ class Application(Frame):
         '''Reinitialize canvas when we pass to another'''
         self.can.delete(ALL)
 
+    # Second page intro (a copy from the main app juste above)
+    def secondPage(self):
+        self.can.delete(ALL)
+        # Insertion d'une image
+        self.photo=PhotoImage(file='./syno_gif/title_syno.gif')
+        self.item=self.can.create_image(625, 400, image=self.photo)
+        # Insertion du texte
+        self.can.create_text(625, 500, anchor=CENTER, 
+            text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
+                    font=('Times New Roman', 18), fill='aquamarine')
+        self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
+                    font=('Times', 12), fill='white')
+        self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
+        # Configuration de la Scrollbar sur le Frame
+        self.frame.bind("<Configure>", self.onFrameConfigure)
+        # Création des 3 boutons
+        button2 = Button(self, text="SYNOPSIS", font=70, bg='gray15', 
+            fg='turquoise',
+            anchor = CENTER, command = self.showsynopsis)
+        button2.configure(width=15, activebackground='SteelBlue',
+            activeforeground='white', relief=GROOVE)
+        button2_window = self.can.create_window(450, 580, anchor=CENTER,
+            window=button2) 
+
+        button3 = Button(self, text="PSYCHOTABS", font=74, bg='gray15',
+            fg='turquoise',
+            anchor = CENTER, command = self.launchPsycho)
+        button3.configure(width=15, activebackground='SteelBlue', 
+            activeforeground='white', relief=GROOVE)
+        button3_window = self.can.create_window(790, 580, anchor=CENTER, 
+            window=button3)
+
+        self.can.configure(scrollregion=self.can.bbox(ALL)) 
+
     def msgExit(self):
         MsgBox = messagebox.askyesno('Quit system', 'Do you want to quit ?')
         if MsgBox == 1:
@@ -538,7 +582,11 @@ class Application(Frame):
         else:
             NoforQ = messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
-
+    """
+    def new_text(self):
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+    """
     # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
@@ -980,40 +1028,6 @@ class Application(Frame):
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
 
-    # Second page intro (a copy from the main app juste above)
-    def page(self):
-        self.can.delete(ALL)
-        # Insertion d'une image
-        self.photo=PhotoImage(file='./syno_gif/title_syno.gif')
-        self.item=self.can.create_image(625, 400, image=self.photo)
-        # Insertion du texte
-        self.can.create_text(625, 500, anchor=CENTER, 
-            text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-                    font=('Times New Roman', 18), fill='aquamarine')
-        self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
-                    font=('Times', 12), fill='white')
-        self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
-        # Configuration de la Scrollbar sur le Frame
-        self.frame.bind("<Configure>", self.onFrameConfigure)
-        # Création des 3 boutons
-        button2 = Button(self, text="SYNOPSIS", font=70, bg='gray15', 
-            fg='turquoise',
-            anchor = CENTER, command = self.showsynopsis)
-        button2.configure(width=15, activebackground='SteelBlue',
-            activeforeground='white', relief=GROOVE)
-        button2_window = self.can.create_window(450, 580, anchor=CENTER,
-            window=button2) 
-
-        button3 = Button(self, text="PSYCHOTABS", font=74, bg='gray15',
-            fg='turquoise',
-            anchor = CENTER, command = self.launchPsycho)
-        button3.configure(width=15, activebackground='SteelBlue', 
-            activeforeground='white', relief=GROOVE)
-        button3_window = self.can.create_window(790, 580, anchor=CENTER, 
-            window=button3)
-
-        self.can.configure(scrollregion=self.can.bbox(ALL)) 
-
     # Installation of python and tkinter page
     def instalpy(self):
         self.can.delete(ALL)
@@ -1063,6 +1077,8 @@ class Application(Frame):
     # Synopsis page
     def showsynopsis(self):
         self.can.delete()
+        self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
+        self.item=self.can.create_image(700, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
             font=('Times New Roman', 40), fill='aquamarine')
 
@@ -1084,17 +1100,18 @@ class Application(Frame):
             command=self.showsynopsis)
         self.fb2=self.can.create_window(self.x101, self.y101, window=self.b2)
         
+        #Patient1
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=(namefile.readline())
             
-        self.new_text=line1
+        self.new_data1=line1
 
         self.x2, self.y2 = 129, 200
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data1=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data1,
             highlightbackground='gray', bd=4)
-        self.new_text.set(line1)
+        self.new_data1.set(line1)
         self.Data_write=self.can.create_window(self.x2, self.y2,
             window=self.Data_write)
 
@@ -1156,19 +1173,19 @@ class Application(Frame):
 
         # Patient 2
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-
-        self.new_text=line4
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+        
+        self.new_data2=line4
 
         self.x9, self.y9 = 129, 232
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data2=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data2,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line4)
+        self.new_data2.set(line4)
         self.Data_write=self.can.create_window(self.x9, self.y9,
           window=self.Data_write)
 
@@ -1177,7 +1194,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag2)
+            command=self.allergyLink2)
         self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
 
         self.x13, self.y13 = 429, 232
@@ -1228,22 +1245,24 @@ class Application(Frame):
             command=self.moyaux)
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
-        # Patient 2
+        # Patient 3
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-        self.new_text=line7
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+
+        self.new_data3=line7
+
         self.x18, self.y18 = 129, 264
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data3=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data3,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line7)
+        self.new_data3.set(line7)
         self.Data_write=self.can.create_window(self.x18, self.y18,
           window=self.Data_write)
 
@@ -1252,7 +1271,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag3)
+            command=self.allergyLink3)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
 
         self.x22, self.y22 = 429, 264
@@ -1303,26 +1322,27 @@ class Application(Frame):
             command=self.moyaux)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
-        # 4ème personne Synopsis - Page
-                # Patient 2
+        # Patient 4
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-        self.new_text=line10
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+
+        self.new_data4=line10
+
         self.x27, self.y27 = 129, 296
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data4=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data4,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line10)
+        self.new_data4.set(line10)
         self.Data_write=self.can.create_window(self.x27, self.y27,
           window=self.Data_write)
 
@@ -1331,7 +1351,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag4)
+            command=self.allergyLink4)
         self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
 
         self.x31, self.y31 = 429, 296
@@ -1382,27 +1402,30 @@ class Application(Frame):
             command=self.moyaux)
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
+        #patient5
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-        self.new_text=line13
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+
+        self.new_data5=line13
+
         self.x36, self.y36 = 129, 328
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data5=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data5,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line13)
+        self.new_data5.set(line13)
         self.Data_write=self.can.create_window(self.x36, self.y36,
           window=self.Data_write)
 
@@ -1411,7 +1434,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag5)
+            command=self.allergyLink5)
         self.fb37=self.can.create_window(self.x37, self.y37, window=self.b37)
 
         self.x40, self.y40 = 429, 328
@@ -1462,30 +1485,33 @@ class Application(Frame):
             command=self.moyaux)
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
+        #patient6
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-        self.new_text=line16
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+            line14=namefile.readline()
+            line15=namefile.readline()
+            line16=namefile.readline()
+
+        self.new_data6=line16
+
         self.x45, self.y45 = 129, 360
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data6=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data6,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line16)
+        self.new_data6.set(line16)
         self.Data_write=self.can.create_window(self.x45, self.y45,
           window=self.Data_write)
 
@@ -1494,7 +1520,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag6)
+            command=self.allergyLink6)
         self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
 
         self.x49, self.y49 = 429, 360
@@ -1544,34 +1570,37 @@ class Application(Frame):
             text="Ext. stacke.",
             command=self.moyaux)
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
-
+        
+        #patient7
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-        self.new_text=line19
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+            line14=namefile.readline()
+            line15=namefile.readline()
+            line16=namefile.readline()
+            line17=namefile.readline()
+            line18=namefile.readline()
+            line19=namefile.readline()
+
+        self.new_data7=line19
+
         self.x54, self.y54 = 129, 392
         self.Data_write=Entry(self.can)
-        self.new_text=StringVar()
-        self.Data_write=Entry(textvariable=self.new_text,
+        self.new_data7=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data7,
           highlightbackground='gray', bd=4)
-        self.new_text.set(line19)
+        self.new_data7.set(line19)
         self.Data_write=self.can.create_window(self.x54, self.y54,
           window=self.Data_write)
 
@@ -1580,7 +1609,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Allergy",
-            command=self.diag7)
+            command=self.allergyLink7)
         self.fb54=self.can.create_window(self.x54, self.y54, window=self.b54)
 
         self.x57, self.y57 = 429, 392

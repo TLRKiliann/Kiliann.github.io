@@ -41,7 +41,7 @@ labelName.pack(pady=10)
 
 Allpatient=StringVar()
 Allpatient.set('Allergy no-food')
-entryall = Entry(gui, textvariable=Allpatient, hightlightbackground='gray', bd=4)
+entryall = Entry(gui, textvariable=Allpatient, highlightbackground='gray', bd=4)
 entryall.pack(pady=10)
 
 bouton1 = Button(gui, text="Save", width=8, fg='yellow', bg='navy',
