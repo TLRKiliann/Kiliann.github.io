@@ -7,6 +7,11 @@ from tkinter import messagebox
 import os
 
 
+gui=Tk()
+gui.title("Enter Allergy")
+gui.configure(bg='gray17')
+#gui.geometry('250x200')
+
 def get(Allpatient, entryall):
     MsgBox = messagebox.askyesno('Save data', 'Data saved !')
     if MsgBox == 1:
@@ -19,6 +24,7 @@ def get(Allpatient, entryall):
                 with open('./allergy/allergyfile5.txt', 'a+') as namefile:
                     namefile.write(entryall.get() + '\n')
                     namefile.write(str('----------------\n'))
+                    gui.destroy()
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'allergyfile5.txt' not exist !")
             print(str(outcom))
@@ -26,13 +32,9 @@ def get(Allpatient, entryall):
             with open('./allergy/allergyfile5.txt', 'a+') as namefile:
                 namefile.write(entryall.get() + '\n')
                 namefile.write(str('----------------\n'))
+                gui.destroy()
     else:           
         NoforQ = messagebox.showinfo('Return', 'Data not saved')
-
-gui=Tk()
-gui.title("Enter Allergy")
-gui.configure(bg='gray17')
-#gui.geometry('250x200')
 
 labelName = Label(gui)
 labelName = Label(text='Enter Allergy', font="Times 16 bold", 
