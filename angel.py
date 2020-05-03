@@ -67,25 +67,25 @@ class MenuBar(Frame):
 
         # For label below (in me2.add_command)
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+            line14=namefile.readline()
+            line15=namefile.readline()
+            line16=namefile.readline()
+            line17=namefile.readline()
+            line18=namefile.readline()
+            line19=namefile.readline()
 
         self.new_text=line1
         self.new_text2=line4
@@ -103,7 +103,6 @@ class MenuBar(Frame):
         me2.add_command(label=self.new_text, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir)
-
         me2.add_separator()
         me2.add_command(label=self.new_text2, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
@@ -130,36 +129,6 @@ class MenuBar(Frame):
                         command=boss.adminDir7)
         # Integration of menu admin
         self.cmd_Admin.configure(activeforeground='black', activebackground='cyan', menu=me2)
-
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
 
         # Agenda menu
         self.cmd_agenda=Menubutton(self, text='Agenda', fg='cyan', bg='gray30', relief=GROOVE)
@@ -196,36 +165,6 @@ class MenuBar(Frame):
         me3.add_separator()
         # Integration of agenda menu
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', menu=me3)
-
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
 
         # 14 besoins menu
         self.cmd_Besoins=Menubutton(self, text='14 needs', fg='cyan', bg='gray30',
@@ -264,36 +203,6 @@ class MenuBar(Frame):
         # Integration of 14b menu
         self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
 
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
-
         # Helth and care menu
         self.cmd_Soins=Menubutton(self, text='Care and monitoring', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -330,36 +239,6 @@ class MenuBar(Frame):
         meSoins.add_separator()
         # Integration of health and care menu
         self.cmd_Soins.configure(activeforeground='black', activebackground='cyan', menu=meSoins)
-
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
 
         # Treatments
         self.cmd_ttt=Menubutton(self, text='Treatments', fg='cyan', bg='gray30',
@@ -399,36 +278,6 @@ class MenuBar(Frame):
         self.cmd_ttt.configure(activeforeground='black', activebackground='cyan',
             menu=meTtt)
 
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
-
         # Vital parameters menu
         self.cmd_Param=Menubutton(self, text='Vital Parameters', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -467,36 +316,6 @@ class MenuBar(Frame):
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
 
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
-
         # BMI menu
         self.cmd_BMI=Menubutton(self, text='Body Mass Indice', fg='cyan', bg='gray30',
             relief=GROOVE)
@@ -533,36 +352,6 @@ class MenuBar(Frame):
         meBmi.add_separator()
         # Integration of 3rd menu
         self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
-
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
 
         # Medical Visite
         self.cmd_Vmed=Menubutton(self, text='Medical Visit', fg='cyan', bg='gray30',
@@ -601,36 +390,6 @@ class MenuBar(Frame):
         # Integration of 3rd menu
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
-
         # Menu for showing all Graphs togather per patient 
         self.cmd_Graph=Menubutton(self, text='Graphics', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Graph.pack(side=LEFT, padx=3)
@@ -667,36 +426,6 @@ class MenuBar(Frame):
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan',
             menu=meGraph)
-
-        # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            line2=(namefile.readline())
-            line3=(namefile.readline())
-            line4=(namefile.readline())
-            line5=(namefile.readline())
-            line6=(namefile.readline())
-            line7=(namefile.readline())
-            line8=(namefile.readline())
-            line9=(namefile.readline())
-            line10=(namefile.readline())
-            line11=(namefile.readline())
-            line12=(namefile.readline())
-            line13=(namefile.readline())
-            line14=(namefile.readline())
-            line15=(namefile.readline())
-            line16=(namefile.readline())
-            line17=(namefile.readline())
-            line18=(namefile.readline())
-            line19=(namefile.readline())
-
-        self.new_text=line1
-        self.new_text2=line4
-        self.new_text3=line7
-        self.new_text4=line10
-        self.new_text5=line13
-        self.new_text6=line16
-        self.new_text7=line19
 
         # Nutrition menu for intolerance and hate meals
         self.cmd_Print=Menubutton(self, text='Nutrition', fg='cyan', bg='gray30', relief=GROOVE)
@@ -809,6 +538,7 @@ class Application(Frame):
         else:
             NoforQ = messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
+
     # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
@@ -987,7 +717,7 @@ class Application(Frame):
         
     def visitMed7(self):
         subprocess.call("./vmed/vm_patient7.py")    
-        
+
     # Graphical menu
     def visualGraph(self):
         subprocess.call('./param/aspifile/aspidata.py')
@@ -1091,7 +821,7 @@ class Application(Frame):
     # Func labo
     def laboResult(self):
         subprocess.call('./labo/resultlabo1.py')
-        
+
     def laboResult2(self):
         subprocess.call('./labo/resultlabo2.py')
 
@@ -1100,10 +830,10 @@ class Application(Frame):
 
     def laboResult4(self):
         subprocess.call('./labo/resultlabo4.py')
-        
+
     def laboResult5(self):
         subprocess.call('./labo/resultlabo5.py')
-        
+
     def laboResult6(self):
         subprocess.call('./labo/resultlabo6.py')
 
@@ -1135,7 +865,7 @@ class Application(Frame):
     # Func Medical Visit
     def showvm1(self):
         subprocess.call("./vmMacro/vm_ae.py")
-    
+
     def showvm2(self):
         subprocess.call("./vmMacro/vm_ae.py")
 
@@ -1246,6 +976,10 @@ class Application(Frame):
     def nutritionMenu7(self):
         subprocess.call('./nutrition/nutrit_patient7.py')
 
+    # For new entry
+    def callPatient1(self):
+        subprocess.call('./newpatient/entrypytientfile.py')
+
     # Second page intro (a copy from the main app juste above)
     def page(self):
         self.can.delete(ALL)
@@ -1325,9 +1059,6 @@ class Application(Frame):
             "philogenie@protonmail.com",
             font=('Times', 13), fill='aquamarine')
         self.can.configure(scrollregion=self.can.bbox(ALL))
-
-    def callPatient1(self):
-        subprocess.call('./newpatient/entrypytientfile.py')
 
     # Synopsis page
     def showsynopsis(self):

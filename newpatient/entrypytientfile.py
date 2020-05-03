@@ -46,7 +46,7 @@ labelName.pack(pady=10)
 
 Nompatient=StringVar()
 Nompatient.set('Lastname + Firstname')
-entree = Entry(gui, textvariable=Nompatient)
+entree = Entry(gui, textvariable=Nompatient, hightlightbackground='gray', bd=4)
 entree.pack()
 
 labelBirth = Label(gui)
@@ -56,7 +56,7 @@ labelBirth.pack(pady=10)
 
 Birthvalue=StringVar()
 Birthvalue.set('Format: 03/07/1910')
-Birthentree = Entry(gui, textvariable=Birthvalue)
+Birthentree = Entry(gui, textvariable=Birthvalue, hightlightbackground='gray', bd=4)
 Birthentree.pack()
 
 bouton1 = Button(gui, text="Enter", width=8, fg='yellow', bg='navy',
