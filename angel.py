@@ -844,7 +844,7 @@ class Application(Frame):
         subprocess.call('./calBmi/doc_BMI7/convert_kg.py')
         subprocess.call('./calBmi/doc_BMI7/convert_bmilist.py')
 
-    # Allergy
+    # Allergy OK
     def allergyLink(self):
         subprocess.call('./allergy/allerpatient1.py')
 
