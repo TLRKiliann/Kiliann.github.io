@@ -103,7 +103,6 @@ class MenuBar(Frame):
         new_text6=line16
         new_text7=line19
         
-
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Admin.pack(side=LEFT, padx=3)
@@ -582,12 +581,641 @@ class Application(Frame):
         else:
             NoforQ = messagebox.showinfo('Return', 'You will now return to the'
                 'application screen')
-    """
-    def new_text(self):
+
+    # Installation of python and tkinter page
+    def instalpy(self):
+        self.can.delete(ALL)
+        self.photo=PhotoImage(file='./syno_gif/pyt.gif')
+        self.item=self.can.create_image(700, 400, image=self.photo)
+        self.can.create_text(500, 20, anchor=NW, 
+            text="-INSTALLATION DU PROGRAMME-\n\n"
+            "Linux (Xubuntu):\n\n"
+
+            "Ouvrir le terminal.\n"
+            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
+            "en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
+            "Sinon, télécharger python 3.5 en ligne de commande:\n"
+            "sudo apt-get update && apt-get upgrade.\n"
+            "sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
+            "Aller sous le dossier où il a été téléchargé et taper (ex: cd /Documents/psychotabs.py)\n"
+            "et tapez ./psychotabs.py pour ouvrir l'application.\n"
+            "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
+
+            "**************************************************************\n\n"
+
+            "Mac OS:\n\n"
+
+            "Ouvrir le terminal.\n"
+            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
+            "en tapant dans le terminal: python --version.\n"
+            "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
+            "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
+            "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir l'application.\n\n"
+
+            "**************************************************************\n\n"
+
+            "Windows:\n\n"
+
+            "Rendez-vous sur la page python.org télécharger un version de python\n"
+            "supérieur à 3.5 (dernière version stable).\n"
+            "Ensuite quelques manipulation sont indispensable pour la création d'un\n"
+            "'stand-alone' avec pyinstaller2. Rendez-vous sur ce site :\n"
+            "https://wwww.XXXXXXXXXXXXXXXXXXXX.com\n"
+            "et sur ce lui-ci :\n"
+            "https://www.ZZZZZZZZZZZZ.com\n"
+            "Pour toutes questions, vous pouvez me joindre à l'adresse mail :\n"
+            "philogenie@protonmail.com",
+            font=('Times', 13), fill='aquamarine')
+        self.can.configure(scrollregion=self.can.bbox(ALL))
+
+    # Synopsis page
+    def showsynopsis(self):
+        self.can.delete()
+        self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
+        self.item=self.can.create_image(700, 400, image=self.photo)
+        self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
+            font=('Times New Roman', 40), fill='aquamarine')
+
+        # To introduce a new pytient
+        self.x1, self.y1 = 120, 50
+        self.b=Button(self.can, width=10, font=16, bg='gray17', fg='cyan',
+            activebackground='cyan',
+            activeforeground='black',
+            text="New Entry",
+            command=self.callPatient1)
+        self.fb=self.can.create_window(self.x1, self.y1, window=self.b)
+        
+        # To refresh page with new entry patient
+        self.x101, self.y101 = 270, 50
+        self.b2=Button(self.can, width=10, font=16, bg='gray17', fg='gold',
+            activebackground='cyan',
+            activeforeground='black',
+            text="Refresh",
+            command=self.showsynopsis)
+        self.fb2=self.can.create_window(self.x101, self.y101, window=self.b2)
+        
+        #Patient1
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=(namefile.readline())
+            
+        self.new_data1=line1
+
+        self.x2, self.y2 = 129, 200
+        self.Data_write=Entry(self.can)
+        self.new_data1=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data1,
+            highlightbackground='gray', bd=4)
+        self.new_data1.set(line1)
+        self.Data_write=self.can.create_window(self.x2, self.y2,
+            window=self.Data_write)
+
+        self.x3, self.y3 = 271, 200
+        self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink)
+        self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
+
+        self.x3, self.y3 = 429, 200
+        self.b=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.diag1)
+        self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
+
+        self.x4, self.y4 = 597, 200
+        self.b4=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult)
+        self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
+        #769
+        self.x5, self.y5 = 725, 200
+        self.b5=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.suiviSoins1)
+        self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
+        #896
+        self.x6, self.y6 = 853, 200
+        self.b6=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv1)
+        self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
+
+        self.x7, self.y7 = 981, 200
+        self.b7=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.moyaux)
+        self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
+
+        self.x8, self.y8 = 1109, 200
+        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.extStake)
+        self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
+
+        # Patient 2
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=namefile.readline()
-    """
-    # Admin
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+        
+        self.new_data2=line4
+
+        self.x9, self.y9 = 129, 232
+        self.Data_write=Entry(self.can)
+        self.new_data2=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data2,
+          highlightbackground='gray', bd=4)
+        self.new_data2.set(line4)
+        self.Data_write=self.can.create_window(self.x9, self.y9,
+          window=self.Data_write)
+
+        self.x10, self.y10 = 271, 232
+        self.b10=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink2)
+        self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
+
+        self.x13, self.y13 = 429, 232
+        self.b13=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam2)
+        self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
+
+        self.x14, self.y14 = 597, 232
+        self.b14=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult2)
+        self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
+
+        self.x15, self.y15 = 725, 232
+        self.b15=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm1)
+        self.fb15=self.can.create_window(self.x15, self.y15, window=self.b15)
+
+        self.x16, self.y16 = 853, 232
+        self.b16=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv2)
+        self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
+
+        self.x17, self.y17 = 981, 232
+        self.b17=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag2)
+        self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
+
+        self.x171, self.y171 = 1109, 232
+        self.b171=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
+
+        # Patient 3
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+
+        self.new_data3=line7
+
+        self.x18, self.y18 = 129, 264
+        self.Data_write=Entry(self.can)
+        self.new_data3=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data3,
+          highlightbackground='gray', bd=4)
+        self.new_data3.set(line7)
+        self.Data_write=self.can.create_window(self.x18, self.y18,
+          window=self.Data_write)
+
+        self.x19, self.y19 = 271, 264
+        self.b19=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink3)
+        self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
+
+        self.x22, self.y22 = 429, 264
+        self.b22=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam3)
+        self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
+
+        self.x23, self.y23 = 597, 264
+        self.b23=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult3)
+        self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
+
+        self.x24, self.y24 = 725, 264
+        self.b24=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm3)
+        self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
+
+        self.x25, self.y25 = 853, 264
+        self.b25=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv3)
+        self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
+
+        self.x26, self.y26 = 981, 264
+        self.b26=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag3)
+        self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
+
+        self.x8, self.y8 = 1109, 264
+        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
+
+        # Patient 4
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+
+        self.new_data4=line10
+
+        self.x27, self.y27 = 129, 296
+        self.Data_write=Entry(self.can)
+        self.new_data4=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data4,
+          highlightbackground='gray', bd=4)
+        self.new_data4.set(line10)
+        self.Data_write=self.can.create_window(self.x27, self.y27,
+          window=self.Data_write)
+
+        self.x28, self.y28 = 271, 296
+        self.b28=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink4)
+        self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
+
+        self.x31, self.y31 = 429, 296
+        self.b31=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam4)
+        self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
+
+        self.x32, self.y32 = 597, 296
+        self.b32=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult4)
+        self.fb32=self.can.create_window(self.x32, self.y32, window=self.b32)
+
+        self.x33, self.y33 = 725, 296
+        self.b33=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm4)
+        self.fb33=self.can.create_window(self.x33, self.y33, window=self.b33)
+
+        self.x34, self.y34 = 853, 296
+        self.b34=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv4)
+        self.fb34=self.can.create_window(self.x34, self.y34, window=self.b34)
+
+        self.x35, self.y35 = 981, 296
+        self.b35=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag4)
+        self.fb35=self.can.create_window(self.x35, self.y35, window=self.b35)
+
+        self.x351, self.y351 = 1109, 296
+        self.b351=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
+
+        #patient5
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+
+        self.new_data5=line13
+
+        self.x36, self.y36 = 129, 328
+        self.Data_write=Entry(self.can)
+        self.new_data5=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data5,
+          highlightbackground='gray', bd=4)
+        self.new_data5.set(line13)
+        self.Data_write=self.can.create_window(self.x36, self.y36,
+          window=self.Data_write)
+
+        self.x37, self.y37 = 271, 328
+        self.b37=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink5)
+        self.fb37=self.can.create_window(self.x37, self.y37, window=self.b37)
+
+        self.x40, self.y40 = 429, 328
+        self.b40=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam5)
+        self.fb40=self.can.create_window(self.x40, self.y40, window=self.b40)
+
+        self.x41, self.y41 = 597, 328
+        self.b41=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult5)
+        self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
+
+        self.x42, self.y42 = 725, 328
+        self.b42=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm5)
+        self.fb42=self.can.create_window(self.x42, self.y42, window=self.b42)
+
+        self.x43, self.y43 = 853, 328
+        self.b43=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv5)
+        self.fb43=self.can.create_window(self.x43, self.y43, window=self.b43)
+
+        self.x44, self.y44 = 981, 328
+        self.b44=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag5)
+        self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
+
+        self.x441, self.y441 = 1109, 328
+        self.b441=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
+
+        #patient6
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+            line14=namefile.readline()
+            line15=namefile.readline()
+            line16=namefile.readline()
+
+        self.new_data6=line16
+
+        self.x45, self.y45 = 129, 360
+        self.Data_write=Entry(self.can)
+        self.new_data6=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data6,
+          highlightbackground='gray', bd=4)
+        self.new_data6.set(line16)
+        self.Data_write=self.can.create_window(self.x45, self.y45,
+          window=self.Data_write)
+
+        self.x46, self.y46 = 271, 360
+        self.b46=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink6)
+        self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
+
+        self.x49, self.y49 = 429, 360
+        self.b49=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam6)
+        self.fb49=self.can.create_window(self.x49, self.y49, window=self.b49)
+
+        self.x50, self.y50 = 597, 360
+        self.b50=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult6)
+        self.fb50=self.can.create_window(self.x50, self.y50, window=self.b50)
+
+        self.x51, self.y51 = 725, 360
+        self.b51=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm6)
+        self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
+
+        self.x52, self.y52 = 853, 360
+        self.b52=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv6)
+        self.fb52=self.can.create_window(self.x52, self.y52, window=self.b52)
+
+        self.x53, self.y53 = 981, 360
+        self.b53=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag6)
+        self.fb53=self.can.create_window(self.x53, self.y53, window=self.b53)
+
+        self.x531, self.y531 = 1109, 360
+        self.b531=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
+        
+        #patient7
+        with open('./newpatient/entryfile.txt', 'r') as namefile:
+            line1=namefile.readline()
+            line2=namefile.readline()
+            line3=namefile.readline()
+            line4=namefile.readline()
+            line5=namefile.readline()
+            line6=namefile.readline()
+            line7=namefile.readline()
+            line8=namefile.readline()
+            line9=namefile.readline()
+            line10=namefile.readline()
+            line11=namefile.readline()
+            line12=namefile.readline()
+            line13=namefile.readline()
+            line14=namefile.readline()
+            line15=namefile.readline()
+            line16=namefile.readline()
+            line17=namefile.readline()
+            line18=namefile.readline()
+            line19=namefile.readline()
+
+        self.new_data7=line19
+
+        self.x54, self.y54 = 129, 392
+        self.Data_write=Entry(self.can)
+        self.new_data7=StringVar()
+        self.Data_write=Entry(textvariable=self.new_data7,
+          highlightbackground='gray', bd=4)
+        self.new_data7.set(line19)
+        self.Data_write=self.can.create_window(self.x54, self.y54,
+          window=self.Data_write)
+
+        self.x54, self.y54 = 271, 392
+        self.b54=Button(self.can, width=8, font=16, bg='black', fg='coral',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Allergy",
+            command=self.allergyLink7)
+        self.fb54=self.can.create_window(self.x54, self.y54, window=self.b54)
+
+        self.x57, self.y57 = 429, 392
+        self.b57=Button(self.can, width=18, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Diagnostic + ATCD",
+            command=self.showParam7)
+        self.fb57=self.can.create_window(self.x57, self.y57, window=self.b57)
+
+        self.x58, self.y58 = 597, 392
+        self.b58=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Laboratory",
+            command=self.laboResult7)
+        self.fb58=self.can.create_window(self.x58, self.y58, window=self.b58)
+
+        self.x59, self.y59 = 725, 392
+        self.b59=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Exams",
+            command=self.showvm7)
+        self.fb59=self.can.create_window(self.x59, self.y59, window=self.b59)
+
+        self.x60, self.y60 = 853, 392
+        self.b60=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Life story",
+            command=self.histv7)
+        self.fb60=self.can.create_window(self.x60, self.y60, window=self.b60)
+
+        self.x61, self.y61 = 981, 392
+        self.b61=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Aux. resrc.",
+            command=self.diag7)
+        self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
+
+        self.x62, self.y62 = 1109, 392
+        self.b62=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise',
+            activeforeground='black',
+            text="Ext. stacke.",
+            command=self.moyaux)
+        self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
+
+        self.can.configure(scrollregion=self.can.bbox(ALL))
+    # Admin OK
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
 
@@ -608,8 +1236,7 @@ class Application(Frame):
 
     def adminDir7(self):
         subprocess.call('./admin/fic_admin7.py')
-
-    # CheckBox 14 besoins
+    # CheckBox 14 needs OK
     def besoinsCoche(self):
         subprocess.call('./14besoins/checkb.py')
 
@@ -631,7 +1258,6 @@ class Application(Frame):
     def besoins7Coche(self):
         subprocess.call('./14besoins/checkb7.py')
 
-
     def launchPsycho(self):
         subprocess.call('./psychotabs.py')
     # Agenda
@@ -639,24 +1265,23 @@ class Application(Frame):
         subprocess.call('./patient_agenda/origin_agenda.py')
 
     def patientAgenda2(self):
-        subprocess.call('./patient_agenda/origin2_agenda2.py')
+        subprocess.call('./patient_agenda/origin_agenda2.py')
 
     def patientAgenda3(self):
-        subprocess.call('./patient_agenda/origin3_agenda3.py')
+        subprocess.call('./patient_agenda/origin_agenda3.py')
 
     def patientAgenda4(self):
-        subprocess.call('./patient_agenda/origin4_agenda4.py')
+        subprocess.call('./patient_agenda/origin_agenda4.py')
 
     def patientAgenda5(self):
-        subprocess.call('./patient_agenda/origin5_agenda5.py')
+        subprocess.call('./patient_agenda/origin_agenda5.py')
 
     def patientAgenda6(self):
-        subprocess.call('./patient_agenda/origin6_agenda6.py')
+        subprocess.call('./patient_agenda/origin_agenda6.py')
 
     def patientAgenda7(self):
-        subprocess.call('./patient_agenda/origin7_agenda7.py')
-
-    # Func suivi
+        subprocess.call('./patient_agenda/origin_agenda7.py')
+    # Func 14 needs suivi OK
     def suiviSoins1(self):
         subprocess.call("./14besoins/suivi_patient_1.py")
 
@@ -677,7 +1302,6 @@ class Application(Frame):
 
     def suiviSoins7(self):
         subprocess.call("./14besoins/suivi_patient_7.py")
-
     # treatments
     def tttMed1(self):
         subprocess.call("./ttt/patienttt1.py")
@@ -699,7 +1323,6 @@ class Application(Frame):
 
     def tttMed7(self):
         subprocess.call("./ttt/patienttt7.py")
-
     # Func Vital Parameters
     def showParam1(self):
         subprocess.call("./param/fencap.py")
@@ -721,7 +1344,6 @@ class Application(Frame):
 
     def showParam7(self):
         subprocess.call("./param/fencap7.py")
-
     # Func BMI
     def calculB(self):
         subprocess.call("./calBmi/CalculBmi.py")
@@ -743,7 +1365,6 @@ class Application(Frame):
 
     def calculB7(self):
         subprocess.call("./calBmi/CalculBmi7.py")
-
     # Func Visit MED
     def visitMed(self):
         subprocess.call("./vmed/vm_patient1.py")
@@ -765,7 +1386,6 @@ class Application(Frame):
         
     def visitMed7(self):
         subprocess.call("./vmed/vm_patient7.py")    
-
     # Graphical menu
     def visualGraph(self):
         subprocess.call('./param/aspifile/aspidata.py')
@@ -1027,640 +1647,6 @@ class Application(Frame):
     # For new entry
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
-
-    # Installation of python and tkinter page
-    def instalpy(self):
-        self.can.delete(ALL)
-        self.photo=PhotoImage(file='./syno_gif/pyt.gif')
-        self.item=self.can.create_image(700, 400, image=self.photo)
-        self.can.create_text(500, 20, anchor=NW, 
-            text="-INSTALLATION DU PROGRAMME-\n\n"
-            "Linux (Xubuntu):\n\n"
-
-            "Ouvrir le terminal.\n"
-            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
-            "en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
-            "Sinon, télécharger python 3.5 en ligne de commande:\n"
-            "sudo apt-get update && apt-get upgrade.\n"
-            "sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
-            "Aller sous le dossier où il a été téléchargé et taper (ex: cd /Documents/psychotabs.py)\n"
-            "et tapez ./psychotabs.py pour ouvrir l'application.\n"
-            "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
-
-            "**************************************************************\n\n"
-
-            "Mac OS:\n\n"
-
-            "Ouvrir le terminal.\n"
-            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
-            "en tapant dans le terminal: python --version.\n"
-            "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
-            "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
-            "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir l'application.\n\n"
-
-            "**************************************************************\n\n"
-
-            "Windows:\n\n"
-
-            "Rendez-vous sur la page python.org télécharger un version de python\n"
-            "supérieur à 3.5 (dernière version stable).\n"
-            "Ensuite quelques manipulation sont indispensable pour la création d'un\n"
-            "'stand-alone' avec pyinstaller2. Rendez-vous sur ce site :\n"
-            "https://wwww.XXXXXXXXXXXXXXXXXXXX.com\n"
-            "et sur ce lui-ci :\n"
-            "https://www.ZZZZZZZZZZZZ.com\n"
-            "Pour toutes questions, vous pouvez me joindre à l'adresse mail :\n"
-            "philogenie@protonmail.com",
-            font=('Times', 13), fill='aquamarine')
-        self.can.configure(scrollregion=self.can.bbox(ALL))
-
-    # Synopsis page
-    def showsynopsis(self):
-        self.can.delete()
-        self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
-        self.item=self.can.create_image(700, 400, image=self.photo)
-        self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
-            font=('Times New Roman', 40), fill='aquamarine')
-
-        # To introduce a new pytient
-        self.x1, self.y1 = 120, 50
-        self.b=Button(self.can, width=10, font=16, bg='gray17', fg='cyan',
-            activebackground='cyan',
-            activeforeground='black',
-            text="New Entry",
-            command=self.callPatient1)
-        self.fb=self.can.create_window(self.x1, self.y1, window=self.b)
-        
-        # To refresh page with new entry patient
-        self.x101, self.y101 = 270, 50
-        self.b2=Button(self.can, width=10, font=16, bg='gray17', fg='gold',
-            activebackground='cyan',
-            activeforeground='black',
-            text="Refresh",
-            command=self.showsynopsis)
-        self.fb2=self.can.create_window(self.x101, self.y101, window=self.b2)
-        
-        #Patient1
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            
-        self.new_data1=line1
-
-        self.x2, self.y2 = 129, 200
-        self.Data_write=Entry(self.can)
-        self.new_data1=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data1,
-            highlightbackground='gray', bd=4)
-        self.new_data1.set(line1)
-        self.Data_write=self.can.create_window(self.x2, self.y2,
-            window=self.Data_write)
-
-        self.x3, self.y3 = 271, 200
-        self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink)
-        self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
-
-        self.x3, self.y3 = 429, 200
-        self.b=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.diag1)
-        self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
-
-        self.x4, self.y4 = 597, 200
-        self.b4=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.laboResult)
-        self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
-        #769
-        self.x5, self.y5 = 725, 200
-        self.b5=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.suiviSoins1)
-        self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
-        #896
-        self.x6, self.y6 = 853, 200
-        self.b6=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv1)
-        self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
-
-        self.x7, self.y7 = 981, 200
-        self.b7=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.moyaux)
-        self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
-
-        self.x8, self.y8 = 1109, 200
-        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.extStake)
-        self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
-
-        # Patient 2
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-        
-        self.new_data2=line4
-
-        self.x9, self.y9 = 129, 232
-        self.Data_write=Entry(self.can)
-        self.new_data2=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data2,
-          highlightbackground='gray', bd=4)
-        self.new_data2.set(line4)
-        self.Data_write=self.can.create_window(self.x9, self.y9,
-          window=self.Data_write)
-
-        self.x10, self.y10 = 271, 232
-        self.b10=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink2)
-        self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
-
-        self.x13, self.y13 = 429, 232
-        self.b13=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam2)
-        self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
-
-        self.x14, self.y14 = 597, 232
-        self.b14=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins2)
-        self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
-
-        self.x15, self.y15 = 725, 232
-        self.b15=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm1)
-        self.fb15=self.can.create_window(self.x15, self.y15, window=self.b15)
-
-        self.x16, self.y16 = 853, 232
-        self.b16=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv2)
-        self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
-
-        self.x17, self.y17 = 981, 232
-        self.b17=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag2)
-        self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
-
-        self.x171, self.y171 = 1109, 232
-        self.b171=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
-
-        # Patient 3
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-
-        self.new_data3=line7
-
-        self.x18, self.y18 = 129, 264
-        self.Data_write=Entry(self.can)
-        self.new_data3=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data3,
-          highlightbackground='gray', bd=4)
-        self.new_data3.set(line7)
-        self.Data_write=self.can.create_window(self.x18, self.y18,
-          window=self.Data_write)
-
-        self.x19, self.y19 = 271, 264
-        self.b19=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink3)
-        self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
-
-        self.x22, self.y22 = 429, 264
-        self.b22=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam3)
-        self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
-
-        self.x23, self.y23 = 597, 264
-        self.b23=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins3)
-        self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
-
-        self.x24, self.y24 = 725, 264
-        self.b24=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm3)
-        self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
-
-        self.x25, self.y25 = 853, 264
-        self.b25=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv3)
-        self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
-
-        self.x26, self.y26 = 981, 264
-        self.b26=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag3)
-        self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
-
-        self.x8, self.y8 = 1109, 264
-        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
-
-        # Patient 4
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-
-        self.new_data4=line10
-
-        self.x27, self.y27 = 129, 296
-        self.Data_write=Entry(self.can)
-        self.new_data4=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data4,
-          highlightbackground='gray', bd=4)
-        self.new_data4.set(line10)
-        self.Data_write=self.can.create_window(self.x27, self.y27,
-          window=self.Data_write)
-
-        self.x28, self.y28 = 271, 296
-        self.b28=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink4)
-        self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
-
-        self.x31, self.y31 = 429, 296
-        self.b31=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam4)
-        self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
-
-        self.x32, self.y32 = 597, 296
-        self.b32=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins4)
-        self.fb32=self.can.create_window(self.x32, self.y32, window=self.b32)
-
-        self.x33, self.y33 = 725, 296
-        self.b33=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm4)
-        self.fb33=self.can.create_window(self.x33, self.y33, window=self.b33)
-
-        self.x34, self.y34 = 853, 296
-        self.b34=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv4)
-        self.fb34=self.can.create_window(self.x34, self.y34, window=self.b34)
-
-        self.x35, self.y35 = 981, 296
-        self.b35=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag4)
-        self.fb35=self.can.create_window(self.x35, self.y35, window=self.b35)
-
-        self.x351, self.y351 = 1109, 296
-        self.b351=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
-
-        #patient5
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-
-        self.new_data5=line13
-
-        self.x36, self.y36 = 129, 328
-        self.Data_write=Entry(self.can)
-        self.new_data5=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data5,
-          highlightbackground='gray', bd=4)
-        self.new_data5.set(line13)
-        self.Data_write=self.can.create_window(self.x36, self.y36,
-          window=self.Data_write)
-
-        self.x37, self.y37 = 271, 328
-        self.b37=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink5)
-        self.fb37=self.can.create_window(self.x37, self.y37, window=self.b37)
-
-        self.x40, self.y40 = 429, 328
-        self.b40=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam5)
-        self.fb40=self.can.create_window(self.x40, self.y40, window=self.b40)
-
-        self.x41, self.y41 = 597, 328
-        self.b41=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins5)
-        self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
-
-        self.x42, self.y42 = 725, 328
-        self.b42=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm5)
-        self.fb42=self.can.create_window(self.x42, self.y42, window=self.b42)
-
-        self.x43, self.y43 = 853, 328
-        self.b43=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv5)
-        self.fb43=self.can.create_window(self.x43, self.y43, window=self.b43)
-
-        self.x44, self.y44 = 981, 328
-        self.b44=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag5)
-        self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
-
-        self.x441, self.y441 = 1109, 328
-        self.b441=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
-
-        #patient6
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-            line14=namefile.readline()
-            line15=namefile.readline()
-            line16=namefile.readline()
-
-        self.new_data6=line16
-
-        self.x45, self.y45 = 129, 360
-        self.Data_write=Entry(self.can)
-        self.new_data6=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data6,
-          highlightbackground='gray', bd=4)
-        self.new_data6.set(line16)
-        self.Data_write=self.can.create_window(self.x45, self.y45,
-          window=self.Data_write)
-
-        self.x46, self.y46 = 271, 360
-        self.b46=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink6)
-        self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
-
-        self.x49, self.y49 = 429, 360
-        self.b49=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam6)
-        self.fb49=self.can.create_window(self.x49, self.y49, window=self.b49)
-
-        self.x50, self.y50 = 597, 360
-        self.b50=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins6)
-        self.fb50=self.can.create_window(self.x50, self.y50, window=self.b50)
-
-        self.x51, self.y51 = 725, 360
-        self.b51=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm6)
-        self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
-
-        self.x52, self.y52 = 853, 360
-        self.b52=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv6)
-        self.fb52=self.can.create_window(self.x52, self.y52, window=self.b52)
-
-        self.x53, self.y53 = 981, 360
-        self.b53=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag6)
-        self.fb53=self.can.create_window(self.x53, self.y53, window=self.b53)
-
-        self.x531, self.y531 = 1109, 360
-        self.b531=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
-        
-        #patient7
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-            line14=namefile.readline()
-            line15=namefile.readline()
-            line16=namefile.readline()
-            line17=namefile.readline()
-            line18=namefile.readline()
-            line19=namefile.readline()
-
-        self.new_data7=line19
-
-        self.x54, self.y54 = 129, 392
-        self.Data_write=Entry(self.can)
-        self.new_data7=StringVar()
-        self.Data_write=Entry(textvariable=self.new_data7,
-          highlightbackground='gray', bd=4)
-        self.new_data7.set(line19)
-        self.Data_write=self.can.create_window(self.x54, self.y54,
-          window=self.Data_write)
-
-        self.x54, self.y54 = 271, 392
-        self.b54=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Allergy",
-            command=self.allergyLink7)
-        self.fb54=self.can.create_window(self.x54, self.y54, window=self.b54)
-
-        self.x57, self.y57 = 429, 392
-        self.b57=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Diagnostic + ATCD",
-            command=self.showParam7)
-        self.fb57=self.can.create_window(self.x57, self.y57, window=self.b57)
-
-        self.x58, self.y58 = 597, 392
-        self.b58=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Laboratory",
-            command=self.suiviSoins7)
-        self.fb58=self.can.create_window(self.x58, self.y58, window=self.b58)
-
-        self.x59, self.y59 = 725, 392
-        self.b59=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Exams",
-            command=self.showvm7)
-        self.fb59=self.can.create_window(self.x59, self.y59, window=self.b59)
-
-        self.x60, self.y60 = 853, 392
-        self.b60=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Life story",
-            command=self.histv7)
-        self.fb60=self.can.create_window(self.x60, self.y60, window=self.b60)
-
-        self.x61, self.y61 = 981, 392
-        self.b61=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Aux. resrc.",
-            command=self.diag7)
-        self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
-
-        self.x62, self.y62 = 1109, 392
-        self.b62=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Ext. stacke.",
-            command=self.moyaux)
-        self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
-
-        self.can.configure(scrollregion=self.can.bbox(ALL))
 
 if __name__=='__main__':
     app = Application()

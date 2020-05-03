@@ -30,7 +30,7 @@ def callbackFinishYear(event):
     print(comboFinishYear.get())
 
 def showTreat():
-    subprocess.call('./ttt/doc_ttt/tabs.py')
+    subprocess.call('./ttt/doc_ttt3/tabs.py')
 
 def copyFunc():
     """
@@ -54,9 +54,9 @@ def deleteTreatment():
         print("Ok, ttt has been ejected !")
         messagebox.showinfo('info BOX', 'Treatment is away !')
         try:
-            if os.path.getsize('./ttt/doc_ttt/convdose.json'):
+            if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
                 print("+ File 'convdose' exist !")
-                with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
+                with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
                     datastore = json.load(datafile)
                 
                 dataDose = datastore
@@ -156,7 +156,7 @@ def deleteTreatment():
                         print("None treatment checked")
                     else:
                         print("---Ok VALEUR 'Traitement' entrée---")
-                        with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
+                        with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                             json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
             print('+ Sorry, file convdose.json not exist !', outcom)
@@ -167,7 +167,7 @@ def copyToFile():
     To write all data to intro_ttt.json
     to reuse them after.
     """
-    with open('./ttt/doc_ttt/intro_ttt.txt', '+a') as file:
+    with open('./ttt/doc_ttt3/intro_ttt.txt', '+a') as file:
         file.write(str("Date : "))
         file.write(textDate.get() + '\n')
         file.write(str("Heure : "))
@@ -219,9 +219,9 @@ def copyToFile():
         file.write(str('\n\n'))
 
     try:
-        if os.path.getsize('./ttt/doc_ttt/convdose.json'):
+        if os.path.getsize('./ttt/doc_ttt3/convdose.json'):
             print("+ File 'convdose' exist !")
-            with open('./ttt/doc_ttt/convdose.json', 'r') as datafile:
+            with open('./ttt/doc_ttt3/convdose.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataDose = datastore
@@ -236,7 +236,7 @@ def copyToFile():
                 print("---Pas de VALEUR 'Traitement' entrée---")
             else:
                 print("---Ok VALEUR 'Traitement' entrée---")
-                with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
+                with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile2:
                     json.dump(dataDose, datafile2, indent=4)
     except FileNotFoundError as outcom:
         print('+ Sorry, file convdose.json not exist !')
@@ -255,7 +255,7 @@ def copyToFile():
             print("---Pas de VALEUR 'Traitement' entrée---")
         else:
             print("---Ok VALEUR 'Traitement' entrée---")
-            with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
+            with open('./ttt/doc_ttt3/convdose.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
 app = tk.Tk()
@@ -271,7 +271,7 @@ labelallergy=tk.Label(app, text="Allergy",
 labelallergy.grid(row=1, column=0, columnspan=3)
 
 # To read allergy for entry widget
-with open('./allergy/allergyfile.txt', 'r') as filename2:
+with open('./allergy/allergyfile3.txt', 'r') as filename2:
     line1=filename2.readline()
     line2=filename2.readline()
     line3=filename2.readline()
@@ -279,6 +279,7 @@ with open('./allergy/allergyfile.txt', 'r') as filename2:
     line5=filename2.readline()
     line6=filename2.readline()
     line7=filename2.readline()
+
 entrytext=tk.StringVar()
 entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ', ' + line7)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
@@ -321,11 +322,18 @@ textHour.grid(row=4, column=1)
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+    line2=filename.readline()
+    line3=filename.readline()
+    line4=filename.readline()
+    line5=filename.readline()
+    line6=filename.readline()
+    line7=filename.readline()
+
 textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,
     highlightbackground='gray', bd=4)
-name_text.set(line1)
+name_text.set(line7)
 textName.grid(row=5, column=1)
 
 textTreat = tk.Entry(app)
