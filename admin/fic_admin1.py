@@ -50,6 +50,8 @@ def sendToFile():
             file.write(entreDrg.get() + '\n')
             file.write(str("Phone Dr : "))
             file.write(PhoneDrg.get() + '\n')
+            file.write(str("Address Dr : "))
+            file.write(AddDrg.get() + '\n')
 
 def readToFile():
 	subprocess.call('./admin/readadmin/readadminfile1.py')
@@ -60,11 +62,11 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
     line2=filename.readline()
     
 gui = Tk()
-gui.title("Fiche Administrative")
+gui.title("Administrative Statement")
 gui.configure(bg='gray17')
 
 labelDate = Label(gui)
-labelDate = Label(text="Fiche Administrative", font='Times 28 bold',
+labelDate = Label(text="Administrative Statement", font='Times 28 bold',
     fg='aquamarine', bg='gray17')
 labelDate.grid(row=0, column=1, columnspan=4)
 
@@ -148,6 +150,11 @@ labelphoneDr = Label(text="Phone Doctor : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
 labelphoneDr.grid(pady=10, row=16, column=1)
 
+LabelAddrDr = Label(gui)
+LabelAddrDr = Label(text="Address Doctor : ", font=14,
+    width=20, anchor='e', fg='cyan', bg='gray17')
+LabelAddrDr.grid(pady=10, row=16, column=1)
+
 #Entry
 entreDate = Entry(gui)
 date_conf = IntVar()
@@ -222,19 +229,23 @@ PhoneDrg = Entry(gui)
 PhoneDrg = Entry(highlightbackground="gray", bd=4)
 PhoneDrg.grid(row=16, column=2)
 
+AddDrg=Entry(gui)
+AddDrg=Entry(highlightbackground="gray", bd=4)
+AddDrg.grid(row=17, column=2)
+
 buttonName = Button(gui)
 buttonName = Button(text='Save', fg='cyan', bg='gray30',
     width=18, command=sendToFile)
-buttonName.grid(row=14, column=4)
+buttonName.grid(row=15, column=4)
 
 buttonName = Button(gui)
 buttonName = Button(text='Read', fg='cyan', bg='gray30',
     width=18, command=readToFile)
-buttonName.grid(row=15, column=4)
+buttonName.grid(row=16, column=4)
 
 buttonQuit = Button(gui)
 buttonQuit = Button(text='Quit', fg='cyan', bg='gray30',
     width=18, command=quit)
-buttonQuit.grid(row=16, column=4)
+buttonQuit.grid(row=17, column=4)
 
 gui.mainloop()

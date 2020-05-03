@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 #!-*-encoding:Utf-8-*-
 
+
 from tkinter import *
 
 
@@ -12,10 +13,10 @@ def importationFile(fichier):
         textBox.insert(END, li)
 
 fen=Tk()
-fen.title("Fiche admininstrative")
+fen.title("Admininstrative Statement")
 fen.configure(background='gray17')
 
-labelo=Label(fen, text="Fiche admininstrative",
+labelo=Label(fen, text="Admininstrative Statement",
     font='Arial 18 bold', fg='turquoise', bg='gray17')
 labelo.pack(pady=10)
 
