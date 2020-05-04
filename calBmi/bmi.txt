@@ -14,3 +14,10 @@ Poids : 77
 Taille : 1.86
 BMI : 22.25690831309978
 
+Date : 04/05/2020
+Heure : 10:08:01
+Prenom et Nom : Catanea Esteban
+Poids : 78
+Taille : 1.86
+BMI : 22.54595907041276
+

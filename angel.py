@@ -399,8 +399,6 @@ class MenuBar(Frame):
         # Integration of 3rd menu
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
-
-
         # Menu for showing all Graphs togather per patient 
         self.cmd_Graph=Menubutton(self, text='Global', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Graph.pack(side=LEFT, padx=3)
@@ -487,7 +485,6 @@ class MenuBar(Frame):
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
-
         # Nutrition menu for intolerance and hate meals
         self.cmd_Print=Menubutton(self, text='Nutrition', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Print.pack(side=LEFT, padx=3)
@@ -551,8 +548,7 @@ class Application(Frame):
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
-        self.can.create_window((4,4), window=self.frame, anchor=NW,
-                                  tags="self.frame")
+        self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         # Insertion d'une image
         self.photo = PhotoImage(file='./syno_gif/title_syno.gif')
         self.item = self.can.create_image(625, 400, image=self.photo)
@@ -682,7 +678,7 @@ class Application(Frame):
 
     # Synopsis page
     def showsynopsis(self):
-        self.can.delete()
+        self.can.delete(ALL)
         self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
         self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
@@ -1674,10 +1670,10 @@ class Application(Frame):
     def extStake7(self):
         subprocess.call('./stackeholders/exstacke_patient7.py')
 
-    def globEye():
+    def globEye(self):
         pass
 
-    def globVision():
+    def globVision(self):
         subprocess.call('./global_vision/global_vision1.py')
 
     # Menu print

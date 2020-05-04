@@ -1,20 +1,16 @@
 {
     "data": [
         {
-            "Date": "03/05/2020",
-            "Glycemie": "5.3"
+            "Date": "04/05/2020",
+            "Glycemie": "4.5"
         },
         {
-            "Date": "04/05/2020",
-            "Glycemie": "5"
+            "Date": "05/05/2020",
+            "Glycemie": "3"
         },
         {
             "Date": "06/05/2020",
-            "Glycemie": "6"
-        },
-        {
-            "Date": "30/04/2020",
-            "Glycemie": "5"
+            "Glycemie": "4.6"
         }
     ]
 }
