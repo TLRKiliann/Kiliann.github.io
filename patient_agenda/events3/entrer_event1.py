@@ -14,7 +14,7 @@ import json
 import subprocess
 
 
-file=open('./patient_agenda/events2/patient_2_calendar.txt','rb')
+file=open('./patient_agenda/events/patient_1_calendar.txt','rb')
 data=load(file)
 file.close()
 
@@ -29,17 +29,17 @@ for value in data.items():
     data_list1.append(value)
 
 try:
-    if os.path.getsize('./patient_agenda/events2/doc_events/patient2_rdv.json'):
-        print("+ File 'patient2_rdv.json' exist !")   
-        with open('./patient_agenda/events2/doc_events/patient2_rdv.json', 'w') as datafile:
+    if os.path.getsize('./patient_agenda/events/doc_events/patient1_rdv.json'):
+        print("+ File 'patient1_rdv.json' exist !")   
+        with open('./patient_agenda/events/doc_events/patient1_rdv.json', 'w') as datafile:
             json.dump(data_list1, datafile, indent=4)
 except FileNotFoundError as msg:
     print("File doesn't exist, but it has been created !")
-    with open('./patient_agenda/events2/doc_events/patient2_rdv.json', 'w') as datafile:
+    with open('./patient_agenda/events/doc_events/patient1_rdv.json', 'w') as datafile:
         json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-subprocess.call('./patient_agenda/events2/doc_events/conver_value.py')
+subprocess.call('./patient_agenda/events/doc_events/conver_value.py')

@@ -103,17 +103,6 @@ def reorderFile():
                 textBox.insert(INSERT, lines[a+1])
                 textBox.insert(INSERT, lines[a+2])
 
-    """
-    with open('fixed_rdv.txt', 'r') as firstfile:
-        filetext = firstfile.readlines()
-
-    with open('textsort.txt', 'w') as secondfile:
-        for i in range(0, len(filetext)):
-            line = filetext[i]
-            if line in filetext:
-                secondfile.write(line)
-    """
-
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1 = filename.readline()
 

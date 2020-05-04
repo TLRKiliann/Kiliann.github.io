@@ -13,15 +13,6 @@ def importationFile(fichier):
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
-    line6=filename.readline()
-    line7=filename.readline()
-    line8=filename.readline()
-    line9=filename.readline()
-    line10=filename.readline()
 
 fen=Tk()
 fen.title("RDV set up")
@@ -38,7 +29,7 @@ labelo=Label(fen, text="RDV set up",
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 textentry=StringVar()
-textentry.set(line10)
+textentry.set(line1)
 entrylab=Entry(fen, textvariable=textentry)
 entrylab.pack(in_=top, side=LEFT, padx=10, pady=20)
 
@@ -50,6 +41,6 @@ buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt')
+importationFile('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
 
 fen.mainloop()

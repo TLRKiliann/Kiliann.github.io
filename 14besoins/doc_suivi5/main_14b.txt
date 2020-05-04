@@ -7,3 +7,7 @@ Asthme chronique
 Oublie de boire
 + Surveillance du sommeil requise
 Demander au médecin de lui prescrire un truc.
+
+Date : 04/05/2020
+Nom du patient : Lemoi Jenny
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

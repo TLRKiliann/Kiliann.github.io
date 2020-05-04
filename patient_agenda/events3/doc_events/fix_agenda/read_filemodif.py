@@ -12,7 +12,7 @@ def importationFile(fichier):
         textBox.insert(END, li)
 
 def saveData():         
-    with open('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt', 'w') as textfile2:
+    with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'w') as textfile2:
         textfile2.writelines(textBox.get('0.0', '12.0'))
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -49,6 +49,6 @@ buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30', width=8,
     activebackground='dark turquoise', activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt')
+importationFile('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt')
 
 fen.mainloop()

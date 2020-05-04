@@ -72,7 +72,7 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.insert(INSERT, "Rendez-vous set up le : ")
-textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + '\n')
+textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
 buttonEnter=Button(fen, text="Save", width=6, fg='yellow', bg='navy',

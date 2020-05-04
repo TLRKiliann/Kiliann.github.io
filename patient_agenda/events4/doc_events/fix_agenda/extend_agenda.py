@@ -23,7 +23,7 @@ def importationFile(fichier):
 def retrieve_input():
     inputValue = textBox.get("1.0","end-1c" + '\n')
     print(inputValue)
-    file = open('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt', 'a+')
+    file = open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'a+')
     file.write(textBox.get("1.0","end-1c") + '\n\n')
     file.close()
     
@@ -39,25 +39,16 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    file = open('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt', 'r')
+    file = open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r')
     print(file.read())
     file.close()
-    subprocess.call('./patient_agenda/events4/doc_events/fix_agenda/read_file.py')
+    subprocess.call('./patient_agenda/events/doc_events/fix_agenda/read_file.py')
 
 def changeText():
-    subprocess.call('./patient_agenda/events4/doc_events/fix_agenda/main.py')
+    subprocess.call('./patient_agenda/events/doc_events/fix_agenda/main.py')
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
-    line6=filename.readline()
-    line7=filename.readline()
-    line8=filename.readline()
-    line9=filename.readline()
-    line10=filename.readline()
 
 fen=Tk()
 fen.title("Agenda")
@@ -76,12 +67,12 @@ labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 textname=StringVar()
 entryName=Entry(fen, textvariable=textname)
-textname.set(line10)
+textname.set(line1)
 entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.insert(INSERT, "Rendez-vous set up le : ")
-textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + '\n')
+textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
 buttonEnter=Button(fen, text="Save", width=6, fg='yellow', bg='navy',
@@ -103,6 +94,6 @@ buttonQuitter=Button(fen, text="Quit", width=8, fg='cyan',
     bg='gray30', activebackground='red', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
-importationFile('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json')
+importationFile('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
 
 fen.mainloop()

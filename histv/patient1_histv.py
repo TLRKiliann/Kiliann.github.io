@@ -35,7 +35,7 @@ class MenuBar(Frame):
 class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self)
-        self.master.title('ANGEL-VISION - Developed by CK - Dec. 2018-2020')
+        self.master.title('ANGEL-VISION - Developed by CK - 2020')
         mBar=MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
@@ -50,7 +50,7 @@ class Application(Frame):
         # Insertion du texte
         self.can.create_text(300, 150, anchor=CENTER, text="Life story\n",
             font=('Times', 28), fill='aquamarine')
-        self.can.create_text(590, 380, anchor=NE, text="Copyright (C) 2018 Inc.",
+        self.can.create_text(590, 380, anchor=NE, text="Copyright (C) 2020 Inc.",
             font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
@@ -60,7 +60,7 @@ class Application(Frame):
         self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
             activeforeground='black',
-            text="Ajouter",
+            text="Add",
             command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
 
@@ -68,7 +68,7 @@ class Application(Frame):
         self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
             activebackground='dark turquoise',
             activeforeground='black',
-            text="Lire",
+            text="Read",
             command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
@@ -79,10 +79,10 @@ class Application(Frame):
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def lienDirect(self):
-        subprocess.call('./histv/doc_histv/patient1write.py')
+        subprocess.call('./histv/doc_histv/story_write.py')
 
     def lectureFic(self):
-        subprocess.call('./histv/doc_histv/patient1_read.py')
+        subprocess.call('./histv/doc_histv/story_read.py')
 
 if __name__=='__main__':
     app = Application()
