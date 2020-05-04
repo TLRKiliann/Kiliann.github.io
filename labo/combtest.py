@@ -6,6 +6,7 @@ from tkinter import *
 import tkinter as tk 
 from tkinter import ttk 
 from tkinter import messagebox
+import time
 
 
 app = tk.Tk()
@@ -13,11 +14,57 @@ app.title("Stix")
 app.configure(bg='gray17')
 
 def saveMyButt():
-    MSB = messagebox.showinfo('Save', 'Data saved !')
-    app.destroy()
+    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+
+    if MsgBox == 1:
+        print("Ok data saved")
+        recordOption()
+        confRec()
+        app.destroy()
+    else:
+        messagebox.showinfo('Return', 'Data have not been saved !')
+
+def recordOption():
+    print("+ Date : " + time.strftime("%d/%m/%Y"))
+    print("+ Nom du patient : ", textName.get())
+    with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as file:
+        file.write("\n\nDate : ")
+        file.write(time.strftime("%d/%m/%Y") + '\n')
+        file.write("Nom du patient : ")
+        file.write(textName.get())
+        file.write("pH :")
+        file.write(phchoosen.get())
+        file.write(" Leuco :")
+        file.write(Leuchoosen.get())
+        file.write(" Nit :")
+        file.write(Nitchoosen.get())
+        file.write(" Pro :")
+        file.write(Prochoosen.get())
+        file.write(" Glu :")
+        file.write(Gluchoosen.get())
+        file.write(" Ket :")
+        file.write(Ketchoosen.get())
+        file.write(" Ery :")
+        file.write(Erychoosen.get())
+        file.write(" Hb :")
+        file.write(Hbchoosen.get())
+
+def confRec():
+    MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
-    background='gray17').grid(row=0, column=0, columnspan=9)
+    background='gray17').grid(row=0, column=1, columnspan=4)
+
+# To read name of patient for entry widget
+with open('./newpatient/entryfile.txt', 'r') as filename:
+    line1=filename.readline()
+
+textName = tk.Entry(app)
+name_text = tk.StringVar()
+textName = tk.Entry(textvariable=name_text,
+    highlightbackground='gray', bd=4)
+name_text.set(line1)
+textName.grid(row=0, column=4, columnspan=8)
 
 # ttk.Label 
 ttk.Label(app, text="pH :",

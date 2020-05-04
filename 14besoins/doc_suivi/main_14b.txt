@@ -26,4 +26,10 @@ En date du : 30/04/2020 à 14:30:29 :
 # Ferritine value and treatment : (add what the patient needs)
 -----
 # Vitamin B12 value and treatment : (add what the patient needs)
-------
+------Date : 04/05/2020
+Nom du patient : Catanea Esteban
+pH : 7 Leuco : +3 Nit : + Pro : +1 Glu : +1 Ket : neg Ery : neg Hb : +1
+
+Date : 04/05/2020
+Nom du patient : Catanea Esteban
+pH : 5 Leuco : +2 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

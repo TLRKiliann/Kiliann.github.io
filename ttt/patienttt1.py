@@ -47,7 +47,7 @@ def copyFunc():
 def deleteTreatment():
     """
     To earase one line in array
-    for one entry
+    for one treatment
     """
     MSB = messagebox.askyesno('Delete ttt', 'Are you sure ?')
     if MSB == 1:
@@ -162,6 +162,7 @@ def deleteTreatment():
             print('+ Sorry, file convdose.json not exist !', outcom)
     else:           
         NoforQ = messagebox.showinfo('Return', 'Treatment not earased')
+
 def copyToFile():
     """
     To write all data to intro_ttt.json
@@ -279,6 +280,7 @@ with open('./allergy/allergyfile.txt', 'r') as filename2:
     line5=filename2.readline()
     line6=filename2.readline()
     line7=filename2.readline()
+
 entrytext=tk.StringVar()
 entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ', ' + line7)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
@@ -321,6 +323,7 @@ textHour.grid(row=4, column=1)
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+
 textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,

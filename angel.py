@@ -6,7 +6,6 @@ from tkinter import *
 from tkinter import messagebox
 #from tkinter import filedialog
 #import os
-import time
 import subprocess
 
 
@@ -1741,9 +1740,10 @@ class Application(Frame):
         subprocess.call('./newpatient/entrypytientfile.py')
 
     def upDateAll(self):
-        app.destroy()
-        time.sleep(1)
-        subprocess.call('./angel.py')
+        pass
+        #Frame.app.destroy()
+        #self.can.delete(ALL)
+        #subprocess.call('./angel.py')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
