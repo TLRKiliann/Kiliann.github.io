@@ -5,14 +5,19 @@
 from tkinter import *
 import tkinter as tk 
 from tkinter import ttk 
+from tkinter import messagebox
 
 
 app = tk.Tk()
 app.title("Stix")
 app.configure(bg='gray17')
 
-ttk.Label(app, text="Stix : ", font=("Times 28 bold"), foreground='aquamarine',
-    background='gray17').grid(row=0, column=0, columnspan=10)
+def saveMyButt():
+    MSB = messagebox.showinfo('Save', 'Data saved !')
+    app.destroy()
+
+ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
+    background='gray17').grid(row=0, column=0, columnspan=11)
 
 # ttk.Label 
 ttk.Label(app, text="pH :",
@@ -174,5 +179,11 @@ Erychoosen['values'] = (' 0',
   
 Erychoosen.grid(row=2, column=10)
 Erychoosen.current(0)
+
+buttSave=Button(app, text='Save', width=8, fg='yellow', bg='navy', command=saveMyButt)
+buttSave.grid(row=2, column=11, padx=10, pady=10)
+
+buttQuit=Button(app, text='Quit', width=8, fg='cyan', bg='gray30', command=quit)
+buttQuit.grid(row=3, column=11, padx=10, pady=10)
 
 app.mainloop()
