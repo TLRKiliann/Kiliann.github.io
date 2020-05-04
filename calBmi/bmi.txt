@@ -1,23 +1,14 @@
-Date : 03/05/2020
-Heure : 22:06:44
-Prenom et Nom : Catanea Esteban
-
-Poids : 88
-Taille : 1.86
-BMI : 25.4364666435426
-
 Date : 04/05/2020
-Heure : 22:06:44
+Heure : 18:26:57
 Prenom et Nom : Catanea Esteban
+Poids : 89
+Taille : 1.86
+BMI : 25.725517400855587
 
+Date : 05/05/2020
+Heure : 18:26:57
+Prenom et Nom : Catanea Esteban
 Poids : 77
 Taille : 1.86
 BMI : 22.25690831309978
-
-Date : 04/05/2020
-Heure : 10:08:01
-Prenom et Nom : Catanea Esteban
-Poids : 78
-Taille : 1.86
-BMI : 22.54595907041276
 

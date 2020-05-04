@@ -379,6 +379,12 @@ def delMain():
 def delTA():
     """
     To earase tensor.json
+    last line only
+    """
+    """
+    with open('./param/aspifile/tensor.json', 'r+') as file:
+        lines = file.readlines()
+        lines = lines[:-1]
     """
     try:
         if os.path.getsize('./param/aspifile/tensor.json'):
@@ -388,6 +394,7 @@ def delTA():
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
+
 
 def delPuls():
     """
@@ -688,7 +695,7 @@ button9Write.config(text='Graph Dlrs', width=15,
 button9Write.grid(row=10, column=3)
 
 button1Del = Button(gui)
-button1Del.config(text='Delete TA', width=15,
+button1Del.config(text='Cancel TA', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delTA)
 button1Del.grid(row=4, column=4)

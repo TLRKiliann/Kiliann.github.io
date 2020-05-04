@@ -64,7 +64,7 @@ buttonClose=Button(fen, text="Quit", width=10, fg='cyan',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./param/Main.txt',
+importationFile('./calBmi/bmi.txt',
     encodage="Utf-8")
 
 fen.mainloop()

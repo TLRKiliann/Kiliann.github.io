@@ -6,6 +6,7 @@ from tkinter import *
 from tkinter import messagebox
 #from tkinter import filedialog
 #import os
+import time
 import subprocess
 
 
@@ -406,7 +407,7 @@ class MenuBar(Frame):
         me1 = Menu(self.cmd_Graph)
         me2=Menu(me1)
         me2.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph)
         me2.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.globEye)
         me2.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
@@ -417,44 +418,44 @@ class MenuBar(Frame):
 
         me3=Menu(me1)
         me3.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph2)
         me3.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye2)
         me3.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision2)
         me1.add_cascade(label=new_text2, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me3)
         me1.add_separator()
 
         me4=Menu(me1)
         me4.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph3)
         me4.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye3)
         me4.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision3)
         me1.add_cascade(label=new_text3, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me4)
         me1.add_separator()
 
         me5=Menu(me1)
         me5.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph4)
         me5.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye4)
         me5.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision4)
         me1.add_cascade(label=new_text4, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me5)
         me1.add_separator()
 
         me6=Menu(me1)
         me6.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph5)
         me6.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye5)
         me6.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision5)
         me1.add_cascade(label=new_text5, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me6)
         me1.add_separator()
@@ -463,9 +464,9 @@ class MenuBar(Frame):
         me7.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph6)
         me7.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye6)
         me7.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision6)
         me1.add_cascade(label=new_text6, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me7)
         me1.add_separator()
@@ -475,9 +476,9 @@ class MenuBar(Frame):
         me8.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph7)
         me8.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
+                        foreground='cyan', activeforeground='black', command=boss.globEye7)
         me8.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
+                        foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
         me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me8)
@@ -699,7 +700,7 @@ class Application(Frame):
             activebackground='cyan',
             activeforeground='black',
             text="Refresh",
-            command=self.showsynopsis)
+            command=self.upDateAll)
         self.fb2=self.can.create_window(self.x101, self.y101, window=self.b2)
         
         #Patient1
@@ -1673,8 +1674,45 @@ class Application(Frame):
     def globEye(self):
         pass
 
+    def globEye2(self):
+        pass
+
+    def globEye3(self):
+        pass
+
+    def globEye4(self):
+        pass
+
+    def globEye5(self):
+        pass
+
+    def globEye6(self):
+        pass
+
+    def globEye7(self):
+        pass
+
+    # 4 frames in one
     def globVision(self):
         subprocess.call('./global_vision/global_vision1.py')
+
+    def globVision2(self):
+        subprocess.call('./global_vision/global_vision2.py')
+
+    def globVision3(self):
+        subprocess.call('./global_vision/global_vision3.py')
+
+    def globVision4(self):
+        subprocess.call('./global_vision/global_vision4.py')
+
+    def globVision5(self):
+        subprocess.call('./global_vision/global_vision5.py')
+
+    def globVision6(self):
+        subprocess.call('./global_vision/global_vision6.py')
+
+    def globVision7(self):
+        subprocess.call('./global_vision/global_vision7.py')
 
     # Menu print
     def nutritionMenu(self):
@@ -1701,6 +1739,11 @@ class Application(Frame):
     # For new entry
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
+
+    def upDateAll(self):
+        app.destroy()
+        time.sleep(1)
+        subprocess.call('./angel.py')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 

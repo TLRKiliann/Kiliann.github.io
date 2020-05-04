@@ -1,33 +1,66 @@
 Date: 04/05/2020
-Heure: 10:08:47
+Heure: 18:49:11
 Prenom et Nom: Catanea Esteban
-TA: 120/80 mmHg
-Puls: 80/min
+TA: 120/90 mmHg
+Puls: 88/min
 SaO2: 99%
 FR: 16/min
-Temperature: 36.5°C
-Glycemie: 4.5 mmol/l
+Temperature: 36.6°C
+Glycemie: 5 mmol/l
 Douleurs: 2/10
 
+Date: 04/05/2020
+Heure: 18:49:11
+Prenom et Nom: Catanea Esteban
+TA: 133/80 mmHg
+Puls: 77/min
+SaO2: 98%
+FR: 18/min
+Temperature: 36.9°C
+Glycemie: 5.2 mmol/l
+Douleurs: 0/10
+
 Date: 05/05/2020
-Heure: 10:08:47
+Heure: 18:49:11
 Prenom et Nom: Catanea Esteban
 TA: 90/77 mmHg
 Puls: 78/min
 SaO2: 98%
 FR: 18/min
+Temperature: 36.9°C
+Glycemie: 5.2 mmol/l
+Douleurs: 0/10
+
+Date: 04/05/2020
+Heure: 18:51:00
+Prenom et Nom: Catanea Esteban
+TA: 120/88 mmHg
+Puls: 80/min
+SaO2: 99%
+FR: 16/min
+Temperature: 36.5°C
+Glycemie: 5.3 mmol/l
+Douleurs: 2/10
+
+Date: 05/05/2020
+Heure: 18:51:00
+Prenom et Nom: Catanea Esteban
+TA: 133/80 mmHg
+Puls: 77/min
+SaO2: 98%
+FR: 18/min
 Temperature: 36.8°C
-Glycemie: 3 mmol/l
+Glycemie: 5.5 mmol/l
 Douleurs: 0/10
 
 Date: 06/05/2020
-Heure: 10:08:47
+Heure: 18:51:00
 Prenom et Nom: Catanea Esteban
-TA: 133/89 mmHg
-Puls: 78/min
+TA: 90/80 mmHg
+Puls: 66/min
 SaO2: 97%
-FR: 15/min
+FR: 16/min
 Temperature: 36°C
-Glycemie: 4.6 mmol/l
-Douleurs: 3/10
+Glycemie: 5 mmol/l
+Douleurs: 4/10
 
