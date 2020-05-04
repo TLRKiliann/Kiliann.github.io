@@ -438,7 +438,7 @@ def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def comburTips():
-    subprocess.call('./labo/combtest.py')
+    subprocess.call('./labo/combtest5.py')
 
 app = Tk()
 app.title("Labo check")

@@ -43,6 +43,7 @@ def sheetMicrobio():
     else:
         os.startfile('./labo/microbio.pdf') # Windows
 
+# PRINT PRINT PRINT PRINT
 def printLabo():
     """
     Need to be modified in 
@@ -438,7 +439,7 @@ def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 def comburTips():
-    subprocess.call('./labo/combtest.py')
+    subprocess.call('./labo/combtest2.py')
 
 app = Tk()
 app.title("Labo check")
