@@ -5,7 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 #from tkinter import filedialog
-import os
+#import os
 import subprocess
 
 
@@ -1226,25 +1226,6 @@ class Application(Frame):
     # For new entry
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
-
-    def callPatient2(self):
-        subprocess.call('./newpatient/entrypytientfile2.py')
-
-    def callPatient3(self):
-        subprocess.call('./newpatient/entrypytientfile3.py')
-
-    def callPatient4(self):
-        subprocess.call('./newpatient/entrypytientfile4.py')
-
-    def callPatient5(self):
-        subprocess.call('./newpatient/entrypytientfile5.py')
-
-    def callPatient6(self):
-        subprocess.call('./newpatient/entrypytientfile6.py')
-
-    def callPatient7(self):
-        subprocess.call('./newpatient/entrypytientfile7.py')
-
     # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')

@@ -7,6 +7,11 @@ from tkinter import messagebox
 import os
 
 
+gui=Tk()
+gui.title("Enter new patient")
+gui.configure(bg='gray17')
+gui.geometry('300x200')
+
 def get(Nompatient, entree, Birthvalue, Birthentree):
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
@@ -16,32 +21,86 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         print(entree.get())
         print(Birthvalue)
         print(Birthentree.get())
-        testExistFile()
-        gui.destroy()
-    else:           
-        NoforQ = messagebox.showinfo('Return', 'Data not saved')
-
-def testExistFile():
-    try:
-        if os.path.getsize('./newpatient/entryfile.txt'):
-            print("+ File 'entryfile.txt' exist !")
+        try:
+            if os.path.getsize('./newpatient/entryfile.txt'):
+                print("+ File 'entryfile.txt' exist !")
+                try:
+                    if os.path.getsize('./newpatient/entryfile2.txt'):
+                        print("+ File 'entryfile2.txt' exist !")
+                        try:
+                            if os.path.getsize('./newpatient/entryfile3.txt'):
+                                print("+ File 'entryfile3.txt' exist !")
+                                try:
+                                    if os.path.getsize('./newpatient/entryfile4.txt'):
+                                        print("+ File 'entryfile4.txt' exist !")
+                                        try:
+                                            if os.path.getsize('./newpatient/entryfile5.txt'):
+                                                print("+ File 'entryfile5.txt' exist !")
+                                                try:
+                                                    if os.path.getsize('./newpatient/entryfile6.txt'):
+                                                        print("+ File 'entryfile6.txt' exist !")
+                                                        try:
+                                                            if os.path.getsize('./newpatient/entryfile2.txt'):
+                                                                print("+ File 'entryfile7.txt' exist !")
+                                                        except FileNotFoundError as outcom:
+                                                            print("+ Sorry, file 'entryfile7.txt' not exist !")
+                                                            print(str(outcom))
+                                                            print("+ File 'entryfile.txt7' created !")
+                                                            with open('./newpatient/entryfile7.txt', 'a+') as namefile:
+                                                                namefile.write(entree.get() + '\n')
+                                                                namefile.write(Birthentree.get() + '\n')
+                                                                namefile.write(str('----------------\n'))
+                                                except FileNotFoundError as outcom1:
+                                                    print("+ Sorry, file 'entryfile.txt6' not exist !")
+                                                    print(str(outcom1))
+                                                    print("+ File 'entryfile.txt6' created !")
+                                                    with open('./newpatient/entryfile6.txt', 'a+') as namefile:
+                                                        namefile.write(entree.get() + '\n')
+                                                        namefile.write(Birthentree.get() + '\n')
+                                                        namefile.write(str('----------------\n'))
+                                        except FileNotFoundError as outcom2:
+                                            print("+ Sorry, file 'entryfile5.txt' not exist !")
+                                            print(str(outcom2))
+                                            print("+ File 'entryfile5.txt' created !")
+                                            with open('./newpatient/entryfile5.txt', 'a+') as namefile:
+                                                namefile.write(entree.get() + '\n')
+                                                namefile.write(Birthentree.get() + '\n')
+                                                namefile.write(str('----------------\n'))
+                                except FileNotFoundError as outcom3:
+                                    print("+ Sorry, file 'entryfile4.txt' not exist !")
+                                    print(str(outcom3))
+                                    print("+ File 'entryfile4.txt' created !")
+                                    with open('./newpatient/entryfile4.txt', 'a+') as namefile:
+                                        namefile.write(entree.get() + '\n')
+                                        namefile.write(Birthentree.get() + '\n')
+                                        namefile.write(str('----------------\n'))
+                        except FileNotFoundError as outcom4:
+                            print("+ Sorry, file 'entryfile3.txt' not exist !")
+                            print(str(outcom4))
+                            print("+ File 'entryfile3.txt' created !")
+                            with open('./newpatient/entryfile3.txt', 'a+') as namefile:
+                                namefile.write(entree.get() + '\n')
+                                namefile.write(Birthentree.get() + '\n')
+                                namefile.write(str('----------------\n'))
+                except FileNotFoundError as outcom5:
+                    print("+ Sorry, file 'entryfile2.txt' not exist !")
+                    print(str(outcom5))
+                    print("+ File 'entryfile2.txt' created !")
+                    with open('./newpatient/entryfile2.txt', 'a+') as namefile:
+                        namefile.write(entree.get() + '\n')
+                        namefile.write(Birthentree.get() + '\n')
+                        namefile.write(str('----------------\n'))
+        except FileNotFoundError as outcom6:
+            print("+ Sorry, file 'entryfile.txt' not exist !")
+            print(str(outcom6))
+            print("+ File 'entryfile.txt' created !")
             with open('./newpatient/entryfile.txt', 'a+') as namefile:
                 namefile.write(entree.get() + '\n')
                 namefile.write(Birthentree.get() + '\n')
                 namefile.write(str('----------------\n'))
-    except FileNotFoundError as outcom:
-        print("+ Sorry, file 'entryfile.txt' not exist !")
-        print(str(outcom))
-        print("+ File 'entryfile.txt' created !")
-        with open('./newpatient/entryfile.txt', 'a+') as namefile:
-            namefile.write(entree.get() + '\n')
-            namefile.write(Birthentree.get() + '\n')
-            namefile.write(str('----------------\n'))
-
-gui=Tk()
-gui.title("Enter new patient")
-gui.configure(bg='gray17')
-gui.geometry('300x200')
+        gui.destroy()
+    else:           
+        NoforQ = messagebox.showinfo('Return', 'Data not saved')
 
 labelName = Label(gui)
 labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 
@@ -72,3 +131,5 @@ buttQuit=Button(gui, text="Quit", width=8, fg='cyan', bg='navy',
 buttQuit.pack(side=LEFT, padx=15, pady=10)
 
 gui.mainloop()
+
+
