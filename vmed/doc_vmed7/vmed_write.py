@@ -63,11 +63,11 @@ def importationFile(fichier, encodage="Utf-8"):
         textBox.insert(END, li)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile7.txt', 'r') as filename:
     line1=filename.readline()
 
 # To read allergy in Entry widget
-with open('./allergy/allergyfile.txt', 'r') as allerfile:
+with open('./allergy/allergyfile7.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()

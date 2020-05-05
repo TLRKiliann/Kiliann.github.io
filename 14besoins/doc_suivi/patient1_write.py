@@ -113,6 +113,7 @@ labelallergy.pack(padx=5, pady=5)
 # To read name in Entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
+
 text_name=StringVar()
 Entryname=Entry(root, textvariable=text_name)
 text_name.set(line1)
@@ -127,6 +128,7 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA5=allerfile.readline()
     lineA6=allerfile.readline()
     lineA7=allerfile.readline()
+
 text_aller=StringVar()
 text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryaller=Entry(root, textvariable=text_aller, width=60)

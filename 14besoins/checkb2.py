@@ -150,15 +150,12 @@ labeltite=Label(fen, text='14 NEEDS',
     height=3, bg='gray17', fg='aquamarine')
 labeltite.grid(sticky='w', row=0, column=0, padx=20)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
 
 textname=StringVar()
 entryName=Entry(fen, textvariable=textname)
-textname.set(line4)
+textname.set(line1)
 entryName.grid(sticky='e', row=0, column=0, padx=20, pady=20)
 
 CheckVar1 = IntVar()

@@ -111,21 +111,12 @@ labelallergy=Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile4.txt', 'r') as filename:
     line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
-    line6=filename.readline()
-    line7=filename.readline()
-    line8=filename.readline()
-    line9=filename.readline()
-    line10=filename.readline()
 
 text_name=StringVar()
 Entryname=Entry(root, textvariable=text_name)
-text_name.set(line10)
+text_name.set(line1)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 # To read allergy in Entry widget

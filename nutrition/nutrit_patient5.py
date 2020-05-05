@@ -177,23 +177,11 @@ Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
 Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile5.txt', 'r') as filename:
     line1=filename.readline()
-    line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
-    line6=filename.readline()
-    line7=filename.readline()
-    line8=filename.readline()
-    line9=filename.readline()
-    line10=filename.readline()
-    line11=filename.readline()
-    line12=filename.readline()
-    line13=filename.readline()
 
 text_entry = StringVar()
-text_entry.set(line13)
+text_entry.set(line1)
 entryName = Entry(gui, textvariable=text_entry)
 entryName.grid(sticky='e', row=0, column=0, pady=10)
 

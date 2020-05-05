@@ -40,12 +40,12 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                                     if os.path.getsize('./newpatient/entryfile6.txt'):
                                                         print("+ File 'entryfile6.txt' exist !")
                                                         try:
-                                                            if os.path.getsize('./newpatient/entryfile2.txt'):
+                                                            if os.path.getsize('./newpatient/entryfile7.txt'):
                                                                 print("+ File 'entryfile7.txt' exist !")
                                                         except FileNotFoundError as outcom:
                                                             print("+ Sorry, file 'entryfile7.txt' not exist !")
                                                             print(str(outcom))
-                                                            print("+ File 'entryfile.txt7' created !")
+                                                            print("+ File 'entryfile7.txt' created !")
                                                             with open('./newpatient/entryfile7.txt', 'a+') as namefile:
                                                                 namefile.write(entree.get() + '\n')
                                                                 namefile.write(Birthentree.get() + '\n')

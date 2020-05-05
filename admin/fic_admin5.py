@@ -57,21 +57,9 @@ def readToFile():
 	subprocess.call('./admin/readadmin/readadminfile5.py')
 
 # To read name of patient for entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile5.txt', 'r') as filename:
     line1=filename.readline()
     line2=filename.readline()
-    line3=filename.readline()
-    line4=filename.readline()
-    line5=filename.readline()
-    line6=filename.readline()
-    line7=filename.readline()
-    line8=filename.readline()
-    line9=filename.readline()
-    line10=filename.readline()
-    line11=filename.readline()
-    line12=filename.readline()
-    line13=filename.readline()
-    line14=filename.readline()
 
 gui = Tk()
 gui.title("Administrative Statement")
@@ -179,14 +167,14 @@ entreName = Entry(gui)
 namefile = StringVar()
 entreName = Entry(textvariable=namefile,
     highlightbackground="gray", bd=4)
-namefile.set(line13)
+namefile.set(line1)
 entreName.grid(row=2, column=2)
 
 entreBirth = Entry(gui)
 namebirth = StringVar()
 entreBirth = Entry(textvariable=namebirth,
     highlightbackground="gray", bd=4)
-namebirth.set(line14)
+namebirth.set(line2)
 entreBirth.grid(row=3, column=2)
 
 entreAddr = Entry(gui)
