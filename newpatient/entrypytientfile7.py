@@ -23,23 +23,23 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
 
 def testExistFile():
     try:
-        if os.path.getsize('./newpatient/entryfile.txt'):
-            print("+ File 'entryfile.txt' exist !")
-            with open('./newpatient/entryfile.txt', 'a+') as namefile:
+        if os.path.getsize('./newpatient/entryfile7.txt'):
+            print("+ File 'entryfile7.txt' exist !")
+            with open('./newpatient/entryfile7.txt', 'a+') as namefile:
                 namefile.write(entree.get() + '\n')
                 namefile.write(Birthentree.get() + '\n')
                 namefile.write(str('----------------\n'))
     except FileNotFoundError as outcom:
-        print("+ Sorry, file 'entryfile.txt' not exist !")
+        print("+ Sorry, file 'entryfile7.txt' not exist !")
         print(str(outcom))
-        print("+ File 'entryfile.txt' created !")
-        with open('./newpatient/entryfile.txt', 'a+') as namefile:
+        print("+ File 'entryfile7.txt' created !")
+        with open('./newpatient/entryfile7.txt', 'a+') as namefile:
             namefile.write(entree.get() + '\n')
             namefile.write(Birthentree.get() + '\n')
             namefile.write(str('----------------\n'))
 
 gui=Tk()
-gui.title("Enter new patient")
+gui.title("Enter new patient 7")
 gui.configure(bg='gray17')
 gui.geometry('300x200')
 

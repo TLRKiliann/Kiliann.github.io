@@ -5,7 +5,7 @@
 from tkinter import *
 from tkinter import messagebox
 #from tkinter import filedialog
-#import os
+import os
 import subprocess
 
 
@@ -74,34 +74,55 @@ class MenuBar(Frame):
             menu=me1)
         
         # For label below (in me2.add_command)
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-            line14=namefile.readline()
-            line15=namefile.readline()
-            line16=namefile.readline()
-            line17=namefile.readline()
-            line18=namefile.readline()
-            line19=namefile.readline()
-        
-        new_text=line1
-        new_text2=line4
-        new_text3=line7
-        new_text4=line10
-        new_text5=line13
-        new_text6=line16
-        new_text7=line19
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1=namefile.readline()
+                new_text=line1
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile2.txt', 'r') as namefile:
+                line2=namefile.readline()
+                new_text2=line2
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile3.txt', 'r') as namefile:
+                line3=namefile.readline()
+                new_text3=line3
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile4.txt', 'r') as namefile:
+                line4=namefile.readline()
+                new_text4=line4
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile5.txt', 'r') as namefile:
+                line5=namefile.readline()
+                new_text5=line5
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile6.txt', 'r') as namefile:
+                line6=namefile.readline()
+                new_text6=line6
+        except:
+            pass
+
+        try:
+            with open('./newpatient/entryfile7.txt', 'r') as namefile:
+                line7=namefile.readline()
+                new_text7=line7
+        except:
+            pass
+
         
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='gray30', relief=GROOVE)
@@ -774,20 +795,17 @@ class Application(Frame):
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 2
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
+        with open('./newpatient/entryfile2.txt', 'r') as namefile:
             line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
         
-        self.new_data2=line4
+        self.new_data2=line2
 
         self.x9, self.y9 = 129, 232
         self.Data_write=Entry(self.can)
         self.new_data2=StringVar()
         self.Data_write=Entry(textvariable=self.new_data2,
           highlightbackground='gray', bd=4)
-        self.new_data2.set(line4)
+        self.new_data2.set(line2)
         self.Data_write=self.can.create_window(self.x9, self.y9,
           window=self.Data_write)
 
@@ -848,23 +866,17 @@ class Application(Frame):
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
         # Patient 3
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
+        with open('./newpatient/entryfile3.txt', 'r') as namefile:
             line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
 
-        self.new_data3=line7
+        self.new_data3=line3
 
         self.x18, self.y18 = 129, 264
         self.Data_write=Entry(self.can)
         self.new_data3=StringVar()
         self.Data_write=Entry(textvariable=self.new_data3,
           highlightbackground='gray', bd=4)
-        self.new_data3.set(line7)
+        self.new_data3.set(line3)
         self.Data_write=self.can.create_window(self.x18, self.y18,
           window=self.Data_write)
 
@@ -925,26 +937,17 @@ class Application(Frame):
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 4
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
+        with open('./newpatient/entryfile4.txt', 'r') as namefile:
             line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
 
-        self.new_data4=line10
+        self.new_data4=line4
 
         self.x27, self.y27 = 129, 296
         self.Data_write=Entry(self.can)
         self.new_data4=StringVar()
         self.Data_write=Entry(textvariable=self.new_data4,
           highlightbackground='gray', bd=4)
-        self.new_data4.set(line10)
+        self.new_data4.set(line4)
         self.Data_write=self.can.create_window(self.x27, self.y27,
           window=self.Data_write)
 
@@ -1005,29 +1008,17 @@ class Application(Frame):
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
         #patient5
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
+        with open('./newpatient/entryfile5.txt', 'r') as namefile:
             line5=namefile.readline()
-            line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
 
-        self.new_data5=line13
+        self.new_data5=line5
 
         self.x36, self.y36 = 129, 328
         self.Data_write=Entry(self.can)
         self.new_data5=StringVar()
         self.Data_write=Entry(textvariable=self.new_data5,
           highlightbackground='gray', bd=4)
-        self.new_data5.set(line13)
+        self.new_data5.set(line5)
         self.Data_write=self.can.create_window(self.x36, self.y36,
           window=self.Data_write)
 
@@ -1088,32 +1079,17 @@ class Application(Frame):
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
         #patient6
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
+        with open('./newpatient/entryfile6.txt', 'r') as namefile:
             line6=namefile.readline()
-            line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-            line14=namefile.readline()
-            line15=namefile.readline()
-            line16=namefile.readline()
 
-        self.new_data6=line16
+        self.new_data6=line6
 
         self.x45, self.y45 = 129, 360
         self.Data_write=Entry(self.can)
         self.new_data6=StringVar()
         self.Data_write=Entry(textvariable=self.new_data6,
           highlightbackground='gray', bd=4)
-        self.new_data6.set(line16)
+        self.new_data6.set(line6)
         self.Data_write=self.can.create_window(self.x45, self.y45,
           window=self.Data_write)
 
@@ -1174,35 +1150,17 @@ class Application(Frame):
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
         
         #patient7
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-            line2=namefile.readline()
-            line3=namefile.readline()
-            line4=namefile.readline()
-            line5=namefile.readline()
-            line6=namefile.readline()
+        with open('./newpatient/entryfile7.txt', 'r') as namefile:
             line7=namefile.readline()
-            line8=namefile.readline()
-            line9=namefile.readline()
-            line10=namefile.readline()
-            line11=namefile.readline()
-            line12=namefile.readline()
-            line13=namefile.readline()
-            line14=namefile.readline()
-            line15=namefile.readline()
-            line16=namefile.readline()
-            line17=namefile.readline()
-            line18=namefile.readline()
-            line19=namefile.readline()
 
-        self.new_data7=line19
+        self.new_data7=line7
 
         self.x54, self.y54 = 129, 392
         self.Data_write=Entry(self.can)
         self.new_data7=StringVar()
         self.Data_write=Entry(textvariable=self.new_data7,
           highlightbackground='gray', bd=4)
-        self.new_data7.set(line19)
+        self.new_data7.set(line7)
         self.Data_write=self.can.create_window(self.x54, self.y54,
           window=self.Data_write)
 
@@ -1262,8 +1220,32 @@ class Application(Frame):
             command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
-        #self.can.configure(scrollregion=self.can.bbox(ALL))
+        self.can.configure(scrollregion=self.can.bbox(ALL))
+
     # Admin OK
+    # For new entry
+    def callPatient1(self):
+        subprocess.call('./newpatient/entrypytientfile.py')
+
+    def callPatient2(self):
+        subprocess.call('./newpatient/entrypytientfile2.py')
+
+    def callPatient3(self):
+        subprocess.call('./newpatient/entrypytientfile3.py')
+
+    def callPatient4(self):
+        subprocess.call('./newpatient/entrypytientfile4.py')
+
+    def callPatient5(self):
+        subprocess.call('./newpatient/entrypytientfile5.py')
+
+    def callPatient6(self):
+        subprocess.call('./newpatient/entrypytientfile6.py')
+
+    def callPatient7(self):
+        subprocess.call('./newpatient/entrypytientfile7.py')
+
+    # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
 
@@ -1735,17 +1717,15 @@ class Application(Frame):
     def nutritionMenu7(self):
         subprocess.call('./nutrition/nutrit_patient7.py')
 
-    # For new entry
-    def callPatient1(self):
-        subprocess.call('./newpatient/entrypytientfile.py')
-
     def upDateAll(self):
-        pass
-        #Frame.app.destroy()
+        self.master.destroy()
+        subprocess.call('./angel.py')
+        #self.frame.destroy()
+
         #self.can.delete(ALL)
         #subprocess.call('./angel.py')
 
-        self.can.configure(scrollregion=self.can.bbox(ALL))
+        #self.can.configure(scrollregion=self.can.bbox(ALL))
 
 if __name__=='__main__':
     app = Application()

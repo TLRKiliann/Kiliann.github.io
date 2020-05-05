@@ -23,28 +23,28 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
 
 def testExistFile():
     try:
-        if os.path.getsize('./newpatient/entryfile.txt'):
-            print("+ File 'entryfile.txt' exist !")
-            with open('./newpatient/entryfile.txt', 'a+') as namefile:
+        if os.path.getsize('./newpatient/entryfile3.txt'):
+            print("+ File 'entryfile3.txt' exist !")
+            with open('./newpatient/entryfile3.txt', 'a+') as namefile:
                 namefile.write(entree.get() + '\n')
                 namefile.write(Birthentree.get() + '\n')
                 namefile.write(str('----------------\n'))
     except FileNotFoundError as outcom:
-        print("+ Sorry, file 'entryfile.txt' not exist !")
+        print("+ Sorry, file 'entryfile3.txt' not exist !")
         print(str(outcom))
-        print("+ File 'entryfile.txt' created !")
-        with open('./newpatient/entryfile.txt', 'a+') as namefile:
+        print("+ File 'entryfile3.txt' created !")
+        with open('./newpatient/entryfile3.txt', 'a+') as namefile:
             namefile.write(entree.get() + '\n')
             namefile.write(Birthentree.get() + '\n')
             namefile.write(str('----------------\n'))
 
 gui=Tk()
-gui.title("Enter new patient")
+gui.title("Enter new patient 3")
 gui.configure(bg='gray17')
 gui.geometry('300x200')
 
 labelName = Label(gui)
-labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 
+labelName = Label(text='Enter Name : ', font="Times 14 bold", 
     fg='cyan', bg='gray17')
 labelName.pack(pady=10)
 
