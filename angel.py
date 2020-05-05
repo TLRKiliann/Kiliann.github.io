@@ -399,94 +399,8 @@ class MenuBar(Frame):
         # Integration of 3rd menu
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
-        # Menu for showing all Graphs togather per patient 
-        self.cmd_Graph=Menubutton(self, text='Global', fg='cyan', bg='gray30', relief=GROOVE)
-        self.cmd_Graph.pack(side=LEFT, padx=3)
-        # drop-down portion of Graphics menu
-        me1 = Menu(self.cmd_Graph)
-        me2=Menu(me1)
-        me2.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph)
-        me2.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
-        me2.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
-        me1.add_cascade(label=new_text, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me2)
-        me1.add_separator()
-
-        me3=Menu(me1)
-        me3.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph2)
-        me3.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye2)
-        me3.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision2)
-        me1.add_cascade(label=new_text2, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me3)
-        me1.add_separator()
-
-        me4=Menu(me1)
-        me4.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph3)
-        me4.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye3)
-        me4.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision3)
-        me1.add_cascade(label=new_text3, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me4)
-        me1.add_separator()
-
-        me5=Menu(me1)
-        me5.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph4)
-        me5.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye4)
-        me5.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision4)
-        me1.add_cascade(label=new_text4, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me5)
-        me1.add_separator()
-
-        me6=Menu(me1)
-        me6.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph5)
-        me6.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye5)
-        me6.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision5)
-        me1.add_cascade(label=new_text5, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me6)
-        me1.add_separator()
-
-        me7=Menu(me1)
-        me7.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
-        me7.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye6)
-        me7.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision6)
-        me1.add_cascade(label=new_text6, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me7)
-        me1.add_separator()
-
-        # Menu cascade extraordinaire !!!
-        me8=Menu(me1)
-        me8.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph7)
-        me8.add_command(label='4 Fantastics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye7)
-        me8.add_command(label='4 Filles du Dr...', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision7)
-        # Integration of sub-menu
-        me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me8)
-        me1.add_separator()
-        # Integration of Graph menu
-        self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
-
         # Nutrition menu for intolerance and hate meals
-        self.cmd_Print=Menubutton(self, text='Nutrition', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Print=Menubutton(self, text='Intolerance All.', fg='cyan', bg='gray30', relief=GROOVE)
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
         mePrint = Menu(self.cmd_Print)
@@ -521,6 +435,92 @@ class MenuBar(Frame):
         # Integration of nutrition menu
         self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
+
+        # Menu for showing all Graphs togather per patient 
+        self.cmd_Graph=Menubutton(self, text='Global', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Graph.pack(side=LEFT, padx=3)
+        # drop-down portion of Graphics menu
+        me1 = Menu(self.cmd_Graph)
+        me2=Menu(me1)
+        me2.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph)
+        me2.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye)
+        me2.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision)
+        me1.add_cascade(label=new_text, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me2)
+        me1.add_separator()
+
+        me3=Menu(me1)
+        me3.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph2)
+        me3.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye2)
+        me3.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision2)
+        me1.add_cascade(label=new_text2, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me3)
+        me1.add_separator()
+
+        me4=Menu(me1)
+        me4.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph3)
+        me4.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye3)
+        me4.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision3)
+        me1.add_cascade(label=new_text3, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me4)
+        me1.add_separator()
+
+        me5=Menu(me1)
+        me5.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph4)
+        me5.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye4)
+        me5.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision4)
+        me1.add_cascade(label=new_text4, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me5)
+        me1.add_separator()
+
+        me6=Menu(me1)
+        me6.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph5)
+        me6.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye5)
+        me6.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision5)
+        me1.add_cascade(label=new_text5, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me6)
+        me1.add_separator()
+
+        me7=Menu(me1)
+        me7.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+        me7.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye6)
+        me7.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision6)
+        me1.add_cascade(label=new_text6, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me7)
+        me1.add_separator()
+
+        # Menu cascade extraordinaire !!!
+        me8=Menu(me1)
+        me8.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.visualGraph7)
+        me8.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globEye7)
+        me8.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.globVision7)
+        # Integration of sub-menu
+        me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
+                        activeforeground='black', activebackground='cyan', menu=me8)
+        me1.add_separator()
+        # Integration of Graph menu
+        self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
         # Manuals Nurse
         self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='gray30', relief=GROOVE)
@@ -1671,25 +1671,25 @@ class Application(Frame):
         subprocess.call('./stackeholders/exstacke_patient7.py')
 
     def globEye(self):
-        pass
+        subprocess.call('./global_eye/angel_eye1.py')
 
     def globEye2(self):
-        pass
+        subprocess.call('./global_eye/angel_eye2.py')
 
     def globEye3(self):
-        pass
+        subprocess.call('./global_eye/angel_eye3.py')
 
     def globEye4(self):
-        pass
+        subprocess.call('./global_eye/angel_eye4.py')
 
     def globEye5(self):
-        pass
+        subprocess.call('./global_eye/angel_eye5.py')
 
     def globEye6(self):
-        pass
+        subprocess.call('./global_eye/angel_eye6.py')
 
     def globEye7(self):
-        pass
+        subprocess.call('./global_eye/angel_eye7.py')
 
     # 4 frames in one
     def globVision(self):
