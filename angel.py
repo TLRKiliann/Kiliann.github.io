@@ -192,7 +192,6 @@ class MenuBar(Frame):
         me3.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda7)
-        me3.add_separator()
         # Integration of agenda menu
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', menu=me3)
 
@@ -229,7 +228,6 @@ class MenuBar(Frame):
         me4.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins7Coche)
-        me4.add_separator()
         # Integration of 14b menu
         self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
 
@@ -266,7 +264,6 @@ class MenuBar(Frame):
         meSoins.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins7)
-        meSoins.add_separator()
         # Integration of health and care menu
         self.cmd_Soins.configure(activeforeground='black', activebackground='cyan', menu=meSoins)
 
@@ -303,7 +300,6 @@ class MenuBar(Frame):
         meTtt.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed7)
-        meTtt.add_separator()
         # Integration of health and care menu
         self.cmd_ttt.configure(activeforeground='black', activebackground='cyan',
             menu=meTtt)
@@ -341,7 +337,6 @@ class MenuBar(Frame):
         menuParam.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam7)
-        menuParam.add_separator()
         # Integration of Vital parameters menu
         self.cmd_Param.configure(activeforeground='black', activebackground='cyan',
             menu=menuParam)
@@ -379,7 +374,6 @@ class MenuBar(Frame):
         meBmi.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB7)
-        meBmi.add_separator()
         # Integration of 3rd menu
         self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
 
@@ -416,7 +410,6 @@ class MenuBar(Frame):
         meVmed.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed7)
-        meVmed.add_separator()
         # Integration of 3rd menu
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
@@ -452,7 +445,6 @@ class MenuBar(Frame):
         mePrint.add_command(label=new_text7, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu7)
-        mePrint.add_separator()
         # Integration of nutrition menu
         self.cmd_Print.configure(activeforeground='black', activebackground='cyan',
             menu=mePrint)
@@ -539,7 +531,6 @@ class MenuBar(Frame):
         # Integration of sub-menu
         me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me8)
-        me1.add_separator()
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 

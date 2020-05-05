@@ -28,6 +28,7 @@ labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
 	line1=filename.readline()
+
 entrytext=StringVar()
 entrytext.set(line1)
 entryName=Entry(fen, textvariable=entrytext)
@@ -45,6 +46,7 @@ with open('./allergy/allergyfile.txt', 'r') as filename:
     lineA5=filename.readline()
     lineA6=filename.readline()
     lineA7=filename.readline()
+
 entrytext=StringVar()
 entrytext.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 entryName=Entry(fen, textvariable=entrytext, width=60)
