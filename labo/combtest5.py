@@ -56,26 +56,14 @@ ttk.Label(app, text="Stix", font=("Times 28 bold"), foreground='aquamarine',
     background='gray17').grid(row=0, column=1, columnspan=4)
 
 # To read name of patient for entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile5.txt', 'r') as filename:
     line1 = filename.readline()
-    line2 = filename.readline()
-    line3 = filename.readline()
-    line4 = filename.readline()
-    line5 = filename.readline()
-    line6 = filename.readline()
-    line7 = filename.readline()
-    line8 = filename.readline()
-    line9 = filename.readline()
-    line10 = filename.readline()
-    line11 = filename.readline()
-    line12 = filename.readline()
-    line13 = filename.readline()
 
 textName = tk.Entry(app)
 name_text = tk.StringVar()
 textName = tk.Entry(textvariable=name_text,
     highlightbackground='gray', bd=4)
-name_text.set(line13)
+name_text.set(line1)
 textName.grid(row=0, column=4, columnspan=8)
 
 # ttk.Label 
