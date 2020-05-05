@@ -1609,22 +1609,22 @@ class Application(Frame):
         subprocess.call("./histv/patient1_histv.py")
 
     def histv2(self):
-        subprocess.call("./histv/patient1_histv2.py")
+        subprocess.call("./histv/patient2_histv.py")
 
     def histv3(self):
-        subprocess.call("./histv/patient1_histv3.py")
+        subprocess.call("./histv/patient3_histv.py")
 
     def histv4(self):
-        subprocess.call("./histv/patient1_histv4.py")
+        subprocess.call("./histv/patient4_histv.py")
 
     def histv5(self):
-        subprocess.call("./histv/patient1_histv5.py")
+        subprocess.call("./histv/patient5_histv.py")
 
     def histv6(self):
-        subprocess.call("./histv/patient1_histv6.py")
+        subprocess.call("./histv/patient6_histv.py")
 
     def histv7(self):
-        subprocess.call("./histv/patient1_histv6.py")
+        subprocess.call("./histv/patient7_histv.py")
 
     #Moyens aux
     def moyaux(self):
