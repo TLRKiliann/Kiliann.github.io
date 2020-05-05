@@ -12,7 +12,7 @@ from tkinter import messagebox
 def saveData():
     inputValue = textBox.get("1.0","end-1c")
     print(inputValue)
-    file = open('./histv/doc_histv/Hvie_patient1.txt', 'a+')
+    file = open('./histv/doc_histv2/Hvie_patient1.txt', 'a+')
     file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
@@ -28,11 +28,11 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    with open('./histv/doc_histv/story_read.py', 'r') as f1read:
+    with open('./histv/doc_histv2/story_read.py', 'r') as f1read:
         with open('./labo/doc_labo/result.txt', 'r') as f2read:
             print(f1read.read())
             print(f2read.read())
-    subprocess.call('./histv/doc_histv/story_read.py')
+    subprocess.call('./histv/doc_histv2/story_read.py')
 
 def ajouterText():
     textBox.delete('1.0', END)
@@ -59,7 +59,7 @@ labelallergy=Label(root, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 text_name=StringVar()
 Entryname=Entry(root, textvariable=text_name)
@@ -67,7 +67,7 @@ text_name.set(line1)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 # To read allergy in Entry widget
-with open('./allergy/allergyfile.txt', 'r') as allerfile:
+with open('./allergy/allergyfile2.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
@@ -75,6 +75,7 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA5=allerfile.readline()
     lineA6=allerfile.readline()
     lineA7=allerfile.readline()
+
 text_aller=StringVar()
 text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryaller=Entry(root, textvariable=text_aller, width=60)

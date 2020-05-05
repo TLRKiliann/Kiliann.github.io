@@ -31,15 +31,16 @@ labelallergy=Label(fen, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile4.txt', 'r') as filename:
     line1=filename.readline()
+
 text_name=StringVar()
 text_name.set(line1)
 Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 # To read allergy in Entry widget
-with open('./allergy/allergyfile.txt', 'r') as allerfile:
+with open('./allergy/allergyfile4.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
@@ -47,6 +48,7 @@ with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA5=allerfile.readline()
     lineA6=allerfile.readline()
     lineA7=allerfile.readline()
+
 text_all=StringVar()
 text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryall=Entry(fen, textvariable=text_all, width=60)
