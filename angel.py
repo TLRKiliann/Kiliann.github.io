@@ -804,7 +804,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam2)
+            command=self.diag2)
         self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
 
         self.x14, self.y14 = 597, 232
@@ -836,7 +836,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag2)
+            command=self.moyaux2)
         self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
 
         self.x171, self.y171 = 1109, 232
@@ -844,7 +844,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake2)
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
         # Patient 3
@@ -881,7 +881,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam3)
+            command=self.diag3)
         self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
 
         self.x23, self.y23 = 597, 264
@@ -913,7 +913,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag3)
+            command=self.moyaux3)
         self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
 
         self.x8, self.y8 = 1109, 264
@@ -921,7 +921,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake3)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 4
@@ -961,7 +961,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam4)
+            command=self.diag4)
         self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
 
         self.x32, self.y32 = 597, 296
@@ -993,7 +993,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag4)
+            command=self.moyaux4)
         self.fb35=self.can.create_window(self.x35, self.y35, window=self.b35)
 
         self.x351, self.y351 = 1109, 296
@@ -1001,7 +1001,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake4)
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
         #patient5
@@ -1044,7 +1044,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam5)
+            command=self.diag5)
         self.fb40=self.can.create_window(self.x40, self.y40, window=self.b40)
 
         self.x41, self.y41 = 597, 328
@@ -1076,7 +1076,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag5)
+            command=self.moyaux5)
         self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
 
         self.x441, self.y441 = 1109, 328
@@ -1084,7 +1084,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake5)
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
         #patient6
@@ -1130,7 +1130,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam6)
+            command=self.diag6)
         self.fb49=self.can.create_window(self.x49, self.y49, window=self.b49)
 
         self.x50, self.y50 = 597, 360
@@ -1162,7 +1162,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag6)
+            command=self.moyaux6)
         self.fb53=self.can.create_window(self.x53, self.y53, window=self.b53)
 
         self.x531, self.y531 = 1109, 360
@@ -1170,7 +1170,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake6)
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
         
         #patient7
@@ -1219,7 +1219,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Diagnostic + ATCD",
-            command=self.showParam7)
+            command=self.diag7)
         self.fb57=self.can.create_window(self.x57, self.y57, window=self.b57)
 
         self.x58, self.y58 = 597, 392
@@ -1251,7 +1251,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Aux. resrc.",
-            command=self.diag7)
+            command=self.moyaux7)
         self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
 
         self.x62, self.y62 = 1109, 392
@@ -1259,7 +1259,7 @@ class Application(Frame):
             activebackground='dark turquoise',
             activeforeground='black',
             text="Ext. stacke.",
-            command=self.moyaux)
+            command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
         #self.can.configure(scrollregion=self.can.bbox(ALL))

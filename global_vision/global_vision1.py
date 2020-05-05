@@ -6,7 +6,7 @@ from tkinter import *
 
 
 fen=Tk()
-fen.title("Global Vision")
+fen.title("Angel Eye")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
