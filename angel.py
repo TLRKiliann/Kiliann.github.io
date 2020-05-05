@@ -1512,25 +1512,25 @@ class Application(Frame):
 
     # Func Diagnostic
     def diag1(self):
-        subprocess.call("./diag/diag_patient_1.py")
+        subprocess.call("./diag/diag_patient1.py")
 
     def diag2(self):
-        subprocess.call("./diag/diag_patient_2.py")
+        subprocess.call("./diag/diag_patient2.py")
 
     def diag3(self):
-        subprocess.call("./diag/diag_patient_3.py")
+        subprocess.call("./diag/diag_patient3.py")
 
     def diag4(self):
-        subprocess.call("./diag/diag_patient_4.py")
+        subprocess.call("./diag/diag_patient4.py")
 
     def diag5(self):
-        subprocess.call("./diag/diag_patient_5.py")
+        subprocess.call("./diag/diag_patient5.py")
 
     def diag6(self):
-        subprocess.call("./diag/diag_patient_6.py")
+        subprocess.call("./diag/diag_patient6.py")
 
     def diag7(self):
-        subprocess.call("./diag/diag_patient_7.py")
+        subprocess.call("./diag/diag_patient7.py")
 
     # Func Medical Visit
     def showvm1(self):
