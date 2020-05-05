@@ -453,14 +453,11 @@ labeltite=Label(app, text='Labo check',
     height=3, bg='gray17', fg='aquamarine')
 labeltite.grid(sticky='e', row=0, column=1, padx=20)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1 = filename.readline()
-    line2 = filename.readline()
-    line3 = filename.readline()
-    line4 = filename.readline()
 
 entrytext=StringVar()
-entrytext.set(line4)
+entrytext.set(line1)
 entryname=Entry(app, textvariable=entrytext, width=20)
 entryname.grid(sticky='w', row=0, column=2)
 
