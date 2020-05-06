@@ -14,7 +14,7 @@ import json
 import subprocess
 
 
-file=open('./patient_agenda/events/patient_1_calendar.txt','rb')
+file=open('./patient_agenda/events/patient_calendar.txt','rb')
 data=load(file)
 file.close()
 

@@ -145,16 +145,16 @@ if __name__ == '__main__':
         def print_selected_date(self):
             print(self.data)
             try:
-                if os.path.getsize('./patient_agenda/events5/patient_1_calendar.txt'):
-                    print("+ File 'patient_1_calendar.txt' exist !")
-                    file=open('./patient_agenda/events5/patient_1_calendar.txt','wb')
+                if os.path.getsize('./patient_agenda/events5/patient_calendar.txt'):
+                    print("+ File 'patient_calendar.txt' exist !")
+                    file=open('./patient_agenda/events5/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
                     subprocess.call('./patient_agenda/events5/entrer_event1.py')
             except FileNotFoundError as pret:
                     print("+ File not existing!", pret)
-                    print("+ File 'patient_1_calendar.txt' created !")
-                    file=open('./patient_agenda/events5/patient_1_calendar.txt','wb')
+                    print("+ File 'patient_calendar.txt' created !")
+                    file=open('./patient_agenda/events5/patient_calendar.txt','wb')
                     dump(self.data, file)
                     file.close()
                     subprocess.call('./patient_agenda/events5/entrer_event1.py')

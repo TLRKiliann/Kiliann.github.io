@@ -17,7 +17,7 @@ def searchExpress():
     To read in 2 files simultaneously
     """
     mot = regexpi_var.get()
-    with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as textfile1:
+    with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'r') as textfile1:
         lines = textfile1.readlines()
         for i in range(len(lines)):
             line = lines[i]
@@ -29,7 +29,7 @@ def searchExpress():
                 textBox.insert(INSERT, lines[i+1])
                 textBox.insert(INSERT, lines[i+2])
                     
-    with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
+    with open('./patient_agenda/events5/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
         lines = textfile2.readlines()
         for a in range(len(lines)):
             line = lines[a]
@@ -60,9 +60,9 @@ def save_input():
     by lines ;) !
     """
     magicword = regexpi_var.get()
-    with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as fr:
-        with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'a+') as fw1:
-            with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
+    with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'r') as fr:
+        with open('./patient_agenda/events5/doc_events/fix_agenda/modifrdv.txt', 'a+') as fw1:
+            with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'a+') as fw2:
                 for line in fr.readlines():
                     if magicword in line:
                         fw1.writelines(str("\n+++ Changes about rdv +++\n"))
@@ -78,7 +78,7 @@ def modifList():
     """
     To read file modifrdv.txt
     """
-    subprocess.call('./patient_agenda/events/doc_events/fix_agenda/read_filemodif.py')
+    subprocess.call('./patient_agenda/events5/doc_events/fix_agenda/read_filemodif.py')
 
 def deleteTextbox():
     textBox.delete('0.0', '12.0')
@@ -91,7 +91,7 @@ def reorderFile():
     file in order
     """
     magicword = regexpi_var.get()            
-    with open('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
+    with open('./patient_agenda/events5/doc_events/fix_agenda/modifrdv.txt', 'r') as textfile2:
         lines = textfile2.readlines()
         for a in range(len(lines)):
             line = lines[a]
@@ -103,7 +103,7 @@ def reorderFile():
                 textBox.insert(INSERT, lines[a+1])
                 textBox.insert(INSERT, lines[a+2])
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile5.txt', 'r') as filename:
     line1 = filename.readline()
 
 gui = Tk()
