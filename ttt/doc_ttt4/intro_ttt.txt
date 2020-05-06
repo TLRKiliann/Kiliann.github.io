@@ -1,0 +1,65 @@
+Date : 04/05/2020
+Heure : 18:28:52
+Name : Catanea Esteban
+
+Date of introduction : 04 April 2020
+Nom du ttt : Nexium
+Dosage du ttt : 40mg
+Matin : 1
+
+
+
+Date of end : 30 May 2020
+Signature : ex
+
+Date : 04/05/2020
+Heure : 18:28:52
+Name : Catanea Esteban
+
+Date of introduction : 05 April 2020
+Nom du ttt : Morphine
+Dosage du ttt : 20gttes
+Matin : 1
+
+Soir : 1
+
+Réserve : Oui
+1ère intention : Oui
+Nbre de réserve/24h : 1
+Date of end : 04 October 2034
+Signature : ex
+
+Date : 04/05/2020
+Heure : 18:28:52
+Name : Catanea Esteban
+
+Date of introduction : 05 April 2020
+Nom du ttt : Leponex
+Dosage du ttt : 100mg
+Matin : 1
+Midi : 1
+Soir : 1
+Nuit : 1
+Réserve : Oui
+1ère intention : Oui
+Nbre de réserve/24h : 3
+Date of end : 04 October 2034
+Signature : ex
+
+Date : 06/05/2020
+Heure : 21:27:34
+Name : Julia Roberts
+
+Date of introduction : 02 May 2020
+Nom du ttt : Nexium
+Dosage du ttt : 20mg
+Matin : 1
+Midi : 1
+Soir : 1
+Nuit : 1
+Réserve : Oui
+1ère intention : Oui
+Nbre de réserve/24h : 2
+Date of end : 03 April 2020
+Signature : ex
+

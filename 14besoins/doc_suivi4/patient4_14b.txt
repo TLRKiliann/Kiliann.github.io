@@ -4,3 +4,9 @@ Nom du patient : Leforestier Maxime
 + Surveillance de la température requise
 + Surveillance pour éviter les dangers requise
 + Agir pour aider la personne dans ses valeurs et croyances
+
+Date : 06/05/2020
+Nom du patient : Julia Roberts
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance ou aide pour l'habillage/déshabillage requise
++ Accompagner ou aider la personne à se réaliser

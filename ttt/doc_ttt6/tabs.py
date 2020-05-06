@@ -9,7 +9,7 @@ import os
 
 
 # To create list of start date
-with open('./ttt/doc_ttt7/convdose.json') as file:
+with open('./ttt/doc_ttt6/convdose.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -19,7 +19,7 @@ data_liststart = []
 for value in zip(value):
     data_liststart.append(value[0]['Date of introduction'])
 
-with open('./ttt/doc_ttt7/data_start.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_start.json', 'a+') as datafile:
     json.dump(data_liststart, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -28,14 +28,14 @@ for (key, value) in data.items():
 
 print("\nListstart = Start of process :")
 print("--------------")
-fileStart = open('./ttt/doc_ttt7/data_start.json')
+fileStart = open('./ttt/doc_ttt6/data_start.json')
 liststart = json.load(fileStart)
 
 for start in liststart:
     print("liststart: " + start)
 
 # To create list of end date
-with open('./ttt/doc_ttt7/convdose.json') as file:
+with open('./ttt/doc_ttt6/convdose.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -45,7 +45,7 @@ data_listend = []
 for value in zip(value):
     data_listend.append(value[0]['Date of end'])
 
-with open('./ttt/doc_ttt7/data_end.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_end.json', 'a+') as datafile:
     json.dump(data_listend, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -54,14 +54,14 @@ for (key, value) in data.items():
 
 print("\nListend = End of process :")
 print("--------------")
-filend = open('./ttt/doc_ttt7/data_end.json')
+filend = open('./ttt/doc_ttt6/data_end.json')
 listend = json.load(filend)
 
 for end in listend:
     print("listend: " + end)
 
 # To create list of ttt
-with open('./ttt/doc_ttt7/convdose.json') as file:
+with open('./ttt/doc_ttt6/convdose.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -71,7 +71,7 @@ data_list1 = []
 for value in zip(value):
     data_list1.append(value[0]['Traitement'])
 
-with open('./ttt/doc_ttt7/data_ttt.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_ttt.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -80,7 +80,7 @@ for (key, value) in data.items():
 
 print("\nListe1 = ttt :")
 print("--------------")
-fileA = open('./ttt/doc_ttt7/data_ttt.json')
+fileA = open('./ttt/doc_ttt6/data_ttt.json')
 list1 = json.load(fileA)
 
 for tttintro in list1:
@@ -91,7 +91,7 @@ data_list2 = []
 for value in zip(value):
     data_list2.append(value[0]['Dosage'])
 
-with open('./ttt/doc_ttt7/data_dose.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_dose.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -100,7 +100,7 @@ for (key, value) in data.items():
 
 print("\nList2 = Dosage :")
 print("--------------------")
-fileB = open('./ttt/doc_ttt7/data_dose.json')
+fileB = open('./ttt/doc_ttt6/data_dose.json')
 list2 = json.load(fileB)
 
 for dose in list2:
@@ -111,7 +111,7 @@ data_list3 = []
 for value in zip(value):
     data_list3.append(value[0]['Matin'])
 
-with open('./ttt/doc_ttt7/data_matin.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_matin.json', 'a+') as datafile:
     json.dump(data_list3, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -120,7 +120,7 @@ for (key, value) in data.items():
 
 print("\nList3 = Matin :")
 print("--------------------")
-fileC = open('./ttt/doc_ttt7/data_matin.json')
+fileC = open('./ttt/doc_ttt6/data_matin.json')
 list3 = json.load(fileC)
 
 for morn in list3:
@@ -131,7 +131,7 @@ data_list4 = []
 for value in zip(value):
     data_list4.append(value[0]['Midi'])
 
-with open('./ttt/doc_ttt7/data_midi.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_midi.json', 'a+') as datafile:
     json.dump(data_list4, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -140,7 +140,7 @@ for (key, value) in data.items():
 
 print("\nList4 = Midi :")
 print("--------------------")
-fileD = open('./ttt/doc_ttt7/data_midi.json')
+fileD = open('./ttt/doc_ttt6/data_midi.json')
 list4 = json.load(fileD)
 
 for noon in list4:
@@ -151,7 +151,7 @@ data_list5 = []
 for value in zip(value):
     data_list5.append(value[0]['Soir'])
 
-with open('./ttt/doc_ttt7/data_soir.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_soir.json', 'a+') as datafile:
     json.dump(data_list5, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -160,7 +160,7 @@ for (key, value) in data.items():
 
 print("\nList5 = Soir :")
 print("--------------------")
-fileE = open('./ttt/doc_ttt7/data_soir.json')
+fileE = open('./ttt/doc_ttt6/data_soir.json')
 list5 = json.load(fileE)
 
 for eve in list5:
@@ -171,7 +171,7 @@ data_list6 = []
 for value in zip(value):
     data_list6.append(value[0]['Nuit'])
 
-with open('./ttt/doc_ttt7/data_nuit.json', 'a+') as datafile:
+with open('./ttt/doc_ttt6/data_nuit.json', 'a+') as datafile:
     json.dump(data_list6, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -180,7 +180,7 @@ for (key, value) in data.items():
 
 print("\nList6 = Nuit :")
 print("--------------------")
-fileF = open('./ttt/doc_ttt7/data_nuit.json')
+fileF = open('./ttt/doc_ttt6/data_nuit.json')
 list6 = json.load(fileF)
 
 for nightm in list6:
@@ -382,14 +382,14 @@ class app(Frame):
         except IndexError as info:
             print("End of medication reached !", info)
 
-os.remove('./ttt/doc_ttt7/data_ttt.json')
-os.remove('./ttt/doc_ttt7/data_dose.json')
-os.remove('./ttt/doc_ttt7/data_matin.json')
-os.remove('./ttt/doc_ttt7/data_midi.json')
-os.remove('./ttt/doc_ttt7/data_soir.json')
-os.remove('./ttt/doc_ttt7/data_nuit.json')
-os.remove('./ttt/doc_ttt7/data_start.json')
-os.remove('./ttt/doc_ttt7/data_end.json')
+os.remove('./ttt/doc_ttt6/data_ttt.json')
+os.remove('./ttt/doc_ttt6/data_dose.json')
+os.remove('./ttt/doc_ttt6/data_matin.json')
+os.remove('./ttt/doc_ttt6/data_midi.json')
+os.remove('./ttt/doc_ttt6/data_soir.json')
+os.remove('./ttt/doc_ttt6/data_nuit.json')
+os.remove('./ttt/doc_ttt6/data_start.json')
+os.remove('./ttt/doc_ttt6/data_end.json')
 
 prog = app()
 prog.master.title('Medication')
