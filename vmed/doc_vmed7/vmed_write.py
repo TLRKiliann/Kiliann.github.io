@@ -14,7 +14,7 @@ def saveData():
     exist or not. Already test
     it before.
     """
-    with open('./vmed/doc_vmed/resultvmed.txt', 'a+') as filerecord:
+    with open('./vmed/doc_vmed7/resultvmed.txt', 'a+') as filerecord:
         filerecord.write(textBox.get("1.0", "end-1c"))
         filerecord.write(str('\n\n'))
 
@@ -37,9 +37,9 @@ def readerFile():
     """
     To read into the txt file.
     """
-    with open('./vmed/doc_vmed/resultvmed.txt', 'r') as filereader:
+    with open('./vmed/doc_vmed7/resultvmed.txt', 'r') as filereader:
         print(filereader.read())
-    subprocess.call('./vmed/doc_vmed/vmed_read.py')
+    subprocess.call('./vmed/doc_vmed7/vmed_read.py')
 
 def addText():
     """
@@ -129,7 +129,7 @@ buttonQuitter=Button(root, text="Quit", width=8,
     activeforeground='navy', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
-importationFile('./vmed/doc_vmed/resultvmed.txt',
+importationFile('./vmed/doc_vmed7/resultvmed.txt',
     encodage="Utf-8")
 
 mainloop()

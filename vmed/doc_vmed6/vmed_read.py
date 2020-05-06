@@ -61,7 +61,7 @@ buttonClose=Button(fen, text="Quit", width=8, fg='cyan',
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./vmed/doc_vmed/resultvmed.txt',
+importationFile('./vmed/doc_vmed6/resultvmed.txt',
     encodage="Utf-8")
 
 fen.mainloop()
