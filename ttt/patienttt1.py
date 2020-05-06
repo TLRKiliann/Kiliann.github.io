@@ -62,91 +62,62 @@ def deleteTreatment():
                 dataDose = datastore
                 for key, value in dataDose.items():
                     if deleteTreat.get() == value[0]['Traitement']:
-                        print(key)
-                        print("value3c1", value[0]['Traitement'])
                         del value[0]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[1]['Traitement']:
-                        print(key)
-                        print("value3c2", value[1]['Traitement'])
                         del value[1]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[2]['Traitement']:
-                        print(key)
-                        print("value3c3", value[2]['Traitement'])
                         del value[2]
                         print("+ TTT earased !")
+                        
                     elif deleteTreat.get() == value[3]['Traitement']:
-                        print(key)
-                        print("value3c4", value[3]['Traitement'])
                         del value[3]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[4]['Traitement']:
-                        print(key)
-                        print("value3c4", value[4]['Traitement'])
                         del value[4]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[5]['Traitement']:
-                        print(key)
-                        print("value3c4", value[5]['Traitement'])
                         del value[5]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[6]['Traitement']:
-                        print(key)
-                        print("value3c4", value[6]['Traitement'])
                         del value[6]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[7]['Traitement']:
-                        print(key)
-                        print("value3c4", value[7]['Traitement'])
                         del value[7]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[8]['Traitement']:
-                        print(key)
-                        print("value3c4", value[8]['Traitement'])
                         del value[8]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[9]['Traitement']:
-                        print(key)
-                        print("value3c4", value[9]['Traitement'])
                         del value[9]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[10]['Traitement']:
-                        print(key)
-                        print("value3c4", value[10]['Traitement'])
                         del value[10]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[11]['Traitement']:
-                        print(key)
-                        print("value3c4", value[11]['Traitement'])
                         del value[11]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[12]['Traitement']:
-                        print(key)
-                        print("value3c4", value[12]['Traitement'])
                         del value[12]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[13]['Traitement']:
-                        print(key)
-                        print("value3c4", value[13]['Traitement'])
                         del value[13]
                         print("+ TTT earased !")
 
                     elif deleteTreat.get() == value[14]['Traitement']:
-                        print(key)
-                        print("value3c4", value[14]['Traitement'])
                         del value[14]
                         print("+ TTT earased !")
                     else:

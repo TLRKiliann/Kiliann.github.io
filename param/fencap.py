@@ -378,98 +378,147 @@ def delMain():
 
 def delTA():
     """
-    To earase tensor.json
-    last line only
-    """
-    """
-    with open('./param/aspifile/tensor.json', 'r+') as file:
-        lines = file.readlines()
-        lines = lines[:-1]
+    To earase last line 
+    of tensor.json
     """
     try:
         if os.path.getsize('./param/aspifile/tensor.json'):
-            os.remove('./param/aspifile/tensor.json')
-            label['text'] = "File tensor.json has been deleted !"
-            print("+ File tensor.json has been deleted !")
+            with open('./param/aspifile/tensor.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of TA deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/tensor.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'tensor.json' has been deleted !"
+            print("Last value of 'tensor.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
 
-
 def delPuls():
     """
-    To earase puls.json
+    To earase last line 
+    of puls.json
     """
     try:
         if os.path.getsize('./param/aspifile/puls.json'):
-            os.remove('./param/aspifile/puls.json')
-            label['text'] = "File puls.json has been deleted !"
-            print("+ File puls.json has been deleted !")
+            with open('./param/aspifile/puls.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of Puls deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/puls.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'puls.json' has been deleted !"
+            print("Last value of 'puls.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
-        print("+ Sorry, file asked not exist !")
+        print('+ Sorry, file asked not exist !')
 
 def delSat():
     """
-    To earase sat.json
+    To earase last line 
+    of sat.json
     """
     try:
         if os.path.getsize('./param/aspifile/sat.json'):
-            os.remove('./param/aspifile/sat.json')
-            label['text'] = "File sat.json has been deleted !"
-            print("+ File sat.json has been deleted !")
+            with open('./param/aspifile/sat.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of SaO2 deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/sat.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'sat.json' has been deleted !"
+            print("Last value of 'sat.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
 
 def delFreq():
     """
-    To earase file
+    To earase last line 
+    of freq.json
     """
     try:
         if os.path.getsize('./param/aspifile/freq.json'):
-            os.remove('./param/aspifile/freq.json')
-            label['text'] = "File freq.json has been deleted !"
-            print("+ File freq.json has been deleted !")
+            with open('./param/aspifile/freq.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of FR deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/freq.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'freq.json' has been deleted !"
+            print("Last value of 'freq.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
 
 def delTemp():
     """
-    To earase temp.json
+    To earase last line 
+    of temp.json
     """
     try:
         if os.path.getsize('./param/aspifile/temp.json'):
-            os.remove('./param/aspifile/temp.json')
-            label['text'] = "File temp.json has been deleted !"
-            print("+ File temp.json has been deleted !")
+            with open('./param/aspifile/temp.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of Temp deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/temp.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'temp.json' has been deleted !"
+            print("Last value of 'temp.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
 
 def delGly():
     """
-    To earase gly.json
+    To earase last line 
+    of gly.json
     """
     try:
         if os.path.getsize('./param/aspifile/gly.json'):
-            os.remove('./param/aspifile/gly.json')
-            label['text'] = "File gly.json has been deleted !"
-            print("+ File gly.json has been deleted !")
+            with open('./param/aspifile/gly.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of Gly deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/gly.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'gly.json' has been deleted !"
+            print("Last value of 'gly.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
 
 def delDlr():
     """
-    To earase dlr.json
+    To earase last line 
+    of dlr.json
     """
     try:
         if os.path.getsize('./param/aspifile/dlr.json'):
-            os.remove('./param/aspifile/dlr.json')
-            label['text'] = "File dlr.json has been deleted !"
-            print("+ File dlr.json has been deleted !")
+            with open('./param/aspifile/dlr.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of Pain deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./param/aspifile/dlr.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            label['text'] = "Last value of 'dlr.json' has been deleted !"
+            print("Last value of 'dlr.json' has been deleted !")
     except FileNotFoundError:
         label['text'] = "Sorry, file asked not exist !"
         print('+ Sorry, file asked not exist !')
@@ -695,43 +744,43 @@ button9Write.config(text='Graph Dlrs', width=15,
 button9Write.grid(row=10, column=3)
 
 button1Del = Button(gui)
-button1Del.config(text='Cancel TA', width=15,
+button1Del.config(text='Cancel last TA', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delTA)
 button1Del.grid(row=4, column=4)
 
 button2Del = Button(gui)
-button2Del.config(text='Delete Puls', width=15,
+button2Del.config(text='Cancel last Puls', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delPuls)
 button2Del.grid(row=5, column=4)
 
 button3Del = Button(gui)
-button3Del.config(text='Delete SaO2', width=15,
+button3Del.config(text='Cancel last SaO2', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delSat)
 button3Del.grid(row=6, column=4)
 
 button4Del = Button(gui)
-button4Del.config(text='Delete FR', width=15,
+button4Del.config(text='Cancel last FR', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delFreq)
 button4Del.grid(row=7, column=4)
 
 button5Del = Button(gui)
-button5Del.config(text='Delete T°C', width=15,
+button5Del.config(text='Cancel last T°C', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delTemp)
 button5Del.grid(row=8, column=4)
 
 button6Del = Button(gui)
-button6Del.config(text='Delete Hgt', width=15,
+button6Del.config(text='Cancel last Hgt', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delGly)
 button6Del.grid(row=9, column=4)
 
 button7Del = Button(gui)
-button7Del.config(text='Delete Dlrs', width=15,
+button7Del.config(text='Cancel last Dlrs', width=15,
     bg='coral', fg='yellow', activeforeground='black',
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
