@@ -62,7 +62,7 @@ def importationFile(fichier, encodage="Utf-8"):
     for li in content:
         textBox.insert(END, li)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 
 root=Tk()

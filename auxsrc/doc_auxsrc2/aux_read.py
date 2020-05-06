@@ -25,8 +25,9 @@ labelo=Label(fen, text="Auxiliary resources : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
-with open('./newpatient/entryfile.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
+
 entrytext=StringVar()
 entrytext.set(line1)
 entryName=Entry(fen, textvariable=entrytext)
