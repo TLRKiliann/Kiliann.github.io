@@ -153,7 +153,7 @@ labelphoneDr.grid(pady=10, row=16, column=1)
 LabelAddrDr = Label(gui)
 LabelAddrDr = Label(text="Address Doctor : ", font=14,
     width=20, anchor='e', fg='cyan', bg='gray17')
-LabelAddrDr.grid(pady=10, row=16, column=1)
+LabelAddrDr.grid(pady=10, row=17, column=1)
 
 #Entry
 entreDate = Entry(gui)
