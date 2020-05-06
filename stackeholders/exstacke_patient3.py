@@ -257,22 +257,22 @@ class Application(Frame):
 
     def linkNeeds(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi3/patient1_14b.txt'):
+            if os.path.getsize('./14besoins/doc_suivi3/patient3_14b.txt'):
                 print("+ File '14Needs3' exist (add)!")
-                subprocess.call('./14besoins/doc_suivi3/patient1_write.py')
-        except FileNotFoundError as outmsg:
-            print("+ Sorry, file '14Needs3' not exist !", outmsg)
+                subprocess.call('./14besoins/doc_suivi3/patient3_write.py')
+        except FileNotFoundError as outmsg2:
+            print("+ Sorry, file '14Needs3' not exist !", outmsg2)
             print("+ File 14Needs3 created !")
             self.confRec()
 
     # Func to read
     def readFileNeeds(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi3/patient1_14b.txt'):
+            if os.path.getsize('./14besoins/doc_suivi3/patient3_14b.txt'):
                 print("+ File '14Needs3' exist (read)!")
-                subprocess.call('./14besoins/doc_suivi3/patient1_read.py')
-        except FileNotFoundError as outcom:
-            print("+ Sorry, file '14Needs3' not exist !", outcom)
+                subprocess.call('./14besoins/doc_suivi3/patient3_read.py')
+        except FileNotFoundError as outcom2:
+            print("+ Sorry, file '14Needs3' not exist !", outcom2)
             self.confRec()
 
     def confRec(self):

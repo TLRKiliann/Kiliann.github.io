@@ -240,8 +240,8 @@ class Application(Frame):
             if os.path.getsize('./vmed/doc_vmed2/resultvmed.txt'):
                 print("+ File 'VMED2' exist (add)!")
                 subprocess.call('./vmed/doc_vmed2/vmed_write.py')
-        except FileNotFoundError as outmsg:
-            print("+ Sorry, file 'VMED2' not exist !", outmsg)
+        except FileNotFoundError as outmsg2:
+            print("+ Sorry, file 'VMED2' not exist !", outmsg2)
             print("+ File VMED2 created !")
             self.confRec()
 
@@ -257,9 +257,9 @@ class Application(Frame):
 
     def linkNeeds(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi2/patient1_14b.txt'):
+            if os.path.getsize('./14besoins/doc_suivi2/patient2_14b.txt'):
                 print("+ File '14Needs2' exist (add)!")
-                subprocess.call('./14besoins/doc_suivi2/patient1_write.py')
+                subprocess.call('./14besoins/doc_suivi2/patient2_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file '14Needs2' not exist !", outmsg)
             print("+ File 14Needs2 created !")
@@ -268,11 +268,11 @@ class Application(Frame):
     # Func to read
     def readFileNeeds(self):
         try:
-            if os.path.getsize('./14besoins/doc_suivi2/patient1_14b.txt'):
+            if os.path.getsize('./14besoins/doc_suivi2/patient2_14b.txt'):
                 print("+ File '14Needs2' exist (read)!")
-                subprocess.call('./14besoins/doc_suivi2/patient1_read.py')
-        except FileNotFoundError as outcom:
-            print("+ Sorry, file '14Needs2' not exist !", outcom)
+                subprocess.call('./14besoins/doc_suivi2/patient2_read.py')
+        except FileNotFoundError as outcom2:
+            print("+ Sorry, file '14Needs2' not exist !", outcom2)
             self.confRec()
 
     def confRec(self):
