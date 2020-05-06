@@ -7,104 +7,109 @@ from tkinter import messagebox
 import os
 
 
-def get(Nompatient, entree, Birthvalue, Birthentree):
+def get(Nompatient, entree):
     MsgBox = messagebox.askyesno('Save data', 'Do you want to delete ?')
     if MsgBox == 1:
         Nompatient = entree.get()
-        Birthvalue = Birthentree.get()
         print(Nompatient)
-        print(entree.get())
-        try:
-            if os.path.getsize('./newpatient/entryfile.txt'):
-                print("+ File 'entryfile.txt' exist !")
-                with open('entryfile.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile()
-        except FileNotFoundError as outcom6:
+        if os.path.getsize('./newpatient/entryfile.txt'):
+            print("+ File 'entryfile.txt' exist !")
+            with open('./newpatient/entryfile.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile.txt' not exist !")
-            print(str(outcom6))
-        try:
-            if os.path.getsize('./newpatient/entryfile2.txt'):
-                print("+ File 'entryfile2.txt' exist !")
-                with open('entryfile2.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile2()
-        except FileNotFoundError as outcom6:
+        
+        if os.path.getsize('./newpatient/entryfile2.txt'):
+            print("+ File 'entryfile2.txt' exist !")
+            with open('./newpatient/entryfile2.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile2()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile2.txt' not exist !")
-            print(str(outcom6))
-        try:
-            if os.path.getsize('./newpatient/entryfile3.txt'):
-                print("+ File 'entryfile3.txt' exist !")
-                with open('entryfile3.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile3()
-        except FileNotFoundError as outcom5:
+
+        if os.path.getsize('./newpatient/entryfile3.txt'):
+            print("+ File 'entryfile3.txt' exist !")
+            with open('./newpatient/entryfile3.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile3()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile3.txt' not exist !")
-            print(str(outcom5))
-        try:
-            if os.path.getsize('./newpatient/entryfile4.txt'):
-                print("+ File 'entryfile4.txt' exist !")
-                with open('entryfile4.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile4()
-        except FileNotFoundError as outcom3:
+
+        if os.path.getsize('./newpatient/entryfile4.txt'):
+            print("+ File 'entryfile4.txt' exist !")
+            with open('./newpatient/entryfile4.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile4()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile4.txt' not exist !")
-            print(str(outcom3))
-        try:
-            if os.path.getsize('./newpatient/entryfile5.txt'):
-                print("+ File 'entryfile5.txt' exist !")
-                with open('entryfile5.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile5()
-        except FileNotFoundError as outcom2:
+
+        if os.path.getsize('./newpatient/entryfile5.txt'):
+            print("+ File 'entryfile5.txt' exist !")
+            with open('./newpatient/entryfile5.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile5()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile5.txt' not exist !")
-            print(str(outcom2))
-        try:
-            if os.path.getsize('./newpatient/entryfile6.txt'):
-                print("+ File 'entryfile6.txt' exist !")
-                with open('entryfile6.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile6()
-        except FileNotFoundError as outcom1:
-            print("+ Sorry, file 'entryfile.txt6' not exist !")
-            print(str(outcom1))                       
-        try:
-            if os.path.getsize('./newpatient/entryfile7.txt'):
-                print("+ File 'entryfile7.txt' exist !")
-                with open('entryfile7.txt', 'r') as file:
-                    data = file.readlines()
-                    for i in range(len(0, lines)):
-                        line = lines[i]
-                        if Nompatient in line:
-                            print(Nompatient)
-                            delFuncFile7()
-        except FileNotFoundError as outcom:
+
+        if os.path.getsize('./newpatient/entryfile6.txt'):
+            print("+ File 'entryfile6.txt' exist !")
+            with open('./newpatient/entryfile6.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile6()
+                else:
+                    pass
+        else:
+            print("+ Sorry, file 'entryfile.txt6' not exist !")               
+
+        if os.path.getsize('./newpatient/entryfile7.txt'):
+            print("+ File 'entryfile7.txt' exist !")
+            with open('./newpatient/entryfile7.txt', 'r') as file:
+                lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient in line:
+                    print(line)
+                    delFuncFile7()
+                else:
+                    pass
+        else:
             print("+ Sorry, file 'entryfile7.txt' not exist !")
-            print(str(outcom))
+
         gui.destroy()
     else:           
         NoforQ = messagebox.showinfo('Return', 'Data not saved')
