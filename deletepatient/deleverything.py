@@ -115,7 +115,7 @@ def get(Nompatient, entree):
         NoforQ = messagebox.showinfo('Return', 'Data not saved')
 
 def delFuncFile():
-    os.remove('./admin/fileAdmin1.txt')
+    os.remove('./admin/readadmin/fileAdmin1.txt')
     os.remove('./14besoins/doc_suivi/main_14b.txt')
     os.remove('./14besoins/doc_suivi/patient1_14b.txt')
     os.remove('./ttt/doc_ttt/convdose.json')
@@ -134,7 +134,7 @@ def delFuncFile():
     os.remove('./vmed/doc_vmed/resultvmed.txt')
     os.remove('./diag/doc_diag/diagrecap.txt')
     os.remove('./labo/doc_labo/result.txt')
-    os.remove('./auxsrc/doc_auxsrc/auxsrcfile.txt')
+    os.remove('./auxsrc/doc_auxsrc/auxsrcfile1.txt')
     os.remove('./histv/doc_histv/Hvie_patient1.txt')
     os.remove('./allergy/allergyfile.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
@@ -146,7 +146,7 @@ def delFuncFile():
     print("+ entryfile.txt found and delete with all files !")
 
 def delFuncFile2():
-    os.remove('./admin/fileAdmin2.txt')
+    os.remove('./admin/readadmin/fileAdmin2.txt')
     os.remove('./14besoins/doc_suivi2/main_14b.txt')
     os.remove('./14besoins/doc_suivi2/patient2_14b.txt')
     os.remove('./ttt/doc_ttt2/convdose.json')
@@ -165,8 +165,8 @@ def delFuncFile2():
     os.remove('./vmed/doc_vmed2/resultvmed.txt')
     os.remove('./diag/doc_diag2/diagrecap.txt')
     os.remove('./labo/doc_labo2/result.txt')
-    os.remove('./auxsrc/doc_auxsrc2/auxsrcfile.txt')
-    os.remove('./histv/doc_histv2/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc2/auxsrcfile2.txt')
+    os.remove('./histv/doc_histv2/Hvie_patient2.txt')
     os.remove('./allergy/allergyfile2.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt')
@@ -177,7 +177,7 @@ def delFuncFile2():
     print("+ entryfile2.txt found and has deleted all files !")
 
 def delFuncFile3():
-    os.remove('./admin/fileAdmin3.txt')
+    os.remove('./admin/readadmin/fileAdmin3.txt')
     os.remove('./14besoins/doc_suivi3/main_14b.txt')
     os.remove('./14besoins/doc_suivi3/patient3_14b.txt')
     os.remove('./ttt/doc_ttt3/convdose.json')
@@ -196,8 +196,8 @@ def delFuncFile3():
     os.remove('./vmed/doc_vmed3/resultvmed.txt')
     os.remove('./diag/doc_diag3/diagrecap.txt')
     os.remove('./labo/doc_labo3/result.txt')
-    os.remove('./auxsrc/doc_auxsrc3/auxsrcfile.txt')
-    os.remove('./histv/doc_histv3/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc3/auxsrcfile3.txt')
+    os.remove('./histv/doc_histv3/Hvie_patient3.txt')
     os.remove('./allergy/allergyfile3.txt')
     os.remove('./patient_agenda/events/doc_events3/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events3/fix_agenda/modifrdv.txt')
@@ -208,7 +208,7 @@ def delFuncFile3():
     print("+ entryfile3.txt found and has deleted all files !")
 
 def delFuncFile4():
-    os.remove('./admin/fileAdmin4.txt')
+    os.remove('./admin/readadmin/fileAdmin4.txt')
     os.remove('./14besoins/doc_suivi4/main_14b.txt')
     os.remove('./14besoins/doc_suivi4/patient4_14b.txt')
     os.remove('./ttt/doc_ttt4/convdose.json')
@@ -227,8 +227,8 @@ def delFuncFile4():
     os.remove('./vmed/doc_vmed4/resultvmed.txt')
     os.remove('./diag/doc_diag4/diagrecap.txt')
     os.remove('./labo/doc_labo4/result.txt')
-    os.remove('./auxsrc/doc_auxsrc4/auxsrcfile.txt')
-    os.remove('./histv/doc_histv4/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc4/auxsrcfile4.txt')
+    os.remove('./histv/doc_histv4/Hvie_patient4.txt')
     os.remove('./allergy/allergyfile4.txt')
     os.remove('./patient_agenda/events/doc_events4/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events4/fix_agenda/modifrdv.txt')
@@ -239,7 +239,7 @@ def delFuncFile4():
     print("+ entryfile4.txt found and has deleted all files !")
 
 def delFuncFile5():
-    os.remove('./admin/fileAdmin5.txt')
+    os.remove('./admin/readadmin/fileAdmin5.txt')
     os.remove('./14besoins/doc_suivi5/main_14b.txt')
     os.remove('./14besoins/doc_suivi5/patient5_14b.txt')
     os.remove('./ttt/doc_ttt5/convdose.json')
@@ -258,8 +258,8 @@ def delFuncFile5():
     os.remove('./vmed/doc_vmed5/resultvmed.txt')
     os.remove('./diag/doc_diag5/diagrecap.txt')
     os.remove('./labo/doc_labo5/result.txt')
-    os.remove('./auxsrc/doc_auxsrc5/auxsrcfile.txt')
-    os.remove('./histv/doc_histv5/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc5/auxsrcfile5.txt')
+    os.remove('./histv/doc_histv5/Hvie_patient5.txt')
     os.remove('./allergy/allergyfile5.txt')
     os.remove('./patient_agenda/events/doc_events5/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events5/fix_agenda/modifrdv.txt')
@@ -270,7 +270,7 @@ def delFuncFile5():
     print("+ entryfile5.txt found and has deleted all files !")     
 
 def delFuncFile6():
-    os.remove('./admin/fileAdmin6.txt')
+    os.remove('./admin/readadmin/fileAdmin6.txt')
     os.remove('./14besoins/doc_suivi6/main_14b.txt')
     os.remove('./14besoins/doc_suivi6/patient6_14b.txt')
     os.remove('./ttt/doc_ttt6/convdose.json')
@@ -289,8 +289,8 @@ def delFuncFile6():
     os.remove('./vmed/doc_vmed6/resultvmed.txt')
     os.remove('./diag/doc_diag6/diagrecap.txt')
     os.remove('./labo/doc_labo6/result.txt')
-    os.remove('./auxsrc/doc_auxsrc6/auxsrcfile.txt')
-    os.remove('./histv/doc_histv6/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc6/auxsrcfile6.txt')
+    os.remove('./histv/doc_histv6/Hvie_patient6.txt')
     os.remove('./allergy/allergyfile6.txt')
     os.remove('./patient_agenda/events/doc_events6/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events6/fix_agenda/modifrdv.txt')
@@ -301,7 +301,7 @@ def delFuncFile6():
     print("+ entryfile6.txt found and has deleted all files !")  
 
 def delFuncFile7():
-    os.remove('./admin/fileAdmin7.txt')
+    os.remove('./admin/readadmin/fileAdmin7.txt')
     os.remove('./14besoins/doc_suivi7/main_14b.txt')
     os.remove('./14besoins/doc_suivi7/patient7_14b.txt')
     os.remove('./ttt/doc_ttt7/convdose.json')
@@ -320,8 +320,8 @@ def delFuncFile7():
     os.remove('./vmed/doc_vmed7/resultvmed.txt')
     os.remove('./diag/doc_diag7/diagrecap.txt')
     os.remove('./labo/doc_labo7/result.txt')
-    os.remove('./auxsrc/doc_auxsrc7/auxsrcfile.txt')
-    os.remove('./histv/doc_histv7/Hvie_patient1.txt')
+    os.remove('./auxsrc/doc_auxsrc7/auxsrcfile7.txt')
+    os.remove('./histv/doc_histv7/Hvie_patient7.txt')
     os.remove('./allergy/allergyfile7.txt')
     os.remove('./patient_agenda/events/doc_events7/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events7/fix_agenda/modifrdv.txt')

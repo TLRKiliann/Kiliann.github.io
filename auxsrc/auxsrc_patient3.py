@@ -83,26 +83,26 @@ class Application(Frame):
     # Func to add
     def lienDirect(self):
         try:
-            if os.path.getsize('./auxsrc/doc_auxsrc3/auxsrcfile1.txt'):
-                print("+ File 'auxsrcfile.txt' exist (add)!")
+            if os.path.getsize('./auxsrc/doc_auxsrc3/auxsrcfile3.txt'):
+                print("+ File 'auxsrcfile3.txt' exist (add)!")
                 subprocess.call('./auxsrc/doc_auxsrc3/aux_write.py')
         except FileNotFoundError as outmsg:
-            print("+ Sorry, file 'auxsrcfile.txt' not exist !", outmsg)
-            print("+ File auxsrcfile.txt created !")
+            print("+ Sorry, file 'auxsrcfile3.txt' not exist !", outmsg)
+            print("+ File auxsrcfile3.txt created !")
             subprocess.call('./auxsrc/doc_auxsrc3/aux_write.py')
 
     # Func to read
     def lectureFic(self):
         try:
-            if os.path.getsize('./auxsrc/doc_auxsrc3/auxsrcfile1.txt'):
-                print("+ File 'auxsrcfile.txt' exist (read)!")
+            if os.path.getsize('./auxsrc/doc_auxsrc3/auxsrcfile3.txt'):
+                print("+ File 'auxsrcfile3.txt' exist (read)!")
                 subprocess.call('./auxsrc/doc_auxsrc3/aux_read.py')
         except FileNotFoundError as outcom:
-            print("+ Sorry, file 'auxsrcfile.txt' not exist !", outcom)
+            print("+ Sorry, file 'auxsrcfile3.txt' not exist !", outcom)
             self.confRec()
 
     def confRec(self):
-        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile.txt'"
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile3.txt'"
             "was not created. No Medical Visit has been checked !")
 
 if __name__=='__main__':

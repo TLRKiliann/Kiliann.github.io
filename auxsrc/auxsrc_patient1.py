@@ -84,11 +84,11 @@ class Application(Frame):
     def lienDirect(self):
         try:
             if os.path.getsize('./auxsrc/doc_auxsrc/auxsrcfile1.txt'):
-                print("+ File 'auxsrcfile.txt' exist (add)!")
+                print("+ File 'auxsrcfile1.txt' exist (add)!")
                 subprocess.call('./auxsrc/doc_auxsrc/aux_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'auxsrcfile.txt' not exist !", outmsg)
-            print("+ File auxsrcfile.txt created !")
+            print("+ File auxsrcfile1.txt created !")
             subprocess.call('./auxsrc/doc_auxsrc/aux_write.py')
 
     # Func to read
@@ -98,11 +98,11 @@ class Application(Frame):
                 print("+ File 'auxsrcfile.txt' exist (read)!")
                 subprocess.call('./auxsrc/doc_auxsrc/aux_read.py')
         except FileNotFoundError as outcom:
-            print("+ Sorry, file 'auxsrcfile.txt' not exist !", outcom)
+            print("+ Sorry, file 'auxsrcfile1.txt' not exist !", outcom)
             self.confRec()
 
     def confRec(self):
-        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile.txt'"
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile1.txt'"
             "was not created. No Medical Visit has been checked !")
 
 if __name__=='__main__':
