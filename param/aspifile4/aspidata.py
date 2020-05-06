@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 
-import os
+import subprocess
 import json
 import time
 
@@ -53,6 +53,6 @@ with open('./param/aspifile4/data_tension.json', 'a+') as datafile:
 print("\nDownloading 'plot_prog.py'...")
 # Un temps d'attente de 2 sec:
 print("Time wait 2 seconds...")
-time.sleep(2)
+time.sleep(1)
 # Lancement du programme plot_prog.py
-os.system('./param/aspifile4/plot/plot_prog.py')
+subprocess.call('./param/aspifile4/plot/plot_prog.py')

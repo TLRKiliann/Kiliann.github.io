@@ -16,7 +16,7 @@ list1 = json.load(fileO)
 for letter in list1:
     print("list1: " + letter)
 
-print("\nList2 = tension :")
+print("\nList2 = douleurs :")
 print("--------------------")
 
 fileO = open('./param/aspifile4/data_dlr.json')
@@ -31,7 +31,7 @@ dicolist = {}
 for list1, list2 in zip(list1, list2):
     dicolist[list1] = list2
 
-print("\nAffichage du dictionnaire :")
+print("\nDictionnary display :")
 print("---------------------------")
 print(dicolist)
 
@@ -42,7 +42,7 @@ for key, value in dicolist.items():
     list1.append(key)
     list2.append(value)
     
-print("\nListe des dates dans l'ordre des entrées :")
+print("\nList of date by entry's order :")
 print("----------------------------------")
 print(list1)
 # How to sort data of list1 to correspond whith list2 ???
