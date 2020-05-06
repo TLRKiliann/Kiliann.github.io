@@ -64,3 +64,7 @@ Appointment set for : 28/5/2020 :
 09h00 à Chaffouse.
 
 
+Current date : 06/05/2020, 23:19:14 :
+Appointment set for : 29/5/2020 :
+Rdv avec mon époux à 13h00 au Champs de l'Orme.
+
