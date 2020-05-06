@@ -62,7 +62,7 @@ buttonClose=Button(fen, text="Quit", fg='cyan', width=10,
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./histv/doc_histv/Hvie_patient1.txt',
+importationFile('./histv/doc_histv4/Hvie_patient4.txt',
     encodage="Utf-8")
 
 fen.mainloop()

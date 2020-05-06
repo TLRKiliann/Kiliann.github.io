@@ -12,7 +12,7 @@ from tkinter import messagebox
 def saveData():
     inputValue = textBox.get("1.0","end-1c")
     print(inputValue)
-    file = open('./histv/doc_histv7/Hvie_patient1.txt', 'a+')
+    file = open('./histv/doc_histv7/Hvie_patient7.txt', 'a+')
     file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
@@ -29,7 +29,7 @@ def messFromSafeButt():
 
 def lectureFic():
     with open('./histv/doc_histv7/story_read.py', 'r') as f1read:
-        with open('./labo/doc_labo/result.txt', 'r') as f2read:
+        with open('./labo/doc_labo/result7.txt', 'r') as f2read:
             print(f1read.read())
             print(f2read.read())
     subprocess.call('./histv/doc_histv7/story_read.py')
