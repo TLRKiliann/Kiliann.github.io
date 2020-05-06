@@ -195,15 +195,16 @@ class app(Frame):
         self.labelo=Label(master, text="Treatments for : ", width=20,
             font='Times 18 bold', fg='cyan', bg='gray17')
         self.labelo.grid(sticky='w', row=0, column=0, padx=30, pady=5)
-        with open('./newpatient/entryfile.txt', 'r') as file:
+        with open('./newpatient/entryfile2.txt', 'r') as file:
             line1=file.readline()
+
         self.text_name.set(line1)
         self.entryName=Entry(master, textvariable=self.text_name)
         self.entryName.grid(sticky='w', row=0, column=0, padx=250, pady=5)
         self.labelallergy=Label(master, text="Allergy : ",
             font='Arial 18 bold', fg='coral', bg='gray17')
         self.labelallergy.grid(row=0, column=0, padx=10, pady=5)
-        with open('./allergy/allergyfile.txt', 'r') as allerfile:
+        with open('./allergy/allergyfile2.txt', 'r') as allerfile:
             lineA1=allerfile.readline()
             lineA2=allerfile.readline()
             lineA3=allerfile.readline()
@@ -211,6 +212,7 @@ class app(Frame):
             lineA5=allerfile.readline()
             lineA6=allerfile.readline()
             lineA7=allerfile.readline()
+
         self.text_all=StringVar()
         self.text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
         self.Entryall=Entry(master, textvariable=self.text_all, width=60)
