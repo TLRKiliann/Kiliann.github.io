@@ -65,43 +65,43 @@ def buttRecord():
         file.close()
 
     try:
-        if os.path.getsize('./calBmi/doc_BMI/file_bmi1.json'):
+        if os.path.getsize('./calBmi/doc_BMI/file_bmi.json'):
             print("+ File 'BMI' exist !")
-            with open('./calBmi/doc_BMI/file_bmi1.json', 'r') as datafile:
+            with open('./calBmi/doc_BMI/file_bmi.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
             dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : result})
-            with open('./calBmi/doc_BMI/file_bmi1.json', 'w') as datafile2:
+            with open('./calBmi/doc_BMI/file_bmi.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
-        print('+ Sorry, file file_bmi1.json not exist !')
+        print('+ Sorry, file file_bmi.json not exist !')
         print(str(outcom))
-        print("+ File file_bmi1.json created !")
+        print("+ File file_bmi.json created !")
         dataBmi = {}
         dataBmi['data'] = []
         dataBmi['data'].append({'Date' : textDate.get(), 'BMI' : result})
-        with open('./calBmi/doc_BMI/file_bmi1.json', 'w') as datafile:
+        with open('./calBmi/doc_BMI/file_bmi.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
     try:
-        if os.path.getsize('./calBmi/doc_BMI/file_kg1.json'):
+        if os.path.getsize('./calBmi/doc_BMI/file_kg.json'):
             print("+ File 'Kg' exist !")
-            with open('./calBmi/doc_BMI/file_kg1.json', 'r') as datafile:
+            with open('./calBmi/doc_BMI/file_kg.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataBmi = datastore
             dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : number1.get()})
-            with open('./calBmi/doc_BMI/file_kg1.json', 'w') as datafile2:
+            with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile2:
                 json.dump(dataBmi, datafile2, indent=4)
     except FileNotFoundError as outcom:
-        print('+ Sorry, file file_kg1.json not exist !')
+        print('+ Sorry, file file_kg.json not exist !')
         print(str(outcom))
-        print("+ File file_kg1.json created !")
+        print("+ File file_kg.json created !")
         dataBmi = {}
         dataBmi['data'] = []
         dataBmi['data'].append({'Date' : textDate.get(), 'Kg' : number1.get()})
-        with open('./calBmi/doc_BMI/file_kg1.json', 'w') as datafile:
+        with open('./calBmi/doc_BMI/file_kg.json', 'w') as datafile:
             json.dump(dataBmi, datafile, indent=4)
 
     messagebox.showinfo('Record', 'Data saved')
@@ -126,16 +126,49 @@ def updateData():
         if textDate.get() == i:
             print("Backup of file Bmi !")
             shutil.copy('./calBmi/bmi.txt', './Backup/BackupBmi.txt')
-            with open('./calBmi/bmi.txt', 'w'): pass
+            #with open('./calBmi/bmi.txt', 'w'): 
+            #    pass
         else:
             pass
+
+def buttdel():
+    """
+    To earase last line 
+    of tensor.json
+    """
+    try:
+        if os.path.getsize('./calBmi/doc_BMI/file_bmi.json'):
+            with open('./calBmi/doc_BMI/file_bmi.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of bmi deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./calBmi/doc_BMI/file_bmi.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            print("Last value of 'file_bmi.json' has been deleted !")
+    except FileNotFoundError:
+        print('+ Sorry, file asked not exist !')
+
+    try:
+        if os.path.getsize('./calBmi/doc_BMI/file_kg.json'):
+            with open('./calBmi/doc_BMI/file_kg.json', 'r') as file:
+                data = json.load(file)
+            for key, value in data.items():
+                print("Last value of weight deleted")
+                print(value[-1])
+                del value[-1]
+            with open('./calBmi/doc_BMI/file_kg.json', 'w') as file:
+                data = json.dump(data, file, indent=4)
+            print("Last value of 'file_kg.json' has been deleted !")
+    except FileNotFoundError:
+        print('+ Sorry, file asked not exist !')
 
 # To read name of patient for entry widget
 with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
-#gui.geometry('400x350')
 gui.title('Simple BMIcalculator')
 gui.configure(background='gray17')
 
@@ -210,6 +243,11 @@ buttonCal = Button(gui, text="2-Save", width=12, fg='yellow',
     activebackground='turquoise2', command=buttRecord)
 buttonCal.grid(sticky='w', row=11, column=1)
 
+buttonCal = Button(gui, text="Cancel last check", width=12, fg='yellow',
+    bg='coral', activeforeground='white',
+    activebackground='red', command=buttdel)
+buttonCal.grid(row=11, column=1, columnspan=2)
+
 buttonCal2 = Button(gui, text="Read", width=12, fg='light blue',
     bg='turquoise4', activebackground='dark turquoise',
     command=readBmi)
@@ -220,7 +258,7 @@ buttonCal = Button(gui, text="Graph BMI", width=12, fg='blue2',
     activebackground='turquoise', command=viewGraphicBmi)
 buttonCal.grid(sticky='e', row=10, column=2)
 
-buttonCal = Button(gui, text="Graph Kg", width=12, fg='blue2',
+buttonCal = Button(gui, text="Graph Weight", width=12, fg='blue2',
     bg='turquoise3', activeforeground='gray30',
     activebackground='turquoise', command=viewGraphicKilo)
 buttonCal.grid(sticky='e', row=11, column=2)
