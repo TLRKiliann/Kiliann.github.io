@@ -25,6 +25,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile.txt' not exist !")
+            pass
         
         if os.path.getsize('./newpatient/entryfile2.txt'):
             print("+ File 'entryfile2.txt' exist !")
@@ -39,6 +40,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile2.txt' not exist !")
+            pass
 
         if os.path.getsize('./newpatient/entryfile3.txt'):
             print("+ File 'entryfile3.txt' exist !")
@@ -53,6 +55,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile3.txt' not exist !")
+            pass
 
         if os.path.getsize('./newpatient/entryfile4.txt'):
             print("+ File 'entryfile4.txt' exist !")
@@ -67,6 +70,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile4.txt' not exist !")
+            pass
 
         if os.path.getsize('./newpatient/entryfile5.txt'):
             print("+ File 'entryfile5.txt' exist !")
@@ -81,6 +85,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile5.txt' not exist !")
+            pass
 
         if os.path.getsize('./newpatient/entryfile6.txt'):
             print("+ File 'entryfile6.txt' exist !")
@@ -94,7 +99,8 @@ def get(Nompatient, entree):
                 else:
                     pass
         else:
-            print("+ Sorry, file 'entryfile.txt6' not exist !")               
+            print("+ Sorry, file 'entryfile.txt6' not exist !")
+            pass
 
         if os.path.getsize('./newpatient/entryfile7.txt'):
             print("+ File 'entryfile7.txt' exist !")
@@ -109,6 +115,7 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile7.txt' not exist !")
+            pass
 
         gui.destroy()
     else:           
@@ -136,12 +143,12 @@ def delFuncFile():
     os.remove('./labo/doc_labo/result.txt')
     os.remove('./auxsrc/doc_auxsrc/auxsrcfile1.txt')
     os.remove('./histv/doc_histv/Hvie_patient1.txt')
-    os.remove('./allergy/allergyfile.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile.txt')
     os.remove('./newpatient/entryfile.txt')
     print("+ entryfile.txt found and delete with all files !")
 
@@ -167,12 +174,12 @@ def delFuncFile2():
     os.remove('./labo/doc_labo/result2.txt')
     os.remove('./auxsrc/doc_auxsrc2/auxsrcfile2.txt')
     os.remove('./histv/doc_histv2/Hvie_patient2.txt')
-    os.remove('./allergy/allergyfile2.txt')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events2/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile2.txt')
     os.remove('./newpatient/entryfile2.txt')
     print("+ entryfile2.txt found and has deleted all files !")
 
@@ -198,12 +205,12 @@ def delFuncFile3():
     os.remove('./labo/doc_labo/result3.txt')
     os.remove('./auxsrc/doc_auxsrc3/auxsrcfile3.txt')
     os.remove('./histv/doc_histv3/Hvie_patient3.txt')
-    os.remove('./allergy/allergyfile3.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events3/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile3.txt')
     os.remove('./newpatient/entryfile3.txt')
     print("+ entryfile3.txt found and has deleted all files !")
 
@@ -229,12 +236,12 @@ def delFuncFile4():
     os.remove('./labo/doc_labo/result4.txt')
     os.remove('./auxsrc/doc_auxsrc4/auxsrcfile4.txt')
     os.remove('./histv/doc_histv4/Hvie_patient4.txt')
-    os.remove('./allergy/allergyfile4.txt')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events4/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile4.txt')
     os.remove('./newpatient/entryfile4.txt')
     print("+ entryfile4.txt found and has deleted all files !")
 
@@ -260,12 +267,12 @@ def delFuncFile5():
     os.remove('./labo/doc_labo/result5.txt')
     os.remove('./auxsrc/doc_auxsrc5/auxsrcfile5.txt')
     os.remove('./histv/doc_histv5/Hvie_patient5.txt')
-    os.remove('./allergy/allergyfile5.txt')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events5/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile5.txt')
     os.remove('./newpatient/entryfile5.txt')
     print("+ entryfile5.txt found and has deleted all files !")     
 
@@ -291,12 +298,12 @@ def delFuncFile6():
     os.remove('./labo/doc_labo/result6.txt')
     os.remove('./auxsrc/doc_auxsrc6/auxsrcfile6.txt')
     os.remove('./histv/doc_histv6/Hvie_patient6.txt')
-    os.remove('./allergy/allergyfile6.txt')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events6/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile6.txt')
     os.remove('./newpatient/entryfile6.txt')
     print("+ entryfile6.txt found and has deleted all files !")  
 
@@ -322,12 +329,12 @@ def delFuncFile7():
     os.remove('./labo/doc_labo/result7.txt')
     os.remove('./auxsrc/doc_auxsrc7/auxsrcfile7.txt')
     os.remove('./histv/doc_histv7/Hvie_patient7.txt')
-    os.remove('./allergy/allergyfile7.txt')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_value.json')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json')
     os.remove('./patient_agenda/events7/doc_events/patient_calendar.txt')
+    os.remove('./allergy/allergyfile7.txt')
     os.remove('./newpatient/entryfile7.txt')
     print("+ entryfile7.txt found and has deleted all files !")
 
