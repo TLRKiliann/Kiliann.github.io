@@ -12,65 +12,71 @@ def get(Nompatient, entree):
     if MsgBox == 1:
         Nompatient = entree.get()
         print(Nompatient)
-        with open('./newpatient/entryfile.txt', 'r') as file:
-            lines = file.readlines()
-            for i in range(0, len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    delFuncFile1()
-                else:
-                    pass
-                    with open('./newpatient/entryfile2.txt', 'r') as file2:
-                        lines = file2.readlines()
-                        for i in range(0, len(lines)):
-                            line = lines[i]
-                            if Nompatient in line:
-                                delFuncFile2()
-                            else:
-                                pass
-                                with open('./newpatient/entryfile3.txt', 'r') as file3:
-                                    lines = file3.readlines()
-                                    for i in range(0, len(lines)):
-                                        line = lines[i]
-                                        if Nompatient in line:
-                                            delFuncFile3()
-                                        else:
-                                            pass
-                                            with open('./newpatient/entryfile4.txt', 'r') as file:
-                                                lines = file.readlines()
+        if os.path.getsize('./newpatient/entryfile.txt'):
+            with open('./newpatient/entryfile.txt', 'r') as file:
+                lines = file.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        delFuncFile1()
+                    else:
+                        pass
+                        if os.path.getsize('./newpatient/entryfile2.txt'):
+                            with open('./newpatient/entryfile2.txt', 'r') as file2:
+                                lines = file2.readlines()
+                                for i in range(0, len(lines)):
+                                    line = lines[i]
+                                    if Nompatient in line:
+                                        delFuncFile2()
+                                    else:
+                                        pass
+                                        if os.path.getsize('./newpatient/entryfile3.txt'):
+                                            with open('./newpatient/entryfile3.txt', 'r') as file3:
+                                                lines = file3.readlines()
                                                 for i in range(0, len(lines)):
                                                     line = lines[i]
                                                     if Nompatient in line:
-                                                        delFuncFile4()
+                                                        delFuncFile3()
                                                     else:
                                                         pass
-                                                        with open('./newpatient/entryfile5.txt', 'r') as file:
-                                                            lines = file.readlines()
-                                                            for i in range(0, len(lines)):
-                                                                line = lines[i]
-                                                                if Nompatient in line:
-                                                                    delFuncFile5()
-                                                                else:
-                                                                    pass
-                                                                    with open('./newpatient/entryfile6.txt', 'r') as file:
-                                                                        lines = file.readlines()
-                                                                        for i in range(0, len(lines)):
-                                                                            line = lines[i]
-                                                                            if Nompatient in line:
-                                                                                delFuncFile6()
-                                                                            else:
-                                                                                pass
-                                                                                with open('./newpatient/entryfile7.txt', 'r') as file:
-                                                                                    lines = file.readlines()
-                                                                                    for i in range(0, len(lines)):
-                                                                                        line = lines[i]
-                                                                                        if Nompatient in line:
-                                                                                            delFuncFile7()
-                                                                                        else:
-                                                                                            print("End of test delete files.")
-                                                                                            break
+                                                        if os.path.getsize('./newpatient/entryfile4.txt'):
+                                                            with open('./newpatient/entryfile4.txt', 'r') as file4:
+                                                                lines = file4.readlines()
+                                                                for i in range(0, len(lines)):
+                                                                    line = lines[i]
+                                                                    if Nompatient in line:
+                                                                        delFuncFile4()
+                                                                    else:
+                                                                        pass
+                                                                        if os.path.getsize('./newpatient/entryfile5.txt'):
+                                                                            with open('./newpatient/entryfile5.txt', 'r') as file5:
+                                                                                lines = file5.readlines()
+                                                                                for i in range(0, len(lines)):
+                                                                                    line = lines[i]
+                                                                                    if Nompatient in line:
+                                                                                        delFuncFile5()
+                                                                                    else:
+                                                                                        pass
+                                                                                        if os.path.getsize('./newpatient/entryfile6.txt'):
+                                                                                            with open('./newpatient/entryfile6.txt', 'r') as file6:
+                                                                                                lines = file6.readlines()
+                                                                                                for i in range(0, len(lines)):
+                                                                                                    line = lines[i]
+                                                                                                    if Nompatient in line:
+                                                                                                        delFuncFile6()
+                                                                                                    else:
+                                                                                                        pass
+                                                                                                        if os.path.getsize('./newpatient/entryfile7.txt'):
+                                                                                                            with open('./newpatient/entryfile7.txt', 'r') as file7:
+                                                                                                                lines = file7.readlines()
+                                                                                                                for i in range(0, len(lines)):
+                                                                                                                    line = lines[i]
+                                                                                                                    if Nompatient in line:
+                                                                                                                        delFuncFile7()          
+                                                                                                                    else:
+                                                                                                                        print("End of test delete files.")
 
-        gui.destroy()
+                                                                                                                    gui.destroy()
     else:           
         NoforQ = messagebox.showinfo('Return', 'None file was found !')
 

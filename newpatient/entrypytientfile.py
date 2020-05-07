@@ -124,7 +124,6 @@ def searchLine1():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine2():
     mot = "--"
     with open('./newpatient/entryfile2.txt', 'r') as filer:
@@ -136,7 +135,6 @@ def searchLine2():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine3():
     mot = "---"
     with open('./newpatient/entryfile3.txt', 'r') as filer:
@@ -148,7 +146,6 @@ def searchLine3():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine4():
     mot = "----"
     with open('./newpatient/entryfile4.txt', 'r') as filer:
@@ -160,7 +157,6 @@ def searchLine4():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine5():
     mot = "-----"
     with open('./newpatient/entryfile5.txt', 'r') as filer:
@@ -172,7 +168,6 @@ def searchLine5():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine6():
     mot = "------"
     with open('./newpatient/entryfile6.txt', 'r') as filer:
@@ -184,7 +179,6 @@ def searchLine6():
                     filew.write(entree.get() + '\n')
                     filew.write(Birthentree.get() + '\n')
                     filew.write(str('---\n'))
-
 def searchLine7():
     mot = "-------"
     with open('./newpatient/entryfile7.txt', 'r') as filer:
@@ -227,5 +221,3 @@ buttQuit=Button(gui, text="Quit", width=8, fg='cyan', bg='navy',
 buttQuit.pack(side=LEFT, padx=15, pady=10)
 
 gui.mainloop()
-
-
