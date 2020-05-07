@@ -29,6 +29,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile.txt'):
                 print("+ File 'entryfile.txt' exist !")
+                with open('./newpatient/entryfile.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom6:
             print("+ Sorry, file 'entryfile.txt' not exist !")
             print(str(outcom6))
@@ -40,6 +50,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile2.txt'):
                 print("+ File 'entryfile2.txt' exist !")
+                with open('./newpatient/entryfile2.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile2.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom5:
             print("+ Sorry, file 'entryfile2.txt' not exist !")
             print(str(outcom5))
@@ -51,6 +71,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile3.txt'):
                 print("+ File 'entryfile3.txt' exist !")
+                with open('./newpatient/entryfile3.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile3.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom4:
             print("+ Sorry, file 'entryfile3.txt' not exist !")
             print(str(outcom4))
@@ -72,7 +102,6 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
                                 filew.write(str('---\n'))
-
         except FileNotFoundError as outcom3:
             print("+ Sorry, file 'entryfile4.txt' not exist !")
             print(str(outcom3))
@@ -84,7 +113,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile5.txt'):
                 print("+ File 'entryfile5.txt' exist !")
-
+                with open('./newpatient/entryfile5.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile5.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom2:
             print("+ Sorry, file 'entryfile5.txt' not exist !")
             print(str(outcom2))
@@ -96,6 +134,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile6.txt'):
                 print("+ File 'entryfile6.txt' exist !")
+                with open('./newpatient/entryfile6.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile6.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom1:
             print("+ Sorry, file 'entryfile.txt6' not exist !")
             print(str(outcom1))
@@ -107,6 +155,16 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile7.txt'):
                 print("+ File 'entryfile7.txt' exist !")
+                with open('./newpatient/entryfile7.txt', 'r') as filer:
+                    lines = filer.readlines()
+                    for i in range(len(lines)):
+                        line = lines[i]
+                        if Magicword in line:
+                            print(Magicword)
+                            with open('./newpatient/entryfile7.txt', 'w') as filew:
+                                filew.write(entree.get() + '\n')
+                                filew.write(Birthentree.get() + '\n')
+                                filew.write(str('---\n'))
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'entryfile7.txt' not exist !")
             print(str(outcom))
