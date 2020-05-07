@@ -399,12 +399,14 @@ def delFuncFile4():
         pass
     try:
         if os.path.getsize('./newpatient/entryfile4.txt'):
-            os.remove('./newpatient/entryfile4.txt')
+            with open('./newpatient/entryfile4.txt', 'w') as file:
+                file.write("----------------")
             print("+ File entryfile4.txt deleted")
     except:
         print("+ File entryfile4.txt does not exist")
         pass
     print("!!! All files have been deleted !!!")
+
 
 """
     try:
@@ -523,7 +525,7 @@ Nompatient.set('Firstname + Lastname')
 entree = Entry(gui, textvariable=Nompatient, highlightbackground='gray', bd=4)
 entree.pack()
 
-bouton1 = Button(gui, text="Enter", width=8, fg='yellow', bg='navy',
+bouton1 = Button(gui, text="Delete", width=8, fg='yellow', bg='navy',
     command = lambda: get(Nompatient, entree))
 bouton1.pack(side=LEFT, padx=30, pady=10)
 
