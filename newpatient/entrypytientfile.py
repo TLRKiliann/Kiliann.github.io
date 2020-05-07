@@ -19,7 +19,13 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
-        Magicword = "----------------"
+        Magicword1 = "----------------"
+        Magicword2 = "---------------"
+        Magicword3 = "--------------"
+        Magicword4 = "-------------"
+        Magicword5 = "------------"
+        Magicword6 = "-----------"
+        Magicword7 = "----------"
         Nompatient = entree.get()
         Birthvalue = Birthentree.get()
         print(Nompatient)
@@ -33,8 +39,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword1 in line:
+                            print(Magicword1)
                             with open('./newpatient/entryfile.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -54,8 +60,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword2 in line:
+                            print(Magicword2)
                             with open('./newpatient/entryfile2.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -75,8 +81,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword3 in line:
+                            print(Magicword3)
                             with open('./newpatient/entryfile3.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -96,8 +102,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword4 in line:
+                            print(Magicword4)
                             with open('./newpatient/entryfile4.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -117,8 +123,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword5 in line:
+                            print(Magicword5)
                             with open('./newpatient/entryfile5.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -138,8 +144,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword6 in line:
+                            print(Magicword6)
                             with open('./newpatient/entryfile6.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')
@@ -159,8 +165,8 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     lines = filer.readlines()
                     for i in range(len(lines)):
                         line = lines[i]
-                        if Magicword in line:
-                            print(Magicword)
+                        if Magicword7 in line:
+                            print(Magicword7)
                             with open('./newpatient/entryfile7.txt', 'w') as filew:
                                 filew.write(entree.get() + '\n')
                                 filew.write(Birthentree.get() + '\n')

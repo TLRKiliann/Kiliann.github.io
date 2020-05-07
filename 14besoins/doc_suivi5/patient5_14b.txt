@@ -1,6 +1,0 @@
-
-Date : 03/05/2020
-Nom du patient : Lemoi Jenny
-+ Surveillance respiratoire requise
-+ Surveillance alimentaire et/ou hydratation requise
-+ Surveillance du sommeil requise

@@ -1,7 +1,0 @@
-
----
-
-Date : 04/05/2020
-Nom du patient : Marshall Leon
-# Na value and treatment : (add what the patient needs)
-# Phosphates value and treatment : (add what the patient needs)

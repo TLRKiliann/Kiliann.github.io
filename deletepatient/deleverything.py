@@ -507,7 +507,7 @@ def delFuncFile2():
     try:
         if os.path.getsize('./newpatient/entryfile.txt'):
             with open('./newpatient/entryfile.txt', 'w') as file:
-                file.write("----------------")
+                file.write("---------------")
             print("+ File entryfile.txt deleted")
     except:
         print("+ File entryfile.txt does not exist")
@@ -707,7 +707,7 @@ def delFuncFile3():
     try:
         if os.path.getsize('./newpatient/entryfile3.txt'):
             with open('./newpatient/entryfile3.txt', 'w') as file:
-                file.write("----------------")
+                file.write("--------------")
             print("+ File entryfile3.txt deleted")
     except:
         print("+ File entryfile3.txt does not exist")
@@ -907,7 +907,7 @@ def delFuncFile4():
     try:
         if os.path.getsize('./newpatient/entryfile4.txt'):
             with open('./newpatient/entryfile4.txt', 'w') as file:
-                file.write("----------------")
+                file.write("-------------")
             print("+ File entryfile4.txt deleted")
     except:
         print("+ File entryfile4.txt does not exist")
@@ -1107,7 +1107,7 @@ def delFuncFile5():
     try:
         if os.path.getsize('./newpatient/entryfile5.txt'):
             with open('./newpatient/entryfile5.txt', 'w') as file:
-                file.write("----------------")
+                file.write("------------")
             print("+ File entryfile5.txt deleted")
     except:
         print("+ File entryfile5.txt does not exist")
@@ -1307,7 +1307,7 @@ def delFuncFile6():
     try:
         if os.path.getsize('./newpatient/entryfile6.txt'):
             with open('./newpatient/entryfile6.txt', 'w') as file:
-                file.write("----------------")
+                file.write("-----------")
             print("+ File entryfile6.txt deleted")
     except:
         print("+ File entryfile6.txt does not exist")
@@ -1507,7 +1507,7 @@ def delFuncFile7():
     try:
         if os.path.getsize('./newpatient/entryfile7.txt'):
             with open('./newpatient/entryfile7.txt', 'w') as file:
-                file.write("----------------")
+                file.write("----------")
             print("+ File entryfile7.txt deleted")
     except:
         print("+ File entryfile7.txt does not exist")
