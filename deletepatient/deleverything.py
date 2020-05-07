@@ -25,7 +25,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile.txt' not exist !")
-            pass
         
         if os.path.getsize('./newpatient/entryfile2.txt'):
             print("+ File 'entryfile2.txt' exist !")
@@ -40,7 +39,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile2.txt' not exist !")
-            pass
 
         if os.path.getsize('./newpatient/entryfile3.txt'):
             print("+ File 'entryfile3.txt' exist !")
@@ -55,7 +53,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile3.txt' not exist !")
-            pass
 
         if os.path.getsize('./newpatient/entryfile4.txt'):
             print("+ File 'entryfile4.txt' exist !")
@@ -70,7 +67,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile4.txt' not exist !")
-            pass
 
         if os.path.getsize('./newpatient/entryfile5.txt'):
             print("+ File 'entryfile5.txt' exist !")
@@ -85,7 +81,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile5.txt' not exist !")
-            pass
 
         if os.path.getsize('./newpatient/entryfile6.txt'):
             print("+ File 'entryfile6.txt' exist !")
@@ -100,7 +95,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile.txt6' not exist !")
-            pass
 
         if os.path.getsize('./newpatient/entryfile7.txt'):
             print("+ File 'entryfile7.txt' exist !")
@@ -115,7 +109,6 @@ def get(Nompatient, entree):
                     pass
         else:
             print("+ Sorry, file 'entryfile7.txt' not exist !")
-            pass
 
         gui.destroy()
     else:           
@@ -215,36 +208,213 @@ def delFuncFile3():
     print("+ entryfile3.txt found and has deleted all files !")
 
 def delFuncFile4():
-    os.remove('./admin/readadmin/fileAdmin4.txt')
-    os.remove('./14besoins/doc_suivi4/main_14b.txt')
-    os.remove('./14besoins/doc_suivi4/patient4_14b.txt')
-    os.remove('./ttt/doc_ttt4/convdose.json')
-    os.remove('./ttt/doc_ttt4/intro_ttt.txt')
-    os.remove('./param/aspifile4/dlr.json')
-    os.remove('./param/aspifile4/freq.json')
-    os.remove('./param/aspifile4/gly.json')
-    os.remove('./param/aspifile4/puls.json')
-    os.remove('./param/aspifile4/sat.json')
-    os.remove('./param/aspifile4/temp.json')
-    os.remove('./param/aspifile4/tensor.json')
-    os.remove('./param/Main4.txt')
-    os.remove('./calBmi/doc_BMI4/file_bmi.json')
-    os.remove('./calBmi/doc_BMI4/file_kg.json')
-    os.remove('./calBmi/bmi4.txt')
-    os.remove('./vmed/doc_vmed4/resultvmed.txt')
-    os.remove('./diag/doc_diag4/diagrecap.txt')
-    os.remove('./labo/doc_labo/result4.txt')
-    os.remove('./auxsrc/doc_auxsrc4/auxsrcfile4.txt')
-    os.remove('./histv/doc_histv4/Hvie_patient4.txt')
-    os.remove('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt')
-    os.remove('./patient_agenda/events4/doc_events/fix_agenda/modifrdv.txt')
-    os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json')
-    os.remove('./patient_agenda/events4/doc_events/patient_calendar.txt')
-    os.remove('./allergy/allergyfile4.txt')
-    os.remove('./newpatient/entryfile4.txt')
-    print("+ entryfile4.txt found and has deleted all files !")
+    try:
+        if os.path.getsize('./admin/readadmin/fileAdmin4.txt'):
+            os.remove('./admin/readadmin/fileAdmin4.txt')
+            print("+ File fileAdmin4.txt deleted")
+    except:
+        print("+ File fileAdmin4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./14besoins/doc_suivi4/main_14b.txt'):
+            os.remove('./14besoins/doc_suivi4/main_14b.txt')
+            print("+ File main_14b.txt deleted")
+    except:
+        print("+ File main_14b.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./14besoins/doc_suivi4/patient4_14b.txt'):
+            os.remove('./14besoins/doc_suivi4/patient4_14b.txt')
+            print("+ File patient4_14b.txt deleted")
+    except:
+        print("+ File patient4_14b.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./ttt/doc_ttt4/convdose.json'):
+            os.remove('./ttt/doc_ttt4/convdose.json')
+            print("+ File convdose.json deleted")
+    except:
+        print("+ File convdose.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./ttt/doc_ttt4/intro_ttt.txt'):
+            os.remove('./ttt/doc_ttt4/intro_ttt.txt')
+            print("+ File intro_ttt.txt deleted")
+    except:
+        print("+ File intro_ttt.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/dlr.json'):
+            os.remove('./param/aspifile4/dlr.json')
+            print("+ File dlr.json deleted")
+    except:
+        print("+ File dlr.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/freq.json'):
+            os.remove('./param/aspifile4/freq.json')
+            print("+ File freq.json deleted")
+    except:
+        print("+ File freq.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/gly.json'):
+            os.remove('./param/aspifile4/gly.json')
+            print("+ File gly.json deleted")
+    except:
+        print("+ File gly.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/puls.json'):
+            os.remove('./param/aspifile4/puls.json')
+            print("+ File puls.json deleted")
+    except:
+        print("+ File puls.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/sat.json'):
+            os.remove('./param/aspifile4/sat.json')
+            print("+ File sat.json deleted")
+    except:
+        print("+ File sat.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/temp.json'):
+            os.remove('./param/aspifile4/temp.json')
+            print("+ File temp.json deleted")
+    except:
+        print("+ File temp.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/aspifile4/tensor.json'):
+            os.remove('./param/aspifile4/tensor.json')
+            print("+ File tensor.json deleted")
+    except:
+        print("+ File tensor.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./param/Main4.txt'):
+            os.remove('./param/Main4.txt')
+            print("+ File Main4.txt deleted")
+    except:
+        print("+ File Main4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./calBmi/doc_BMI4/file_bmi.json'):
+            os.remove('./calBmi/doc_BMI4/file_bmi.json')
+            print("+ File bmi.json deleted")
+    except:
+        print("+ File bmi.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./calBmi/doc_BMI4/file_kg.json'):
+            os.remove('./calBmi/doc_BMI4/file_kg.json')
+            print("+ File file_kg.json deleted")
+    except:
+        print("+ File file_kg.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./calBmi/bmi4.txt'):
+            os.remove('./calBmi/bmi4.txt')
+            print("+ File bmi4.txt deleted")
+    except:
+        print("+ File bmi4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./vmed/doc_vmed4/resultvmed.txt'):
+            os.remove('./vmed/doc_vmed4/resultvmed.txt')
+            print("+ File resultvmed.txt deleted")
+    except:
+        print("+ File resultvmed.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./diag/doc_diag4/diagrecap.txt'):
+            os.remove('./diag/doc_diag4/diagrecap.txt')
+            print("+ File diagrecap.txt deleted")
+    except:
+        print("+ File diagrecap.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./labo/doc_labo/result4.txt'):
+            os.remove('./labo/doc_labo/result4.txt')
+            print("+ File result4.txt deleted")
+    except:
+        print("+ File result4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./auxsrc/doc_auxsrc4/auxsrcfile4.txt'):
+            os.remove('./auxsrc/doc_auxsrc4/auxsrcfile4.txt')
+            print("+ File auxsrcfile4.txt deleted")
+    except:
+        print("+ File auxsrcfile4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./histv/doc_histv4/Hvie_patient4.txt'):
+            os.remove('./histv/doc_histv4/Hvie_patient4.txt')
+            print("+ File Hvie_patient4.txt deleted")
+    except:
+        print("+ File Hvie_patient4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt'):
+            os.remove('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt')
+            print("+ File fixed_rdv.txt deleted")
+    except:
+        print("+ File fixed_rdv.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./patient_agenda/events4/doc_events/fix_agenda/modifrdv.txt'):
+            os.remove('./patient_agenda/events4/doc_events/fix_agenda/modifrdv.txt')
+            print("+ File modifrdv.txt deleted")
+    except:
+        print("+ File modifrdv.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json'):
+            os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json')
+            print("+ File patient_value.json deleted")
+    except:
+        print("+ File patient_value.json does not exist")
+        pass
+    try:
+        if os.path.getsize('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json'):
+            os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json')
+            print("+ File patient_rdv.json deleted")
+    except:
+        print("+ File patient_rdv does not exist")
+        pass
+    try:
+        if os.path.getsize('./patient_agenda/events4/doc_events/patient_calendar.txt'):
+            os.remove('./patient_agenda/events4/doc_events/patient_calendar.txt')
+            print("+ File patient_calendar.txt deleted")
+    except:
+        print("+ File patient_calendar.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./allergy/allergyfile4.txt'):
+            os.remove('./allergy/allergyfile4.txt')
+            print("+ File allergyfile4.txt deleted")
+    except:
+        print("+ File allergyfile4.txt does not exist")
+        pass
+    try:
+        if os.path.getsize('./newpatient/entryfile4.txt'):
+            os.remove('./newpatient/entryfile4.txt')
+            print("+ File entryfile4.txt deleted")
+    except:
+        print("+ File entryfile4.txt does not exist")
+        pass
+    print("!!! All files have been deleted !!!")
 
+"""
+    try:
+        if os.path.getsize :
+            
+            print("+ File ... deleted")
+    except:
+        print("+ File ... does not exist")
+        pass
+"""
 def delFuncFile5():
     os.remove('./admin/readadmin/fileAdmin5.txt')
     os.remove('./14besoins/doc_suivi5/main_14b.txt')

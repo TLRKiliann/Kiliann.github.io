@@ -1599,6 +1599,7 @@ class Application(Frame):
     def upDateAll(self):
         self.master.destroy()
         subprocess.call('./angel.py')
+        self.showsynopsis()
         #self.frame.destroy()
 
         #self.can.delete(ALL)
