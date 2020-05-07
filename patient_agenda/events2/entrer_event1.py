@@ -29,13 +29,13 @@ for value in data.items():
     data_list1.append(value)
 
 try:
-    if os.path.getsize('./patient_agenda/events2/doc_events/patient1_rdv.json'):
-        print("+ File 'patient1_rdv.json' exist !")   
-        with open('./patient_agenda/events2/doc_events/patient1_rdv.json', 'w') as datafile:
+    if os.path.getsize('./patient_agenda/events2/doc_events/patient_rdv.json'):
+        print("+ File 'patient_rdv.json' exist !")   
+        with open('./patient_agenda/events2/doc_events/patient_rdv.json', 'w') as datafile:
             json.dump(data_list1, datafile, indent=4)
 except FileNotFoundError as msg:
     print("File doesn't exist, but it has been created !")
-    with open('./patient_agenda/events2/doc_events/patient1_rdv.json', 'w') as datafile:
+    with open('./patient_agenda/events2/doc_events/patient_rdv.json', 'w') as datafile:
         json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():

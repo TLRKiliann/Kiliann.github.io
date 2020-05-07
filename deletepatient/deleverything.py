@@ -112,7 +112,7 @@ def get(Nompatient, entree):
 
         gui.destroy()
     else:           
-        NoforQ = messagebox.showinfo('Return', 'Data not saved')
+        NoforQ = messagebox.showinfo('Return', 'None file was found !')
 
 def delFuncFile():
     os.remove('./admin/readadmin/fileAdmin1.txt')
@@ -140,8 +140,8 @@ def delFuncFile():
     os.remove('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events/doc_events/fix_agenda/patient1_rdv.json')
-    os.remove('./patient_agenda/events/doc_events/patient_1_calendar.txt')
+    os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile.txt')
     print("+ entryfile.txt found and delete with all files !")
 
@@ -171,8 +171,8 @@ def delFuncFile2():
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient1_rdv.json')
-    os.remove('./patient_agenda/events2/doc_events/patient_1_calendar.txt')
+    os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events2/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile2.txt')
     print("+ entryfile2.txt found and has deleted all files !")
 
@@ -202,8 +202,8 @@ def delFuncFile3():
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient3_rdv.json')
-    os.remove('./patient_agenda/events3/doc_events/patient_3_calendar.txt')
+    os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events3/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile3.txt')
     print("+ entryfile3.txt found and has deleted all files !")
 
@@ -233,8 +233,8 @@ def delFuncFile4():
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient4_rdv.json')
-    os.remove('./patient_agenda/events4/doc_events/patient_4_calendar.txt')
+    os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events4/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile4.txt')
     print("+ entryfile4.txt found and has deleted all files !")
 
@@ -264,8 +264,8 @@ def delFuncFile5():
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient5_rdv.json')
-    os.remove('./patient_agenda/events5/doc_events/patient_5_calendar.txt')
+    os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events5/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile5.txt')
     print("+ entryfile5.txt found and has deleted all files !")     
 
@@ -295,8 +295,8 @@ def delFuncFile6():
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient6_rdv.json')
-    os.remove('./patient_agenda/events6/doc_events/patient_6_calendar.txt')
+    os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events6/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile6.txt')
     print("+ entryfile6.txt found and has deleted all files !")  
 
@@ -326,8 +326,8 @@ def delFuncFile7():
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/modifrdv.txt')
     os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_value.json')
-    os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient7_rdv.json')
-    os.remove('./patient_agenda/events7/doc_events/patient_7_calendar.txt')
+    os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json')
+    os.remove('./patient_agenda/events7/doc_events/patient_calendar.txt')
     os.remove('./newpatient/entryfile7.txt')
     print("+ entryfile7.txt found and has deleted all files !")
 
