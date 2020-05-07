@@ -113,6 +113,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
     else:           
         NoforQ = messagebox.showinfo('Return', 'Data not saved')
 """
+# a+ et w à tester !
 def searchLine1():
     mot = "-"
     with open('./newpatient/entryfile.txt', 'r') as filer:
