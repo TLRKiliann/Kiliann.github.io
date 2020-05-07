@@ -5,9 +5,8 @@
 from tkinter import *
 from tkinter import messagebox
 #from tkinter import filedialog
-#import os
+import os
 import subprocess
-import time
 
 
 # La ScrollBar in class and preparing for main application !
@@ -697,12 +696,32 @@ class Application(Frame):
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
             font=('Times New Roman', 40), fill='aquamarine')
         
+        # To introduce a new pytient
+        self.x100, self.y100 = 130, 50
+        self.b100=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
+            activebackground='white', activeforeground='turquoise4',
+            text="New Entry", command=self.callPatient1)
+        self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
+        
+        # To refresh canvas + menu bar
+        self.x101, self.y101 = 270, 50
+        self.b101=Button(self.can, width=10, font=16, bg='coral', fg='white',
+            activebackground='white', activeforeground='coral',
+            text="Refresh", command=self.upDateAll)
+        self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
+
+        # To delete one patient and files and allergy
+        self.x200, self.y200 = 130, 100
+        self.b200=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
+            activebackground='red', activeforeground='white',
+            text="Delete patient", command=self.delEverPat)
+        self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
+
         #Patient1
         with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=(namefile.readline())
-            
+            line1=namefile.readline()
+        
         self.new_data1=line1
-
         self.x2, self.y2 = 129, 200
         self.Data_write=Entry(self.can)
         self.new_data1=StringVar()
@@ -1095,27 +1114,6 @@ class Application(Frame):
             activebackground='dark turquoise', activeforeground='black',
             text="Ext. stacke.", command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
-
-        # To introduce a new pytient
-        self.x100, self.y100 = 130, 650
-        self.b100=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
-            activebackground='white', activeforeground='turquoise4',
-            text="New Entry", command=self.callPatient1)
-        self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
-        
-        # To refresh canvas + menu bar
-        self.x101, self.y101 = 270, 650
-        self.b101=Button(self.can, width=10, font=16, bg='coral', fg='white',
-            activebackground='white', activeforeground='coral',
-            text="Refresh", command=self.upDateAll)
-        self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
-
-        # To delete one patient and files and allergy
-        self.x200, self.y200 = 130, 700
-        self.b200=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
-            activebackground='red', activeforeground='white',
-            text="Delete patient", command=self.delEverPat)
-        self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 

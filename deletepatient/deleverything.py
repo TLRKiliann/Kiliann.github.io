@@ -16,13 +16,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile.txt' exist !")
             with open('./newpatient/entryfile.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile.txt' not exist !")
         
@@ -30,13 +30,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile2.txt' exist !")
             with open('./newpatient/entryfile2.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile2()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile2()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile2.txt' not exist !")
 
@@ -44,13 +44,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile3.txt' exist !")
             with open('./newpatient/entryfile3.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile3()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile3()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile3.txt' not exist !")
 
@@ -58,13 +58,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile4.txt' exist !")
             with open('./newpatient/entryfile4.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile4()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile4()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile4.txt' not exist !")
 
@@ -72,13 +72,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile5.txt' exist !")
             with open('./newpatient/entryfile5.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile5()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile5()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile5.txt' not exist !")
 
@@ -86,13 +86,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile6.txt' exist !")
             with open('./newpatient/entryfile6.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile6()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile6()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile.txt6' not exist !")
 
@@ -100,13 +100,13 @@ def get(Nompatient, entree):
             print("+ File 'entryfile7.txt' exist !")
             with open('./newpatient/entryfile7.txt', 'r') as file:
                 lines = file.readlines()
-            for i in range(len(lines)):
-                line = lines[i]
-                if Nompatient in line:
-                    print(line)
-                    delFuncFile7()
-                else:
-                    pass
+                for i in range(len(lines)):
+                    line = lines[i]
+                    if Nompatient in line:
+                        print(line)
+                        delFuncFile7()
+                    else:
+                        print("Nompatient indéterminé")
         else:
             print("+ Sorry, file 'entryfile7.txt' not exist !")
 
@@ -505,12 +505,12 @@ def delFuncFile2():
         print("+ File allergyfile2.txt does not exist")
         pass
     try:
-        if os.path.getsize('./newpatient/entryfile.txt'):
-            with open('./newpatient/entryfile.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile2.txt'):
+            with open('./newpatient/entryfile2.txt', 'w') as file:
                 file.write("---------------")
-            print("+ File entryfile.txt deleted")
+            print("+ File entryfile2.txt deleted")
     except:
-        print("+ File entryfile.txt does not exist")
+        print("+ File entryfile2.txt does not exist")
         pass
     print("!!! All files have been deleted !!!")
 

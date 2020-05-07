@@ -19,13 +19,6 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
     """
     MsgBox = messagebox.askyesno('Save data', 'Do you want to save ?')
     if MsgBox == 1:
-        Magicword1 = "----------------"
-        Magicword2 = "---------------"
-        Magicword3 = "--------------"
-        Magicword4 = "-------------"
-        Magicword5 = "------------"
-        Magicword6 = "-----------"
-        Magicword7 = "----------"
         Nompatient = entree.get()
         Birthvalue = Birthentree.get()
         print(Nompatient)
@@ -35,147 +28,77 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile.txt'):
                 print("+ File 'entryfile.txt' exist !")
-                with open('./newpatient/entryfile.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword1 in line:
-                            print(Magicword1)
-                            with open('./newpatient/entryfile.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
+                try:
+                    if os.path.getsize('./newpatient/entryfile2.txt'):
+                        print("+ File 'entryfile2.txt' exist !")
+                        try:
+                            if os.path.getsize('./newpatient/entryfile3.txt'):
+                                print("+ File 'entryfile3.txt' exist !")
+                                try:
+                                    if os.path.getsize('./newpatient/entryfile4.txt'):
+                                        print("+ File 'entryfile4.txt' exist !")
+                                        try:
+                                            if os.path.getsize('./newpatient/entryfile5.txt'):
+                                                print("+ File 'entryfile5.txt' exist !")
+                                                try:
+                                                    if os.path.getsize('./newpatient/entryfile6.txt'):
+                                                        print("+ File 'entryfile6.txt' exist !")
+                                                        try:
+                                                            if os.path.getsize('./newpatient/entryfile7.txt'):
+                                                                print("+ File 'entryfile7.txt' exist !")
+                                                        except FileNotFoundError as outcom:
+                                                            print("+ Sorry, file 'entryfile7.txt' not exist !")
+                                                            print(str(outcom))
+                                                            print("+ File 'entryfile7.txt' created !")
+                                                            with open('./newpatient/entryfile7.txt', 'w') as namefile:
+                                                                namefile.write(entree.get() + '\n')
+                                                                namefile.write(Birthentree.get() + '\n')
+                                                                namefile.write(str('---\n'))
+                                                except FileNotFoundError as outcom1:
+                                                    print("+ Sorry, file 'entryfile.txt6' not exist !")
+                                                    print(str(outcom1))
+                                                    print("+ File 'entryfile.txt6' created !")
+                                                    with open('./newpatient/entryfile6.txt', 'w') as namefile:
+                                                        namefile.write(entree.get() + '\n')
+                                                        namefile.write(Birthentree.get() + '\n')
+                                                        namefile.write(str('---\n'))
+                                        except FileNotFoundError as outcom2:
+                                            print("+ Sorry, file 'entryfile5.txt' not exist !")
+                                            print(str(outcom2))
+                                            print("+ File 'entryfile5.txt' created !")
+                                            with open('./newpatient/entryfile5.txt', 'w') as namefile:
+                                                namefile.write(entree.get() + '\n')
+                                                namefile.write(Birthentree.get() + '\n')
+                                                namefile.write(str('---\n'))
+                                except FileNotFoundError as outcom3:
+                                    print("+ Sorry, file 'entryfile4.txt' not exist !")
+                                    print(str(outcom3))
+                                    print("+ File 'entryfile4.txt' created !")
+                                    with open('./newpatient/entryfile4.txt', 'w') as namefile:
+                                        namefile.write(entree.get() + '\n')
+                                        namefile.write(Birthentree.get() + '\n')
+                                        namefile.write(str('---\n'))
+                        except FileNotFoundError as outcom4:
+                            print("+ Sorry, file 'entryfile3.txt' not exist !")
+                            print(str(outcom4))
+                            print("+ File 'entryfile3.txt' created !")
+                            with open('./newpatient/entryfile3.txt', 'w') as namefile:
+                                namefile.write(entree.get() + '\n')
+                                namefile.write(Birthentree.get() + '\n')
+                                namefile.write(str('---\n'))
+                except FileNotFoundError as outcom5:
+                    print("+ Sorry, file 'entryfile2.txt' not exist !")
+                    print(str(outcom5))
+                    print("+ File 'entryfile2.txt' created !")
+                    with open('./newpatient/entryfile2.txt', 'w') as namefile:
+                        namefile.write(entree.get() + '\n')
+                        namefile.write(Birthentree.get() + '\n')
+                        namefile.write(str('---\n'))
         except FileNotFoundError as outcom6:
             print("+ Sorry, file 'entryfile.txt' not exist !")
             print(str(outcom6))
             print("+ File 'entryfile.txt' created !")
-            with open('./newpatient/entryfile.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile2.txt'):
-                print("+ File 'entryfile2.txt' exist !")
-                with open('./newpatient/entryfile2.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword2 in line:
-                            print(Magicword2)
-                            with open('./newpatient/entryfile2.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom5:
-            print("+ Sorry, file 'entryfile2.txt' not exist !")
-            print(str(outcom5))
-            print("+ File 'entryfile2.txt' created !")
-            with open('./newpatient/entryfile2.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile3.txt'):
-                print("+ File 'entryfile3.txt' exist !")
-                with open('./newpatient/entryfile3.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword3 in line:
-                            print(Magicword3)
-                            with open('./newpatient/entryfile3.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom4:
-            print("+ Sorry, file 'entryfile3.txt' not exist !")
-            print(str(outcom4))
-            print("+ File 'entryfile3.txt' created !")
-            with open('./newpatient/entryfile3.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile4.txt'):
-                print("+ File 'entryfile4.txt' exist !")
-                with open('./newpatient/entryfile4.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword4 in line:
-                            print(Magicword4)
-                            with open('./newpatient/entryfile4.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom3:
-            print("+ Sorry, file 'entryfile4.txt' not exist !")
-            print(str(outcom3))
-            print("+ File 'entryfile4.txt' created !")
-            with open('./newpatient/entryfile4.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile5.txt'):
-                print("+ File 'entryfile5.txt' exist !")
-                with open('./newpatient/entryfile5.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword5 in line:
-                            print(Magicword5)
-                            with open('./newpatient/entryfile5.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom2:
-            print("+ Sorry, file 'entryfile5.txt' not exist !")
-            print(str(outcom2))
-            print("+ File 'entryfile5.txt' created !")
-            with open('./newpatient/entryfile5.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile6.txt'):
-                print("+ File 'entryfile6.txt' exist !")
-                with open('./newpatient/entryfile6.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword6 in line:
-                            print(Magicword6)
-                            with open('./newpatient/entryfile6.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom1:
-            print("+ Sorry, file 'entryfile.txt6' not exist !")
-            print(str(outcom1))
-            print("+ File 'entryfile.txt6' created !")
-            with open('./newpatient/entryfile6.txt', 'a+') as namefile:
-                namefile.write(entree.get() + '\n')
-                namefile.write(Birthentree.get() + '\n')
-                namefile.write(str('---\n'))
-        try:
-            if os.path.getsize('./newpatient/entryfile7.txt'):
-                print("+ File 'entryfile7.txt' exist !")
-                with open('./newpatient/entryfile7.txt', 'r') as filer:
-                    lines = filer.readlines()
-                    for i in range(len(lines)):
-                        line = lines[i]
-                        if Magicword7 in line:
-                            print(Magicword7)
-                            with open('./newpatient/entryfile7.txt', 'w') as filew:
-                                filew.write(entree.get() + '\n')
-                                filew.write(Birthentree.get() + '\n')
-                                filew.write(str('---\n'))
-        except FileNotFoundError as outcom:
-            print("+ Sorry, file 'entryfile7.txt' not exist !")
-            print(str(outcom))
-            print("+ File 'entryfile7.txt' created !")
-            with open('./newpatient/entryfile7.txt', 'a+') as namefile:
+            with open('./newpatient/entryfile.txt', 'w') as namefile:
                 namefile.write(entree.get() + '\n')
                 namefile.write(Birthentree.get() + '\n')
                 namefile.write(str('---\n'))
