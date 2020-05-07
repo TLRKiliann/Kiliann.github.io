@@ -13,63 +13,54 @@ def get(Nompatient, entree):
         Nompatient = entree.get()
         print(Nompatient)
 
-        try:
-            with open('./newpatient/entryfile.txt', 'r') as file:
-                lines = file.readlines()
-                for i in range(len(lines)):
-                    line = lines[i]
-                    if Nompatient not in line:
-                        try:
-                            with open('./newpatient/entryfile2.txt', 'r') as file2:
-                                lines = file2.readlines()
-                                for i in range(len(lines)):
-                                    line = lines[i]
-                                    if Nompatient not in line:
-                                        try:
-                                            with open('./newpatient/entryfile3.txt', 'r') as file3:
-                                                lines = file3.readlines()
+        with open('./newpatient/entryfile.txt', 'r') as file:
+            lines = file.readlines()
+            for i in range(len(lines)):
+                line = lines[i]
+                if Nompatient not in line:
+                    with open('./newpatient/entryfile2.txt', 'r') as file2:
+                        lines = file2.readlines()
+                        for i in range(len(lines)):
+                            line = lines[i]
+                            if Nompatient not in line:
+                                with open('./newpatient/entryfile3.txt', 'r') as file3:
+                                    lines = file3.readlines()
+                                    for i in range(len(lines)):
+                                        line = lines[i]
+                                        if Nompatient not in line:
+                                            with open('./newpatient/entryfile4.txt', 'r') as file:
+                                                lines = file.readlines()
                                                 for i in range(len(lines)):
                                                     line = lines[i]
                                                     if Nompatient not in line:
-                                                        try:
-                                                            with open('./newpatient/entryfile4.txt', 'r') as file:
-                                                                lines = file.readlines()
-                                                                for i in range(len(lines)):
-                                                                    line = lines[i]
-                                                                    if Nompatient not in line:
-                                                                        try:
-                                                                            with open('./newpatient/entryfile5.txt', 'r') as file:
-                                                                                lines = file.readlines()
-                                                                                for i in range(len(lines)):
-                                                                                    line = lines[i]
-                                                                                    if Nompatient not in line:
-                                                                                        try:
-                                                                                            with open('./newpatient/entryfile6.txt', 'r') as file:
-                                                                                                lines = file.readlines()
-                                                                                                for i in range(len(lines)):
-                                                                                                    line = lines[i]
-                                                                                                    if Nompatient not in line:
-                                                                                                        try:
-                                                                                                            with open('./newpatient/entryfile7.txt', 'r') as file:
-                                                                                                                lines = file.readlines()
-                                                                                                                for i in range(len(lines)):
-                                                                                                                    line = lines[i]
-                                                                                                                    if Nompatient not in line:
-                                                                                                                        print("None file exist")
-                                                                                                        except:
-                                                                                                            delFuncFile7()
-                                                                                        except:
-                                                                                            delFuncFile6()
-                                                                        except:
-                                                                            delFuncFile5()
-                                                        except:
-                                                            delFuncFile4()
-                                        except:
-                                            delFuncFile3()
-                        except:
-                            delFuncFile2()
-        except:
-            delFuncFile1()
+                                                        with open('./newpatient/entryfile5.txt', 'r') as file:
+                                                            lines = file.readlines()
+                                                            for i in range(len(lines)):
+                                                                line = lines[i]
+                                                                if Nompatient not in line:
+                                                                    with open('./newpatient/entryfile6.txt', 'r') as file:
+                                                                        lines = file.readlines()
+                                                                        for i in range(len(lines)):
+                                                                            line = lines[i]
+                                                                            if Nompatient not in line:
+                                                                                with open('./newpatient/entryfile7.txt', 'r') as file:
+                                                                                    lines = file.readlines()
+                                                                                    for i in range(len(lines)):
+                                                                                        line = lines[i]
+                                                                                        if Nompatient not in line:
+                                                                                            print("None file exist")
+                                                                            else:
+                                                                                delFuncFile7()
+                                                                else:
+                                                                    delFuncFile6()
+                                                    else:
+                                                        delFuncFile5()
+                                        else:
+                                            delFuncFile4()
+                            else:
+                                delFuncFile3()
+                else:
+                    delFuncFile2()
 
         gui.destroy()
     else:           
@@ -265,6 +256,14 @@ def delFuncFile():
     except:
         print("+ File allergyfile.txt does not exist")
         pass
+
+    try:
+        if os.path.getsize('./newpatient/entryfile.txt'):
+            os.remove('./newpatient/entryfile.txt')
+            print("+ File entryfile deleted")
+    except:
+        print("+ File entryfile.txt does not exist")
+    """
     try:
         if os.path.getsize('./newpatient/entryfile.txt'):
             with open('./newpatient/entryfile.txt', 'w') as file:
@@ -273,6 +272,7 @@ def delFuncFile():
     except:
         print("+ File entryfile.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile2():
@@ -467,12 +467,20 @@ def delFuncFile2():
         pass
     try:
         if os.path.getsize('./newpatient/entryfile2.txt'):
+            os.remove('./newpatient/entryfile2.txt')
+            print("+ File entryfile2 deleted")
+    except:
+        print("+ File entryfile2.txt does not exist")
+    """
+    try:
+        if os.path.getsize('./newpatient/entryfile2.txt'):
             with open('./newpatient/entryfile2.txt', 'w') as file:
                 file.write("--")
             print("+ File entryfile2.txt deleted")
     except:
         print("+ File entryfile2.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile3():
@@ -665,6 +673,14 @@ def delFuncFile3():
     except:
         print("+ File allergyfile3.txt does not exist")
         pass
+
+    try:
+        if os.path.getsize('./newpatient/entryfile3.txt'):
+            os.remove('./newpatient/entryfile3.txt')
+            print("+ File entryfile3 deleted")
+    except:
+        print("+ File entryfile3 does not exist")
+    """
     try:
         if os.path.getsize('./newpatient/entryfile3.txt'):
             with open('./newpatient/entryfile3.txt', 'w') as file:
@@ -673,6 +689,7 @@ def delFuncFile3():
     except:
         print("+ File entryfile3.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile4():
@@ -865,6 +882,15 @@ def delFuncFile4():
     except:
         print("+ File allergyfile4.txt does not exist")
         pass
+
+    try:
+        if os.path.getsize('./newpatient/entryfile4.txt'):
+            os.remove('./newpatient/entryfile4.txt')
+            print("+ File entryfile4 deleted")
+    except:
+        print("+ File entryfile4 does not exist")
+
+    """
     try:
         if os.path.getsize('./newpatient/entryfile4.txt'):
             with open('./newpatient/entryfile4.txt', 'w') as file:
@@ -873,6 +899,7 @@ def delFuncFile4():
     except:
         print("+ File entryfile4.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile5():
@@ -1067,12 +1094,20 @@ def delFuncFile5():
         pass
     try:
         if os.path.getsize('./newpatient/entryfile5.txt'):
+            os.remove('./newpatient/entryfile5.txt')
+            print("+ File entryfile5 deleted")
+    except:
+        print("+ File entryfile5 does not exist")
+    """
+    try:
+        if os.path.getsize('./newpatient/entryfile5.txt'):
             with open('./newpatient/entryfile5.txt', 'w') as file:
                 file.write("-----")
             print("+ File entryfile5.txt deleted")
     except:
         print("+ File entryfile5.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile6():
@@ -1267,12 +1302,20 @@ def delFuncFile6():
         pass
     try:
         if os.path.getsize('./newpatient/entryfile6.txt'):
+            os.remove('./newpatient/entryfile6.txt')
+            print("+ File entryfile6 deleted")
+    except:
+        print("+ File entryfile6 does not exist")
+    """
+    try:
+        if os.path.getsize('./newpatient/entryfile6.txt'):
             with open('./newpatient/entryfile6.txt', 'w') as file:
                 file.write("------")
             print("+ File entryfile6.txt deleted")
     except:
         print("+ File entryfile6.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 def delFuncFile7():
@@ -1467,12 +1510,20 @@ def delFuncFile7():
         pass
     try:
         if os.path.getsize('./newpatient/entryfile7.txt'):
+            os.remove('./newpatient/entryfile7.txt')
+            print("+ File entryfile7 deleted")
+    except:
+        print("+ File entryfile7 does not exist")
+    """
+    try:
+        if os.path.getsize('./newpatient/entryfile7.txt'):
             with open('./newpatient/entryfile7.txt', 'w') as file:
                 file.write("-------")
             print("+ File entryfile7.txt deleted")
     except:
         print("+ File entryfile7.txt does not exist")
         pass
+    """
     print("!!! All files have been deleted !!!")
 
 gui=Tk()
