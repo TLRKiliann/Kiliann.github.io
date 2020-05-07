@@ -89,6 +89,8 @@ class Application(Frame):
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'VMED' not exist !", outmsg)
             print("+ File VMED created !")
+            with open('./vmed/doc_vmed/resultvmed.txt', 'w') as file:
+                file.write(".")
             self.confRec()
 
     # Func to read
@@ -99,11 +101,13 @@ class Application(Frame):
                 subprocess.call('./vmed/doc_vmed/vmed_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'VMED' not exist !", outcom)
+            with open('./vmed/doc_vmed/resultvmed.txt', 'w') as file:
+                file.write(".")
             self.confRec()
 
     def confRec(self):
         self.MsgBox2msg = messagebox.showinfo("Warning", "File 'VMED'"
-            "was not created. No Medical Visit has been checked !")
+            "was created, but no Medical Visit has been checked !")
 
 if __name__=='__main__':
     app = Application()
