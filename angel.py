@@ -7,6 +7,7 @@ from tkinter import messagebox
 #from tkinter import filedialog
 #import os
 import subprocess
+import time
 
 
 # La ScrollBar in class and preparing for main application !
