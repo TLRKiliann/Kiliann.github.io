@@ -714,7 +714,6 @@ def delFuncFile3():
         pass
     print("!!! All files have been deleted !!!")
 
-
 def delFuncFile4():
     try:
         if os.path.getsize('./admin/readadmin/fileAdmin4.txt'):
@@ -915,7 +914,6 @@ def delFuncFile4():
         pass
     print("!!! All files have been deleted !!!")
 
-
 def delFuncFile5():
     try:
         if os.path.getsize('./admin/readadmin/fileAdmin5.txt'):
@@ -1107,22 +1105,6 @@ def delFuncFile5():
         print("+ File allergyfile5.txt does not exist")
         pass
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
-    except:
-        print("+ File ... does not exist")
-        pass
-    os.remove('./newpatient/entryfile5.txt')
-    try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
-    except:
-        print("+ File ... does not exist")
-        passprint("+ entryfile5.txt found and has deleted all files !")     
-
-    try:
         if os.path.getsize('./newpatient/entryfile5.txt'):
             with open('./newpatient/entryfile5.txt', 'w') as file:
                 file.write("----------------")
@@ -1134,457 +1116,403 @@ def delFuncFile5():
 
 def delFuncFile6():
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./admin/readadmin/fileAdmin6.txt'):
+            os.remove('./admin/readadmin/fileAdmin6.txt')
+            print("+ File fileAdmin6 deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File fileAdmin6 does not exist")
         pass
-    os.remove('./admin/readadmin/fileAdmin6.txt')
+    try:
+        if os.path.getsize('./14besoins/doc_suivi6/main_14b.txt'):
+            os.remove('./14besoins/doc_suivi6/main_14b.txt')
+            print("+ File main_14b.txt deleted")
+    except:
+        print("+ File main_14b.txt does not exist")
+        pass
     try:
         if os.path.getsize :
-            
-            print("+ File ... deleted")
+            os.remove('./14besoins/doc_suivi6/patient6_14b.txt')
+            print("+ File patient6_14b.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient6_14b.txt does not exist")
         pass
-    os.remove('./14besoins/doc_suivi6/main_14b.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./ttt/doc_ttt6/convdose.json'):
+            os.remove('./ttt/doc_ttt6/convdose.json')
+            print("+ File convdose.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File convdose.json does not exist")
         pass
-    os.remove('./14besoins/doc_suivi6/patient6_14b.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./ttt/doc_ttt6/intro_ttt.txt'):
+            os.remove('./ttt/doc_ttt6/intro_ttt.txt')
+            print("+ File intro_ttt.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File intro_ttt.txt does not exist")
         pass
-    os.remove('./ttt/doc_ttt6/convdose.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/dlr.json'):
+            os.remove('./param/aspifile6/dlr.json')
+            print("+ File dlr.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File dlr.json does not exist")
         pass
-    os.remove('./ttt/doc_ttt6/intro_ttt.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/freq.json'):
+            os.remove('./param/aspifile6/freq.json')
+            print("+ File freq.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File freq.json does not exist")
         pass
-    os.remove('./param/aspifile6/dlr.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/gly.json'):
+            os.remove('./param/aspifile6/gly.json')
+            print("+ File gly.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File gly.json does not exist")
         pass
-    os.remove('./param/aspifile6/freq.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/puls.json'):
+            os.remove('./param/aspifile6/puls.json')
+            print("+ File puls.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File puls.json does not exist")
         pass
-    os.remove('./param/aspifile6/gly.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/sat.json'):
+            os.remove('./param/aspifile6/sat.json')
+            print("+ File sat.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File sat.json does not exist")
         pass
-    os.remove('./param/aspifile6/puls.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/temp.json'):
+            os.remove('./param/aspifile6/temp.json')
+            print("+ File temp.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File temp.json does not exist")
         pass
-    os.remove('./param/aspifile6/sat.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile6/tensor.json'):
+            os.remove('./param/aspifile6/tensor.json')
+            print("+ File tensor.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File tensor.json does not exist")
         pass
-    os.remove('./param/aspifile6/temp.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/Main6.txt'):
+            os.remove('./param/Main6.txt')
+            print("+ File Main6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File Main6.txt does not exist")
         pass
-    os.remove('./param/aspifile6/tensor.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/doc_BMI6/file_bmi.json'):
+            os.remove('./calBmi/doc_BMI6/file_bmi.json')
+            print("+ File file_bmi.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File file_bmi.json does not exist")
         pass
-    os.remove('./param/Main6.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/doc_BMI6/file_kg.json'):
+            os.remove('./calBmi/doc_BMI6/file_kg.json')
+            print("+ File file_kg.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File file_kg.json does not exist")
         pass
-    os.remove('./calBmi/doc_BMI6/file_bmi.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/bmi6.txt'):
+            os.remove('./calBmi/bmi6.txt')
+            print("+ File bmi6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File bmi6.txt does not exist")
         pass
-    os.remove('./calBmi/doc_BMI6/file_kg.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./vmed/doc_vmed6/resultvmed.txt'):
+            os.remove('./vmed/doc_vmed6/resultvmed.txt')
+            print("+ File resultvmed.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File resultvmed.txt does not exist")
         pass
-    os.remove('./calBmi/bmi6.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./diag/doc_diag6/diagrecap.txt'):
+            os.remove('./diag/doc_diag6/diagrecap.txt')
+            print("+ File diagrecap.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File diagrecap.txt does not exist")
         pass
-    os.remove('./vmed/doc_vmed6/resultvmed.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./labo/doc_labo/result6.txt'):
+            os.remove('./labo/doc_labo/result6.txt')
+            print("+ File result6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File result6.txt does not exist")
         pass
-    os.remove('./diag/doc_diag6/diagrecap.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./auxsrc/doc_auxsrc6/auxsrcfile6.txt'):
+            os.remove('./auxsrc/doc_auxsrc6/auxsrcfile6.txt')
+            print("+ File auxsrcfile6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File auxsrcfile6.txt does not exist")
         pass
-    os.remove('./labo/doc_labo/result6.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./histv/doc_histv6/Hvie_patient6.txt'):
+            os.remove('./histv/doc_histv6/Hvie_patient6.txt')
+            print("+ File Hvie_patient6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File Hvie_patient6.txt does not exist")
         pass
-    os.remove('./auxsrc/doc_auxsrc6/auxsrcfile6.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt'):
+            os.remove('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
+            print("+ File fixed_rdv.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File fixed_rdv.txt does not exist")
         pass
-    os.remove('./histv/doc_histv6/Hvie_patient6.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events6/doc_events/fix_agenda/modifrdv.txt'):
+            os.remove('./patient_agenda/events6/doc_events/fix_agenda/modifrdv.txt')
+            print("+ File modifrdv.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File modifrdv.txt does not exist")
         pass
-    os.remove('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events6/doc_events/fix_agenda/patient_value.json'):
+            os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_value.json')
+            print("+ File patient_value.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_value.json does not exist")
         pass
-    os.remove('./patient_agenda/events6/doc_events/fix_agenda/modifrdv.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json'):
+            os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json')
+            print("+ File patient_rdv.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_rdv.json does not exist")
         pass
-    os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_value.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events6/doc_events/patient_calendar.txt'):
+            os.remove('./patient_agenda/events6/doc_events/patient_calendar.txt')
+            print("+ File patient_calendar.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_calendar.txt does not exist")
         pass
-    os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./allergy/allergyfile6.txt'):
+            os.remove('./allergy/allergyfile6.txt')
+            print("+ File allergyfile6 deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File allergyfile6 does not exist")
         pass
-    os.remove('./patient_agenda/events6/doc_events/patient_calendar.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./newpatient/entryfile6.txt'):
+            with open('./newpatient/entryfile6.txt', 'w') as file:
+                file.write("----------------")
+            print("+ File entryfile6.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File entryfile6.txt does not exist")
         pass
-    os.remove('./allergy/allergyfile6.txt')
-    try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
-    except:
-        print("+ File ... does not exist")
-        pass
-    os.remove('./newpatient/entryfile6.txt')
-    print("+ entryfile6.txt found and has deleted all files !")  
+    print("!!! All files have been deleted !!!")
 
 def delFuncFile7():
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./admin/readadmin/fileAdmin7.txt'):
+            os.remove('./admin/readadmin/fileAdmin7.txt')
+            print("+ File fileAdmin7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File fileAdmin7.txt does not exist")
         pass
-    os.remove('./admin/readadmin/fileAdmin7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./14besoins/doc_suivi7/main_14b.txt'):
+            os.remove('./14besoins/doc_suivi7/main_14b.txt')
+            print("+ File main_14b.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File main_14b.txt does not exist")
         pass
-    os.remove('./14besoins/doc_suivi7/main_14b.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./14besoins/doc_suivi7/patient7_14b.txt'):
+            os.remove('./14besoins/doc_suivi7/patient7_14b.txt')
+            print("+ File patient7_14b.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient7_14b.txt does not exist")
         pass
-    os.remove('./14besoins/doc_suivi7/patient7_14b.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./ttt/doc_ttt7/convdose.json'):
+            os.remove('./ttt/doc_ttt7/convdose.json')
+            print("+ File convdose.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File convdose.json does not exist")
         pass
-    os.remove('./ttt/doc_ttt7/convdose.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./ttt/doc_ttt7/intro_ttt.txt'):
+            os.remove('./ttt/doc_ttt7/intro_ttt.txt')
+            print("+ File intro_ttt.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File intro_ttt.txt does not exist")
         pass
-    os.remove('./ttt/doc_ttt7/intro_ttt.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/dlr.json'):
+            os.remove('./param/aspifile7/dlr.json')
+            print("+ File dlr.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File dlr.json does not exist")
         pass
-    os.remove('./param/aspifile7/dlr.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/freq.json'):
+            os.remove('./param/aspifile7/freq.json')
+            print("+ File freq.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File freq.json does not exist")
         pass
-    os.remove('./param/aspifile7/freq.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/gly.json'):
+            os.remove('./param/aspifile7/gly.json')
+            print("+ File gly.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File gly.json does not exist")
         pass
-    os.remove('./param/aspifile7/gly.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/puls.json'):
+            os.remove('./param/aspifile7/puls.json')
+            print("+ File puls.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File puls.json does not exist")
         pass
-    os.remove('./param/aspifile7/puls.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/sat.json'):
+            os.remove('./param/aspifile7/sat.json')
+            print("+ File sat.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File sat.json does not exist")
         pass
-    os.remove('./param/aspifile7/sat.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/temp.json'):
+            os.remove('./param/aspifile7/temp.json')
+            print("+ File temp.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File temp.json does not exist")
         pass
-    os.remove('./param/aspifile7/temp.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/aspifile7/tensor.json'):
+            os.remove('./param/aspifile7/tensor.json')
+            print("+ File tensor.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File tensor.json does not exist")
         pass
-    os.remove('./param/aspifile7/tensor.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./param/Main7.txt'):
+            os.remove('./param/Main7.txt')
+            print("+ File Main7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File Main7.txt does not exist")
         pass
-    os.remove('./param/Main7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/doc_BMI7/file_bmi.json'):
+            os.remove('./calBmi/doc_BMI7/file_bmi.json')
+            print("+ File file_bmi.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File file_bmi.json does not exist")
         pass
-    os.remove('./calBmi/doc_BMI7/file_bmi.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/doc_BMI7/file_kg.json'):
+            os.remove('./calBmi/doc_BMI7/file_kg.json')
+            print("+ File file_kg.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File file_kg.json does not exist")
         pass
-    os.remove('./calBmi/doc_BMI7/file_kg.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./calBmi/bmi7.txt'):
+            os.remove('./calBmi/bmi7.txt')
+            print("+ File bmi7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File bmi7.txt does not exist")
         pass
-    os.remove('./calBmi/bmi7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./vmed/doc_vmed7/resultvmed.txt'):
+            os.remove('./vmed/doc_vmed7/resultvmed.txt')
+            print("+ File resultvmed.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File resultvmed.txt does not exist")
         pass
-    os.remove('./vmed/doc_vmed7/resultvmed.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./diag/doc_diag7/diagrecap.txt'):
+            os.remove('./diag/doc_diag7/diagrecap.txt')
+            print("+ File diagrecap.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File diagrecap.txt does not exist")
         pass
-    os.remove('./diag/doc_diag7/diagrecap.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./labo/doc_labo/result7.txt'):
+            os.remove('./labo/doc_labo/result7.txt')
+            print("+ File result7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File result7.txt does not exist")
         pass
-    os.remove('./labo/doc_labo/result7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./auxsrc/doc_auxsrc7/auxsrcfile7.txt'):
+            os.remove('./auxsrc/doc_auxsrc7/auxsrcfile7.txt')
+            print("+ File auxsrcfile7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File auxsrcfile7.txt does not exist")
         pass
-    os.remove('./auxsrc/doc_auxsrc7/auxsrcfile7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./histv/doc_histv7/Hvie_patient7.txt'):
+            os.remove('./histv/doc_histv7/Hvie_patient7.txt')
+            print("+ File Hvie_patient7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File Hvie_patient7.txt does not exist")
         pass
-    os.remove('./histv/doc_histv7/Hvie_patient7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt'):
+            os.remove('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt')
+            print("+ File fixed_rdv.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File fixed_rdv.txt does not exist")
         pass
-    os.remove('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events7/doc_events/fix_agenda/modifrdv.txt'):
+            os.remove('./patient_agenda/events7/doc_events/fix_agenda/modifrdv.txt')
+            print("+ File modifrdv.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File modifrdv.txt does not exist")
         pass
-    os.remove('./patient_agenda/events7/doc_events/fix_agenda/modifrdv.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events7/doc_events/fix_agenda/patient_value.json'):
+            os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_value.json')
+            print("+ File patient_value.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_value.json does not exist")
         pass
-    os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_value.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json'):
+            os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json')
+            print("+ File patient_rdv.json deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_rdv.json does not exist")
         pass
-    os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./patient_agenda/events7/doc_events/patient_calendar.txt'):
+            os.remove('./patient_agenda/events7/doc_events/patient_calendar.txt')
+            print("+ File patient_calendar.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File patient_calendar.txt does not exist")
         pass
-    os.remove('./patient_agenda/events7/doc_events/patient_calendar.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./allergy/allergyfile7.txt'):
+            os.remove('./allergy/allergyfile7.txt')
+            print("+ File allergyfile7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File allergyfile7.txt does not exist")
         pass
-    os.remove('./allergy/allergyfile7.txt')
     try:
-        if os.path.getsize :
-            
-            print("+ File ... deleted")
+        if os.path.getsize('./newpatient/entryfile7.txt'):
+            with open('./newpatient/entryfile7.txt', 'w') as file:
+                file.write("----------------")
+            print("+ File entryfile7.txt deleted")
     except:
-        print("+ File ... does not exist")
+        print("+ File entryfile7.txt does not exist")
         pass
-    os.remove('./newpatient/entryfile7.txt')
-    print("+ entryfile7.txt found and has deleted all files !")
+    print("!!! All files have been deleted !!!")
 
 gui=Tk()
 gui.title("Enter new patient")
