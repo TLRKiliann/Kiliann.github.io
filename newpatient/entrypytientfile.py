@@ -28,24 +28,31 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         try:
             if os.path.getsize('./newpatient/entryfile.txt'):
                 print("+ File 'entryfile.txt' exist !")
+                searchLine1()
                 try:
                     if os.path.getsize('./newpatient/entryfile2.txt'):
                         print("+ File 'entryfile2.txt' exist !")
+                        searchLine2()
                         try:
                             if os.path.getsize('./newpatient/entryfile3.txt'):
                                 print("+ File 'entryfile3.txt' exist !")
+                                searchLine3()
                                 try:
                                     if os.path.getsize('./newpatient/entryfile4.txt'):
                                         print("+ File 'entryfile4.txt' exist !")
+                                        searchLine4()
                                         try:
                                             if os.path.getsize('./newpatient/entryfile5.txt'):
                                                 print("+ File 'entryfile5.txt' exist !")
+                                                searchLine5()
                                                 try:
                                                     if os.path.getsize('./newpatient/entryfile6.txt'):
                                                         print("+ File 'entryfile6.txt' exist !")
+                                                        searchLine6()
                                                         try:
                                                             if os.path.getsize('./newpatient/entryfile7.txt'):
                                                                 print("+ File 'entryfile7.txt' exist !")
+                                                                searchLine7()
                                                         except FileNotFoundError as outcom:
                                                             print("+ Sorry, file 'entryfile7.txt' not exist !")
                                                             print(str(outcom))
@@ -105,6 +112,90 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         gui.destroy()
     else:           
         NoforQ = messagebox.showinfo('Return', 'Data not saved')
+
+def searchLine1():
+    mot = "-"
+    with open('./newpatient/entryfile.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine2():
+    mot = "--"
+    with open('./newpatient/entryfile.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile2.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine3():
+    mot = "---"
+    with open('./newpatient/entryfile3.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile3.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine4():
+    mot = "----"
+    with open('./newpatient/entryfile4.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile4.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine5():
+    mot = "-----"
+    with open('./newpatient/entryfile5.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile5.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine6():
+    mot = "------"
+    with open('./newpatient/entryfile6.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile6.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
+
+def searchLine7():
+    mot = "-------"
+    with open('./newpatient/entryfile7.txt', 'r') as filer:
+        lines = filer.readlines()
+        with open('./newpatient/entryfile7.txt', 'w') as filew:
+            for i in range(len(lines)):
+                line = lines[i]
+                if mot in line:
+                    filew.write(entree.get() + '\n')
+                    filew.write(Birthentree.get() + '\n')
+                    filew.write(str('---\n'))
 
 labelName = Label(gui)
 labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 
