@@ -1,0 +1,37 @@
+{
+    "data": [
+        {
+            "Date": "08/05/2020",
+            "Date of introduction": "07 May 2020",
+            "Date of end": "26 May 2023",
+            "Traitement": "Nexium",
+            "Dosage": "40mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "",
+            "Nuit": ""
+        },
+        {
+            "Date": "08/05/2020",
+            "Date of introduction": "07 May 2020",
+            "Date of end": "11 June 2023",
+            "Traitement": "Clopixol",
+            "Dosage": "100mg",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "1",
+            "Nuit": "1"
+        },
+        {
+            "Date": "08/05/2020",
+            "Date of introduction": "07 May 2020",
+            "Date of end": "11 June 2023",
+            "Traitement": "Lexotanyl",
+            "Dosage": "10mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "",
+            "Nuit": "1"
+        }
+    ]
+}
