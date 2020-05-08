@@ -75,8 +75,7 @@ def get(Nompatient, entree):
                                                                                                                         delFuncFile7()          
                                                                                                                     else:
                                                                                                                         print("End of test delete files.")
-
-                                                                                                                    gui.destroy()
+                                                                                                                        gui.destroy()
     else:           
         NoforQ = messagebox.showinfo('Return', 'None file was found !')
 
