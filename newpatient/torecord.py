@@ -30,189 +30,98 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
         Birthvalue = Birthentree.get()
         print(Nompatient)
         print(Birthvalue)
-        try:
-            if os.path.getsize('./newpatient/entryfile.txt'):
-                print("+ File 'entryfile.txt' exist !")
-                searchLine1(Nompatient, Birthvalue, mot) 
-                try:
-                    if os.path.getsize('./newpatient/entryfile2.txt'):
-                        print("+ File 'entryfile2.txt' exist !")
-                        searchLine2(Nompatient, Birthvalue, mot2)
-                        try:
-                            if os.path.getsize('./newpatient/entryfile3.txt'):
-                                print("+ File 'entryfile3.txt' exist !")
-                                searchLine3(Nompatient, Birthvalue, mot3)
-                                try:
-                                    if os.path.getsize('./newpatient/entryfile4.txt'):
-                                        print("+ File 'entryfile4.txt' exist !")
-                                        searchLine4(Nompatient, Birthvalue, mot4)
-                                        try:
-                                            if os.path.getsize('./newpatient/entryfile5.txt'):
-                                                print("+ File 'entryfile5.txt' exist !")
-                                                searchLine5(Nompatient, Birthvalue, mot5)
-                                                try:
-                                                    if os.path.getsize('./newpatient/entryfile6.txt'):
-                                                        print("+ File 'entryfile6.txt' exist !")
-                                                        searchLine6(Nompatient, Birthvalue, mot6)
-                                                        try:
-                                                            if os.path.getsize('./newpatient/entryfile7.txt'):
-                                                                print("+ File 'entryfile7.txt' exist !")
-                                                                searchLine7(Nompatient, Birthvalue, mot7)
-                                                        except FileNotFoundError as outcom:
-                                                            print("+ Sorry, file 'entryfile7.txt' not exist !")
-                                                            print(str(outcom))
-                                                            print("+ File 'entryfile7.txt' created !")
-                                                            with open('./newpatient/entryfile7.txt', 'w') as namefile:
-                                                                namefile.write(Nompatient + '\n')
-                                                                namefile.write(Birthvalue + '\n')
-                                                                namefile.write(str('---\n'))
-                                                except FileNotFoundError as outcom1:
-                                                    print("+ Sorry, file 'entryfile.txt6' not exist !")
-                                                    print(str(outcom1))
-                                                    print("+ File 'entryfile.txt6' created !")
-                                                    with open('./newpatient/entryfile6.txt', 'w') as namefile:
-                                                        namefile.write(Nompatient + '\n')
-                                                        namefile.write(Birthvalue + '\n')
-                                                        namefile.write(str('---\n'))
-                                        except FileNotFoundError as outcom2:
-                                            print("+ Sorry, file 'entryfile5.txt' not exist !")
-                                            print(str(outcom2))
-                                            print("+ File 'entryfile5.txt' created !")
-                                            with open('./newpatient/entryfile5.txt', 'w') as namefile:
-                                                namefile.write(Nompatient + '\n')
-                                                namefile.write(Birthvalue + '\n')
-                                                namefile.write(str('---\n'))
-                                except FileNotFoundError as outcom3:
-                                    print("+ Sorry, file 'entryfile4.txt' not exist !")
-                                    print(str(outcom3))
-                                    print("+ File 'entryfile4.txt' created !")
-                                    with open('./newpatient/entryfile4.txt', 'w') as namefile:
-                                        namefile.write(Nompatient + '\n')
-                                        namefile.write(Birthvalue + '\n')
-                                        namefile.write(str('---\n'))
-                        except FileNotFoundError as outcom4:
-                            print("+ Sorry, file 'entryfile3.txt' not exist !")
-                            print(str(outcom4))
-                            print("+ File 'entryfile3.txt' created !")
-                            with open('./newpatient/entryfile3.txt', 'w') as namefile:
-                                namefile.write(Nompatient + '\n')
-                                namefile.write(Birthvalue + '\n')
-                                namefile.write(str('---\n'))
-                except FileNotFoundError as outcom5:
-                    print("+ Sorry, file 'entryfile2.txt' not exist !")
-                    print(str(outcom5))
-                    print("+ File 'entryfile2.txt' created !")
-                    with open('./newpatient/entryfile2.txt', 'w') as namefile:
-                        namefile.write(Nompatient + '\n')
-                        namefile.write(Birthvalue + '\n')
-                        namefile.write(str('---\n'))
-        except FileNotFoundError as outcom6:
-            print("+ Sorry, file 'entryfile.txt' not exist !")
-            print(str(outcom6))
-            print("+ File 'entryfile.txt' created !")
-            with open('./newpatient/entryfile.txt', 'w') as namefile:
-                namefile.write(Nompatient + '\n')
-                namefile.write(Birthvalue + '\n')
-                namefile.write(str('---\n'))
-    gui.destroy()
 
-def searchLine1(Nompatient, Birthvalue, mot):
-    if mot == "-":
-        with open('./newpatient/entryfile.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile.txt'):
+            with open('./newpatient/entryfile.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine1(Nompatient, Birthvalue)
 
-def searchLine2(Nompatient, Birthvalue, mot2):
-    if mot2 == "--":
-        with open('./newpatient/entryfile2.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile2.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile2.txt'):
+            with open('./newpatient/entryfile2.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot2 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine2(Nompatient, Birthvalue)
 
-def searchLine3(Nompatient, Birthvalue, mot3):
-    if mot3 == "---":
-        with open('./newpatient/entryfile3.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile3.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile3.txt'):
+            with open('./newpatient/entryfile3.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot3 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine3(Nompatient, Birthvalue)
 
-def searchLine4(Nompatient, Birthvalue, mot4):
-    if mot4 == "----":
-        with open('./newpatient/entryfile4.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile4.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile4.txt'):
+            with open('./newpatient/entryfile4.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot4 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine4(Nompatient, Birthvalue)
 
-def searchLine5(Nompatient, Birthvalue, mot5):
-    if mot5 == "-----":
-        with open('./newpatient/entryfile5.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile5.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile5.txt'):
+            with open('./newpatient/entryfile5.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot5 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine5(Nompatient, Birthvalue)
 
-def searchLine6(Nompatient, Birthvalue, mot6):
-    if mot6 == "------":
-        with open('./newpatient/entryfile6.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile6.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile6.txt'):
+            with open('./newpatient/entryfile6.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot6 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine6(Nompatient, Birthvalue)
 
-def searchLine7(Nompatient, Birthvalue, mot7):
-    if mot7 == "-------":
-        with open('./newpatient/entryfile7.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile7.txt', 'w') as file:
+        if os.path.getsize('./newpatient/entryfile7.txt'):
+            with open('./newpatient/entryfile7.txt', 'r') as file:
+                lines = file.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if mot7 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
+                        searchLine7(Nompatient, Birthvalue)
+        gui.destroy()
+
+def searchLine1(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine2(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile2.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine3(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile3.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine4(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile4.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine5(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile5.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine6(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile6.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
+
+def searchLine7(Nompatient, Birthvalue):
+    with open('./newpatient/entryfile7.txt', 'w') as file:
+        file.write(Nompatient + '\n')
+        file.write(Birthvalue + '\n')
 
 labelName = Label(gui)
 labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 

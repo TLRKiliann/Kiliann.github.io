@@ -1,0 +1,17 @@
+Date : 08/05/2020
+Heure : 22:17:12
+Name : Julia Roberts
+
+Date of introduction : 07 April 2020
+Nom du ttt : Leponex
+Dosage du ttt : 100mg
+Matin : 1
+Midi : 2
+Soir : 1
+
+Réserve : Oui
+1ère intention : Oui
+Nbre de réserve/24h : 2
+Date of end : 25 June 2029
+Signature : ec
+

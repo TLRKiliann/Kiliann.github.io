@@ -67,7 +67,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                                             with open('./newpatient/entryfile7.txt', 'w') as namefile:
                                                                 namefile.write(Nompatient + '\n')
                                                                 namefile.write(Birthvalue + '\n')
-                                                                namefile.write(str('---\n'))
+                                        
                                                 except FileNotFoundError as outcom1:
                                                     print("+ Sorry, file 'entryfile.txt6' not exist !")
                                                     print(str(outcom1))
@@ -75,7 +75,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                                     with open('./newpatient/entryfile6.txt', 'w') as namefile:
                                                         namefile.write(Nompatient + '\n')
                                                         namefile.write(Birthvalue + '\n')
-                                                        namefile.write(str('---\n'))
+                                        
                                         except FileNotFoundError as outcom2:
                                             print("+ Sorry, file 'entryfile5.txt' not exist !")
                                             print(str(outcom2))
@@ -83,7 +83,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                             with open('./newpatient/entryfile5.txt', 'w') as namefile:
                                                 namefile.write(Nompatient + '\n')
                                                 namefile.write(Birthvalue + '\n')
-                                                namefile.write(str('---\n'))
+                                
                                 except FileNotFoundError as outcom3:
                                     print("+ Sorry, file 'entryfile4.txt' not exist !")
                                     print(str(outcom3))
@@ -91,7 +91,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                     with open('./newpatient/entryfile4.txt', 'w') as namefile:
                                         namefile.write(Nompatient + '\n')
                                         namefile.write(Birthvalue + '\n')
-                                        namefile.write(str('---\n'))
+                        
                         except FileNotFoundError as outcom4:
                             print("+ Sorry, file 'entryfile3.txt' not exist !")
                             print(str(outcom4))
@@ -99,7 +99,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                             with open('./newpatient/entryfile3.txt', 'w') as namefile:
                                 namefile.write(Nompatient + '\n')
                                 namefile.write(Birthvalue + '\n')
-                                namefile.write(str('---\n'))
+                
                 except FileNotFoundError as outcom5:
                     print("+ Sorry, file 'entryfile2.txt' not exist !")
                     print(str(outcom5))
@@ -107,7 +107,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                     with open('./newpatient/entryfile2.txt', 'w') as namefile:
                         namefile.write(Nompatient + '\n')
                         namefile.write(Birthvalue + '\n')
-                        namefile.write(str('---\n'))
+        
         except FileNotFoundError as outcom6:
             print("+ Sorry, file 'entryfile.txt' not exist !")
             print(str(outcom6))
@@ -115,7 +115,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
             with open('./newpatient/entryfile.txt', 'w') as namefile:
                 namefile.write(Nompatient + '\n')
                 namefile.write(Birthvalue + '\n')
-                namefile.write(str('---\n'))
+
     gui.destroy()
 """
 def searchLine1(Nompatient, Birthvalue, mot):

@@ -59,16 +59,15 @@ class MenuBar(Frame):
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
         me1.add_separator()
-        me1.add_command(label='Installation', background='black',
+        me1.add_command(label='Install', background='black',
             activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
         me1.add_separator()
-        me1.add_command(label='QUITTER', underline=0, background='black',
+        me1.add_command(label='QUIT', underline=0, background='black',
             activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
-        me1.add_separator()
         # Integration of 1st menu
         fileMenu.configure(activeforeground='black', activebackground='cyan',
             menu=me1)
@@ -717,6 +716,13 @@ class Application(Frame):
             text="Delete patient", command=self.delEverPat)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
+        # To delete one patient and files and allergy
+        self.x200, self.y200 = 270, 100
+        self.b200=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
+            activebackground='red', activeforeground='white',
+            text="Add patient", command=self.addPatientAfter)
+        self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
+
         #Patient1
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=namefile.readline()
@@ -1123,6 +1129,9 @@ class Application(Frame):
 
     def delEverPat(self):
     	subprocess.call('./deletepatient/deleverything.py')
+
+    def addPatientAfter(self):
+    	subprocess.call('./newpatient/torecord.py')
     # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
