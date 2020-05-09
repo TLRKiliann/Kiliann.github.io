@@ -79,10 +79,37 @@ class Application(Frame):
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def lienDirect(self):
-        subprocess.call('./histv/doc_histv/story_write.py')
+        """
+        To verify and write story life
+        """
+        try:
+            if os.path.getsize('./histv/doc_histv/Hvie_patient1.txt'):
+                print("+ File 'Story Life' exist (add)!")
+                subprocess.call('./histv/doc_histv/story_write.py')
+        except FileNotFoundError as outmsg:
+            print("+ Sorry, file 'Story Life' not exist !", outmsg)
+            print("+ File 'Story Life' created !")
+            with open('./histv/doc_histv/Hvie_patient1.txt', 'w') as file:
+                file.write(".")
+            self.confRec()
 
     def lectureFic(self):
-        subprocess.call('./histv/doc_histv/story_read.py')
+        """
+        To verify and read story life
+        """
+        try:
+            if os.path.getsize('./histv/doc_histv/Hvie_patient1.txt'):
+                print("+ File 'Story Life' exist (read)!")
+                subprocess.call('./histv/doc_histv/story_read.py')
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'Story Life' not exist !", outcom)
+            with open('./histv/doc_histv/Hvie_patient1.txt', 'w') as file:
+                file.write(".")
+            self.confRec()
+
+    def confRec(self):
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'storylife'"
+            "was created, but no Story Life has been checked !")
 
 if __name__=='__main__':
     app = Application()
