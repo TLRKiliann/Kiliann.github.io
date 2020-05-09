@@ -1,3 +1,15 @@
 {
-    "data": []
+    "data": [
+        {
+            "Date": "09/05/2020",
+            "Date of introduction": "02 July 2020",
+            "Date of end": "28 June 2020",
+            "Traitement": "Drug1",
+            "Dosage": "mcg/ml/mg/UI/gttes",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "1",
+            "Nuit": "1"
+        }
+    ]
 }

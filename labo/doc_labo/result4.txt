@@ -1,0 +1,10 @@
+
+---
+
+Date : 09/05/2020
+Nom du patient : Klaus
+# TP value and treatment : (add what the patient needs)
+# INR value and treatment : (add what the patient needs)
+# Sediment. velocity value and treatment : (add what the patient needs)
+# C-react. protein value and treatment : (add what the patient needs)
+# Albumina value and treatment : (add what the patient needs)

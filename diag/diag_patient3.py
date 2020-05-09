@@ -3,10 +3,9 @@
 
 
 from tkinter import *
-import numpy as np
+from tkinter import messagebox
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from tkinter import filedialog
 import subprocess
 import os
 

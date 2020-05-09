@@ -1,0 +1,9 @@
+
+---
+
+Date : 09/05/2020
+Nom du patient : Clint
+# Ca value and treatment : (add what the patient needs)
+# Cl value and treatment : (add what the patient needs)
+# Cardiac workup value and treatment : (add what the patient needs)
+# Troponin value and treatment : (add what the patient needs)

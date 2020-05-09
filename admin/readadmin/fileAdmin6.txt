@@ -1,0 +1,17 @@
+Date : 09/05/2020
+Name : Natacha Squinz
+Birthdate : 02/11/1976
+Addess : 1
+NPA : 2
+Locality : 3
+Phone : 4
+Assurance : 5
+AVS : 6
+Contact : 7
+E-mail : 9
+Phone number : 8
+Friend contact : 10
+Friend number : 11
+Familiy Dr : 12
+Phone Dr : 13
+Address Dr : 14

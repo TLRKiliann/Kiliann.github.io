@@ -15,3 +15,17 @@ Nbre de réserve/24h : 2
 Date of end : 25 June 2029
 Signature : ec
 
+Date : 09/05/2020
+Heure : 17:38:58
+Name : Julia Roberts
+
+Date of introduction : 02 July 2020
+Nom du ttt : Drug1
+Dosage du ttt : mcg/ml/mg/UI/gttes
+Matin : 1
+Midi : 1
+Soir : 1
+Nuit : 1
+Date of end : 28 June 2020
+Signature : ec
+

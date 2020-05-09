@@ -1,0 +1,17 @@
+Date : 09/05/2020
+Name : Geronimo
+Birthdate : 28/07/1789
+Addess : 2
+NPA : 1
+Locality : 2
+Phone : 3
+Assurance : 4
+AVS : 5
+Contact : 3
+E-mail : 7
+Phone number : 6
+Friend contact : 8
+Friend number : 9
+Familiy Dr : 44
+Phone Dr : 0
+Address Dr : 9

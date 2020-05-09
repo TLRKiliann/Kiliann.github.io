@@ -1,0 +1,14 @@
+Date : 09/05/2020
+Heure : 17:31:52
+Name : Claude
+
+Date of introduction : 02 April 2020
+Nom du ttt : Drug1
+Dosage du ttt : 10mg
+Matin : 1
+
+Soir : 1
+
+Date of end : 02 July 2021
+Signature : ec
+

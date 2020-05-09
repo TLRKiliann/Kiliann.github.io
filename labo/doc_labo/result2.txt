@@ -1,0 +1,6 @@
+
+Date : 09/05/2020
+Nom du patient : Geronimo
+# Ca value and treatment : (add what the patient needs)
+# ALAT value and treatment : (add what the patient needs)
+# HbA1c value and treatment : (add what the patient needs)

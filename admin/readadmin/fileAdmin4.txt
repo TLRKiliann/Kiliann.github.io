@@ -1,0 +1,17 @@
+Date : 09/05/2020
+Name : Klaus
+Birthdate : 278937
+Addess : 1
+NPA : 2
+Locality : 3
+Phone : 4
+Assurance : 5
+AVS : 6
+Contact : 7
+E-mail : 9
+Phone number : 8
+Friend contact : 11
+Friend number : 12
+Familiy Dr : 13
+Phone Dr : 14
+Address Dr : 15
