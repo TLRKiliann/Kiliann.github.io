@@ -1,0 +1,10 @@
+Current date : 09/05/2020, 09:25:51 :
+Appointment set for : 28/5/2020 :
+Rdv chez l'ophtalmo à 9h00.
+
+
++++ Changes about rdv +++
+Appointment set for : 28/5/2020 :
+Rdv chez l'ophtalmo à 9h00.
+ANNULE
+

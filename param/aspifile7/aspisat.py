@@ -2,9 +2,8 @@
 # -*- coding:utf-8 -*-
 
 
-import os
+import subprocess
 import json
-import time
 
 
 file = open('./param/aspifile7/sat.json')
@@ -55,8 +54,5 @@ with open('./param/aspifile7/data_sat.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 print("\nDownloading 'plot_prog.py'...")
-# Un temps d'attente de 2 sec:
-print("Time wait 2 seconds...")
-time.sleep(2)
-# Lancement du programme plot_sat.py
-os.system('./param/aspifile7/plot/plot_sat.py')
+
+subprocess.call('./param/aspifile7/plot/plot_sat.py')

@@ -4,7 +4,6 @@
 
 import subprocess
 import json
-import time
 
 
 file = open('./param/aspifile/tensor.json')
@@ -51,8 +50,5 @@ with open('./param/aspifile/data_tension.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 print("\nDownloading 'plot_prog.py'...")
-# Un temps d'attente de 2 sec:
-print("Time wait 2 seconds...")
-time.sleep(1)
-# Lancement du programme plot_prog.py
+
 subprocess.call('./param/aspifile/plot/plot_prog.py')

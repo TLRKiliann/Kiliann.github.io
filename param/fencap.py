@@ -679,7 +679,7 @@ button2Write.grid(row=1, column=3)
 buttonDel = Button(gui)
 buttonDel.config(text='Reinitialize ALL !!!', width=15,
     bg='gray30', fg='cyan',
-    activebackground='red', activeforeground='black', command=delEvery)
+    activebackground='red', activeforeground='white', command=delEvery)
 buttonDel.grid(row=1, column=4)
 
 buttonWrite = Button(gui)
@@ -697,7 +697,7 @@ buttonMainlec.grid(row=3, column=3)
 buttonDel = Button(gui)
 buttonDel.config(text='Delete Main', width=15, 
     bg='coral', fg='yellow', activebackground='red',
-    activeforeground='black', command=delMain)
+    activeforeground='white', command=delMain)
 buttonDel.grid(row=3, column=4)
 
 # Buttons
@@ -745,43 +745,43 @@ button9Write.grid(row=10, column=3)
 
 button1Del = Button(gui)
 button1Del.config(text='Cancel last TA', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delTA)
 button1Del.grid(row=4, column=4)
 
 button2Del = Button(gui)
 button2Del.config(text='Cancel last Puls', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delPuls)
 button2Del.grid(row=5, column=4)
 
 button3Del = Button(gui)
 button3Del.config(text='Cancel last SaO2', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delSat)
 button3Del.grid(row=6, column=4)
 
 button4Del = Button(gui)
 button4Del.config(text='Cancel last FR', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delFreq)
 button4Del.grid(row=7, column=4)
 
 button5Del = Button(gui)
 button5Del.config(text='Cancel last T°C', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delTemp)
 button5Del.grid(row=8, column=4)
 
 button6Del = Button(gui)
 button6Del.config(text='Cancel last Hgt', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delGly)
 button6Del.grid(row=9, column=4)
 
 button7Del = Button(gui)
 button7Del.config(text='Cancel last Dlrs', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
 

@@ -2,9 +2,8 @@
 # -*- coding:utf-8 -*-
 
 
-import os
+import subprocess
 import json
-import time
 
 
 file = open('./param/aspifile2/dlr.json')
@@ -55,8 +54,5 @@ with open('./param/aspifile2/data_dlr.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 print("\nDownloading 'plot_prog.py'...")
-# Un temps d'attente de 2 sec:
-print("Time wait 2 seconds...")
-time.sleep(2)
-# Lancement du programme plot_dlr.py
-os.system('./param/aspifile2/plot/plot_dlr.py')
+
+subprocess.call('./param/aspifile2/plot/plot_dlr.py')

@@ -21,16 +21,16 @@ import shutil
 def writeData():
     """
     To export data in a json file
-    and launching aspiFile4.py
+    and launching aspiFile2.py
     """
     try:
-        if os.path.getsize('./param/Main4.txt'):
-            print("+ File 'Main4.txt' exist !")
+        if os.path.getsize('./param/Main2.txt'):
+            print("+ File 'Main2.txt' exist !")
     except FileNotFoundError as info:
-        print("The file : 'Main4.txt' doesn't exist !", info)
-        print("File 'Main4.txt' created !")
+        print("The file : 'Main2.txt' doesn't exist !", info)
+        print("File 'Main2.txt' created !")
     finally:
-        with open('./param/Main4.txt', 'a+') as file:
+        with open('./param/Main2.txt', 'a+') as file:
             file.write(str("Date: "))
             file.write(textDate.get() + '\n')
             file.write(str("Heure: "))
@@ -53,9 +53,9 @@ def writeData():
             file.write(textDlrs.get() +"/10\n\n")
 
     try:
-        if os.path.getsize('./param/aspifile4/tensor.json'):
+        if os.path.getsize('./param/aspifile2/tensor.json'):
             print("+ File 'tensor' exist !")
-            with open('./param/aspifile4/tensor.json', 'r') as datafile:
+            with open('./param/aspifile2/tensor.json', 'r') as datafile:
                 datastore = json.load(datafile)
                 print(datastore)
             dataTa = datastore
@@ -64,7 +64,7 @@ def writeData():
                 print("---Pas de VALEUR 'Tension' entrée---")
             else:
                 print("---Ok VALEUR 'Tension' entrée---")
-                with open('./param/aspifile4/tensor.json', 'w') as datafile2:
+                with open('./param/aspifile2/tensor.json', 'w') as datafile2:
                     json.dump(dataTa, datafile2, indent=4)
     except FileNotFoundError as outcom:
         print('+ Sorry, file tensor.json not exist !')
@@ -77,13 +77,13 @@ def writeData():
             print("---Pas de VALEUR 'Tension' entrée---")
         else:
             print("---Ok VALEUR 'Tension' entrée---")
-            with open('./param/aspifile4/tensor.json', 'w') as datafile:
+            with open('./param/aspifile2/tensor.json', 'w') as datafile:
                 json.dump(dataTa, datafile, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/puls.json'):
+        if os.path.getsize('./param/aspifile2/puls.json'):
             print("+ File 'puls' exist !")
-            with open('./param/aspifile4/puls.json', 'r') as datapuls:
+            with open('./param/aspifile2/puls.json', 'r') as datapuls:
                 datastore = json.load(datapuls)
                 print(datastore)
             dataP = datastore
@@ -92,7 +92,7 @@ def writeData():
                 print("---Pas de VALEUR 'Puls' entrée---")
             else:
                 print("---Ok VALEUR 'Puls' entrée---")
-                with open('./param/aspifile4/puls.json', 'w') as datapuls2:
+                with open('./param/aspifile2/puls.json', 'w') as datapuls2:
                     json.dump(dataP, datapuls2, indent=4)
     except FileNotFoundError as errorfile1:
         print('+ Sorry, file puls.json not exist !')
@@ -105,13 +105,13 @@ def writeData():
             print("---Pas de VALEUR 'Puls' entrée---")
         else:
             print("---Ok VALEUR 'Puls' entrée---")
-            with open('./param/aspifile4/puls.json', 'w') as datapuls3:
+            with open('./param/aspifile2/puls.json', 'w') as datapuls3:
                 json.dump(dataP, datapuls3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/sat.json'):
+        if os.path.getsize('./param/aspifile2/sat.json'):
             print("+ File 'sat' exist !")
-            with open('./param/aspifile4/sat.json', 'r') as datasat:
+            with open('./param/aspifile2/sat.json', 'r') as datasat:
                 datastore = json.load(datasat)
                 print(datastore)
             dataS = datastore
@@ -120,7 +120,7 @@ def writeData():
                 print("---Pas de VALEUR 'SaO2' entrée---")
             else:
                 print("---Ok VALEUR 'SaO2' entrée---")
-                with open('./param/aspifile4/sat.json', 'w') as datasat2:
+                with open('./param/aspifile2/sat.json', 'w') as datasat2:
                     json.dump(dataS, datasat2, indent=4)
     except FileNotFoundError as errorfile2:
         print('+ Sorry, file sat.json not exist !')
@@ -133,13 +133,13 @@ def writeData():
             print("---Pas de VALEUR 'SaO2' entrée---")
         else:
             print("---Ok VALEUR 'SaO2' entrée---")
-            with open('./param/aspifile4/sat.json', 'w') as datasat3:
+            with open('./param/aspifile2/sat.json', 'w') as datasat3:
                 json.dump(dataS, datasat3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/freq.json'):
+        if os.path.getsize('./param/aspifile2/freq.json'):
             print("+ File 'freq' exist !")
-            with open('./param/aspifile4/freq.json', 'r') as datafreq:
+            with open('./param/aspifile2/freq.json', 'r') as datafreq:
                 datastore = json.load(datafreq)
                 print(datastore)
             dataF = datastore
@@ -148,7 +148,7 @@ def writeData():
                 print("---Pas de VALEUR 'FR' entrée---")
             else:
                 print("---Ok VALEUR 'FR' entrée---")
-                with open('./param/aspifile4/freq.json', 'w') as datafreq2:
+                with open('./param/aspifile2/freq.json', 'w') as datafreq2:
                     json.dump(dataF, datafreq2, indent=4)
     except FileNotFoundError as errorfile3:
         print('+ Sorry, file freq.json not exist !')
@@ -161,13 +161,13 @@ def writeData():
             print("---Pas de VALEUR 'FR' entrée---")
         else:
             print("---Ok VALEUR 'FR' entrée---")
-            with open('./param/aspifile4/freq.json', 'w') as datafreq3:
+            with open('./param/aspifile2/freq.json', 'w') as datafreq3:
                 json.dump(dataF, datafreq3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/temp.json'):
+        if os.path.getsize('./param/aspifile2/temp.json'):
             print("+ File 'temp' exist !")
-            with open('./param/aspifile4/temp.json', 'r') as datatemp:
+            with open('./param/aspifile2/temp.json', 'r') as datatemp:
                 datastore = json.load(datatemp)
                 print(datastore)
             dataTe2 = datastore
@@ -176,7 +176,7 @@ def writeData():
                 print("---Pas de VALEUR 'Temperature' entrée---")
             else:
                 print("---Ok VALEUR 'Temperature' entrée---")
-                with open('./param/aspifile4/temp.json', 'w') as datatemp2:
+                with open('./param/aspifile2/temp.json', 'w') as datatemp2:
                     json.dump(dataTe2, datatemp2, indent=4)
     except FileNotFoundError as errorfile4:
         print('+ Sorry, file temp.json not exist !')
@@ -189,13 +189,13 @@ def writeData():
             print("---Pas de VALEUR 'Temperature' entrée---")
         else:
             print("---Ok VALEUR 'Temperature' entrée---")
-            with open('./param/aspifile4/temp.json', 'w') as datatemp3:
+            with open('./param/aspifile2/temp.json', 'w') as datatemp3:
                 json.dump(dataTe2, datatemp3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/gly.json'):
+        if os.path.getsize('./param/aspifile2/gly.json'):
             print("+ File 'gly' exist !")
-            with open('./param/aspifile4/gly.json', 'r') as datagly:
+            with open('./param/aspifile2/gly.json', 'r') as datagly:
                 datastore = json.load(datagly)
                 print(datastore)
             dataG = datastore
@@ -204,7 +204,7 @@ def writeData():
                 print("---Pas de VALEUR 'Glycemie' entrée---")
             else:
                 print("---Ok VALEUR 'Glycemie' entrée---")
-                with open('./param/aspifile4/gly.json', 'w') as datagly2:
+                with open('./param/aspifile2/gly.json', 'w') as datagly2:
                     json.dump(dataG, datagly2, indent=4)
     except FileNotFoundError as errorfile5:
         print('+ Sorry, file gly.json not exist !')
@@ -217,13 +217,13 @@ def writeData():
             print("---Pas de VALEUR 'Glycemie' entrée---")
         else:
             print("---Ok VALEUR 'Glycemie' entrée---")
-            with open('./param/aspifile4/gly.json', 'w') as datagly3:
+            with open('./param/aspifile2/gly.json', 'w') as datagly3:
                 json.dump(dataG, datagly3, indent=4)
 
     try:
-        if os.path.getsize('./param/aspifile4/dlr.json'):
+        if os.path.getsize('./param/aspifile2/dlr.json'):
             print("+ File 'dlr' exist !")
-            with open('./param/aspifile4/dlr.json', 'r') as datadlr:
+            with open('./param/aspifile2/dlr.json', 'r') as datadlr:
                 datastore = json.load(datadlr)
                 print(datastore)
             dataD = datastore
@@ -232,7 +232,7 @@ def writeData():
                 print("---Pas de VALEUR 'Douleurs' entrée---")
             else:
                 print("---Ok VALEUR 'Douleurs' entrée---")
-                with open('./param/aspifile4/dlr.json', 'w') as datadlr2:
+                with open('./param/aspifile2/dlr.json', 'w') as datadlr2:
                     json.dump(dataD, datadlr2, indent=4)
     except FileNotFoundError as errorfile6:
         print('+ Sorry, file dlr.json not exist !')
@@ -245,7 +245,7 @@ def writeData():
             print("---Pas de VALEUR 'Douleurs' entrée---")
         else:
             print("---Ok VALEUR 'Douleurs' entrée---")
-            with open('./param/aspifile4/dlr.json', 'w') as datadlr3:
+            with open('./param/aspifile2/dlr.json', 'w') as datadlr3:
                 json.dump(dataD, datadlr3, indent=4)
 
     label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() + 
@@ -257,7 +257,7 @@ def writeData():
         "\nAll data have been added in json files !")
 
 def mainRead():
-    subprocess.call('./param/main_read4.py')
+    subprocess.call('./param/main_read2.py')
 
 def appelTens():
     """
@@ -265,8 +265,8 @@ def appelTens():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/tensor.json'):
-            subprocess.call('./param/aspifile4/aspidata.py')
+        if os.path.getsize('./param/aspifile2/tensor.json'):
+            subprocess.call('./param/aspifile2/aspidata.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTension: " + textTa.get())
     except FileNotFoundError as errorgraph1:
@@ -279,8 +279,8 @@ def appelPuls():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/puls.json'):
-            subprocess.call('./param/aspifile4/aspipuls.py')
+        if os.path.getsize('./param/aspifile2/puls.json'):
+            subprocess.call('./param/aspifile2/aspipuls.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nPulsations: " + textPuls.get())
     except FileNotFoundError as errorgraph2:
@@ -293,8 +293,8 @@ def appelSat():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/sat.json'):
-            subprocess.call('./param/aspifile4/aspisat.py')
+        if os.path.getsize('./param/aspifile2/sat.json'):
+            subprocess.call('./param/aspifile2/aspisat.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nSaO2: " + textSa.get())
     except FileNotFoundError as errorgraph3:
@@ -307,8 +307,8 @@ def appelFreq():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/freq.json'):
-            subprocess.call('./param/aspifile4/aspifreq.py')
+        if os.path.getsize('./param/aspifile2/freq.json'):
+            subprocess.call('./param/aspifile2/aspifreq.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nFréqu. resp.: " + textFr.get())
     except FileNotFoundError as errorgraph4:
@@ -321,8 +321,8 @@ def appelTemp():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/temp.json'):
-            subprocess.call('./param/aspifile4/aspitemp.py')
+        if os.path.getsize('./param/aspifile2/temp.json'):
+            subprocess.call('./param/aspifile2/aspitemp.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nTempérature: " + textTemp.get())
     except FileNotFoundError as errorgraph5:
@@ -335,8 +335,8 @@ def appelGly():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/gly.json'):
-            subprocess.call('./param/aspifile4/aspigly.py')
+        if os.path.getsize('./param/aspifile2/gly.json'):
+            subprocess.call('./param/aspifile2/aspigly.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nGlycémie: " + textHgt.get())
     except FileNotFoundError as errorgraph6:
@@ -349,8 +349,8 @@ def appelDlr():
     and launching matplotlib graph
     """
     try:
-        if os.path.getsize('./param/aspifile4/dlr.json'):
-            subprocess.call('./param/aspifile4/aspidlr.py')
+        if os.path.getsize('./param/aspifile2/dlr.json'):
+            subprocess.call('./param/aspifile2/aspidlr.py')
             label['text'] = ("Date: " + textDate.get() +" -- "+ "Nom: " + textName.get() +
                 "\nDouleurs: " + textDlrs.get())
     except FileNotFoundError as errorgraph7:
@@ -359,16 +359,16 @@ def appelDlr():
 
 def delMain():
     """
-    To earase Main4.txt
+    To earase Main2.txt
     """
     Main_MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
-        "It will delete Main4.txt with all data !!!")
+        "It will delete Main2.txt with all data !!!")
     if Main_MsgBox == 'yes':
         try:
-            if os.path.getsize('./param/Main4.txt'):
-                os.remove('./param/Main4.txt')
-                label['text'] = "File Main4.txt has been deleted !"
-                print("+ File Main4.txt has been deleted !")
+            if os.path.getsize('./param/Main2.txt'):
+                os.remove('./param/Main2.txt')
+                label['text'] = "File Main2.txt has been deleted !"
+                print("+ File Main2.txt has been deleted !")
         except FileNotFoundError:
             label['text'] = "Sorry, file asked not exist !"
             print('+ Sorry, file asked not exist !')
@@ -382,14 +382,14 @@ def delTA():
     of tensor.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/tensor.json'):
-            with open('./param/aspifile4/tensor.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/tensor.json'):
+            with open('./param/aspifile2/tensor.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of TA deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/tensor.json', 'w') as file:
+            with open('./param/aspifile2/tensor.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'tensor.json' has been deleted !"
             print("Last value of 'tensor.json' has been deleted !")
@@ -403,14 +403,14 @@ def delPuls():
     of puls.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/puls.json'):
-            with open('./param/aspifile4/puls.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/puls.json'):
+            with open('./param/aspifile2/puls.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of Puls deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/puls.json', 'w') as file:
+            with open('./param/aspifile2/puls.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'puls.json' has been deleted !"
             print("Last value of 'puls.json' has been deleted !")
@@ -424,14 +424,14 @@ def delSat():
     of sat.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/sat.json'):
-            with open('./param/aspifile4/sat.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/sat.json'):
+            with open('./param/aspifile2/sat.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of SaO2 deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/sat.json', 'w') as file:
+            with open('./param/aspifile2/sat.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'sat.json' has been deleted !"
             print("Last value of 'sat.json' has been deleted !")
@@ -445,14 +445,14 @@ def delFreq():
     of freq.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/freq.json'):
-            with open('./param/aspifile4/freq.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/freq.json'):
+            with open('./param/aspifile2/freq.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of FR deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/freq.json', 'w') as file:
+            with open('./param/aspifile2/freq.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'freq.json' has been deleted !"
             print("Last value of 'freq.json' has been deleted !")
@@ -466,14 +466,14 @@ def delTemp():
     of temp.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/temp.json'):
-            with open('./param/aspifile4/temp.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/temp.json'):
+            with open('./param/aspifile2/temp.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of Temp deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/temp.json', 'w') as file:
+            with open('./param/aspifile2/temp.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'temp.json' has been deleted !"
             print("Last value of 'temp.json' has been deleted !")
@@ -487,14 +487,14 @@ def delGly():
     of gly.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/gly.json'):
-            with open('./param/aspifile4/gly.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/gly.json'):
+            with open('./param/aspifile2/gly.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of Gly deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/gly.json', 'w') as file:
+            with open('./param/aspifile2/gly.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'gly.json' has been deleted !"
             print("Last value of 'gly.json' has been deleted !")
@@ -508,14 +508,14 @@ def delDlr():
     of dlr.json
     """
     try:
-        if os.path.getsize('./param/aspifile4/dlr.json'):
-            with open('./param/aspifile4/dlr.json', 'r') as file:
+        if os.path.getsize('./param/aspifile2/dlr.json'):
+            with open('./param/aspifile2/dlr.json', 'r') as file:
                 data = json.load(file)
             for key, value in data.items():
                 print("Last value of Pain deleted")
                 print(value[-1])
                 del value[-1]
-            with open('./param/aspifile4/dlr.json', 'w') as file:
+            with open('./param/aspifile2/dlr.json', 'w') as file:
                 data = json.dump(data, file, indent=4)
             label['text'] = "Last value of 'dlr.json' has been deleted !"
             print("Last value of 'dlr.json' has been deleted !")
@@ -545,7 +545,7 @@ def delEvery():
 
 def updateData():
     """
-    Backup for Main4.txt/month
+    Backup for Main2.txt/month
     """
     listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
     "01/08/2020", "01/09/2020", "01/10/2020",
@@ -553,13 +553,13 @@ def updateData():
     for i in listeDate:
         if textDate.get() == i:
             print("Backup of file Main !")
-            shutil.copy('./param/Main4.txt', './Backup/BackupMain4.txt')
-            with open('./param/Main4.txt', 'w'): pass
+            shutil.copy('./param/Main2.txt', './Backup/BackupMain2.txt')
+            with open('./param/Main2.txt', 'w'): pass
         else:
             pass
 
 # To read name of patient for entry widget
-with open('./newpatient/entryfile4.txt', 'r') as filename:
+with open('./newpatient/entryfile2.txt', 'r') as filename:
     line1=filename.readline()
 
 gui = Tk()
@@ -775,13 +775,13 @@ button5Del.grid(row=8, column=4)
 
 button6Del = Button(gui)
 button6Del.config(text='Cancel last Hgt', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delGly)
 button6Del.grid(row=9, column=4)
 
 button7Del = Button(gui)
 button7Del.config(text='Cancel last Dlrs', width=15,
-    bg='coral', fg='yellow', activeforeground='black',
+    bg='coral', fg='yellow', activeforeground='white',
     activebackground='red', command=delDlr)
 button7Del.grid(row=10, column=4)
 

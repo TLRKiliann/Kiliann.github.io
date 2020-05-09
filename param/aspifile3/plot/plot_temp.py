@@ -9,7 +9,7 @@ import os
 
 print("\nListe1 = dates :")
 print("--------------")
-fileO = open('./param/aspifile3/data_datetemp.json')3
+fileO = open('./param/aspifile3/data_datetemp.json')
 list1 = json.load(fileO)
 #f.close
 
@@ -19,7 +19,7 @@ for letter in list1:
 print("\nList2 = temperatures :")
 print("--------------------")
 
-fileO = open('./param/aspifile3/data_temp.json')3
+fileO = open('./param/aspifile3/data_temp.json')
 list2 = json.load(fileO)
 #f.close
 
