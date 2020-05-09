@@ -1,0 +1,28 @@
+Date : 09/05/2020
+Heure : 13:45:56
+Name : Jimmy
+
+Date of introduction : 09 May 2020
+Nom du ttt : Nexium
+Dosage du ttt : 40mg
+Matin : 1
+
+
+
+Date of end : 28 May 2020
+Signature : ec
+
+Date : 09/05/2020
+Heure : 13:45:56
+Name : Jimmy
+
+Date of introduction : 09 May 2020
+Nom du ttt : Leponex
+Dosage du ttt : 100mg
+Matin : 1
+Midi : 2
+Soir : 1
+Nuit : 3
+Date of end : 28 May 2020
+Signature : ec
+

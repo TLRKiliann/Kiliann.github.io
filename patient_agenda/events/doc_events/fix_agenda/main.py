@@ -36,7 +36,7 @@ def searchExpress():
             if mot in line:
                 print(lines[a])
                 print(lines[a+1])
-                textBox.insert(INSERT, "With modification of date :\n")
+                textBox.insert(INSERT, "\nWith modification of appointment :\n")
                 textBox.insert(INSERT, lines[a])
                 textBox.insert(INSERT, lines[a+1])
                 textBox.insert(INSERT, lines[a+2])
@@ -98,7 +98,7 @@ def reorderFile():
             if magicword in line:
                 print(lines[a])
                 print(lines[a+1])
-                textBox.insert(INSERT, "With modification of date :\n")
+                textBox.insert(INSERT, "\nWith modification of date :\n")
                 textBox.insert(INSERT, lines[a])
                 textBox.insert(INSERT, lines[a+1])
                 textBox.insert(INSERT, lines[a+2])

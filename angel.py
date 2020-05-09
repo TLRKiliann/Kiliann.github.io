@@ -4,9 +4,11 @@
 
 from tkinter import *
 from tkinter import messagebox
-#from tkinter import filedialog
+from tkinter import filedialog
+import time
 import os
 import subprocess
+import shutil
 
 
 # La ScrollBar in class and preparing for main application !
@@ -454,6 +456,8 @@ class MenuBar(Frame):
         # drop-down portion of Graphics menu
         me1 = Menu(self.cmd_Graph)
         me2=Menu(me1)
+        me2.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
         me2.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph)
         me2.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -465,6 +469,8 @@ class MenuBar(Frame):
         me1.add_separator()
 
         me3=Menu(me1)
+        me3.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
         me3.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph2)
         me3.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -476,6 +482,8 @@ class MenuBar(Frame):
         me1.add_separator()
 
         me4=Menu(me1)
+        me4.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
         me4.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph3)
         me4.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -487,6 +495,8 @@ class MenuBar(Frame):
         me1.add_separator()
 
         me5=Menu(me1)
+        me5.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
         me5.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph4)
         me5.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -498,6 +508,8 @@ class MenuBar(Frame):
         me1.add_separator()
 
         me6=Menu(me1)
+        me6.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
         me6.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph5)
         me6.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -509,6 +521,8 @@ class MenuBar(Frame):
         me1.add_separator()
 
         me7=Menu(me1)
+        me7.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
         me7.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph6)
         me7.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -521,6 +535,8 @@ class MenuBar(Frame):
 
         # Menu cascade extraordinaire !!!
         me8=Menu(me1)
+        me8.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
+                foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
         me8.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.visualGraph7)
         me8.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
@@ -528,7 +544,7 @@ class MenuBar(Frame):
         me8.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
-        me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
+        me8.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me8)
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
@@ -694,7 +710,18 @@ class Application(Frame):
         self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
             font=('Times New Roman', 40), fill='aquamarine')
-        
+
+        self.x1, self.y1 = 1100, 50
+        self.Date_write=Entry(self.can)
+        self.data_time=StringVar()
+        self.Date_write=Entry(textvariable=self.data_time, width=10,
+            highlightbackground='gray', bd=4)
+        self.data_time.set(time.strftime("%d/%m/%Y"))
+        self.Date_write=self.can.create_window(self.x1, self.y1,
+            window=self.Date_write)
+        # To backup
+        self.updateFiletxt()
+
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
         self.b100=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
@@ -727,7 +754,7 @@ class Application(Frame):
         with open('./newpatient/entryfile.txt', 'r') as namefile:
             line1=namefile.readline()
         
-        self.new_data1=line1
+        self.data_time=line1
         self.x2, self.y2 = 129, 200
         self.Data_write=Entry(self.can)
         self.new_data1=StringVar()
@@ -1539,6 +1566,48 @@ class Application(Frame):
     def extStake7(self):
         subprocess.call('./stackeholders/exstacke_patient7.py')
 
+    # All file backup
+    def allFilesBackup(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files1", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup2(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files2", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup3(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files3", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup4(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files4", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup5(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files5", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup6(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files6", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
+        # All file backup
+    def allFilesBackup7(self):
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files7", title = "Select file", 
+            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print (filename)
+
     def globEye(self):
         subprocess.call('./global_eye/angel_eye1.py')
 
@@ -1603,6 +1672,39 @@ class Application(Frame):
 
     def nutritionMenu7(self):
         subprocess.call('./nutrition/nutrit_patient7.py')
+
+    def updateFiletxt(self):
+        listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
+        "01/08/2020", "01/09/2020", "01/10/2020", "01/11/2020",
+        "01/12/2020"]
+        for i in listeDate:
+            if time.strftime("%d/%m/%Y") == i:
+                print("Backup of Main files !")
+                shutil.copy('./param/Main.txt', './Backup/Files1/BackupMainparam.txt')
+                shutil.copy('./param/Main2.txt', './Backup/Files2/BackupMainparam.txt')
+                shutil.copy('./param/Main3.txt', './Backup/Files3/BackupMainparam.txt')
+                shutil.copy('./param/Main4.txt', './Backup/Files4/BackupMainparam.txt')
+                shutil.copy('./param/Main5.txt', './Backup/Files5/BackupMainparam.txt')
+                shutil.copy('./param/Main6.txt', './Backup/Files6/BackupMainparam.txt')
+                shutil.copy('./param/Main7.txt', './Backup/Files7/BackupMainparam.txt')
+                print("Backup of Bmi files !")
+                shutil.copy('./calBmi/bmi.txt', './Backup/Files1/BackupBmi.txt')
+                shutil.copy('./calBmi/bmi2.txt', './Backup/Files2/BackupBmi2.txt')
+                shutil.copy('./calBmi/bmi3.txt', './Backup/Files3/BackupBmi3.txt')
+                shutil.copy('./calBmi/bmi4.txt', './Backup/Files4/BackupBmi4.txt')
+                shutil.copy('./calBmi/bmi5.txt', './Backup/Files5/BackupBmi5.txt')
+                shutil.copy('./calBmi/bmi6.txt', './Backup/Files6/BackupBmi6.txt')
+                shutil.copy('./calBmi/bmi7.txt', './Backup/Files7/BackupBmi7.txt')
+                print("Backup of Treatments files !")
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt', './Backup/Files1/Backupttt.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt2.txt', './Backup/Files2/Backupttt2.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt3.txt', './Backup/Files3/Backupttt3.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt4.txt', './Backup/Files4/Backupttt4.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt5.txt', './Backup/Files5/Backupttt5.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt6.txt', './Backup/Files6/Backupttt6.txt')
+                shutil.copy('./ttt/doc_ttt/intro_ttt.txt7.txt', './Backup/Files7/Backupttt7.txt')
+            else:
+                pass
 
     def upDateAll(self):
         self.master.destroy()

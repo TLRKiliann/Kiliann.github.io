@@ -115,22 +115,6 @@ def viewGraphicKilo():
 def readBmi():
     subprocess.call('./calBmi/bmi_read6.py')
 
-def updateData():
-    """
-    Backup for Main.txt/month
-    """
-    listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
-    "01/08/2020", "01/09/2020", "01/10/2020",
-    "01/11/2020","01/12/2020"]
-    for i in listeDate:
-        if textDate.get() == i:
-            print("Backup of file Bmi !")
-            shutil.copy('./calBmi/bmi6.txt', './Backup/BackupBmi6.txt')
-            #with open('./calBmi/bmi6.txt', 'w'): 
-            #    pass
-        else:
-            pass
-
 def buttdel():
     """
     To earase last line 
@@ -204,7 +188,6 @@ time_string = IntVar()
 textDate = Entry(textvariable=time_string, highlightbackground='gray', bd=4)
 time_string.set(time.strftime("%d/%m/%Y"))
 textDate.grid(row=1, column=2)
-updateData()
 
 textHour = Entry(gui)
 time_Htring = IntVar()

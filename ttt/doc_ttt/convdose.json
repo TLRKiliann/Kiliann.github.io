@@ -1,0 +1,26 @@
+{
+    "data": [
+        {
+            "Date": "09/05/2020",
+            "Date of introduction": "09 May 2020",
+            "Date of end": "28 May 2020",
+            "Traitement": "Nexium",
+            "Dosage": "40mg",
+            "Matin": "1",
+            "Midi": "",
+            "Soir": "",
+            "Nuit": ""
+        },
+        {
+            "Date": "09/05/2020",
+            "Date of introduction": "09 May 2020",
+            "Date of end": "28 May 2020",
+            "Traitement": "Leponex",
+            "Dosage": "100mg",
+            "Matin": "1",
+            "Midi": "2",
+            "Soir": "1",
+            "Nuit": "3"
+        }
+    ]
+}
