@@ -90,6 +90,9 @@ class Application(Frame):
             print("+ Sorry, file 'auxsrcfile7.txt' not exist !", outmsg)
             print("+ File auxsrcfile7.txt created !")
             subprocess.call('./auxsrc/doc_auxsrc7/aux_write.py')
+            with open('./auxsrc/doc_auxsrc7/resultvmed.txt', 'w') as file:
+                file.write(".")
+            self.confRec()
 
     # Func to read
     def lectureFic(self):
@@ -99,11 +102,13 @@ class Application(Frame):
                 subprocess.call('./auxsrc/doc_auxsrc7/aux_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'auxsrcfile7.txt' not exist !", outcom)
+            with open('./auxsrc/doc_auxsrc7/resultvmed.txt', 'w') as file:
+                file.write(".")
             self.confRec()
 
     def confRec(self):
         self.MsgBox2msg = messagebox.showinfo("Warning", "File 'auxsrcfile7.txt'"
-            "was not created. No Medical Visit has been checked !")
+            "was created, but no Aux. Resource has been checked !")
 
 if __name__=='__main__':
     app = Application()
