@@ -86,11 +86,37 @@ class Application(Frame):
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def Frame_Ap1(self):
-        subprocess.call('./diag/doc_diag2/diag_write.py')
+        """
+        To verify and write in diag file
+        """
+        try:
+            if os.path.getsize('./diag/doc_diag2/diagrecap.txt'):
+                print("+ File 'Diag' exist (add)!")
+                subprocess.call('./diag/doc_diag2/diag_write.py')
+        except FileNotFoundError as outmsg:
+            print("+ Sorry, file 'Diag' not exist !", outmsg)
+            print("+ File VMED created !")
+            with open('./diag/doc_diag2/diagrecap.txt', 'w') as file:
+                file.write(".")
+            self.confRec()
 
     def Frame_Ap2(self):
-        subprocess.call('./diag/doc_diag2/diag_read.py')
+        """
+        To verify and read diag file
+        """
+        try:
+            if os.path.getsize('./diag/doc_diag2/diagrecap.txt'):
+                print("+ File 'Diag' exist (read)!")
+                subprocess.call('./diag/doc_diag2/diag_read.py')
+        except FileNotFoundError as outcom:
+            print("+ Sorry, file 'Diag' not exist !", outcom)
+            with open('./diag/doc_diag2/diagrecap.txt', 'w') as file:
+                file.write(".")
+            self.confRec()
 
+    def confRec(self):
+        self.MsgBox2msg = messagebox.showinfo("Warning", "File 'Diag'"
+            "was created, but no Medical Visit has been checked !")
 
 if __name__=='__main__':
     app = Application()
