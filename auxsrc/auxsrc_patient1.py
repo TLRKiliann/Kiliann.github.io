@@ -90,7 +90,7 @@ class Application(Frame):
             print("+ Sorry, file 'auxsrcfile.txt' not exist !", outmsg)
             print("+ File auxsrcfile1.txt created !")
             subprocess.call('./auxsrc/doc_auxsrc/aux_write.py')
-            with open('./auxsrc/doc_auxsrc/resultvmed.txt', 'w') as file:
+            with open('./auxsrc/doc_auxsrc/auxsrcfile1.txt', 'w') as file:
                 file.write(".")
             self.confRec()
 
@@ -102,7 +102,7 @@ class Application(Frame):
                 subprocess.call('./auxsrc/doc_auxsrc/aux_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'auxsrcfile1.txt' not exist !", outcom)
-            with open('./auxsrc/doc_auxsrc/resultvmed.txt', 'w') as file:
+            with open('./auxsrc/doc_auxsrc/auxsrcfile1.txt', 'w') as file:
                 file.write(".")
             self.confRec()
 

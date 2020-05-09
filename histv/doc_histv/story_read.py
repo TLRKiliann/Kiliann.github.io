@@ -31,7 +31,7 @@ labelallergy=Label(fen, text="Allergy",
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
-with open('./newpatient/entryfile2.txt', 'r') as filename:
+with open('./newpatient/entryfile.txt', 'r') as filename:
     line1=filename.readline()
 
 text_name=StringVar()
@@ -40,7 +40,7 @@ Entryname=Entry(fen, textvariable=text_name)
 Entryname.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 # To read allergy in Entry widget
-with open('./allergy/allergyfile2.txt', 'r') as allerfile:
+with open('./allergy/allergyfile.txt', 'r') as allerfile:
     lineA1=allerfile.readline()
     lineA2=allerfile.readline()
     lineA3=allerfile.readline()
@@ -62,7 +62,7 @@ buttonClose=Button(fen, text="Quit", fg='cyan', width=10,
     activeforeground='navy', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./histv/doc_histv2/Hvie_patient1.txt',
+importationFile('./histv/doc_histv/Hvie_patient1.txt',
     encodage="Utf-8")
 
 fen.mainloop()

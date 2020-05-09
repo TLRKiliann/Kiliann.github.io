@@ -1,2 +1,7 @@
 
 ---
+
+Date : 09/05/2020
+Nom du patient : Jimmy
+# Mg value and treatment : (add what the patient needs)
+# Uric acid value and treatment : (add what the patient needs)

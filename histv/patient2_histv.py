@@ -3,7 +3,9 @@
 
 
 from tkinter import *
+from tkinter import messagebox
 import subprocess
+import os
 
 
 # La ScrollBar en class! Préparation pour l'application.

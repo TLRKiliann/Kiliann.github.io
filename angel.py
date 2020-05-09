@@ -565,7 +565,7 @@ class MenuBar(Frame):
 class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='gray22', padx=20, pady=20, relief=GROOVE)
-        self.master.title('ANGEL-VISION - Developed by CK - Dec. 2020')
+        self.master.title('ANGEL-VISION - Developed by CK - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
@@ -1674,7 +1674,7 @@ class Application(Frame):
         subprocess.call('./nutrition/nutrit_patient7.py')
 
     def updateFiletxt(self):
-        listeDate = ["09/05/2020", "01/06/2020", "01/07/2020",
+        listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
         "01/08/2020", "01/09/2020", "01/10/2020", "01/11/2020",
         "01/12/2020"]
         for i in listeDate:
