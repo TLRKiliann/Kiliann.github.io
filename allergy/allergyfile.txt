@@ -8,3 +8,35 @@ Groundnut
 ----------------
 Cereals
 ----------------
+Gluten intolerance
+----------------
+Lactose intolerance
+----------------
+Saccharose intolerance
+----------------
+Fructose intolerance
+----------------
+Eggs
+----------------
+Fish
+----------------
+Shellfish
+----------------
+Molluscs
+----------------
+Groundnut
+----------------
+Oleaginous
+----------------
+Sesame
+----------------
+Soya
+----------------
+Cereals
+----------------
+Latex
+----------------
+Rosacea
+----------------
+Umbellifers
+----------------

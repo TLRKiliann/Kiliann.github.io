@@ -10,3 +10,7 @@ En date du : 09/05/2020 à 13:45:33 :
 Date : 09/05/2020
 Nom du patient : Jimmy
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+Date : 09/05/2020
+Nom du patient : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

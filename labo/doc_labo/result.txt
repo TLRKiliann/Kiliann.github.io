@@ -5,3 +5,8 @@ Date : 09/05/2020
 Nom du patient : Jimmy
 # Mg value and treatment : (add what the patient needs)
 # Uric acid value and treatment : (add what the patient needs)
+
+Date : 09/05/2020
+Nom du patient : Jimmy
+# Iron value and treatment : (add what the patient needs)
+# Ferritine value and treatment : (add what the patient needs)
