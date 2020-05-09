@@ -32,6 +32,17 @@
             "Midi": "",
             "Soir": "",
             "Nuit": "1"
+        },
+        {
+            "Date": "09/05/2020",
+            "Date of introduction": "05 April 2020",
+            "Date of end": "06 August 2020",
+            "Traitement": "Drug",
+            "Dosage": "mcg/ml/mg/UI/gttes",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "1",
+            "Nuit": ""
         }
     ]
 }

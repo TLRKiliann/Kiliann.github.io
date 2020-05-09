@@ -544,7 +544,7 @@ class MenuBar(Frame):
         me8.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
-        me8.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
+        me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
                         activeforeground='black', activebackground='cyan', menu=me8)
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
@@ -1674,19 +1674,19 @@ class Application(Frame):
         subprocess.call('./nutrition/nutrit_patient7.py')
 
     def updateFiletxt(self):
-        listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
+        listeDate = ["09/05/2020", "01/06/2020", "01/07/2020",
         "01/08/2020", "01/09/2020", "01/10/2020", "01/11/2020",
         "01/12/2020"]
         for i in listeDate:
             if time.strftime("%d/%m/%Y") == i:
                 print("Backup of Main files !")
                 shutil.copy('./param/Main.txt', './Backup/Files1/Backup_Mainparam.txt')
-                shutil.copy('./param/Main2.txt', './Backup/Files2/Backup_Mainparam.txt')
-                shutil.copy('./param/Main3.txt', './Backup/Files3/Backup_Mainparam.txt')
-                shutil.copy('./param/Main4.txt', './Backup/Files4/Backup_Mainparam.txt')
-                shutil.copy('./param/Main5.txt', './Backup/Files5/Backup_Mainparam.txt')
-                shutil.copy('./param/Main6.txt', './Backup/Files6/Backup_Mainparam.txt')
-                shutil.copy('./param/Main7.txt', './Backup/Files7/Backup_Mainparam.txt')
+                shutil.copy('./param/Main2.txt', './Backup/Files2/Backup_Mainparam2.txt')
+                shutil.copy('./param/Main3.txt', './Backup/Files3/Backup_Mainparam3.txt')
+                shutil.copy('./param/Main4.txt', './Backup/Files4/Backup_Mainparam4.txt')
+                shutil.copy('./param/Main5.txt', './Backup/Files5/Backup_Mainparam5.txt')
+                shutil.copy('./param/Main6.txt', './Backup/Files6/Backup_Mainparam6.txt')
+                shutil.copy('./param/Main7.txt', './Backup/Files7/Backup_Mainparam7.txt')
                 print("Backup of Bmi files !")
                 shutil.copy('./calBmi/bmi.txt', './Backup/Files1/Backup_Bmi.txt')
                 shutil.copy('./calBmi/bmi2.txt', './Backup/Files2/Backup_Bmi2.txt')
@@ -1697,12 +1697,12 @@ class Application(Frame):
                 shutil.copy('./calBmi/bmi7.txt', './Backup/Files7/Backup_Bmi7.txt')
                 print("Backup of Treatments files !")
                 shutil.copy('./ttt/doc_ttt/intro_ttt.txt', './Backup/Files1/Backup_ttt.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt2.txt', './Backup/Files2/Backup_ttt2.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt3.txt', './Backup/Files3/Backup_ttt3.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt4.txt', './Backup/Files4/Backup_ttt4.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt5.txt', './Backup/Files5/Backup_ttt5.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt6.txt', './Backup/Files6/Backup_ttt6.txt')
-                shutil.copy('./ttt/doc_ttt/intro_ttt7.txt', './Backup/Files7/Backup_ttt7.txt')
+                shutil.copy('./ttt/doc_ttt2/intro_ttt.txt', './Backup/Files2/Backup_ttt2.txt')
+                shutil.copy('./ttt/doc_ttt3/intro_ttt.txt', './Backup/Files3/Backup_ttt3.txt')
+                shutil.copy('./ttt/doc_ttt4/intro_ttt.txt', './Backup/Files4/Backup_ttt4.txt')
+                shutil.copy('./ttt/doc_ttt5/intro_ttt.txt', './Backup/Files5/Backup_ttt5.txt')
+                shutil.copy('./ttt/doc_ttt6/intro_ttt.txt', './Backup/Files6/Backup_ttt6.txt')
+                shutil.copy('./ttt/doc_ttt7/intro_ttt.txt', './Backup/Files7/Backup_ttt7.txt')
                 print("Backup of Diagnosis files !")
                 shutil.copy('./diag/doc_diag/diagrecap.txt', './Backup/Files1/Backup_diag.txt')
                 shutil.copy('./diag/doc_diag2/diagrecap.txt', './Backup/Files2/Backup_diag2.txt')
@@ -1720,7 +1720,7 @@ class Application(Frame):
                 shutil.copy('./vmed/doc_vmed6/resultvmed.txt', './Backup/Files6/Backupv_med6.txt')
                 shutil.copy('./vmed/doc_vmed7/resultvmed.txt', './Backup/Files7/Backupv_med7.txt')
                 print("Backup of Care and Monitoring files !")
-                shutil.copy('./14besoins/doc_suivi/patient_14b.txt', './Backup/Files1/Backup_careneeds.txt')
+                shutil.copy('./14besoins/doc_suivi/patient1_14b.txt', './Backup/Files1/Backup_careneeds.txt')
                 shutil.copy('./14besoins/doc_suivi2/patient2_14b.txt', './Backup/Files2/Backup_careneeds2.txt')
                 shutil.copy('./14besoins/doc_suivi3/patient3_14b.txt', './Backup/Files3/Backup_careneeds3.txt')
                 shutil.copy('./14besoins/doc_suivi4/patient4_14b.txt', './Backup/Files4/Backup_careneeds4.txt')
@@ -1729,12 +1729,12 @@ class Application(Frame):
                 shutil.copy('./14besoins/doc_suivi7/patient7_14b.txt', './Backup/Files7/Backup_careneeds7.txt')
                 print("Backup of Aux. Res. files !")
                 shutil.copy('./auxsrc/doc_auxsrc/auxsrcfile1.txt', './Backup/Files1/Backup_auxsrc.txt')
-                shutil.copy('./auxsrc/doc_auxsrc2/auxsrcfile1.txt', './Backup/Files2/Backup_auxsrc2.txt')
-                shutil.copy('./auxsrc/doc_auxsrc3/auxsrcfile1.txt', './Backup/Files3/Backup_auxsrc3.txt')
-                shutil.copy('./auxsrc/doc_auxsrc4/auxsrcfile1.txt', './Backup/Files4/Backup_auxsrc4.txt')
-                shutil.copy('./auxsrc/doc_auxsrc5/auxsrcfile1.txt', './Backup/Files5/Backup_auxsrc5.txt')
-                shutil.copy('./auxsrc/doc_auxsrc6/auxsrcfile1.txt', './Backup/Files6/Backup_auxsrc6.txt')
-                shutil.copy('./auxsrc/doc_auxsrc7/auxsrcfile1.txt', './Backup/Files7/Backup_auxsrc7.txt')
+                shutil.copy('./auxsrc/doc_auxsrc2/auxsrcfile2.txt', './Backup/Files2/Backup_auxsrc2.txt')
+                shutil.copy('./auxsrc/doc_auxsrc3/auxsrcfile3.txt', './Backup/Files3/Backup_auxsrc3.txt')
+                shutil.copy('./auxsrc/doc_auxsrc4/auxsrcfile4.txt', './Backup/Files4/Backup_auxsrc4.txt')
+                shutil.copy('./auxsrc/doc_auxsrc5/auxsrcfile5.txt', './Backup/Files5/Backup_auxsrc5.txt')
+                shutil.copy('./auxsrc/doc_auxsrc6/auxsrcfile6.txt', './Backup/Files6/Backup_auxsrc6.txt')
+                shutil.copy('./auxsrc/doc_auxsrc7/auxsrcfile7.txt', './Backup/Files7/Backup_auxsrc7.txt')
                 print("Backup of Story Life files !")
                 shutil.copy('./histv/doc_histv/Hvie_patient1.txt', './Backup/Files1/Back_upstory.txt')
                 shutil.copy('./histv/doc_histv2/Hvie_patient1.txt', './Backup/Files2/Back_upstory2.txt')
