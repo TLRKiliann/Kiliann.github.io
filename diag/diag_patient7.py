@@ -95,7 +95,7 @@ class Application(Frame):
                 subprocess.call('./diag/doc_diag7/diag_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'Diag' not exist !", outmsg)
-            print("+ File VMED created !")
+            print("+ File diag.txt created !")
             with open('./diag/doc_diag7/diagrecap.txt', 'w') as file:
                 file.write(".")
             self.confRec()
@@ -116,7 +116,7 @@ class Application(Frame):
 
     def confRec(self):
         self.MsgBox2msg = messagebox.showinfo("Warning", "File 'Diag'"
-            "was created, but no Medical Visit has been checked !")
+            "was created, but no Diagnosis has been checked !")
 
 if __name__=='__main__':
     app = Application()
