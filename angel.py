@@ -45,29 +45,24 @@ class MenuBar(Frame):
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
-        me1.add_separator()
-        me1.add_command(label='Accueil', underline=0, background='black',
-            activebackground='aquamarine',
+        me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"), 
+            background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.secondPage)
-        me1.add_separator()
-        me1.add_command(label="Synopsis", underline=0, background='black',
-            activebackground='cyan',
+        me1.add_command(label="Synopsis", underline=0, font=("Times 14 bold"), 
+            background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showsynopsis)
-        me1.add_separator()
-        me1.add_command(label="Psychotabs", underline=0, background='black', 
-            activebackground='cyan',
+        me1.add_command(label="Psychotabs", underline=0, font=("Times 14 bold"), 
+            background='black',  activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
-        me1.add_separator()
-        me1.add_command(label='Install', background='black',
-            activebackground='aquamarine',
+        me1.add_command(label='Install', font=("Times 14 bold"), 
+            background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
-        me1.add_separator()
-        me1.add_command(label='QUIT', underline=0, background='black',
-            activebackground='red',
+        me1.add_command(label='QUIT', font=("Times 14 bold"), 
+            background='black', activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
         # Integration of 1st menu
@@ -727,7 +722,7 @@ class Application(Frame):
         self.data_time=StringVar()
         self.Date_write=Entry(textvariable=self.data_time, width=10,
             highlightbackground='grey', bd=4)
-        self.data_time.set(time.strftime("%H:%M:%S"))
+        self.data_time.set(time.strftime("%H:%M:%S %p"))
         self.Date_write=self.can.create_window(self.x1, self.y1,
             window=self.Date_write)
 
@@ -1173,6 +1168,12 @@ class Application(Frame):
             text="Ext. stacke.", command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
 
+        self.x63, self.y63 = 625, 600
+        self.t63=Text(self.can, height=15, width=60, font=18, relief=SUNKEN)
+        self.t63.insert(INSERT, "News : ")
+        self.t63.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
+        self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
+
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     # For new entry
@@ -1180,11 +1181,11 @@ class Application(Frame):
         subprocess.call('./newpatient/entrypytientfile.py')
 
     def delEverPat(self):
-    	subprocess.call('./deletepatient/deleverything.py')
+        subprocess.call('./deletepatient/deleverything.py')
 
     def addPatientAfter(self):
-    	messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
-    	subprocess.call('./newpatient/torecord.py')
+        messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
+        subprocess.call('./newpatient/torecord.py')
     # Admin
     def adminDir(self):
         subprocess.call('./admin/fic_admin1.py')
