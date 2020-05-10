@@ -34,12 +34,6 @@ def lectureFic():
             print(f2read.read())
     subprocess.call('./histv/doc_histv2/story_read.py')
 
-def ajouterText():
-    textBox.delete('1.0', END)
-    textBox.insert(INSERT, "En date du: ")
-    textBox.insert(END, time.strftime("%d/%m/%Y") + " :\n")
-    textBox.update()
-
 root=Tk()
 root.title("Life story")
 root.configure(background='gray17')
@@ -92,12 +86,7 @@ buttonLire=Button(root, text="Read", fg='cyan', bg='gray30',
     command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonAjouter=Button(root, text="1-Add", fg='yellow', bg='gray30',
-    activebackground='dark turquoise', activeforeground='navy',
-    command=ajouterText)
-buttonAjouter.pack(side='left', padx=10, pady=10)
-
-buttonEnter=Button(root, text="2-Save", fg='yellow', bg='gray30',
+buttonEnter=Button(root, text="Save", fg='yellow', bg='gray30',
     activebackground='dark turquoise', activeforeground='navy',
     command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
