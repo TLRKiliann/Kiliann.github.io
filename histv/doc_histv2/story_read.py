@@ -22,7 +22,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Life story : ", width=20,
+labelo=Label(fen, text="Life story : ",
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
