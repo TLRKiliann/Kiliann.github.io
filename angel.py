@@ -30,10 +30,10 @@ class ScrollCanvas(Frame):
 class MenuBar(Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
+        Frame.__init__(self, borderwidth=5, bg='dim grey', padx=0)
         # 1st menu
         fileMenu = Menubutton(self, text='Menu', fg='white',
-            bg='gray30', relief=GROOVE)
+            bg='grey30', relief=GROOVE)
         new_text=StringVar()
         new_text2=StringVar()
         new_text3=StringVar()
@@ -126,7 +126,7 @@ class MenuBar(Frame):
 
         
         # Menu administrative
-        self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Admin=Menubutton(self, text='Admin', fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Admin.pack(side=LEFT, padx=3)
         # Partie déroulante du menu administrative
         me2 = Menu(self.cmd_Admin)
@@ -162,7 +162,7 @@ class MenuBar(Frame):
         self.cmd_Admin.configure(activeforeground='black', activebackground='cyan', menu=me2)
 
         # Agenda menu
-        self.cmd_agenda=Menubutton(self, text='Agenda', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_agenda=Menubutton(self, text='Agenda', fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(self.cmd_agenda)
         # Partie déroulante du menu agenda
@@ -197,7 +197,7 @@ class MenuBar(Frame):
         self.cmd_agenda.configure(activeforeground='black', activebackground='cyan', menu=me3)
 
         # 14 besoins menu
-        self.cmd_Besoins=Menubutton(self, text='14 needs', fg='cyan', bg='gray30',
+        self.cmd_Besoins=Menubutton(self, text='14 needs', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
@@ -233,7 +233,7 @@ class MenuBar(Frame):
         self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
 
         # Helth and care menu
-        self.cmd_Soins=Menubutton(self, text='Care and monitoring', fg='cyan', bg='gray30',
+        self.cmd_Soins=Menubutton(self, text='Care and monitoring', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -269,7 +269,7 @@ class MenuBar(Frame):
         self.cmd_Soins.configure(activeforeground='black', activebackground='cyan', menu=meSoins)
 
         # Treatments
-        self.cmd_ttt=Menubutton(self, text='Treatments', fg='cyan', bg='gray30',
+        self.cmd_ttt=Menubutton(self, text='Treatments', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
@@ -306,7 +306,7 @@ class MenuBar(Frame):
             menu=meTtt)
 
         # Vital parameters menu
-        self.cmd_Param=Menubutton(self, text='Vital Parameters', fg='cyan', bg='gray30',
+        self.cmd_Param=Menubutton(self, text='Vital Parameters', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
@@ -343,7 +343,7 @@ class MenuBar(Frame):
             menu=menuParam)
 
         # BMI menu
-        self.cmd_BMI=Menubutton(self, text='Body Mass Indice', fg='cyan', bg='gray30',
+        self.cmd_BMI=Menubutton(self, text='Body Mass Indice', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
@@ -379,7 +379,7 @@ class MenuBar(Frame):
         self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', menu=meBmi)
 
         # Medical Visite
-        self.cmd_Vmed=Menubutton(self, text='Medical Visit', fg='cyan', bg='gray30',
+        self.cmd_Vmed=Menubutton(self, text='Medical Visit', fg='cyan', bg='grey30',
             relief=GROOVE)
         self.cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
@@ -415,7 +415,7 @@ class MenuBar(Frame):
         self.cmd_Vmed.configure(activeforeground='black', activebackground='cyan', menu=meVmed)
 
         # Nutrition menu for intolerance and hate meals
-        self.cmd_Print=Menubutton(self, text='Intolerance All.', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Print=Menubutton(self, text='Intolerance All.', fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
         mePrint = Menu(self.cmd_Print)
@@ -451,7 +451,7 @@ class MenuBar(Frame):
             menu=mePrint)
 
         # Menu for showing all Graphs togather per patient 
-        self.cmd_Graph=Menubutton(self, text='Global', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Graph=Menubutton(self, text='Global', fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Graph.pack(side=LEFT, padx=3)
         # drop-down portion of Graphics menu
         me1 = Menu(self.cmd_Graph)
@@ -550,7 +550,7 @@ class MenuBar(Frame):
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
         # Manuals Nurse
-        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='gray30', relief=GROOVE)
+        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='grey30', relief=GROOVE)
         self.cmd_Intext.pack(side=LEFT, padx=3)
         # drop-down portion of Manuals Nurse
         meIntext = Menu(self.cmd_Intext)
@@ -564,12 +564,12 @@ class MenuBar(Frame):
 # Application principale (Main app)
 class Application(Frame):
     def __init__(self, boss=None):
-        Frame.__init__(self, borderwidth=5, bg='gray22', padx=20, pady=20, relief=GROOVE)
+        Frame.__init__(self, borderwidth=5, bg='grey22', padx=20, pady=20, relief=GROOVE)
         self.master.title('ANGEL-VISION - Developed by CK - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can = Canvas(self, width=1250, height=800, bg='gray18')
+        self.can = Canvas(self, width=1250, height=800, bg='grey18')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -590,7 +590,7 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création de 2 boutons sur la page d'accueil (main page or intro)
         # Synopsis button
-        button2 = Button(self, text="SYNOPSIS", font=70, bg='gray15',
+        button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15',
             fg='turquoise',
             anchor = CENTER, command = self.showsynopsis)
         button2.configure(width=15, activebackground='SteelBlue',
@@ -598,7 +598,7 @@ class Application(Frame):
         button2_window = self.can.create_window(450, 580, anchor=CENTER,
             window=button2)
         # Statistiques button
-        button3 = Button(self, text="PSYCHOTABS", font=74, bg='gray15',
+        button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
             fg='turquoise', anchor = CENTER, command = self.launchPsycho)
         button3.configure(width=15, activebackground='SteelBlue',
             activeforeground='white', relief=GROOVE)
@@ -631,7 +631,7 @@ class Application(Frame):
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des 3 boutons
-        button2 = Button(self, text="SYNOPSIS", font=70, bg='gray15', 
+        button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15', 
             fg='turquoise',
             anchor = CENTER, command = self.showsynopsis)
         button2.configure(width=15, activebackground='SteelBlue',
@@ -639,7 +639,7 @@ class Application(Frame):
         button2_window = self.can.create_window(450, 580, anchor=CENTER,
             window=button2) 
 
-        button3 = Button(self, text="PSYCHOTABS", font=74, bg='gray15',
+        button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
             fg='turquoise',
             anchor = CENTER, command = self.launchPsycho)
         button3.configure(width=15, activebackground='SteelBlue', 
@@ -715,51 +715,64 @@ class Application(Frame):
         self.Date_write=Entry(self.can)
         self.data_time=StringVar()
         self.Date_write=Entry(textvariable=self.data_time, width=10,
-            highlightbackground='gray', bd=4)
+            highlightbackground='grey', bd=4)
         self.data_time.set(time.strftime("%d/%m/%Y"))
         self.Date_write=self.can.create_window(self.x1, self.y1,
             window=self.Date_write)
         # To backup
         self.updateFiletxt()
 
+        self.x1, self.y1 = 1100, 100
+        self.Date_write=Entry(self.can)
+        self.data_time=StringVar()
+        self.Date_write=Entry(textvariable=self.data_time, width=10,
+            highlightbackground='grey', bd=4)
+        self.data_time.set(time.strftime("%H:%M:%S"))
+        self.Date_write=self.can.create_window(self.x1, self.y1,
+            window=self.Date_write)
+
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
-        self.b100=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
-            activebackground='white', activeforeground='turquoise4',
+        self.b100=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise', activeforeground='black',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
         # To refresh canvas + menu bar
         self.x101, self.y101 = 270, 50
-        self.b101=Button(self.can, width=10, font=16, bg='coral', fg='white',
-            activebackground='white', activeforeground='coral',
+        self.b101=Button(self.can, width=10, font=16, bg='coral', fg='PaleGreen1',
+            activebackground='yellow', activeforeground='blue',
             text="Refresh", command=self.upDateAll)
         self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
-        # To delete one patient and files and allergy
+        # To delete one patient and all files
         self.x200, self.y200 = 130, 100
-        self.b200=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
+        self.b200=Button(self.can, width=10, font=16, bg='grey17', fg='coral',
             activebackground='red', activeforeground='white',
             text="Delete patient", command=self.delEverPat)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
-        # To delete one patient and files and allergy
+        # To add one patient and files
         self.x200, self.y200 = 270, 100
-        self.b200=Button(self.can, width=10, font=16, bg='turquoise4', fg='white',
-            activebackground='red', activeforeground='white',
+        self.b200=Button(self.can, width=10, font=16, bg='black', fg='cyan',
+            activebackground='dark turquoise', activeforeground='black',
             text="Add patient", command=self.addPatientAfter)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
         #Patient1
-        with open('./newpatient/entryfile.txt', 'r') as namefile:
-            line1=namefile.readline()
-        
+        # For label below (in me2.add_command)
+        try:
+            with open('./newpatient/entryfile.txt', 'r') as namefile:
+                line1=namefile.readline()
+        except:
+            pass
+
         self.data_time=line1
         self.x2, self.y2 = 129, 200
         self.Data_write=Entry(self.can)
         self.new_data1=StringVar()
         self.Data_write=Entry(textvariable=self.new_data1,
-            highlightbackground='gray', bd=4)
+            highlightbackground='grey', bd=4)
         self.new_data1.set(line1)
         self.Data_write=self.can.create_window(self.x2, self.y2,
             window=self.Data_write)
@@ -807,16 +820,18 @@ class Application(Frame):
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 2
-        with open('./newpatient/entryfile2.txt', 'r') as namefile:
-            line2=namefile.readline()
-        
-        self.new_data2=line2
+        try:
+            with open('./newpatient/entryfile2.txt', 'r') as namefile:
+                line2=namefile.readline()
+        except:
+            pass
 
+        self.new_data2=line2
         self.x9, self.y9 = 129, 232
         self.Data_write=Entry(self.can)
         self.new_data2=StringVar()
         self.Data_write=Entry(textvariable=self.new_data2,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data2.set(line2)
         self.Data_write=self.can.create_window(self.x9, self.y9,
           window=self.Data_write)
@@ -864,16 +879,18 @@ class Application(Frame):
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
         # Patient 3
-        with open('./newpatient/entryfile3.txt', 'r') as namefile:
-            line3=namefile.readline()
+        try:
+            with open('./newpatient/entryfile3.txt', 'r') as namefile:
+                line3=namefile.readline()
+        except:
+            pass
 
         self.new_data3=line3
-
         self.x18, self.y18 = 129, 264
         self.Data_write=Entry(self.can)
         self.new_data3=StringVar()
         self.Data_write=Entry(textvariable=self.new_data3,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data3.set(line3)
         self.Data_write=self.can.create_window(self.x18, self.y18,
           window=self.Data_write)
@@ -921,16 +938,18 @@ class Application(Frame):
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 4
-        with open('./newpatient/entryfile4.txt', 'r') as namefile:
-            line4=namefile.readline()
+        try:
+            with open('./newpatient/entryfile4.txt', 'r') as namefile:
+                line4=namefile.readline()
+        except:
+            pass
 
         self.new_data4=line4
-
         self.x27, self.y27 = 129, 296
         self.Data_write=Entry(self.can)
         self.new_data4=StringVar()
         self.Data_write=Entry(textvariable=self.new_data4,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data4.set(line4)
         self.Data_write=self.can.create_window(self.x27, self.y27,
           window=self.Data_write)
@@ -978,16 +997,18 @@ class Application(Frame):
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
         #patient5
-        with open('./newpatient/entryfile5.txt', 'r') as namefile:
-            line5=namefile.readline()
+        try:
+            with open('./newpatient/entryfile5.txt', 'r') as namefile:
+                line5=namefile.readline()
+        except:
+            pass
 
         self.new_data5=line5
-
         self.x36, self.y36 = 129, 328
         self.Data_write=Entry(self.can)
         self.new_data5=StringVar()
         self.Data_write=Entry(textvariable=self.new_data5,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data5.set(line5)
         self.Data_write=self.can.create_window(self.x36, self.y36,
           window=self.Data_write)
@@ -1035,16 +1056,18 @@ class Application(Frame):
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
         #patient6
-        with open('./newpatient/entryfile6.txt', 'r') as namefile:
-            line6=namefile.readline()
+        try:
+            with open('./newpatient/entryfile6.txt', 'r') as namefile:
+                line6=namefile.readline()
+        except:
+            pass
 
         self.new_data6=line6
-
         self.x45, self.y45 = 129, 360
         self.Data_write=Entry(self.can)
         self.new_data6=StringVar()
         self.Data_write=Entry(textvariable=self.new_data6,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data6.set(line6)
         self.Data_write=self.can.create_window(self.x45, self.y45,
           window=self.Data_write)
@@ -1092,16 +1115,18 @@ class Application(Frame):
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
         
         #patient7
-        with open('./newpatient/entryfile7.txt', 'r') as namefile:
-            line7=namefile.readline()
+        try:
+            with open('./newpatient/entryfile7.txt', 'r') as namefile:
+                line7=namefile.readline()
+        except:
+            pass
 
         self.new_data7=line7
-
         self.x54, self.y54 = 129, 392
         self.Data_write=Entry(self.can)
         self.new_data7=StringVar()
         self.Data_write=Entry(textvariable=self.new_data7,
-          highlightbackground='gray', bd=4)
+          highlightbackground='grey', bd=4)
         self.new_data7.set(line7)
         self.Data_write=self.can.create_window(self.x54, self.y54,
           window=self.Data_write)
@@ -1158,6 +1183,7 @@ class Application(Frame):
     	subprocess.call('./deletepatient/deleverything.py')
 
     def addPatientAfter(self):
+    	messagebox.showwarning("Warning", "Don't forget to enter allergy too ! ;)")
     	subprocess.call('./newpatient/torecord.py')
     # Admin
     def adminDir(self):
