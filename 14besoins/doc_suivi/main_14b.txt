@@ -14,3 +14,7 @@ pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
 Date : 09/05/2020
 Nom du patient : Jimmy
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+Date : 10/05/2020
+Nom du patient : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

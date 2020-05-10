@@ -8,7 +8,6 @@ import time
 from tkinter import messagebox
 
 
-#"1.0","end-1c"
 def saveData():
     inputValue = textBox.get("1.0","end-1c")
     print(inputValue)
@@ -28,10 +27,6 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    with open('./histv/doc_histv/story_read.py', 'r') as f1read:
-        with open('./labo/doc_labo/result.txt', 'r') as f2read:
-            print(f1read.read())
-            print(f2read.read())
     subprocess.call('./histv/doc_histv/story_read.py')
 
 root=Tk()
@@ -44,7 +39,7 @@ bottom = Frame(root, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Life story : ",
+labelo=Label(root, text="Life story of : ",
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 

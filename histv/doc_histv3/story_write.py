@@ -28,10 +28,6 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    with open('./histv/doc_histv3/story_read.py', 'r') as f1read:
-        with open('./labo/doc_labo/result3.txt', 'r') as f2read:
-            print(f1read.read())
-            print(f2read.read())
     subprocess.call('./histv/doc_histv3/story_read.py')
 
 root=Tk()

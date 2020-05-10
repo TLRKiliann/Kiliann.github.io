@@ -10,8 +10,7 @@ from tkinter import messagebox
 
 def retrieve_input():
     file = open('./diag/doc_diag/diagrecap.txt', 'a+')
-    file.write(textBox.get("1.0", "end-1c"))
-    file.write(str('\n\n'))
+    file.write(textBox.get("1.0","end-1c") + "\n\n")
     file.close()
 
 def messFromSafeButt():
@@ -85,7 +84,7 @@ entryName=Entry(root, textvariable=entrytext, width=60)
 entryName.pack(padx=10, pady=10)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
-textBox.insert(INSERT, "\nEn date du : ")
+textBox.insert(INSERT, "En date du : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
