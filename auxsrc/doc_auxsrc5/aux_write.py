@@ -75,7 +75,7 @@ bottom = Frame(root, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(root, text="Auxiliary resources for : ",
+labelo=Label(root, text="Auxiliary resources : ",
     font='Arial 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 

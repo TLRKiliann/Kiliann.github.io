@@ -67,7 +67,7 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                                                             with open('./newpatient/entryfile7.txt', 'w') as namefile:
                                                                 namefile.write(Nompatient + '\n')
                                                                 namefile.write(Birthvalue + '\n')
-                                        
+                                                                
                                                 except FileNotFoundError as outcom1:
                                                     print("+ Sorry, file 'entryfile.txt6' not exist !")
                                                     print(str(outcom1))
@@ -117,105 +117,6 @@ def get(Nompatient, entree, Birthvalue, Birthentree):
                 namefile.write(Birthvalue + '\n')
 
     gui.destroy()
-"""
-def searchLine1(Nompatient, Birthvalue, mot):
-    if mot == "-":
-        with open('./newpatient/entryfile.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine2(Nompatient, Birthvalue, mot2):
-    if mot2 == "--":
-        with open('./newpatient/entryfile2.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile2.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot2 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine3(Nompatient, Birthvalue, mot3):
-    if mot3 == "---":
-        with open('./newpatient/entryfile3.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile3.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot3 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine4(Nompatient, Birthvalue, mot4):
-    if mot4 == "----":
-        with open('./newpatient/entryfile4.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile4.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot4 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine5(Nompatient, Birthvalue, mot5):
-    if mot5 == "-----":
-        with open('./newpatient/entryfile5.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile5.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot5 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine6(Nompatient, Birthvalue, mot6):
-    if mot6 == "------":
-        with open('./newpatient/entryfile6.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile6.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot6 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-
-def searchLine7(Nompatient, Birthvalue, mot7):
-    if mot7 == "-------":
-        with open('./newpatient/entryfile7.txt', 'r') as file:
-            lines = file.readlines()
-            with open('./newpatient/entryfile7.txt', 'w') as file:
-                for i in range(0, len(lines)):
-                    line = lines[i]
-                    if mot7 in line:
-                        file.write(Nompatient + '\n')
-                        file.write(Birthvalue + '\n')
-                        file.write(str('---'))
-    else:
-        print("Name already checked")
-"""
 
 labelName = Label(gui)
 labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 
