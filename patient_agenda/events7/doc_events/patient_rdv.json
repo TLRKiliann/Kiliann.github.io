@@ -1,11 +1,11 @@
 [
     [
         "day_selected",
-        25
+        22
     ],
     [
         "month_selected",
-        6
+        7
     ],
     [
         "year_selected",
@@ -13,10 +13,10 @@
     ],
     [
         "day_name",
-        "Thursday"
+        "Monday"
     ],
     [
         "month_name",
-        "June"
+        "July"
     ]
 ]

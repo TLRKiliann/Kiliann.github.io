@@ -67,7 +67,7 @@ importationFile1('./diag/doc_diag6/diagrecap.txt',
 importationFile2('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt',
     encodage="Utf-8")
 
-importationFile3('./auxsrc/doc_auxsrc6/auxsrcfile1.txt',
+importationFile3('./auxsrc/doc_auxsrc6/auxsrcfile6.txt',
     encodage="Utf-8")
 
 importationFile4('./histv/doc_histv6/Hvie_patient1.txt',
