@@ -4,23 +4,23 @@
             "Date": "09/05/2020",
             "Date of introduction": "09 May 2020",
             "Date of end": "28 May 2020",
-            "Traitement": "Nexium",
-            "Dosage": "40mg",
-            "Matin": "1",
-            "Midi": "",
-            "Soir": "",
-            "Nuit": ""
-        },
-        {
-            "Date": "09/05/2020",
-            "Date of introduction": "09 May 2020",
-            "Date of end": "28 May 2020",
             "Traitement": "Leponex",
             "Dosage": "100mg",
             "Matin": "1",
             "Midi": "2",
             "Soir": "1",
             "Nuit": "3"
+        },
+        {
+            "Date": "10/05/2020",
+            "Date of introduction": "05 May 2020",
+            "Date of end": "27 September 2025",
+            "Traitement": "Morphine",
+            "Dosage": "20gttes",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "",
+            "Nuit": "2"
         }
     ]
 }

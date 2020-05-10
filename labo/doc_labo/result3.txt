@@ -6,3 +6,8 @@ Nom du patient : Claude
 # Sediment. velocity value and treatment : (add what the patient needs)
 # C-react. protein value and treatment : (add what the patient needs)
 # Albumina value and treatment : (add what the patient needs)
+
+Date : 10/05/2020
+Nom du patient : Claude
+# TP value and treatment : (add what the patient needs)
+# INR value and treatment : (add what the patient needs)

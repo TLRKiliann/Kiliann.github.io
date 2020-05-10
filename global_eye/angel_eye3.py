@@ -70,7 +70,7 @@ importationFile2('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt',
 importationFile3('./auxsrc/doc_auxsrc3/auxsrcfile3.txt',
     encodage="Utf-8")
 
-importationFile4('./histv/doc_histv3/Hvie_patient1.txt',
+importationFile4('./histv/doc_histv3/Hvie_patient3.txt',
     encodage="Utf-8")
 
 fen.mainloop()

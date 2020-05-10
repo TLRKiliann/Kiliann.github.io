@@ -3,3 +3,23 @@ Appointment set for : 27/5/2020 :
 RDV chez le médecin pour 14h00.
 Accompagné de sa soeur.
 
+Current date : 10/05/2020, 10:27:47 :
+Appointment set for : 23/9/2020 :
+RDV chez le dentiste.
+
+
++++ Changes about rdv +++
+Appointment set for : 27/5/2020 :
+RDV chez le médecin pour 14h00.
+Accompagné de son frère.
+
+Current date : 10/05/2020, 10:37:09 :
+Appointment set for : 30/5/2020 :
+test agenda.
+
+
++++ Changes about rdv +++
+Appointment set for : 23/9/2020 :
+RDV chez le dentiste.
+ANNULE
+

@@ -13,3 +13,11 @@ test4 ok
 Date : 09/05/2020
 Nom du patient : Claude
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+Date : 10/05/2020
+Nom du patient : Claude
+pH : 5 Leuco : 0 Nit : + Pro : neg Glu : +4 Ket : neg Ery : +4 Hb : neg
+
+En date du : 10/05/2020 à 10:44:48 :
+# TP value and treatment : prochain dans 3 semaines.
+# INR value and treatment : et là ....
