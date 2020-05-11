@@ -12,7 +12,7 @@ fen.title("14 needs")
 fen.configure(bg='gray17')
 
 def recordTofile():
-    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+    MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
 
     if MsgBox == 1:
         print("Ok data saved")
@@ -20,7 +20,7 @@ def recordTofile():
         confRec()
         fen.destroy()
     else:
-        messagebox.showinfo('Return', 'You will return to the application')
+        messagebox.showinfo('Return', 'You will return back')
 
 def recordOption():
     print("+ Date : " + time.strftime("%d/%m/%Y"))

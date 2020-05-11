@@ -74,3 +74,20 @@ Date : 11/05/2020
 Patient name : Jimmy
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
 ***************************************************************************
+
+En date du : 11/05/2020 at 22:20:29 :
+iiiiiiiiiiiiiiiiiiiiii
+
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 9 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+En date du : 11/05/2020 at 22:21:50 :
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 9 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+Dr prescrit ATB

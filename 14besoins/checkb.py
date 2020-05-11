@@ -23,6 +23,8 @@ def recordTofile():
         messagebox.showinfo('Return', 'You will return back')
 
 def recordOption():
+    print("+ Date : " + time.strftime("%d/%m/%Y"))
+    print("+ Nom du patient : ", entryName.get())
     with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
         file.write("\nDate : ")
         file.write(time.strftime("%d/%m/%Y") + '\n')
