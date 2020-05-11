@@ -7,15 +7,15 @@ from tkinter import *
 class ScrollCanvas(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=borderwidth, relief=relief)
-        self.can=Canvas(self, width=width, height=height, bd=bd,
+        self.can = Canvas(self, width=width, height=height, bd=bd,
             bg=bg, relief=relief)
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
-        self.can.create_window((4,4), window=self.frame, anchor=NW, 
-                                  tags="self.frame")
+        self.can.create_window((4,4), window=self.frame, anchor=NW,
+            tags="self.frame")
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
 # Class de la barre des menus
@@ -24,26 +24,26 @@ class MenuBar(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
         # Bouton pour page d'accueil
-        FunnyButton=Button(self, text ="Page d'accueil", relief=GROOVE, fg='cyan', bg='gray15', 
-                           activebackground='cyan', 
-                           command=boss.page).pack(side =LEFT, padx=3)
+        FunnyButton=Button(self, text ="Page d'accueil", relief=GROOVE, fg='cyan', 
+            bg='gray15', activebackground='cyan',
+            command=boss.page).pack(side =LEFT, padx=3)
         # Menu fichier
         fileMenu = Menubutton(self, text='Fichier', fg='white', bg='snow4', relief=GROOVE)
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante
         me1 = Menu(fileMenu, tearoff=0)
-        me1.add_command(label='Tutorial', underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showtuto)
-        me1.add_command(label="Note de l'auteur", underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showprea)
-        me1.add_command(label='Bibliographie', underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showbiblio)
-        me1.add_command(label='QUITTER', underline=0, background='black', activebackground='red',
-                        foreground='red', activeforeground='white',
-                        command=boss.quit)
+        me1.add_command(label='Tutorial', underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine', 
+            activeforeground='black', command=boss.showtuto)
+        me1.add_command(label="Note de l'auteur", underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine', 
+            activeforeground='black', command=boss.showprea)
+        me1.add_command(label='Bibliographie', underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine', 
+            activeforeground='black', command=boss.showbiblio)
+        me1.add_command(label='QUITTER', underline=0, background='black',
+            activebackground='red', foreground='red', 
+            activeforeground='white', command=boss.quit)
         # Intégration du menu fichier
         fileMenu.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
@@ -52,18 +52,18 @@ class MenuBar(Frame):
         self.cmd.pack(side=LEFT, padx=3)
         # Partie déroulante du menu principal
         me1=Menu(self.cmd)
-        me1.add_command(label="CLICK ON IT !", underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showonit)
-        me1.add_command(label='EQUIVALENCES', underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showdico)
-        me1.add_command(label='BENZODIAZEPINES', underline=0, background='black', activebackground='aquamarine',
-                        foreground='aquamarine', activeforeground='black',
-                        command=boss.showbzd)
-        me1.add_command(label='Installation', background='black', activebackground='aquamarine',
-                        foreground='yellow', activeforeground='black',
-                        command=boss.instalpy)
+        me1.add_command(label="CLICK ON IT !", underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine',
+            activeforeground='black', command=boss.showonit)
+        me1.add_command(label='EQUIVALENCES', underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine',
+            activeforeground='black', command=boss.showdico)
+        me1.add_command(label='BENZODIAZEPINES', underline=0, background='black',
+            activebackground='aquamarine', foreground='aquamarine',
+            activeforeground='black', command=boss.showbzd)
+        me1.add_command(label='Installation', background='black',
+            activebackground='aquamarine', foreground='yellow',
+            activeforeground='black', command=boss.instalpy)
         # Intégration du menu Préambule
         self.cmd.configure(activeforeground='black', activebackground='cyan', menu=me1)
 

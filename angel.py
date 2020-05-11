@@ -126,31 +126,31 @@ class MenuBar(Frame):
         # Partie déroulante du menu administrative
         me2 = Menu(self.cmd_Admin)
         self.new_text=StringVar()
-        me2.add_command(label=new_text, background='black', activebackground='cyan',
+        me2.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir)
         me2.add_separator()
-        me2.add_command(label=new_text2, background='black', activebackground='cyan',
+        me2.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir2)
         me2.add_separator()
-        me2.add_command(label=new_text3, background='black', activebackground='cyan',
+        me2.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir3)
         me2.add_separator()
-        me2.add_command(label=new_text4, background='black', activebackground='cyan',
+        me2.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir4)
         me2.add_separator()
-        me2.add_command(label=new_text5, background='black', activebackground='cyan',
+        me2.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir5)
         me2.add_separator()
-        me2.add_command(label=new_text6, background='black', activebackground='cyan',
+        me2.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir6)
         me2.add_separator()
-        me2.add_command(label=new_text7, background='black', activebackground='cyan',
+        me2.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.adminDir7)
         # Integration of menu admin
@@ -161,31 +161,31 @@ class MenuBar(Frame):
         self.cmd_agenda.pack(side=LEFT, padx=3)
         me3 = Menu(self.cmd_agenda)
         # Partie déroulante du menu agenda
-        me3.add_command(label=new_text, background='black', activebackground='cyan',
+        me3.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda)
         me3.add_separator()
-        me3.add_command(label=new_text2, background='black', activebackground='cyan',
+        me3.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda2)
         me3.add_separator()
-        me3.add_command(label=new_text3, background='black', activebackground='cyan',
+        me3.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda3)
         me3.add_separator()
-        me3.add_command(label=new_text4, background='black', activebackground='cyan',
+        me3.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda4)
         me3.add_separator()
-        me3.add_command(label=new_text5, background='black', activebackground='cyan',
+        me3.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda5)
         me3.add_separator()
-        me3.add_command(label=new_text6, background='black', activebackground='cyan',
+        me3.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda6)
         me3.add_separator()
-        me3.add_command(label=new_text7, background='black', activebackground='cyan',
+        me3.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.patientAgenda7)
         # Integration of agenda menu
@@ -197,31 +197,31 @@ class MenuBar(Frame):
         self.cmd_Besoins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 14b
         me4 = Menu(self.cmd_Besoins)
-        me4.add_command(label=new_text, background='black', activebackground='cyan',
+        me4.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoinsCoche)
         me4.add_separator()
-        me4.add_command(label=new_text2, background='black', activebackground='cyan',
+        me4.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins2Coche)
         me4.add_separator()
-        me4.add_command(label=new_text3, background='black', activebackground='cyan',
+        me4.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins3Coche)
         me4.add_separator()
-        me4.add_command(label=new_text4, background='black', activebackground='cyan',
+        me4.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins4Coche)
         me4.add_separator()
-        me4.add_command(label=new_text5, background='black', activebackground='cyan',
+        me4.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins5Coche)
         me4.add_separator()
-        me4.add_command(label=new_text6, background='black', activebackground='cyan',
+        me4.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins6Coche)
         me4.add_separator()
-        me4.add_command(label=new_text7, background='black', activebackground='cyan',
+        me4.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.besoins7Coche)
         # Integration of 14b menu
@@ -233,31 +233,31 @@ class MenuBar(Frame):
         self.cmd_Soins.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meSoins = Menu(self.cmd_Soins)
-        meSoins.add_command(label=new_text, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins1)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text2, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins2)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text3, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins3)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text4, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins4)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text5, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins5)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text6, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins6)
         meSoins.add_separator()
-        meSoins.add_command(label=new_text7, background='black', activebackground='cyan',
+        meSoins.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.suiviSoins7)
         # Integration of health and care menu
@@ -269,31 +269,31 @@ class MenuBar(Frame):
         self.cmd_ttt.pack(side=LEFT, padx=3)
         # Partie déroulante du menu health and care
         meTtt = Menu(self.cmd_ttt)
-        meTtt.add_command(label=new_text, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed1)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text2, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed2)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text3, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed3)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text4, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed4)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text5, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed5)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text6, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed6)
         meTtt.add_separator()
-        meTtt.add_command(label=new_text7, background='black', activebackground='cyan',
+        meTtt.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.tttMed7)
         # Integration of health and care menu
@@ -306,31 +306,31 @@ class MenuBar(Frame):
         self.cmd_Param.pack(side=LEFT, padx=3)
         # Partie déroulante du menu param
         menuParam = Menu(self.cmd_Param)
-        menuParam.add_command(label=new_text, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam1)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text2, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam2)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text3, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam3)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text4, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam4)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text5, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam5)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text6, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam6)
         menuParam.add_separator()
-        menuParam.add_command(label=new_text7, background='black', activebackground='cyan',
+        menuParam.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.showParam7)
         # Integration of Vital parameters menu
@@ -343,31 +343,31 @@ class MenuBar(Frame):
         self.cmd_BMI.pack(side=LEFT, padx=3)
         # drop-down portion of BMI menu
         meBmi = Menu(self.cmd_BMI)
-        meBmi.add_command(label=new_text, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text2, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB2)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text3, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB3)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text4, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB4)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text5, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB5)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text6, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB6)
         meBmi.add_separator()
-        meBmi.add_command(label=new_text7, background='black', activebackground='cyan',
+        meBmi.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.calculB7)
         # Integration of 3rd menu
@@ -379,31 +379,31 @@ class MenuBar(Frame):
         self.cmd_Vmed.pack(side=LEFT, padx=3)
         # drop-down portion of vmed
         meVmed = Menu(self.cmd_Vmed)
-        meVmed.add_command(label=new_text, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text2, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed2)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text3, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed3)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text4, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed4)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text5, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed5)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text6, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed6)
         meVmed.add_separator()
-        meVmed.add_command(label=new_text7, background='black', activebackground='cyan',
+        meVmed.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.visitMed7)
         # Integration of 3rd menu
@@ -414,31 +414,31 @@ class MenuBar(Frame):
         self.cmd_Print.pack(side=LEFT, padx=3)
         # drop-down portion of nutrition
         mePrint = Menu(self.cmd_Print)
-        mePrint.add_command(label=new_text, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text2, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text2, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu2)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text3, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text3, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu3)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text4, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text4, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu4)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text5, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text5, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu5)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text6, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text6, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu6)
         mePrint.add_separator()
-        mePrint.add_command(label=new_text7, background='black', activebackground='cyan',
+        mePrint.add_command(label=new_text7, font=('Times 16'), background='black', activebackground='cyan',
                         foreground='cyan', activeforeground='black',
                         command=boss.nutritionMenu7)
         # Integration of nutrition menu
@@ -451,107 +451,142 @@ class MenuBar(Frame):
         # drop-down portion of Graphics menu
         me1 = Menu(self.cmd_Graph)
         me2=Menu(me1)
-        me2.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
-        me2.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph)
-        me2.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye)
-        me2.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision)
-        me1.add_cascade(label=new_text, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me2)
+        me2.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
+        me2.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph)
+        me2.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye)
+        me2.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision)
+        me1.add_cascade(label=new_text, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me2)
         me1.add_separator()
 
         me3=Menu(me1)
-        me3.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
-        me3.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph2)
-        me3.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye2)
-        me3.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision2)
-        me1.add_cascade(label=new_text2, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me3)
+        me3.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
+        me3.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph2)
+        me3.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye2)
+        me3.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision2)
+        me1.add_cascade(label=new_text2, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me3)
         me1.add_separator()
 
         me4=Menu(me1)
-        me4.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
-        me4.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph3)
-        me4.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye3)
-        me4.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision3)
-        me1.add_cascade(label=new_text3, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me4)
+        me4.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
+        me4.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph3)
+        me4.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye3)
+        me4.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision3)
+        me1.add_cascade(label=new_text3, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me4)
         me1.add_separator()
 
         me5=Menu(me1)
-        me5.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
-        me5.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph4)
-        me5.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye4)
-        me5.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision4)
-        me1.add_cascade(label=new_text4, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me5)
+        me5.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
+        me5.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph4)
+        me5.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye4)
+        me5.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision4)
+        me1.add_cascade(label=new_text4, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me5)
         me1.add_separator()
 
         me6=Menu(me1)
-        me6.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
-        me6.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph5)
-        me6.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye5)
-        me6.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision5)
-        me1.add_cascade(label=new_text5, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me6)
+        me6.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
+        me6.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph5)
+        me6.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye5)
+        me6.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision5)
+        me1.add_cascade(label=new_text5, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me6)
         me1.add_separator()
 
         me7=Menu(me1)
-        me7.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
-        me7.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph6)
-        me7.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye6)
-        me7.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision6)
-        me1.add_cascade(label=new_text6, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me7)
+        me7.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
+        me7.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph6)
+        me7.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye6)
+        me7.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision6)
+        me1.add_cascade(label=new_text6, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me7)
         me1.add_separator()
 
         # Menu cascade extraordinaire !!!
         me8=Menu(me1)
-        me8.add_command(label='All Files.txt', underline=0, background='black', activebackground='cyan',
-                foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
-        me8.add_command(label='Graphics', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.visualGraph7)
-        me8.add_command(label='Global Vision', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globEye7)
-        me8.add_command(label='Angel Eye', underline=0, background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black', command=boss.globVision7)
+        me8.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
+        me8.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.visualGraph7)
+        me8.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globEye7)
+        me8.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        	background='black', activebackground='cyan',
+            foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
-        me1.add_cascade(label=new_text7, underline=0, background='black', foreground='cyan', 
-                        activeforeground='black', activebackground='cyan', menu=me8)
+        me1.add_cascade(label=new_text7, underline=0, font=('Times 16'), 
+        	background='black', foreground='cyan', 
+            activeforeground='black', activebackground='cyan', menu=me8)
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
         # Manuals Nurse
-        self.cmd_Intext=Menubutton(self, text='Manuals', fg='cyan', bg='grey30', relief=GROOVE)
+        self.cmd_Intext=Menubutton(self, text='Manuals', font=('Times 16'), fg='cyan', 
+        	bg='grey30', relief=GROOVE)
         self.cmd_Intext.pack(side=LEFT, padx=3)
         # drop-down portion of Manuals Nurse
         meIntext = Menu(self.cmd_Intext)
         meIntext.add_command(label='Click on it', background='black', activebackground='cyan',
-                        foreground='cyan', activeforeground='black',
-                        command=boss.manualFile)
+        	foreground='cyan', activeforeground='black', command=boss.manualFile)
         # Integration of Manuals Nurse
         self.cmd_Intext.configure(activeforeground='black', activebackground='cyan',
             menu=meIntext)
@@ -667,7 +702,8 @@ class Application(Frame):
             "Sinon, télécharger python 3.5 en ligne de commande:\n"
             "sudo apt-get update && apt-get upgrade.\n"
             "sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
-            "Aller sous le dossier où il a été téléchargé et taper (ex: cd /Documents/psychotabs.py)\n"
+            "Aller sous le dossier où il a été téléchargé et taper (ex: "
+            "cd /Documents/psychotabs.py)\n"
             "et tapez ./psychotabs.py pour ouvrir l'application.\n"
             "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
 
@@ -680,7 +716,8 @@ class Application(Frame):
             "en tapant dans le terminal: python --version.\n"
             "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
             "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
-            "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir l'application.\n\n"
+            "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir "
+            "l'application.\n\n"
 
             "**************************************************************\n\n"
 
