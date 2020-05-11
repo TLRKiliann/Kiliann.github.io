@@ -1,18 +1,6 @@
 
 Date : 11/05/2020
 Nom du patient : Jimmy
-+ Surveillance pour éviter les dangers requise
-+ Surveillance propreté et/ou téguments requise
-
-
-***************************************************************************
-Date : 11/05/2020
-Patient name : Jimmy
-pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
-
-***************************************************************************
-Date : 11/05/2020
-Patient name : Jimmy
-pH : 9 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
++ Surveillance de la température requise
++ Surveillance urinaire et/ou fécale requise requise
++ Surveillance posturale et/ou des déplacements requise
