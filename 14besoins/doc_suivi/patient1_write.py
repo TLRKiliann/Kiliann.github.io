@@ -68,7 +68,6 @@ def importationFile(fichier, encodage="Utf-8"):
             print("+ File 'patient1_14b.txt' exist !")
             with open(fichier, 'r', encoding=encodage) as fileneeds:
                 content=fileneeds.readlines()
-                #fileneeds.close()
                 for li in content:
                     textBox.insert(END, li)
     except FileNotFoundError as outcom:
@@ -87,7 +86,6 @@ def importationLabo(fichier2, encodage="Utf-8"):
             print("+ File 'result.txt' exist !")
             with open(fichier2, 'r', encoding=encodage) as filelab:
                 content2=filelab.readlines()
-                #filelab.close()
                 for li in content2:
                     textBox.insert(END, li)
     except FileNotFoundError as outcom:

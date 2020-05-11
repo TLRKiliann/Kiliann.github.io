@@ -22,7 +22,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Care and monitoring : ", width=20,
+labelo=Label(fen, text="Care and monitoring : ",
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
@@ -64,7 +64,5 @@ buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./14besoins/doc_suivi7/main_14b.txt',
     encodage="Utf-8")
-
-#importationLabo('./labo/doc_labo/result.txt')
 
 fen.mainloop()
