@@ -1,7 +1,76 @@
 
-
 Date : 11/05/2020
 Nom du patient : Jimmy
-pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : negEn date du : 11/05/2020 at 20:37:22 :
-# free free T3 value and treatment : (add what the patient needs)
-# free total T3 value and treatment : (add what the patient needs)
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : negEn date du : 11/05/2020 at 20:59:16 :
+//////////////++++++++++++++++++++++++++++
+
+En date du : 11/05/2020 at 21:02:40 :
+okokokkkokok
+
+En date du : 11/05/2020 at 21:04:40 :
+okidoki
+Date : 11/05/2020
+Nom du patient : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : +3 Nit : + Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : +4
+
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+En date du : 11/05/2020 at 21:11:53 :
+kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg**************************
+
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+********************************
+
+********************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+********************************************************
+
+****************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+****************************************************************************
+
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************
+
+***************************************************************************
+Date : 11/05/2020
+Patient name : Jimmy
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+***************************************************************************

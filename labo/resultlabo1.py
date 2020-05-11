@@ -69,9 +69,9 @@ def recordOption():
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", entrytext.get())
     with open('./labo/doc_labo/result.txt', 'a+') as file:
-        file.write("\nDate : ")
+        file.write("\n\nDate : ")
         file.write(time.strftime("%d/%m/%Y")+ '\n')
-        file.write("Nom du patient : ")
+        file.write("Patient name : ")
         file.write(entrytext.get())
 
     print(CheckVar1.get())

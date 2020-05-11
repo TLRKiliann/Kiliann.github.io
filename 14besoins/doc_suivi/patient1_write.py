@@ -20,12 +20,14 @@ def saveData():
         if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
             print("+ File 'main_14b.txt' exist !")
             with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
+                namefile.write(str("\n\n"))
                 namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'main_14b.txt' not exist !")
         print(str(outcom))
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
+            namefile.write(str("\n\n"))
             namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
 
 def messFromSafeButt():
@@ -134,9 +136,10 @@ text_aller.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
 Entryaller=Entry(root, textvariable=text_aller, width=60)
 Entryaller.pack(padx=10, pady=5)
 
+# Here that's ok
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 textBox.insert(INSERT, "En date du : ")
-textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :"))
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", fg='cyan', bg='gray30',
