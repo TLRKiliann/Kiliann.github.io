@@ -1,20 +1,12 @@
 
 ---
 
-Date : 09/05/2020
+Date : 11/05/2020
 Nom du patient : Jimmy
 # Mg value and treatment : (add what the patient needs)
-# Uric acid value and treatment : (add what the patient needs)
+# Cl value and treatment : (add what the patient needs)
 
-Date : 09/05/2020
+Date : 11/05/2020
 Nom du patient : Jimmy
-# Iron value and treatment : (add what the patient needs)
-# Ferritine value and treatment : (add what the patient needs)
-
-Date : 10/05/2020
-Nom du patient : Jimmy
-# ALAT value and treatment : (add what the patient needs)
-# Gamma-GT value and treatment : (add what the patient needs)
-# Alkaline phosphatase value and treatment : (add what the patient needs)
 # free free T3 value and treatment : (add what the patient needs)
 # free total T3 value and treatment : (add what the patient needs)

@@ -12,7 +12,7 @@ fen.title("14 needs")
 fen.configure(bg='gray17')
 
 def recordTofile():
-    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+    MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
 
     if MsgBox == 1:
         print("Ok data saved")
@@ -20,11 +20,9 @@ def recordTofile():
         confRec()
         fen.destroy()
     else:
-        messagebox.showinfo('Return', 'You will return to the application')
+        messagebox.showinfo('Return', 'You will return back')
 
 def recordOption():
-    print("+ Date : " + time.strftime("%d/%m/%Y"))
-    print("+ Nom du patient : ", entryName.get())
     with open('./14besoins/doc_suivi/patient1_14b.txt', 'a+') as file:
         file.write("\nDate : ")
         file.write(time.strftime("%d/%m/%Y") + '\n')

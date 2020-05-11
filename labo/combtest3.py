@@ -14,7 +14,7 @@ app.title("Stix")
 app.configure(bg='gray17')
 
 def saveMyButt():
-    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+    MsgBox = messagebox.askyesno('Record', 'Results will be saved into Care and Monitoring, ok ?')
 
     if MsgBox == 1:
         print("Ok data saved")

@@ -20,15 +20,13 @@ def saveData():
         if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
             print("+ File 'main_14b.txt' exist !")
             with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
-                namefile.write(str('\n\n'))
-                namefile.write(textBox.get("1.0", "end-1c" + '\n'))
+                namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'main_14b.txt' not exist !")
         print(str(outcom))
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
-            namefile.write(str('\n\n'))
-            namefile.write(textBox.get("1.0", "end-1c" + '\n'))
+            namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
 
 def messFromSafeButt():
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
@@ -55,7 +53,7 @@ def ajouterText():
     """
     textBox.delete('1.0', END)
     textBox.insert(INSERT, "En date du : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+    textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -74,6 +72,8 @@ def importationFile(fichier, encodage="Utf-8"):
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'patient1_14b.txt' not exist !")
         print(str(outcom))
+    
+    textBox.insert(INSERT, "\n! Highlight text + press < Ctrl + c > to copy lines + press '1-Add' button !\n")
 
 def importationLabo(fichier2, encodage="Utf-8"):
     """
