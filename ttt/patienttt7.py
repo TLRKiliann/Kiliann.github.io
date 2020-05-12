@@ -621,7 +621,8 @@ Rnbre = tk.Entry(highlightbackground='gray', bd=4)
 Rnbre.grid(row=21, column=2)
 
 buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
-    bg='red', bd=4, command=deleteTreatment)
+    bg='red', bd=3, highlightbackground='grey17',
+    activebackground='coral', command=deleteTreatment)
 buttStopttt.grid(row=23, column=0)
 
 deleteTreat = tk.Entry(app)
@@ -640,16 +641,19 @@ textSign = tk.Entry(highlightbackground='gray', bd=4)
 textSign.grid(row=23, column=2, pady=10)
 
 # Buttons with functions
-buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='yellow',
-    bg='gray30', bd=4, command=showTreat)
+buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='cyan',
+    bg='navy', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=showTreat)
 buttShowttt.grid(row=24, column=0, pady=10)
 
 buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
-    bg='gray30', bd=4, command=copyFunc)
+    bg='navy', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=copyFunc)
 buttCopy.grid(row=24, column=1, pady=10)
 
-buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
-    bg='gray30', bd=4, command=quit)
+buttQuit = tk.Button(app, text="Quit", width=10, fg='white',
+    bg='navy', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=quit)
 buttQuit.grid(row=24, column=2, pady=10)
 
 app.mainloop()
