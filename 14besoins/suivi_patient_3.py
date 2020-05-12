@@ -57,19 +57,15 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
 
         self.x2, self.y2 = 200, 250
-        self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Add",
-            command=self.lienDirect)
+        self.b2=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+            activebackground='dark turquoise', bd=3, highlightbackground='grey17', 
+            text="Add", command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
 
         self.x3, self.y3 = 400, 250
-        self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Read",
-            command=self.lectureFic)
+        self.b3=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+            activebackground='dark turquoise', bd=3, highlightbackground='grey17', 
+            text="Read", command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
 
