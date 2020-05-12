@@ -442,14 +442,14 @@ def comburTips():
 
 app = Tk()
 app.title("Labo check")
-app.configure(bg='gray17')
+app.configure(bg='grey17')
 
 #label_fra = LabelFrame(app, text="Patient 1",
 #    font=('Times 16'),bg='yellow', fg='red', height=2, bd=3)
    
 labeltite=Label(app, text='Labo check', 
     font="Times 18 bold", width=10,
-    height=3, bg='gray17', fg='aquamarine')
+    height=3, bg='grey17', fg='aquamarine')
 labeltite.grid(sticky='e', row=0, column=1, padx=20)
 
 with open('./newpatient/entryfile.txt', 'r') as filename:
@@ -463,7 +463,7 @@ entryname.grid(sticky='w', row=0, column=2)
 # Electrolytes
 labelresult=Label(app, text='--- Electrolytes ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelresult.grid(sticky='w', row=1, column=0, columnspan=2, padx=10)
 
 CheckVar1 = IntVar()
@@ -518,7 +518,7 @@ C7.grid(sticky='w', row=5, column=0, padx=10)
 # Cardio-vasc
 labelcardio=Label(app, text='--- Cardiovascular ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelcardio.grid(row=1, column=2, padx=10)
 
 CheckVar8 = IntVar()
@@ -574,7 +574,7 @@ C15.grid(sticky='e', row=5, column=2, padx=20)
 # Hepatologia
 labelresult2=Label(app, text='--- Hepathology ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelresult2.grid(sticky='w', row=7, column=0, columnspan=2, padx=10)
 
 #separator = Label(app, height=5, bd=2, relief=SUNKEN)
@@ -639,7 +639,7 @@ C23.grid(sticky='w', row=9, column=1, padx=30)
 # Coagulation
 labelresult3=Label(app, text='--- Coagulation ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelresult3.grid(row=7, column=2, padx=10)
 
 CheckVar24 = IntVar()
@@ -659,7 +659,7 @@ C25.grid(sticky='w', row=9, column=2, padx=10)
 # Glucids
 labelgluco=Label(app, text='--- Carbohydrates ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelgluco.grid(sticky='w', row=12, column=0, columnspan=2, padx=10)
 
 CheckVar26 = IntVar()
@@ -686,7 +686,7 @@ C28.grid(sticky='w', row=15, column=0, padx=10)
 # Anemia
 labelanemia=Label(app, text='--- Anemia ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelanemia.grid(row=12, column=2, padx=10)
 
 CheckVar29 = IntVar()
@@ -720,7 +720,7 @@ C32.grid(sticky='e', row=14, column=2, padx=10)
 # Reins
 labelinf=Label(app, text='--- Renal ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelinf.grid(sticky='w', row=17, column=0, columnspan=2, padx=10)
 
 CheckVar33 = IntVar()
@@ -740,7 +740,7 @@ C34.grid(sticky='w', row=19, column=0, padx=10)
 # Inflammation
 labelinf=Label(app, text='--- Inflammation ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelinf.grid(row=17, column=2, padx=10)
 
 CheckVar35 = IntVar()
@@ -781,7 +781,7 @@ C39.grid(sticky='e', row=19, column=2, padx=10)
 # Endocrinology
 labelinf=Label(app, text='--- Endocrinology ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelinf.grid(sticky='w', row=23, column=0, columnspan=2, padx=10)
 
 CheckVar40 = IntVar()
@@ -815,7 +815,7 @@ C43.grid(sticky='w', row=25, column=1, padx=30)
 # Urinary infection
 labelinfuri=Label(app, text='--- Urinary infection ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labelinfuri.grid(sticky='w', row=26, column=0, columnspan=2, padx=10)
 
 CheckVar44 = IntVar()
@@ -840,7 +840,7 @@ C45.grid(sticky='w', row=28, column=0, padx=10)
 # Coproculture
 labecopro=Label(app, text='--- Coproculture ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='white')
+    height=1, bg='grey30', fg='white')
 labecopro.grid(row=26, column=2, padx=10)
 
 CheckVar46 = IntVar()
@@ -853,7 +853,7 @@ C46.grid(sticky='w', row=27, column=2, padx=10)
 # Printable sheet
 labelinfuri=Label(app, text='--- Printable ---', 
     font="Times 14 bold", width=46,
-    height=1, bg='gray30', fg='cyan')
+    height=1, bg='grey30', fg='cyan')
 labelinfuri.grid(sticky='w', row=29, column=0, columnspan=2, padx=10)
 
 # Buttons printable sheet
@@ -866,14 +866,14 @@ buttonsheet=Button(app, text="Microbiology sheet", width=15,
 buttonsheet.grid(row=30, column=1, padx=10, pady=10)
 
 # Button save and quit
-buttonsave=Button(app, text="Save", width=10,
-    fg='yellow', bg='navy', command=recordTofile)
+buttonsave=Button(app, text="Save", width=10, bd=3,
+    fg='yellow', bg='RoyalBlue3', activebackground='dark turquoise',
+    highlightbackground='grey17', command=recordTofile)
 buttonsave.grid(row=44, column=2, pady=10)
 
-buttonquit=Button(app, text='Quit', width=10,
-    fg='cyan', bg='gray30', command=quit)
+buttonquit=Button(app, text='Quit', width=10, bd=3,
+    fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
+    highlightbackground='grey17', command=quit)
 buttonquit.grid(sticky='e', row=44, column=2, padx=10, pady=10)
-
-#label_fra.grid(padx=10, pady=10)
 
 app.mainloop()

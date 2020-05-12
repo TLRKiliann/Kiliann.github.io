@@ -867,14 +867,14 @@ buttonsheet=Button(app, text="Microbiology sheet", width=15,
 buttonsheet.grid(row=30, column=1, padx=10, pady=10)
 
 # Button save and quit
-buttonsave=Button(app, text="Save", width=10,
-    fg='yellow', bg='navy', command=recordTofile)
+buttonsave=Button(app, text="Save", width=10, bd=3,
+    fg='yellow', bg='RoyalBlue3', activebackground='dark turquoise',
+    highlightbackground='grey17', command=recordTofile)
 buttonsave.grid(row=44, column=2, pady=10)
 
-buttonquit=Button(app, text='Quit', width=10,
-    fg='cyan', bg='gray30', command=quit)
+buttonquit=Button(app, text='Quit', width=10, bd=3,
+    fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
+    highlightbackground='grey17', command=quit)
 buttonquit.grid(sticky='e', row=44, column=2, padx=10, pady=10)
-
-#label_fra.grid(padx=10, pady=10)
 
 app.mainloop()
