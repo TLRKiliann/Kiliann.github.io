@@ -630,17 +630,17 @@ class Application(Frame):
         # Création de 2 boutons sur la page d'accueil (main page or intro)
         # Synopsis button
         button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15',
-            fg='turquoise',
-            anchor = CENTER, command = self.showsynopsis)
-        button2.configure(width=15, activebackground='SteelBlue',
-            activeforeground='white', relief=GROOVE)
+            fg='cyan', anchor = CENTER, command = self.showsynopsis)
+        button2.configure(width=15, bd=3, highlightbackground='black', 
+            activebackground='dark turquoise')
         button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=button2)
         # Statistiques button
-        button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
-            fg='turquoise', anchor = CENTER, command = self.launchPsycho)
-        button3.configure(width=15, activebackground='SteelBlue',
-            activeforeground='white', relief=GROOVE)
+        button3 = Button(self, text="PSYCHOTABS", font=70, bg='grey15',
+            fg='cyan', anchor = CENTER, command = self.launchPsycho)
+        button3.configure(width=15, bd=3, highlightbackground='black', 
+            activebackground='dark turquoise')
+
         button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=button3)
         self.pack()
@@ -671,18 +671,16 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des 3 boutons
         button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15', 
-            fg='turquoise',
-            anchor = CENTER, command = self.showsynopsis)
-        button2.configure(width=15, activebackground='SteelBlue',
-            activeforeground='white', relief=GROOVE)
+            fg='cyan', anchor = CENTER, command = self.showsynopsis)
+        button2.configure(width=15, bd=3, highlightbackground='black', 
+            activebackground='dark turquoise')
         button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=button2) 
 
         button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
-            fg='turquoise',
-            anchor = CENTER, command = self.launchPsycho)
-        button3.configure(width=15, activebackground='SteelBlue', 
-            activeforeground='white', relief=GROOVE)
+            fg='cyan', anchor = CENTER, command = self.launchPsycho)
+        button3.configure(width=15, bd=3, highlightbackground='black', 
+            activebackground='dark turquoise')
         button3_window = self.can.create_window(790, 550, anchor=CENTER, 
             window=button3)
 
