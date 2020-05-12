@@ -156,7 +156,7 @@ with open('./newpatient/entryfile4.txt', 'r') as filename:
 textname=StringVar()
 entryName=Entry(fen, textvariable=textname)
 textname.set(line1)
-entryName.grid(sticky='e', row=0, column=0, padx=20, pady=20)
+entryName.grid(sticky='e', row=0, column=0, padx=30, pady=20)
 
 CheckVar1 = IntVar()
 C1 = Checkbutton(fen, text="Respirer", fg='navy', 
@@ -256,12 +256,14 @@ C14 = Checkbutton(fen, text="Apprendre", fg='navy',
     width=40, anchor="w")
 C14.grid(row=14, column=0)
 
-buttonTocheck=Button(fen, text="Save", width=15, 
-    fg='yellow', bg='gray17', command=recordTofile)
-buttonTocheck.grid(sticky='w', row=15, column=0, pady=10)
+buttonTocheck=Button(fen, text="Save", width=10, fg='yellow',
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=recordTofile)
+buttonTocheck.grid(sticky='w', row=15, column=0, padx=20, pady=10)
 
-buttonQuit=Button(fen, text='Quit', width=15, fg='cyan', 
-    bg='gray17', command=quit)
-buttonQuit.grid(sticky='e',row=15, column=0, pady=10)
+buttonQuit=Button(fen, text='Quit', width=10, fg='white',
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
+buttonQuit.grid(sticky='e',row=15, column=0, padx=20, pady=10)
 
 fen.mainloop()
