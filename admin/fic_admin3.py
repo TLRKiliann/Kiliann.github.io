@@ -234,18 +234,21 @@ AddDrg=Entry(highlightbackground="gray", bd=4)
 AddDrg.grid(row=17, column=2)
 
 buttonName = Button(gui)
-buttonName = Button(text='Save', fg='yellow', bg='navy',
-    width=18, command=sendToFile)
-buttonName.grid(row=15, column=4)
+buttonName = Button(text='Save', width=10, fg='yellow', bg='navy',
+    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    command=sendToFile)
+buttonName.grid(row=15, column=4, padx=20)
 
 buttonName = Button(gui)
-buttonName = Button(text='Read', fg='yellow', bg='navy',
-    width=18, command=readToFile)
-buttonName.grid(row=16, column=4)
+buttonName = Button(text='Read', width=10, fg='cyan', bg='navy',
+    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    command=readToFile)
+buttonName.grid(row=16, column=4, padx=20)
 
 buttonQuit = Button(gui)
-buttonQuit = Button(text='Quit', fg='cyan', bg='gray30',
-    width=18, command=quit)
-buttonQuit.grid(row=17, column=4)
+buttonQuit = Button(text='Quit', width=10, fg='white', bg='navy',
+    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    command=quit)
+buttonQuit.grid(row=17, column=4, padx=20)
 
 gui.mainloop()
