@@ -234,12 +234,12 @@ AddDrg=Entry(highlightbackground="gray", bd=4)
 AddDrg.grid(row=17, column=2)
 
 buttonName = Button(gui)
-buttonName = Button(text='Save', fg='cyan', bg='gray30',
+buttonName = Button(text='Save', fg='yellow', bg='navy',
     width=18, command=sendToFile)
 buttonName.grid(row=15, column=4)
 
 buttonName = Button(gui)
-buttonName = Button(text='Read', fg='cyan', bg='gray30',
+buttonName = Button(text='Read', fg='yellow', bg='navy',
     width=18, command=readToFile)
 buttonName.grid(row=16, column=4)
 
