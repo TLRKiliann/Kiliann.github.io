@@ -619,7 +619,7 @@ class Application(Frame):
         self.photo = PhotoImage(file='./syno_gif/title2_syno.gif')
         self.item = self.can.create_image(625, 400, image=self.photo)
         # Insertion of text
-        self.can.create_text(625, 400, anchor=CENTER, 
+        self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
@@ -661,7 +661,7 @@ class Application(Frame):
         self.photo=PhotoImage(file='./syno_gif/title2_syno.gif')
         self.item=self.can.create_image(625, 400, image=self.photo)
         # Insertion du texte
-        self.can.create_text(625, 400, anchor=CENTER, 
+        self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
                     font=('Times New Roman', 18), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
