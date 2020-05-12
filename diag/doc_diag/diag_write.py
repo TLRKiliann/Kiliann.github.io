@@ -88,24 +88,24 @@ textBox.insert(INSERT, "En date du : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", width=8,
-    fg='cyan', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=lectureFic)
+buttonLire=Button(root, text="Read", fg='cyan', bg='navy',
+    activebackground='dark turquoise', activeforeground='navy',
+    bd=3, highlightbackground='grey17', command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonEffacer=Button(root, text="1-Add", width=8,
-    fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=ajouterText)
-buttonEffacer.pack(side='left', padx=10, pady=10)
+buttonAjouter=Button(root, text="1-Add", fg='yellow', bg='navy',
+    activebackground='dark turquoise', activeforeground='navy',
+    bd=3, highlightbackground='grey17', command=ajouterText)
+buttonAjouter.pack(side='left', padx=10, pady=10)
 
-buttonEnter=Button(root, text="2-Save", width=8, 
-    fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=messFromSafeButt)
+buttonEnter=Button(root, text="2-Save", fg='yellow', bg='navy',
+    activebackground='dark turquoise', activeforeground='navy',
+    bd=3, highlightbackground='grey17', command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", width=8,
-    fg='cyan', bg='gray30', activebackground='red', 
-    activeforeground='navy', command=quit)
+buttonQuitter=Button(root, text="Quit", fg='white', bg='navy',
+    width=10, activebackground='cyan', activeforeground='navy',
+    bd=3, highlightbackground='grey17', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 importationFile('./diag/doc_diag/diagrecap.txt',
