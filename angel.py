@@ -615,11 +615,11 @@ class Application(Frame):
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
-        # Insertion d'une image
-        self.photo = PhotoImage(file='./syno_gif/title_syno.gif')
+        # Insertion of picture
+        self.photo = PhotoImage(file='./syno_gif/title2_syno.gif')
         self.item = self.can.create_image(625, 400, image=self.photo)
-        # Insertion du texte
-        self.can.create_text(625, 500, anchor=CENTER, 
+        # Insertion of text
+        self.can.create_text(625, 400, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
@@ -634,14 +634,14 @@ class Application(Frame):
             anchor = CENTER, command = self.showsynopsis)
         button2.configure(width=15, activebackground='SteelBlue',
             activeforeground='white', relief=GROOVE)
-        button2_window = self.can.create_window(450, 580, anchor=CENTER,
+        button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=button2)
         # Statistiques button
         button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
             fg='turquoise', anchor = CENTER, command = self.launchPsycho)
         button3.configure(width=15, activebackground='SteelBlue',
             activeforeground='white', relief=GROOVE)
-        button3_window = self.can.create_window(790, 580, anchor=CENTER,
+        button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=button3)
         self.pack()
 
@@ -658,10 +658,10 @@ class Application(Frame):
     def secondPage(self):
         self.can.delete(ALL)
         # Insertion d'une image
-        self.photo=PhotoImage(file='./syno_gif/title_syno.gif')
+        self.photo=PhotoImage(file='./syno_gif/title2_syno.gif')
         self.item=self.can.create_image(625, 400, image=self.photo)
         # Insertion du texte
-        self.can.create_text(625, 500, anchor=CENTER, 
+        self.can.create_text(625, 400, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
                     font=('Times New Roman', 18), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
@@ -675,7 +675,7 @@ class Application(Frame):
             anchor = CENTER, command = self.showsynopsis)
         button2.configure(width=15, activebackground='SteelBlue',
             activeforeground='white', relief=GROOVE)
-        button2_window = self.can.create_window(450, 580, anchor=CENTER,
+        button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=button2) 
 
         button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
@@ -683,7 +683,7 @@ class Application(Frame):
             anchor = CENTER, command = self.launchPsycho)
         button3.configure(width=15, activebackground='SteelBlue', 
             activeforeground='white', relief=GROOVE)
-        button3_window = self.can.create_window(790, 580, anchor=CENTER, 
+        button3_window = self.can.create_window(790, 550, anchor=CENTER, 
             window=button3)
 
         self.can.configure(scrollregion=self.can.bbox(ALL)) 
@@ -1743,6 +1743,9 @@ class Application(Frame):
 
     def nutritionMenu7(self):
         subprocess.call('./nutrition/nutrit_patient7.py')
+
+    def newsTextBox(self):
+    	self.can.textBox = Text(app, text = "")
 
     def updateFiletxt(self):
         listeDate = ["09/05/2020", "01/06/2020", "01/07/2020",
