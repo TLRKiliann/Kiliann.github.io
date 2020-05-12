@@ -8,7 +8,7 @@ from tkinter import messagebox
 
 gui = Tk()
 gui.title("Intolerances")
-gui.configure(bg='gray17')
+gui.configure(bg='grey17')
 
 def saveCheck():
     MSB = messagebox.askyesno('Save Data', 'Data saved !')
@@ -173,7 +173,7 @@ def confRec():
     MsgBox2 = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
-    width=14, fg='aquamarine', bg='gray17', anchor='e')
+    width=14, fg='aquamarine', bg='grey17')
 Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
 # To read name in Entry widget
@@ -182,7 +182,7 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
 text_entry = StringVar()
 text_entry.set(line1)
 entryName = Entry(gui, textvariable=text_entry)
-entryName.grid(sticky='e', row=0, column=0, pady=10)
+entryName.grid(sticky='e', row=0, column=0, padx=10, pady=10)
 
 CheckVar1 = IntVar()
 C1 = Checkbutton(gui, text="Gluten", fg='navy', 
@@ -214,7 +214,7 @@ C4.grid(row=5, column=0)
 
 #Les allergies d’origine animale : 
 animallabel = Label(gui, text="Animal allergy", font="Times 18 bold",
-    fg='aquamarine', bg='gray17')
+    fg='aquamarine', bg='grey17')
 animallabel.grid(row=6, column=0, pady=10)  
 
 CheckVar5 = IntVar()
@@ -248,7 +248,7 @@ C8.grid(row=10, column=0)
 
 #Les allergies d’origine végétale : 
 vegetallabel = Label(gui, text="Vegetable allergy",
-    font="Times 18 bold", fg='aquamarine', bg='gray17')
+    font="Times 18 bold", fg='aquamarine', bg='grey17')
 vegetallabel.grid(row=11, column=0, pady=10)  
 
 CheckVar9 = IntVar()
@@ -295,7 +295,7 @@ C14.grid(row=17, column=0)
 
 latexlabel = Label(gui, text="Latex fruits = avocado, banana, kiwi,"
     " fig, chestnut...", font="Times 12", fg='aquamarine',
-    bg='gray17')
+    bg='grey17')
 latexlabel.grid(row=18, column=0, pady=10)  
 
 CheckVar15 = IntVar()
@@ -306,7 +306,7 @@ C15 = Checkbutton(gui, text="Rosacea",
 C15.grid(row=19, column=0)
 
 rosaclabel = Label(gui, text="Rosacea = apricot, cherry, strawberry...",
-    font="Times 12", fg='aquamarine', bg='gray17')
+    font="Times 12", fg='aquamarine', bg='grey17')
 rosaclabel.grid(row=20, column=0, pady=10)  
 
 CheckVar16 = IntVar()
@@ -318,15 +318,17 @@ C16.grid(row=21, column=0)
 
 ombellabel = Label(gui, text="Umbellifers = dill, carrot, celery,"
     " fennel, parsley...",
-    font="Times 12", fg='aquamarine', bg='gray17')
+    font="Times 12", fg='aquamarine', bg='grey17')
 ombellabel.grid(row=22, column=0, pady=10)  
 
 buttSave = Button(gui, text="Save", width=10, fg='yellow',
-    bg='navy', command=saveCheck)
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=saveCheck)
 buttSave.grid(sticky='w', row=23, column=0, padx=20, pady=10)
 
-buttQuit = Button(gui, text='Quit', width=10, fg='cyan',
-    bg='gray30', command=quit)
+buttQuit = Button(gui, text='Quit', width=10, fg='white',
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
 buttQuit.grid(sticky='e', row=23, column=0, padx=20, pady=10)
 
 gui.mainloop()

@@ -173,7 +173,7 @@ def confRec():
     MsgBox2 = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
 
 Intolabel = Label(gui, text="Intolerances : ", font="Times 18 bold",
-    width=14, fg='aquamarine', bg='gray17', anchor='e')
+    width=14, fg='aquamarine', bg='gray17')
 Intolabel.grid(sticky='w', row=0, column=0, pady=10)
 
 # To read name in Entry widget
@@ -183,7 +183,7 @@ with open('./newpatient/entryfile4.txt', 'r') as filename:
 text_entry = StringVar()
 text_entry.set(line1)
 entryName = Entry(gui, textvariable=text_entry)
-entryName.grid(sticky='e', row=0, column=0, pady=10)
+entryName.grid(sticky='e', row=0, column=0, padx=10, pady=10)
 
 CheckVar1 = IntVar()
 C1 = Checkbutton(gui, text="Gluten", fg='navy', 
@@ -323,11 +323,13 @@ ombellabel = Label(gui, text="Umbellifers = dill, carrot, celery,"
 ombellabel.grid(row=22, column=0, pady=10)  
 
 buttSave = Button(gui, text="Save", width=10, fg='yellow',
-    bg='navy', command=saveCheck)
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=saveCheck)
 buttSave.grid(sticky='w', row=23, column=0, padx=20, pady=10)
 
-buttQuit = Button(gui, text='Quit', width=10, fg='cyan',
-    bg='gray30', command=quit)
+buttQuit = Button(gui, text='Quit', width=10, fg='white',
+    bg='navy', bd=3, highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
 buttQuit.grid(sticky='e', row=23, column=0, padx=20, pady=10)
 
 gui.mainloop()
