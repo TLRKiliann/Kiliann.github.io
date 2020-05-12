@@ -15,10 +15,8 @@ class ScrollCanvas(Frame):
         self.can=Canvas(self, width=width, height=height, bd=bd, bg=bg,
             relief=relief)
         self.frame = Frame(self.can)
-
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
-
         self.vsb.pack(side=RIGHT, fill=Y)
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4, 4), window=self.frame, anchor=NW,
@@ -57,21 +55,17 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
-
+        # Button to add
         self.x2, self.y2 = 200, 250
-        self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Add",
-            command=self.lienDirect)
+        self.b2=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+            activebackground='dark turquoise', bd=3, highlightbackground='grey17', 
+            text="Add", command=self.lienDirect)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
-
+        # Button to read
         self.x3, self.y3 = 400, 250
-        self.b3=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black',
-            text="Read",
-            command=self.lectureFic)
+        self.b3=Button(self.can, width=10, font=16, bg='RoyalBlue3', fg='gold',
+            activebackground='dark turquoise', bd=3, highlightbackground='grey17', 
+            text="Read", command=self.lectureFic)
         self.fb3=self.can.create_window(self.x3, self.y3, window=self.b3)
         self.pack()
 

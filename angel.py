@@ -569,27 +569,27 @@ class MenuBar(Frame):
 
         # Menu cascade extraordinaire !!!
         me8=Menu(me1)
-        me8.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me8.add_command(label='All Files.txt', underline=0, font=('Times 16'),
         	background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup7)
-        me8.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me8.add_command(label='Graphics', underline=0, font=('Times 16'),
         	background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph7)
-        me8.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me8.add_command(label='Global Vision', underline=0, font=('Times 16'),
         	background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye7)
-        me8.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me8.add_command(label='Angel Eye', underline=0, font=('Times 16'),
         	background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
-        me1.add_cascade(label=new_text7, underline=0, font=('Times 16'), 
+        me1.add_cascade(label=new_text7, underline=0, font=('Times 16'),
         	background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me8)
         # Integration of Graph menu
         self.cmd_Graph.configure(activeforeground='black', activebackground='cyan', menu=me1)
 
         # Manuals Nurse
-        self.cmd_Intext=Menubutton(self, text='Manuals', font=('Times 14'), fg='cyan', 
+        self.cmd_Intext=Menubutton(self, text='Manuals', font=('Times 14'), fg='cyan',
         	bg='grey30', relief=GROOVE)
         self.cmd_Intext.pack(side=LEFT, padx=3)
         # drop-down portion of Manuals Nurse
@@ -629,20 +629,19 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création de 2 boutons sur la page d'accueil (main page or intro)
         # Synopsis button
-        button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15',
-            fg='cyan', anchor = CENTER, command = self.showsynopsis)
-        button2.configure(width=15, bd=3, highlightbackground='black', 
+        self.button2 = Button(self, text="SYNOPSIS", font=('Times 22 bold'),
+            bg='grey15', fg='cyan', command = self.showsynopsis)
+        self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
-        button2_window = self.can.create_window(450, 550, anchor=CENTER,
-            window=button2)
+        self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
+            window=self.button2)
         # Statistiques button
-        button3 = Button(self, text="PSYCHOTABS", font=70, bg='grey15',
-            fg='cyan', anchor = CENTER, command = self.launchPsycho)
-        button3.configure(width=15, bd=3, highlightbackground='black', 
+        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 22 bold'),
+            bg='grey15', fg='cyan', command = self.launchPsycho)
+        self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
             activebackground='dark turquoise')
-
-        button3_window = self.can.create_window(790, 550, anchor=CENTER,
-            window=button3)
+        self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
+            window=self.button3)
         self.pack()
 
     # Méthode pour reconfigurer la scrollbar à chaque fois
@@ -670,19 +669,19 @@ class Application(Frame):
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des 3 boutons
-        button2 = Button(self, text="SYNOPSIS", font=70, bg='grey15', 
-            fg='cyan', anchor = CENTER, command = self.showsynopsis)
-        button2.configure(width=15, bd=3, highlightbackground='black', 
+        self.button2 = Button(self, text="SYNOPSIS", font=('Times 22 bold'),
+            bg='grey15', fg='cyan', command = self.showsynopsis)
+        self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
-        button2_window = self.can.create_window(450, 550, anchor=CENTER,
-            window=button2) 
-
-        button3 = Button(self, text="PSYCHOTABS", font=74, bg='grey15',
-            fg='cyan', anchor = CENTER, command = self.launchPsycho)
-        button3.configure(width=15, bd=3, highlightbackground='black', 
+        self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
+            window=self.button2)
+        # Statistiques button
+        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 22 bold'),
+            bg='grey15', fg='cyan', command = self.launchPsycho)
+        self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
             activebackground='dark turquoise')
-        button3_window = self.can.create_window(790, 550, anchor=CENTER, 
-            window=button3)
+        self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
+            window=self.button3)
 
         self.can.configure(scrollregion=self.can.bbox(ALL)) 
 
