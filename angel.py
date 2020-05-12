@@ -33,7 +33,7 @@ class MenuBar(Frame):
         Frame.__init__(self, borderwidth=5, bg='dim grey', padx=0)
         # 1st menu
         fileMenu = Menubutton(self, text='Menu', fg='white',
-        	font=("Times 14 bold"), bg='grey30', relief=GROOVE)
+        	font=("Times 14"), bg='grey30', relief=GROOVE)
         new_text=StringVar()
         new_text2=StringVar()
         new_text3=StringVar()
