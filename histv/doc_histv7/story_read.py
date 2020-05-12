@@ -22,7 +22,7 @@ bottom = Frame(fen, bg='gray17')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
-labelo=Label(fen, text="Life story : ",
+labelo=Label(fen, text="Life story of : ",
     font='Times 18 bold', fg='cyan', bg='gray17')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
@@ -57,9 +57,9 @@ Entryall.pack(padx=10, pady=5)
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", fg='cyan', width=10, 
-    bg='gray30', activebackground='dark turquoise', 
-    activeforeground='navy', command=quit)
+buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
+    bg='navy', activebackground='dark turquoise', activeforeground='navy', 
+    highlightbackground='grey17', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./histv/doc_histv7/Hvie_patient7.txt',
