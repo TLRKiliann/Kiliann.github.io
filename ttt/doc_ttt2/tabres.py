@@ -3,13 +3,14 @@
 
 
 from tkinter import *
+from tkinter import messagebox
 from string import ascii_lowercase
 import json
 import os
 
 
 # To create list of start date
-with open('./ttt/doc_ttt6/convdose.json') as file:
+with open('./ttt/doc_ttt/convres.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -19,7 +20,7 @@ data_liststart = []
 for value in zip(value):
     data_liststart.append(value[0]['Date of introduction'])
 
-with open('./ttt/doc_ttt6/data_start.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_start.json', 'a+') as datafile:
     json.dump(data_liststart, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -28,14 +29,14 @@ for (key, value) in data.items():
 
 print("\nListstart = Start of process :")
 print("--------------")
-fileStart = open('./ttt/doc_ttt6/data_start.json')
+fileStart = open('./ttt/doc_ttt/data_start.json')
 liststart = json.load(fileStart)
 
 for start in liststart:
     print("liststart: " + start)
 
 # To create list of end date
-with open('./ttt/doc_ttt6/convdose.json') as file:
+with open('./ttt/doc_ttt/convres.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -45,7 +46,7 @@ data_listend = []
 for value in zip(value):
     data_listend.append(value[0]['Date of end'])
 
-with open('./ttt/doc_ttt6/data_end.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_end.json', 'a+') as datafile:
     json.dump(data_listend, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -54,14 +55,14 @@ for (key, value) in data.items():
 
 print("\nListend = End of process :")
 print("--------------")
-filend = open('./ttt/doc_ttt6/data_end.json')
+filend = open('./ttt/doc_ttt/data_end.json')
 listend = json.load(filend)
 
 for end in listend:
     print("listend: " + end)
 
 # To create list of ttt
-with open('./ttt/doc_ttt6/convdose.json') as file:
+with open('./ttt/doc_ttt/convres.json') as file:
     data = json.load(file)
 for (key, value) in data.items():
     print("Key: " + key)
@@ -69,9 +70,9 @@ for (key, value) in data.items():
 
 data_list1 = []
 for value in zip(value):
-    data_list1.append(value[0]['Traitement'])
+    data_list1.append(value[0]['Treatment'])
 
-with open('./ttt/doc_ttt6/data_ttt.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_res.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -80,7 +81,7 @@ for (key, value) in data.items():
 
 print("\nListe1 = ttt :")
 print("--------------")
-fileA = open('./ttt/doc_ttt6/data_ttt.json')
+fileA = open('./ttt/doc_ttt/data_res.json')
 list1 = json.load(fileA)
 
 for tttintro in list1:
@@ -91,7 +92,7 @@ data_list2 = []
 for value in zip(value):
     data_list2.append(value[0]['Dosage'])
 
-with open('./ttt/doc_ttt6/data_dose.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_doser.json', 'a+') as datafile:
     json.dump(data_list2, datafile, indent=4)
 
 for (key, value) in data.items():
@@ -100,87 +101,87 @@ for (key, value) in data.items():
 
 print("\nList2 = Dosage :")
 print("--------------------")
-fileB = open('./ttt/doc_ttt6/data_dose.json')
+fileB = open('./ttt/doc_ttt/data_doser.json')
 list2 = json.load(fileB)
 
 for dose in list2:
     print("list2: " + dose)
 
-# To create list of Morning
+# To create list of Reserve
 data_list3 = []
 for value in zip(value):
-    data_list3.append(value[0]['Matin'])
+    data_list3.append(value[0]['Reserve'])
 
-with open('./ttt/doc_ttt6/data_matin.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_Reserve.json', 'a+') as datafile:
     json.dump(data_list3, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList3 = Matin :")
+print("\nList3 = Reserve :")
 print("--------------------")
-fileC = open('./ttt/doc_ttt6/data_matin.json')
+fileC = open('./ttt/doc_ttt/data_Reserve.json')
 list3 = json.load(fileC)
 
-for morn in list3:
-    print("list3: " + morn)
+for res in list3:
+    print("list3: " + str(res))
 
-# To create list of noon
+# To create list of first-line
 data_list4 = []
 for value in zip(value):
-    data_list4.append(value[0]['Midi'])
+    data_list4.append(value[0]['First-line'])
 
-with open('./ttt/doc_ttt6/data_midi.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_fl.json', 'a+') as datafile:
     json.dump(data_list4, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList4 = Midi :")
+print("\nList4 = First-line :")
 print("--------------------")
-fileD = open('./ttt/doc_ttt6/data_midi.json')
+fileD = open('./ttt/doc_ttt/data_fl.json')
 list4 = json.load(fileD)
 
-for noon in list4:
-    print("list4: " + noon)
+for fl in list4:
+    print("list4: " + str(fl))
 
-# To create list of evening
+# To create list of second-line
 data_list5 = []
 for value in zip(value):
-    data_list5.append(value[0]['Soir'])
+    data_list5.append(value[0]['Second-line'])
 
-with open('./ttt/doc_ttt6/data_soir.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_sl.json', 'a+') as datafile:
     json.dump(data_list5, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList5 = Soir :")
+print("\nList5 = Second-line :")
 print("--------------------")
-fileE = open('./ttt/doc_ttt6/data_soir.json')
+fileE = open('./ttt/doc_ttt/data_sl.json')
 list5 = json.load(fileE)
 
-for eve in list5:
-    print("list5: " + eve)
+for sl in list5:
+    print("list5: " + str(sl))
 
-# To create list of night
+# To create list of num/24h
 data_list6 = []
 for value in zip(value):
-    data_list6.append(value[0]['Nuit'])
+    data_list6.append(value[0]['Number/24h'])
 
-with open('./ttt/doc_ttt6/data_nuit.json', 'a+') as datafile:
+with open('./ttt/doc_ttt/data_num24.json', 'a+') as datafile:
     json.dump(data_list6, datafile, indent=4)
 
 for (key, value) in data.items():
     print(key, value)
     print("\n")
 
-print("\nList6 = Nuit :")
+print("\nList6 = Number/24h :")
 print("--------------------")
-fileF = open('./ttt/doc_ttt6/data_nuit.json')
+fileF = open('./ttt/doc_ttt/data_num24.json')
 list6 = json.load(fileF)
 
 for nightm in list6:
@@ -192,19 +193,18 @@ class app(Frame):
     def __init__(self, master = None):
         Frame.__init__(self, master)
         self.text_name=StringVar()
-        self.labelo=Label(master, text="Treatments for : ", width=20,
+        self.labelo=Label(master, text="Reserves for : ", width=20,
             font='Times 18 bold', fg='cyan', bg='gray17')
         self.labelo.grid(sticky='w', row=0, column=0, padx=30, pady=5)
-        with open('./newpatient/entryfile6.txt', 'r') as file:
+        with open('./newpatient/entryfile.txt', 'r') as file:
             line1=file.readline()
-
         self.text_name.set(line1)
         self.entryName=Entry(master, textvariable=self.text_name)
         self.entryName.grid(sticky='w', row=0, column=0, padx=250, pady=5)
         self.labelallergy=Label(master, text="Allergy : ",
             font='Arial 18 bold', fg='coral', bg='gray17')
         self.labelallergy.grid(row=0, column=0, padx=10, pady=5)
-        with open('./allergy/allergyfile6.txt', 'r') as allerfile:
+        with open('./allergy/allergyfile.txt', 'r') as allerfile:
             lineA1=allerfile.readline()
             lineA2=allerfile.readline()
             lineA3=allerfile.readline()
@@ -212,7 +212,6 @@ class app(Frame):
             lineA5=allerfile.readline()
             lineA6=allerfile.readline()
             lineA7=allerfile.readline()
-
         self.text_all=StringVar()
         self.text_all.set(lineA1 + ', ' + lineA3 + ', ' + lineA5 + ', ' + lineA7)
         self.Entryall=Entry(master, textvariable=self.text_all, width=60)
@@ -227,7 +226,7 @@ class app(Frame):
         To create table
         """
         self.entries = {}
-        self.tableheight = 16
+        self.tableheight = 10
         self.tablewidth = 8
         counter = 0
         for row in range(self.tableheight):
@@ -237,14 +236,14 @@ class app(Frame):
                 counter += 1
         # Exemple
         #self.entries[0].insert(0, list1[0])
-        self.entries[0].insert(0, 'Date de début')
-        self.entries[1].insert(0, 'Dates de fin')
-        self.entries[2].insert(0, 'Traitement')
+        self.entries[0].insert(0, 'Start of process')
+        self.entries[1].insert(0, 'Date of the end')
+        self.entries[2].insert(0, 'Treatment')
         self.entries[3].insert(0, 'Dosage')
-        self.entries[4].insert(0, 'Matin')
-        self.entries[5].insert(0, 'Midi')
-        self.entries[6].insert(0, 'Soir')
-        self.entries[7].insert(0, 'Nuit')
+        self.entries[4].insert(0, 'R')
+        self.entries[5].insert(0, 'First-line')
+        self.entries[6].insert(0, 'Second-line')
+        self.entries[7].insert(0, 'Number/24h')
         try:
             if list1[:] is not False:
                 self.entries[8].insert(0, liststart[0])
@@ -381,19 +380,21 @@ class app(Frame):
                 self.entries[125].insert(0, list4[14])
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
+            else:
+                messagebox.showinfo('Reserve', 'No more Reserve has added')
         except IndexError as info:
-            print("End of medication reached !", info)
+            print("End of reserve reached !", info)
 
-os.remove('./ttt/doc_ttt6/data_ttt.json')
-os.remove('./ttt/doc_ttt6/data_dose.json')
-os.remove('./ttt/doc_ttt6/data_matin.json')
-os.remove('./ttt/doc_ttt6/data_midi.json')
-os.remove('./ttt/doc_ttt6/data_soir.json')
-os.remove('./ttt/doc_ttt6/data_nuit.json')
-os.remove('./ttt/doc_ttt6/data_start.json')
-os.remove('./ttt/doc_ttt6/data_end.json')
+os.remove('./ttt/doc_ttt/data_res.json')
+os.remove('./ttt/doc_ttt/data_doser.json')
+os.remove('./ttt/doc_ttt/data_Reserve.json')
+os.remove('./ttt/doc_ttt/data_fl.json')
+os.remove('./ttt/doc_ttt/data_sl.json')
+os.remove('./ttt/doc_ttt/data_num24.json')
+os.remove('./ttt/doc_ttt/data_start.json')
+os.remove('./ttt/doc_ttt/data_end.json')
 
 prog = app()
-prog.master.title('Medication')
+prog.master.title('Reserves')
 prog.master.configure(bg='gray17')
 prog.mainloop()

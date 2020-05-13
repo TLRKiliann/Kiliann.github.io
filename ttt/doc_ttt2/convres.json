@@ -4,12 +4,12 @@
             "Date": "13/05/2020",
             "Date of introduction": "02 August 2020",
             "Date of end": "25 October 2021",
-            "Treatment": "Drug1",
+            "Treatment": "Res",
             "Dosage": "20gttes",
-            "Matin": "1",
-            "Midi": "1",
-            "Soir": "1",
-            "Nuit": ""
+            "Reserve": 1,
+            "First-line": 0,
+            "Second-line": 1,
+            "Number/24h": "2"
         },
         {
             "Date": "13/05/2020",
@@ -17,10 +17,10 @@
             "Date of end": "25 October 2021",
             "Treatment": "Test",
             "Dosage": "20gttes",
-            "Matin": "2",
-            "Midi": "",
-            "Soir": "2",
-            "Nuit": "2"
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
         }
     ]
 }

@@ -3,12 +3,10 @@ Heure : 21:38:40
 Name : Jimmy
 
 Date of introduction : 02 August 2020
-Nom du ttt : Drug1
+Nom du ttt : Res
 Dosage du ttt : 20gttes
-Matin : 1
-Midi : 1
-Soir : 1
-
+Réserve : Oui
+2ème intention : Oui
 Date of end : 25 October 2021
 Signature : ec
 
@@ -19,10 +17,8 @@ Name : Jimmy
 Date of introduction : 02 August 2020
 Nom du ttt : Test
 Dosage du ttt : 20gttes
-Matin : 2
-
-Soir : 2
-Nuit : 2
+Réserve : Oui
+1ère intention : Oui
 Date of end : 25 October 2021
 Signature : ec
 
