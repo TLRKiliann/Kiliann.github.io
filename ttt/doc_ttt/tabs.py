@@ -69,7 +69,7 @@ for (key, value) in data.items():
 
 data_list1 = []
 for value in zip(value):
-    data_list1.append(value[0]['Traitement'])
+    data_list1.append(value[0]['Treatment'])
 
 with open('./ttt/doc_ttt/data_ttt.json', 'a+') as datafile:
     json.dump(data_list1, datafile, indent=4)
@@ -235,14 +235,14 @@ class app(Frame):
                 counter += 1
         # Exemple
         #self.entries[0].insert(0, list1[0])
-        self.entries[0].insert(0, 'Date de début')
-        self.entries[1].insert(0, 'Dates de fin')
-        self.entries[2].insert(0, 'Traitement')
+        self.entries[0].insert(0, 'Start of process')
+        self.entries[1].insert(0, 'Date of end')
+        self.entries[2].insert(0, 'Treatment')
         self.entries[3].insert(0, 'Dosage')
-        self.entries[4].insert(0, 'Matin')
-        self.entries[5].insert(0, 'Midi')
-        self.entries[6].insert(0, 'Soir')
-        self.entries[7].insert(0, 'Nuit')
+        self.entries[4].insert(0, 'Morning')
+        self.entries[5].insert(0, 'Noon')
+        self.entries[6].insert(0, 'Evening')
+        self.entries[7].insert(0, 'Night')
         try:
             if list1[:] is not False:
                 self.entries[8].insert(0, liststart[0])

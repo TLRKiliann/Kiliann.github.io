@@ -35,18 +35,6 @@ def showTreat():
 def showReserve():
     subprocess.call('./ttt/doc_ttt/tabres.py')
 
-def copyFunc():
-    """
-    MessageBox to ensure if it's well done.
-    """
-    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
-    if MsgBox == 1:
-        print("Ok ça passe")
-        copyToFile()
-        #app.destroy()
-    else:
-        messagebox.showinfo('Return', 'You will return to the application')
-
 def deleteTreatment():
     """
     To earase one line in array
@@ -227,6 +215,18 @@ def deleteReserve():
     else:           
         NoforQ = messagebox.showinfo('Return', 'Reserve not earased')
 
+def copyTttMess():
+    """
+    MessageBox to ensure if it's well done.
+    """
+    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+    if MsgBox == 1:
+        print("Ok to save")
+        copyToFile()
+        #app.destroy()
+    else:
+        messagebox.showinfo('Return', 'You will return to the application')
+
 def copyToFile():
     """
     To write all data to intro_ttt.json
@@ -282,7 +282,6 @@ def copyToFile():
         file.write(str("Signature : "))
         file.write(textSign.get())
         file.write(str('\n\n'))
-
     try:
         if os.path.getsize('./ttt/doc_ttt/convdose.json'):
             print("+ File 'convdose' exist !")
@@ -322,6 +321,60 @@ def copyToFile():
             print("---Ok value 'Treatment' introduced---")
             with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
+
+def copyResMess():
+    """
+    MessageBox to ensure if it's well done.
+    """
+    MsgBox = messagebox.askyesno('Record', 'Do you want to save ?')
+    if MsgBox == 1:
+        print("Ok to save")
+        copyToReserve()
+        #app.destroy()
+    else:
+        messagebox.showinfo('Return', 'You will return to the application')
+
+def copyToReserve():
+    """
+    To write all data to intro_res.json
+    to reuse them after.
+    """
+    with open('./ttt/doc_ttt/intro_res.txt', '+a') as file:
+        file.write(str("Date : "))
+        file.write(textDate.get() + '\n')
+        file.write(str("Heure : "))
+        file.write(textHour.get() + '\n')
+        file.write(str("Name : "))
+        file.write(textName.get() + '\n')
+        file.write(str("Date of introduction : "))
+        file.write(comboDay.get())
+        file.write(comboMonth.get())
+        file.write(comboYear.get())
+        file.write(str('\n'))
+        file.write(str("Nom du ttt : "))
+        file.write(textTreat.get() + '\n')
+        file.write(str("Dosage du ttt : "))
+        file.write(textDosage.get() + '\n')
+        if CheckVar1.get()==1:
+            file.write(str("Réserve : "))
+            file.write(str("Oui\n"))
+        if CheckVar2.get()==1:
+            file.write(str("1ère intention : "))
+            file.write(str("Oui\n"))
+        if CheckVar3.get()==1:
+            file.write(str("2ème intention : "))
+            file.write(str("Oui\n"))
+        if Rnbre.get()=='':
+            print("Pas de réserves!")
+            file.write(Rnbre.get() + '\n')
+        file.write(str("Date of end : "))
+        file.write(comboFinishDay.get())
+        file.write(comboFinishMonth.get())
+        file.write(comboFinishYear.get())
+        file.write(str('\n'))
+        file.write(str("Signature : "))
+        file.write(textSign.get())
+        file.write(str('\n\n'))
     try:
         if os.path.getsize('./ttt/doc_ttt/convres.json'):
             print("+ File 'convres' exist !")
@@ -353,12 +406,20 @@ def copyToFile():
             comboYear.get(), 'Date of end' : comboFinishDay.get() +
             comboFinishMonth.get() + comboFinishYear.get(),
             'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-            'Reserve' : CheckVar1.get(), 'First line' : CheckVar2.get(), 
+            'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), 
             'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
         if textTreat.get() == "":
             print("---No value 'Treatment' introduced---")
         else:
             print("---Ok value 'Treatment' introduced---")
+        if CheckVar2.get() == 0:
+            print("There is not a First-line reserve")
+        else:
+            print("There is a First-line reserve")
+        if CheckVar3.get() == 0:
+            print("There is not a Second-line reserve")
+        else:
+            print("There is a Second-line reserve")
             with open('./ttt/doc_ttt/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
@@ -751,10 +812,15 @@ C3 = tk.Checkbutton(app, text="Second-line", fg='navy',
 C3.grid(row=20, column=2, pady=10)
 
 # Buttons with functions
-buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
+buttCopy = tk.Button(app, text="Save ttt", width=10, fg='yellow',
     bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
-    activebackground='dark turquoise', command=copyFunc)
+    activebackground='dark turquoise', command=copyTttMess)
 buttCopy.grid(row=21, column=0)
+
+buttCopy = tk.Button(app, text="Save R", width=10, fg='yellow',
+    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=copyResMess)
+buttCopy.grid(row=22, column=0)
 
 LabelR = tk.Label(app, text='Number of R/24h : ', font=12, 
     width=20, fg='cyan', bg='grey17')
@@ -776,6 +842,6 @@ textSign.grid(row=22, column=2, pady=10)
 buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
     bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
     activebackground='dark turquoise', command=quit)
-buttQuit.grid(row=22, column=0)
+buttQuit.grid(row=22, column=3)
 
 app.mainloop()
