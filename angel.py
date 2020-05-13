@@ -61,7 +61,7 @@ class MenuBar(Frame):
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
-        me1.add_command(label='QUIT', font=("Times 14 bold"), 
+        me1.add_command(label='Quit', font=("Times 14 bold"), 
             background='black', activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
