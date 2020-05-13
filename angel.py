@@ -770,29 +770,29 @@ class Application(Frame):
 
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
-        self.b100=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
+        self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+            bg='RoyalBlue3', fg='yellow', activebackground='dark turquoise',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
         # To refresh canvas + menu bar
         self.x101, self.y101 = 270, 50
-        self.b101=Button(self.can, width=10, font=16, bg='coral', fg='PaleGreen1',
-            activebackground='yellow', activeforeground='blue',
+        self.b101=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+            bg='coral', fg='PaleGreen1', activebackground='yellow', activeforeground='blue',
             text="Refresh", command=self.upDateAll)
         self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
         # To delete one patient and all files
         self.x200, self.y200 = 130, 100
-        self.b200=Button(self.can, width=10, font=16, bg='grey17', fg='coral',
-            activebackground='red', activeforeground='white',
+        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+            bg='red', fg='white', activebackground='black', activeforeground='red',
             text="Delete patient", command=self.delEverPat)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
         # To add one patient and files
         self.x200, self.y200 = 270, 100
-        self.b200=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
+        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+            bg='RoyalBlue3', fg='yellow', activebackground='dark turquoise', 
             text="Add patient", command=self.addPatientAfter)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
@@ -1746,11 +1746,11 @@ class Application(Frame):
     def updateFiletxt(self):
         subprocess.call('./Backup/backupfile.py')
 
-        self.can.configure(scrollregion=self.can.bbox(ALL))
-
     def upDateAll(self):
         self.master.destroy()
         subprocess.call('./angel.py')
+
+        self.can.configure(scrollregion=self.can.bbox(ALL))
 
 if __name__=='__main__':
     app = Application()
