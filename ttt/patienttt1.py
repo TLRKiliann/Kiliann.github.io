@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-*-encoding:Utf-8-*-
+# -*-encoding:Utf-8-*-
 
 
 import tkinter as tk
@@ -52,63 +52,63 @@ def deleteTreatment():
                 
                 dataDose = datastore
                 for key, value in dataDose.items():
-                    if deleteTreat.get() == value[0]['Traitement']:
+                    if deleteTreat.get() == value[0]['Treatment']:
                         del value[0]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[1]['Traitement']:
+                    elif deleteTreat.get() == value[1]['Treatment']:
                         del value[1]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[2]['Traitement']:
+                    elif deleteTreat.get() == value[2]['Treatment']:
                         del value[2]
                         print("+ TTT earased !")
                         
-                    elif deleteTreat.get() == value[3]['Traitement']:
+                    elif deleteTreat.get() == value[3]['Treatment']:
                         del value[3]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[4]['Traitement']:
+                    elif deleteTreat.get() == value[4]['Treatment']:
                         del value[4]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[5]['Traitement']:
+                    elif deleteTreat.get() == value[5]['Treatment']:
                         del value[5]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[6]['Traitement']:
+                    elif deleteTreat.get() == value[6]['Treatment']:
                         del value[6]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[7]['Traitement']:
+                    elif deleteTreat.get() == value[7]['Treatment']:
                         del value[7]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[8]['Traitement']:
+                    elif deleteTreat.get() == value[8]['Treatment']:
                         del value[8]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[9]['Traitement']:
+                    elif deleteTreat.get() == value[9]['Treatment']:
                         del value[9]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[10]['Traitement']:
+                    elif deleteTreat.get() == value[10]['Treatment']:
                         del value[10]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[11]['Traitement']:
+                    elif deleteTreat.get() == value[11]['Treatment']:
                         del value[11]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[12]['Traitement']:
+                    elif deleteTreat.get() == value[12]['Treatment']:
                         del value[12]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[13]['Traitement']:
+                    elif deleteTreat.get() == value[13]['Treatment']:
                         del value[13]
                         print("+ TTT earased !")
 
-                    elif deleteTreat.get() == value[14]['Traitement']:
+                    elif deleteTreat.get() == value[14]['Treatment']:
                         del value[14]
                         print("+ TTT earased !")
                     else:
@@ -117,7 +117,7 @@ def deleteTreatment():
                     if deleteTreat.get() == '':
                         print("None treatment checked")
                     else:
-                        print("---Ok VALEUR 'Traitement' entrée---")
+                        print("---Ok VALUE 'Treatment' earased---")
                         with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
                             json.dump(dataDose, datafile2, indent=4)
         except FileNotFoundError as outcom:
@@ -130,8 +130,8 @@ def deleteReserve():
     To earase one line in array
     for one Reserve
     """
-    MSB = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
-    if MSB == 1:
+    MSB2 = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
+    if MSB2 == 1:
         print("Ok, Reserve has been ejected !")
         messagebox.showinfo('info BOX', 'Reserve is away !')
         try:
@@ -140,78 +140,78 @@ def deleteReserve():
                 with open('./ttt/doc_ttt/convres.json', 'r') as datafile:
                     datastore = json.load(datafile)
                 
-                dataDose = datastore
-                for key, value in dataDose.items():
-                    if deleteTreat.get() == value[0]['Reserve']:
+                dataRes = datastore
+                for key, value in dataRes.items():
+                    if deleteRes.get() == value[0]['Treatment']:
                         del value[0]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[1]['Reserve']:
+                    elif deleteRes.get() == value[1]['Treatment']:
                         del value[1]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[2]['Reserve']:
+                    elif deleteRes.get() == value[2]['Treatment']:
                         del value[2]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
                         
-                    elif deleteTreat.get() == value[3]['Reserve']:
+                    elif deleteRes.get() == value[3]['Treatment']:
                         del value[3]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[4]['Reserve']:
+                    elif deleteRes.get() == value[4]['Treatment']:
                         del value[4]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[5]['Reserve']:
+                    elif deleteRes.get() == value[5]['Treatment']:
                         del value[5]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[6]['Reserve']:
+                    elif deleteRes.get() == value[6]['Treatment']:
                         del value[6]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[7]['Reserve']:
+                    elif deleteRes.get() == value[7]['Treatment']:
                         del value[7]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[8]['Reserve']:
+                    elif deleteRes.get() == value[8]['Treatment']:
                         del value[8]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[9]['Reserve']:
+                    elif deleteRes.get() == value[9]['Treatment']:
                         del value[9]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[10]['Reserve']:
+                    elif deleteRes.get() == value[10]['Treatment']:
                         del value[10]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[11]['Reserve']:
+                    elif deleteRes.get() == value[11]['Treatment']:
                         del value[11]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[12]['Reserve']:
+                    elif deleteRes.get() == value[12]['Treatment']:
                         del value[12]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[13]['Reserve']:
+                    elif deleteRes.get() == value[13]['Treatment']:
                         del value[13]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
 
-                    elif deleteTreat.get() == value[14]['Reserve']:
+                    elif deleteRes.get() == value[14]['Treatment']:
                         del value[14]
-                        print("+ TTT earased !")
+                        print("+ Reserve earased !")
                     else:
                         print("Reserve is not present into medication")
 
-                    if deleteTreat.get() == '':
+                    if deleteRes.get() == '':
                         print("None Reserve checked")
                     else:
-                        print("---Ok VALEUR 'Reserve' entrée---")
+                        print("---Ok VALUE 'Reserve' earased---")
                         with open('./ttt/doc_ttt/convres.json', 'w') as datafile2:
-                            json.dump(dataDose, datafile2, indent=4)
-        except FileNotFoundError as outcom:
-            print('+ Sorry, file convres.json not exist !', outcom)
+                            json.dump(dataRes, datafile2, indent=4)
+        except FileNotFoundError as outinfo:
+            print('+ Sorry, file convres.json not exist !', outinfo)
     else:           
         NoforQ = messagebox.showinfo('Return', 'Reserve not earased')
 
@@ -260,20 +260,6 @@ def copyToFile():
         if CheckVarNuit.get()==1:
             file.write(str("Nuit : "))
         file.write(Entnuit.get() + '\n')
-        if CheckVar1.get()==1:
-            file.write(str("Réserve : "))
-            file.write(str("Oui\n"))
-        if CheckVar2.get()==1:
-            file.write(str("1ère intention : "))
-            file.write(str("Oui\n"))
-        if CheckVar3.get()==1:
-            file.write(str("2ème intention : "))
-            file.write(str("Oui\n"))
-        if Rnbre.get()=='':
-            print("Pas de réserves!")
-        else:
-            file.write(str("Nbre de réserve/24h : "))
-            file.write(Rnbre.get() + '\n')
         file.write(str("Date of end : "))
         file.write(comboFinishDay.get())
         file.write(comboFinishMonth.get())
@@ -336,7 +322,7 @@ def copyResMess():
 
 def copyToReserve():
     """
-    To write all data to intro_res.json
+    To write all data to intro_res.txt
     to reuse them after.
     """
     with open('./ttt/doc_ttt/intro_res.txt', '+a') as file:
@@ -387,7 +373,7 @@ def copyToReserve():
                 comboYear.get(), 'Date of end' : comboFinishDay.get() +
                 comboFinishMonth.get() + comboFinishYear.get(),
                 'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-                'Reserve' : CheckVar1.get(), 'First line' : CheckVar2.get(), 
+                'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), 
                 'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
             if textTreat.get() == "":
                 print("---No value 'Treatment' introduced---")
@@ -429,11 +415,11 @@ app.configure(bg='grey17')
 
 textLab = tk.Label(app, text="Introduction of treatement (ttt)",
     font=('Times 22 bold'), fg='aquamarine', bg='grey17')
-textLab.grid(row=0, column=0, columnspan=3, pady=10)
+textLab.grid(row=0, column=0, columnspan=4, pady=10)
 
 labelallergy=tk.Label(app, text="Allergy",
     font='Arial 18 bold', fg='coral', bg='grey17')
-labelallergy.grid(row=1, column=0, columnspan=3)
+labelallergy.grid(row=1, column=0, columnspan=4)
 
 # To read allergy for entry widget
 with open('./allergy/allergyfile.txt', 'r') as filename2:
@@ -448,7 +434,7 @@ with open('./allergy/allergyfile.txt', 'r') as filename2:
 entrytext=tk.StringVar()
 entrytext.set(line1 + ', ' + line3 + ', ' + line5 + ', ' + line7)
 entryName=tk.Entry(app, textvariable=entrytext, width=60)
-entryName.grid(row=2, column=0, columnspan=3, pady=10)
+entryName.grid(row=2, column=0, columnspan=4, pady=10)
 
 LabDate = tk.Label(app, text="Date : ", width=20, font=12,
     fg='cyan', bg='grey17', anchor='e')

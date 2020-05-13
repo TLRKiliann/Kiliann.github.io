@@ -226,7 +226,7 @@ class app(Frame):
         To create table
         """
         self.entries = {}
-        self.tableheight = 16
+        self.tableheight = 10
         self.tablewidth = 8
         counter = 0
         for row in range(self.tableheight):
@@ -381,9 +381,9 @@ class app(Frame):
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
             else:
-                messagebox.showinfo('Reserve', 'No more Reserve had added')
+                messagebox.showinfo('Reserve', 'No more Reserve has added')
         except IndexError as info:
-            print("End of medication reached !", info)
+            print("End of reserve reached !", info)
 
 os.remove('./ttt/doc_ttt/data_res.json')
 os.remove('./ttt/doc_ttt/data_doser.json')
