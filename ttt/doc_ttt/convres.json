@@ -6,10 +6,10 @@
             "Date of end": "07 July 2020",
             "Treatment": "Drug2",
             "Dosage": "33mg",
-            "Matin": "",
-            "Midi": "",
-            "Soir": "",
-            "Nuit": ""
+            "Reserve": 1,
+            "First line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
         }
     ]
 }

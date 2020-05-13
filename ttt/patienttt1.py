@@ -32,6 +32,9 @@ def callbackFinishYear(event):
 def showTreat():
     subprocess.call('./ttt/doc_ttt/tabs.py')
 
+def showReserve():
+    subprocess.call('./ttt/doc_ttt/tabres.py')
+
 def copyFunc():
     """
     MessageBox to ensure if it's well done.
@@ -134,6 +137,96 @@ def deleteTreatment():
     else:           
         NoforQ = messagebox.showinfo('Return', 'Treatment not earased')
 
+def deleteReserve():
+    """
+    To earase one line in array
+    for one Reserve
+    """
+    MSB = messagebox.askyesno('Delete Reserve', 'Are you sure ?')
+    if MSB == 1:
+        print("Ok, Reserve has been ejected !")
+        messagebox.showinfo('info BOX', 'Reserve is away !')
+        try:
+            if os.path.getsize('./ttt/doc_ttt/convres.json'):
+                print("+ File 'convres' exist !")
+                with open('./ttt/doc_ttt/convres.json', 'r') as datafile:
+                    datastore = json.load(datafile)
+                
+                dataDose = datastore
+                for key, value in dataDose.items():
+                    if deleteTreat.get() == value[0]['Reserve']:
+                        del value[0]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[1]['Reserve']:
+                        del value[1]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[2]['Reserve']:
+                        del value[2]
+                        print("+ TTT earased !")
+                        
+                    elif deleteTreat.get() == value[3]['Reserve']:
+                        del value[3]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[4]['Reserve']:
+                        del value[4]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[5]['Reserve']:
+                        del value[5]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[6]['Reserve']:
+                        del value[6]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[7]['Reserve']:
+                        del value[7]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[8]['Reserve']:
+                        del value[8]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[9]['Reserve']:
+                        del value[9]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[10]['Reserve']:
+                        del value[10]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[11]['Reserve']:
+                        del value[11]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[12]['Reserve']:
+                        del value[12]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[13]['Reserve']:
+                        del value[13]
+                        print("+ TTT earased !")
+
+                    elif deleteTreat.get() == value[14]['Reserve']:
+                        del value[14]
+                        print("+ TTT earased !")
+                    else:
+                        print("Reserve is not present into medication")
+
+                    if deleteTreat.get() == '':
+                        print("None Reserve checked")
+                    else:
+                        print("---Ok VALEUR 'Reserve' entrée---")
+                        with open('./ttt/doc_ttt/convres.json', 'w') as datafile2:
+                            json.dump(dataDose, datafile2, indent=4)
+        except FileNotFoundError as outcom:
+            print('+ Sorry, file convres.json not exist !', outcom)
+    else:           
+        NoforQ = messagebox.showinfo('Return', 'Reserve not earased')
+
 def copyToFile():
     """
     To write all data to intro_ttt.json
@@ -201,13 +294,13 @@ def copyToFile():
                 'Date of introduction' : comboDay.get() + comboMonth.get() +
                 comboYear.get(), 'Date of end' : comboFinishDay.get() +
                 comboFinishMonth.get() + comboFinishYear.get(),
-                'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
                 'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
                 'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
             if textTreat.get() == "":
-                print("---Pas de VALEUR 'Traitement' entrée---")
+                print("---No value 'Treatment' introduced---")
             else:
-                print("---Ok VALEUR 'Traitement' entrée---")
+                print("---Ok value 'Treatment' introduced---")
                 with open('./ttt/doc_ttt/convdose.json', 'w') as datafile2:
                     json.dump(dataDose, datafile2, indent=4)
     except FileNotFoundError as outcom:
@@ -220,14 +313,53 @@ def copyToFile():
             'Date of introduction' : comboDay.get() + comboMonth.get() +
             comboYear.get(), 'Date of end' : comboFinishDay.get() +
             comboFinishMonth.get() + comboFinishYear.get(),
-            'Traitement' : textTreat.get(), 'Dosage' : textDosage.get(),
+            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
             'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
             'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
         if textTreat.get() == "":
-            print("---Pas de VALEUR 'Traitement' entrée---")
+            print("---No value 'Treatment' introduced---")
         else:
-            print("---Ok VALEUR 'Traitement' entrée---")
+            print("---Ok value 'Treatment' introduced---")
             with open('./ttt/doc_ttt/convdose.json', 'w') as datafile:
+                json.dump(dataDose, datafile, indent=4)
+    try:
+        if os.path.getsize('./ttt/doc_ttt/convres.json'):
+            print("+ File 'convres' exist !")
+            with open('./ttt/doc_ttt/convres.json', 'r') as datafile:
+                datastore = json.load(datafile)
+                print(datastore)
+            dataDose = datastore
+            dataDose['data'].append({'Date' : textDate.get(),
+                'Date of introduction' : comboDay.get() + comboMonth.get() +
+                comboYear.get(), 'Date of end' : comboFinishDay.get() +
+                comboFinishMonth.get() + comboFinishYear.get(),
+                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
+                'Reserve' : CheckVar1.get(), 'First line' : CheckVar2.get(), 
+                'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
+            if textTreat.get() == "":
+                print("---No value 'Treatment' introduced---")
+            else:
+                print("---Ok value 'Treatment' introduced---")
+                with open('./ttt/doc_ttt/convres.json', 'w') as datafile2:
+                    json.dump(dataDose, datafile2, indent=4)
+    except FileNotFoundError as outcom:
+        print('+ Sorry, file convres.json not exist !')
+        print(str(outcom))
+        print("+ File convres.json created !")
+        dataDose = {}
+        dataDose['data'] = []
+        dataDose['data'].append({'Date' : textDate.get(),
+            'Date of introduction' : comboDay.get() + comboMonth.get() +
+            comboYear.get(), 'Date of end' : comboFinishDay.get() +
+            comboFinishMonth.get() + comboFinishYear.get(),
+            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
+            'Reserve' : CheckVar1.get(), 'First line' : CheckVar2.get(), 
+            'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
+        if textTreat.get() == "":
+            print("---No value 'Treatment' introduced---")
+        else:
+            print("---Ok value 'Treatment' introduced---")
+            with open('./ttt/doc_ttt/convres.json', 'w') as datafile:
                 json.dump(dataDose, datafile, indent=4)
 
 app = tk.Tk()
@@ -315,6 +447,40 @@ textDosage = tk.Entry(textvariable=tttDosage,
     highlightbackground='grey', bd=4)
 tttDosage.set("mcg/ml/mg/UI/gttes")
 textDosage.grid(row=7, column=1)
+
+deleteTreat = tk.Entry(app)
+delete_text = tk.StringVar()
+delete_text.set("Enter ttt to stop")
+deleteTreat = tk.Entry(textvariable=delete_text,
+    highlightbackground='red', bd=4)
+deleteTreat.grid(row=3, column=2)
+# TTT to stop
+buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
+    bg='red', bd=3, highlightbackground='grey17',
+    activebackground='coral', command=deleteTreatment)
+buttStopttt.grid(row=3, column=3, padx=10)
+
+deleteRes = tk.Entry(app)
+delete_res = tk.StringVar()
+delete_res.set("Enter R to stop")
+deleteRes = tk.Entry(textvariable=delete_res,
+    highlightbackground='red', bd=4)
+deleteRes.grid(row=5, column=2)
+# Reserves to stop
+buttStopttt = tk.Button(app, text="Stop R", width=10, fg='yellow',
+    bg='red', bd=3, highlightbackground='grey17',
+    activebackground='coral', command=deleteReserve, padx=10)
+buttStopttt.grid(row=5, column=3)
+
+buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='cyan',
+    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=showTreat)
+buttShowttt.grid(row=7, column=2)
+
+buttShowttt = tk.Button(app, text="Show R", width=10, fg='cyan',
+    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=showReserve)
+buttShowttt.grid(row=7, column=3)
 
 textDateS = tk.Label(app, text="Processing start date :", 
     font=('Arial 14 bold'), fg='aquamarine', bg='grey17', width=40, anchor='w')
@@ -584,6 +750,12 @@ C3 = tk.Checkbutton(app, text="Second-line", fg='navy',
     width=20, anchor='w')
 C3.grid(row=20, column=2, pady=10)
 
+# Buttons with functions
+buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
+    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    activebackground='dark turquoise', command=copyFunc)
+buttCopy.grid(row=21, column=0)
+
 LabelR = tk.Label(app, text='Number of R/24h : ', font=12, 
     width=20, fg='cyan', bg='grey17')
 LabelR.grid(row=21, column=1)
@@ -592,40 +764,18 @@ Rnbre = tk.Entry(app)
 Rnbre = tk.Entry(highlightbackground='grey', bd=4)
 Rnbre.grid(row=21, column=2)
 
-buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
-    bg='red', bd=3, highlightbackground='grey17',
-    activebackground='coral', command=deleteTreatment)
-buttStopttt.grid(row=23, column=0)
-
-deleteTreat = tk.Entry(app)
-delete_text = tk.StringVar()
-delete_text.set("Enter name of ttt")
-deleteTreat = tk.Entry(textvariable=delete_text,
-    highlightbackground='red', bd=4)
-deleteTreat.grid(row=21, column=0)
-
 LabSign = tk.Label(app, text='Signature :', font=12, 
     width=15, fg='red', bg='pale green')
-LabSign.grid(row=23, column=1, pady=10)
+LabSign.grid(row=22, column=1, pady=10)
 
 textSign = tk.Entry(app)
 textSign = tk.Entry(highlightbackground='grey', bd=4)
-textSign.grid(row=23, column=2, pady=10)
+textSign.grid(row=22, column=2, pady=10)
 
 # Buttons with functions
-buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='cyan',
-    bg='navy', bd=3, highlightbackground='grey17', 
-    activebackground='dark turquoise', command=showTreat)
-buttShowttt.grid(row=24, column=0, pady=10)
-
-buttCopy = tk.Button(app, text="Save", width=10, fg='yellow',
-    bg='navy', bd=3, highlightbackground='grey17', 
-    activebackground='dark turquoise', command=copyFunc)
-buttCopy.grid(row=24, column=1, pady=10)
-
-buttQuit = tk.Button(app, text="Quit", width=10, fg='white',
-    bg='navy', bd=3, highlightbackground='grey17', 
+buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
+    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
     activebackground='dark turquoise', command=quit)
-buttQuit.grid(row=24, column=2, pady=10)
+buttQuit.grid(row=22, column=0)
 
 app.mainloop()
