@@ -629,14 +629,14 @@ class Application(Frame):
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création de 2 boutons sur la page d'accueil (main page or intro)
         # Synopsis button
-        self.button2 = Button(self, text="SYNOPSIS", font=('Times 22 bold'),
+        self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.showsynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Statistiques button
-        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 22 bold'),
+        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
             activebackground='dark turquoise')
@@ -669,14 +669,14 @@ class Application(Frame):
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # Création des 3 boutons
-        self.button2 = Button(self, text="SYNOPSIS", font=('Times 22 bold'),
+        self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.showsynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Statistiques button
-        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 22 bold'),
+        self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
             activebackground='dark turquoise')
