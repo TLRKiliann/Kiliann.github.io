@@ -342,4 +342,4 @@ for i in listeDate:
         print("+ End of backup !")
     else:
         print("+ No backup has been made !")
-        pass
+        break
