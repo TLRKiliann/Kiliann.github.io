@@ -1337,7 +1337,7 @@ class Application(Frame):
             print("File 5 has not been found", infofile5)
         except IndexError as inforange5:
             print("List 5 less than 6 lines", inforange5)
-        finally:
+        else:
             ("No problem identified for patient 5")
 
         try:
@@ -1916,8 +1916,19 @@ class Application(Frame):
         self.can.textBox = Text(app, text = "")
 
     def updateFiletxt(self):
-        MSB = messagebox.showinfo('Info', 'Backup is done at the beginning of each month')
-        subprocess.call('./Backup/backupfile.py')
+        # To backup all files
+        listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
+        "01/08/2020", "01/09/2020", "01/10/2020", "01/11/2020",
+        "01/12/2020"]
+
+        for i in listeDate:
+            if time.strftime("%d/%m/%Y") == i:
+                MSB = messagebox.showinfo('Info', 'Backup is done at the first of each month')
+                subprocess.call('./Backup/backupfile.py')
+                break
+            else:
+                print("It's not the date for backup")
+                break
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
