@@ -19,7 +19,7 @@ En date du : 11/05/2020 at 22:54:16 :
 # CK-MB value and treatment : Good
 # Troponin value and treatment : Ok
 
-En date du : 11/05/2020 at 22:54:56 :
+En date du : 13/05/2020 at 22:54:56 :
 + Surveillance de la température requise
 3x/d
 + Surveillance urinaire et/ou fécale requise requise

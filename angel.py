@@ -6,6 +6,7 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import filedialog
 import time
+import datetime
 import os
 import subprocess
 
@@ -1209,12 +1210,31 @@ class Application(Frame):
             activebackground='dark turquoise', activeforeground='black',
             text="Ext. stacke.", command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
-
+        # TextBox
         self.x63, self.y63 = 625, 600
         self.t63=Text(self.can, height=15, width=60, font=18, relief=SUNKEN)
         self.t63.insert(INSERT, "News : ")
         self.t63.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
         self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
+        # File or functions ???
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr:
+            print("File has not been found", infousr)
 
     # For new entry
     def callPatient1(self):
