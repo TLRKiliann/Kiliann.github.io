@@ -1223,10 +1223,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n---Patient1---\n")
+                        self.t63.insert(END, "\n--- Patient 1 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1237,9 +1237,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile:
-            print("File has not been found", infofile)
+            print("File 1 has not been found", infofile)
         except IndexError as inforange:
-            print("List out of range", inforange)
+            print("List 1 less than 6 lines", inforange)
         else:
             ("No problem identified for patient 1")
 
@@ -1247,10 +1247,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi2/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient2---\n")
+                        self.t63.insert(END, "\n\n--- Patient 2 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1261,9 +1261,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile1:
-            print("File has not been found", infofile1)
+            print("File 2 has not been found", infofile1)
         except IndexError as inforange2:
-            print("List out of range", inforange2)
+            print("List 2 less than 6 lines", inforange2)
         else:
             ("No problem identified for patient 2")
 
@@ -1271,10 +1271,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi3/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient3---\n")
+                        self.t63.insert(END, "\n\n--- Patient 3 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1285,9 +1285,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile3:
-            print("File has not been found", infofile3)
+            print("File 3 has not been found", infofile3)
         except IndexError as inforange3:
-            print("List out of range", inforange3)
+            print("List 3 less than 6 lines", inforange3)
         else:
             ("No problem identified for patient 3")
 
@@ -1295,10 +1295,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi4/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient4---\n")
+                        self.t63.insert(END, "\n\n--- Patient 4 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1309,9 +1309,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile4:
-            print("File has not been found", infofile4)
+            print("File 4 has not been found", infofile4)
         except IndexError as inforange4:
-            print("List out of range", inforange4)
+            print("List 4 less than 6 lines", inforange4)
         else:
             ("No problem identified for patient 4")
 
@@ -1319,10 +1319,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi5/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient5---\n")
+                        self.t63.insert(END, "\n\n--- Patient 5 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1333,20 +1333,20 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile5:
-            print("File has not been found", infofile5)
+            print("File 5 has not been found", infofile5)
         except IndexError as inforange5:
-            print("List out of range", inforange5)
-        else:
+            print("List 5 less than 6 lines", inforange5)
+        finally:
             ("No problem identified for patient 5")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi6/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient6---\n")
+                        self.t63.insert(END, "\n\n--- Patient 6 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1357,9 +1357,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile6:
-            print("File has not been found", infofile6)
+            print("File 6 has not been found", infofile6)
         except IndexError as inforange6:
-            print("List out of range", inforange6)
+            print("List 6 less than 6 lines", inforange6)
         else:
             ("No problem identified for patient 6")
 
@@ -1367,10 +1367,10 @@ class Application(Frame):
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi7/main_14b.txt', 'r') as filedate:
                 lines=filedate.readlines()
-                for i in range(0, len(lines[7])):
+                for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "\n\n---Patient7---\n")
+                        self.t63.insert(END, "\n\n--- Patient 7 ---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1381,9 +1381,9 @@ class Application(Frame):
                     else:
                         pass
         except FileNotFoundError as infofile7:
-            print("File has not been found", infofile7)
+            print("File 7 has not been found", infofile7)
         except IndexError as inforange7:
-            print("List out of range", inforange7)
+            print("List 7 less than 6 lines", inforange7)
         else:
             ("No problem identified for patient 7")
 
