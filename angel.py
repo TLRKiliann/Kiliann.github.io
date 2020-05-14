@@ -1239,6 +1239,126 @@ class Application(Frame):
         except FileNotFoundError as infousr:
             print("File has not been found", infousr)
 
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi2/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient2---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr2:
+            print("File has not been found", infousr2)
+
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi3/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient3---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr3:
+            print("File has not been found", infousr3)
+
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi4/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient4---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr4:
+            print("File has not been found", infousr4)
+
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi5/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient5---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr5:
+            print("File has not been found", infousr5)
+
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi6/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient6---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr6:
+            print("File has not been found", infousr6)
+
+        try:
+            datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./14besoins/doc_suivi7/main_14b.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if datesearch in line:
+                        self.t63.insert(END, "---Patient7---\n")
+                        self.t63.insert(INSERT, line)
+                        self.t63.insert(INSERT, lines[i+1])
+                        self.t63.insert(INSERT, lines[i+2])
+                        self.t63.insert(INSERT, lines[i+3])
+                        self.t63.insert(INSERT, lines[i+4])
+                        self.t63.insert(INSERT, lines[i+5])
+                        self.t63.insert(INSERT, lines[i+6])
+                    else:
+                        pass
+        except FileNotFoundError as infousr7:
+            print("File has not been found", infousr7)
+
     # For new entry
     def callPatient1(self):
         subprocess.call('./newpatient/entrypytientfile.py')
