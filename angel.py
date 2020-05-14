@@ -760,14 +760,16 @@ class Application(Frame):
         # To backup
         self.updateFiletxt()
 
-        self.x1, self.y1 = 1100, 100
-        self.Date_write=Entry(self.can)
-        self.data_time=StringVar()
-        self.Date_write=Entry(textvariable=self.data_time, width=10,
+        # Static time
+        self.x2, self.y2 = 1100, 100
+        self.Date_write2 = Entry(self.can)
+        self.data_time2 = StringVar()
+        self.Date_write2 = Entry(width=10, textvariable=self.data_time2,
             highlightbackground='grey', bd=4)
-        self.data_time.set(time.strftime("%H:%M:%S %p"))
-        self.Date_write=self.can.create_window(self.x1, self.y1,
-            window=self.Date_write)
+        self.data_time2.set(time.strftime("%H:%M:%S %p"))
+        self.Date_write2=self.can.create_window(self.x2, self.y2,
+            window=self.Date_write2)
+        # To display time dynamically
 
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
