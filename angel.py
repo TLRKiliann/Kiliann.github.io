@@ -774,7 +774,7 @@ class Application(Frame):
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
         self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='RoyalBlue3', fg='yellow', activebackground='dark turquoise',
+            bg='deep sky blue', fg='red', activebackground='dark turquoise',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
@@ -795,7 +795,7 @@ class Application(Frame):
         # To add one patient and files
         self.x200, self.y200 = 270, 100
         self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='RoyalBlue3', fg='yellow', activebackground='dark turquoise', 
+            bg='SpringGreen2', fg='navy', activebackground='dark turquoise', 
             text="Add patient", command=self.addPatientAfter)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
