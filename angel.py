@@ -758,8 +758,12 @@ class Application(Frame):
         self.data_time.set(time.strftime("%d/%m/%Y"))
         self.Date_write=self.can.create_window(self.x1, self.y1,
             window=self.Date_write)
+
         # To backup
         self.updateFiletxt()
+
+        # To check agenda
+        self.agendaDateSearch()
 
         # Static time
         self.x2, self.y2 = 1100, 100
@@ -1920,15 +1924,20 @@ class Application(Frame):
         listeDate = ["01/05/2020", "01/06/2020", "01/07/2020",
         "01/08/2020", "01/09/2020", "01/10/2020", "01/11/2020",
         "01/12/2020"]
+        try:
+            for i in listeDate:
+                if time.strftime("%d/%m/%Y") == i:
+                    MSB = messagebox.showinfo('Info', 'Backup is done at the first of each month')
+                    subprocess.call('./Backup/backupfile.py')
+                    break
+                else:
+                    print("It's not the date for backup")
+                    break
+        except FileNotFoundError as errout:
+            print("Not found, not found !!!", errout)
 
-        for i in listeDate:
-            if time.strftime("%d/%m/%Y") == i:
-                MSB = messagebox.showinfo('Info', 'Backup is done at the first of each month')
-                subprocess.call('./Backup/backupfile.py')
-                break
-            else:
-                print("It's not the date for backup")
-                break
+    def agendaDateSearch(self):
+        subprocess.call('./patient_agenda/checkdate.py')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
