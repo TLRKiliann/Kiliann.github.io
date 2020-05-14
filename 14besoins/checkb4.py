@@ -28,7 +28,7 @@ def recordOption():
     with open('./14besoins/doc_suivi4/patient4_14b.txt', 'a+') as file:
         file.write("\nDate : ")
         file.write(time.strftime("%d/%m/%Y") + '\n')
-        file.write("Nom du patient : ")
+        file.write("Patient name : ")
         file.write(entryName.get())
     print(CheckVar1.get())
     if CheckVar1.get()==1:
