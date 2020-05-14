@@ -1,0 +1,10 @@
+
+
+Date : 13/05/2020
+Nom du patient : Geronimo
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
+
+En date du : 13/05/2020 à 16:16:29 :
++ Surveillance respiratoire requise
+..
+--
