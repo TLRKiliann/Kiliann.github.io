@@ -1,12 +1,6 @@
 
-Date : 09/05/2020
+Date : 11/05/2020
 Nom du patient : Jimmy
 + Surveillance de la température requise
-+ Surveillance du sommeil requise
-+ Surveillance ou aide pour l'habillage/déshabillage requise
-+ Agir pour aider la personne dans ses valeurs et croyances
-+ Accompagner ou aider la personne à se réaliser
-
-Date : 09/05/2020
-Nom du patient : Jimmy
 + Surveillance urinaire et/ou fécale requise requise
++ Surveillance posturale et/ou des déplacements requise

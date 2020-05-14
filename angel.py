@@ -1746,11 +1746,11 @@ class Application(Frame):
     def updateFiletxt(self):
         subprocess.call('./Backup/backupfile.py')
 
+        self.can.configure(scrollregion=self.can.bbox(ALL))
+
     def upDateAll(self):
         self.master.destroy()
         subprocess.call('./angel.py')
-
-        self.can.configure(scrollregion=self.can.bbox(ALL))
 
 if __name__=='__main__':
     app = Application()

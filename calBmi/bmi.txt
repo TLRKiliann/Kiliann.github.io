@@ -47,3 +47,17 @@ Poids : 77
 Taille : 1.86
 BMI : 22.25690831309978
 
+Date : 22/05/2020
+Heure : 11:23:31
+Prenom et Nom : Jimmy
+Poids : 77
+Taille : 1.86
+BMI : 22.25690831309978
+
+Date : 22/05/2020
+Heure : 11:23:31
+Prenom et Nom : Jimmy
+Poids : 77
+Taille : 1.86
+BMI : 22.25690831309978
+
