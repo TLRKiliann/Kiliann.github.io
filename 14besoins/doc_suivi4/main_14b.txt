@@ -1,8 +1,8 @@
 
 
-En date du : 09/05/2020 à 17:33:53 :
+En date du : 13/05/2020 à 17:33:53 :
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Klaus
 + Surveillance de la température requise
 truc
@@ -11,6 +11,6 @@ much
 + Surveillance ou aide pour l'habillage/déshabillage requise
 test4
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Klaus
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

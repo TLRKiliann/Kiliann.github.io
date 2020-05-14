@@ -12,6 +12,6 @@ Nom du patient : Julia Roberts
 En date du : 09/05/2020 à 17:38:28 :
 test5
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Julia Roberts
 pH : 5 Leuco : +3 Nit : + Pro : +1 Glu : neg Ket : neg Ery : neg Hb : neg

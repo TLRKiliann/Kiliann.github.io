@@ -1226,7 +1226,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient1---\n")
+                        self.t63.insert(END, "\n\n---Patient1---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1238,6 +1238,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr:
             print("File has not been found", infousr)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1246,7 +1247,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient2---\n")
+                        self.t63.insert(END, "\n\n---Patient2---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1258,6 +1259,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr2:
             print("File has not been found", infousr2)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1266,7 +1268,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient3---\n")
+                        self.t63.insert(END, "\n\n---Patient3---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1278,6 +1280,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr3:
             print("File has not been found", infousr3)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1286,7 +1289,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient4---\n")
+                        self.t63.insert(END, "\n\n---Patient4---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1298,6 +1301,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr4:
             print("File has not been found", infousr4)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1306,7 +1310,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient5---\n")
+                        self.t63.insert(END, "\n\n---Patient5---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1318,6 +1322,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr5:
             print("File has not been found", infousr5)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1326,7 +1331,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient6---\n")
+                        self.t63.insert(END, "\n\n---Patient6---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1338,6 +1343,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr6:
             print("File has not been found", infousr6)
+            pass
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1346,7 +1352,7 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, "---Patient7---\n")
+                        self.t63.insert(END, "\n\n---Patient7---\n")
                         self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
@@ -1358,6 +1364,7 @@ class Application(Frame):
                         pass
         except FileNotFoundError as infousr7:
             print("File has not been found", infousr7)
+            pass
 
     # For new entry
     def callPatient1(self):

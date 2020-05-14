@@ -2,7 +2,7 @@
 
 En date du : 09/05/2020 à 17:48:41 :
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Clint
 + Surveillance pour éviter les dangers requise
 + Surveillance ou aide pour l'habillage/déshabillage requise
@@ -12,6 +12,6 @@ test7
 En date du : 09/05/2020 à 17:48:50 :
 test7 ok
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Clint
 pH : 7 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg

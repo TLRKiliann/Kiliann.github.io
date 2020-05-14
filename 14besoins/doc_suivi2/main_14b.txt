@@ -1,10 +1,10 @@
 
 
-Date : 09/05/2020
+Date : 13/05/2020
 Nom du patient : Geronimo
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
 
-En date du : 09/05/2020 à 16:16:29 :
+En date du : 13/05/2020 à 16:16:29 :
 + Surveillance respiratoire requise
 Test2 ok
 
@@ -21,7 +21,7 @@ En date du : 10/05/2020 à 10:38:42 :
 Revoir les somnifères.
 
 ***************************************************************************
-Date : 11/05/2020
+Date : 13/05/2020
 Patient name : Geronimo
 pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : +2 Ery : neg Hb : neg
 ***************************************************************************
