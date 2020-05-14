@@ -56,9 +56,9 @@ Entryall.pack(padx=10, pady=5)
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=8, fg='cyan', 
-    bg='gray30', activebackground='dark turquoise', 
-    activeforeground='navy', command=quit)
+buttonClose=Button(fen, text="Quit", width=8, bd=3,
+    fg='cyan', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./vmed/doc_vmed5/resultvmed.txt',

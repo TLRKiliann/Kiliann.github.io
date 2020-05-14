@@ -109,24 +109,25 @@ textBox.insert(INSERT, "\nEn date du : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", width=8,
-    fg='cyan', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=readerFile)
+buttonLire=Button(root, text="Read", width=8, bd=3,
+    fg='cyan', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=readerFile)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonEffacer=Button(root, text="1-Add", width=8,
-    fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=addText)
+buttonEffacer=Button(root, text="1-Add", width=8, bd=3,
+    fg='yellow', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=addText)
 buttonEffacer.pack(side='left', padx=10, pady=10)
 
-buttonEnter=Button(root, text="2-Save", width=8, 
-    fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=messFromSafeButt)
+buttonEnter=Button(root, text="2-Save", width=8, bd=3,
+    fg='yellow', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise',
+    command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", width=8,
-    fg='cyan', bg='gray30', activebackground='red', 
-    activeforeground='navy', command=quit)
+buttonQuitter=Button(root, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', highlightbackground='grey17',
+    activebackground='red', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 importationFile('./vmed/doc_vmed2/resultvmed.txt',
