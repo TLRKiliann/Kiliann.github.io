@@ -1236,8 +1236,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr:
-            print("File has not been found", infousr)
+        except FileNotFoundError as infofile:
+            print("File has not been found", infofile)
+        except IndexError as inforange:
+            print("List out of range", inforange)
+        else:
+            ("No problem identified for patient 1")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1256,8 +1260,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr2:
-            print("File has not been found", infousr2)
+        except FileNotFoundError as infofile1:
+            print("File has not been found", infofile1)
+        except IndexError as inforange2:
+            print("List out of range", inforange2)
+        else:
+            ("No problem identified for patient 2")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1276,8 +1284,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr3:
-            print("File has not been found", infousr3)
+        except FileNotFoundError as infofile3:
+            print("File has not been found", infofile3)
+        except IndexError as inforange3:
+            print("List out of range", inforange3)
+        else:
+            ("No problem identified for patient 3")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1296,8 +1308,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr4:
-            print("File has not been found", infousr4)
+        except FileNotFoundError as infofile4:
+            print("File has not been found", infofile4)
+        except IndexError as inforange4:
+            print("List out of range", inforange4)
+        else:
+            ("No problem identified for patient 4")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1316,8 +1332,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr5:
-            print("File has not been found", infousr5)
+        except FileNotFoundError as infofile5:
+            print("File has not been found", infofile5)
+        except IndexError as inforange5:
+            print("List out of range", inforange5)
+        else:
+            ("No problem identified for patient 5")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1336,8 +1356,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr6:
-            print("File has not been found", infousr6)
+        except FileNotFoundError as infofile6:
+            print("File has not been found", infofile6)
+        except IndexError as inforange6:
+            print("List out of range", inforange6)
+        else:
+            ("No problem identified for patient 6")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1356,8 +1380,12 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infousr7:
-            print("File has not been found", infousr7)
+        except FileNotFoundError as infofile7:
+            print("File has not been found", infofile7)
+        except IndexError as inforange7:
+            print("List out of range", inforange7)
+        else:
+            ("No problem identified for patient 7")
 
     # For new entry
     def callPatient1(self):
