@@ -1224,7 +1224,8 @@ class Application(Frame):
                 for i in range(0, len(lines)):
                     line = lines[i]
                     if datesearch in line:
-                        self.t63.insert(END, line)
+                        self.t63.insert(END, "---Patient1---\n")
+                        self.t63.insert(INSERT, line)
                         self.t63.insert(INSERT, lines[i+1])
                         self.t63.insert(INSERT, lines[i+2])
                         self.t63.insert(INSERT, lines[i+3])
