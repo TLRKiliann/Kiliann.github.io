@@ -379,8 +379,10 @@ class app(Frame):
                 self.entries[125].insert(0, list4[14])
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
-        except IndexError as info:
-            print("End of medication reached !", info)
+        except IndexError as infottt:
+            print("End of medication reached, there are more tbas than ttt !", infottt)
+        else:
+            print("Error unknow")
 
 os.remove('./ttt/doc_ttt/data_ttt.json')
 os.remove('./ttt/doc_ttt/data_dose.json')

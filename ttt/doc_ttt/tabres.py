@@ -380,10 +380,10 @@ class app(Frame):
                 self.entries[125].insert(0, list4[14])
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
-            else:
-                messagebox.showinfo('Reserve', 'No more Reserve has added')
-        except IndexError as info:
-            print("End of reserve reached !", info)
+        except IndexError as infor:
+            print("End of medication reached, there are more tbas than ttt !", infor)
+        else:
+            print("Error unknow")
 
 os.remove('./ttt/doc_ttt/data_res.json')
 os.remove('./ttt/doc_ttt/data_doser.json')

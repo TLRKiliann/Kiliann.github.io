@@ -3,7 +3,6 @@
 
 
 from tkinter import *
-from tkinter import messagebox
 import time
 import shutil
 
@@ -92,5 +91,4 @@ for i in listeDate:
         else:
             print("Error unknown")
     else:
-        print("+ No backup has been made !")
         break

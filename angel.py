@@ -45,23 +45,23 @@ class MenuBar(Frame):
         fileMenu.pack(side=LEFT, padx=3)
         # Partie déroulante du menu 1st
         me1 = Menu(fileMenu, tearoff=0)
-        me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"), 
+        me1.add_command(label='Accueil', underline=0, font=("Times 14 bold"),
             background='black',activebackground='aquamarine',
             foreground='aquamarine', activeforeground='black',
             command=boss.secondPage)
-        me1.add_command(label="Synopsis", underline=0, font=("Times 14 bold"), 
+        me1.add_command(label="Synopsis", underline=0, font=("Times 14 bold"),
             background='black', activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.showsynopsis)
-        me1.add_command(label="Psychotabs", underline=0, font=("Times 14 bold"), 
+        me1.add_command(label="Psychotabs", underline=0, font=("Times 14 bold"),
             background='black',  activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
-        me1.add_command(label='Install', font=("Times 14 bold"), 
+        me1.add_command(label='Install', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
-        me1.add_command(label='Quit', font=("Times 14 bold"), 
+        me1.add_command(label='Quit', font=("Times 14 bold"),
             background='black', activebackground='red',
             foreground='red', activeforeground='white',
             command=boss.msgExit)
@@ -119,7 +119,6 @@ class MenuBar(Frame):
         except:
             pass
 
-        
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', font=("Times 14"),
             fg='cyan', bg='grey30', relief=GROOVE)
@@ -229,7 +228,8 @@ class MenuBar(Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.besoins7Coche)
         # Integration of 14b menu
-        self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan', menu=me4)
+        self.cmd_Besoins.configure(activeforeground='black', activebackground='cyan',
+            menu=me4)
 
         # Helth and care menu
         self.cmd_Soins=Menubutton(self, text='Care and monitoring', font=("Times 14"),
@@ -376,7 +376,7 @@ class MenuBar(Frame):
             activebackground='cyan', foreground='cyan', activeforeground='black',
             command=boss.calculB7)
         # Integration of 3rd menu
-        self.cmd_BMI.configure(activeforeground='black', activebackground='cyan', 
+        self.cmd_BMI.configure(activeforeground='black', activebackground='cyan',
             menu=meBmi)
 
         # Medical Visite
@@ -460,106 +460,106 @@ class MenuBar(Frame):
         # drop-down portion of Graphics menu
         me1 = Menu(self.cmd_Graph)
         me2=Menu(me1)
-        me2.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me2.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup)
-        me2.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me2.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph)
-        me2.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me2.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye)
-        me2.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me2.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision)
-        me1.add_cascade(label=new_text, underline=0, font=('Times 16'), 
+        me1.add_cascade(label=new_text, underline=0, font=('Times 16'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me2)
         me1.add_separator()
 
         me3=Menu(me1)
-        me3.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me3.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup2)
-        me3.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me3.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph2)
-        me3.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me3.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye2)
-        me3.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me3.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision2)
-        me1.add_cascade(label=new_text2, underline=0, font=('Times 16'), 
-            background='black', foreground='cyan', 
+        me1.add_cascade(label=new_text2, underline=0, font=('Times 16'),
+            background='black', foreground='cyan',
             activeforeground='black', activebackground='cyan', menu=me3)
         me1.add_separator()
 
         me4=Menu(me1)
-        me4.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me4.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup3)
-        me4.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me4.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph3)
-        me4.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me4.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye3)
-        me4.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me4.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision3)
-        me1.add_cascade(label=new_text3, underline=0, font=('Times 16'), 
+        me1.add_cascade(label=new_text3, underline=0, font=('Times 16'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me4)
         me1.add_separator()
 
         me5=Menu(me1)
-        me5.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me5.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup4)
-        me5.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me5.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph4)
-        me5.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me5.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye4)
-        me5.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me5.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision4)
-        me1.add_cascade(label=new_text4, underline=0, font=('Times 16'), 
+        me1.add_cascade(label=new_text4, underline=0, font=('Times 16'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me5)
         me1.add_separator()
 
         me6=Menu(me1)
-        me6.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me6.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup5)
-        me6.add_command(label='Graphics', underline=0, font=('Times 16'), 
+        me6.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph5)
-        me6.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me6.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye5)
-        me6.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me6.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision5)
-        me1.add_cascade(label=new_text5, underline=0, font=('Times 16'), 
+        me1.add_cascade(label=new_text5, underline=0, font=('Times 16'),
             background='black', foreground='cyan', 
             activeforeground='black', activebackground='cyan', menu=me6)
         me1.add_separator()
 
         me7=Menu(me1)
-        me7.add_command(label='All Files.txt', underline=0, font=('Times 16'), 
+        me7.add_command(label='All Files.txt', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.allFilesBackup6)
         me7.add_command(label='Graphics', underline=0, font=('Times 16'), 
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph6)
-        me7.add_command(label='Global Vision', underline=0, font=('Times 16'), 
+        me7.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye6)
-        me7.add_command(label='Angel Eye', underline=0, font=('Times 16'), 
+        me7.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision6)
         me1.add_cascade(label=new_text6, underline=0, font=('Times 16'), 
@@ -594,8 +594,9 @@ class MenuBar(Frame):
         self.cmd_Intext.pack(side=LEFT, padx=3)
         # drop-down portion of Manuals Nurse
         meIntext = Menu(self.cmd_Intext)
-        meIntext.add_command(label='Click on it', background='black', activebackground='cyan',
-            foreground='cyan', activeforeground='black', command=boss.manualFile)
+        meIntext.add_command(label='Click on it', font=('Times 16'), 
+            background='black', activebackground='cyan', foreground='cyan',
+            activeforeground='black', command=boss.manualFile)
         # Integration of Manuals Nurse
         self.cmd_Intext.configure(activeforeground='black', activebackground='cyan',
             menu=meIntext)
@@ -660,7 +661,7 @@ class Application(Frame):
         self.photo=PhotoImage(file='./syno_gif/title2_syno.gif')
         self.item=self.can.create_image(625, 400, image=self.photo)
         # Insertion du texte
-        self.can.create_text(625, 420, anchor=CENTER, 
+        self.can.create_text(625, 420, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
                     font=('Times New Roman', 18), fill='aquamarine')
         self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
@@ -678,7 +679,7 @@ class Application(Frame):
         # Statistiques button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.launchPsycho)
-        self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
+        self.button3.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=self.button3)
@@ -698,7 +699,7 @@ class Application(Frame):
         self.can.delete(ALL)
         self.photo=PhotoImage(file='./syno_gif/pyt.gif')
         self.item=self.can.create_image(700, 400, image=self.photo)
-        self.can.create_text(500, 20, anchor=NW, 
+        self.can.create_text(500, 20, anchor=NW,
             text="-INSTALLATION DU PROGRAMME-\n\n"
             "Linux (Xubuntu):\n\n"
 
@@ -721,7 +722,7 @@ class Application(Frame):
             "Vérifier version python (si version 2.7 ou 3 et plus)\n"
             "en tapant dans le terminal: python --version.\n"
             "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
-            "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n" 
+            "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n"
             "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir "
             "l'application.\n\n"
 
@@ -774,14 +775,14 @@ class Application(Frame):
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
         self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='deep sky blue', fg='red', activebackground='dark turquoise',
+            bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
         # To refresh canvas + menu bar
         self.x101, self.y101 = 270, 50
         self.b101=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='coral', fg='PaleGreen1', activebackground='yellow', activeforeground='blue',
+            bg='RoyalBlue3', fg='white', activebackground='yellow', activeforeground='blue',
             text="Refresh", command=self.upDateAll)
         self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
@@ -795,7 +796,7 @@ class Application(Frame):
         # To add one patient and files
         self.x200, self.y200 = 270, 100
         self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='SpringGreen2', fg='navy', activebackground='dark turquoise', 
+            bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise', 
             text="Add patient", command=self.addPatientAfter)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
@@ -1806,43 +1807,43 @@ class Application(Frame):
 
     # All file backup
     def allFilesBackup(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files1", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files1", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup2(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files2", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files2", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup3(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files3", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files3", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup4(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files4", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files4", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup5(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files5", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files5", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup6(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files6", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files6", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup7(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files7", title = "Select file", 
+        filename = filedialog.askopenfilename(initialdir = "./Backup/Files7", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
@@ -1915,6 +1916,7 @@ class Application(Frame):
         self.can.textBox = Text(app, text = "")
 
     def updateFiletxt(self):
+        MSB = messagebox.showinfo('Info', 'Backup is done at the beginning of each month')
         subprocess.call('./Backup/backupfile.py')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
