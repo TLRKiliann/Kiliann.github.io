@@ -18,10 +18,8 @@ try:
                 pass
 except FileNotFoundError as infofile1:
     print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
 else:
-    ("No problem identified for patient 1")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -33,12 +31,10 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 2!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile2:
+    print("File 2 has not been found", infofile2)
 else:
-    ("No problem identified for patient 2")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -50,12 +46,10 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 3!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile3:
+    print("File 2 has not been found", infofile3)
 else:
-    ("No problem identified for patient 3")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -67,12 +61,10 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 4!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile4:
+    print("File 2 has not been found", infofile4)
 else:
-    ("No problem identified for patient 4")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -84,12 +76,10 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 5!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile5:
+    print("File 2 has not been found", infofile5)
 else:
-    ("No problem identified for patient 5")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -101,12 +91,10 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 6!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile6:
+    print("File 2 has not been found", infofile6)
 else:
-    ("No problem identified for patient 6")
+    ("Error unknow")
 
 try:
     dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -118,9 +106,7 @@ try:
                 MSB2 = messagebox.showinfo('Info', 'Look at AGENDA, there is a rdv to carry on for patient 7!')
             else:
                 pass
-except FileNotFoundError as infofile1:
-    print("File 2 has not been found", infofile1)
-except IndexError as inforange2:
-    print("List 2 less than 6 lines", inforange2)
+except FileNotFoundError as infofile7:
+    print("File 2 has not been found", infofile7)
 else:
-    ("No problem identified for patient7")
+    ("Error unknow")

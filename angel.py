@@ -1223,7 +1223,8 @@ class Application(Frame):
         self.t63.insert(INSERT, "Previously (yesterday) : ")
         self.t63.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
         self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
-        # File or functions ???
+
+        # Display text in textbox from 14 Needs files
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./14besoins/doc_suivi/main_14b.txt', 'r') as filedate:
@@ -1246,7 +1247,7 @@ class Application(Frame):
         except IndexError as inforange:
             print("List 1 less than 6 lines", inforange)
         else:
-            ("No problem identified for patient 1")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1270,7 +1271,7 @@ class Application(Frame):
         except IndexError as inforange2:
             print("List 2 less than 6 lines", inforange2)
         else:
-            ("No problem identified for patient 2")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1294,7 +1295,7 @@ class Application(Frame):
         except IndexError as inforange3:
             print("List 3 less than 6 lines", inforange3)
         else:
-            ("No problem identified for patient 3")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1318,7 +1319,7 @@ class Application(Frame):
         except IndexError as inforange4:
             print("List 4 less than 6 lines", inforange4)
         else:
-            ("No problem identified for patient 4")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1342,7 +1343,7 @@ class Application(Frame):
         except IndexError as inforange5:
             print("List 5 less than 6 lines", inforange5)
         else:
-            ("No problem identified for patient 5")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1366,7 +1367,7 @@ class Application(Frame):
         except IndexError as inforange6:
             print("List 6 less than 6 lines", inforange6)
         else:
-            ("No problem identified for patient 6")
+            ("Error unknow")
 
         try:
             datesearch = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d/%m/%Y')
@@ -1390,7 +1391,135 @@ class Application(Frame):
         except IndexError as inforange7:
             print("List 7 less than 6 lines", inforange7)
         else:
-            ("No problem identified for patient 7")
+            ("Error unknow")
+
+    def agendaDateSearch(self):
+        # Display agenda if an appointment has been fixed for tomorrow:
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 1!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile1:
+            print("File 1 has not been found", infofile1)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events2/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 2!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile2:
+            print("File 2 has not been found", infofile2)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events3/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 3!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile3:
+            print("File 3 has not been found", infofile3)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 4!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile4:
+            print("File 4 has not been found", infofile4)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events5/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 5!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile5:
+            print("File 5 has not been found", infofile5)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 6!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile6:
+            print("File 6 has not been found", infofile6)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
+            with open('./patient_agenda/events7/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 7!')
+                    else:
+                        pass
+        except FileNotFoundError as infofile7:
+            print("File 7 has not been found", infofile7)
+        else:
+            ("Error unknow")
 
     # For new entry
     def callPatient1(self):
@@ -1935,9 +2064,6 @@ class Application(Frame):
                     break
         except FileNotFoundError as errout:
             print("Not found, not found !!!", errout)
-
-    def agendaDateSearch(self):
-        subprocess.call('./patient_agenda/checkdate.py')
 
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
