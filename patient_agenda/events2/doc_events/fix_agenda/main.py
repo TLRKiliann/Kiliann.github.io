@@ -132,36 +132,38 @@ reachDate = Entry(textvariable=regexpi_var, highlightbackground='gray')
 reachDate.grid(row=1, column=2, padx=5, pady=10)
 
 buttonSearch = Button(gui)
-buttonSearch = Button(text='Search', fg='yellow', bg='navy', width=6, 
-    command=searchExpress)
+buttonSearch = Button(text='Search', width=8, bd=3,
+    fg='yellow', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=searchExpress)
 buttonSearch.grid(row=1, column=3, padx=5)
 
 textBox = Text(gui, height=15, width=60, font=18)
 textBox.grid(row=4, column=1, columnspan=3, padx=30, pady=30)
 
-buttonSave = Button(gui, text="1-Save", fg='yellow', bg='navy', width=6,
-    activebackground='cyan', activeforeground='navy',
-    command = messFromSafeButt)
+buttonSave = Button(gui, text="1-Save", width=8, bd=3,
+    fg='yellow', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command = messFromSafeButt)
 buttonSave.grid(sticky='w', row=5, column=1, padx=10, pady=10)
 
-buttonModif = Button(gui, text="2-Read changes", fg='cyan', bg='navy', width=12,
-    activebackground='cyan', activeforeground='navy',
-    command = modifList)
+buttonModif = Button(gui, text="2-Read changes", width=12, bd=3,
+    fg='yellow', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command = modifList)
 buttonModif.grid(sticky='e', row=5, column=1, padx=10, pady=10)
 
-buttonDelete = Button(gui, text="3-Clear", fg='cyan', bg='navy', width=6,
-    activebackground='cyan', activeforeground='navy',
-    command = deleteTextbox)
+buttonDelete = Button(gui, text="Clear", width=8, bd=3,
+    fg='cyan', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command = deleteTextbox)
 buttonDelete.grid(sticky='w', row=5, column=2, padx=10, pady=10)
 
-buttonEnter = Button(gui, text="4-Add changes", fg='cyan', bg='navy', width=12,
-    activebackground='cyan', activeforeground='navy',
-    command = reorderFile)
-buttonEnter.grid(sticky='e', row=5, column=2, padx=10, pady=10)
+buttonEnter = Button(gui, text="Add changes", width=10, bd=3,
+    fg='cyan', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command = reorderFile)
+buttonEnter.grid(sticky='e', row=5, column=2, pady=10)
 
 buttonQuit = Button(gui)
-buttonQuit = Button(text='Quit', fg='cyan', bg='gray30', width=8,
-    activebackground='red', command=quit)
+buttonQuit = Button(text='Quit', width=8, bd=3,
+    fg='white', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
 buttonQuit.grid(sticky='e', row=5, column=3, padx=10, pady=10)
 
 gui.mainloop()

@@ -2,3 +2,6 @@ Current date : 15/05/2020, 10:57:15 :
 Appointment set for : 16/05/2020 :
 Ok that seems good !
 
+
++++ Changes about rdv +++
+
