@@ -75,24 +75,25 @@ textBox.insert(INSERT, "Current date : ")
 textBox.insert(END, time.strftime("%d/%m/%Y, %H:%M:%S") + ' :\n')
 textBox.pack(padx=30, pady=30)
 
-buttonEnter=Button(fen, text="Save", width=6, fg='yellow', bg='navy',
-    activebackground='dark turquoise', activeforeground='navy',
-    command=messFromSafeButt)
+buttonEnter=Button(fen, text="Save", width=8, bd=3,
+    fg='yellow', bg='navy',activebackground='dark turquoise',
+    highlightbackground='grey17', command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonLire=Button(fen, text="Read", width=6, fg='cyan', bg='navy',
-    activebackground='dark turquoise', activeforeground='navy',
-    command=lectureFic)
+buttonLire=Button(fen, text="Read", width=8, bd=3,
+    fg='cyan', bg='navy', activebackground='dark turquoise',
+    highlightbackground='grey17', command=lectureFic)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonEffacer=Button(fen, text="Change RDV", width=10,
-    fg='cyan', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=changeText)
+buttonEffacer=Button(fen, text="Change RDV", width=10, bd=3,
+    fg='cyan', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=changeText)
 buttonEffacer.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(fen, text="Quit", width=8, fg='cyan',
-    bg='gray30', activebackground='red', command=quit)
-buttonQuitter.pack(side='right', padx=10, pady=10)
+buttonClose=Button(fen, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
+buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./patient_agenda/events5/doc_events/fix_agenda/patient_value.json')
 
