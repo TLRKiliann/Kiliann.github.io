@@ -1422,7 +1422,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 1!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA,there is a rdv to carry on for patient 1!')
                     else:
                         pass
         except FileNotFoundError as infofile1:
@@ -1440,7 +1441,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 2!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 2!')
                     else:
                         pass
         except FileNotFoundError as infofile2:
@@ -1458,7 +1460,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 3!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 3!')
                     else:
                         pass
         except FileNotFoundError as infofile3:
@@ -1476,7 +1479,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 4!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 4!')
                     else:
                         pass
         except FileNotFoundError as infofile4:
@@ -1494,7 +1498,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 5!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 5!')
                     else:
                         pass
         except FileNotFoundError as infofile5:
@@ -1512,7 +1517,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 6!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 6!')
                     else:
                         pass
         except FileNotFoundError as infofile6:
@@ -1530,7 +1536,8 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info', 'Look at AGENDA, there is a rdv to carry on for patient 7!')
+                        MSB2 = messagebox.showwarning('Info',
+                            'Look at AGENDA, there is a rdv to carry on for patient 7!')
                     else:
                         pass
         except FileNotFoundError as infofile7:
@@ -1539,20 +1546,29 @@ class Application(Frame):
             ("Error unknow")
 
     def frameInfo(self):
+        """
+        Info for button on first page
+        """
         self.Lab=Tk()
         self.Lab.title("ATCD")
-        self.Lab3=Label(self.Lab, text="\nAlain Exemple").pack()
+        self.Lab.configure(bg="grey22")
+        self.Lab3=Label(self.Lab, text="\nWelcome !",
+            font=("Arial 14 bold"),fg='cyan', bg='grey22').pack()
+        self.separator = LabelFrame(self.Lab, height=2, bd=1,
+            relief=SUNKEN)
+        self.separator.pack(fill=X, padx=5, pady=5)
+
+        self.Lab4=Label(self.Lab, text="\nInfo",
+            font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
         self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=5, pady=5)
 
-        self.Lab4=Label(self.Lab, text="\nATCD").pack()
-        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
-        self.separator.pack(fill=X, padx=5, pady=5)
-
-        self.Lab5=Label(self.Lab, justify=LEFT, font=('Times', 12),
-            text="\nEpisodes dment initial\n" 
-        "Effets secondaires fréquents: ges, agitation, diminution de la\n" 
-        "tolérance et diminue donc vite au cours d'un traitement à long terme.\n").pack()
+        self.Lab5=Label(self.Lab, justify=LEFT, fg='cyan',
+            bg='grey22', font=('Times', 14),
+            text="\nMenu Bar and Synopsis are the most importants\n"
+        "skills to performed onto this app. I f you need help,\n" 
+        "you can go the MapApp to find a map of this app and\n" 
+        "how the app can be used.\n").pack()
         self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=5, pady=5)
 
