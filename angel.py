@@ -717,18 +717,24 @@ class Application(Frame):
         self.photo=PhotoImage(file='./syno_gif/pyt.gif')
         self.item=self.can.create_image(700, 400, image=self.photo)
         self.can.create_text(500, 20, anchor=NW,
-            text="-INSTALLATION DU PROGRAMME-\n\n"
-            "Linux (Xubuntu):\n\n"
+            text="- MapApp -\n\n"
+            "Developped on Linux Xubuntu (xfce4) Voyager 18.04:\n\n"
 
-            "Ouvrir le terminal.\n"
+            "Message pop --> Backup every 1 of month\n"
+            "            --> Agenda to verify\n"
+
+            "Synopsis --> 14 Needs\n"
+            "         --> Care and monitoring\n"
+
+            "Care and monitoring retrieve all data from :\n"
+            "+ Labo"
+            "+ ttt"
+            "+ 14 Needs"
+            "+ stackeholders (podologue, etc...)"
+            "+  "
             "Vérifier version python (si version 2.7 ou 3 et plus)\n"
             "en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
             "Sinon, télécharger python 3.5 en ligne de commande:\n"
-            "sudo apt-get update && apt-get upgrade.\n"
-            "sudo apt-get install python3-tk (avec tkinter pour la GUI).\n"
-            "Aller sous le dossier où il a été téléchargé et taper (ex: "
-            "cd /Documents/psychotabs.py)\n"
-            "et tapez ./psychotabs.py pour ouvrir l'application.\n"
             "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
 
             "**************************************************************\n\n"
@@ -736,10 +742,6 @@ class Application(Frame):
             "Mac OS:\n\n"
 
             "Ouvrir le terminal.\n"
-            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
-            "en tapant dans le terminal: python --version.\n"
-            "Rendez-vous sur python.org pour télécharger la version correspondante à votre Mac.\n"
-            "A partir du Terminal, allez sous le dossier où il a été téléchargé et taper (ex: cd\n"
             "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir "
             "l'application.\n\n"
 
