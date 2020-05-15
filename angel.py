@@ -628,7 +628,14 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
-        # Création de 2 boutons sur la page d'accueil (main page or intro)
+        # 3 buttons on welcome page.
+        # Info button
+        self.button1 = Button(self, text="Info", font=('Times 14 bold'),
+            bg='DodgerBlue2', fg='cyan', command = self.frameInfo)
+        self.button1.configure(width=10, bd=3, highlightbackground='grey22',
+            activebackground='dark turquoise')
+        self.button1_window = self.can.create_window(1180, 30, anchor=CENTER,
+            window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.showsynopsis)
@@ -636,7 +643,7 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
-        # Statistiques button
+        # Psychotabs button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
@@ -671,7 +678,15 @@ class Application(Frame):
         self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
-        # Création des 3 boutons
+        # 3 buttons on welcome page.
+        # Info button
+        self.button1 = Button(self, text="Info", font=('Times 14 bold'),
+            bg='DodgerBlue2', fg='cyan', command = self.frameInfo)
+        self.button1.configure(width=10, bd=3, highlightbackground='grey22',
+            activebackground='dark turquoise')
+        self.button1_window = self.can.create_window(1180, 30, anchor=CENTER,
+            window=self.button1)
+        # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.showsynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='grey22',
@@ -1522,6 +1537,24 @@ class Application(Frame):
             print("File 7 has not been found", infofile7)
         else:
             ("Error unknow")
+
+    def frameInfo(self):
+        self.Lab=Tk()
+        self.Lab.title("ATCD")
+        self.Lab3=Label(self.Lab, text="\nAlain Exemple").pack()
+        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=5, pady=5)
+
+        self.Lab4=Label(self.Lab, text="\nATCD").pack()
+        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=5, pady=5)
+
+        self.Lab5=Label(self.Lab, justify=LEFT, font=('Times', 12),
+            text="\nEpisodes dment initial\n" 
+        "Effets secondaires fréquents: ges, agitation, diminution de la\n" 
+        "tolérance et diminue donc vite au cours d'un traitement à long terme.\n").pack()
+        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=5, pady=5)
 
     # For new entry
     def callPatient1(self):
