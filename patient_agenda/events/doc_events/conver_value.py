@@ -6,10 +6,11 @@ import os
 import json
 import subprocess
 
-
-file=open('./patient_agenda/events/doc_events/patient_rdv.json')
-data=json.load(file)
-file.close()
+try:
+    with open('./patient_agenda/events/doc_events/patient_rdv.json') as file:
+        data=json.load(file)
+except FileNotFoundError as fileout:
+    print("File patient_rdv.json not created", fileout)
 
 for value in data:
     print(value)
@@ -18,12 +19,22 @@ data_list1 = []
 for value in data:
     data_list1.append(value[1])
 
-dalaFa = data_list1[0]
-dalaTrim = data_list1[1]
-dalaPeste = data_list1[2]
+data_day = data_list1[0]
+data_month = data_list1[1]
+data_year = data_list1[2]
+
+try:
+    if data_month < 10:
+        extradala = '0' +''+ str(data_month)
+    elif data_month >= 10:
+        extradala = str(data_month)
+    else:
+        pass
+except ValueError as valout:
+    print("Value is a problem", valout)
 
 lalala = "Appointment set for :"
-final_data =  lalala +' '+ str(dalaFa) +'/'+ str(dalaTrim) +'/'+ str(dalaPeste) +' :'
+final_data =  lalala +' '+ str(data_day) +'/'+ extradala +'/'+ str(data_year) +' :'
 print(final_data)
 
 try:
@@ -34,6 +45,6 @@ try:
 except FileNotFoundError as msg:
     print("File doesn't exist, but it has been created !")
     with open('./patient_agenda/events/doc_events/fix_agenda/patient_value.json','w') as partyleft:
-    	json.dump(final_data, partyleft)
+        json.dump(final_data, partyleft)
 
 subprocess.call('./patient_agenda/events/doc_events/fix_agenda/extend_agenda.py')

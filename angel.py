@@ -644,7 +644,9 @@ class Application(Frame):
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=self.button3)
         self.pack()
-
+        
+        # To check agenda
+        self.agendaDateSearch()
     # Méthode pour reconfigurer la scrollbar à chaque fois
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -763,7 +765,7 @@ class Application(Frame):
         self.updateFiletxt()
 
         # To check agenda
-        self.agendaDateSearch()
+        #self.agendaDateSearch()
 
         # Static time
         self.x2, self.y2 = 1100, 100

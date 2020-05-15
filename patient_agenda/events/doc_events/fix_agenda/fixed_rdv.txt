@@ -1,35 +1,4 @@
-Current date : 09/05/2020, 09:25:51 :
-Appointment set for : 28/5/2020 :
-Rdv chez l'ophtalmo à 9h00.
-
-
-+++ Changes about rdv +++
-Appointment set for : 28/5/2020 :
-Rdv chez l'ophtalmo à 9h00.
-ANNULE
-
-Current date : 09/05/2020, 11:34:33 :
-Appointment set for : 10/5/2020 :
-test messagebox !
-
-
-+++ Changes about rdv +++
-Appointment set for : 10/5/2020 :
-test messagebox !
-change
-
-
-+++ Changes about rdv +++
-Appointment set for : 10/5/2020 :
-test messagebox !
-change
----Data saved !---With modification of date :
-Appointment set for : 10/5/2020 :
-test messagebox !
-change
-tatata
-
-Current date : 10/05/2020, 10:03:28 :
-Appointment set for : 25/6/2020 :
-RDV chez le physio à 14h00.
+Current date : 15/05/2020, 10:57:15 :
+Appointment set for : 16/05/2020 :
+Ok that seems good !
 
