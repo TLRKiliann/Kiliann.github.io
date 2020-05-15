@@ -6,11 +6,12 @@ import os
 import json
 import subprocess
 
+
 try:
     with open('./patient_agenda/events/doc_events/patient_rdv.json') as file:
         data=json.load(file)
 except FileNotFoundError as fileout:
-    print("File patient_rdv.json not created", fileout)
+    print("File 1 patient_rdv.json not created", fileout)
 
 for value in data:
     print(value)
@@ -33,8 +34,8 @@ try:
 except ValueError as valout:
     print("Value is a problem", valout)
 
-lalala = "Appointment set for :"
-final_data =  lalala +' '+ str(data_day) +'/'+ extradala +'/'+ str(data_year) +' :'
+initword = "Appointment set for :"
+final_data =  initword +' '+ str(data_day) +'/'+ extradala +'/'+ str(data_year) +' :'
 print(final_data)
 
 try:

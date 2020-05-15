@@ -7,9 +7,11 @@ import json
 import subprocess
 
 
-file=open('./patient_agenda/events3/doc_events/patient_rdv.json')
-data=json.load(file)
-file.close()
+try:
+    with open('./patient_agenda/events3/doc_events/patient_rdv.json') as file:
+        data=json.load(file)
+except FileNotFoundError as fileout:
+    print("File 3 patient_rdv.json not created", fileout)
 
 for value in data:
     print(value)
@@ -18,12 +20,22 @@ data_list1 = []
 for value in data:
     data_list1.append(value[1])
 
-dalaFa = data_list1[0]
-dalaTrim = data_list1[1]
-dalaPeste = data_list1[2]
+data_day = data_list1[0]
+data_month = data_list1[1]
+data_year = data_list1[2]
 
-lalala = "Appointment set for :"
-final_data =  lalala +' '+ str(dalaFa) +'/'+ str(dalaTrim) +'/'+ str(dalaPeste) +' :'
+try:
+    if data_month < 10:
+        extradala = '0' +''+ str(data_month)
+    elif data_month >= 10:
+        extradala = str(data_month)
+    else:
+        pass
+except ValueError as valout:
+    print("Value is a problem", valout)
+
+initword = "Appointment set for :"
+final_data =  initword +' '+ str(data_day) +'/'+ extradala +'/'+ str(data_year) +' :'
 print(final_data)
 
 try:
