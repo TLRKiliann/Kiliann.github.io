@@ -1942,43 +1942,44 @@ class Application(Frame):
 
     # All file backup
     def allFilesBackup(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files1", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files1",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
+        open('')
 
         # All file backup
     def allFilesBackup2(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files2", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files2", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup3(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files3", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files3", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup4(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files4", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files4", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup5(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files5", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files5", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup6(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files6", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files6", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 
         # All file backup
     def allFilesBackup7(self):
-        filename = filedialog.askopenfilename(initialdir = "./Backup/Files7", title = "Select file",
+        filename = filedialog.askopenfiles(initialdir = "./Backup/Files7", title = "Select file",
             filetypes = (("txt files","*.txt"),("all files","*.*")))
         print (filename)
 

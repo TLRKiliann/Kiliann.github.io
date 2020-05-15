@@ -36,9 +36,9 @@ entrylab.pack(in_=top, side=LEFT, padx=10, pady=20)
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30',
-    width=8, activebackground='dark turquoise', 
-    activeforeground='navy', command=quit)
+buttonClose=Button(fen, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', highlightbackground='grey17',
+    activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./patient_agenda/events6/doc_events/fix_agenda/fixed_rdv.txt')
