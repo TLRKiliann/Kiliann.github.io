@@ -1942,46 +1942,101 @@ class Application(Frame):
 
     # All file backup
     def allFilesBackup(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files1",
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files1",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
-        open('')
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup2(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files2", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files2",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup3(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files3", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files3",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup4(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files4", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files4",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup5(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files5", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files5",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup6(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files6", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files6",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
     def allFilesBackup7(self):
-        filename = filedialog.askopenfiles(initialdir = "./Backup/Files7", title = "Select file",
-            filetypes = (("txt files","*.txt"),("all files","*.*")))
-        print (filename)
+        self.label=Tk()
+        self.label.title("VM_07.01.19_au_15.01.19")
+        filepath = filedialog.askopenfilename(initialdir = "./Backup/Files7",
+            title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
+        print(filepath)
+        with open(filepath, "r") as fichier:
+            content = fichier.read()
+            fichier.close()
+
+        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+            bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
     def globEye(self):
         subprocess.call('./global_eye/angel_eye1.py')
