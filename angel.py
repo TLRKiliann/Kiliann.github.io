@@ -1552,24 +1552,26 @@ class Application(Frame):
         self.Lab=Tk()
         self.Lab.title("ATCD")
         self.Lab.configure(bg="grey22")
-        self.Lab3=Label(self.Lab, text="\nWelcome !",
-            font=("Arial 14 bold"),fg='cyan', bg='grey22').pack()
-        self.separator = LabelFrame(self.Lab, height=2, bd=1,
+
+        self.labFra=LabelFrame(self.Lab, text="\nWelcome !",
+            font=("Arial 14 bold"),fg='cyan', bg='grey22')
+        self.labFra.pack(padx=3, pady=3)
+        self.separator = Frame(self.labFra, height=2, bd=1,
             relief=SUNKEN)
         self.separator.pack(fill=X, padx=5, pady=5)
 
-        self.Lab4=Label(self.Lab, text="\nInfo",
+        self.Lab4=Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
-        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
+        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=5, pady=5)
 
-        self.Lab5=Label(self.Lab, justify=LEFT, fg='cyan',
+        self.Lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar and Synopsis are the most importants\n"
         "skills to performed onto this app. I f you need help,\n" 
         "you can go the MapApp to find a map of this app and\n" 
         "how the app can be used.\n").pack()
-        self.separator = Frame(self.Lab, height=2, bd=1, relief=SUNKEN)
+        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=5, pady=5)
 
     # For new entry
