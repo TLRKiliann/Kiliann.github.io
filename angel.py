@@ -1558,28 +1558,33 @@ class Application(Frame):
         """
         Info for button on first page
         """
-        self.Lab=Tk()
-        self.Lab.title("ATCD")
-        self.Lab.configure(bg="grey22")
+        self.lab=Tk()
+        self.lab.title("ATCD")
+        self.lab.configure(bg="grey22")
 
-        self.labFra=LabelFrame(self.Lab, text="\nWelcome !",
+        self.labFra=LabelFrame(self.lab, text="\nWelcome !",
             font=("Arial 12"),fg='cyan', bg='grey22')
         self.labFra.pack(padx=5, pady=5)
         self.separator = Frame(self.labFra, height=2, bd=1,
             relief=SUNKEN)
 
-        self.Lab4=Label(self.labFra, text="\nInfo",
+        self.lab4=Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
         self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
         self.separator.pack(fill=X, padx=100, pady=3)
 
-        self.Lab5=Label(self.labFra, justify=LEFT, fg='cyan',
+        self.lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar and Synopsis are the most usefull skills\n"
             "to perform onto this app ! If you need help, you\n" 
             "can go to MapApp to access map of this app and\n" 
-            "understand how the app is used.\n"
-            "                                                       Enjoy it ! ;)\n").pack(padx=10)
+            "understand how the app is used.\n\n"
+            "Enjoy it ! ;)\n").pack(padx=10)
+        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
+        self.separator.pack(fill=X, padx=30, pady=3)
+        self.lab6=Label(self.labFra, justify=LEFT, fg='cyan',
+            bg='grey22', font=('Times', 14),
+            text="Path : Menu Bar --> Menu --> MapApp").pack(padx=10, pady=10)
 
     # For new entry
     def callPatient1(self):
