@@ -623,7 +623,7 @@ class Application(Frame):
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
             font=('Times New Roman', 18, 'bold'), fill='navy')
-        self.can.create_text(1185, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
+        self.can.create_text(1195, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
             font=('Times', 12), fill='white')
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
@@ -631,10 +631,10 @@ class Application(Frame):
         # 3 buttons on welcome page.
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
-            bg='grey40', fg='cyan', command = self.frameInfo)
+            bg='deep sky blue', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
-        self.button1_window = self.can.create_window(1180, 30, anchor=CENTER,
+        self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
@@ -667,24 +667,24 @@ class Application(Frame):
     def secondPage(self):
         self.can.delete(ALL)
         # Insertion d'une image
-        self.photo=PhotoImage(file='./syno_gif/title2_syno.gif')
+        self.photo=PhotoImage(file='./syno_gif/angelbg.png')
         self.item=self.can.create_image(625, 400, image=self.photo)
         # Insertion du texte
         self.can.create_text(625, 420, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-                    font=('Times New Roman', 18), fill='aquamarine')
-        self.can.create_text(1185, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
-                    font=('Times', 12), fill='white')
+            font=('Times New Roman', 18), fill='navy')
+        self.can.create_text(1195, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
+        	font=('Times', 12), fill='white')
         self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
         # 3 buttons on welcome page.
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
-            bg='DodgerBlue2', fg='cyan', command = self.frameInfo)
+            bg='deep sky blue', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
-        self.button1_window = self.can.create_window(1180, 30, anchor=CENTER,
+        self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
