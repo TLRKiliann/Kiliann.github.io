@@ -767,8 +767,8 @@ class Application(Frame):
         self.can.delete(ALL)
         self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
         self.item=self.can.create_image(625, 400, image=self.photo)
-        self.can.create_text(625, 80, anchor=CENTER, text="Synopsis",
-            font=('Times New Roman', 40), fill='aquamarine')
+        self.can.create_text(625, 80, anchor=CENTER, text="SYNOPSIS",
+            font=('Times New Roman', 40), fill='turquoise')
 
         self.x1, self.y1 = 1100, 50
         self.Date_write=Entry(self.can)
@@ -843,45 +843,45 @@ class Application(Frame):
             window=self.Data_write)
 
         self.x3, self.y3 = 271, 200
-        self.b=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink)
+        self.b=Button(self.can, width=8, font=16, bg='grey30', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink)
         self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
 
         self.x3, self.y3 = 429, 200
-        self.b=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag1)
+        self.b=Button(self.can, width=18, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag1)
         self.fb=self.can.create_window(self.x3, self.y3, window=self.b)
 
         self.x4, self.y4 = 597, 200
-        self.b4=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult)
+        self.b4=Button(self.can, width=10, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult)
         self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
         #769
         self.x5, self.y5 = 725, 200
-        self.b5=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.suiviSoins1)
+        self.b5=Button(self.can, width=10, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.suiviSoins1)
         self.fb5=self.can.create_window(self.x5, self.y5, window=self.b5)
         #896
         self.x6, self.y6 = 853, 200
-        self.b6=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv1)
+        self.b6=Button(self.can, width=10, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv1)
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
 
         self.x7, self.y7 = 981, 200
-        self.b7=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux)
+        self.b7=Button(self.can, width=10, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux)
         self.fb7=self.can.create_window(self.x7, self.y7, window=self.b7)
 
         self.x8, self.y8 = 1109, 200
-        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake)
+        self.b8=Button(self.can, width=10, font=16, bg='grey30', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 2
@@ -902,45 +902,45 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x10, self.y10 = 271, 232
-        self.b10=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink2)
+        self.b10=Button(self.can, width=8, font=16, bg='grey25', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink2)
         self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
 
         self.x13, self.y13 = 429, 232
-        self.b13=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag2)
+        self.b13=Button(self.can, width=18, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag2)
         self.fb13=self.can.create_window(self.x13, self.y13, window=self.b13)
 
         self.x14, self.y14 = 597, 232
-        self.b14=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult2)
+        self.b14=Button(self.can, width=10, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult2)
         self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
 
         self.x15, self.y15 = 725, 232
-        self.b15=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm1)
+        self.b15=Button(self.can, width=10, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm1)
         self.fb15=self.can.create_window(self.x15, self.y15, window=self.b15)
 
         self.x16, self.y16 = 853, 232
-        self.b16=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv2)
+        self.b16=Button(self.can, width=10, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv2)
         self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
 
         self.x17, self.y17 = 981, 232
-        self.b17=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux2)
+        self.b17=Button(self.can, width=10, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux2)
         self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
 
         self.x171, self.y171 = 1109, 232
-        self.b171=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake2)
+        self.b171=Button(self.can, width=10, font=16, bg='grey25', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake2)
         self.fb171=self.can.create_window(self.x171, self.y171, window=self.b171)
 
         # Patient 3
@@ -961,45 +961,45 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x19, self.y19 = 271, 264
-        self.b19=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink3)
+        self.b19=Button(self.can, width=8, font=16, bg='grey20', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink3)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
 
         self.x22, self.y22 = 429, 264
-        self.b22=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag3)
+        self.b22=Button(self.can, width=18, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag3)
         self.fb22=self.can.create_window(self.x22, self.y22, window=self.b22)
 
         self.x23, self.y23 = 597, 264
-        self.b23=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult3)
+        self.b23=Button(self.can, width=10, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult3)
         self.fb23=self.can.create_window(self.x23, self.y23, window=self.b23)
 
         self.x24, self.y24 = 725, 264
-        self.b24=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm3)
+        self.b24=Button(self.can, width=10, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm3)
         self.fb24=self.can.create_window(self.x24, self.y24, window=self.b24)
 
         self.x25, self.y25 = 853, 264
-        self.b25=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv3)
+        self.b25=Button(self.can, width=10, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv3)
         self.fb25=self.can.create_window(self.x25, self.y25, window=self.b25)
 
         self.x26, self.y26 = 981, 264
-        self.b26=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux3)
+        self.b26=Button(self.can, width=10, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux3)
         self.fb26=self.can.create_window(self.x26, self.y26, window=self.b26)
 
         self.x8, self.y8 = 1109, 264
-        self.b8=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake3)
+        self.b8=Button(self.can, width=10, font=16, bg='grey20', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake3)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
 
         # Patient 4
@@ -1020,45 +1020,45 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x28, self.y28 = 271, 296
-        self.b28=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink4)
+        self.b28=Button(self.can, width=8, font=16, bg='grey18', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink4)
         self.fb28=self.can.create_window(self.x28, self.y28, window=self.b28)
 
         self.x31, self.y31 = 429, 296
-        self.b31=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag4)
+        self.b31=Button(self.can, width=18, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag4)
         self.fb31=self.can.create_window(self.x31, self.y31, window=self.b31)
 
         self.x32, self.y32 = 597, 296
-        self.b32=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult4)
+        self.b32=Button(self.can, width=10, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult4)
         self.fb32=self.can.create_window(self.x32, self.y32, window=self.b32)
 
         self.x33, self.y33 = 725, 296
-        self.b33=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm4)
+        self.b33=Button(self.can, width=10, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm4)
         self.fb33=self.can.create_window(self.x33, self.y33, window=self.b33)
 
         self.x34, self.y34 = 853, 296
-        self.b34=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv4)
+        self.b34=Button(self.can, width=10, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv4)
         self.fb34=self.can.create_window(self.x34, self.y34, window=self.b34)
 
         self.x35, self.y35 = 981, 296
-        self.b35=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux4)
+        self.b35=Button(self.can, width=10, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux4)
         self.fb35=self.can.create_window(self.x35, self.y35, window=self.b35)
 
         self.x351, self.y351 = 1109, 296
-        self.b351=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake4)
+        self.b351=Button(self.can, width=10, font=16, bg='grey18', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake4)
         self.fb351=self.can.create_window(self.x351, self.y351, window=self.b351)
 
         #patient5
@@ -1079,45 +1079,45 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x37, self.y37 = 271, 328
-        self.b37=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink5)
+        self.b37=Button(self.can, width=8, font=16, bg='grey15', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink5)
         self.fb37=self.can.create_window(self.x37, self.y37, window=self.b37)
 
         self.x40, self.y40 = 429, 328
-        self.b40=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag5)
+        self.b40=Button(self.can, width=18, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag5)
         self.fb40=self.can.create_window(self.x40, self.y40, window=self.b40)
 
         self.x41, self.y41 = 597, 328
-        self.b41=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult5)
+        self.b41=Button(self.can, width=10, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult5)
         self.fb41=self.can.create_window(self.x41, self.y41, window=self.b41)
 
         self.x42, self.y42 = 725, 328
-        self.b42=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm5)
+        self.b42=Button(self.can, width=10, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm5)
         self.fb42=self.can.create_window(self.x42, self.y42, window=self.b42)
 
         self.x43, self.y43 = 853, 328
-        self.b43=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv5)
+        self.b43=Button(self.can, width=10, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv5)
         self.fb43=self.can.create_window(self.x43, self.y43, window=self.b43)
 
         self.x44, self.y44 = 981, 328
-        self.b44=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux5)
+        self.b44=Button(self.can, width=10, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux5)
         self.fb44=self.can.create_window(self.x44, self.y44, window=self.b44)
 
         self.x441, self.y441 = 1109, 328
-        self.b441=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake5)
+        self.b441=Button(self.can, width=10, font=16, bg='grey15', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake5)
         self.fb441=self.can.create_window(self.x441, self.y441, window=self.b441)
 
         #patient6
@@ -1138,45 +1138,45 @@ class Application(Frame):
           window=self.Data_write)
 
         self.x46, self.y46 = 271, 360
-        self.b46=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink6)
+        self.b46=Button(self.can, width=8, font=16, bg='grey12', fg='coral',
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink6)
         self.fb46=self.can.create_window(self.x46, self.y46, window=self.b46)
 
         self.x49, self.y49 = 429, 360
-        self.b49=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag6)
+        self.b49=Button(self.can, width=18, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag6)
         self.fb49=self.can.create_window(self.x49, self.y49, window=self.b49)
 
         self.x50, self.y50 = 597, 360
-        self.b50=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult6)
+        self.b50=Button(self.can, width=10, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult6)
         self.fb50=self.can.create_window(self.x50, self.y50, window=self.b50)
 
         self.x51, self.y51 = 725, 360
-        self.b51=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm6)
+        self.b51=Button(self.can, width=10, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm6)
         self.fb51=self.can.create_window(self.x51, self.y51, window=self.b51)
 
         self.x52, self.y52 = 853, 360
-        self.b52=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv6)
+        self.b52=Button(self.can, width=10, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv6)
         self.fb52=self.can.create_window(self.x52, self.y52, window=self.b52)
 
         self.x53, self.y53 = 981, 360
-        self.b53=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux6)
+        self.b53=Button(self.can, width=10, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux6)
         self.fb53=self.can.create_window(self.x53, self.y53, window=self.b53)
 
         self.x531, self.y531 = 1109, 360
-        self.b531=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake6)
+        self.b531=Button(self.can, width=10, font=16, bg='grey12', fg='cyan',
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake6)
         self.fb531=self.can.create_window(self.x531, self.y531, window=self.b531)
         
         #patient7
@@ -1198,45 +1198,46 @@ class Application(Frame):
 
         self.x54, self.y54 = 271, 392
         self.b54=Button(self.can, width=8, font=16, bg='black', fg='coral',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Allergy", command=self.allergyLink7)
+            activebackground='dark turquoise', text="Allergy",
+            command=self.allergyLink7)
         self.fb54=self.can.create_window(self.x54, self.y54, window=self.b54)
 
         self.x57, self.y57 = 429, 392
         self.b57=Button(self.can, width=18, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Diagnostic + ATCD", command=self.diag7)
+            activebackground='dark turquoise', text="Diagnostic + ATCD",
+            command=self.diag7)
         self.fb57=self.can.create_window(self.x57, self.y57, window=self.b57)
 
         self.x58, self.y58 = 597, 392
         self.b58=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Laboratory", command=self.laboResult7)
+            activebackground='dark turquoise', text="Laboratory",
+            command=self.laboResult7)
         self.fb58=self.can.create_window(self.x58, self.y58, window=self.b58)
 
         self.x59, self.y59 = 725, 392
         self.b59=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Exams", command=self.showvm7)
+            activebackground='dark turquoise', text="Exams",
+            command=self.showvm7)
         self.fb59=self.can.create_window(self.x59, self.y59, window=self.b59)
 
         self.x60, self.y60 = 853, 392
         self.b60=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Life story", command=self.histv7)
+            activebackground='dark turquoise', text="Life story",
+            command=self.histv7)
         self.fb60=self.can.create_window(self.x60, self.y60, window=self.b60)
 
         self.x61, self.y61 = 981, 392
         self.b61=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Aux. resrc.", command=self.moyaux7)
+            activebackground='dark turquoise', text="Aux. resrc.",
+            command=self.moyaux7)
         self.fb61=self.can.create_window(self.x61, self.y61, window=self.b61)
 
         self.x62, self.y62 = 1109, 392
         self.b62=Button(self.can, width=10, font=16, bg='black', fg='cyan',
-            activebackground='dark turquoise', activeforeground='black',
-            text="Ext. stacke.", command=self.extStake7)
+            activebackground='dark turquoise', text="Ext. stacke.",
+            command=self.extStake7)
         self.fb62=self.can.create_window(self.x62, self.y62, window=self.b62)
+
         # TextBox
         self.x63, self.y63 = 625, 600
         self.t63=Text(self.can, height=15, width=60, font=18, relief=SUNKEN)
@@ -1414,7 +1415,12 @@ class Application(Frame):
             ("Error unknow")
 
     def agendaDateSearch(self):
-        # Display agenda if an appointment has been fixed for tomorrow:
+        """
+        Display agenda if an appointment 
+        has been fixed for tomorrow:
+        """
+        print("Hello, let's see if appointment has been fixed for tomorrow...")
+        time.sleep(1)
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=1)).strftime('%d/%m/%Y')
             with open('./patient_agenda/events/doc_events/fix_agenda/fixed_rdv.txt', 'r') as filedate:
@@ -1573,7 +1579,7 @@ class Application(Frame):
             "to perform onto this app ! If you need help, you\n" 
             "can go to MapApp to access map of this app and\n" 
             "understand how the app is used.\n"
-	        "                                                       Enjoy it ! ;)\n").pack(padx=10)
+            "                                                       Enjoy it ! ;)\n").pack(padx=10)
 
     # For new entry
     def callPatient1(self):
@@ -2003,7 +2009,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2017,7 +2023,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2031,7 +2037,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2045,7 +2051,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2059,7 +2065,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2073,7 +2079,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
         # All file backup
@@ -2087,7 +2093,7 @@ class Application(Frame):
             content = fichier.read()
             fichier.close()
 
-        self.label=Label(self.label, justify=LEFT, font=('Times', 14),
+        self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
     def globEye(self):
@@ -2170,8 +2176,8 @@ class Application(Frame):
                     subprocess.call('./Backup/backupfile.py')
                     break
                 else:
-                    print("It's not the right date for backup, next will"
-                    	"be at the first of next month")
+                    print("It's not the right date for backup, next will "
+                        "be at the first of next month")
                     break
         except FileNotFoundError as errout:
             print("Not found, not found !!!", errout)
