@@ -617,7 +617,7 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/title2_syno.gif')
+        self.photo = PhotoImage(file='./syno_gif/angelbg.png')
         self.item = self.can.create_image(625, 400, image=self.photo)
         # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
@@ -765,7 +765,7 @@ class Application(Frame):
     # Synopsis page
     def showsynopsis(self):
         self.can.delete(ALL)
-        self.photo=PhotoImage(file='./syno_gif/syno_fond.gif')
+        self.photo=PhotoImage(file='./syno_gif/angelbg2.png')
         self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="SYNOPSIS",
             font=('Times New Roman', 40), fill='turquoise')
@@ -829,8 +829,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile.txt', 'r') as namefile:
                 line1=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile:
+            print("File entryfile.txt doen't exist !", callfile)
 
         self.data_time=line1
         self.x2, self.y2 = 129, 200
@@ -888,8 +888,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile2.txt', 'r') as namefile:
                 line2=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile2:
+            print("File entryfile2.txt doen't exist !", callfile2)
 
         self.new_data2=line2
         self.x9, self.y9 = 129, 232
@@ -947,8 +947,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile3.txt', 'r') as namefile:
                 line3=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile3:
+            print("File entryfile3.txt doen't exist !", callfile3)
 
         self.new_data3=line3
         self.x18, self.y18 = 129, 264
@@ -1006,8 +1006,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile4.txt', 'r') as namefile:
                 line4=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile4:
+            print("File entryfile4.txt doen't exist !", callfile4)
 
         self.new_data4=line4
         self.x27, self.y27 = 129, 296
@@ -1065,8 +1065,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile5.txt', 'r') as namefile:
                 line5=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile5:
+            print("File entryfile5.txt doen't exist !", callfile5)
 
         self.new_data5=line5
         self.x36, self.y36 = 129, 328
@@ -1124,8 +1124,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile6.txt', 'r') as namefile:
                 line6=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile6:
+            print("File entryfile6.txt doen't exist !", callfile6)
 
         self.new_data6=line6
         self.x45, self.y45 = 129, 360
@@ -1183,8 +1183,8 @@ class Application(Frame):
         try:
             with open('./newpatient/entryfile7.txt', 'r') as namefile:
                 line7=namefile.readline()
-        except:
-            pass
+        except FileNotFoundError as callfile7:
+            print("File entryfile7.txt doen't exist !", callfile7)
 
         self.new_data7=line7
         self.x54, self.y54 = 129, 392
