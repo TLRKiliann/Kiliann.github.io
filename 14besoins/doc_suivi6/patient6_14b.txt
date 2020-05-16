@@ -1,6 +1,7 @@
 
-Date : 10/05/2020
-Nom du patient : Silverster Stallone
-+ Surveillance propreté et/ou téguments requise
-+ Stimulation ou aide pour la communication requise
-+ Accompagnement ou aide dans se recréer requis
+Date : 16/05/2020
+Patient name : Julian Assange
++ Surveillance respiratoire requise
++ Surveillance alimentaire et/ou hydratation requise
++ Surveillance du sommeil requise
++ Surveillance pour éviter les dangers requise
