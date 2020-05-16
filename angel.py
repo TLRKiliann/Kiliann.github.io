@@ -605,7 +605,7 @@ class MenuBar(Frame):
 class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='grey22', padx=20, pady=20, relief=GROOVE)
-        self.master.title('ANGEL-VISION - Developed by CK - 2020')
+        self.master.title('ANGEL-VISION - Developed by ko@l@tr33 - 2020')
         mBar = MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=YES)
         # ScrollCanvas limite de la zone à parcourir avec la barre
@@ -622,8 +622,8 @@ class Application(Frame):
         # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18), fill='aquamarine')
-        self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
+            font=('Times New Roman', 18, 'bold'), fill='navy')
+        self.can.create_text(1185, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
             font=('Times', 12), fill='white')
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
@@ -673,7 +673,7 @@ class Application(Frame):
         self.can.create_text(625, 420, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
                     font=('Times New Roman', 18), fill='aquamarine')
-        self.can.create_text(170, 770, anchor=NE, text="Copyright (C) 2020 Inc.",
+        self.can.create_text(1185, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
                     font=('Times', 12), fill='white')
         self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
