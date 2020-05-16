@@ -57,7 +57,7 @@ class MenuBar(Frame):
             background='black',  activebackground='cyan',
             foreground='aquamarine', activeforeground='black',
             command=boss.launchPsycho)
-        me1.add_command(label='Install', font=("Times 14 bold"),
+        me1.add_command(label='MapApp', font=("Times 14 bold"),
             background='black', activebackground='aquamarine',
             foreground='yellow', activeforeground='black',
             command=boss.instalpy)
@@ -717,47 +717,48 @@ class Application(Frame):
         self.photo=PhotoImage(file='./syno_gif/pyt.gif')
         self.item=self.can.create_image(700, 400, image=self.photo)
         self.can.create_text(500, 20, anchor=NW,
-            text="- MapApp -\n\n"
-            "Developped on Linux Xubuntu (xfce4) Voyager 18.04:\n\n"
+            text="- MAPAPP -\n\n"
 
-            "Message pop --> Backup every 1 of month\n"
-            "            --> Agenda to verify\n"
+            "BACKUP and AGENDA :\n"
+            "-------------------------------\n"
+            "--> Backup has been programed for every first day of each month\n"
+            "--> Agenda is verified every day and pop-up\n"
+            "to show you if an appointment is fixed for tomorrow.\n\n"
 
-            "Synopsis --> 14 Needs\n"
-            "         --> Care and monitoring\n"
+            "SYNOPSIS\n\n"
+            "Entry + Add patient :\n"
+            "-------------------------\n"
+            "Use 'Entry' button to enter for first time new patient. Use 'Add "
+            "patient' once time all patients were enter \n"
+            "(button to replace a patient who's left with delete button).\n"
+            "Once time, patient had added use 'allergy' button to enter an allaergy "
+            "if none, enter none!\n"
+            "You can also use 'Intolerance' in the Menu Bar to complete 'allergy'.\n"
+            "After it, Care and Monitoring is available only if you have entered one "
+            "or more needs of patient.\n"
+            "1 --> 14 Needs\n"
+            "2 --> Care and monitoring\n\n"
 
             "Care and monitoring retrieve all data from :\n"
-            "+ Labo"
-            "+ ttt"
-            "+ 14 Needs"
-            "+ stackeholders (podologue, etc...)"
-            "+  "
-            "Vérifier version python (si version 2.7 ou 3 et plus)\n"
-            "en tapant dans le terminal: python -V ou python3 -V ou python --version.\n"
-            "Sinon, télécharger python 3.5 en ligne de commande:\n"
-            "Je vous conseille de regarder sur le net en fonction de la version linux.\n\n"
+            "-------------------------------------------------\n"
+            "+ Labo + Combotest (urinary stix)\n"
+            "+ ttt and R\n"
+            "+ 14 Needs\n"
+            "+ Stackeholders (podologue, etc...)\n\n"
 
-            "**************************************************************\n\n"
-
-            "Mac OS:\n\n"
-
-            "Ouvrir le terminal.\n"
-            "/Documents/dossier) et taper (python3 psychotabs.py dans le terminal) pour ouvrir "
-            "l'application.\n\n"
-
-            "**************************************************************\n\n"
-
-            "Windows:\n\n"
-
-            "Rendez-vous sur la page python.org télécharger un version de python\n"
-            "supérieur à 3.5 (dernière version stable).\n"
-            "Ensuite quelques manipulation sont indispensable pour la création d'un\n"
-            "'stand-alone' avec pyinstaller2. Rendez-vous sur ce site :\n"
-            "https://wwww.XXXXXXXXXXXXXXXXXXXX.com\n"
-            "et sur ce lui-ci :\n"
-            "https://www.ZZZZZZZZZZZZ.com\n"
-            "Pour toutes questions, vous pouvez me joindre à l'adresse mail :\n"
-            "philogenie@protonmail.com",
+            "Global :\n"
+            "---------\n"
+            "--> All txt files are consultable and accessibles\n"
+            "--> Graphics : all Graphics open them-self to show you "
+            "BMI, Weight(kg), TA, Puls, SaO2, FR, T°C,\n" 
+            "and level of Pain\n"
+            "--> Angel Eye : tetra vision about : BMI, Vital parameters, Visit "
+            "Medical and Care and Monitoring.\n"
+            "--> Global Vision : tetra vision about : Diagnosis, Agenda, Auxiliary "
+            "resources and Story Life.\n\n"
+            "PSYCHOTABS\n\n"
+            "Psychotabs is an application only for consulting neurleptics treatments.\n\n"
+            "\nDevelopped on Linux Xubuntu (xfce4) Voyager 18.04 by Cédric Kuchen - alis ko@|@tr33\n",
             font=('Times', 13), fill='aquamarine')
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
@@ -798,21 +799,21 @@ class Application(Frame):
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
         self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise',
+            bg='RoyalBlue3', fg='white', activebackground='dark turquoise',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
         # To refresh canvas + menu bar
         self.x101, self.y101 = 270, 50
         self.b101=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='RoyalBlue3', fg='white', activebackground='yellow', activeforeground='blue',
+            bg='RoyalBlue3', fg='SpringGreen2', activebackground='yellow', activeforeground='blue',
             text="Refresh", command=self.upDateAll)
         self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
         # To delete one patient and all files
         self.x200, self.y200 = 130, 100
         self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
-            bg='red', fg='white', activebackground='black', activeforeground='red',
+            bg='RoyalBlue3', fg='coral', activebackground='black', activeforeground='red',
             text="Delete patient", command=self.delEverPat)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
@@ -1556,25 +1557,22 @@ class Application(Frame):
         self.Lab.configure(bg="grey22")
 
         self.labFra=LabelFrame(self.Lab, text="\nWelcome !",
-            font=("Arial 14 bold"),fg='cyan', bg='grey22')
-        self.labFra.pack(padx=3, pady=3)
+            font=("Arial 12"),fg='cyan', bg='grey22')
+        self.labFra.pack(padx=5, pady=5)
         self.separator = Frame(self.labFra, height=2, bd=1,
             relief=SUNKEN)
-        self.separator.pack(fill=X, padx=5, pady=5)
 
         self.Lab4=Label(self.labFra, text="\nInfo",
             font=('Times 16 bold'), fg='cyan', bg='grey22').pack()
         self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
-        self.separator.pack(fill=X, padx=5, pady=5)
+        self.separator.pack(fill=X, padx=100, pady=3)
 
         self.Lab5=Label(self.labFra, justify=LEFT, fg='cyan',
             bg='grey22', font=('Times', 14),
             text="\nMenu Bar and Synopsis are the most importants\n"
         "skills to performed onto this app. I f you need help,\n" 
         "you can go the MapApp to find a map of this app and\n" 
-        "how the app can be used.\n").pack()
-        self.separator = Frame(self.labFra, height=2, bd=1, relief=SUNKEN)
-        self.separator.pack(fill=X, padx=5, pady=5)
+        "how the app can be used.\n").pack(padx=10)
 
     # For new entry
     def callPatient1(self):
@@ -2171,7 +2169,8 @@ class Application(Frame):
                     subprocess.call('./Backup/backupfile.py')
                     break
                 else:
-                    print("It's not the date for backup")
+                    print("It's not the right date for backup, next will"
+                    	"be at the first of next month")
                     break
         except FileNotFoundError as errout:
             print("Not found, not found !!!", errout)
