@@ -466,10 +466,10 @@ class MenuBar(Frame):
         me2.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph)
-        me2.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me2.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye)
-        me2.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me2.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision)
         me1.add_cascade(label=new_text, underline=0, font=('Times 16'),
@@ -484,10 +484,10 @@ class MenuBar(Frame):
         me3.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph2)
-        me3.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me3.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye2)
-        me3.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me3.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision2)
         me1.add_cascade(label=new_text2, underline=0, font=('Times 16'),
@@ -502,10 +502,10 @@ class MenuBar(Frame):
         me4.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph3)
-        me4.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me4.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye3)
-        me4.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me4.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision3)
         me1.add_cascade(label=new_text3, underline=0, font=('Times 16'),
@@ -520,10 +520,10 @@ class MenuBar(Frame):
         me5.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph4)
-        me5.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me5.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye4)
-        me5.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me5.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision4)
         me1.add_cascade(label=new_text4, underline=0, font=('Times 16'),
@@ -538,10 +538,10 @@ class MenuBar(Frame):
         me6.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph5)
-        me6.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me6.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye5)
-        me6.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me6.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision5)
         me1.add_cascade(label=new_text5, underline=0, font=('Times 16'),
@@ -556,10 +556,10 @@ class MenuBar(Frame):
         me7.add_command(label='Graphics', underline=0, font=('Times 16'), 
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph6)
-        me7.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me7.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye6)
-        me7.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me7.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision6)
         me1.add_cascade(label=new_text6, underline=0, font=('Times 16'), 
@@ -575,10 +575,10 @@ class MenuBar(Frame):
         me8.add_command(label='Graphics', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.visualGraph7)
-        me8.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me8.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye7)
-        me8.add_command(label='Angel Eye', underline=0, font=('Times 16'),
+        me8.add_command(label='Global Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
@@ -1266,7 +1266,7 @@ class Application(Frame):
         except FileNotFoundError as infofile:
             print("File 1 has not been found", infofile)
         except IndexError as inforange:
-            print("List 1 less than 6 lines", inforange)
+            print("List 1 got less than 6 lines", inforange)
         else:
             ("Error unknow")
 
@@ -1290,7 +1290,7 @@ class Application(Frame):
         except FileNotFoundError as infofile1:
             print("File 2 has not been found", infofile1)
         except IndexError as inforange2:
-            print("List 2 less than 6 lines", inforange2)
+            print("List 2 got less than 6 lines", inforange2)
         else:
             ("Error unknow")
 
@@ -1314,7 +1314,7 @@ class Application(Frame):
         except FileNotFoundError as infofile3:
             print("File 3 has not been found", infofile3)
         except IndexError as inforange3:
-            print("List 3 less than 6 lines", inforange3)
+            print("List 3 got less than 6 lines", inforange3)
         else:
             ("Error unknow")
 
@@ -1338,7 +1338,7 @@ class Application(Frame):
         except FileNotFoundError as infofile4:
             print("File 4 has not been found", infofile4)
         except IndexError as inforange4:
-            print("List 4 less than 6 lines", inforange4)
+            print("List 4 got less than 6 lines", inforange4)
         else:
             ("Error unknow")
 
@@ -1362,7 +1362,7 @@ class Application(Frame):
         except FileNotFoundError as infofile5:
             print("File 5 has not been found", infofile5)
         except IndexError as inforange5:
-            print("List 5 less than 6 lines", inforange5)
+            print("List 5 got less than 6 lines", inforange5)
         else:
             ("Error unknow")
 
@@ -1386,7 +1386,7 @@ class Application(Frame):
         except FileNotFoundError as infofile6:
             print("File 6 has not been found", infofile6)
         except IndexError as inforange6:
-            print("List 6 less than 6 lines", inforange6)
+            print("List 6 got less than 6 lines", inforange6)
         else:
             ("Error unknow")
 
@@ -1410,7 +1410,7 @@ class Application(Frame):
         except FileNotFoundError as infofile7:
             print("File 7 has not been found", infofile7)
         except IndexError as inforange7:
-            print("List 7 less than 6 lines", inforange7)
+            print("List 7 got less than 6 lines", inforange7)
         else:
             ("Error unknow")
 
@@ -1432,7 +1432,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA,there is a rdv to carry on for patient 1!')
+                            'Look at AGENDA,there is an appointment for patient 1!')
                     else:
                         pass
         except FileNotFoundError as infofile1:
@@ -1451,7 +1451,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 2!')
+                            'Look at AGENDA, there is an appointment for patient 2!')
                     else:
                         pass
         except FileNotFoundError as infofile2:
@@ -1470,7 +1470,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 3!')
+                            'Look at AGENDA, there is an appointment for patient 3!')
                     else:
                         pass
         except FileNotFoundError as infofile3:
@@ -1489,7 +1489,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 4!')
+                            'Look at AGENDA, there is an appointment for patient 4!')
                     else:
                         pass
         except FileNotFoundError as infofile4:
@@ -1508,7 +1508,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 5!')
+                            'Look at AGENDA, there is an appointment for patient 5!')
                     else:
                         pass
         except FileNotFoundError as infofile5:
@@ -1527,7 +1527,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 6!')
+                            'Look at AGENDA, there is an appointment for patient 6!')
                     else:
                         pass
         except FileNotFoundError as infofile6:
@@ -1546,7 +1546,7 @@ class Application(Frame):
                         print(lines[i+1])
                         print(lines[i+2])
                         MSB2 = messagebox.showwarning('Info',
-                            'Look at AGENDA, there is a rdv to carry on for patient 7!')
+                            'Look at AGENDA, there is an appointment for patient 7!')
                     else:
                         pass
         except FileNotFoundError as infofile7:

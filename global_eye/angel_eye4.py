@@ -6,7 +6,7 @@ from tkinter import *
 
 
 fen=Tk()
-fen.title("Global Vision")
+fen.title("Global Eye")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
@@ -61,16 +61,28 @@ def importationFile4(fichier, encodage="Utf-8"):
 textBox4=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox4.pack(in_=bottom, side=LEFT, padx=30, pady=30)
 
-importationFile1('./diag/doc_diag4/diagrecap.txt',
-    encodage="Utf-8")
+try:
+    importationFile1('./diag/doc_diag4/diagrecap.txt',
+        encodage="Utf-8")
+except FileNotFoundError as file1:
+    print("diagrecap.txt not exist", file1)
 
-importationFile2('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt',
-    encodage="Utf-8")
+try:
+    importationFile2('./patient_agenda/events4/doc_events/fix_agenda/fixed_rdv.txt',
+        encodage="Utf-8")
+except FileNotFoundError as file2:
+    print("fixed_rdv.txt not exist", file2)
 
-importationFile3('./auxsrc/doc_auxsrc4/auxsrcfile4.txt',
-    encodage="Utf-8")
+try:
+    importationFile3('./auxsrc/doc_auxsrc4/auxsrcfile4.txt',
+        encodage="Utf-8")
+except FileNotFoundError as file3:
+    print("auxsrcfile4.txt not exist", file3)
 
-importationFile4('./histv/doc_histv4/Hvie_patient4.txt',
-    encodage="Utf-8")
+try:
+    importationFile4('./histv/doc_histv4/Hvie_patient4.txt',
+        encodage="Utf-8")
+except FileNotFoundError as file4:
+    print("Hvie_patient4.txt not exist", file4)
 
 fen.mainloop()
