@@ -123,6 +123,20 @@ def delFuncFile1():
         print("+ File intro_ttt.txt does not exist", filefunc5)
 
     try:
+        if os.path.getsize('./ttt/doc_ttt/convres.json'):
+            os.remove('./ttt/doc_ttt/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt/intro_res.txt'):
+            os.remove('./ttt/doc_ttt/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
+
+    try:
         if os.path.getsize('./param/aspifile/dlr.json'):
             os.remove('./param/aspifile/dlr.json')
             print("+ File dlr.json deleted")
@@ -320,6 +334,20 @@ def delFuncFile2():
             print("+ File intro_ttt.txt deleted")
     except FileNotFoundError as filefunc28:
         print("+ File intro_ttt.txt does not exist", filefunc28)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt2/convres.json'):
+            os.remove('./ttt/doc_ttt2/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt2/intro_res.txt'):
+            os.remove('./ttt/doc_ttt2/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
 
     try:
         if os.path.getsize('./param/aspifile2/dlr.json'):
@@ -521,6 +549,20 @@ def delFuncFile3():
         print("+ File intro_ttt.txt does not exist", filefunc28)
 
     try:
+        if os.path.getsize('./ttt/doc_ttt3/convres.json'):
+            os.remove('./ttt/doc_ttt3/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt3/intro_res.txt'):
+            os.remove('./ttt/doc_ttt3/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
+
+    try:
         if os.path.getsize('./param/aspifile3/dlr.json'):
             os.remove('./param/aspifile3/dlr.json')
             print("+ File dlr.json deleted")
@@ -718,6 +760,20 @@ def delFuncFile4():
             print("+ File intro_ttt.txt deleted")
     except FileNotFoundError as filefunc28:
         print("+ File intro_ttt.txt does not exist", filefunc28)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt4/convres.json'):
+            os.remove('./ttt/doc_ttt4/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt4/intro_res.txt'):
+            os.remove('./ttt/doc_ttt4/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
 
     try:
         if os.path.getsize('./param/aspifile4/dlr.json'):
@@ -919,6 +975,20 @@ def delFuncFile5():
         print("+ File intro_ttt.txt does not exist", filefunc28)
 
     try:
+        if os.path.getsize('./ttt/doc_ttt5/convres.json'):
+            os.remove('./ttt/doc_ttt5/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt5/intro_res.txt'):
+            os.remove('./ttt/doc_ttt5/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
+
+    try:
         if os.path.getsize('./param/aspifile5/dlr.json'):
             os.remove('./param/aspifile5/dlr.json')
             print("+ File dlr.json deleted")
@@ -1118,6 +1188,20 @@ def delFuncFile6():
         print("+ File intro_ttt.txt does not exist", filefunc28)
 
     try:
+        if os.path.getsize('./ttt/doc_ttt6/convres.json'):
+            os.remove('./ttt/doc_ttt6/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt6/intro_res.txt'):
+            os.remove('./ttt/doc_ttt6/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
+
+    try:
         if os.path.getsize('./param/aspifile6/dlr.json'):
             os.remove('./param/aspifile6/dlr.json')
             print("+ File dlr.json deleted")
@@ -1315,6 +1399,20 @@ def delFuncFile7():
             print("+ File intro_ttt.txt deleted")
     except FileNotFoundError as filefunc28:
         print("+ File intro_ttt.txt does not exist", filefunc28)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt7/convres.json'):
+            os.remove('./ttt/doc_ttt7/convres.json')
+            print("+ File convres.json deleted")
+    except FileNotFoundError as filefunc4:
+        print("+ File convres.json does not exist", fileres4)
+
+    try:
+        if os.path.getsize('./ttt/doc_ttt7/intro_res.txt'):
+            os.remove('./ttt/doc_ttt7/intro_res.txt')
+            print("+ File intro_res.txt deleted")
+    except FileNotFoundError as filefunc5:
+        print("+ File intro_res.txt does not exist", fileres5)
 
     try:
         if os.path.getsize('./param/aspifile7/dlr.json'):
