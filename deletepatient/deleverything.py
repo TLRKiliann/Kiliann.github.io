@@ -256,8 +256,8 @@ def delFuncFile1():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
@@ -455,8 +455,8 @@ def delFuncFile2():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events2/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events2/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events2/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events2/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
@@ -654,8 +654,8 @@ def delFuncFile3():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events3/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events3/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events3/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events3/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
@@ -853,8 +853,8 @@ def delFuncFile4():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events4/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events4/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events4/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv does not exist")
@@ -1052,8 +1052,8 @@ def delFuncFile5():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events5/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events5/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events5/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events5/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
@@ -1251,8 +1251,8 @@ def delFuncFile6():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events6/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events6/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events6/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
@@ -1450,8 +1450,8 @@ def delFuncFile7():
         print("+ File patient_value.json does not exist")
         pass
     try:
-        if os.path.getsize('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json'):
-            os.remove('./patient_agenda/events7/doc_events/fix_agenda/patient_rdv.json')
+        if os.path.getsize('./patient_agenda/events7/doc_events/patient_rdv.json'):
+            os.remove('./patient_agenda/events7/doc_events/patient_rdv.json')
             print("+ File patient_rdv.json deleted")
     except:
         print("+ File patient_rdv.json does not exist")
