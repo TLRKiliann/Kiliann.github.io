@@ -6,7 +6,7 @@ from tkinter import *
 
 
 fen=Tk()
-fen.title("Angel Eye")
+fen.title("Angel Vision")
 fen.configure(background='gray17')
 
 # To place side by side labelo + entrylab
@@ -61,16 +61,28 @@ def importationFile4(fichier, encodage="Utf-8"):
 textBox4=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox4.pack(in_=bottom, side=LEFT, padx=30, pady=30)
 
-importationFile1('./calBmi/bmi.txt',
-    encodage="Utf-8")
+try:
+    importationFile1('./calBmi/bmi.txt',
+        encodage="Utf-8")
+except FileNotFoundError file1:
+    print("bmi.txt not exist", file1)
 
-importationFile2('./param/Main.txt',
-    encodage="Utf-8")
+try:
+    importationFile2('./param/Main.txt',
+        encodage="Utf-8")
+except FileNotFoundError file2:
+    print("Main.txt not exist", file2)
 
-importationFile3('./vmed/doc_vmed/resultvmed.txt',
-    encodage="Utf-8")
+try:
+    importationFile3('./vmed/doc_vmed/resultvmed.txt',
+        encodage="Utf-8")
+except FileNotFoundError file3:
+    print("resultvmed.txt not exist", file3)
 
-importationFile4('./14besoins/doc_suivi/main_14b.txt',
-    encodage="Utf-8")
+try:
+    importationFile4('./14besoins/doc_suivi/main_14b.txt',
+        encodage="Utf-8")
+except FileNotFoundError file4:
+    print("main_14b.txt not exist", file4)
 
 fen.mainloop()
