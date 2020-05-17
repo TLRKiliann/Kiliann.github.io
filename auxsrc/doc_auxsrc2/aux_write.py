@@ -15,8 +15,7 @@ def saveData():
     it before.
     """
     with open('./auxsrc/doc_auxsrc2/auxsrcfile2.txt', 'a+') as filerecord:
-        filerecord.write(textBox.get("1.0", "end-1c"))
-        filerecord.write(str('\n'))
+        filerecord.write(textBox.get("1.0", "end-1c") + "\n\n")
 
 def messFromSafeButt():
     """
@@ -37,8 +36,6 @@ def readerFile():
     """
     To read into the txt file.
     """
-    with open('./auxsrc/doc_auxsrc2/auxsrcfile2.txt', 'r') as filereader:
-        print(filereader.read())
     subprocess.call('./auxsrc/doc_auxsrc2/aux_read.py')
 
 def addText():
@@ -48,7 +45,7 @@ def addText():
     """
     textBox.delete('1.0', END)
     textBox.insert(INSERT, "Dated : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+    textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :") + '\n')
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -86,7 +83,7 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 textBox.insert(INSERT, "\nDated : ")
-textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", width=8, bd=3,

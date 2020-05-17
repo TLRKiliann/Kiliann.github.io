@@ -83,7 +83,7 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 
 textBox=Text(root, height=15, width=60, font=18, relief=SUNKEN)
 textBox.insert(INSERT, "\nDated : ")
-textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
+textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
 buttonLire=Button(root, text="Read", width=8, bd=3,

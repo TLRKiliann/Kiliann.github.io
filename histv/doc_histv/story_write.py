@@ -9,13 +9,19 @@ from tkinter import messagebox
 
 
 def saveData():
-    inputValue = textBox.get("1.0","end-1c")
-    print(inputValue)
-    file = open('./histv/doc_histv/Hvie_patient1.txt', 'a+')
-    file.write(textBox.get("1.0","end-1c") + "\n\n")
-    file.close()
+    """
+    No need to test if file
+    exist or not. Already test
+    it before.
+    """
+    with open('./histv/doc_histv/Hvie_patient1.txt', 'a+') as file:
+        file.write(textBox.get("1.0","end-1c") + "\n\n")
 
 def messFromSafeButt():
+    """
+    Message of confirmation
+    with messagebox.
+    """
     MsgBox = messagebox.askquestion("Confirm","Are you sure ?\n"
         "It will save all data !")
     if MsgBox == 'yes':
@@ -27,6 +33,9 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
+    """
+    To read into the txt file.
+    """
     subprocess.call('./histv/doc_histv/story_read.py')
 
 root=Tk()
