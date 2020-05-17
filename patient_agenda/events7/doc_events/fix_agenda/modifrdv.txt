@@ -1,6 +1,0 @@
-
-+++ Changes about rdv +++
-Appointment set for : 22/7/2020 :
-Faire l'état des lieux de sa chambre.
-Colloque interne à la suite.
-Colloque annulé.
