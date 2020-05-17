@@ -48,7 +48,7 @@ def addText():
     """
     textBox.delete('1.0', END)
     textBox.insert(INSERT, "Dated : ")
-    textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :") + '\n')
+    textBox.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :") + '\n')
     textBox.update()
 
 def importationFile(fichier, encodage="Utf-8"):
@@ -89,24 +89,24 @@ textBox.insert(INSERT, "\nDated : ")
 textBox.insert(END, time.strftime("%d/%m/%Y à %H:%M:%S :\n"))
 textBox.pack(padx=30, pady=30)
 
-buttonLire=Button(root, text="Read", width=8,
+buttonLire=Button(root, text="Read", width=8, bd=3,
     fg='cyan', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=readerFile)
+    highlightbackground='grey17', command=readerFile)
 buttonLire.pack(side='left', padx=10, pady=10)
 
-buttonEffacer=Button(root, text="1-Add", width=8,
+buttonEffacer=Button(root, text="1-Add", width=8, bd=3,
     fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=addText)
+    highlightbackground='grey17', command=addText)
 buttonEffacer.pack(side='left', padx=10, pady=10)
 
-buttonEnter=Button(root, text="2-Save", width=8, 
+buttonEnter=Button(root, text="2-Save", width=8, bd=3, 
     fg='yellow', bg='navy', activebackground='dark turquoise',
-    activeforeground='navy', command=messFromSafeButt)
+    highlightbackground='grey17', command=messFromSafeButt)
 buttonEnter.pack(side='left', padx=10, pady=10)
 
-buttonQuitter=Button(root, text="Quit", width=8,
-    fg='cyan', bg='gray30', activebackground='red', 
-    activeforeground='navy', command=quit)
+buttonQuitter=Button(root, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', activebackground='dark turquoise', 
+    highlightbackground='grey17', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
 importationFile('./auxsrc/doc_auxsrc/auxsrcfile1.txt',

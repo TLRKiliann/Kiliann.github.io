@@ -1,3 +1,13 @@
 .
 Dated : 17/05/2020 à 15:26:03 :
 Computer
+Dated : 17/05/2020 à 15:55:25 :
+Server DNS-over-HTTPS
+
+Dated : 17/05/2020 à 15:55:52 :
+.
+Dated : 17/05/2020 à 15:26:03 :
+Computer
+Dated : 17/05/2020 à 15:55:25 :
+Server DNS-over-HTTPS
+There is a big trouble !!!

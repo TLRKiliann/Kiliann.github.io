@@ -36,9 +36,9 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 textBox=Text(fen, height=15, width=60, font=18, relief=SUNKEN)
 textBox.pack(padx=30, pady=30)
 
-buttonClose=Button(fen, text="Quit", width=8, fg='cyan', 
-    bg='gray30', activebackground='dark turquoise', 
-    activeforeground='navy', command=quit)
+buttonClose=Button(fen, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', activebackground='dark turquoise', 
+    highlightbackground='grey17', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./auxsrc/doc_auxsrc4/auxsrcfile4.txt',
