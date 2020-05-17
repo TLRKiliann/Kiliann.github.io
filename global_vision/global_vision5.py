@@ -64,25 +64,25 @@ textBox4.pack(in_=bottom, side=LEFT, padx=30, pady=30)
 try:
     importationFile1('./calBmi/bmi5.txt',
         encodage="Utf-8")
-except FileNotFoundError file1:
+except FileNotFoundError as file1:
     print("bmi5.txt not exist", file1)
 
 try:
     importationFile2('./param/Main5.txt',
         encodage="Utf-8")
-except FileNotFoundError file2:
+except FileNotFoundError as file2:
     print("Main5.txt not exist", file2)
 
 try:
     importationFile3('./vmed/doc_vmed5/resultvmed.txt',
         encodage="Utf-8")
-except FileNotFoundError file3:
+except FileNotFoundError as file3:
     print("resultvmed.txt not exist", file3)
 
 try:
     importationFile4('./14besoins/doc_suivi5/main_14b.txt',
         encodage="Utf-8")
-except FileNotFoundError file4:
+except FileNotFoundError as file4:
     print("main_14b.txt not exist", file4)
 
 fen.mainloop()
