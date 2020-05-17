@@ -1,8 +1,16 @@
 {
     "data": [
         {
-            "Date": "09/05/2020",
-            "Temperature": "36.7"
+            "Date": "17/05/2020",
+            "Temperature": "36.6"
+        },
+        {
+            "Date": "18/05/2020",
+            "Temperature": "36"
+        },
+        {
+            "Date": "19/05/2020",
+            "Temperature": "37"
         }
     ]
 }

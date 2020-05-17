@@ -1,12 +1,6 @@
 
 +++ Changes about rdv +++
-Appointment set for : 27/5/2020 :
-RDV chez le médecin pour 14h00.
-Accompagné de son frère.
+Appointment set for : 17/08/2020 :
+Canceled.
 
-
-+++ Changes about rdv +++
-Appointment set for : 23/9/2020 :
-RDV chez le dentiste.
-ANNULE
 
