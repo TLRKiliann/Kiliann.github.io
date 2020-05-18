@@ -62,7 +62,10 @@ buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
     highlightbackground='grey17', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./14besoins/doc_suivi5/main_14b.txt',
-    encodage="Utf-8")
+try:
+    importationFile('./14besoins/doc_suivi5/main_14b.txt',
+        encodage="Utf-8")
+except FileNotFoundError as filereach:
+    print("File main_14b.txt not exist", filereach)
 
 fen.mainloop()
