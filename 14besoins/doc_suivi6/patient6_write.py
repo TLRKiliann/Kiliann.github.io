@@ -71,8 +71,7 @@ def importationFile(fichier, encodage="Utf-8"):
                 for li in content:
                     textBox.insert(END, li)
     except FileNotFoundError as outcom:
-        print("+ Sorry, file 'patient6_14b.txt' not exist !")
-        print(str(outcom))
+        print("+ Sorry, file 'patient6_14b.txt' not exist !", outcom)
 
     textBox.insert(INSERT, "\n! Highlight text + press < Ctrl + c > to copy lines + press '1-Add' button !\n")
 
