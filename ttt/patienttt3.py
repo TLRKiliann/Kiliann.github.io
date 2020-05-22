@@ -825,7 +825,7 @@ textSign = tk.Entry(highlightbackground='grey', bd=4)
 textSign.grid(row=22, column=2, pady=10)
 
 # Buttons with functions
-buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
+buttQuit = tk.Button(app, text="Quit", width=10, fg='white',
     bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=quit)
 buttQuit.grid(row=22, column=3)
