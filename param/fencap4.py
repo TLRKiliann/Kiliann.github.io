@@ -564,62 +564,62 @@ with open('./newpatient/entryfile4.txt', 'r') as filename:
 
 gui = Tk()
 gui.title("Paramètres vitaux")
-gui.configure(background='gray17')
+gui.configure(background='#82193e')
 gui.geometry('650x560')
 
 # Labels
 labelTitle = Label(gui, text="Vital Parameters", 
-    font=('Times 22 bold'), bg='gray17', fg='aquamarine')
+    font=('Times 22 bold'), bg='#82193e', fg='aquamarine')
 labelTitle.grid(row=0, column=1, columnspan=4, pady=10)
 
 label = Label(gui)
 label = Label(text='Date : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label.grid(row=1, column=1)
 
 label = Label(gui)
 label = Label(text='Heure : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label.grid(row=2, column=1)
 
 label1 = Label(gui)
 label1 = Label(text='Entrer le Nom : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label1.grid(row=3, column=1)
 
 label2 = Label(gui)
 label2 = Label(text='Entrer la TA : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label2.grid(row=4, column=1)
 
 label3 = Label(gui)
 label3 = Label(text='Entrer les Puls : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label3.grid(row=5, column=1)
 
 label4 = Label(gui)
 label4 = Label(text='Entrer la SaO2 : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label4.grid(row=6, column=1)
 
 label5 = Label(gui)
 label5 = Label(text='Entrer la FR : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label5.grid(row=7, column=1)
 
 label6 = Label(gui)
 label6 = Label(text='Entrer la T°C : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label6.grid(row=8, column=1)
 
 label7 = Label(gui)
 label7 = Label(text='Entrer la Hgt : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label7.grid(row=9, column=1)
 
 label8 = Label(gui)
 label8 = Label(text='Eva des Dlrs : ', font=('Times', 14),
-    fg='aquamarine', bg='gray17', width=15, anchor='e')
+    fg='aquamarine', bg='#82193e', width=15, anchor='e')
 label8.grid(row=10, column=1)
 
 # Entry
