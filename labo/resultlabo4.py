@@ -442,14 +442,14 @@ def comburTips():
 
 app = Tk()
 app.title("Labo check")
-app.configure(bg='gray17')
+app.configure(bg='#82193e')
 
 #label_fra = LabelFrame(app, text="Patient 1",
 #    font=('Times 16'),bg='yellow', fg='red', height=2, bd=3)
    
 labeltite=Label(app, text='Labo check', 
     font="Times 18 bold", width=10,
-    height=3, bg='gray17', fg='aquamarine')
+    height=3, bg='#82193e', fg='aquamarine')
 labeltite.grid(sticky='e', row=0, column=1, padx=20)
 
 with open('./newpatient/entryfile4.txt', 'r') as filename:
@@ -868,12 +868,12 @@ buttonsheet.grid(row=30, column=1, padx=10, pady=10)
 # Button save and quit
 buttonsave=Button(app, text="Save", width=10, bd=3,
     fg='yellow', bg='RoyalBlue3', activebackground='dark turquoise',
-    highlightbackground='grey17', command=recordTofile)
+    highlightbackground='#82193e', command=recordTofile)
 buttonsave.grid(row=44, column=2, pady=10)
 
 buttonquit=Button(app, text='Quit', width=10, bd=3,
     fg='white', bg='RoyalBlue3', activebackground='dark turquoise',
-    highlightbackground='grey17', command=quit)
+    highlightbackground='#82193e', command=quit)
 buttonquit.grid(sticky='e', row=44, column=2, padx=10, pady=10)
 
 app.mainloop()
