@@ -14,10 +14,10 @@ def importationFile(fichier):
 
 fen=Tk()
 fen.title("Admininstrative Statement")
-fen.configure(background='grey17')
+fen.configure(background='#82193e')
 
 labelo=Label(fen, text="Admininstrative Statement",
-    font='Arial 18 bold', fg='turquoise', bg='grey17')
+    font='Arial 18 bold', fg='turquoise', bg='#82193e')
 labelo.pack(pady=10)
 
 textBox=Text(fen, height=15, width=60, font=18)
@@ -25,7 +25,7 @@ textBox.pack(padx=30, pady=30)
 
 buttonClose=Button(fen, text="Quit", width=10, bd=3,
     fg='white', bg='navy', activebackground='dark turquoise',
-    highlightbackground='grey17', command=quit)
+    highlightbackground='#82193e', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./admin/readadmin/fileAdmin6.txt')
