@@ -617,7 +617,7 @@ class Application(Frame):
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         self.can.create_window((4,4), window=self.frame, anchor=NW, tags="self.frame")
         # Insertion of picture
-        self.photo = PhotoImage(file='./syno_gif/angelbg.png')
+        self.photo = PhotoImage(file='./syno_gif/fondcolorbg.png')
         self.item = self.can.create_image(625, 400, image=self.photo)
         # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
@@ -765,7 +765,7 @@ class Application(Frame):
     # Synopsis page
     def showsynopsis(self):
         self.can.delete(ALL)
-        self.photo=PhotoImage(file='./syno_gif/angelbg2.png')
+        self.photo=PhotoImage(file='./syno_gif/fondcolor2.png')
         self.item=self.can.create_image(625, 400, image=self.photo)
         self.can.create_text(625, 80, anchor=CENTER, text="SYNOPSIS",
             font=('Times New Roman', 40), fill='turquoise')

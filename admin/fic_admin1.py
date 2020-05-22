@@ -63,96 +63,96 @@ with open('./newpatient/entryfile.txt', 'r') as filename:
     
 gui = Tk()
 gui.title("Administrative Statement")
-gui.configure(bg='grey17')
+gui.configure(bg='#82193e')
 
 labelDate = Label(gui)
 labelDate = Label(text="Administrative Statement", font='Times 28 bold',
-    fg='aquamarine', bg='grey17')
+    fg='aquamarine', bg='#82193e')
 labelDate.grid(row=0, column=1, columnspan=4)
 
 labelDate = Label(gui)
 labelDate = Label(text="Date : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelDate.grid(pady=10, row=1, column=1)
 
 labelName = Label(gui)
 labelName = Label(text="Name : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelName.grid(pady=10, row=2, column=1)
 
 labelBirth = Label(gui)
 labelBirth = Label(text="Birth date : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelBirth.grid(pady=10, row=3, column=1)
 
 labelAddr = Label(gui)
 labelAddr = Label(text="Address : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelAddr.grid(pady=10, row=4, column=1)
 
 labelNpa = Label(gui)
 labelNpa = Label(text="NPA : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelNpa.grid(pady=10, row=5, column=1)
 
 labelLocal = Label(gui)
 labelLocal = Label(text="Locality : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelLocal.grid(pady=10, row=6, column=1)
 
 labelTel = Label(gui)
 labelTel = Label(text="Phone number : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelTel.grid(pady=10, row=7, column=1)
 
 labelAss = Label(gui)
 labelAss = Label(text="Assurance : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelAss.grid(pady=10, row=8, column=1)
 
 labelAVS = Label(gui)
 labelAVS = Label(text="AVS number : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelAVS.grid(pady=10, row=9, column=1)
 
 labelContact = Label(gui)
 labelContact = Label(text="Family contact : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelContact.grid(pady=10, row=10, column=1)
 
 labelphonecontact = Label(gui)
 labelphonecontact = Label(text="Phone contact : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelphonecontact.grid(pady=10, row=11, column=1)
 
 labelemailcontact = Label(gui)
 labelemailcontact = Label(text="Contact email : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelemailcontact.grid(pady=10, row=12, column=1)
 
 labelFriendContact = Label(gui)
 labelFriendContact = Label(text="Friend contact : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelFriendContact.grid(pady=10, row=13, column=1)
 
 labelphonefriend = Label(gui)
 labelphonefriend = Label(text="Phone contact : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelphonefriend.grid(pady=10, row=14, column=1)
 
 labelDrg = Label(gui)
 labelDrg = Label(text="Family Doctor : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelDrg.grid(pady=10, row=15, column=1)
 
 labelphoneDr = Label(gui)
 labelphoneDr = Label(text="Phone Doctor : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 labelphoneDr.grid(pady=10, row=16, column=1)
 
 LabelAddrDr = Label(gui)
 LabelAddrDr = Label(text="Address Doctor : ", font=14,
-    width=20, anchor='e', fg='cyan', bg='grey17')
+    width=20, anchor='e', fg='cyan', bg='#82193e')
 LabelAddrDr.grid(pady=10, row=17, column=1)
 
 #Entry
@@ -235,19 +235,19 @@ AddDrg.grid(row=17, column=2)
 
 buttonName = Button(gui)
 buttonName = Button(text='Save', width=10, fg='yellow', bg='navy',
-    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    bd=3, highlightbackground='#82193e', activebackground='dark turquoise',
     command=sendToFile)
 buttonName.grid(row=15, column=4, padx=20)
 
 buttonName = Button(gui)
 buttonName = Button(text='Read', width=10, fg='cyan', bg='navy',
-    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    bd=3, highlightbackground='#82193e', activebackground='dark turquoise',
     command=readToFile)
 buttonName.grid(row=16, column=4, padx=20)
 
 buttonQuit = Button(gui)
 buttonQuit = Button(text='Quit', width=10, fg='white', bg='navy',
-    bd=3, highlightbackground='grey17', activebackground='dark turquoise',
+    bd=3, highlightbackground='#82193e', activebackground='dark turquoise',
     command=quit)
 buttonQuit.grid(row=17, column=4, padx=20)
 
