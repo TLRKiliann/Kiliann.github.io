@@ -411,14 +411,14 @@ def copyToReserve():
 
 app = tk.Tk()
 app.title("Introduction of treatement (ttt)")
-app.configure(bg='grey17')
+app.configure(bg='#82193e')
 
 textLab = tk.Label(app, text="Introduction of treatement (ttt)",
-    font=('Times 22 bold'), fg='aquamarine', bg='grey17')
+    font=('Times 22 bold'), fg='aquamarine', bg='#82193e')
 textLab.grid(row=0, column=0, columnspan=4, pady=10)
 
 labelallergy=tk.Label(app, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='grey17')
+    font='Arial 18 bold', fg='coral', bg='#82193e')
 labelallergy.grid(row=1, column=0, columnspan=4)
 
 # To read allergy for entry widget
@@ -437,23 +437,23 @@ entryName=tk.Entry(app, textvariable=entrytext, width=60)
 entryName.grid(row=2, column=0, columnspan=4, pady=10)
 
 LabDate = tk.Label(app, text="Date : ", width=20, font=12,
-    fg='cyan', bg='grey17', anchor='e')
+    fg='cyan', bg='#82193e', anchor='e')
 LabDate.grid(row=3, column=0)
 
 LabHour = tk.Label(app, text="Hour : ", width=20, font=12,
-    fg='cyan', bg='grey17', anchor='e')
+    fg='cyan', bg='#82193e', anchor='e')
 LabHour.grid(row=4, column=0)
 
 LabName = tk.Label(app, text="Patient's name : ", width=20, font=12,
-    fg='cyan', bg='grey17', anchor='e')
+    fg='cyan', bg='#82193e', anchor='e')
 LabName.grid(row=5, column=0)
 
 LabTreat = tk.Label(app, text='Name of drug : ', width=20, 
-    font=12, fg='cyan', bg='grey17', anchor='e')
+    font=12, fg='cyan', bg='#82193e', anchor='e')
 LabTreat.grid(row=6, column=0)
 
 LabDose = tk.Label(app, text="Dose : ", width=20, font=12,
-    fg='cyan', bg='grey17', anchor='e')
+    fg='cyan', bg='#82193e', anchor='e')
 LabDose.grid(row=7, column=0)
 
 textDate = tk.Entry(app)
@@ -503,7 +503,7 @@ deleteTreat = tk.Entry(textvariable=delete_text,
 deleteTreat.grid(row=3, column=2)
 # TTT to stop
 buttStopttt = tk.Button(app, text="Stop ttt", width=10, fg='yellow',
-    bg='red', bd=3, highlightbackground='grey17',
+    bg='red', bd=3, highlightbackground='#82193e',
     activebackground='coral', command=deleteTreatment)
 buttStopttt.grid(row=3, column=3, padx=10)
 
@@ -515,22 +515,22 @@ deleteRes = tk.Entry(textvariable=delete_res,
 deleteRes.grid(row=5, column=2)
 # Reserves to stop
 buttStopttt = tk.Button(app, text="Stop R", width=10, fg='yellow',
-    bg='red', bd=3, highlightbackground='grey17',
+    bg='red', bd=3, highlightbackground='#82193e',
     activebackground='coral', command=deleteReserve, padx=10)
 buttStopttt.grid(row=5, column=3)
 
 buttShowttt = tk.Button(app, text="Show ttt", width=10, fg='cyan',
-    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=showTreat)
 buttShowttt.grid(row=7, column=2)
 
 buttShowttt = tk.Button(app, text="Show R", width=10, fg='cyan',
-    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=showReserve)
 buttShowttt.grid(row=7, column=3)
 
 textDateS = tk.Label(app, text="Processing start date :", 
-    font=('Arial 14 bold'), fg='aquamarine', bg='grey17', width=40, anchor='w')
+    font=('Arial 14 bold'), fg='aquamarine', bg='#82193e', width=40, anchor='w')
 textDateS.grid(row=8, column=0, columnspan=2, pady=10)
 
 def changeDay():
@@ -544,7 +544,7 @@ def changeDay():
                           '28', '29', '30', '31']
 
 labelDay = tk.Label(app,
-    text = "Choose the day :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the day :", font=12, fg='cyan', bg='#82193e')
 labelDay.grid(row=9, column=0)
 
 comboDay = ttk.Combobox(app,
@@ -574,7 +574,7 @@ def changeMonth():
                           ' December']
 
 labelMonth = tk.Label(app,
-    text = "Choose the month :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the month :", font=12, fg='cyan', bg='#82193e')
 labelMonth.grid(row=9, column=1)
 
 comboMonth = ttk.Combobox(app,
@@ -605,7 +605,7 @@ def changeYear():
                           ' 2032', ' 2033', ' 2034', ' 2035']
 
 labelYear = tk.Label(app,
-    text = "Choose the year :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the year :", font=12, fg='cyan', bg='#82193e')
 labelYear.grid(row=9, column=2)
 
 comboYear = ttk.Combobox(app,
@@ -624,7 +624,7 @@ comboYear.current(20)
 
 # Date of finish
 textDateF = tk.Label(app, text="Processing end date :", 
-    font=('Arial 14 bold'), fg='aquamarine', bg='grey17', width=40, anchor='w')
+    font=('Arial 14 bold'), fg='aquamarine', bg='#82193e', width=40, anchor='w')
 textDateF.grid(row=11, column=0, columnspan=2, pady=10)
 
 def finishDay():
@@ -638,7 +638,7 @@ def finishDay():
                                 '28', '29', '30', '31']
 
 labelFinishDay = tk.Label(app,
-    text = "Choose the day :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the day :", font=12, fg='cyan', bg='#82193e')
 labelFinishDay.grid(row=12, column=0)
 
 comboFinishDay = ttk.Combobox(app,
@@ -668,7 +668,7 @@ def finishMonth():
                           ' December']
 
 labelMonth = tk.Label(app,
-    text = "Choose the month :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the month :", font=12, fg='cyan', bg='#82193e')
 labelMonth.grid(row=12, column=1)
 
 comboFinishMonth = ttk.Combobox(app,
@@ -694,7 +694,7 @@ def finishYear():
                                  ' 2032', ' 2033', ' 2034', ' 2035']
 
 labelFinishYear = tk.Label(app,
-    text = "Choose the year :", font=12, fg='cyan', bg='grey17')
+    text = "Choose the year :", font=12, fg='cyan', bg='#82193e')
 labelFinishYear.grid(row=12, column=2)
 
 comboFinishYear = ttk.Combobox(app,
@@ -707,11 +707,11 @@ comboFinishYear.grid(row=13, column=2, pady=10)
 comboFinishYear.current(0)
 
 checkLab = tk.Label(app, text="Doses :", font=('Arial 14 bold'), 
-    fg='aquamarine', bg='grey17')
+    fg='aquamarine', bg='#82193e')
 checkLab.grid(row=14, column=0, pady=10)
 
 DosaLab = tk.Label(app, text="Unity :", font=('Arial 14 bold'), 
-    fg='aquamarine', bg='grey17')
+    fg='aquamarine', bg='#82193e')
 DosaLab.grid(row=14, column=2, pady=10)
 
 # CheckBox
@@ -723,7 +723,7 @@ Cma = tk.Checkbutton(app, text="Morning --->", fg='navy',
 Cma.grid(row=16, column=0)
 
 LabDose = tk.Label(app, text='Morning dose : ', font=12,
-    width=20, fg='cyan', bg='grey17')
+    width=20, fg='cyan', bg='#82193e')
 LabDose.grid(row=16, column=1)
 
 Entmatin = tk.Entry(app)
@@ -738,7 +738,7 @@ Cmi = tk.Checkbutton(app, text="Noon --->", fg='navy',
 Cmi.grid(row=17, column=0)
 
 LabDose = tk.Label(app, text='Take of noon : ', font=12, 
-    width=20, fg='cyan', bg='grey17')
+    width=20, fg='cyan', bg='#82193e')
 LabDose.grid(row=17, column=1)
 
 Entmidi = tk.Entry(app)
@@ -753,7 +753,7 @@ Csoir = tk.Checkbutton(app, text="Evening --->", fg='navy',
 Csoir.grid(row=18, column=0)
 
 LabDose = tk.Label(app, text='Evening outlet : ', font=12,
-    width=20, fg='cyan', bg='grey17')
+    width=20, fg='cyan', bg='#82193e')
 LabDose.grid(row=18, column=1)
 
 Entsoir = tk.Entry(app)
@@ -769,7 +769,7 @@ Cnuit.grid(row=19, column=0)
 
 # Entry nbre de x/24h
 LabDose = tk.Label(app, text='Take of night : ', font=12,
-    width=20, fg='cyan', bg='grey17')
+    width=20, fg='cyan', bg='#82193e')
 LabDose.grid(row=19, column=1)
 
 Entnuit = tk.Entry(app)
@@ -799,17 +799,17 @@ C3.grid(row=20, column=2, pady=10)
 
 # Buttons with functions
 buttCopy = tk.Button(app, text="Save ttt", width=10, fg='yellow',
-    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=copyTttMess)
 buttCopy.grid(row=21, column=0)
 
 buttCopy = tk.Button(app, text="Save R", width=10, fg='yellow',
-    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=copyResMess)
 buttCopy.grid(row=22, column=0)
 
 LabelR = tk.Label(app, text='Number of R/24h : ', font=12, 
-    width=20, fg='cyan', bg='grey17')
+    width=20, fg='cyan', bg='#82193e')
 LabelR.grid(row=21, column=1)
 
 Rnbre = tk.Entry(app)
@@ -826,7 +826,7 @@ textSign.grid(row=22, column=2, pady=10)
 
 # Buttons with functions
 buttQuit = tk.Button(app, text="Quit", width=10, fg='cyan',
-    bg='RoyalBlue3', bd=3, highlightbackground='grey17', 
+    bg='RoyalBlue3', bd=3, highlightbackground='#82193e', 
     activebackground='dark turquoise', command=quit)
 buttQuit.grid(row=22, column=3)
 
