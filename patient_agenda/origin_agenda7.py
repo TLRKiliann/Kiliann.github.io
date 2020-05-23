@@ -73,7 +73,7 @@ class Calendar:
         self.wid.append(left)
         left.grid(row=0, column=1)
 
-        header = tk.Label(self.parent, fg='cyan', bg='gray17',
+        header = tk.Label(self.parent, fg='cyan', bg='#82193e',
             height=2, text='{}   {}'.format(calendar.month_abbr[m], str(y)))
         self.wid.append(header)
         header.grid(row=0, column=2, columnspan=3)
@@ -100,7 +100,7 @@ class Calendar:
 
         sel = tk.Label(self.parent, height=2, text='{} {} {} {}'.format(
             self.day_name, calendar.month_name[self.month_selected],
-            self.day_selected, self.year_selected), fg='cyan', bg='gray17')
+            self.day_selected, self.year_selected), fg='cyan', bg='#82193e')
         self.wid.append(sel)
         sel.grid(row=8, column=0, columnspan=7)
 
