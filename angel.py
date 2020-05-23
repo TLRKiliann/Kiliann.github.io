@@ -632,21 +632,21 @@ class Application(Frame):
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
-        self.button1.configure(width=10, bd=3, highlightbackground='grey22',
+        self.button1.configure(width=10, bd=3, highlightbackground='#82193e',
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showsynopsis)
-        self.button2.configure(width=15, bd=3, highlightbackground='grey22',
+        self.button2.configure(width=15, bd=3, highlightbackground='#82193e',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Psychotabs button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.launchPsycho)
-        self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
+        self.button3.configure(width=15, bd=3, highlightbackground='#82193e', 
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=self.button3)
@@ -682,21 +682,21 @@ class Application(Frame):
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
-        self.button1.configure(width=10, bd=3, highlightbackground='grey22',
+        self.button1.configure(width=10, bd=3, highlightbackground='#82193e',
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.showsynopsis)
-        self.button2.configure(width=15, bd=3, highlightbackground='grey22',
+        self.button2.configure(width=15, bd=3, highlightbackground='#82193e',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Statistics button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='RoyalBlue3', fg='cyan', command = self.launchPsycho)
-        self.button3.configure(width=15, bd=3, highlightbackground='grey22',
+        self.button3.configure(width=15, bd=3, highlightbackground='#82193e',
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
             window=self.button3)
@@ -798,28 +798,28 @@ class Application(Frame):
 
         # To introduce a new pytient
         self.x100, self.y100 = 130, 50
-        self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+        self.b100=Button(self.can, width=10, font=16, bd=3, highlightbackground='#82193e',
             bg='RoyalBlue3', fg='white', activebackground='dark turquoise',
             text="New Entry", command=self.callPatient1)
         self.fb100=self.can.create_window(self.x100, self.y100, window=self.b100)
         
         # To refresh canvas + menu bar
         self.x101, self.y101 = 270, 50
-        self.b101=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+        self.b101=Button(self.can, width=10, font=16, bd=3, highlightbackground='#82193e',
             bg='RoyalBlue3', fg='SpringGreen2', activebackground='yellow', activeforeground='blue',
             text="Refresh", command=self.upDateAll)
         self.fb101=self.can.create_window(self.x101, self.y101, window=self.b101)
 
         # To delete one patient and all files
         self.x200, self.y200 = 130, 100
-        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='#82193e',
             bg='RoyalBlue3', fg='coral', activebackground='black', activeforeground='red',
             text="Delete patient", command=self.delEverPat)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
 
         # To add one patient and files
         self.x200, self.y200 = 270, 100
-        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='grey17',
+        self.b200=Button(self.can, width=10, font=16, bd=3, highlightbackground='#82193e',
             bg='RoyalBlue3', fg='cyan', activebackground='dark turquoise', 
             text="Add patient", command=self.addPatientAfter)
         self.fb200=self.can.create_window(self.x200, self.y200, window=self.b200)
