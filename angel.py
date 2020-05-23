@@ -74,50 +74,50 @@ class MenuBar(Frame):
             with open('./newpatient/entryfile.txt', 'r') as namefile:
                 line1=namefile.readline()
                 new_text=line1
-        except:
-            pass
+        except FileNotFoundError as fileout:
+            print("No file entryfile.txt exist", fileout)
 
         try:
             with open('./newpatient/entryfile2.txt', 'r') as namefile:
                 line2=namefile.readline()
                 new_text2=line2
-        except:
-            pass
+        except FileNotFoundError as fileout2:
+            print("No file entryfile2.txt exist", fileout2)
 
         try:
             with open('./newpatient/entryfile3.txt', 'r') as namefile:
                 line3=namefile.readline()
                 new_text3=line3
-        except:
-            pass
+        except FileNotFoundError as fileout3:
+            print("No file entryfile3.txt exist", fileout3)
 
         try:
             with open('./newpatient/entryfile4.txt', 'r') as namefile:
                 line4=namefile.readline()
                 new_text4=line4
-        except:
-            pass
+        except FileNotFoundError as fileout4:
+            print("No file entryfile4.txt exist", fileout4)
 
         try:
             with open('./newpatient/entryfile5.txt', 'r') as namefile:
                 line5=namefile.readline()
                 new_text5=line5
-        except:
-            pass
+        except FileNotFoundError as fileout5:
+            print("No file entryfile5.txt exist", fileout5)
 
         try:
             with open('./newpatient/entryfile6.txt', 'r') as namefile:
                 line6=namefile.readline()
                 new_text6=line6
-        except:
-            pass
+        except FileNotFoundError as fileout6:
+            print("No file entryfile6.txt exist", fileout6)
 
         try:
             with open('./newpatient/entryfile7.txt', 'r') as namefile:
                 line7=namefile.readline()
                 new_text7=line7
-        except:
-            pass
+        except FileNotFoundError as fileout7:
+            print("No file entryfile7.txt exist", fileout7)
 
         # Menu administrative
         self.cmd_Admin=Menubutton(self, text='Admin', font=("Times 14"),
@@ -652,15 +652,15 @@ class Application(Frame):
             window=self.button3)
         self.pack()
         
-        # To check agenda
+        # To check agenda if an appointment exist.
         self.agendaDateSearch()
-    # Méthode pour reconfigurer la scrollbar à chaque fois
+    # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
         self.can.configure(scrollregion=self.can.bbox(ALL))
 
     def effacer(self):
-        '''Reinitialize canvas when we pass to another'''
+        '''Reinitialize canvas when we pass through another'''
         self.can.delete(ALL)
 
     # Second page intro (a copy from the main app juste above)
@@ -693,7 +693,7 @@ class Application(Frame):
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
-        # Statistiques button
+        # Statistics button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
             bg='grey15', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22',
@@ -1263,8 +1263,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile:
-            print("File 1 has not been found", infofile)
+        except FileNotFoundError as infofileout:
+            print("File 1 has not been found", infofileout)
         except IndexError as inforange:
             print("List 1 got less than 6 lines", inforange)
         else:
@@ -1287,8 +1287,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile1:
-            print("File 2 has not been found", infofile1)
+        except FileNotFoundError as infofileout1:
+            print("File 2 has not been found", infofileout1)
         except IndexError as inforange2:
             print("List 2 got less than 6 lines", inforange2)
         else:
@@ -1311,8 +1311,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile3:
-            print("File 3 has not been found", infofile3)
+        except FileNotFoundError as infofileout3:
+            print("File 3 has not been found", infofileout3)
         except IndexError as inforange3:
             print("List 3 got less than 6 lines", inforange3)
         else:
@@ -1335,8 +1335,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile4:
-            print("File 4 has not been found", infofile4)
+        except FileNotFoundError as infofileout4:
+            print("File 4 has not been found", infofileout4)
         except IndexError as inforange4:
             print("List 4 got less than 6 lines", inforange4)
         else:
@@ -1359,8 +1359,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile5:
-            print("File 5 has not been found", infofile5)
+        except FileNotFoundError as infofileout5:
+            print("File 5 has not been found", infofileout5)
         except IndexError as inforange5:
             print("List 5 got less than 6 lines", inforange5)
         else:
@@ -1383,8 +1383,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile6:
-            print("File 6 has not been found", infofile6)
+        except FileNotFoundError as infofileout6:
+            print("File 6 has not been found", infofileout6)
         except IndexError as inforange6:
             print("List 6 got less than 6 lines", inforange6)
         else:
@@ -1407,8 +1407,8 @@ class Application(Frame):
                         self.t63.insert(INSERT, lines[i+6])
                     else:
                         pass
-        except FileNotFoundError as infofile7:
-            print("File 7 has not been found", infofile7)
+        except FileNotFoundError as infofileout7:
+            print("File 7 has not been found", infofileout7)
         except IndexError as inforange7:
             print("List 7 got less than 6 lines", inforange7)
         else:
@@ -2012,7 +2012,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2026,7 +2025,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2040,7 +2038,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2054,7 +2051,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2068,7 +2064,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2082,7 +2077,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
@@ -2096,7 +2090,6 @@ class Application(Frame):
         print(filepath)
         with open(filepath, "r") as fichier:
             content = fichier.read()
-            fichier.close()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
