@@ -31,18 +31,18 @@ class MenuBar(Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
-        But2=Button(self, text ="Close", fg='cyan', bg='gray30', relief=GROOVE,
+        But2=Button(self, text ="Close", fg='cyan', bg='navy', relief=GROOVE,
             activebackground='cyan', command=boss.quit).pack(side=LEFT, padx=3)
 
 # Application principale
 class Application(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self)
-        self.master.title('ANGEL-VISION - Developed by CK - 2020')
+        self.master.title('ANGEL-VISION - Developed by ko@l@tr33 - 2020')
         mBar=MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can=Canvas(self, width=400, height=750, bg='gray17')
+        self.can=Canvas(self, width=400, height=750, bg='#82193e')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
@@ -85,109 +85,97 @@ class Application(Frame):
         
         # Button to read Diabetologia
         self.x2, self.y2 = 100, 150
-        self.b2=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openMonov)
+        self.b2=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openMonov)
         self.fb2=self.can.create_window(self.x2, self.y2, window=self.b2)
         self.pack()
         
         # Button2 to open2 Oncology
         self.x4, self.y4 = 100, 200
-        self.b4=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openUrinalOne)
+        self.b4=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openUrinalOne)
         self.fb4=self.can.create_window(self.x4, self.y4, window=self.b4)
         self.pack()
         
         # Button3 to open3 Ophtalmology
         self.x6, self.y6 = 100, 250
-        self.b6=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openUrinalSecond)
+        self.b6=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openUrinalSecond)
         self.fb6=self.can.create_window(self.x6, self.y6, window=self.b6)
         self.pack()
         
         # Button4 to open4 Dentist
         self.x8, self.y8 = 100, 300
-        self.b8=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openUrin24h)
+        self.b8=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openUrin24h)
         self.fb8=self.can.create_window(self.x8, self.y8, window=self.b8)
         self.pack()
         
         # Button5 to open5 Stomatherapy
         self.x10, self.y10 = 100, 350
-        self.b10=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openUrineBb)
+        self.b10=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openUrineBb)
         self.fb10=self.can.create_window(self.x10, self.y10, window=self.b10)
         self.pack()
         
         # Button6 to open6 Aromatherapy
         self.x12, self.y12 = 100, 400
-        self.b12=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openUrinPicOv)
+        self.b12=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openUrinPicOv)
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
         
         # Button7 to open7 Physiotherapy
         self.x12, self.y12 = 100, 450
-        self.b12=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openHemoc)
+        self.b12=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openHemoc)
         self.fb12=self.can.create_window(self.x12, self.y12, window=self.b12)
         self.pack()
         
         # Button8 to open8 Ergotherapy
         self.x14, self.y14 = 100, 500
-        self.b14=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openFrottis)
+        self.b14=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openFrottis)
         self.fb14=self.can.create_window(self.x14, self.y14, window=self.b14)
         self.pack()
         
         # Button9 to open9 Podology
         self.x16, self.y16 = 100, 550
-        self.b16=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openHelico)
+        self.b16=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openHelico)
         self.fb16=self.can.create_window(self.x16, self.y16, window=self.b16)
         self.pack()
 
         # Button9 to open9 Podology
         self.x17, self.y17 = 100, 600
-        self.b17=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openExpecto)
+        self.b17=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openExpecto)
         self.fb17=self.can.create_window(self.x17, self.y17, window=self.b17)
         self.pack()
 
         # Button9 to open9 Podology
         self.x18, self.y18 = 100, 650
-        self.b18=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openCopro)
+        self.b18=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openCopro)
         self.fb18=self.can.create_window(self.x18, self.y18, window=self.b18)
         self.pack()
 
         # Button9 to open9 Podology
         self.x19, self.y19 = 100, 700
-        self.b19=Button(self.can, width=10, font=16, bg='navy', fg='gold',
-            activebackground='dark turquoise',
-            activeforeground='black', text="open",
-            command=self.openScotchTest)
+        self.b19=Button(self.can, width=10, bd=3, font=16, bg='navy', fg='gold',
+            activebackground='dark turquoise', text="open",
+            highlightbackground='#82193e', command=self.openScotchTest)
         self.fb19=self.can.create_window(self.x19, self.y19, window=self.b19)
         self.pack()
 
