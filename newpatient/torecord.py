@@ -9,8 +9,8 @@ import os
 
 gui=Tk()
 gui.title("Enter new patient")
-gui.configure(bg='gray17')
-gui.geometry('300x200')
+gui.configure(bg='#82193e')
+#gui.geometry('300x200')
 
 def get(Nompatient, entree, Birthvalue, Birthentree):
     """
@@ -125,7 +125,7 @@ def searchLine7(Nompatient, Birthvalue):
 
 labelName = Label(gui)
 labelName = Label(text='Enter Name and Surname : ', font="Times 14 bold", 
-    fg='cyan', bg='gray17')
+    fg='cyan', bg='#82193e')
 labelName.pack(pady=10)
 
 Nompatient=StringVar()
@@ -135,7 +135,7 @@ entree.pack()
 
 labelBirth = Label(gui)
 labelBirth = Label(text='Birth Date : ', font="Times 14 bold",
-    fg='cyan', bg='gray17')
+    fg='cyan', bg='#82193e')
 labelBirth.pack(pady=10)
 
 Birthvalue=StringVar()
@@ -143,12 +143,15 @@ Birthvalue.set('Format: 00/00/0000')
 Birthentree = Entry(gui, textvariable=Birthvalue, highlightbackground='gray', bd=4)
 Birthentree.pack()
 
-bouton1 = Button(gui, text="Enter", width=8, fg='yellow', bg='navy',
+bouton1 = Button(gui, text="Enter", width=8, bd=3,
+    fg='yellow', bg='RoyalBlue3', highlightbackground='#82193e',
+    activebackground='dark turquoise',
     command = lambda: get(Nompatient, entree, Birthvalue, Birthentree))
 bouton1.pack(side=LEFT, padx=30, pady=10)
 
-buttQuit=Button(gui, text="Quit", width=8, fg='cyan', bg='navy', 
-    command=quit)
+buttQuit=Button(gui, text="Quit", width=8, bd=3,
+    fg='white', bg='RoyalBlue3', highlightbackground='#82193e',
+    activebackground='dark turquoise', command=quit)
 buttQuit.pack(side=LEFT, padx=15, pady=10)
 
 gui.mainloop()
