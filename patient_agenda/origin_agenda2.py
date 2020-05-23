@@ -119,7 +119,7 @@ if __name__ == '__main__':
         def __init__(self, parent):
             self.parent=parent
             self.labelo=tk.Label(self.parent, text='Agenda',
-                font='Times 18 bold', width=17, height=2, fg='aquamarine', bg='gray17')
+                font='Times 18 bold', width=17, height=2, fg='aquamarine', bg='#82193e')
             self.choose_btn=tk.Button(self.parent, text="1 - Choice a date",
                 font="Times 14", width=20, height=1, fg='cyan', bg='navy',
                 activebackground='dark turquoise', command=self.popup)
@@ -139,7 +139,7 @@ if __name__ == '__main__':
             self.data = {}
 
         def popup(self):
-            child = tk.Toplevel(bg='gray17')
+            child = tk.Toplevel(bg='#82193e')
             cal = Calendar(child, self.data)
 
         def print_selected_date(self):

@@ -40,13 +40,15 @@ entryName.pack(in_=top, side=LEFT, padx=10, pady=20)
 textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
-buttonSave=Button(fen, text="Save", fg='yellow', bg='navy',
-    width=8, activebackground='dark turquoise', 
-    activeforeground='navy', command=saveData)
+buttonSave=Button(fen, text="Save", width=8, bd=3,
+    fg='yellow', bg='navy',
+    activebackground='dark turquoise', 
+    highlightbackground='#82193e', command=saveData)
 buttonSave.pack(side='left', padx=10, pady=10)
 
-buttonClose=Button(fen, text="Quit", fg='cyan', bg='gray30', width=8,
-    activebackground='dark turquoise', activeforeground='navy', command=quit)
+buttonClose=Button(fen, text="Quit", width=8, bd=3,
+    fg='white', bg='navy', activebackground='dark turquoise',
+    highlightbackground='#82193e', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 importationFile('./patient_agenda/events3/doc_events/fix_agenda/modifrdv.txt')

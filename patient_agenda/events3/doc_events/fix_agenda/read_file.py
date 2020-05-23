@@ -16,16 +16,16 @@ with open('./newpatient/entryfile3.txt', 'r') as filename:
 
 fen=Tk()
 fen.title("RDV set up")
-fen.configure(background='gray17')
+fen.configure(background='#82193e')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='gray17')
-bottom = Frame(fen, bg='gray17')
+top = Frame(fen, bg='#82193e')
+bottom = Frame(fen, bg='#82193e')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(fen, text="RDV set up",
-    font='Arial 18 bold', fg='turquoise', bg='gray17')
+    font='Arial 18 bold', fg='turquoise', bg='#82193e')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 textentry=StringVar()
@@ -37,7 +37,7 @@ textBox=Text(fen, height=15, width=60, font=18)
 textBox.pack(padx=30, pady=30)
 
 buttonClose=Button(fen, text="Quit", width=8, bd=3,
-    fg='white', bg='navy', highlightbackground='grey17',
+    fg='white', bg='navy', highlightbackground='#82193e',
     activebackground='dark turquoise', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
