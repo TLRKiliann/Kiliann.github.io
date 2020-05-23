@@ -622,8 +622,8 @@ class Application(Frame):
         # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18, 'bold'), fill='navy')
-        self.can.create_text(1195, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
+            font=('Times New Roman', 18, 'bold'), fill='aquamarine')
+        self.can.create_text(1200, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
             font=('Times', 12), fill='white')
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
@@ -631,21 +631,21 @@ class Application(Frame):
         # 3 buttons on welcome page.
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
-            bg='deep sky blue', fg='cyan', command = self.frameInfo)
+            bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
-            bg='grey15', fg='cyan', command = self.showsynopsis)
+            bg='RoyalBlue3', fg='cyan', command = self.showsynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Psychotabs button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
-            bg='grey15', fg='cyan', command = self.launchPsycho)
+            bg='RoyalBlue3', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22', 
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
@@ -672,8 +672,8 @@ class Application(Frame):
         # Insertion du texte
         self.can.create_text(625, 420, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18), fill='navy')
-        self.can.create_text(1195, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
+            font=('Times New Roman', 18), fill='aquamarine')
+        self.can.create_text(1200, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
         	font=('Times', 12), fill='white')
         self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
@@ -681,21 +681,21 @@ class Application(Frame):
         # 3 buttons on welcome page.
         # Info button
         self.button1 = Button(self, text="Info", font=('Times 14 bold'),
-            bg='deep sky blue', fg='cyan', command = self.frameInfo)
+            bg='RoyalBlue3', fg='cyan', command = self.frameInfo)
         self.button1.configure(width=10, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button1_window = self.can.create_window(75, 30, anchor=CENTER,
             window=self.button1)
         # Synopsis button
         self.button2 = Button(self, text="SYNOPSIS", font=('Times 18 bold'),
-            bg='grey15', fg='cyan', command = self.showsynopsis)
+            bg='RoyalBlue3', fg='cyan', command = self.showsynopsis)
         self.button2.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button2_window = self.can.create_window(450, 550, anchor=CENTER,
             window=self.button2)
         # Statistics button
         self.button3 = Button(self, text="PSYCHOTABS", font=('Times 18 bold'),
-            bg='grey15', fg='cyan', command = self.launchPsycho)
+            bg='RoyalBlue3', fg='cyan', command = self.launchPsycho)
         self.button3.configure(width=15, bd=3, highlightbackground='grey22',
             activebackground='dark turquoise')
         self.button3_window = self.can.create_window(790, 550, anchor=CENTER,
@@ -783,7 +783,7 @@ class Application(Frame):
         self.updateFiletxt()
 
         # To check agenda
-        #self.agendaDateSearch()
+        # self.agendaDateSearch()
 
         # Static time
         self.x2, self.y2 = 1100, 100
