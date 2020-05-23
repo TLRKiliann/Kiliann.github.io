@@ -622,9 +622,9 @@ class Application(Frame):
         # Insertion of text
         self.can.create_text(625, 420, anchor=CENTER, 
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18, 'bold'), fill='aquamarine')
-        self.can.create_text(1200, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
-            font=('Times', 12), fill='white')
+            font=('Times New Roman', 18, 'bold'), fill='turquoise')
+        self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
+            font=('Times', 12), fill='turquoise')
         self.can.pack(side=LEFT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -672,9 +672,9 @@ class Application(Frame):
         # Insertion du texte
         self.can.create_text(625, 420, anchor=CENTER,
             text="Python 3.6 - Tkinter 8.6 - GIMP 2.8",
-            font=('Times New Roman', 18), fill='aquamarine')
-        self.can.create_text(1200, 770, anchor=NE, text="Copyright(c) 2020 Inc.",
-        	font=('Times', 12), fill='white')
+            font=('Times New Roman', 18), fill='turquoise')
+        self.can.create_text(1240, 770, anchor=NE, text="ko@l@tr33",
+            font=('Times', 12), fill='turquoise')
         self.can.pack(side=RIGHT, fill=BOTH, expand=YES)
         # Configuration de la Scrollbar sur le Frame
         self.frame.bind("<Configure>", self.onFrameConfigure)
@@ -2006,89 +2006,90 @@ class Application(Frame):
     # All file backup
     def allFilesBackup(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files1",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
+        # I have to try with Text (else no scrollbar)
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup2(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files2",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup3(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files3",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup4(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files4",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup5(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files5",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup6(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files6",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-        # All file backup
+    # All file backup
     def allFilesBackup7(self):
         self.label=Tk()
-        self.label.title("VM_07.01.19_au_15.01.19")
+        self.label.title("Search File")
         filepath = filedialog.askopenfilename(initialdir = "./Backup/Files7",
             title = "Select file", filetypes = (("txt files","*.txt"),("all files","*.*")))
         print(filepath)
-        with open(filepath, "r") as fichier:
+        with open(filepath, 'r') as fichier:
             content = fichier.read()
 
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
