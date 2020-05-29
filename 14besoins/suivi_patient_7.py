@@ -28,7 +28,7 @@ class MenuBar(Frame):
     """Barre menu déroulant"""
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=5, bg='dim gray', padx=0)
-        But2=Button(self, text ="Close", fg='cyan', bg='gray30', relief=GROOVE,
+        But2=Button(self, text ="Close", fg='cyan', bg='navy', relief=GROOVE,
             activebackground='cyan', command=boss.quit).pack(side=LEFT, padx=3)
 
 # Application principale
@@ -39,7 +39,7 @@ class Application(Frame):
         mBar=MenuBar(self)
         mBar.pack(side=TOP, fill=X, expand=1)
         # ScrollCanvas limite de la zone à parcourir avec la barre
-        self.can=Canvas(self, width=600, height=400, bg='gray17')
+        self.can=Canvas(self, width=600, height=400, bg='#82193e')
         self.frame = Frame(self.can)
         self.vsb = Scrollbar(self, orient=VERTICAL, command=self.can.yview)
         self.can.configure(yscrollcommand=self.vsb.set)
