@@ -469,7 +469,7 @@ class MenuBar(Frame):
         me2.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye)
-        me2.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me2.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision)
         me1.add_cascade(label=new_text, underline=0, font=('Times 16'),
@@ -487,7 +487,7 @@ class MenuBar(Frame):
         me3.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye2)
-        me3.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me3.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision2)
         me1.add_cascade(label=new_text2, underline=0, font=('Times 16'),
@@ -505,7 +505,7 @@ class MenuBar(Frame):
         me4.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye3)
-        me4.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me4.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision3)
         me1.add_cascade(label=new_text3, underline=0, font=('Times 16'),
@@ -523,7 +523,7 @@ class MenuBar(Frame):
         me5.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye4)
-        me5.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me5.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision4)
         me1.add_cascade(label=new_text4, underline=0, font=('Times 16'),
@@ -541,7 +541,7 @@ class MenuBar(Frame):
         me6.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye5)
-        me6.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me6.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision5)
         me1.add_cascade(label=new_text5, underline=0, font=('Times 16'),
@@ -559,7 +559,7 @@ class MenuBar(Frame):
         me7.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye6)
-        me7.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me7.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision6)
         me1.add_cascade(label=new_text6, underline=0, font=('Times 16'), 
@@ -578,7 +578,7 @@ class MenuBar(Frame):
         me8.add_command(label='Angel Eye', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globEye7)
-        me8.add_command(label='Global Vision', underline=0, font=('Times 16'),
+        me8.add_command(label='Angel Vision', underline=0, font=('Times 16'),
             background='black', activebackground='cyan',
             foreground='cyan', activeforeground='black', command=boss.globVision7)
         # Integration of sub-menu
