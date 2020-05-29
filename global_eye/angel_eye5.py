@@ -7,17 +7,17 @@ from tkinter import *
 
 fen=Tk()
 fen.title("Global Eye")
-fen.configure(background='gray17')
+fen.configure(background='#82193e')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='gray17')
-bottom = Frame(fen, bg='gray17')
+top = Frame(fen, bg='#82193e')
+bottom = Frame(fen, bg='#82193e')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 """
 labelo=Label(fen, text="Life story : ", width=20,
-    font='Times 18 bold', fg='cyan', bg='gray17')
+    font='Times 18 bold', fg='cyan', bg='#82193e')
 labelo.pack(padx=5, pady=20)
 """
 
