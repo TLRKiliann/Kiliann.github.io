@@ -93,20 +93,20 @@ def importationLabo(fichier2, encodage="Utf-8"):
 
 root=Tk()
 root.title("Care and monitoring")
-root.configure(background='gray17')
+root.configure(background='#82193e')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='gray17')
-bottom = Frame(root, bg='gray17')
+top = Frame(root, bg='#82193e')
+bottom = Frame(root, bg='#82193e')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Care and monitoring : ",
-    font='Times 18 bold', fg='cyan', bg='gray17')
+    font='Times 18 bold', fg='cyan', bg='#82193e')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 labelallergy=Label(root, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='gray17')
+    font='Arial 18 bold', fg='coral', bg='#82193e')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget

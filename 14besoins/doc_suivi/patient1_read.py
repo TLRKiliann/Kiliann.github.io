@@ -14,20 +14,20 @@ def importationFile(fichier, encodage="Utf-8"):
 
 fen=Tk()
 fen.title("Care and monitoring")
-fen.configure(background='grey17')
+fen.configure(background='#82193e')
 
 # To place side by side labelo + entrylab
-top = Frame(fen, bg='grey17')
-bottom = Frame(fen, bg='grey17')
+top = Frame(fen, bg='#82193e')
+bottom = Frame(fen, bg='#82193e')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(fen, text="Care and monitoring : ",
-    font='Times 18 bold', fg='cyan', bg='grey17')
+    font='Times 18 bold', fg='cyan', bg='#82193e')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 labelallergy=Label(fen, text="Allergy",
-    font='Arial 18 bold', fg='coral', bg='grey17')
+    font='Arial 18 bold', fg='coral', bg='#82193e')
 labelallergy.pack(padx=5, pady=5)
 
 # To read name in Entry widget
@@ -59,7 +59,7 @@ textBox.pack(padx=30, pady=30)
 
 buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
     bg='navy', activebackground='dark turquoise', activeforeground='navy', 
-    highlightbackground='grey17', command=quit)
+    highlightbackground='#82193e', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
 try:
