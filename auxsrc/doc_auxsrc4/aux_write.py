@@ -64,16 +64,16 @@ with open('./newpatient/entryfile4.txt', 'r') as filename:
 
 root=Tk()
 root.title("Auxiliary resources")
-root.configure(background='gray17')
+root.configure(background='#82193e')
 
 # To place side by side labelo + entrylab
-top = Frame(root, bg='gray17')
-bottom = Frame(root, bg='gray17')
+top = Frame(root, bg='#82193e')
+bottom = Frame(root, bg='#82193e')
 top.pack(side=TOP)
 bottom.pack(side=BOTTOM, fill=BOTH, expand=YES)
 
 labelo=Label(root, text="Auxiliary resources : ",
-    font='Arial 18 bold', fg='cyan', bg='gray17')
+    font='Arial 18 bold', fg='cyan', bg='#82193e')
 labelo.pack(in_=top, side=LEFT, padx=5, pady=20)
 
 textname=StringVar()
