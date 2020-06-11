@@ -380,7 +380,7 @@ class app(Frame):
                 self.entries[126].insert(0, list5[14])
                 self.entries[127].insert(0, list6[14])
         except IndexError as infor:
-            print("End of medication reached, there are more tbas than ttt !", infor)
+            print("End of medication reached, there are more tabs than ttt !", infor)
         else:
             print("Error unknow")
 
