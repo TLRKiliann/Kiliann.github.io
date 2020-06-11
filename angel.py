@@ -652,9 +652,13 @@ class Application(Frame):
             window=self.button3)
         self.pack()
         
-        # To check agenda if an appointment exist.
+        # To check onto agenda if an appointment exist.
         self.agendaDateSearch()
+        # To check onto ttt if a ttt is stopped today.
         self.tttDataSearch()
+        # To check onto ttt if a reserve (ttt) is stopped today.
+        self.reserveDataSearch()
+
     # Method to reconfigure scrollbar every time.
     def onFrameConfigure(self, event):
         '''Reset the scroll region to encompass the inner frame'''
@@ -1566,7 +1570,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 1 which is stopped today!')
                     else:
                         pass
@@ -1585,7 +1589,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 2 which is stopped today!')
                     else:
                         pass
@@ -1604,7 +1608,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 3 which is stopped today!')
                     else:
                         pass
@@ -1623,7 +1627,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 4 which is stopped today!')
                     else:
                         pass
@@ -1642,7 +1646,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 5 which is stopped today!')
                     else:
                         pass
@@ -1661,7 +1665,7 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 6 which is stopped today!')
                     else:
                         pass
@@ -1680,12 +1684,146 @@ class Application(Frame):
                         print(line)
                         print(lines[i+1])
                         print(lines[i+2])
-                        MSB2 = messagebox.showwarning('Info',
+                        MSBTTT2 = messagebox.showwarning('Info',
                             'Look at TTT, there is a ttt for patient 7 which is stopped today!')
                     else:
                         pass
         except FileNotFoundError as info_ttt7:
             print("File intro_ttt has not been found", info_ttt7)
+        else:
+            ("Error unknow")
+
+    def reserveDataSearch(self):
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 1 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res1:
+            print("File intro_ttt has not been found", info_res1)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt2/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 2 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res2:
+            print("File intro_ttt has not been found", info_res2)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt3/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 3 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res3:
+            print("File intro_ttt has not been found", info_res3)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt4/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 4 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res4:
+            print("File intro_ttt has not been found", info_res4)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt5/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 5 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res5:
+            print("File intro_ttt has not been found", info_res5)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt6/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 6 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res6:
+            print("File intro_ttt has not been found", info_res6)
+        else:
+            ("Error unknow")
+
+        try:
+            dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            with open('./ttt/doc_ttt7/intro_res.txt', 'r') as filedate:
+                lines=filedate.readlines()
+                for i in range(0, len(lines)):
+                    line = lines[i]
+                    if dateagenda in line:
+                        print(line)
+                        print(lines[i+1])
+                        print(lines[i+2])
+                        MSBRES2 = messagebox.showwarning('Info',
+                            'Look at RESERVE onto TTT, there is a RESERVE for patient 7 which is stopped today!')
+                    else:
+                        pass
+        except FileNotFoundError as info_res7:
+            print("File intro_ttt has not been found", info_res7)
         else:
             ("Error unknow")
 

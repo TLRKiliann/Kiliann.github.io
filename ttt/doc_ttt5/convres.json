@@ -21,6 +21,17 @@
             "First-line": 1,
             "Second-line": 0,
             "Number/24h": "2"
+        },
+        {
+            "Date": "11/06/2020",
+            "Date of introduction": "04 January 2020",
+            "Date of end": "03 April 2020",
+            "Treatment": "Amph\u00e9tamines",
+            "Dosage": "25mg",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
         }
     ]
 }

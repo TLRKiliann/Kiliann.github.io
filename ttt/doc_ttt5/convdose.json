@@ -21,6 +21,17 @@
             "Midi": "",
             "Soir": "2",
             "Nuit": "2"
+        },
+        {
+            "Date": "11/06/2020",
+            "Date of introduction": "04 January 2020",
+            "Date of end": "03 April 2020",
+            "Treatment": "Amph\u00e9tamines",
+            "Dosage": "25mg",
+            "Matin": "1",
+            "Midi": "1",
+            "Soir": "1",
+            "Nuit": ""
         }
     ]
 }
