@@ -368,12 +368,12 @@ def copyToReserve():
                 datastore = json.load(datafile)
                 print(datastore)
             dataDose = datastore
-            dataDose['data'].append({'Date' : textDate.get(),
-                'Date of introduction' : comboDay.get() + comboMonth.get() +
-                comboYear.get(), 'Date of end' : comboFinishDay.get() +
-                comboFinishMonth.get() + comboFinishYear.get(),
-                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-                'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), 
+            dataDose['data'].append({'Date' : textDate.get(), \
+                'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                comboYear.get(), 'Date of end' : comboFinishDay.get() + \
+                comboFinishMonth.get() + comboFinishYear.get(), \
+                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
+                'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
                 'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
             if textTreat.get() == "":
                 print("---No value 'Treatment' introduced---")
@@ -387,27 +387,28 @@ def copyToReserve():
         print("+ File convres.json created !")
         dataDose = {}
         dataDose['data'] = []
-        dataDose['data'].append({'Date' : textDate.get(),
-            'Date of introduction' : comboDay.get() + comboMonth.get() +
-            comboYear.get(), 'Date of end' : comboFinishDay.get() +
-            comboFinishMonth.get() + comboFinishYear.get(),
-            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-            'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), 
+        dataDose['data'].append({'Date' : textDate.get(), \
+            'Date of introduction' : comboDay.get() + comboMonth.get() + \
+            comboYear.get(), 'Date of end' : comboFinishDay.get() + \
+            comboFinishMonth.get() + comboFinishYear.get(), \
+            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
+            'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
             'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
         if textTreat.get() == "":
-            print("---No value 'Treatment' introduced---")
+            print("+ No value 'Treatment' introduced---")
+        elif CheckVar2.get() == 0:
+            print("+ There is not First-line reserve marked---")
+        elif CheckVar2.get() != 0:
+            print("+ There is First-line reserve marked---")
+        elif CheckVar3.get() == 0:
+            print("+ There is not Second-line reserve marked---")
+        elif CheckVar3.get() != 0:
+            print("+ There is Second-line reserve marked---")
         else:
-            print("---Ok value 'Treatment' introduced---")
-        if CheckVar2.get() == 0:
-            print("There is not a First-line reserve")
-        else:
-            print("There is a First-line reserve")
-        if CheckVar3.get() == 0:
-            print("There is not a Second-line reserve")
-        else:
-            print("There is a Second-line reserve")
-            with open('./ttt/doc_ttt6/convres.json', 'w') as datafile:
-                json.dump(dataDose, datafile, indent=4)
+            print("Problem with reserve registration")
+        print("+ Ok, value 'Treatment' introduced---")
+        with open('./ttt/doc_ttt6/convres.json', 'w') as datafile:
+            json.dump(dataDose, datafile, indent=4)
 
 app = tk.Tk()
 app.title("Introduction of treatement (ttt)")

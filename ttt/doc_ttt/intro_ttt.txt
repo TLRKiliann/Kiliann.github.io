@@ -1,42 +1,14 @@
-Date : 13/05/2020
-Heure : 21:38:40
+Date : 12/06/2020
+Heure : 19:06:50
 Name : Jimmy
 
-Date of introduction : 02 August 2020
-Nom du ttt : Drug1
-Dosage du ttt : 20gttes
-Matin : 1
-Midi : 1
-Soir : 1
-
-Date of end : 25 October 2021
-Signature : ec
-
-Date : 13/05/2020
-Heure : 21:38:40
-Name : Jimmy
-
-Date of introduction : 02 August 2020
-Nom du ttt : Test
-Dosage du ttt : 20gttes
-Matin : 2
-
-Soir : 2
-Nuit : 2
-Date of end : 25 October 2021
-Signature : ec
-
-Date : 11/06/2020
-Heure : 23:18:16
-Name : Jimmy
-
-Date of introduction : 04 March 2020
-Nom du ttt : Stopttt
-Dosage du ttt : 20mg
+Date of introduction : 11 June 2020
+Nom du ttt : Temesta
+Dosage du ttt : 2MG
 Matin : 1
 
 Soir : 1
 
-Date of end : 11 June 2020
-Signature : ec
+Date of end : 16 July 2020
+Signature : rec
 
