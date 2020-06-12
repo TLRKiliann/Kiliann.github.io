@@ -275,12 +275,12 @@ def copyToFile():
                 datastore = json.load(datafile)
                 print(datastore)
             dataDose = datastore
-            dataDose['data'].append({'Date' : textDate.get(),
-                'Date of introduction' : comboDay.get() + comboMonth.get() +
-                comboYear.get(), 'Date of end' : comboFinishDay.get() +
-                comboFinishMonth.get() + comboFinishYear.get(),
-                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-                'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
+            dataDose['data'].append({'Date' : textDate.get(), \
+                'Date of introduction' : comboDay.get() + comboMonth.get() + \
+                comboYear.get(), 'Date of end' : comboFinishDay.get() + \
+                comboFinishMonth.get() + comboFinishYear.get(), \
+                'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
+                'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
                 'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
             if textTreat.get() == "":
                 print("---No value 'Treatment' introduced---")
@@ -294,12 +294,12 @@ def copyToFile():
         print("+ File convdose.json created !")
         dataDose = {}
         dataDose['data'] = []
-        dataDose['data'].append({'Date' : textDate.get(),
-            'Date of introduction' : comboDay.get() + comboMonth.get() +
-            comboYear.get(), 'Date of end' : comboFinishDay.get() +
-            comboFinishMonth.get() + comboFinishYear.get(),
-            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(),
-            'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(),
+        dataDose['data'].append({'Date' : textDate.get(), \
+            'Date of introduction' : comboDay.get() + comboMonth.get() + \
+            comboYear.get(), 'Date of end' : comboFinishDay.get() + \
+            comboFinishMonth.get() + comboFinishYear.get(), \
+            'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
+            'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
             'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
         if textTreat.get() == "":
             print("---No value 'Treatment' introduced---")
