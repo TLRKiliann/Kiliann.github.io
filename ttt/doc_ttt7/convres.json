@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "Date": "20/06/2020",
+            "Date of introduction": "05 February 2020",
+            "Date of end": "29 August 2029",
+            "Treatment": "Drug",
+            "Dosage": "mcg/ml/mg/UI/gttes",
+            "Reserve": 1,
+            "First-line": 1,
+            "Second-line": 0,
+            "Number/24h": "2"
+        }
+    ]
+}

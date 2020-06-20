@@ -1560,6 +1560,10 @@ class Application(Frame):
             ("Error unknow")
 
     def tttDataSearch(self):
+        """
+        To search the date of the end into the file of ttt.
+        There is 3 dates into this file, I have to resolve that !
+        """
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as filedate:
@@ -1694,6 +1698,10 @@ class Application(Frame):
             ("Error unknow")
 
     def reserveDataSearch(self):
+        """
+        To search the date of the end into the file of reserve.
+        There is 3 dates into this file, I have to resolve that !
+        """
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             with open('./ttt/doc_ttt/intro_res.txt', 'r') as filedate:
@@ -2276,7 +2284,7 @@ class Application(Frame):
     def extStake7(self):
         subprocess.call('./stackeholders/exstacke_patient7.py')
 
-    # All file backup
+    # Backup
     def allFilesBackup(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2290,7 +2298,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup2(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2303,7 +2311,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup3(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2316,7 +2324,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup4(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2329,7 +2337,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup5(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2342,7 +2350,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup6(self):
         self.label=Tk()
         self.label.title("Search File")
@@ -2355,7 +2363,7 @@ class Application(Frame):
         self.label=Label(self.label, justify=LEFT, font=('Times 14'),
             bg='gray22', fg='cyan', text=content).pack(padx=3, pady=3)
 
-    # All file backup
+    # Backup
     def allFilesBackup7(self):
         self.label=Tk()
         self.label.title("Search File")

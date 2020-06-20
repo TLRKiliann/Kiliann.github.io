@@ -10,3 +10,15 @@ Réserve : Oui
 Date of end : 27 April 2020
 Signature : rec
 
+Date : 20/06/2020
+Heure : 09:46:38
+Name : Benjamin Sonntag
+
+Date of introduction : 05 February 2020
+Nom du ttt : Drug
+Dosage du ttt : mcg/ml/mg/UI/gttes
+Réserve : Oui
+1ère intention : Oui
+Date of end : 29 August 2029
+Signature : ec
+
