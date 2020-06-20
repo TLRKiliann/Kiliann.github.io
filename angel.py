@@ -8,6 +8,7 @@ from tkinter import filedialog
 import time
 import datetime
 import os
+import itertools
 import subprocess
 
 
@@ -1563,21 +1564,23 @@ class Application(Frame):
         """
         To search the date of the end into the file of ttt.
         There is 3 dates into this file, I have to resolve that !
+        Warning with the format of date into ttt_file !!!
+        Error was in file patient_ttt.py with a faul format date...
         """
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 1 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 1 which is stopped today!')
         except FileNotFoundError as info_ttt:
             print("File intro_ttt has not been found", info_ttt)
         else:

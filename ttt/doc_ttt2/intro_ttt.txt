@@ -26,3 +26,17 @@ Nuit : 2
 Date of end : 25 October 2021
 Signature : ec
 
+Date : 19/06/2020
+Heure : 13:17:23
+Name : Geronimo
+
+Date of introduction : 02 February 2020
+Nom du ttt : Drug_test
+Dosage du ttt : mcg/ml/mg/UI/gttes
+
+Midi : 1
+
+
+Date of end : 20 June 2020
+Signature : ex
+

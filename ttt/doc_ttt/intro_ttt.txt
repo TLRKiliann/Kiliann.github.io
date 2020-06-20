@@ -1,14 +1,28 @@
-Date : 12/06/2020
-Heure : 19:06:50
+Date : 20/06/2020
+Heure : 13:55:35
 Name : Jimmy
 
-Date of introduction : 11 June 2020
-Nom du ttt : Temesta
-Dosage du ttt : 2MG
-Matin : 1
+Date of introduction : 02 February 2020
+Nom du ttt : Drug_test
+Dosage du ttt : 10 mg
 
+Midi : 1
 Soir : 1
 
-Date of end : 16 July 2020
-Signature : rec
+Date of end : 15/06/2020
+Signature : ex
+
+Date : 20/06/2020
+Heure : 13:55:35
+Name : Jimmy
+
+Date of introduction : 02 February 2020
+Nom du ttt : Drug_test2
+Dosage du ttt : 10 mg
+
+Midi : 1
+Soir : 1
+Nuit : 1
+Date of end : 20/06/2020
+Signature : ex
 
