@@ -61,7 +61,7 @@ convres.json file missing !")
 
 def reserveTabs():
     MSBTABS = messagebox.showinfo("Info", "No reserve recorded for \
-patient 1, convres.json file missing !")   
+patient 1, convres.json file missing !")
 
 def deleteTreatment():
     """

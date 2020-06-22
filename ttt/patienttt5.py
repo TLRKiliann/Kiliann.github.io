@@ -30,10 +30,38 @@ def callbackFinishYear(event):
     print(comboFinishYear.get())
 
 def showTreat():
-    subprocess.call('./ttt/doc_ttt5/tabs.py')
+    """
+    To display tabs of ttt, convdose.json 
+    file must be existing.
+    """
+    try:
+        if os.path.getsize('./ttt/doc_ttt5/convdose.json'):
+            subprocess.call('./ttt/doc_ttt5/tabs.py')
+    except FileNotFoundError as no_tabs:
+        print("+ Sorry, it's not possible to show tab of ttt, \
+convdose.json file missing !")
+        tttTabs()
+
+def tttTabs():
+    MSBTABS = messagebox.showinfo("Info", "No ttt recorded for \
+patient 5, convdose.json file missing !") 
 
 def showReserve():
-    subprocess.call('./ttt/doc_ttt5/tabres.py')
+    """
+    To display tabs of reserve, convres.json 
+    file must be existing.
+    """
+    try:
+        if os.path.getsize('./ttt/doc_ttt5/convres.json'):
+            subprocess.call('./ttt/doc_ttt5/tabres.py')
+    except FileNotFoundError as no_tabs:
+        print("+ Sorry, it's not possible to show tab of reserve, \
+convres.json file missing !")
+        reserveTabs()
+
+def reserveTabs():
+    MSBTABS = messagebox.showinfo("Info", "No reserve recorded for \
+patient 5, convres.json file missing !")
 
 def deleteTreatment():
     """
