@@ -1,13 +1,13 @@
 Date : 22/06/2020
-Heure : 09:55:28
-Name : Geronimo
+Heure : 09:59:02
+Name : Benjamin Sonntag
 
-Date of introduction : 28 January 2020
+Date of introduction : 04 February 2020
 Nom du ttt : Drug_test
 Dosage du ttt : 10 mg
 Matin : 1
-Midi : 1
-Soir : 1
+
+
 
 Date of end : 28/06/ 2020
 Signature : ex

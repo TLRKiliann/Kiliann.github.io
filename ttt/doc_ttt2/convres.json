@@ -1,22 +1,11 @@
 {
     "data": [
         {
-            "Date": "13/05/2020",
-            "Date of introduction": "02 August 2020",
-            "Date of end": "25 October 2021",
-            "Treatment": "Res",
-            "Dosage": "20gttes",
-            "Reserve": 1,
-            "First-line": 0,
-            "Second-line": 1,
-            "Number/24h": "2"
-        },
-        {
-            "Date": "13/05/2020",
-            "Date of introduction": "02 August 2020",
-            "Date of end": "25 October 2021",
-            "Treatment": "Test",
-            "Dosage": "20gttes",
+            "Date": "22/06/2020",
+            "Date of introduction": "28 January 2020",
+            "Date of end": "28/06/ 2020",
+            "Treatment": "Drug_test",
+            "Dosage": "10 mg",
             "Reserve": 1,
             "First-line": 1,
             "Second-line": 0,

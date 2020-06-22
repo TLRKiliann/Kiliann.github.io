@@ -689,20 +689,20 @@ comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
 comboFinishMonth.grid(row=13, column=1, pady=10)
 
 def finishYear():
-    comboFinishYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
-                                 ' 2024', ' 2025', ' 2026', ' 2027',
-                                 ' 2028', ' 2029', ' 2030', ' 2031',
-                                 ' 2032', ' 2033', ' 2034', ' 2035']
+    comboFinishYear["values"] = ['2020', '2021', '2022', '2023',
+                                 '2024', '2025', '2026', '2027',
+                                 '2028', '2029', '2030', '2031',
+                                 '2032', '2033', '2034', '2035']
 
 labelFinishYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='#82193e')
 labelFinishYear.grid(row=12, column=2)
 
 comboFinishYear = ttk.Combobox(app,
-    values=[' 2020', ' 2021', ' 2022', ' 2023',
-            ' 2024', ' 2025', ' 2026', ' 2027',
-            ' 2028', ' 2029', ' 2030', ' 2031',
-            ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=finishYear)
+    values=['2020', '2021', '2022', '2023',
+            '2024', '2025', '2026', '2027',
+            '2028', '2029', '2030', '2031',
+            '2032', '2033', '2034', '2035'], postcommand=finishYear)
 comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
 comboFinishYear.grid(row=13, column=2, pady=10)
 comboFinishYear.current(0)

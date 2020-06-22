@@ -1,28 +1,14 @@
-Date : 17/05/2020
-Heure : 15:15:40
+Date : 22/06/2020
+Heure : 09:57:11
 Name : Aaron Schwartz
 
-Date of introduction : 25 May 2020
-Nom du ttt : Cipralex
-Dosage du ttt : 10mg
+Date of introduction : 03 January 2020
+Nom du ttt : Drug_test
+Dosage du ttt : 10 mg
 Matin : 1
 
+Soir : 1
 
-
-Date of end : 25 June 2020
-Signature : ec
-
-Date : 17/05/2020
-Heure : 15:15:40
-Name : Aaron Schwartz
-
-Date of introduction : 25 May 2020
-Nom du ttt : Temesta
-Dosage du ttt : 2mg
-Matin : 1
-Midi : 1
-
-Nuit : 1
-Date of end : 25 June 2020
-Signature : ec
+Date of end : 29/06/ 2020
+Signature : ex
 

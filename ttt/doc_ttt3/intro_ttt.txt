@@ -1,28 +1,14 @@
-Date : 13/05/2020
-Heure : 21:38:40
-Name : Jimmy
+Date : 22/06/2020
+Heure : 09:56:27
+Name : Edward Snowden
 
-Date of introduction : 02 August 2020
-Nom du ttt : Drug1
-Dosage du ttt : 20gttes
-Matin : 1
+Date of introduction : 02 January 2020
+Nom du ttt : Drug_test
+Dosage du ttt : 10 mg
+
 Midi : 1
-Soir : 1
 
-Date of end : 25 October 2021
-Signature : ec
-
-Date : 13/05/2020
-Heure : 21:38:40
-Name : Jimmy
-
-Date of introduction : 02 August 2020
-Nom du ttt : Test
-Dosage du ttt : 20gttes
-Matin : 2
-
-Soir : 2
-Nuit : 2
-Date of end : 25 October 2021
-Signature : ec
+Nuit : 1
+Date of end : 28/06/ 2020
+Signature : ex
 

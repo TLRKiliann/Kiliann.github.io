@@ -26,3 +26,31 @@ Nuit : 1
 Date of end : 20/06/2020
 Signature : ex
 
+Date : 22/06/2020
+Heure : 09:39:18
+Name : Jimmy
+
+Date of introduction : 02 April 2020
+Nom du ttt : Drug_test
+Dosage du ttt : mcg/ml/mg/UI/gttes
+Matin : 1
+Midi : 1
+Soir : 1
+
+Date of end : 01/09/2020
+Signature : ex
+
+Date : 22/06/2020
+Heure : 09:39:18
+Name : Jimmy
+
+Date of introduction : 02 April 2020
+Nom du ttt : Drug_test2
+Dosage du ttt : 10 mg
+Matin : 1
+Midi : 1
+Soir : 1
+
+Date of end : 01/09/2020
+Signature : ex
+

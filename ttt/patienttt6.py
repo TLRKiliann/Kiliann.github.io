@@ -560,39 +560,39 @@ comboDay = ttk.Combobox(app,
 comboDay.bind("<<ComboboxSelected>>", callbackDay)
 comboDay.grid(row=10, column=0, pady=10)
 
-def finishMonth():
-    comboFinishMonth["values"] = ['01',  
-                                '02', 
-                                '03', 
-                                '04', 
-                                '05', 
-                                '06', 
-                                '07', 
-                                '08', 
-                                '09', 
-                                '10', 
-                                '11', 
-                                '12']
+def changeMonth():
+    comboMonth["values"] = [' January',  
+                          ' February', 
+                          ' March', 
+                          ' April', 
+                          ' May', 
+                          ' June', 
+                          ' July', 
+                          ' August', 
+                          ' September', 
+                          ' October', 
+                          ' November', 
+                          ' December']
 
 labelMonth = tk.Label(app,
     text = "Choose the month :", font=12, fg='cyan', bg='#82193e')
 labelMonth.grid(row=9, column=1)
 
-comboFinishMonth = ttk.Combobox(app,
-    values=['01',  
-          '02', 
-          '03', 
-          '04', 
-          '05', 
-          '06', 
-          '07', 
-          '08', 
-          '09', 
-          '10', 
-          '11', 
-          '12'], postcommand=finishMonth)
-comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
-comboFinishMonth.grid(row=13, column=1, pady=10)
+comboMonth = ttk.Combobox(app,
+    values=[' January',  
+          ' February', 
+          ' March', 
+          ' April', 
+          ' May', 
+          ' June', 
+          ' July', 
+          ' August', 
+          ' September', 
+          ' October', 
+          ' November', 
+          ' December'], postcommand=changeMonth)
+comboMonth.bind("<<ComboboxSelected>>", callbackMonth)
+comboMonth.grid(row=10, column=1, pady=10)
 
 def changeYear():
     comboYear["values"] = [' 2000', ' 2001', ' 2002', ' 2003',
@@ -655,54 +655,54 @@ comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
 comboFinishDay.grid(row=13, column=0, pady=10)
 
 def finishMonth():
-    comboFinishMonth["values"] = [' January',  
-                          ' February', 
-                          ' March', 
-                          ' April', 
-                          ' May', 
-                          ' June', 
-                          ' July', 
-                          ' August', 
-                          ' September', 
-                          ' October', 
-                          ' November', 
-                          ' December']
+    comboFinishMonth["values"] = ['01',  
+                                '02', 
+                                '03', 
+                                '04', 
+                                '05', 
+                                '06', 
+                                '07', 
+                                '08', 
+                                '09', 
+                                '10', 
+                                '11', 
+                                '12']
 
 labelMonth = tk.Label(app,
     text = "Choose the month :", font=12, fg='cyan', bg='#82193e')
 labelMonth.grid(row=12, column=1)
 
 comboFinishMonth = ttk.Combobox(app,
-    values=[' January',  
-          ' February', 
-          ' March', 
-          ' April', 
-          ' May', 
-          ' June', 
-          ' July', 
-          ' August', 
-          ' September', 
-          ' October', 
-          ' November', 
-          ' December'], postcommand=finishMonth)
+    values=['01',  
+            '02', 
+            '03', 
+            '04', 
+            '05', 
+            '06', 
+            '07', 
+            '08', 
+            '09', 
+            '10', 
+            '11', 
+            '12'], postcommand=finishMonth)
 comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
 comboFinishMonth.grid(row=13, column=1, pady=10)
 
 def finishYear():
-    comboFinishYear["values"] = [' 2020', ' 2021', ' 2022', ' 2023',
-                                 ' 2024', ' 2025', ' 2026', ' 2027',
-                                 ' 2028', ' 2029', ' 2030', ' 2031',
-                                 ' 2032', ' 2033', ' 2034', ' 2035']
+    comboFinishYear["values"] = ['2020', '2021', '2022', '2023',
+                                 '2024', '2025', '2026', '2027',
+                                 '2028', '2029', '2030', '2031',
+                                 '2032', '2033', '2034', '2035']
 
 labelFinishYear = tk.Label(app,
     text = "Choose the year :", font=12, fg='cyan', bg='#82193e')
 labelFinishYear.grid(row=12, column=2)
 
 comboFinishYear = ttk.Combobox(app,
-    values=[' 2020', ' 2021', ' 2022', ' 2023',
-            ' 2024', ' 2025', ' 2026', ' 2027',
-            ' 2028', ' 2029', ' 2030', ' 2031',
-            ' 2032', ' 2033', ' 2034', ' 2035'], postcommand=finishYear)
+    values=['2020', '2021', '2022', '2023',
+            '2024', '2025', '2026', '2027',
+            '2028', '2029', '2030', '2031',
+            '2032', '2033', '2034', '2035'], postcommand=finishYear)
 comboFinishYear.bind("<<ComboboxSelected>>", callbackFinishYear)
 comboFinishYear.grid(row=13, column=2, pady=10)
 comboFinishYear.current(0)

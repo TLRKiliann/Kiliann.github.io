@@ -1,36 +1,14 @@
 {
     "data": [
         {
-            "Date": "13/05/2020",
-            "Date of introduction": "02 August 2020",
-            "Date of end": "25 October 2021",
-            "Treatment": "Drug1",
-            "Dosage": "20gttes",
+            "Date": "22/06/2020",
+            "Date of introduction": "28 January 2020",
+            "Date of end": "28/06/ 2020",
+            "Treatment": "Drug_test",
+            "Dosage": "10 mg",
             "Matin": "1",
             "Midi": "1",
             "Soir": "1",
-            "Nuit": ""
-        },
-        {
-            "Date": "13/05/2020",
-            "Date of introduction": "02 August 2020",
-            "Date of end": "25 October 2021",
-            "Treatment": "Test",
-            "Dosage": "20gttes",
-            "Matin": "2",
-            "Midi": "",
-            "Soir": "2",
-            "Nuit": "2"
-        },
-        {
-            "Date": "19/06/2020",
-            "Date of introduction": "02 February 2020",
-            "Date of end": "20 June 2020",
-            "Treatment": "Drug_test",
-            "Dosage": "mcg/ml/mg/UI/gttes",
-            "Matin": "",
-            "Midi": "1",
-            "Soir": "",
             "Nuit": ""
         }
     ]
