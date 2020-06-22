@@ -1582,121 +1582,121 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  1 which is stopped today!')
         except FileNotFoundError as info_ttt:
-            print("File intro_ttt has not been found", info_ttt)
+            print("File intro_ttt (patient 1) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt2/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt2/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 2 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt2:
-            print("File intro_ttt has not been found", info_ttt2)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 2 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 2) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt3/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt3/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 3 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt3:
-            print("File intro_ttt has not been found", info_ttt3)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 3 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 3) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt4/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt4/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 4 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt4:
-            print("File intro_ttt has not been found", info_ttt4)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 4 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 4) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt5/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt5/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 5 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt5:
-            print("File intro_ttt has not been found", info_ttt5)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 5 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 5) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt6/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt6/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 6 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt6:
-            print("File intro_ttt has not been found", info_ttt6)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 6 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 6) has not been found", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
-            with open('./ttt/doc_ttt7/intro_ttt.txt', 'r') as filedate:
-                lines=filedate.readlines()
+            initword = "Date of end : "
+            with open('./ttt/doc_ttt7/convode.json', 'r') as filedate:
+                lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBTTT2 = messagebox.showwarning('Info',
-                            'Look at TTT, there is a ttt for patient 7 which is stopped today!')
-                    else:
-                        pass
-        except FileNotFoundError as info_ttt7:
-            print("File intro_ttt has not been found", info_ttt7)
+                        if dateagenda in line:
+                            print(line)
+                            MSBTTT2 = messagebox.showwarning('Info',
+                                'Look at TTT, there is a ttt for patient \
+                                 7 which is stopped today!')
+        except FileNotFoundError as info_ttt:
+            print("File intro_ttt (patient 7) has not been found", info_ttt)
         else:
             ("Error unknow")
 
