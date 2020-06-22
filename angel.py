@@ -1562,10 +1562,8 @@ class Application(Frame):
 
     def tttDataSearch(self):
         """
-        To search the date of the end into the file of ttt.
-        There is 3 dates into this file, I have to resolve that !
-        Warning with the format of date into ttt_file !!!
-        Error was in file patient_ttt.py with a faul format date...
+        To search the end date into the intro_ttt.txt 
+        and display alert to stop ttt !
         """
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
@@ -1702,139 +1700,139 @@ class Application(Frame):
 
     def reserveDataSearch(self):
         """
-        To search the date of the end into the file of reserve.
-        There is 3 dates into this file, I have to resolve that !
+        To search the end date into the intro_res.txt 
+        and display alert to stop reserve !
         """
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 1 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 1 which is stopped today!')
         except FileNotFoundError as info_res1:
-            print("File intro_ttt has not been found", info_res1)
+            print("File intro_res (patient 1) has not been found", info_res1)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt2/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 2 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 2 which is stopped today!')
         except FileNotFoundError as info_res2:
-            print("File intro_ttt has not been found", info_res2)
+            print("File intro_res (patient 2) has not been found", info_res2)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt3/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 3 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 3 which is stopped today!')
         except FileNotFoundError as info_res3:
-            print("File intro_ttt has not been found", info_res3)
+            print("File intro_res (patient 3) has not been found", info_res3)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt4/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 4 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 4 which is stopped today!')
         except FileNotFoundError as info_res4:
-            print("File intro_ttt has not been found", info_res4)
+            print("File intro_res (patient 4) has not been found", info_res4)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt5/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 5 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 5 which is stopped today!')
         except FileNotFoundError as info_res5:
-            print("File intro_ttt has not been found", info_res5)
+            print("File intro_res (patient 5) has not been found", info_res5)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt6/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 6 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 6 which is stopped today!')
         except FileNotFoundError as info_res6:
-            print("File intro_ttt has not been found", info_res6)
+            print("File intro_res (patient 6) has not been found", info_res6)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
+            res_initword = "Date of end : "
             with open('./ttt/doc_ttt7/intro_res.txt', 'r') as filedate:
                 lines=filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
-                    if dateagenda in line:
+                    if res_initword in line:
                         print(line)
-                        print(lines[i+1])
-                        print(lines[i+2])
-                        MSBRES2 = messagebox.showwarning('Info',
-                            'Look at RESERVE onto TTT, there is a RESERVE for patient 7 which is stopped today!')
-                    else:
-                        pass
+                        if dateagenda in line:
+                            print(line)
+                            MSBRES2 = messagebox.showwarning('Info',
+                                'Look at RESERVE onto TTT, there is a RESERVE \
+                                 for patient 7 which is stopped today!')
         except FileNotFoundError as info_res7:
-            print("File intro_ttt has not been found", info_res7)
+            print("File intro_res (patient 7) has not been found", info_res7)
         else:
             ("Error unknow")
 
