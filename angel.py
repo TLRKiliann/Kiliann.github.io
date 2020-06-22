@@ -1247,8 +1247,9 @@ class Application(Frame):
         # TextBox
         self.x63, self.y63 = 625, 600
         self.t63=Text(self.can, height=15, width=60, font=18, relief=SUNKEN)
-        self.t63.insert(INSERT, "Previously (yesterday) : ")
-        self.t63.insert(END, time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
+        self.t63.insert(INSERT, "Previously (yesterday last infos) : ")
+        self.t63.insert(END, (datetime.datetime.now() + datetime.timedelta(days=-1)).strftime('%d/%m/%Y'))
+            #time.strftime("%d/%m/%Y at %H:%M:%S :\n"))
         self.ft63=self.can.create_window(self.x63, self.y63, window=self.t63)
 
         # Display text in textbox from 14 Needs files
