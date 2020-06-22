@@ -262,7 +262,7 @@ def copyToFile():
         file.write(Entnuit.get() + '\n')
         file.write(str("Date of end : "))
         file.write(comboFinishDay.get())
-        file.write(comboFinishMonth.get())
+        file.write('/' + comboFinishMonth.get() + '/')
         file.write(comboFinishYear.get())
         file.write(str('\n'))
         file.write(str("Signature : "))
@@ -278,7 +278,7 @@ def copyToFile():
             dataDose['data'].append({'Date' : textDate.get(), \
                 'Date of introduction' : comboDay.get() + comboMonth.get() + \
                 comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                comboFinishMonth.get() + comboFinishYear.get(), \
+                '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                 'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
                 'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
                 'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
@@ -297,7 +297,7 @@ def copyToFile():
         dataDose['data'].append({'Date' : textDate.get(), \
             'Date of introduction' : comboDay.get() + comboMonth.get() + \
             comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-            comboFinishMonth.get() + comboFinishYear.get(), \
+            '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
             'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
             'Matin' : Entmatin.get(), 'Midi' : Entmidi.get(), \
             'Soir' : Entsoir.get(), 'Nuit' : Entnuit.get()})
@@ -355,7 +355,7 @@ def copyToReserve():
             file.write(Rnbre.get() + '\n')
         file.write(str("Date of end : "))
         file.write(comboFinishDay.get())
-        file.write(comboFinishMonth.get())
+        file.write('/' + comboFinishMonth.get() + '/')
         file.write(comboFinishYear.get())
         file.write(str('\n'))
         file.write(str("Signature : "))
@@ -371,7 +371,7 @@ def copyToReserve():
             dataDose['data'].append({'Date' : textDate.get(), \
                 'Date of introduction' : comboDay.get() + comboMonth.get() + \
                 comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-                comboFinishMonth.get() + comboFinishYear.get(), \
+                '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
                 'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
                 'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
                 'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
@@ -390,7 +390,7 @@ def copyToReserve():
         dataDose['data'].append({'Date' : textDate.get(), \
             'Date of introduction' : comboDay.get() + comboMonth.get() + \
             comboYear.get(), 'Date of end' : comboFinishDay.get() + \
-            comboFinishMonth.get() + comboFinishYear.get(), \
+            '/' + comboFinishMonth.get() + '/' + comboFinishYear.get(), \
             'Treatment' : textTreat.get(), 'Dosage' : textDosage.get(), \
             'Reserve' : CheckVar1.get(), 'First-line' : CheckVar2.get(), \
             'Second-line' : CheckVar3.get(), 'Number/24h' : Rnbre.get()})
@@ -655,36 +655,36 @@ comboFinishDay.bind("<<ComboboxSelected>>", callbackFinishDay)
 comboFinishDay.grid(row=13, column=0, pady=10)
 
 def finishMonth():
-    comboFinishMonth["values"] = [' January',  
-                          ' February', 
-                          ' March', 
-                          ' April', 
-                          ' May', 
-                          ' June', 
-                          ' July', 
-                          ' August', 
-                          ' September', 
-                          ' October', 
-                          ' November', 
-                          ' December']
+    comboFinishMonth["values"] = ['01',  
+                                '02', 
+                                '03', 
+                                '04', 
+                                '05', 
+                                '06', 
+                                '07', 
+                                '08', 
+                                '09', 
+                                '10', 
+                                '11', 
+                                '12']
 
 labelMonth = tk.Label(app,
     text = "Choose the month :", font=12, fg='cyan', bg='#82193e')
 labelMonth.grid(row=12, column=1)
 
 comboFinishMonth = ttk.Combobox(app,
-    values=[' January',  
-          ' February', 
-          ' March', 
-          ' April', 
-          ' May', 
-          ' June', 
-          ' July', 
-          ' August', 
-          ' September', 
-          ' October', 
-          ' November', 
-          ' December'], postcommand=finishMonth)
+    values=['01',  
+          '02', 
+          '03', 
+          '04', 
+          '05', 
+          '06', 
+          '07', 
+          '08', 
+          '09', 
+          '10', 
+          '11', 
+          '12'], postcommand=finishMonth)
 comboFinishMonth.bind("<<ComboboxSelected>>", callbackFinishMonth)
 comboFinishMonth.grid(row=13, column=1, pady=10)
 
