@@ -49,7 +49,7 @@ class Application(Frame):
             tags="self.frame")
         # Insertion du texte
         self.can.create_text(300, 160, anchor=CENTER, text="Life story\n",
-            font=('Times New Roman', 32), fill='aquamarine')
+            font=('Times New Roman', 32), fill='cyan')
         self.can.create_text(590, 380, anchor=NE, text="ANGEL-VISION",
             font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
