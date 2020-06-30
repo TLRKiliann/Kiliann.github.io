@@ -48,9 +48,9 @@ class Application(Frame):
         self.can.create_window((4,4), window=self.frame, anchor=NW,
             tags="self.frame")
         # Insertion du texte
-        self.can.create_text(300, 150, anchor=CENTER, text="Life story\n",
-            font=('Times', 28), fill='aquamarine')
-        self.can.create_text(590, 380, anchor=NE, text="Copyright (C) 2020 Inc.",
+        self.can.create_text(300, 160, anchor=CENTER, text="Life story\n",
+            font=('Times New Roman', 32), fill='aquamarine')
+        self.can.create_text(590, 380, anchor=NE, text="ANGEL-VISION",
             font=('Times', 12), fill='white') 
         self.can.pack(side=LEFT, fill=BOTH, expand=1)
         # Configuration de la Scrollbar sur le Frame
