@@ -9,7 +9,7 @@ from tkinter import messagebox
 
 
 def retrieve_input():
-    file = open('./diag/doc_diag6/diagrecap.txt', 'a+')
+    file = open('./diag/doc_diag6/diagrecap6.txt', 'a+')
     file.write(textBox.get("1.0", "end-1c"))
     file.write(str('\n\n'))
     file.close()
@@ -26,7 +26,7 @@ def messFromSafeButt():
         print("+ Nothing has been saved !")
 
 def lectureFic():
-    file = open('./diag/doc_diag6/diagrecap.txt', 'r')
+    file = open('./diag/doc_diag6/diagrecap6.txt', 'r')
     print(file.read())
     file.close()
     subprocess.call('./diag/doc_diag6/diag_read.py')
@@ -109,7 +109,7 @@ buttonQuitter=Button(root, text="Quit", fg='white', bg='navy',
     bd=3, highlightbackground='grey17', command=quit)
 buttonQuitter.pack(side='right', padx=10, pady=10)
 
-importationFile('./diag/doc_diag6/diagrecap.txt',
+importationFile('./diag/doc_diag6/diagrecap6.txt',
     encodage="Utf-8")
 
 mainloop()

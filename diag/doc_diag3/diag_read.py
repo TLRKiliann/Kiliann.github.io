@@ -60,7 +60,7 @@ buttonClose=Button(fen, text="Quit", fg='white', width=10, bd=3,
     highlightbackground='grey17', command=quit)
 buttonClose.pack(side='right', padx=10, pady=10)
 
-importationFile('./diag/doc_diag3/diagrecap.txt',
+importationFile('./diag/doc_diag3/diagrecap3.txt',
     encodage="Utf-8")
 
 fen.mainloop()
