@@ -86,13 +86,13 @@ class Application(Frame):
         To verify and write in diag file
         """
         try:
-            if os.path.getsize('./diag/doc_diag7/diagrecap.txt'):
+            if os.path.getsize('./diag/doc_diag7/diagrecap7.txt'):
                 print("+ File 'Diag' exist (add)!")
                 subprocess.call('./diag/doc_diag7/diag_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'Diag' not exist !", outmsg)
             print("+ File diag.txt created !")
-            with open('./diag/doc_diag7/diagrecap.txt', 'w') as file:
+            with open('./diag/doc_diag7/diagrecap7.txt', 'w') as file:
                 file.write(".")
             self.confRec()
 
@@ -101,13 +101,11 @@ class Application(Frame):
         To verify and read diag file
         """
         try:
-            if os.path.getsize('./diag/doc_diag7/diagrecap.txt'):
+            if os.path.getsize('./diag/doc_diag7/diagrecap7.txt'):
                 print("+ File 'Diag' exist (read)!")
                 subprocess.call('./diag/doc_diag7/diag_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'Diag' not exist !", outcom)
-            with open('./diag/doc_diag7/diagrecap.txt', 'w') as file:
-                file.write(".")
             self.confRec()
 
     def confRec(self):

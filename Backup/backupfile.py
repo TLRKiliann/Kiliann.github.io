@@ -56,13 +56,13 @@ for i in listeDate:
             print("Process interrupted", infousr3)
         try:
             print("Backup of Diagnosis files !")
-            shutil.copy('./diag/doc_diag/diagrecap.txt', './Backup/Files1/Backup_diag.txt')
-            shutil.copy('./diag/doc_diag2/diagrecap.txt', './Backup/Files2/Backup_diag2.txt')
-            shutil.copy('./diag/doc_diag3/diagrecap.txt', './Backup/Files3/Backup_diag3.txt')
-            shutil.copy('./diag/doc_diag4/diagrecap.txt', './Backup/Files4/Backup_diag4.txt')
-            shutil.copy('./diag/doc_diag5/diagrecap.txt', './Backup/Files5/Backup_diag5.txt')
-            shutil.copy('./diag/doc_diag6/diagrecap.txt', './Backup/Files6/Backup_diag6.txt')
-            shutil.copy('./diag/doc_diag7/diagrecap.txt', './Backup/Files7/Backup_diag7.txt')
+            shutil.copy('./diag/doc_diag/diagrecap1.txt', './Backup/Files1/Backup_diag1.txt')
+            shutil.copy('./diag/doc_diag2/diagrecap2.txt', './Backup/Files2/Backup_diag2.txt')
+            shutil.copy('./diag/doc_diag3/diagrecap3.txt', './Backup/Files3/Backup_diag3.txt')
+            shutil.copy('./diag/doc_diag4/diagrecap4.txt', './Backup/Files4/Backup_diag4.txt')
+            shutil.copy('./diag/doc_diag5/diagrecap5.txt', './Backup/Files5/Backup_diag5.txt')
+            shutil.copy('./diag/doc_diag6/diagrecap6.txt', './Backup/Files6/Backup_diag6.txt')
+            shutil.copy('./diag/doc_diag7/diagrecap7.txt', './Backup/Files7/Backup_diag7.txt')
         except FileNotFoundError as infousr4:
             print("Process interrupted", infousr4)
         try:
@@ -78,7 +78,7 @@ for i in listeDate:
             print("Process interrupted", infousr5)
         try:
             print("Backup of Care and Monitoring files !")
-            shutil.copy('./14besoins/doc_suivi/patient1_14b.txt', './Backup/Files1/Backup_careneeds.txt')
+            shutil.copy('./14besoins/doc_suivi/patient1_14b.txt', './Backup/Files1/Backup_careneeds1.txt')
             shutil.copy('./14besoins/doc_suivi2/patient2_14b.txt', './Backup/Files2/Backup_careneeds2.txt')
             shutil.copy('./14besoins/doc_suivi3/patient3_14b.txt', './Backup/Files3/Backup_careneeds3.txt')
             shutil.copy('./14besoins/doc_suivi4/patient4_14b.txt', './Backup/Files4/Backup_careneeds4.txt')
@@ -100,13 +100,13 @@ for i in listeDate:
             print("Process interrupted", infousr7)
         try:
             print("Backup of Story Life files !")
-            shutil.copy('./histv/doc_histv/Hvie_patient1.txt', './Backup/Files1/Back_upstory.txt')
-            shutil.copy('./histv/doc_histv2/Hvie_patient1.txt', './Backup/Files2/Back_upstory2.txt')
-            shutil.copy('./histv/doc_histv3/Hvie_patient1.txt', './Backup/Files3/Back_upstory3.txt')
-            shutil.copy('./histv/doc_histv4/Hvie_patient1.txt', './Backup/Files4/Back_upstory4.txt')
-            shutil.copy('./histv/doc_histv5/Hvie_patient1.txt', './Backup/Files5/Back_upstory5.txt')
-            shutil.copy('./histv/doc_histv6/Hvie_patient1.txt', './Backup/Files6/Back_upstory6.txt')
-            shutil.copy('./histv/doc_histv7/Hvie_patient1.txt', './Backup/Files7/Back_upstory7.txt')
+            shutil.copy('./histv/doc_histv/Hvie_patient1.txt', './Backup/Files1/Back_upstory1.txt')
+            shutil.copy('./histv/doc_histv2/Hvie_patient2.txt', './Backup/Files2/Back_upstory2.txt')
+            shutil.copy('./histv/doc_histv3/Hvie_patient3.txt', './Backup/Files3/Back_upstory3.txt')
+            shutil.copy('./histv/doc_histv4/Hvie_patient4.txt', './Backup/Files4/Back_upstory4.txt')
+            shutil.copy('./histv/doc_histv5/Hvie_patient5.txt', './Backup/Files5/Back_upstory5.txt')
+            shutil.copy('./histv/doc_histv6/Hvie_patient6.txt', './Backup/Files6/Back_upstory6.txt')
+            shutil.copy('./histv/doc_histv7/Hvie_patient7.txt', './Backup/Files7/Back_upstory7.txt')
         except FileNotFoundError as infousr8:
             print("Process interrupted", infousr8)
     else:
