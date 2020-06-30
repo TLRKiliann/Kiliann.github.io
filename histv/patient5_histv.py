@@ -79,13 +79,13 @@ class Application(Frame):
         To verify and write story life
         """
         try:
-            if os.path.getsize('./histv/doc_histv5/Hvie_patient1.txt'):
+            if os.path.getsize('./histv/doc_histv5/Hvie_patient5.txt'):
                 print("+ File 'Story Life' exist (add)!")
                 subprocess.call('./histv/doc_histv5/story_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'Story Life' not exist !", outmsg)
             print("+ File 'Story Life' created !")
-            with open('./histv/doc_histv5/Hvie_patient1.txt', 'w') as file:
+            with open('./histv/doc_histv5/Hvie_patient5.txt', 'w') as file:
                 file.write(".")
             self.confRec()
 
@@ -94,13 +94,11 @@ class Application(Frame):
         To verify and read story life
         """
         try:
-            if os.path.getsize('./histv/doc_histv5/Hvie_patient1.txt'):
+            if os.path.getsize('./histv/doc_histv5/Hvie_patient5.txt'):
                 print("+ File 'Story Life' exist (read)!")
                 subprocess.call('./histv/doc_histv5/story_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'Story Life' not exist !", outcom)
-            with open('./histv/doc_histv5/Hvie_patient1.txt', 'w') as file:
-                file.write(".")
             self.confRec()
 
     def confRec(self):

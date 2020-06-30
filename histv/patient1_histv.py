@@ -99,8 +99,6 @@ class Application(Frame):
                 subprocess.call('./histv/doc_histv/story_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'Story Life' not exist !", outcom)
-            with open('./histv/doc_histv/Hvie_patient1.txt', 'w') as file:
-                file.write(".")
             self.confRec()
 
     def confRec(self):
