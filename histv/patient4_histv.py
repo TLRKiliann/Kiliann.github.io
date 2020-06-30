@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#!-*-encoding:Utf-8-*-
+# -*-encoding:Utf-8-*-
 
 
 from tkinter import *
@@ -79,28 +79,27 @@ class Application(Frame):
         To verify and write story life
         """
         try:
-            if os.path.getsize('./histv/doc_histv4/Hvie_patient1.txt'):
+            if os.path.getsize('./histv/doc_histv4/Hvie_patient4.txt'):
                 print("+ File 'Story Life' exist (add)!")
                 subprocess.call('./histv/doc_histv4/story_write.py')
         except FileNotFoundError as outmsg:
             print("+ Sorry, file 'Story Life' not exist !", outmsg)
             print("+ File 'Story Life' created !")
-            with open('./histv/doc_histv4/Hvie_patient1.txt', 'w') as file:
+            with open('./histv/doc_histv4/Hvie_patient4.txt', 'w') as file:
                 file.write(".")
             self.confRec()
+
 
     def lectureFic(self):
         """
         To verify and read story life
         """
         try:
-            if os.path.getsize('./histv/doc_histv4/Hvie_patient1.txt'):
+            if os.path.getsize('./histv/doc_histv4/Hvie_patient4.txt'):
                 print("+ File 'Story Life' exist (read)!")
                 subprocess.call('./histv/doc_histv4/story_read.py')
         except FileNotFoundError as outcom:
             print("+ Sorry, file 'Story Life' not exist !", outcom)
-            with open('./histv/doc_histv4/Hvie_patient1.txt', 'w') as file:
-                file.write(".")
             self.confRec()
 
     def confRec(self):
