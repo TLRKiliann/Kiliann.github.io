@@ -26,7 +26,6 @@ def saveData():
         print(str(outcom))
         print("+ File 'main_14b.txt' created !")
         with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
-            namefile.write(str("\n\n"))
             namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
 
 def messFromSafeButt():
