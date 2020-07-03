@@ -69,7 +69,8 @@ def recordOption():
     print("Date : " + time.strftime("%d/%m/%Y"))
     print("Nom du patient : ", entrytext.get())
     with open('./labo/doc_labo/result.txt', 'a+') as file:
-        file.write("\n\nDate : ")
+        file.write("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
+        file.write("\nDate : ")
         file.write(time.strftime("%d/%m/%Y")+ '\n')
         file.write("Patient name : ")
         file.write(entrytext.get())
@@ -433,6 +434,8 @@ def recordOption():
             file.write("# Coproculture and treatment : (add what the patient needs)\n")
     else:
         print("+ Coproculture ok, nothing to do")
+    with open('./labo/doc_labo/result.txt', 'a+') as endfile:
+        endfile.write("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
  
 def confRec():
     MsgBox2msg = messagebox.showinfo("Confirmation", "Record confirmed and finished !")
