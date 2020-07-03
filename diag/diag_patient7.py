@@ -95,6 +95,7 @@ class Application(Frame):
             with open('./diag/doc_diag7/diagrecap7.txt', 'w') as file:
                 file.write(".")
             self.confRec()
+            subprocess.call('./diag/doc_diag7/diag_write.py')
 
     def Frame_Ap2(self):
         """
