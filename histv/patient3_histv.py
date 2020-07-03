@@ -88,6 +88,7 @@ class Application(Frame):
             with open('./histv/doc_histv3/Hvie_patient3.txt', 'w') as file:
                 file.write(".")
             self.confRec()
+            subprocess.call('./histv/doc_histv3/story_write.py')
 
     def lectureFic(self):
         """
