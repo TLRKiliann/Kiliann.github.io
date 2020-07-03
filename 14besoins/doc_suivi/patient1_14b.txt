@@ -1,4 +1,5 @@
+
 Date : 04/07/2020
 Patient name : Jimmy
-+ Surveillance respiratoire requise
-+ Surveillance alimentaire et/ou hydratation requise
++ Surveillance urinaire et/ou fécale requise requise
++ Surveillance du sommeil requise

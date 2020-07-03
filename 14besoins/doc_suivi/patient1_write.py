@@ -37,7 +37,7 @@ def messFromSafeButt():
         textBox.insert(INSERT, "\n---Data saved !---")
         print("+ Data saved !")
     else:
-        textBox.insert(INSERT, "Nothing has been saved !")
+        textBox.insert(INSERT, "\n---Nothing has been saved !---")
         print("+ Nothing has been saved !")
 
 def lectureFic():

@@ -1,7 +1,6 @@
 
 
-***************************************************************************
-Date : 04/07/2020
-Patient name : Jimmy
-pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
+En date du : 04/07/2020 at 00:47:13 :
++ Surveillance urinaire et/ou fécale requise requise
++ Surveillance du sommeil requise
+test 1
