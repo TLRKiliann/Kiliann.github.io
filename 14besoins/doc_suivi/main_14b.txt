@@ -1,45 +1,7 @@
 
 
 ***************************************************************************
-Date : 11/05/2020
+Date : 04/07/2020
 Patient name : Jimmy
-pH : 5 Leuco : +2 Nit : + Pro : +3 Glu : neg Ket : neg Ery : neg Hb : neg
+pH : 5 Leuco : 0 Nit : - Pro : neg Glu : neg Ket : neg Ery : neg Hb : neg
 ***************************************************************************
-
-En date du : 13/05/2020 at 22:53:34 :
-***************************************************************************
-Date : 13/05/2020
-Patient name : Jimmy
-pH : 5 Leuco : +2 Nit : + Pro : +3 Glu : neg Ket : neg Ery : neg Hb : neg
-***************************************************************************
-Dr ok with ATB
-
-En date du : 11/05/2020 at 22:54:16 :
-# Cardiac workup value and treatment : Good
-# CK-MB value and treatment : Good
-# Troponin value and treatment : Ok
-
-En date du : 13/05/2020 at 22:54:56 :
-+ Surveillance de la température requise
-3x/d
-+ Surveillance urinaire et/ou fécale requise requise
-retriev urinea/24h
-+ Surveillance posturale et/ou des déplacements requise
-Walking with someone
-
-En date du : 13/05/2020 at 21:05:57 :
-1
-2
-3
-4
-5
-
-
-En date du : 18/06/2020 at 16:15:28 :
-Hello!
-
-En date du : 17/06/2020 at 16:24:21 :
-He has burp a lot...
-
-En date du : 28/06/2020 at 23:38:03 :
-Monsieur m'a dit un truc...

@@ -73,8 +73,6 @@ def importationFile(fichier, encodage="Utf-8"):
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'patient5_14b.txt' not exist !", outcom)
 
-    textBox.insert(INSERT, "\n! Highlight text + press < Ctrl + c > to copy lines + press '1-Add' button !\n")
-
 def importationLabo(fichier2, encodage="Utf-8"):
     """
     To test if txt

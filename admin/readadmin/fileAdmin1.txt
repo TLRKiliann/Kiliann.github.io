@@ -15,3 +15,20 @@ Friend number : 11
 Familiy Dr : 12
 Phone Dr : 13
 Address Dr : 14
+Date : 04/07/2020
+Name : Jimmy
+Birthdate : 24/05/1976
+Addess : 
+NPA : 
+Locality : 
+Phone : 
+Assurance : 
+AVS : 
+Contact : 
+E-mail : 
+Phone number : 
+Friend contact : 
+Friend number : 
+Familiy Dr : 
+Phone Dr : 
+Address Dr : 

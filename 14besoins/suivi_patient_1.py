@@ -76,7 +76,7 @@ class Application(Frame):
 
     def lienDirect(self):
         """
-        Add button check
+        -Add- button check
         if files exist.
         """
         try:
@@ -95,7 +95,7 @@ class Application(Frame):
 
     def lectureFic(self):
         """
-        Read button check
+        -Read- button check
         if files exist.
         """
         try:

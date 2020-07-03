@@ -20,7 +20,6 @@ def saveData():
         if os.path.getsize('./14besoins/doc_suivi/main_14b.txt'):
             print("+ File 'main_14b.txt' exist !")
             with open('./14besoins/doc_suivi/main_14b.txt', 'a+') as namefile:
-                namefile.write(str("\n\n"))
                 namefile.write(textBox.get("1.0", "end-1c" + '\n\n'))
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'main_14b.txt' not exist !")
@@ -72,8 +71,6 @@ def importationFile(fichier, encodage="Utf-8"):
                     textBox.insert(END, li)
     except FileNotFoundError as outcom:
         print("+ Sorry, file 'patient1_14b.txt' not exist !", outcom)
-    
-    textBox.insert(INSERT, "\n! Highlight text + press < Ctrl + c > to copy lines + press '1-Add' button !\n")
 
 def importationLabo(fichier2, encodage="Utf-8"):
     """
