@@ -5,7 +5,7 @@ Application for nurses
 This project is built to include only 7 patients.
 
 You can download the app by clicking on button
-"clone" and then click button "ZIP".
+"code" and then click button "ZIP".
 
 Launch application with :
 > python angel.py
