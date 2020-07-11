@@ -8,13 +8,13 @@ You can download the app by clicking on button
 "code" and then click button "ZIP".
 
 Launch application with :
-> python angel.py
+> python3 angel.py
 
 You can also launch independently 
 'psychotabs.py' (this program is 
 already integreted in main app)
 You can use next command for it :
-> python psychotabs.py
+> python3 psychotabs.py
 
 
 To ensure all files are availables enter:
