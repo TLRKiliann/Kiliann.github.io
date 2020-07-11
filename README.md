@@ -25,16 +25,16 @@ What are the capabilities of the application :
 ==============================================
 
 + A backup is planned every first of the month
-+ Appointments scheduled for the next day will appear when the application is opened.
++ Appointments scheduled for the next day will appear when the application is opened
 + The vital parameters are accurate and can be converted into a graph
-+ A lab of general values is reported in the daily observations. 
++ A lab of general values is reported in the daily observations
 + We can print out the complete file of all the labs...
 + Several documents are available to make the practice more pleasant concerning the exams to be taken (they are also printable)
-+ A document for administrative data is available.
++ A document for administrative data is available
 + We can enter information about medical visits
 + You can enter food intolerances and allergia...
-+ Patient records can be accessed after the first backup.
-+ The 14 requirements must be entered at admission and then access the daily observations.
++ Patient records can be accessed after the first backup
++ The 14 requirements must be entered at admission and then access the daily observations
 + There is a tutorial on how to use the application
 + And more...
 
