@@ -14,7 +14,7 @@ You can also launch independently
 'psychotabs.py' (this program is 
 already integreted in main app)
 You can use next command for it :
-$ python3 psychotabs.py
+> python psychotabs.py
 
 
 To ensure all files are availables enter:
