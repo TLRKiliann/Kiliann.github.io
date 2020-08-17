@@ -12,7 +12,7 @@ import itertools
 import subprocess
 
 
-# La ScrollBar in class and preparing for main application !
+# ScrollBar in class and preparing for main application !
 class ScrollCanvas(Frame):
     def __init__(self, boss=None):
         Frame.__init__(self, borderwidth=borderwidth, relief=relief)
@@ -1423,8 +1423,8 @@ class Application(Frame):
 
     def agendaDateSearch(self):
         """
-        Display agenda if an appointment 
-        has been fixed for tomorrow:
+        Display messagebox for agenda if an 
+        appointment has been fixed for tomorrow:
         """
         print("Hello, let's see if appointment has been fixed for tomorrow...")
         time.sleep(1)
@@ -2049,7 +2049,7 @@ class Application(Frame):
         subprocess.call("./vmed/vm_patient6.py")
         
     def visitMed7(self):
-        subprocess.call("./vmed/vm_patient7.py")    
+        subprocess.call("./vmed/vm_patient7.py")
     # Graphical menu
     def visualGraph(self):
         subprocess.call('./param/aspifile/aspidata.py')
