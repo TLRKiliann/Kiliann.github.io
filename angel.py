@@ -1569,7 +1569,7 @@ class Application(Frame):
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1581,14 +1581,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  1 which is stopped today!')
         except FileNotFoundError as info_ttt:
-            print("No date of end has been found for ttt into file convode.json (patient 1)", info_ttt)
+            print("No date of end has been found for ttt into file convdose.json (patient 1)", info_ttt)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt2/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt2/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1600,14 +1600,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  2 which is stopped today!')
         except FileNotFoundError as info_ttt2:
-            print("No date of end has been found for ttt into file convode.json (patient 2)", info_ttt2)
+            print("No date of end has been found for ttt into file convdose.json (patient 2)", info_ttt2)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt3/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt3/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1619,14 +1619,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  3 which is stopped today!')
         except FileNotFoundError as info_ttt3:
-            print("No date of end has been found for ttt into file convode.json (patient 3)", info_ttt3)
+            print("No date of end has been found for ttt into file convdose.json (patient 3)", info_ttt3)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt4/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt4/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1638,14 +1638,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  4 which is stopped today!')
         except FileNotFoundError as info_ttt4:
-            print("No date of end has been found for ttt into file convode.json (patient 4)", info_ttt4)
+            print("No date of end has been found for ttt into file convdose.json (patient 4)", info_ttt4)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt5/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt5/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1657,14 +1657,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  5 which is stopped today!')
         except FileNotFoundError as info_ttt5:
-            print("No date of end has been found for ttt into file convode.json (patient 5)", info_ttt5)
+            print("No date of end has been found for ttt into file convdose.json (patient 5)", info_ttt5)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt6/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt6/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1676,14 +1676,14 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  6 which is stopped today!')
         except FileNotFoundError as info_ttt6:
-            print("No date of end has been found for ttt into file convode.json (patient 6)", info_ttt6)
+            print("No date of end has been found for ttt into file convdose.json (patient 6)", info_ttt6)
         else:
             ("Error unknow")
 
         try:
             dateagenda = (datetime.datetime.now() + datetime.timedelta(days=0)).strftime('%d/%m/%Y')
             initword = "Date of end : "
-            with open('./ttt/doc_ttt7/convode.json', 'r') as filedate:
+            with open('./ttt/doc_ttt7/convdose.json', 'r') as filedate:
                 lines = filedate.readlines()
                 for i in range(0, len(lines)):
                     line = lines[i]
@@ -1695,7 +1695,7 @@ class Application(Frame):
                                 'Look at TTT, there is a ttt for patient \
                                  7 which is stopped today!')
         except FileNotFoundError as info_ttt7:
-            print("No date of end has been found for ttt into file convode.json (patient 7)", info_ttt7)
+            print("No date of end has been found for ttt into file convdose.json (patient 7)", info_ttt7)
         else:
             ("Error unknow")
 
@@ -1900,6 +1900,7 @@ class Application(Frame):
 
     def adminDir7(self):
         subprocess.call('./admin/fic_admin7.py')
+        
     # CheckBox 14 needs OK
     def besoinsCoche(self):
         subprocess.call('./14besoins/checkb.py')
@@ -1924,6 +1925,7 @@ class Application(Frame):
 
     def launchPsycho(self):
         subprocess.call('./psychotabs.py')
+
     # Agenda
     def patientAgenda(self):
         subprocess.call('./patient_agenda/origin_agenda.py')
@@ -1945,6 +1947,7 @@ class Application(Frame):
 
     def patientAgenda7(self):
         subprocess.call('./patient_agenda/origin_agenda7.py')
+
     # Func 14 needs suivi OK
     def suiviSoins1(self):
         subprocess.call("./14besoins/suivi_patient_1.py")
@@ -1966,6 +1969,7 @@ class Application(Frame):
 
     def suiviSoins7(self):
         subprocess.call("./14besoins/suivi_patient_7.py")
+
     # treatments
     def tttMed1(self):
         subprocess.call("./ttt/patienttt1.py")
@@ -1987,6 +1991,7 @@ class Application(Frame):
 
     def tttMed7(self):
         subprocess.call("./ttt/patienttt7.py")
+
     # Func Vital Parameters
     def showParam1(self):
         subprocess.call("./param/fencap.py")
