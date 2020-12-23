@@ -788,9 +788,6 @@ class Application(Frame):
         # To backup
         self.updateFiletxt()
 
-        # To check agenda
-        # self.agendaDateSearch()
-
         # Static time
         self.x2, self.y2 = 1100, 100
         self.Date_write2 = Entry(self.can)
